@@ -1,0 +1,34 @@
+name: Auto-Transform EpiDoc
+on:
+  push:
+    branches:
+      - main  # Si attiva quando carichi file sul branch principale
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install lxml
+
+      - name: Run Transformation Script
+        run: python scripts/transform.py
+
+      - name: Run List Generator Script
+        run: python scripts/generate_list.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/
+          git commit -m "Aggiornamento automatico HTML da XML" || echo "Nessuna modifica da salvare"
+          git push
