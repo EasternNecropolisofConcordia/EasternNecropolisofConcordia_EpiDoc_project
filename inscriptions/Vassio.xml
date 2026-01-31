@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Vassio</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Vassio.xml</idno>
+                <idno type="TM">125662</idno>
+                <idno type="EDR">EDR097921</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <idno type="inventory">401</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0375" notAfter-custom="0425" evidence="lettering nomenclature textual-context">
+                                Late Fourth Century - Early Fifth Century A.D.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1877</date>
+                            <note type="plan_x">2010</note>
+                            <note type="plan_y">1560</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName>
+                            <note xml:lang="en">Now preserved in the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">115</height>
+                                        <width unit="cm">197</width>
+                                        <depth unit="cm">93</depth>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        This is the only sarcophagus from the Eastern Necropolis preserved in its entirety, apart from that of <ref target="./Firmina.xml" xml:lang="la">Firmina</ref>.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Si tratta dell'unico sarcofago della Necropoli di Levante preservato nella sua interezza oltre a quello di <ref target="./Firmina.xml" xml:lang="la">Firmina</ref>.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">52</height>
+                                        <width unit="cm">98</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="5" max="7" unit="cm">3-4</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Right-slanting, horizontal layout, vertical module, irregular <term xml:lang="la">ductus</term>, triangular-shaped interpunction, deep incision, centered layout.
+                                    </p>
+                                    <p>
+                                        <g type="pl">A</g> with a broken crossbar.
+                                    </p>
+                                    <p>
+                                        <g type="pl">B</g> whose lower loop is larger than the upper one.
+                                    </p>
+                                    <p>
+                                        <g type="pl">E</g> and <g type="pl">F</g> laterally compressed and both with three short strokes; the only distinguishing feature is the upper stroke, which in <g type="pl">F</g> is longer than the others and set obliquely, rising to the right.
+                                    </p>
+                                    <p>
+                                        <g type="pl">L</g> with a lower stroke that is oblique and descends to the right.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> formed by four oblique shafts; the two central shafts sometimes cross at the baseline, at other times they cross halfway up the body of the letter.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione triangoliforme, solco profondo, impaginazione centrata.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">A</g> con traversa spezzata.
+                                    </p>
+                                    <p>
+                                        <g type="pl">B</g> con occhiello inferiore più ampio di quello superiore.
+                                    </p>
+                                    <p>
+                                        <g type="pl">E</g> ed <g type="pl">F</g> compresse lateralmente ed entrambe con tre bracci corti; l’unico elemento che le differenzia è il braccio superiore, che nella <g type="pl">F</g> è più lungo rispetto agli altri e obliquo, ascendente verso destra.
+                                    </p>
+                                    <p>
+                                        <g type="pl">L</g> con braccio inferiore obliquo e discendente verso destra.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique; le due aste centrali talvolta si incrociano sul rigo di base, altre volte si incrociano a metà del corpo della lettera.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">A Constantinian monogram is carved on one side of the lid of the sarcophagus.</decoNote>
+                            <decoNote xml:lang="it">Un momogramma costantiniano è inciso su uno dei lati del coperchio del sarcofago.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="vassio">
+                   <persName>
+                       <name type="full">Vassio</name>
+                       <name type="cognomen" nymRef="celtic">Vassio</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier</note>
+                   <note type="rank">campidoctor</note>
+                   <note type="numerus">Batavi</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#suandacca">husband</note>
+               </person>
+               <person xml:id="suandacca">
+                 <persName>
+                     <name type="full">Suandacca</name>
+                     <name type="cognomen" nymRef="celtic">Suandacca</name>
+                 </persName>
+                  <gender>f</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">dedicator</note>
+                  <note type="relationship" corresp="#vassio">wife</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Vassio.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/>Arca<surplus>m</surplus> <persName ref="#vassio">Vassioni</persName> <w xml:id="w1"><expan><abbr>camp<choice><sic>e</sic><corr>i</corr></choice>d</abbr><ex>octori</ex></expan></w>
+                    <lb n="2"/>numeri <choice><reg>Batavorum</reg><orig><expan><abbr>Bataor</abbr><ex>um</ex></expan></orig></choice> <expan><abbr>sen</abbr><ex>iorum</ex></expan> quem sepe
+                    <lb n="3" break="no"/>livit <w xml:id="w2">coniux</w> <persName ref="#suandacca"><w xml:id="w3">Suandacca</w></persName> <expan><abbr>q</abbr><ex>uae</ex></expan> vixit cum 
+                    <lb n="4"/><supplied reason="omitted">e</supplied>o <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="22">XXII</num> <expan><abbr>milit</abbr><ex>avit</ex></expan> <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="35">XXXV</num> fer<surplus>e</surplus>t a
+                    <lb n="5" break="no"/>pud se <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="60">LX</num> Si quis eam arcam vo
+                    <lb n="6" break="no"/>luerit movere <expan><abbr>virib</abbr><ex>us</ex></expan> fisci dabit <measure type="fine" unit="solidus" quantity="25"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="25">XXV</num></measure>.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1">
+                        <lem>
+                            <expan><abbr>camp<choice><sic>e</sic><corr>i</corr></choice>d</abbr><ex>octori</ex></expan>
+                        </lem>
+                        <rdg source="#lettich1983">
+                            <expan><abbr>camped</abbr><ex>octori</ex></expan>
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w2" to="#w3">
+                        <lem>
+                            coniux Suandacca
+                        </lem>
+                        <rdg source="#ilcv457">
+                            coniux<surplus>s</surplus> Vandacca
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    The tomb of <persName corresp="#vassio" xml:lang="la">Vassio</persName>, <term xml:lang="la">campidoctor</term> of the <term xml:lang="la">numerus</term> of the numbers of the <term xml:lang="la">Batavi</term> <term xml:lang="la">seniores</term>, who was buried by his wife <persName corresp="#suandacca" xml:lang="la">Suandacca</persName>, who lived with him 22 years, served 35 years in the army, and reached the age of 60.
+                </p>
+                <p>
+                    If anyone wishes to move this tomb, he shall pay twenty-five sesterces to the <term xml:lang="la">fiscus</term>.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    L’arca di <persName corresp="#vassio" xml:lang="la">Vassio</persName>, <term xml:lang="la">campidoctor</term> del <term xml:lang="la">numerus</term> dei <term xml:lang="la">Batavi</term> <term xml:lang="la">seniores</term>, che fu sepolto dalla moglie <persName corresp="#suandacca" xml:lang="la">Suandacca</persName>, la quale visse con lui 22 anni, militò 35 anni e raggiunse l’età di 60 anni.
+                </p>
+                <p>
+                    Se qualcuno vorrà spostare quest’arca, dovrà pagare al <term xml:lang="la">fiscus</term> venticinque sesterzi.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    Holder includes <persName xml:lang="la" corresp="#vassio">Vassio</persName> in his <term xml:lang="la">Corpus</term> of Celtic personal names, but he does not exclude the possibility that it may instead be a Germanic name, coming from the Batavi or the Burgundians <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1907, 121)</ref>.
+                </p>
+
+                <p>
+                    As for the wife, hers is a peculiar name, not attested elsewhere: Holder records both <persName xml:lang="la">Suandacca</persName> and <persName xml:lang="la">Vandacca</persName>, without being able to determine the correct reading <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649; Holder 1907, 98)</ref>. The initial part of the name may derive from Breton *chwant*, meaning “desire” <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649)</ref>.
+                </p>
+                <p>
+                    The <term xml:lang="la">campidoctor</term> had the role of training recruits and supervising work inside military camps <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>. Although Vegetius states that the <term xml:lang="la">centenarius</term> performed a function similar to that formerly carried out by the <term xml:lang="la">centurio</term> — “<term xml:lang="la">centuriones</term> […] <term xml:lang="la">qui nunc centenarii nominantur</term>” (Veget. II, 8) — Grosse considers the <term xml:lang="la">campidoctor</term> the true successor of the <term xml:lang="la">centurio</term> both in duties and hierarchical importance <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>.
+                </p>
+                <p>
+                    Ammianus Marcellinus reports the promotion of a <term xml:lang="la">campidoctor</term> to <term xml:lang="la">tribunus vacans</term>, thus from NCO to officer (Amm. XV 3, 10); for this reason Grosse argues that the <term xml:lang="la">campidoctor</term> was the highest position among the non-commissioned officers <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 127)</ref>.  
+                </p>
+                <p>
+                    According to <bibl corresp="#lettich1983">Lettich</bibl>, the presence of such an elderly <term xml:lang="la">campidoctor</term> and the fact that he was buried by his wife would be indications of a prolonged stay in Concordia by the <term xml:lang="la">Batavi seniores</term>.
+                </p>
+
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    Holder include <persName xml:lang="la" corresp="#vassio">Vassio</persName> nel suo <term xml:lang="la">Corpus</term> di nomi di origine celtica, ma non esclude che possa essere invece un nome germanico, proveniente dai Batavi o dai Burgundi <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1907, 121)</ref>.
+                </p>
+                <p>
+                    Per quanto riguarda la coniuge, si tratta di un nome peculiare, non attestato altrove: Holder riporta sia <persName xml:lang="la">Suandacca</persName> sia <persName xml:lang="la">Vandacca</persName>, non riuscendo a scegliere la versione corretta <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649; HOLDER 1907, 98)</ref>. La parte iniziale del nome forse deriva dal bretone *chwant*, che significa “desiderio” <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649)</ref>.</p>
+                <p>
+                    Il <term xml:lang="la">campidoctor</term> aveva la funzione di addestrare le reclute e di supervisionare i lavori all’interno dei campi militari <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>. Sebbene Vegezio affermi che il <term xml:lang="la">centenarius</term> svolgesse una funzione analoga a quella di chi una volta era chiamato <term xml:lang="la">centurio</term> — “<term xml:lang="la">centuriones</term> […] <term xml:lang="la">qui nunc centenarii nominantur</term>” (Veget II, 8) — Grosse considera il <term xml:lang="la">campidoctor</term> il vero successore del <term xml:lang="la">centurio</term> sia per mansione sia per importanza gerarchica <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>.
+                </p>
+                <p>
+                    Ammiano Marcellino riporta la promozione di un <term xml:lang="la">campidoctor</term> a <term xml:lang="la">tribunus vacans</term>, dunque da sottoufficiale a ufficiale (Amm. XV 3, 10); per questo Grosse ritiene che il <term xml:lang="la">campidoctor</term> fosse la carica più alta tra i sottoufficiali <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 127)</ref>.
+                </p>
+                <p>
+                    Secondo <bibl corresp="#lettich1983">Lettich</bibl>, la presenza di un <term xml:lang="la">campedoctor</term> così anziano e il fatto che lo abbia seppellito la moglie sarebbero indizi di una permanenza a Concordia prolungata da parte dei <term xml:lang="la">Batavi seniores</term>.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1873a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873a"/>
+                        <citedRange unit="page">59</citedRange>
+                    </bibl>
+                    <bibl xml:id="bertolini1873b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873b"/>
+                        <citedRange unit="page">59</citedRange>
+                    </bibl>
+                    <bibl xml:id="cilv8773">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title>CIL V 8773</title>
+                    </bibl>
+                    <bibl xml:id="ils2803">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ils"/>
+                        <title>ILS 2803</title>
+                    </bibl>
+                    <bibl xml:id="ilcv457">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title>ILCV 457</title>
+                    </bibl>
+                    <bibl xml:id="hoffmann1963">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#hoffmann1963"/>
+                        <citedRange unit="page">41-42</citedRange>
+                        <note type="number">20</note>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <citedRange unit="page">83-84</citedRange>
+                        <note type="number">nr. 40</note>
+                    </bibl>
+                    <bibl xml:id="edr097921">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097921">
+                            EDR097921
+                        </ref>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2008-07-23">23-07-2008</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

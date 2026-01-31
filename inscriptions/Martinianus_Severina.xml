@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Martinianus and Severina</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Martinianus_Severina.xml</idno>
+                <idno type="TM">125598</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <idno>329</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV secolo.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">2010</note>
+                            <note type="plan_y">1560</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note>Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <date>2025</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType>
+                                        Panel of the frontal slab of the sarcophagus
+                                    </objectType>
+                                    <material>
+                                        Limestone
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">80,5</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Sarcophagus panel, broken into two pieces and missing the lower left corner.</p>
+                                    <p xml:lang="it">Tabella di sarcofago fratta in due pezzi e mancante dell’angolo inferiore sinistro.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">42</height>
+                                        <width unit="cm">71</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4.5" max="7.5" unit="cm">4.5-7.5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Right-to-left direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, deep incision.</p>
+                                    <p><g type="pl">F</g> with unusual lower arm beneath the crossbar and oblique upper arm ascending to the right.</p>
+                                    <p><g type="pl">M</g> composed of four oblique strokes.</p>
+                                    <p><g type="pl">N</g> with oblique lateral strokes.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, solco profondo.</p>
+                                    <p><g type="pl">F</g> con anomalo braccio sottostante alla cravatta e con il braccio superiore obliquo, ascendente verso destra.</p>
+                                    <p><g type="pl">M</g> composta da quattro tratti obliqui.</p>
+                                    <p><g type="pl">N</g> con aste laterali oblique.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>A <objectType>moulded border</objectType> runs around the perimeter of the panel.</p>
+                                
+                                <p>The figurative apparatus, now lost, is described as follows: on the right side of the viewer (the lid) a dove was carved in relief, while on the western pediment appeared the Constantinian monogram enclosed within a wreath of foliage, whose ribbons extended horizontally downward. The short side of the sarcophagus beneath this pediment bore a sculpted temple supported by two columns, with a patera on its tympanum. On either side of the inscription were two arches, likewise supported by very roughly executed columns, beneath one of which stood a vessel. (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Lo specchio epigrafico è delimitato da una <objectType>cornice modanata</objectType>.</p>
+                                
+                                <p>L’apparato figurativo, oggi perduto, fu così descritto da Bertolini: “[…] sull’ala destra del riguardante (coperchio) ha in rilievo una colomba, e sul frontone occidentale il monogramma di Costantino in corona di fronde, le cui bende si stendono orizzontalmente al basso. Il lato minore dell’arca che è al disotto di questo frontone, porta scolpito un tempio sostenuto da due colonne e sul timpano d’esso una patera. Ai fianchi dell’epigrafe due archi sostenuti pure da rozzissime colonne e sotto uno di essi un vaso” (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="martinianus">
+                   <persName>
+                       <name type="full">Flavius Martinianus</name>
+                       <name type="nomen" nymRef="latin">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Martinianus</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">fabricensis</note>
+                   <note type="rank">biarchus</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type="relationship" corresp="#severina">husband</note>
+               </person>
+               <person xml:id="severina">
+                 <persName>
+                     <name type="full">Aurelia Severina</name>
+                     <name type="nomen">Aurelia</name>
+                     <name type="cognomen" nymRef="latin">Severina</name>
+                     <name type="gens">Aurelia</name>
+                 </persName>
+                  <gender value="f">f</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">deceased</note>
+                  <note type="relationship" corresp="#martinianus">wife</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Martinianus_Severina.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <div type="textpart" source="lid" n="a">
+                    <ab>
+                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8754 #ilcv520"><expan><abbr>M</abbr><ex>anibus</ex></expan> <expan><abbr>D</abbr><ex>is</ex></expan></supplied>
+                    </ab>
+                </div>
+                <div type="textpart" source="chest" n="b">
+                    <ab>
+                        <lb n="1"/><persName ref="#martinianus"><w xml:id="w1">Flavius</w> Martinia</persName>
+                        <lb n="2" break="no"/><persName ref="#martinianus">nus</persName> <choice><reg>biarchus</reg><orig>biarcus</orig></choice> fabri
+                        <lb n="3" break="no"/>ce<supplied reason="omitted">n</supplied>sis sibi et <persName ref="#severina"><expan><abbr>Aur</abbr><ex>eliae</ex></expan></persName>
+                        <lb n="4"/><persName corresp="#severina"><choice><reg>Severianae</reg><orig>Severiane</orig></choice></persName> coniugi
+                        <lb n="5"/>vivus fecit.
+                        <lb n="6"/><expan><abbr>Pos</abbr><ex>t</ex></expan> <expan><abbr>obitu</abbr><ex>m</ex></expan>, si <expan><abbr>q</abbr><ex>uis</ex></expan> <expan><abbr>vol</abbr><ex>uerit</ex></expan> <supplied reason="omitted">aperire</supplied>, <expan><abbr>dab</abbr><ex>it</ex></expan> <expan><abbr>fisc</abbr><ex>o</ex></expan> <measure type="fine" unit="uncia" commodity="gold" quantity="3"><expan><abbr>a</abbr><ex>uri</ex></expan> <expan><abbr>un</abbr><ex>cias</ex></expan> <num value="3">III</num></measure>.
+                    </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1">
+                        <lem>
+                            Flavius
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b #bertolini1875b">
+                            <expan><abbr>Fl</abbr><ex>avius</ex></expan>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>To the <term xml:lang="la">Manes</term> gods.</p>
+                <p><persName corresp="#martinianus" xml:lang="la">Flavius Martinianus</persName>, <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>, made (this tomb) for himself and for his wife <persName corresp="#severina" xml:lang="la">Aurelia Severiana</persName> while still alive.</p>
+                <p>After (their) death, if anyone wishes to open (it), he shall give to the <term xml:lang="la">fiscus</term> 3 (roman) ounces of gold</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>Agli dèi Mani</p>
+                <p>Flavio Martiniano, <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>, fece (questa arca) per sé stesso e sua moglie <persName corresp="#severina" xml:lang="la">Aurelia Severiana</persName> da vivo.</p>
+                <p>Dopo la (loro) morte, se qualcuno desidererà aprire (l'arca), verserà al <term xml:lang="la">fiscus</term> 3 once (romane) d'oro</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p><persName ref="#martinianus" xml:lang="la">Flavius Martinianus</persName> commissioned during his lifetime a sarcophagus for himself and for his wife <persName ref="#severina" xml:lang="la">Aurelia Severina</persName>. Anyone who violated the tomb would have to pay the treasury three ounces of gold.</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> was a <term xml:lang="la">fabricensis</term>, a worker in the arrow factory of Concordia, and held the role of <term xml:lang="la">biarchus</term>, a subordinate military rank (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
+                
+                <p>The <term xml:lang="la">cognomen Martinianus</term> is attested from the time of Emperor Carus (<ref target="../Bibliography/Master_Bibliography.xml">PIR² V, 23-24</ref>). In late antiquity, <persName xml:lang="la">Sextus Marcius Martinianus</persName> was famous, <term xml:lang="la">magister officiorum</term> of Emperor Licinius and appointed Caesar by the latter shortly before being deposed by Constantine and then executed (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 563</ref>).</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> is also the name of a veteran born in Dacia in the second half of the 3rd century who, after serving for forty-five years, retired to Milan, where he established his tomb (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
+                
+                <p>The <term xml:lang="la">gentilicium Aurelius</term>, already widespread in Concordia from the early imperial period (<ref target="../Bibliography/Master_Bibliography.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./Gaudentius_Martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./Alexandria_Sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./Dionisia_A.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./Dionisia_B.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./Aristo_Veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p><persName xml:lang="la">Flavius Martinianus</persName> commissionò da vivo un sarcofago per sé e per la moglie <persName xml:lang="la">Aurelia Severina</persName>. Chiunque avesse violato la tomba, avrebbe dovuto versare al fisco tre once d'oro.</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> era un <term xml:lang="la">fabricensis</term>, un operaio della fabbrica di frecce di Concordia e occupava il ruolo di <term xml:lang="la">biarchus</term>, un grado militare subalterno (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
+                
+                <p>Il <term xml:lang="la">cognomen Martinianus</term> è attestato già dai tempi dell'imperatore Caro (<ref target="../Bibliography/Master_Bibliography.xml">PIR² V, 23-24</ref>). In antichità tarda è famoso <persName xml:lang="la">Sesto Marzio Martiniano</persName>, <term xml:lang="la">magister officiorum</term> dell'imperatore Licinio e nominato da quest'ultimo Cesare poco prima che venisse destituito da Costantino per poi essere giustiziato (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 563</ref>).</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> è anche il nome di un veterano nato in Dacia nella seconda metà del III secolo che, dopo aver militato per quarantacinque anni, si ritirò a Milano, dove stabilì la propria tomba (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
+                
+                <p>Il gentilizio <term xml:lang="la">Aurelius</term>, già diffuso a Concordia a partire dall'alto impero (<ref target="../Bibliography/Master_Bibliography.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./Gaudentius_Martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./Alexandria_Sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./Dionisia_A.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./Dionisia_B.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./Aristo_Veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <citedRange unit="page">24</citedRange>
+                        <note type="number">nr. 9</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <citedRange unit="page">284</citedRange>
+                        <note type="number">nr. 5</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1875b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <citedRange unit="page">116</citedRange>
+                        <note type="number">nr. 8</note>
+                    </bibl>
+                    <bibl xml:id="cilv8754">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title>CIL V 8754</title>
+                    </bibl>
+                    <bibl xml:id="ilcv520">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title>ILCV 520</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <citedRange unit="page">56-57</citedRange>
+                        <note type="number">nr. 13</note>
+                    </bibl>
+                    <bibl xml:id="edr097902">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097902">
+                            EDR097902
+                        </ref>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
