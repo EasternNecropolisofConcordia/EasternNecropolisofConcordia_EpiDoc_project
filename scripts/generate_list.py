@@ -10,7 +10,9 @@ def generate_inscriptions_page():
         print(f"Errore: la cartella {xml_dir} non esiste.")
         return
 
-    # Inizializziamo Saxon per leggere i titoli dai file XML
+    print(f"Analisi dei file in {xml_dir}...")
+
+    # Inizializziamo Saxon
     with PySaxonProcessor(license=False) as proc:
         for filename in os.listdir(xml_dir):
             if filename.endswith('.xml'):
@@ -19,39 +21,52 @@ def generate_inscriptions_page():
                     # Carica il file XML
                     node = proc.parse_xml(xml_file_name=xml_path)
                     
-                    # Estrae il titolo e il nome file usando XPath (compatibile TEI)
-                    # Usiamo *: per ignorare temporaneamente i problemi di namespace
-                    title_xpath = "/*:TEI/*:teiHeader/*:fileDesc/*:titleStmt/*:title/text()"
-                    idno_xpath = "//*:idno[@type='filename']/text()"
+                    # XPath ultra-robusto che ignora i namespace (usa local-name)
+                    # Cerca il titolo dentro titleStmt
+                    title_xpath = "//*[local-name()='titleStmt']/*[local-name()='title']"
+                    # Cerca l'idno con tipo filename
+                    idno_xpath = "//*[local-name()='idno'][@type='filename']"
                     
                     title_nodes = proc.xpath_eval(title_xpath, node)
                     idno_nodes = proc.xpath_eval(idno_xpath, node)
                     
-                    display_title = str(title_nodes[0]) if title_nodes else filename
-                    # Se idno non c'è, usa il nome del file originale cambiando estensione
-                    target_link = str(idno_nodes[0]).replace('.xml', '.html') if idno_nodes else filename.replace('.xml', '.html')
+                    # Estrazione dei valori testuali
+                    display_title = title_nodes[0].string_value.strip() if title_nodes else filename
+                    idno_val = idno_nodes[0].string_value.strip() if idno_nodes else None
+
+                    # Definizione del link (usa idno se esiste, altrimenti il nome file)
+                    if idno_val:
+                        target_link = idno_val.replace('.xml', '.html')
+                    else:
+                        target_link = filename.replace('.xml', '.html')
                     
                     inscriptions_data.append({'title': display_title, 'link': target_link})
-                except Exception as e:
-                    print(f"Errore nel leggere {filename}: {e}")
+                    print(f" -> Trovata iscrizione: {display_title} (Link: {target_link})")
 
-    # Ordina la lista alfabeticamente
+                except Exception as e:
+                    print(f" -> Errore nel leggere {filename}: {e}")
+
+    # Ordina la lista alfabeticamente per titolo
     inscriptions_data.sort(key=lambda x: x['title'])
     
-    # Genera i link HTML
-    links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
+    # Genera i link HTML per la lista
+    if not inscriptions_data:
+        links_html = "<li>Nessuna iscrizione trovata.</li>"
+    else:
+        links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
     
-    # Template della pagina (navbar inclusa)
+    # Template HTML completo (con la tua navbar)
     full_html = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscriptions - Iulia Concordia</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia</h1>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia: from Autoptic Analysis to TEI-based Edition</h1>
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
@@ -64,6 +79,7 @@ def generate_inscriptions_page():
     </header>
     <main style="padding: 20px;">
         <h2>Index of Encoded Inscriptions</h2>
+        <p>Currently displaying {len(inscriptions_data)} inscriptions.</p>
         <ul class="inscription-list">
             {links_html}
         </ul>
@@ -74,13 +90,14 @@ def generate_inscriptions_page():
 </body>
 </html>"""
     
-    # Assicurati che la cartella docs/pages esista
+    # Assicurati che la cartella di output esista
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
+    # Scrittura del file finale
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
     
-    print(f"Pagina {output_file} generata con successo!")
+    print(f"\nPagina {output_file} generata con {len(inscriptions_data)} voci.")
 
 if __name__ == "__main__":
     generate_inscriptions_page()
