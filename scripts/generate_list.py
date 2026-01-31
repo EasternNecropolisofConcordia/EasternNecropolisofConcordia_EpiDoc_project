@@ -2,56 +2,61 @@ import os
 from saxonche import PySaxonProcessor
 
 def generate_inscriptions_page():
-    # Cerchiamo di capire dove siamo
-    base_dir = os.getcwd()
-    xml_dir = os.path.join(base_dir, 'inscriptions')
-    output_file = os.path.join(base_dir, 'docs', 'pages', 'inscriptions.html')
+    # GitHub Actions definisce 'GITHUB_WORKSPACE' come la radice della repo
+    # Se siamo in locale, usiamo il percorso corrente
+    base_path = os.environ.get('GITHUB_WORKSPACE', os.getcwd())
+    
+    xml_dir = os.path.join(base_path, 'inscriptions')
+    output_dir = os.path.join(base_path, 'docs', 'pages')
+    output_file = os.path.join(output_dir, 'inscriptions.html')
     
     inscriptions_data = []
 
-    print(f"Cartella di lavoro attuale: {base_dir}")
-    print(f"Cerco file XML in: {xml_dir}")
-
+    print(f"--- DEBUG INFO ---")
+    print(f"Base Path: {base_path}")
+    print(f"XML Dir: {xml_dir}")
+    
     if not os.path.exists(xml_dir):
-        print(f"ERRORE: La cartella {xml_dir} NON ESISTE!")
-        # Elenca i file presenti per debug
-        print(f"Contenuto della root: {os.listdir(base_dir)}")
+        print(f"ERRORE: La cartella {xml_dir} non esiste!")
         return
 
-    all_files = os.listdir(xml_dir)
-    print(f"File trovati nella cartella inscriptions: {all_files}")
+    # Leggiamo i file
+    files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
+    print(f"File XML trovati: {len(files)}")
 
     with PySaxonProcessor(license=False) as proc:
-        for filename in all_files:
-            if filename.lower().endswith('.xml'): # .XML o .xml
-                xml_path = os.path.join(xml_dir, filename)
-                try:
-                    node = proc.parse_xml(xml_file_name=xml_path)
-                    
-                    # XPath che cerca ovunque nel documento per sicurezza
-                    title_xpath = "(//*[local-name()='titleStmt']/*[local-name()='title'])[1]"
-                    idno_xpath = "//*[local-name()='idno'][@type='filename']"
-                    
-                    title_nodes = proc.xpath_eval(title_xpath, node)
-                    idno_nodes = proc.xpath_eval(idno_xpath, node)
-                    
-                    display_title = title_nodes[0].string_value.strip() if title_nodes else filename
-                    idno_val = idno_nodes[0].string_value.strip() if idno_nodes else None
+        for filename in files:
+            xml_path = os.path.join(xml_dir, filename)
+            try:
+                node = proc.parse_xml(xml_file_name=xml_path)
+                
+                # XPath per estrarre titolo e filename (senza preoccuparsi dei namespace)
+                title_node = proc.xpath_eval("//*[local-name()='titleStmt']/*[local-name()='title']", node)
+                idno_node = proc.xpath_eval("//*[local-name()='idno'][@type='filename']", node)
+                
+                display_title = title_node[0].string_value.strip() if title_node else filename
+                
+                # Determiniamo il link HTML
+                if idno_node:
+                    target_link = idno_node[0].string_value.strip().replace('.xml', '.html')
+                else:
+                    target_link = filename.replace('.xml', '.html')
+                
+                inscriptions_data.append({'title': display_title, 'link': target_link})
+                print(f"Letto: {display_title}")
+            except Exception as e:
+                print(f"Errore nel file {filename}: {e}")
 
-                    target_link = idno_val.replace('.xml', '.html') if idno_val else filename.replace('.xml', '.html')
-                    
-                    inscriptions_data.append({'title': display_title, 'link': target_link})
-                    print(f" -> OK: {display_title}")
-
-                except Exception as e:
-                    print(f" -> ERRORE nel file {filename}: {e}")
-
+    # Ordinamento
     inscriptions_data.sort(key=lambda x: x['title'])
-    
-    links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
-    if not inscriptions_data:
-        links_html = "<li>Nessuna iscrizione trovata (controlla i log delle Actions).</li>"
 
+    # Creazione della lista HTML
+    if inscriptions_data:
+        links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
+    else:
+        links_html = "<li>Nessun file XML trovato nella cartella inscriptions.</li>"
+
+    # Layout finale
     full_html = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
@@ -74,16 +79,16 @@ def generate_inscriptions_page():
     </header>
     <main style="padding: 20px;">
         <h2>Index of Encoded Inscriptions</h2>
-        <p>Trovate {len(inscriptions_data)} iscrizioni.</p>
-        <ul>{links_html}</ul>
+        <p>Totale iscrizioni: {len(inscriptions_data)}</p>
+        <ul class="inscription-list">{links_html}</ul>
     </main>
 </body>
 </html>"""
-    
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+    os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
-    print(f"Fine. Pagina generata in {output_file}")
+    print(f"Pagina generata con successo: {output_file}")
 
 if __name__ == "__main__":
     generate_inscriptions_page()
