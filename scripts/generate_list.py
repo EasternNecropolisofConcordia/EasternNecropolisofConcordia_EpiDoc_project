@@ -1,160 +1,71 @@
-#!/usr/bin/env python3
-"""
-Genera automaticamente la pagina HTML con lista di tutte le iscrizioni
-"""
+import os
 from lxml import etree
-from pathlib import Path
 
-def generate_inscription_list():
-    xml_dir = Path('inscriptions')
-    output_file = Path('docs/pages/inscriptions.html')
+def generate_inscriptions_page():
+    xml_dir = 'inscriptions/'
+    output_file = 'docs/pages/inscriptions.html'
+    namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
     
-    # Namespace TEI
-    ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
-    
-    # Raccogli informazioni dai file XML
-    inscriptions = []
-    
-    print("📋 Raccolta metadati dalle iscrizioni...\n")
-    
-    for xml_file in sorted(xml_dir.glob('*.xml')):
-        try:
-            tree = etree.parse(str(xml_file))
+    inscriptions_data = []
+
+    # Leggi i dati da ogni file XML
+    for filename in os.listdir(xml_dir):
+        if filename.endswith('.xml'):
+            path = os.path.join(xml_dir, filename)
+            tree = etree.parse(path)
             
-            # Estrai titolo
-            title_elem = tree.find('.//tei:titleStmt/tei:title', ns)
-            title = title_elem.text if title_elem is not None else 'Titolo non disponibile'
+            # Estrazione Titolo e IDNO
+            title = tree.xpath('//tei:titleStmt/tei:title/text()', namespaces=namespaces)
+            idno = tree.xpath('//tei:idno[@type="filename"]/text()', namespaces=namespaces)
             
-            # Estrai filename
-            filename_elem = tree.find('.//tei:publicationStmt/tei:idno[@type="filename"]', ns)
-            filename = filename_elem.text if filename_elem is not None else xml_file.stem
+            display_title = title[0] if title else filename
+            link_target = idno[0].replace('.xml', '.html') if idno else filename.replace('.xml', '.html')
             
-            # Estrai città moderna
-            city_elem = tree.find('.//tei:origPlace//tei:placeName[@type="modern"]', ns)
-            city = city_elem.text if city_elem is not None else ''
-            
-            # Estrai datazione
-            date_elem = tree.find('.//tei:origDate[@xml:lang="en"]', ns)
-            date = date_elem.text if date_elem is not None else ''
-            
-            inscriptions.append({
-                'title': title.strip(),
-                'filename': filename.strip(),
-                'city': city.strip(),
-                'date': date.strip(),
-                'html_file': f"{filename}.html"
-            })
-            
-            print(f"   ✓ {title}")
-            
-        except Exception as e:
-            print(f"   ✗ Errore con {xml_file.name}: {e}")
-    
-    # Genera HTML
-    html = """<!DOCTYPE html>
+            inscriptions_data.append({'title': display_title, 'link': link_target})
+
+    # Ordina alfabeticamente per titolo
+    inscriptions_data.sort(key=lambda x: x['title'])
+
+    # Genera i list items HTML
+    links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
+
+    html_content = f"""
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Iscrizioni - Necropoli di Levante</title>
+    <title>Inscriptions - Iulia Concordia</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .inscription-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        .inscription-table th,
-        .inscription-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .inscription-table th {
-            background-color: #8b4513;
-            color: white;
-        }
-        
-        .inscription-table tr:hover {
-            background-color: #f5f5f5;
-        }
-        
-        .inscription-table a {
-            color: #8b4513;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .inscription-table a:hover {
-            text-decoration: underline;
-        }
-        
-        .count {
-            color: #666;
-            font-style: italic;
-            margin: 20px 0;
-        }
-    </style>
 </head>
 <body>
-  <header>
-    <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia: from Autoptic Analysis to TEI-based Edition</h1>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="inscriptions.html">Inscriptions</a></li>
-        <li><a href="history.html">History of the Eastern Necropolis</a></li>
-        <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
-        <li><a href="about.html">About this project</a></li>
-      </ul>
-    </nav>
-  </header>
-
-    <main>
-        <h2>Catalogo delle Iscrizioni</h2>
-        <p class="intro">
-            Elenco completo delle iscrizioni funerarie della Necropoli di Levante.
-        </p>
-        <p class="count">Totale iscrizioni: """ + str(len(inscriptions)) + """</p>
-        
-        <table class="inscription-table">
-            <thead>
-                <tr>
-                    <th>Titolo</th>
-                    <th>Località</th>
-                    <th>Datazione</th>
-                </tr>
-            </thead>
-            <tbody>
-"""
-    
-    # Aggiungi righe per ogni iscrizione
-    for insc in sorted(inscriptions, key=lambda x: x['title']):
-        html += f"""                <tr>
-                    <td><a href="{insc['html_file']}">{insc['title']}</a></td>
-                    <td>{insc['city']}</td>
-                    <td>{insc['date']}</td>
-                </tr>
-"""
-    
-    html += """            </tbody>
-        </table>
+    <header>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+                <li><a href="history.html">History of the Eastern Necropolis</a></li>
+                <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
+                <li><a href="about.html">About this project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="padding: 20px;">
+        <h2>Index of Encoded Inscriptions</h2>
+        <p>A total of {len(inscriptions_data)} inscriptions have been encoded.</p>
+        <ul class="inscription-list">
+            {links_html}
+        </ul>
     </main>
-
     <footer>
-        <p>&copy; 2025 Leonardo Battistella - Università Ca' Foscari Venezia</p>
+        <p>&copy; 2026 - Digital Approaches to Iulia Concordia</p>
     </footer>
 </body>
-</html>"""
-    
-    # Salva file
+</html>
+"""
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(html)
-    
-    print(f"\n✓ Lista generata: {output_file}")
-    print(f"  Totale iscrizioni: {len(inscriptions)}")
+        f.write(html_content)
+    print(f"Pagina inscriptions.html generata con {len(inscriptions_data)} voci.")
 
-if __name__ == '__main__':
-    generate_inscription_list()
+if __name__ == "__main__":
+    generate_inscriptions_page()
