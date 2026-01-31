@@ -2,8 +2,6 @@ import os
 from saxonche import PySaxonProcessor
 
 def run():
-    # 1. IDENTIFICAZIONE PERCORSI (Forziamo la ricerca dalla radice)
-    # Cerchiamo di risalire alla root partendo dalla posizione dello script
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.abspath(os.path.join(script_dir, '..'))
     
@@ -11,57 +9,51 @@ def run():
     output_dir = os.path.join(root_dir, 'docs', 'pages')
     output_file = os.path.join(output_dir, 'inscriptions.html')
 
-    print(f"DEBUG: Script si trova in: {script_dir}")
-    print(f"DEBUG: Root del progetto individuata: {root_dir}")
     print(f"DEBUG: Cerco XML in: {xml_dir}")
 
-    # 2. VERIFICA ESISTENZA CARTELLA
     if not os.path.exists(xml_dir):
-        print(f"ERRORE CRITICO: La cartella {xml_dir} non esiste!")
-        print(f"Contenuto della root attuale: {os.listdir(root_dir)}")
+        print(f"ERRORE: La cartella {xml_dir} non esiste!")
         return
 
-    # 3. ELENCO FILE
     files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
-    print(f"DEBUG: File trovati nella cartella: {files}")
+    print(f"DEBUG: File trovati: {files}")
 
     inscriptions_data = []
 
-    # 4. ELABORAZIONE CON SAXON
     with PySaxonProcessor(license=False) as proc:
+        # Inizializziamo il processore XPath
+        xpath_processor = proc.new_xpath_processor()
+        
         for filename in files:
             xml_path = os.path.join(xml_dir, filename)
             try:
+                # Carichiamo il documento XML
                 node = proc.parse_xml(xml_file_name=xml_path)
+                xpath_processor.set_context_item(xdm_item=node)
                 
-                # XPath ultra-semplice per i titoli
-                title_node = proc.xpath_eval("//*[local-name()='titleStmt']/*[local-name()='title']", node)
-                idno_node = proc.xpath_eval("//*[local-name()='idno'][@type='filename']", node)
+                # XPath per titoli e idno (ignora i namespace)
+                title_val = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
+                idno_val = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]")
                 
-                title_text = title_node[0].string_value.strip() if title_node else filename
+                display_title = title_val.string_value.strip() if title_val else filename
+                filename_idno = idno_val.string_value.strip() if idno_val else filename
                 
-                if idno_node:
-                    link_text = idno_node[0].string_value.strip().replace('.xml', '.html')
-                else:
-                    link_text = filename.replace('.xml', '.html')
+                # Creiamo il link puntando al file .html generato da transform.py
+                target_link = filename_idno.replace('.xml', '.html')
                 
-                inscriptions_data.append({'title': title_text, 'link': link_text})
-                print(f"REGISTRATO: {title_text}")
+                inscriptions_data.append({'title': display_title, 'link': target_link})
+                print(f"REGISTRATO: {display_title} -> {target_link}")
             except Exception as e:
                 print(f"ERRORE nel file {filename}: {e}")
 
-    # 5. GENERAZIONE HTML
     inscriptions_data.sort(key=lambda x: x['title'])
     
-    links_html = ""
+    links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
     if not inscriptions_data:
-        links_html = "<li>Attenzione: Nessun file XML elaborato correttamente.</li>"
-    else:
-        for item in inscriptions_data:
-            links_html += f'<li><a href="{item["link"]}">{item["title"]}</a></li>\n'
+        links_html = "<li>Nessuna iscrizione trovata.</li>"
 
     full_html = f"""<!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Inscriptions - Iulia Concordia</title>
@@ -69,22 +61,30 @@ def run():
 </head>
 <body>
     <header>
-        <h1 class="main_title">Digital Approaches to Iulia Concordia</h1>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+                <li><a href="history.html">History of the Eastern Necropolis</a></li>
+                <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
+                <li><a href="about.html">About this project</a></li>
+            </ul>
+        </nav>
     </header>
     <main style="padding: 20px;">
         <h2>Index of Encoded Inscriptions</h2>
-        <p>Trovate {len(inscriptions_data)} iscrizioni.</p>
-        <ul>{links_html}</ul>
+        <ul class="inscription-list">
+            {links_html}
+        </ul>
     </main>
 </body>
 </html>"""
 
-    # 6. SCRITTURA FILE
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
-    
-    print(f"SUCCESSO: Pagina scritta in {output_file}")
+    print(f"SUCCESSO: Pagina generata con {len(inscriptions_data)} iscrizioni.")
 
 if __name__ == "__main__":
     run()
