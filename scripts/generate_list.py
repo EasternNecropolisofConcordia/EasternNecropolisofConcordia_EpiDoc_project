@@ -22,20 +22,21 @@ def run():
         for filename in files:
             xml_path = os.path.join(xml_dir, filename)
             try:
-                # Carichiamo il documento
                 node = proc.parse_xml(xml_file_name=xml_path)
-                
-                # Metodo più compatibile: impostiamo il contesto separatamente
                 xpath_processor.set_context_item(xdm_item=node)
                 
-                # Eseguiamo l'evaluate senza argomenti extra
+                # XPath per il titolo TEI
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 idno_item = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]")
                 
-                # Recupero stringa
-                display_title = title_item.string_value.strip() if title_item else filename
-                
-                if idno_item:
+                # Usiamo .string_value per ottenere il testo contenuto nel tag
+                if title_item is not None:
+                    display_title = title_item.string_value.strip()
+                else:
+                    display_title = filename
+
+                # Determiniamo il link
+                if idno_item is not None:
                     target_link = idno_item.string_value.strip().replace('.xml', '.html')
                 else:
                     target_link = filename.replace('.xml', '.html')
@@ -44,40 +45,54 @@ def run():
                 print(f"REGISTRATO: {display_title}")
                 
             except Exception as e:
-                # Se fallisce ancora, proviamo l'ultimo metodo disperato: estrazione diretta dal nodo
-                try:
-                    display_title = node.children[0].string_value[:50] # Placeholder
-                    inscriptions_data.append({'title': filename, 'link': filename.replace('.xml', '.html')})
-                    print(f"REGISTRATO (Fallback): {filename}")
-                except:
-                    print(f"ERRORE persistente su {filename}: {str(e)}")
+                print(f"ERRORE nel file {filename}: {str(e)}")
+                inscriptions_data.append({'title': filename, 'link': filename.replace('.xml', '.html')})
 
+    # Ordinamento alfabetico
     inscriptions_data.sort(key=lambda x: x['title'])
     
+    # Costruzione della lista link
     links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
     
+    # Template con Navbar (uguale a quella delle singole iscrizioni)
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscriptions - Iulia Concordia</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1 class="main_title">Digital Approaches to Iulia Concordia</h1>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+                <li><a href="history.html">History of the Eastern Necropolis</a></li>
+                <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
+                <li><a href="about.html">About this project</a></li>
+            </ul>
+        </nav>
     </header>
     <main style="padding: 20px;">
         <h2>Index of Encoded Inscriptions</h2>
-        <ul class="inscription-list">{links_html}</ul>
+        <p>This list is automatically updated from the EpiDoc XML files.</p>
+        <ul class="inscription-list">
+            {links_html}
+        </ul>
     </main>
+    <footer>
+        <p style="text-align:center; padding: 20px; font-size: 0.8em;">Generated via Saxon-Che & GitHub Actions</p>
+    </footer>
 </body>
 </html>"""
 
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
-    print(f"Fine: Generati {len(inscriptions_data)} link.")
+    print(f"Fine: Pagina generata con {len(inscriptions_data)} link.")
 
 if __name__ == "__main__":
     run()
