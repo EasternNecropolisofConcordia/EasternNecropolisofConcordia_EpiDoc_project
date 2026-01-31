@@ -1,36 +1,48 @@
 import os
-from lxml import etree
+from saxonche import PySaxonProcessor
 
 def generate_inscriptions_page():
-    xml_dir = 'inscriptions/'
+    xml_dir = 'inscriptions'
     output_file = 'docs/pages/inscriptions.html'
-    namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
-    
     inscriptions_data = []
 
-    # Leggi i dati da ogni file XML
-    for filename in os.listdir(xml_dir):
-        if filename.endswith('.xml'):
-            path = os.path.join(xml_dir, filename)
-            tree = etree.parse(path)
-            
-            # Estrazione Titolo e IDNO
-            title = tree.xpath('//tei:titleStmt/tei:title/text()', namespaces=namespaces)
-            idno = tree.xpath('//tei:idno[@type="filename"]/text()', namespaces=namespaces)
-            
-            display_title = title[0] if title else filename
-            link_target = idno[0].replace('.xml', '.html') if idno else filename.replace('.xml', '.html')
-            
-            inscriptions_data.append({'title': display_title, 'link': link_target})
+    if not os.path.exists(xml_dir):
+        print(f"Errore: la cartella {xml_dir} non esiste.")
+        return
 
-    # Ordina alfabeticamente per titolo
+    # Inizializziamo Saxon per leggere i titoli dai file XML
+    with PySaxonProcessor(license=False) as proc:
+        for filename in os.listdir(xml_dir):
+            if filename.endswith('.xml'):
+                xml_path = os.path.join(xml_dir, filename)
+                try:
+                    # Carica il file XML
+                    node = proc.parse_xml(xml_file_name=xml_path)
+                    
+                    # Estrae il titolo e il nome file usando XPath (compatibile TEI)
+                    # Usiamo *: per ignorare temporaneamente i problemi di namespace
+                    title_xpath = "/*:TEI/*:teiHeader/*:fileDesc/*:titleStmt/*:title/text()"
+                    idno_xpath = "//*:idno[@type='filename']/text()"
+                    
+                    title_nodes = proc.xpath_eval(title_xpath, node)
+                    idno_nodes = proc.xpath_eval(idno_xpath, node)
+                    
+                    display_title = str(title_nodes[0]) if title_nodes else filename
+                    # Se idno non c'è, usa il nome del file originale cambiando estensione
+                    target_link = str(idno_nodes[0]).replace('.xml', '.html') if idno_nodes else filename.replace('.xml', '.html')
+                    
+                    inscriptions_data.append({'title': display_title, 'link': target_link})
+                except Exception as e:
+                    print(f"Errore nel leggere {filename}: {e}")
+
+    # Ordina la lista alfabeticamente
     inscriptions_data.sort(key=lambda x: x['title'])
-
-    # Genera i list items HTML
+    
+    # Genera i link HTML
     links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
-
-    html_content = f"""
-<!DOCTYPE html>
+    
+    # Template della pagina (navbar inclusa)
+    full_html = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -52,20 +64,23 @@ def generate_inscriptions_page():
     </header>
     <main style="padding: 20px;">
         <h2>Index of Encoded Inscriptions</h2>
-        <p>A total of {len(inscriptions_data)} inscriptions have been encoded.</p>
         <ul class="inscription-list">
             {links_html}
         </ul>
     </main>
     <footer>
-        <p>&copy; 2026 - Digital Approaches to Iulia Concordia</p>
+        <p>&copy; 2026 - Nome del sito</p>
     </footer>
 </body>
-</html>
-"""
+</html>"""
+    
+    # Assicurati che la cartella docs/pages esista
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(html_content)
-    print(f"Pagina inscriptions.html generata con {len(inscriptions_data)} voci.")
+        f.write(full_html)
+    
+    print(f"Pagina {output_file} generata con successo!")
 
 if __name__ == "__main__":
     generate_inscriptions_page()
