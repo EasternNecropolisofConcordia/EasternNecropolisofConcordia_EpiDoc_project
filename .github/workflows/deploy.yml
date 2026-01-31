@@ -2,10 +2,10 @@ name: Auto-Transform EpiDoc
 on:
   push:
     branches:
-      - main
+      - main  # Assicurati che il tuo branch si chiami main (o master)
 
 permissions:
-  contents: write
+  contents: write  # Permette a GitHub di salvare i file generati nella repository
 
 jobs:
   build-and-deploy:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.11' # Versione stabile e compatibile con saxonche
 
       - name: Install dependencies
         run: |
