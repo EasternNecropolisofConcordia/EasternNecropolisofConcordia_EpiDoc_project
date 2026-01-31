@@ -1,6 +1,8 @@
 .main_title {
-  display: block;
   width: 100%;
+  text-align: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -15,13 +17,19 @@
   display: flex;
 }
 
+.menu li {
+
+}
+
 .menu a {
   display: block;
   padding: 14px 16px;
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 
 .menu a:hover {
   background-color: #111;
 }
+
