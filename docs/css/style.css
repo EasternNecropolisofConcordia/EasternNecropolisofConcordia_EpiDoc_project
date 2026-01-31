@@ -33,3 +33,20 @@
   background-color: #111;
 }
 
+.inscription-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.inscription-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #2c3e50;
+}
+
+.inscription-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+}
