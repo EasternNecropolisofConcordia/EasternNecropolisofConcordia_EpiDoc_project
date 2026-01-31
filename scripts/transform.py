@@ -1,76 +1,59 @@
-#!/usr/bin/env python3
-
+import os
 from lxml import etree
-from pathlib import Path
 
-def transform_xml_to_html():
-    # Percorsi
-    xml_dir = Path('inscriptions')              # File XML sorgente
-    xslt_file = Path('xslt/epidoc-to-html.xsl') # Stylesheet XSLT
-    output_dir = Path('docs/inscriptions')      # Dove salvare HTML
+def transform_xml():
+    xml_dir = 'inscriptions/'
+    xslt_path = 'xslt/epidoc-to-html.xsl'
+    output_dir = 'docs/pages/'
     
-    # Crea la cartella output se non esiste
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Carica XSLT
-    print(f"📄 Caricamento XSLT: {xslt_file}")
-    try:
-        xslt = etree.parse(str(xslt_file))
-        transform = etree.XSLT(xslt)
-    except Exception as e:
-        print(f"❌ Errore nel caricamento XSLT: {e}")
-        return
-    
-    # Trova tutti i file XML
-    xml_files = list(xml_dir.glob('*.xml'))
-    
-    if not xml_files:
-        print(f"⚠️  Nessun file XML trovato in {xml_dir}/")
-        return
-    
-    print(f"\n📚 Trovati {len(xml_files)} file XML da trasformare\n")
-    
-    # Trasforma ogni file
-    success_count = 0
-    error_count = 0
-    
-    for xml_file in xml_files:
-        try:
-            print(f"⚙️  Trasformazione: {xml_file.name}...")
-            
-            # Parse XML
-            xml = etree.parse(str(xml_file))
-            
-            # Applica trasformazione XSLT
-            result = transform(xml)
-            
-            # Nome file output (stesso nome ma .html)
-            output_file = output_dir / xml_file.with_suffix('.html').name
-            
-            # Salva HTML
-            with open(output_file, 'wb') as f:
-                f.write(etree.tostring(
-                    result, 
-                    pretty_print=True, 
-                    method='html',
-                    encoding='UTF-8'
-                ))
-            
-            print(f"   ✓ Creato: {output_file}")
-            success_count += 1
-            
-        except Exception as e:
-            print(f"   ✗ Errore con {xml_file.name}: {e}")
-            error_count += 1
-    
-    # Riepilogo
-    print(f"\n{'='*50}")
-    print(f"✓ Trasformazione completata!")
-    print(f"  • File processati con successo: {success_count}")
-    if error_count > 0:
-        print(f"  • Errori: {error_count}")
-    print(f"  • File HTML salvati in: {output_dir}/")
-    print(f"{'='*50}\n")
+    # Definizione del namespace TEI
+    namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
 
-if __name__ == '__main__':
-    transform_xml_to_html()
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    xslt_tree = etree.parse(xslt_path)
+    transform = etree.XSLT(xslt_tree)
+
+    header_html = """
+    <header>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+                <li><a href="history.html">History of the Eastern Necropolis</a></li>
+                <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
+                <li><a href="about.html">About this project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <link rel="stylesheet" href="../css/style.css">
+    """
+
+    for filename in os.listdir(xml_dir):
+        if filename.endswith('.xml'):
+            xml_path = os.path.join(xml_dir, filename)
+            tree = etree.parse(xml_path)
+            
+            # Estraiamo il nome del file desiderato dal tag <idno type="filename">
+            idno = tree.xpath('//tei:idno[@type="filename"]/text()', namespaces=namespaces)
+            if idno:
+                # Se il file si chiama Vassio.xml, l'output sarà Vassio.html
+                output_filename = idno[0].replace('.xml', '.html')
+            else:
+                output_filename = filename.replace('.xml', '.html')
+
+            # Trasformazione XSLT
+            new_dom = transform(tree)
+            content = etree.tostring(new_dom, encoding='unicode', method='html')
+            
+            full_html = f"<!DOCTYPE html><html><body>{header_html}<main>{content}</main></body></html>"
+
+            with open(os.path.join(output_dir, output_filename), 'w', encoding='utf-8') as f:
+                f.write(full_html)
+            
+            print(f"Trasformato: {filename} -> {output_filename}")
+
+if __name__ == "__main__":
+    transform_xml()
