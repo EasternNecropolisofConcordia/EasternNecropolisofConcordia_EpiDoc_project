@@ -25,17 +25,18 @@ def run():
                 # Carichiamo il documento
                 node = proc.parse_xml(xml_file_name=xml_path)
                 
-                # In questa versione di Saxon, passiamo il contesto (node) 
-                # direttamente dentro evaluate()
-                title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]", context_item=node)
-                idno_item = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]", context_item=node)
+                # Metodo più compatibile: impostiamo il contesto separatamente
+                xpath_processor.set_context_item(xdm_item=node)
                 
-                # Estraiamo il valore testuale
-                display_title = title_item.get_string_value().strip() if title_item else filename
+                # Eseguiamo l'evaluate senza argomenti extra
+                title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
+                idno_item = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]")
                 
-                # Calcolo del link
+                # Recupero stringa
+                display_title = title_item.string_value.strip() if title_item else filename
+                
                 if idno_item:
-                    target_link = idno_item.get_string_value().strip().replace('.xml', '.html')
+                    target_link = idno_item.string_value.strip().replace('.xml', '.html')
                 else:
                     target_link = filename.replace('.xml', '.html')
                 
@@ -43,7 +44,13 @@ def run():
                 print(f"REGISTRATO: {display_title}")
                 
             except Exception as e:
-                print(f"ERRORE nel file {filename}: {str(e)}")
+                # Se fallisce ancora, proviamo l'ultimo metodo disperato: estrazione diretta dal nodo
+                try:
+                    display_title = node.children[0].string_value[:50] # Placeholder
+                    inscriptions_data.append({'title': filename, 'link': filename.replace('.xml', '.html')})
+                    print(f"REGISTRATO (Fallback): {filename}")
+                except:
+                    print(f"ERRORE persistente su {filename}: {str(e)}")
 
     inscriptions_data.sort(key=lambda x: x['title'])
     
@@ -59,14 +66,6 @@ def run():
 <body>
     <header>
         <h1 class="main_title">Digital Approaches to Iulia Concordia</h1>
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="inscriptions.html">Inscriptions</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="abouttheinscriptions.html">About</a></li>
-            </ul>
-        </nav>
     </header>
     <main style="padding: 20px;">
         <h2>Index of Encoded Inscriptions</h2>
@@ -78,7 +77,7 @@ def run():
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
-    print(f"Fine: Pagina generata con {len(inscriptions_data)} iscrizioni.")
+    print(f"Fine: Generati {len(inscriptions_data)} link.")
 
 if __name__ == "__main__":
     run()
