@@ -51,19 +51,28 @@
     color: #2c3e50;
 }
 /* Figures */
+Se l'immagine sembra ancora troppo grande nonostante sia centrata, significa che il max-width: 80% su <figure> le lascia comunque troppo spazio, oppure che il contenitore principale (<main>) è molto largo.
+
+Per un'immagine epigrafica, spesso l'ideale è una larghezza fissa o una percentuale più contenuta che non costringa l'utente a scorrere troppo verso il basso.
+Soluzione 1: Ridurre la percentuale o usare una larghezza fissa
+
+Modifica il tuo style.css restringendo il contenitore figure. Usando max-width: 400px (o 500px), l'immagine non supererà mai quella dimensione, ma rimarrà comunque centrata.
+CSS
+
 figure {
-    margin: 20px auto;
-    padding: 10px;
-    max-width: 80%;
-    text-align: center;
+    margin: 30px auto;
+    padding: 15px;
+    width: fit-content;
+    max-width: 50%;
+    border: 1px solid #eee;
+    background-color:
 }
 
 figure img {
+    display: block;
     max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* Un leggero effetto ombra */
-    border-radius: 4px;
+    margin: 0 auto;
 }
 
 figcaption {
