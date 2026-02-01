@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Felix and Lucia</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Felix_Lucia.xml</idno>
+                <idno type="TM">125489</idno>
+                <idno type="EDR">EDR097746</idno>
+                <idno type="UEL">29357</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>376</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" xml:lang="en">
+                                First half of the fourth century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" xml:lang="it">
+                                Prima Metà del IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">1840</note>
+                            <note type="plan_y">1290</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into a low wall in the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Panel of the frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Tabella di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">45</height>
+                                        <width unit="cm">82</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        The front of the sarcophagus is re-cut near the left side.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Tabella di sarcofago resecata in prossimità del lato sinistro.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">42</height>
+                                        <width unit = "cm">80</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4" max="5" unit = "cm">4-5</height>
+                                <note type="palaeographic" xml:id="en">
+                                    <p>
+                                        Rightward slant; horizontal alignment; vertical module; irregular <term xml:lang="la">ductus</term>; triangular punctuation marks.
+                                    </p>
+
+                                    <p>
+                                        The letter <g type="pl">F</g> features a shorter crossbar compared to the upper arm and sometimes a lower arm (line 2).
+                                    </p>
+                                    <p>
+                                        The letter <g type="pl">M</g> is composed of four oblique strokes.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:id="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione triangoliforme.
+                                    </p>
+                                    <p>
+                                        <g type="pl">F</g> con cravatta più corta rispetto al braccio superiore e talvolta con braccio inferiore (r. 2).
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                According to <bibl ref="#bertolini1873a">Bertolini</bibl>, the decorative scheme, now lost, included two small leafy crosses in the shape of a Greek cross flanking the inscription among rather elaborate ornaments. 
+                                On the eastern pediment there was an axe, while on the western one the Chi-Rho monogram appeared within a wreath of leaves tied with ribbons extending horizontally downward.
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                L’apparato figurativo, oggi perduto, è così descritto da <bibl ref="#bertolini1873a">Bertolini</bibl>: “Ai lati della scritta fra ornati alquanto bizzarri due piccole croci a foglie di questa forma (croce greca); 
+                                sul timpano dal lato orientale un’ascia, sull’occidentale il monogramma di Costantino in una corona di fronde legata con nastri che si stendono al basso orizzontalmente”
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="felix">
+                   <persName>
+                       <name type="full">Flavius Felix</name>
+                       <name type="nomen">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Felix</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#lucia">husband</note>
+               </person>
+               <person xml:id="lucia">
+                 <persName>
+                     <name type="full">Lucia</name>
+                     <name type="cognomen" nymRef="latin">Lucia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#felix">wife</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Felix_Lucia.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Felix and Lucia. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29357">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                    <ab>
+                        <lb n="1"/><persName corresp="#felix"><expan><abbr><unclear>F</unclear>l</abbr><ex>avius</ex></expan> Felix</persName> sibi et <persName corresp="#lucia"><choice><reg>Luciae</reg><orig>Lucie</orig></choice></persName> co<supplied reason="omitted">n</supplied>i
+                        <lb n="2" break="no"/>ugi de <choice><reg>proprio</reg><orig>propio</orig></choice> suo vivi fece
+                        <lb n="3" break="no"/>runt <w xml:id="w1">ut</w> nul<supplied reason="omitted">l</supplied>us <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig>ovitum</orig></choice>
+                        <lb n="4"/>nostrum in hac sepultura
+                        <lb n="5"/>ponatur <choice><reg>dabit</reg><orig>davit</orig></choice> <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">fisco auri po</measure>
+                        <lb n="6" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2"><unclear>n</unclear>do <choice><reg>duo</reg><orig>dua</orig></choice></measure>
+                    </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="3" from="#w1" to="#w1">
+                        <lem>
+                            ut 
+                        </lem>
+                        <rdg source="#bertolini1873a #bertolini1873b"></rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p xml:lang="en">
+                    <persName corresp="#felix" xml:lang="la">Flavius Felix</persName>, for himself and for his wife 
+                    <persName corresp="#lucia" xml:lang="la">Lucia</persName>, had this made during their lifetime at their own expense. 
+                    So that no one, after their death, may be buried in this tomb, a fine of two pounds of gold shall be paid to the treasury.
+                </p>
+                <p xml:lang="it">
+                    <persName corresp="#felix" xml:lang="la">Flavius Felix</persName>, per sé e per la moglie <persName corresp="#lucia" xml:lang="la">Lucia</persName>, fece realizzare quest’arca da vivo, a proprie spese.  
+                    Affinché nessuno, dopo la loro morte, venga deposto in questa sepoltura, è prevista una multa di due libbre d’oro a favore del fisco.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                   
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it"></div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1873a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873a"/>
+                        <title>Bertolini 1873a</title>
+                        <citedRange unit="page">62</citedRange>
+                    </bibl>
+                    <bibl xml:id="bertolini1873b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873b"/>
+                        <title>Bertolini 1873b</title>
+                        <citedRange unit="page">66</citedRange>
+                    </bibl>
+                     <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                         <title>Bertolini 1874a</title>
+                        <citedRange unit="page">21</citedRange>
+                        <note type="number">nr. 3</note>
+                    </bibl>
+                    <bibl xml:id="cilv8748">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8748</title>
+                    </bibl>
+                    <bibl xml:id="ilcv812">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 812</title>
+                    </bibl>
+                    <bibl xml:id="forlatitamaro1978">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#forlatitamaro1978"/>
+                        <title>Forlati Tamaro 1978</title>
+                        <citedRange unit="page">149-150</citedRange>
+                        <note type="number">nr. 6</note>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">101</citedRange>
+                        <note type="number">nr. 67</note>
+                    </bibl>
+                    <bibl xml:id="edr097746">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097746">EDR097746</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2008-07-03">03-07-2008</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

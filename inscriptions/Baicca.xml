@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Baicca</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Baicca.xml</idno>
+                <idno type="TM">125674</idno>
+                <idno type="EDR">EDR097933</idno>
+                <idno type="UEL">29316</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>256</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient">Iulia Concordia</placeName>
+                                <placeName type="modern">Concordia Sagittaria</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0400" notAfter-custom="0425" evidence="lettering nomenclature" xml:lang="en">
+                                Early Fifth Century.
+                            </origDate>
+                            <origDate notBefore-custom="0400" notAfter-custom="0425" evidence="lettering nomenclature" xml:lang="it">
+                                Inizio V Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1877</date>
+                            <note type="plan_x">460</note>
+                            <note type="plan_y">2520</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">46</height>
+                                        <width unit="cm">110</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Front of the sarcophagus broken into four pieces, severely damaged and mutilated on the lower side.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Fronte di sarcofago calcarea fratta in quattro pezzi, gravemente danneggiata e mutila nel lato inferiore.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">46</height>
+                                        <width unit="cm">110</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="5.5" max="7.5" unit = "cm">5.5-7.5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Writing direction left to right; horizontal alignment; irregular and vertical module; irregular <term xml:lang="la">ductus</term>.
+                                    </p>
+                                    <p>
+                                        <g type="pl">A</g> with a broken crossbar.
+                                    </p>
+                                    <p><g type="pl">E</g> and <g type="pl">F</g> laterally compressed.
+                                    </p>
+                                    <p>
+                                        <g type="pl">F</g> with a long, oblique upper arm rising to the right.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> formed of four oblique strokes.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso; andamento orizzontale; modulo verticale e irregolare; <term xml:lang="la">ductus</term> irregolare.
+                                    </p>
+                                    <p>
+                                        <g type="pl">A</g> con traversa spezzata.
+                                    </p>
+                                    <p><g type="pl">E</g> ed <g type="pl">F</g> compresse lateralmente.
+                                    </p>
+                                    <p>
+                                        <g type="pl">F</g> con braccio superiore lungo e obliquo, ascendente verso destra.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>
+                                </p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>
+                                </p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person>
+                   <persName xml:id="baicca">
+                       <name type="full" nymRef="illyric">Baicca</name>
+                       <name type="cognomen">Baicca</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil?</note>
+                   <note type="role">dedicatator/deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Baicca.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Baicca. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29316">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/>Ego magister <persName ref="#baicca">Baicca</persName>, de
+                    <lb n="2"/>proprio meo arca<supplied reason="omitted">m</supplied> mihi
+                    <lb n="3"/><choice><reg>comparavi</reg><orig>conparavi</orig></choice>. Si qui eam
+                    <lb n="4"/>voluerit aperire, <choice><reg>dabit</reg><orig>davit</orig></choice>
+                    <lb n="5"/>fisci viribus <measure type="fine" unit="roman_pound" commodity="silver" quantity="5"><w xml:id="w1"><expan><abbr>ar<supplied reason="lost" cert="high">g</supplied></abbr><ex>enti</ex></expan></w> <expan><abbr><hi rend="supraline">p</hi></abbr><ex>ondo</ex></expan> <expan><abbr>n</abbr><ex>ummum</ex></expan> <num value="5">V</num></measure>.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="3" from="#w1" to="#w1">
+                        <lem>
+                            <expan><abbr>ar<supplied reason="lost" cert="high">g</supplied></abbr><ex>enti</ex></expan>
+                        </lem>
+                        <rdg source="#lettich1983">
+                            <expan><abbr>arg</abbr><ex>enti</ex></expan>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    To the Manes gods.
+                </p>
+                <p>
+                    I, <persName ref="#baicca" xml:lang="la">Baicca</persName>, master, purchased this coffin for myself with my own means. Whoever opens it shall pay to the fisc five pounds of silver.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    Io, <persName ref="#baicca" xml:lang="la">Baicca</persName>, maestro, acquistai per me quest’arca con mezzi propri. Chi la aprirà, pagherà al fisco cinque libbre d’argento.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    Diehl interpreted <persName ref="#baicca" xml:lang="la">Baicca</persName> as a soldier, hypothesizing that he held the rank of <term xml:lang="la">magister primus</term>, similarly to <persName xml:lang="la">Flavius Hariso</persName>, attested among the <term xml:lang="la">Heruli seniores</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil">CIL V 8750</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097748&amp;fo_antik=&amp;fo_modern=&amp;Bibliografia%5B%5D=&amp;Testo=&amp;boolTesto=AND&amp;Testo2=&amp;bool=AND&amp;ordinamento=id_nr&amp;javasi=javascriptsi&amp;se_foto=tutte&amp;lang=it">EDR097748</ref>). On this basis, <persName xml:lang="la">Baicca</persName>'s inscription was placed together with those of other soldiers in chapter VII of the <term xml:lang="la">Inscriptiones Latinae Christianae Veteres</term>, dedicated to the <term xml:lang="la">ordines aetatis inferioris</term> (<bibl ref="#ilcv464a">ILCV 464 A</bibl>). Hoffmann also included <persName xml:lang="la">Baicca</persName> among the military personnel (<ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">Hoffmann 1969, 63, 80</ref>).
+                </p>
+                <p>
+                    However, in the inscription <persName ref="#baicca" xml:lang="la">Baicca</persName> does not mention any unit of service, and in the Concordia necropolis only a few soldiers are attested who record their rank without specifying their unit. Moreover, planimetric analysis shows that his burial is located among the sarcophagi of civilians, a circumstance that further weakens the military interpretation.
+                </p>
+                <p>
+                    It therefore seems more likely that <persName ref="#baicca" xml:lang="la">Baicca</persName> was a teacher. The title <term xml:lang="la">magister</term> is indeed well attested in late-antique inscriptions from the Adriatic area. A significant comparison is offered by the mosaic of <persName xml:lang="la">Clamosus</persName>, <term xml:lang="la">magister puerorum</term>, together with <persName xml:lang="la">Victorina</persName>, in the Euphrasian Basilica of Poreč <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR133463&amp;fo_antik=&amp;fo_modern=&amp;Bibliografia%5B%5D=&amp;Testo=&amp;boolTesto=AND&amp;Testo2=&amp;bool=AND&amp;ordinamento=id_nr&amp;javasi=javascriptsi&amp;se_foto=tutte&amp;lang=it">(EDR133463)</ref>. <persName xml:lang="la">Baicca</persName>'s inscription also presents a peculiar feature: the mention of the profession precedes the personal name, a unique case in the epigraphic corpus of Concordia <ref target="../Bibliography/Master_Bibliography.xml#lettich1983">(Lettich 1983, 63, n. 20)</ref>.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    Diehl interpretò <persName ref="#baicca" xml:lang="la">Baicca</persName> come un militare, ipotizzando che avesse ricoperto il grado di <term xml:lang="la">magister primus</term>, analogamente a <persName xml:lang="la">Flavius Hariso</persName>, attestato tra gli <term xml:lang="la">Heruli seniores</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil">CIL V 8750</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097748&amp;fo_antik=&amp;fo_modern=&amp;Bibliografia%5B%5D=&amp;Testo=&amp;boolTesto=AND&amp;Testo2=&amp;bool=AND&amp;ordinamento=id_nr&amp;javasi=javascriptsi&amp;se_foto=tutte&amp;lang=it">EDR097748</ref>). Su questa base, l’iscrizione di <persName xml:lang="la">Baicca</persName> fu inserita insieme a quelle di altri soldati nel capitolo VII delle <term xml:lang="la">Inscriptiones Latinae Christianae Veteres</term>, dedicato agli <term xml:lang="la">ordines aetatis inferioris</term> (<bibl ref="#ilcv464a">ILCV 464 A</bibl>). Anche Hoffmann incluse <persName xml:lang="la">Baicca</persName> tra i militari (<ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">Hoffmann 1969, 63, 80</ref>).
+                </p>
+                <p>
+                    Tuttavia, nell’epigrafe <persName ref="#baicca" xml:lang="la">Baicca</persName> non menziona alcun reparto di appartenenza, e nella necropoli di Concordia sono attestati solo pochi casi di militari che dichiarano il proprio rango senza indicare l’unità. Inoltre, l’analisi planimetrica mostra che la sua sepoltura è collocata tra i sarcofagi di civili, circostanza che indebolisce ulteriormente l’interpretazione militare.
+                </p>
+                <p>
+                    Appare quindi più verosimile identificare <persName ref="#baicca" xml:lang="la">Baicca</persName> come un insegnante. La qualifica di <term xml:lang="la">magister</term> è infatti ben documentata nelle epigrafi tardo-antiche dell’area adriatica. Un confronto significativo è offerto dal mosaico di <persName xml:lang="la">Clamosus</persName>, <term xml:lang="la">magister puerorum</term>, insieme a <persName xml:lang="la">Victorina</persName>, nella basilica Eufrasiana di Parenzo <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR133463&amp;fo_antik=&amp;fo_modern=&amp;Bibliografia%5B%5D=&amp;Testo=&amp;boolTesto=AND&amp;Testo2=&amp;bool=AND&amp;ordinamento=id_nr&amp;javasi=javascriptsi&amp;se_foto=tutte&amp;lang=it">(EDR133463)</ref>. L’iscrizione di <persName xml:lang="la">Baicca</persName> presenta inoltre un elemento peculiare: la menzione della professione precede il nome personale, un unicum nel corpus epigrafico di Concordia <ref target="../Bibliography/Master_Bibliography.xml#lettich1983">(Lettich 1983, 63, n. 20)</ref>.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <title>Bertolini 1877</title>
+                        <citedRange unit="page">120</citedRange>
+                        <note type="number">n. 2</note>
+                    </bibl>
+                    <bibl xml:id="cilv8988c">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8988c</title>
+                    </bibl>
+                    <bibl xml:id="ilcv464a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 464A</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">63</citedRange>
+                        <note type="number">n. 20</note>
+                    </bibl>
+                    <bibl xml:id="edr097933">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097933">EDR097933</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-30">30-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

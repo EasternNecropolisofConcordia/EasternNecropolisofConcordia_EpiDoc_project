@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Dionisia_B</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Dionisia_B.xml</idno>
+                <idno type="TM">125635</idno>
+                <idno type="EDR">EDR097894</idno>
+                <idno type="UEL">29370</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>399</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0350" notAfter-custom="0400" xml:lang="en">
+                                Second half of the 4th century AD.
+                            </origDate>
+                            <origDate notBefore-custom="0350" notAfter-custom="0400" xml:lang="it">
+                                Seconda Metà del IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1875</date>
+                            <note type="plan_x">1280</note>
+                            <note type="plan_y">1050</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into a small wall, in the right nave of the National Concordia Museum in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva inserita in un muretto nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Front of a sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago in pietra calcarea.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">41,5</height>
+                                        <width unit="cm">45</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Fragment of a limestone sarcophagus. Additional fragments, now lost, were observed by <bibl corresp="#bertolini1875a #bertolini1875b">Bertolini</bibl>.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Frammento di sarcofago in pietra calcarea. Ulteriori frammenti, oggi perduti, furono visti da <bibl corresp="#bertolini1875a #bertolini1875b">Bertolini</bibl>
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">41,5</height>
+                                        <width unit="cm">45</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="3.5" max="5" unit = "cm">3,5-5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Rightward stroke direction, horizontal layout, vertical module, irregular <term xml:lang="la">ductus</term>, no interpunction, shallow incision, centered layout.
+                                    </p>
+                                    <p>
+                                        <g type="pl">E</g> strongly laterally compressed.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> is composed of four oblique strokes.
+                                    </p>
+                                    <p>
+                                        <g type="pl">T</g> has a short crossbar.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione assente, solco leggero, impaginazione centrata.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">E</g> fortemente compressa lateralmente.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique.
+                                    </p>
+                                    <p>
+                                        <g type="pl">T</g> composta da quattro aste oblique.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="dionisia" corresp="./Dionisia_B.xml#dionisia">
+                   <persName>
+                       <name type="full">Aurelia Dionisia</name>
+                       <name type="nomen">Aurelia</name>
+                       <name type="cognomen" nymRef="greek-origin">Dionisia</name>
+                       <name type="gens">Aurelia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+                   <note type = "relationship" corresp="#ap_">grandchild</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Dionisia_2.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Dionisia. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29370">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                    <ab>
+                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a ">Aur</supplied>elia Dionis<supplied reason="lost" evidence="parallel" cert="high">ia</supplied> <w xml:id="w1"><supplied reason="lost" cert="medium">quae vixi</supplied></w><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">t</supplied>
+                        <lb n="2"/><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">anni</supplied>s <num value="9">VIIII</num> <choice><abbr>m</abbr><expan>m<ex>ensibus</ex></expan></choice> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <w xml:id="w2"><supplied reason="lost" evidence="parallel" cert="medium">Si</supplied></w> <supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">qui</supplied>
+                        <lb n="3" break="no"/>s eam voluerit <w xml:id="w3"><supplied reason="lost" cert="low">inr</supplied>umpere</w>
+                        <lb n="4"/><choice><reg>dabit</reg><orig><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">davit</supplied></orig></choice> <w xml:id="w4"><choice><reg>fisco</reg><orig><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">fi</supplied><unclear>s</unclear>ci</orig></choice></w> <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">arge<supplied reason="lost">nti</supplied> <supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">libras <num value="5">V</num></supplied></measure>
+                    </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1" to="#21">
+                        <lem>
+                            <supplied reason="lost" cert="medium">quae vixi</supplied>
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1875b">
+                            <supplied reason="lost">filia quae vixi</supplied>
+                        </rdg>
+                        <rdg source="#ilcv817b">
+                            <supplied reason="lost">vixi</supplied>
+                        </rdg>
+                    </app>
+                    <app loc="2" from="#w2" to="#w2">
+                        <lem>
+                            <supplied reason="lost" evidence="parallel" cert="medium">Si</supplied>
+                        </lem>
+                        <rdg source="#lettich1983">
+                            Si
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w3" to="#w3">
+                        <lem>
+                            <supplied reason="lost" cert="low">inr</supplied>umpere
+                        </lem>
+                        <rdg source="#bertolini1875a #bertolini1875b">
+                            <supplied reason="lost">r</supplied>umpere
+                        </rdg>
+                        <rdg source="#cilv8735a #edr097894">
+                            <supplied reason="lost">corr</supplied>umpere
+                        </rdg>
+                        <rdg source="#lettich1983">
+                            <gap reason="lost" extent="unknown" unit="character"/>umpere
+                        </rdg>
+                    </app>
+                    <app loc="4" from="#w4" to="#w4">
+                        <lem>
+                            <choice><reg>fisco</reg><orig><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">fi</supplied><damage>s</damage>ci</orig></choice>
+                        </lem>
+                        <rdg source="#lettich1983">
+                            fisci <supplied reason="omitted">viribus</supplied>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <div type="translation" xml:lang="en">
+                    <p xml:lang="en">
+                        Aurelia Dionisia, who lived nine years, seven months, and [---] days.
+                    </p>
+                    <p>
+                        If anyone should wish to break into this burial, he shall pay to the fisc five pounds of silver.
+                    </p>
+                </div>
+                <div type="translation" xml:lang="it">
+                    <p>
+                        Aurelia Dionisia, che visse nove anni, sette mesi e [---] giorni.  
+                    </p>
+                    <p>
+                        Se qualcuno vorrà violare questa sepoltura, dovrà versare al fisco cinque libbre d’argento.
+                    </p>
+                </div>
+            </div>
+            <div type="commentary">
+                <div type="commentary" xml:lang="en">
+                    <p>
+                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> is addressed <ref target="Dionisia_A.xml">in another fragmentary inscription</ref> on a nearby sarcophagus, since both her age and the initials of her cognomen coincide.
+                    </p>
+                    <p>
+                        It is not clear why two sarcophagi would have been dedicated to <persName corresp="#dionisia" xml:lang="la">Dionisia</persName>. Mommsen, attempting to resolve this issue, maintains that both inscriptions belonged to the same <term xml:lang="la">arca</term>: this inscription would have been on the front of the sarcophagus, while the second on one of its sides.
+                    </p>
+                    <p>
+                        However, Bertolini does not report this version and, according to the site plan, the inscriptions in question were located on two distinct <term xml:lang="la">arcae</term>, although close to one another.
+                    </p>
+                    <p>
+                        Perhaps <persName corresp="#dionisia" xml:lang="la">Dionisia</persName>’s first sarcophagus had been damaged or subsequently occupied by others, or her body had initially been placed in a temporary arca intended for other members of the family—reasons that would have made it necessary to move her remains to another <term xml:lang="la">arca</term>.
+                    </p>
+                    <p>
+                        Indeed, the inscription of <ref target="./Cerealis.xml" xml:lang="la">Ennius Cerealis</ref> shows that tombs were at times cared for and restructured by relatives.
+                    </p>
+                </div>
+                <div type="commentary" xml:lang="it">
+                    <p>
+                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> viene apostrofata <ref target="Dionisia_A.xml">in un’altra iscrizione mutila</ref> di un sarcofago vicino, dal momento che coincidono sia l’età sia le iniziali del cognomen.
+                    </p>
+                    <p>
+                        Non risulta chiaro perché a <persName corresp="#dionisia" xml:lang="la">Dionisia</persName> siano stati dedicati due sarcofagi. Mommsen, cercando di ovviare a questo dubbio, sostiene che entrambe le epigrafi si trovassero sulla stessa arca: questa iscrizione sarebbe stata sulla fronte del sarcofago, mentre la seconda su uno dei lati. 
+                    </p>
+                    <p>
+                        Tuttavia Bertolini non riporta questa versione e, secondo la planimetria, le epigrafi in questione si trovavano su due arche diverse, sebbene vicine.
+                    </p>
+                    <p>
+                        Forse il primo sarcofago di <persName corresp="#dionisia" xml:lang="la">Dionisia</persName> era stato rovinato o occupato da altre persone, oppure la sua salma era stata deposta in un’arca momentanea, dedicata ad altri membri della famiglia: motivi che avrebbero reso necessario lo spostamento in un’altra arca.
+                    </p> 
+                    <p>
+                        In effetti l’iscrizione di <ref target="./Cerealis.xml" xml:lang="la">Ennius Cerealis</ref> dimostra che talvolta le tombe venivano curate e ristrutturate dai parenti.
+                    </p>
+
+                </div>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                     <bibl xml:id="bertolini1875a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875a"/>
+                         <title>Bertolini 1875a</title>
+                        <citedRange unit="page">114</citedRange>
+                        <note type="number">nr. 55</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1875b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1875b</title>
+                        <citedRange unit="page">121</citedRange>
+                        <note type="number">nr. 16</note>
+                    </bibl>
+                    <bibl xml:id="cilv8735a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8735a</title>
+                    </bibl>
+                    <bibl xml:id="ilcv817b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 817 B</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">107</citedRange>
+                        <note type="number">nr. 81</note>
+                    </bibl>
+                    <bibl xml:id="edr097894">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097894">EDR097894</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2008-07-23">23-07-2008</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
