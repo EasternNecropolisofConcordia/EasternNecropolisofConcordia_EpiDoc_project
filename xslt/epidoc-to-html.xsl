@@ -64,8 +64,10 @@
                         </div>
                     </xsl:for-each>
                 </div>
+                
+                <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
 
-                <details class="people">
+                <div class="people">
                     <h2>People</h2>
                     <xsl:for-each select="//tei:listPerson/tei:person">
                         <h3>
@@ -98,9 +100,39 @@
                             </xsl:for-each>
                         </ul>
                     </xsl:for-each>
-                </details>
+                </div>
             </body>
         </html>
+    </xsl:template>
+    
+    <!-- ========= -->
+    <!-- TEMPLATES -->
+    <!-- ========= -->
+
+    <!-- ref -->
+    <xsl:template match="tei:ref">
+        <a href="{@target}">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <!-- Image -->
+    <xsl:template match="tei:graphic">
+        <figure>
+            <img src="{@url}">
+                <xsl:attribute name="alt">
+                    <xsl:value-of select="tei:desc[@type='alt']"/>
+                </xsl:attribute>
+            </img>
+            
+            <xsl:apply-templates select="tei:desc[@type='figDesc']"/>
+        </figure>
+    </xsl:template>
+    
+    <xsl:template match="tei:desc[@type='figDesc']">
+        <figcaption>
+            <xsl:apply-templates/>
+        </figcaption>
     </xsl:template>
 
     <!-- ========================================== -->
@@ -151,7 +183,21 @@
     </xsl:template>
     
     <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp">
-        <u><xsl:apply-templates mode="interp"/></u>
+        <u style="cursor: help;">
+            <xsl:attribute name="title">
+                <xsl:text>Source(s): </xsl:text>
+                <xsl:variable name="context" select="/"/>
+                <xsl:for-each select="tokenize(normalize-space(@corresp), '\s+')">
+                    <xsl:variable name="id" select="substring-after(., '#')"/>
+                    <xsl:value-of select="$context//tei:bibl[@xml:id = $id]/tei:title"/>
+                    <xsl:if test="position() != last()">
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:attribute>
+            
+            <xsl:apply-templates mode="interp"/>
+        </u>
     </xsl:template>
     
     <xsl:template match="tei:hi[@rend = 'apex']" mode="interp">
