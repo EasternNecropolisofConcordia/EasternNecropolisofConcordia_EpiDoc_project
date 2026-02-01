@@ -17,7 +17,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
                         <idno type="inventory">401</idno>
                     </msIdentifier>
                     <history>
@@ -28,8 +35,11 @@
                                 <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
                                 <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
                             </origPlace>
-                            <origDate notBefore-custom="0375" notAfter-custom="0425" evidence="lettering nomenclature textual-context">
+                            <origDate notBefore-custom="0375" notAfter-custom="0425" evidence="lettering nomenclature textual-context" xml:lang="en">
                                 Late Fourth Century - Early Fifth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0375" notAfter-custom="0425" evidence="lettering nomenclature textual-context" xml:lang="it">
+                                Fine IV - Inizio V Secolo d.C.
                             </origDate>
                         </origin>
                         <provenance type="found">
@@ -38,7 +48,7 @@
                             <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
                             <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
                             <placeName type="estate">Perulli</placeName>
-                            <date type="discovery">1877</date>
+                            <date type="discovery">1873</date>
                             <note type="plan_x">2010</note>
                             <note type="plan_y">1560</note>
                         </provenance>
@@ -97,7 +107,7 @@
                                 <height min="5" max="7" unit="cm">3-4</height>
                                 <note type="palaeographic" xml:lang="en">
                                     <p>
-                                        Right-slanting, horizontal layout, vertical module, irregular <term xml:lang="la">ductus</term>, triangular-shaped interpunction, deep incision, centered layout.
+                                        Left-to-right direction, horizontal layout, vertical module, irregular <term xml:lang="la">ductus</term>, triangular-shaped interpunction, deep incision, centered layout.
                                     </p>
                                     <p>
                                         <g type="pl">A</g> with a broken crossbar.
@@ -277,15 +287,15 @@
                     </bibl>
                     <bibl xml:id="cilv8773">
                         <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
-                        <title>CIL V 8773</title>
+                        <title><term xml:lang="la">CIL</term> V 8773</title>
                     </bibl>
                     <bibl xml:id="ils2803">
                         <ptr target="../Bibliography/Master_Bibliography.xml#ils"/>
-                        <title>ILS 2803</title>
+                        <title><term xml:lang="la">ILS</term> 2803</title>
                     </bibl>
                     <bibl xml:id="ilcv457">
                         <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
-                        <title>ILCV 457</title>
+                        <title><term xml:lang="la">ILCV</term> 457</title>
                     </bibl>
                     <bibl xml:id="hoffmann1963">
                         <ptr target="../Bibliography/Master_Bibliography.xml#hoffmann1963"/>
