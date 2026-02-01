@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Flavius Gaudentius and Martina</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Gaudentius_Martina.xml</idno>
+                <idno type="TM">125626</idno>
+                <idno type="EDR">EDR097885</idno>
+                <idno type="UEL">29353</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>356</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0375" notAfter-custom="0400" evidence="lettering" xml:lang="en">
+                                Late Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0375" notAfter-custom="0400" evidence="lettering" xml:lang="it">
+                                Fine IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">2460</note>
+                            <note type="plan_y">990</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Panel of the lateral slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Lato di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">57.5</height>
+                                        <width unit="cm">74.5</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Sarcophagus side, broken into three rejoined fragments and damaged at the bottom.</p>
+                                    <p xml:lang="it">Lato di sarcofgo fratto in tre pezzi ricongiunti e danneggiato nella parte inferiore.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">57.5</height>
+                                        <width unit = "cm">74.5</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4" max="8" unit = "cm">4-8</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Rightward direction, horizontal alignment, irregular module, descending <term xml:lang="la">ductus</term>, shallow incision. No interpunction. </p>
+                                    <p><g type="pl">A</g> sometimes with a broken crossbar.</p>
+                                    <p><g type="pl">E</g> is lunate, with the middle arm placed high in the body of the letter, similar to the <g type="pl">E</g> of the <term>uncial</term> type.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo irregolare, <term xml:lang="la">ductus</term> discendente, solco leggero. Interpunzione assente.
+                                    </p>
+                                    <p>
+                                        <g type="pl">A</g> talvolta con traversa spezzata.
+                                    </p>
+                                    <p>
+                                        La <g type="pl">E</g> è lunata, con il tratto mediano spostato nella parte alta del corpo della lettera, simile alla <g type="pl">E</g> di tipo <term>onciale</term>.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">There isn't any decoration.</decoNote>
+                            <decoNote xml:lang="it">Non son presenti decorazioni.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="gaudentius">
+                   <persName>
+                       <name type="full">Aurelius Gaudentius</name>
+                       <name type="nomen" nymRef="latin">Aurelius</name>
+                       <name type="cognomen" nymRef="latin">Gaudentius</name>
+                       <name type="gens">Aurelia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#martina">husband</note>
+               </person>
+               <person xml:id="martina">
+                 <persName>
+                     <name type="full">Martina</name>
+                     <name type = "cognomen" nymRef="latin">Martina</name>
+                 </persName>
+                  <gender value="f">f</gender>
+                  <note type = "occupation">civil</note>
+                  <note type="role">dedicator/deceased</note>
+                  <note type = "relationship" corresp="#gaudentius">wife</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Gaudentius_Martina.jpg">
+            <desc type="alt">Inscribed lateral panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Gaudentius and Martina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29353">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><persName ref="#gaudentius">Aur<choice><corr>e</corr><sic>i</sic></choice>lius Gau</persName>
+                    <lb n="2" break="no"/><persName ref="#gaudentius">dentius</persName> et <persName corresp="#martina">Mar</persName>
+                    <lb n="3" break="no"/><persName corresp="#martina">tina</persName> vivos <choice><reg>sibi</reg><orig>se</orig></choice> <w xml:id="w1">com</w>
+                    <lb n="4" break="no"/><choice><reg>paraverunt</reg><orig>paravet</orig></choice> Si q<unclear>u</unclear><unclear>i</unclear>s e
+                    <lb n="5" break="no"/>is iniuriam det <w xml:id="w2"><supplied reason="omitted" cert="low">fisco</supplied></w>
+                    <lb n="6"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="1">aur<choice><corr>i</corr><sic><unclear>o</unclear></sic></choice> <choice><reg>libram</reg><orig>libra</orig></choice> <choice><reg>unam</reg><orig>una</orig></choice></measure>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="3" from="#w1" to="#w1">
+                        <lem>
+                            com
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b #cilv8726 #ilcv836 #lettich1983 #edr097747">
+                            <choice><reg>com</reg><orig>con</orig></choice>
+                        </rdg>
+                    </app>
+                    <app loc="5" from="#w2">
+                        <lem>
+                            <supplied reason="omitted" cert="low">fisco</supplied>
+                        </lem>
+                        <rdg source="#bertolini1874b">
+                            <supplied reason="omitted" cert="low">fisci viribus</supplied>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    <persName corresp="#gaudentius" xml:lang="la">Aurelius Gaudentius</persName> and <persName corresp="#martina" xml:lang="la">Martina</persName> commissioned for themselves in their lifetime.
+                </p>
+                <p>
+                    If anyone should inflict injury on it, he will give to the <term xml:lang="la">fiscus</term> <measure type="fine" unit="roman_pound" commodity="gold" quantity="1"> one roman pound of gold.</measure>.
+                </p>
+            </div>
+            <div type="translation">
+                <p><persName corresp="#gaudentius" xml:lang="la">Aurelius Gaudentius</persName> e <persName corresp="#martina" xml:lang="la">Martina</persName>, da vivi comprarono [l'arca].</p>
+                <p>Se qualcuno [arrecherà] loro offesa, versi una libbra d’oro.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+            </div>
+            <div type="commentary" xml:lang="it">
+                
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">107</citedRange>
+                        <note type="number">nr. 44</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">291</citedRange>
+                        <note type="number">nr. 14</note>
+                    </bibl>
+                    <bibl xml:id="cilv8726">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8726</title>
+                    </bibl>
+                    <bibl xml:id="ilcv836">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 836</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">99</citedRange>
+                        <note type="number">nr. 62</note>
+                    </bibl>
+                    <bibl xml:id="edr097885">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097885">EDR097885</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                        <date type="revised" when="2016-04-08">08-04-2016</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
