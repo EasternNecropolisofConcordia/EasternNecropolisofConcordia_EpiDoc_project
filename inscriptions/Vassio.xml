@@ -175,7 +175,10 @@
      </profileDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="../data/Images/Vassio.jpg"/>
+        <graphic url="../data/Images/Vassio.jpg">
+            <desc type="alt">Limestone sarcophagus with inscribed front.</desc>
+            <desc type="figDesc">The sarcophagus of Vassio. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
     </facsimile>
     <text>
         <body>
@@ -264,10 +267,12 @@
                 <listBibl>
                     <bibl xml:id="bertolini1873a">
                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873a"/>
+                        <title>Bertolini 1873a</title>
                         <citedRange unit="page">59</citedRange>
                     </bibl>
                     <bibl xml:id="bertolini1873b">
                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873b"/>
+                        <title>Bertolini 1873b</title>
                         <citedRange unit="page">59</citedRange>
                     </bibl>
                     <bibl xml:id="cilv8773">
@@ -284,19 +289,21 @@
                     </bibl>
                     <bibl xml:id="hoffmann1963">
                         <ptr target="../Bibliography/Master_Bibliography.xml#hoffmann1963"/>
+                        <title>Hoffmann 1963</title>
                         <citedRange unit="page">41-42</citedRange>
                         <note type="number">20</note>
                     </bibl>
                     <bibl xml:id="lettich1983">
                         <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
                         <citedRange unit="page">83-84</citedRange>
                         <note type="number">nr. 40</note>
                     </bibl>
                     <bibl xml:id="edr097921">
                         <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
-                        <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097921">
-                            EDR097921
-                        </ref>
+                        <title>
+                            <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097921">EDR097921</ref>
+                        </title>
                         <author>Damiana Baldassarra</author>
                         <date when="2008-07-23">23-07-2008</date>
                     </bibl>
