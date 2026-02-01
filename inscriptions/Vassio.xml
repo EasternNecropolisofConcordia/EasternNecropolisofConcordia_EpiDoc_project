@@ -175,7 +175,7 @@
      </profileDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="../data/Images/Vassio.jpg">
+        <graphic url="../../data/Images/Vassio.jpg">
             <desc type="alt">Limestone sarcophagus with inscribed front.</desc>
             <desc type="figDesc">The sarcophagus of Vassio. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>).</desc>
         </graphic>
