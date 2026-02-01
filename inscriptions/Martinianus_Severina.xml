@@ -148,7 +148,10 @@
      </profileDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="../data/Images/Martinianus_Severina.jpg"/>
+        <graphic url="../data/Images/Martinianus_Severina.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Martinianus and Severina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
     </facsimile>
     <text>
         <body>
@@ -215,19 +218,21 @@
             </div>
             <div type="bibliography">
                 <listBibl>
-                    
                     <bibl xml:id="bertolini1874a">
                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
                         <citedRange unit="page">24</citedRange>
                         <note type="number">nr. 9</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
                         <citedRange unit="page">284</citedRange>
                         <note type="number">nr. 5</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <title>Bertolini 1875b</title>
                         <citedRange unit="page">116</citedRange>
                         <note type="number">nr. 8</note>
                     </bibl>
@@ -241,14 +246,13 @@
                     </bibl>
                     <bibl xml:id="lettich1983">
                         <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
                         <citedRange unit="page">56-57</citedRange>
                         <note type="number">nr. 13</note>
                     </bibl>
                     <bibl xml:id="edr097902">
                         <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
-                        <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097902">
-                            EDR097902
-                        </ref>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097902">EDR097902</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-26">26-11-2007</date>
                     </bibl>
