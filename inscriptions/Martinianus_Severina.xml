@@ -16,7 +16,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
                         <idno>329</idno>
                     </msIdentifier>
                     <history>
@@ -28,10 +35,10 @@
                                 <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
                             </origPlace>
                             <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
-                                Mid-Fourth Century.
+                                Mid-Fourth Century A.D.
                             </origDate>
                             <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
-                                Metà IV secolo.
+                                Metà IV secolo d.C.
                             </origDate>
                         </origin>
                         <provenance type="found">
@@ -46,19 +53,26 @@
                         </provenance>
                         <provenance type="observed">
                             <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
-                            <note>Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
-                            <date>2025</date>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date>2024</date>
                         </provenance>
                     </history>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <objectType>
-                                        Panel of the frontal slab of the sarcophagus
+                                    <objectType xml:lang="en">
+                                        Panel of the frontal slab of the sarcophagus.
                                     </objectType>
-                                    <material>
+                                    <objectType xml:lang="it">
+                                        Tabella di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
                                         Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
                                     </material>
                                     <dimensions>
                                         <height unit="cm">51</height>
@@ -86,7 +100,7 @@
                             <handNote>
                                 <height min="4.5" max="7.5" unit="cm">4.5-7.5</height>
                                 <note type="palaeographic" xml:lang="en">
-                                    <p>Right-to-left direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, deep incision.</p>
+                                    <p>Left-to-right direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, deep incision.</p>
                                     <p><g type="pl">F</g> with unusual lower arm beneath the crossbar and oblique upper arm ascending to the right.</p>
                                     <p><g type="pl">M</g> composed of four oblique strokes.</p>
                                     <p><g type="pl">N</g> with oblique lateral strokes.</p>
@@ -190,7 +204,7 @@
                 <p>After (their) death, if anyone wishes to open (it), he shall give to the <term xml:lang="la">fiscus</term> 3 (roman) ounces of gold</p>
             </div>
             <div type="translation" xml:lang="it">
-                <p>Agli dèi Mani</p>
+                <p>Agli dèi Mani.</p>
                 <p>Flavio Martiniano, <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>, fece (questa arca) per sé stesso e sua moglie <persName corresp="#severina" xml:lang="la">Aurelia Severiana</persName> da vivo.</p>
                 <p>Dopo la (loro) morte, se qualcuno desidererà aprire (l'arca), verserà al <term xml:lang="la">fiscus</term> 3 once (romane) d'oro</p>
             </div>
