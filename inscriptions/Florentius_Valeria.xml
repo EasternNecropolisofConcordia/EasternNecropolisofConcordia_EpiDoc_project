@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Florentius and Valeria</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Florentius_Valeria.xml</idno>
+                <idno type="TM">125578</idno>
+                <idno type="EDR">EDR097837</idno>
+                <idno type="UEL">29303</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>70</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="en">
+                                First Half of the Fourth Century.
+                            </origDate>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="it">
+                                Prima Metà del IV secolo.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1875</date>
+                            <note type="plan_x">3490</note>
+                            <note type="plan_y">2570</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">36.5</height>
+                                        <width unit="cm">68</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Sarcophagus panel resected in its lower part.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Tabella di sarcofago resecata nella parte inferiore.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">31.5</height>
+                                        <width unit="cm">61</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="35" max="4" unit="cm">3.5-4</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Rightward direction, horizontal layout, square module, regular <term xml:lang="la">ductus</term>, triangular-shaped interpuncts, centered layout.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo quadrato, <term xml:lang="la">ductus</term> regolare, interpunzione triangoliforme, impaginazione centrata.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>The epigraphic field is bordered by a plain frame, the bottom side of which is now lost.</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Lo specchio epigrafico è delimitato da una cornice semplice, il cui lato inferiore è oggi perduto.</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person>
+                   <persName xml:id="maflorentius">
+                       <name type="full">Marcus Aterius Florentius</name>
+                       <name type="praenomen">Marcus</name>
+                       <name type="nomen">Aterius</name>
+                       <name type="cognomen" nymRef="latin">Florentius</name>
+                       <name type="gens">Ateria</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type="relationship" corresp="#valeria">husband</note>
+               </person>
+               <person>
+                   <persName xml:id="valeria">
+                       <name type="full">Iulia Valeria</name>
+                       <name type="nomen">Iulia</name>
+                       <name type="nomen">Valeria</name>
+                       <name type="gens">Aurelia</name>
+                       <name type="gens">Valeria</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type="relationship" corresp="#maflorentius">wife</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Florentius_Valeria.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Florentius and Valeria. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29303">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><persName ref="#maflorentius"><expan><abbr>M</abbr><ex>arci</ex></expan> Ateri Florenti</persName> et <persName ref="#valeria">Iuli</persName>
+                    <lb n="2" break="no"/><persName ref="#valeria">ae Valeriae</persName>, vivi feci
+                    <lb n="3" break="no"/>mus de <choice><corr>dato</corr><orig>data</orig></choice> Dei.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>[The property] of <persName ref="#maflorentius" xml:lang="la">Marcus Aterius Florentius</persName> and <persName ref="#valeria" xml:lang="la">Iulia Valeria</persName>; we made [this sarcophagus] while living, by the grace of God.</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>[Proprietà] di <persName ref="#maflorentius">Marco Aterio Fiorente</persName> e di <persName ref="#valeria">Giulia Valeria</persName>; da vivi facemmo [quest'arca] per concessione di Dio.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>There are no other attestations of the gentilicon <persName xml:lang="la">Aterius</persName> in Concordia, while the cognomen <persName xml:lang="la">Florentius</persName> is also found in the Persico area, engraved on the inscription of the fabricensis <ref target="./Florentius.xml">Flavius Florentius</ref>.</p>
+                <p>The gentilicon <persName xml:lang="la">Valerius</persName>, on the other hand, is attested in Concordia in other inscriptions: in the immediate vicinity of the burial of <persName xml:lang="la">Florentius</persName> and <persName xml:lang="la">Valeria</persName>, the stele from the early Imperial age dedicated to <persName xml:lang="la">Titus Valerius Romulus</persName> was found (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8669</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097829">EDR097829</ref>), used as spolia for the base of a sarcophagus (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1877">Bertolini 1877, 31</ref>), and in the same necropolis is the inscription of <ref target="./Peregrina.xml"><persName xml:lang="la">Valeria Peregrina</persName></ref>.</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>Non risultano altre attestazioni del gentilizio <persName xml:lang="la">Aterius</persName> in Concordia, mentre il cognomen <persName xml:lang="la">Florentius</persName> si trova anche nel fondo Persico, inciso sull’epigrafe del fabricensis <ref target="./Florentius.xml">Flavius Florentius</ref>.</p>
+                <p>Il gentilizio <persName xml:lang="la">Valerius</persName> è invece attestato a Concordia in altre iscrizioni: proprio in prossimità del luogo di deposizione di <persName xml:lang="la">Florentius</persName> e <persName xml:lang="la">Valeria</persName>, è stata rinvenuta la stele di età alto imperiale dedicata a <persName xml:lang="la">Titus Valerius Romulus</persName> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8669</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097829">EDR097829</ref>), usata come materiale di reimpiego per la base di un’arca (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1877">Bertolini 1877, 31</ref>) e sempre nella stessa necropoli, si trova l'epigrafe di <ref target="./Peregrina.xml"><persName xml:lang="la">Valeria Peregrina</persName></ref>.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1876a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1876a"/>
+                        <title>Bertolini 1876a</title>
+                        <citedRange unit="page">87</citedRange>
+                        <note type="number">n. 7</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <title>Bertolini 1877</title>
+                        <citedRange unit="page">31</citedRange>
+                        <note type="number">n. 24</note>
+                    </bibl>
+                    <bibl xml:id="cilv8677">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8677</title>
+                    </bibl>
+                    <bibl xml:id="ilcv1942">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 1942</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">49-50</citedRange>
+                        <note type="number">n. 5</note>
+                    </bibl>
+                    <bibl xml:id="edr097837">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097837">EDR097837</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
