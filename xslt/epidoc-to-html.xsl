@@ -3,10 +3,10 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="tei xs" version="2.0">
 
-    <!-- Output XHTML -->
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
-
-    <!-- Template principale -->
+    
+    <!-- MAIN TEMPLATE -->
+    
     <xsl:template match="/">
         <html xml:lang="en">
             <head>
@@ -51,7 +51,7 @@
                             <xsl:choose>
                                 <xsl:when test=".//tei:div[@type = 'textpart']">
                                     <xsl:for-each select=".//tei:div[@type = 'textpart']">
-                                        <h4><xsl:value-of select="upper-case(./@source)"/>:</h4>
+                                        <h4><xsl:value-of select="upper-case(replace(./@source, '_', ' '))"/>:</h4>
                                         <div class="textpart" source="{@source}">
                                             <xsl:apply-templates select="tei:ab" mode="interp"/>
                                         </div>
@@ -89,7 +89,6 @@
                                     <xsl:text> </xsl:text>
                                     <xsl:value-of select="."/>
 
-                                    <!-- relazione opzionale -->
                                     <xsl:if test="@type = 'relationship' and @corresp">
                                         <xsl:text> (→ </xsl:text>
                                         <xsl:value-of
@@ -104,10 +103,21 @@
             </body>
         </html>
     </xsl:template>
-    
+
     <!-- ========= -->
     <!-- TEMPLATES -->
     <!-- ========= -->
+
+    <!-- Symbols -->
+    <xsl:template match="tei:g" mode="interp">
+        <xsl:choose>
+            <xsl:when test="@ref='#chi-rho'">☧</xsl:when>
+            <xsl:when test="@ref='#cross'">†</xsl:when>
+            <xsl:otherwise>
+                <xsl:text>[</xsl:text><xsl:value-of select="substring-after(@ref, '#')"/><xsl:text>]</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 
     <!-- ref -->
     <xsl:template match="tei:ref">
@@ -115,7 +125,7 @@
             <xsl:apply-templates/>
         </a>
     </xsl:template>
-    
+
     <!-- Image -->
     <xsl:template match="tei:graphic">
         <figure>
@@ -124,7 +134,6 @@
                     <xsl:value-of select="tei:desc[@type='alt']"/>
                 </xsl:attribute>
             </img>
-            
             <xsl:apply-templates select="tei:desc[@type='figDesc']"/>
         </figure>
     </xsl:template>
@@ -155,7 +164,7 @@
             
             <xsl:choose>
                 <xsl:when test="$nextLb/@break='no'">
-                    <xsl:value-of select="replace($lineContent, '\s+$', '')"/>
+                    <xsl:copy-of select="$lineContent"/>
                     <xsl:text>=</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
@@ -195,7 +204,6 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:attribute>
-            
             <xsl:apply-templates mode="interp"/>
         </u>
     </xsl:template>
