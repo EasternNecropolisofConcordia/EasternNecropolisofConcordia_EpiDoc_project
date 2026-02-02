@@ -193,14 +193,21 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
-                <ab>
-                    <lb n="1"/>Arca<surplus>m</surplus> <persName ref="#vassio">Vassioni</persName> <w xml:id="w1"><expan><abbr>camp<choice><sic>e</sic><corr>i</corr></choice>d</abbr><ex>octori</ex></expan></w>
-                    <lb n="2"/>numeri <choice><reg>Batavorum</reg><orig><expan><abbr>Bataor</abbr><ex>um</ex></expan></orig></choice> <expan><abbr>sen</abbr><ex>iorum</ex></expan> quem sepe
-                    <lb n="3" break="no"/>livit <w xml:id="w2">coniux</w> <persName ref="#suandacca"><w xml:id="w3">Suandacca</w></persName> <expan><abbr>q</abbr><ex>uae</ex></expan> vixit cum 
-                    <lb n="4"/><supplied reason="omitted">e</supplied>o <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="22">XXII</num> <expan><abbr>milit</abbr><ex>avit</ex></expan> <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="35">XXXV</num> fer<surplus>e</surplus>t a
-                    <lb n="5" break="no"/>pud se <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="60">LX</num> Si quis eam arcam vo
-                    <lb n="6" break="no"/>luerit movere <expan><abbr>virib</abbr><ex>us</ex></expan> fisci dabit <measure type="fine" unit="solidus" quantity="25"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="25">XXV</num></measure>.
-                </ab>
+                <div type="textpart" source="side_of_the_lid">
+                    <ab>
+                        <lb n="1"/><g ref="#chi-rho"/>
+                    </ab>
+                </div>
+                <div type="textpart" source="chest" n="b">
+                    <ab>
+                        <lb n="1"/>Arca<surplus>m</surplus> <persName ref="#vassio">Vassioni</persName> <w xml:id="w1"><expan><abbr>camp<choice><sic>e</sic><corr>i</corr></choice>d</abbr><ex>octori</ex></expan></w>
+                        <lb n="2"/>numeri <choice><reg>Batavorum</reg><orig><expan><abbr>Bataor</abbr><ex>um</ex></expan></orig></choice> <expan><abbr>sen</abbr><ex>iorum</ex></expan> quem sepe
+                        <lb n="3" break="no"/>livit <w xml:id="w2">coniux</w> <persName ref="#suandacca"><w xml:id="w3">Suandacca</w></persName> <expan><abbr>q</abbr><ex>uae</ex></expan> vixit cum 
+                        <lb n="4"/><supplied reason="omitted">e</supplied>o <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="22">XXII</num> <expan><abbr>milit</abbr><ex>avit</ex></expan> <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="35">XXXV</num> fer<surplus>e</surplus>t a
+                        <lb n="5" break="no"/>pud se <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="60">LX</num> Si quis eam arcam vo
+                        <lb n="6" break="no"/>luerit movere <expan><abbr>virib</abbr><ex>us</ex></expan> fisci dabit <measure type="fine" unit="solidus" quantity="25"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="25">XXV</num></measure>.
+                    </ab>
+                </div>
             </div>
             <div type="apparatus">
                 <listApp>
