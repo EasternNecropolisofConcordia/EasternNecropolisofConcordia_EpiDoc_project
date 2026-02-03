@@ -11,7 +11,8 @@
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
                 <idno type="filename">Martinianus_Severina.xml</idno>
-                <idno type="TM">125598</idno>
+                <idno type="TM">125643</idno>
+                <idno type="EDR">EDR097902</idno>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
@@ -252,11 +253,11 @@
                     </bibl>
                     <bibl xml:id="cilv8754">
                         <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
-                        <title>CIL V 8754</title>
+                        <title><term xml:lang="la">CIL</term> V 8754</title>
                     </bibl>
                     <bibl xml:id="ilcv520">
                         <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
-                        <title>ILCV 520</title>
+                        <title><term xml:lang="la">ILCV</term> 520</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
                         <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
