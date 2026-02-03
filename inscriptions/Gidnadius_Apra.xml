@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Gidnadius and Apra</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Gidnadius_Apra.xml</idno>
+                <idno type="TM">125490</idno>
+                <idno type="EDR">EDR097747</idno>
+                <idno type="UEL">29317</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>284</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering textual-context" xml:lang="en">
+                                Half-Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering textual-context" xml:lang="it">
+                                Metà IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">1890</note>
+                            <note type="plan_y">800</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Panel of the frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Tabella di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">88</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Slab broken into two rejoined fragments and trimmed on the left side of the frame.</p>
+                                    <p xml:lang="it">Fronte di sarcofago fratta in due pezzi ricongiunti e resecata nella parte inferiore</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">37</height>
+                                        <width unit = "cm">76</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4" max="6" unit = "cm">4-6</height>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">A <objectType>moulded border</objectType> runs around the perimeter of the panel.</decoNote>
+                            <decoNote xml:lang="it">Una cornice modanata percorre il perimetro della tabella di sarcofago</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="gidnadius">
+                   <persName>
+                       <name type="full">Flavius Gidnadius</name>
+                       <name type="nomen" nymRef="latin">Flavius</name>
+                       <name type="cognomen" nymRef="unknown">Gidnadius</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier</note>
+                   <note type="rank">veteranus</note>
+                   <note type="numerus">unknown</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#apra">husband</note>
+               </person>
+               <person xml:id="apra">
+                 <persName>
+                     <name type="full">Emilia Apra</name>
+                     <name type="nomen" nymRef="latin">Emilia</name>
+                     <name type = "cognomen" nymRef="latin">Apra</name>
+                     <name type="gens">Aemilia</name>
+                 </persName>
+                  <gender value="f">f</gender>
+                  <note type = "occupation">civil</note>
+                  <note type="role">dedicator/deceased</note>
+                  <note type = "relationship" corresp="#gidnadius">wife</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Gidnadius_Apra.jpg">
+            <desc type="alt">Inscribed panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Gidnadius and Apra. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29317">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la">
+                <ab>
+                    <lb n="1"/><persName ref="#gidnadius"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Gidnadius</persName> veteranus
+                    <lb n="2"/>bene meritus <w xml:id="w1"><choice><corr>e</corr><sic>f</sic></choice>t</w> <persName ref="#apra">Emilia Apra</persName>,
+                    <lb n="3"/>de proprio labore suo <w xml:id="w2">arca<supplied reason="omitted">m</supplied></w>
+                    <lb n="4"/>sibi <choice><reg>comparaverunt</reg><orig>conparaverunt</orig></choice> <supplied reason="omitted">in</supplied> solo Con
+                    <lb n="5" break="no"/>cordiensi. <expan><abbr>Pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovitu</abbr><ex>m</ex></expan></orig></choice> <expan><abbr>nos</abbr><ex>trum</ex></expan>, si quis vo
+                    <lb n="6" break="no"/>luerit aperire <w xml:id="w3">dabi<choice><corr>t</corr><sic>i</sic></choice></w> fisco <measure type="fine" unit="solidus" quantity="10"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="10">X</num></measure>.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="2" from="#w1" to="#w1">
+                        <lem>
+                            <choice><corr>e</corr><sic>f</sic></choice>t
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874a #cilv8749 #ilcv432 #lettich1983 #edr097747">
+                            et
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w2" to="#w2">
+                        <lem>
+                            arca<supplied reason="omitted">m</supplied>
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874a">
+                            arcam
+                        </rdg>
+                    </app>
+                    <app loc="6" from="#w3" to="#w3">
+                        <lem>
+                            dabi<choice><corr>t</corr><sic>i</sic></choice>
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874a #cilv8749 #ilcv432 #lettich1983 #edr097747">
+                            dabit
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    <persName ref="#gidnadius" xml:lang="la">Flavius Gidnadius</persName>, veteran, well deserving, and <persName ref="#apra" xml:lang="la">Emilia Apra</persName>, from their own labor and resources, purchased for themselves a sarcophagus in the soil of Concordia. 
+                </p>
+                <p>
+                    If anyone should wish to open it after our death, they shall pay <num value="10">ten</num> <term xml:lang="la">solidi</term> to the <term xml:lang="la">fiscus</term>.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    <persName ref="#gidnadius" xml:lang="la">Flavius Gidnadius</persName>, veterano, benemerito, ed <persName ref="#apra" xml:lang="la">Emilia Apra</persName>, con il proprio lavoro e le proprie risorse, acquistarono per se stessi un sarcofago nel suolo di Concordia.
+                </p>
+                <p>
+                    Se qualcuno volesse aprirlo dopo la nostra morte, dovrà pagare <num value="10">dieci</num> <term xml:lang="la">solidi</term> al fisco.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    The veteran <persName ref="#gidnadius" xml:lang="la">Flavius Gidnadius</persName> and his wife <persName ref="#apra" xml:lang="la">Emilia Apra</persName> commissioned their own burial at their own expense, declaring that anyone who opened the <term xml:lang="la">sarcophagus</term> after their death should pay ten <term xml:lang="la">solidi</term> to the <term xml:lang="la">fiscus</term>.
+                </p>
+                <p>
+                    The specification <term xml:lang="la">solo Concordiensi</term> seems to suggest that the couple were not originally from Concordia, but had settled in the city after <persName xml:lang="la">Gidnadius</persName>’s military service.
+                </p>
+                <p>
+                    De Rossi believed that <term xml:lang="la">Gidnadius</term> was a scribal error for <term xml:lang="la">Gennadius</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8749</ref>), while Diehl did not exclude that it might be a case of epenthesis (<ref target="../Bibliography/Master_Bibliography.xml#ilcv"><term xml:lang="la">ILCV</term> 432</ref>). The cognomen <term xml:lang="la">Gennadius</term> is rarely attested epigraphically: the EDR database provides only three results, all inscriptions belonging to men of senatorial rank (<ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR073702">EDR073702</ref> - <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR102141">EDR102141</ref>).
+                </p>
+                <p>
+                    Besides <persName xml:lang="la">Emilia Apra</persName>, there is only one other attestation of the <term xml:lang="la">gens Aemilia</term> in Concordia: within the same burial ground, but north of the road, lies the tomb of <persName xml:lang="la" ref="./Zosimus.xml">Aemilius Zosimus</persName>, a sarcophagus older than that of <persName xml:lang="la">Apra</persName> and which still preserves the diphthong <term xml:lang="la">-ae</term> at the beginning of the gentilicum.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    Il veterano <persName ref="#gidnadius" xml:lang="la">Flavius Gidnadius</persName> e la moglie <persName ref="#apra" xml:lang="la">Emilia Apra</persName> commissionarono a loro spese la propria sepoltura, dichiarando che chiunque avesse aperto il <term xml:lang="la">sarcophagus</term> dopo la loro morte avrebbe dovuto versare al <term xml:lang="la">fiscus</term> dieci <term xml:lang="la">solidi</term>.
+                </p>
+                <p>
+                    La precisazione <term xml:lang="la">solo Concordiensi</term> sembra suggerire che i due coniugi non fossero originari di Concordia, ma che si fossero stabiliti in città dopo il servizio militare di <persName xml:lang="la">Gidnadius</persName>.
+                </p>
+                <p>
+                    De Rossi ritiene che <term xml:lang="la">Gidnadius</term> fosse stato scritto per errore in luogo di <term xml:lang="la">Gennadius</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8749</ref>), mentre Diehl non esclude si tratti di un caso di epentesi (<ref target="../Bibliography/Master_Bibliography.xml#ilcv"><term xml:lang="la">ILCV</term> 432</ref>). Il <term xml:lang="la">cognomen</term> <term xml:lang="la">Gennadius</term> è poco attestato in ambito epigrafico: il database EDR fornisce solo tre risultati, tutte iscrizioni appartenute a uomini di ordine senatorio (<ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR073702">EDR073702</ref> - <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR102141">EDR102141</ref>).
+                </p>
+                <p>
+                    Oltre a <persName xml:lang="la">Emilia Apra</persName>, a Concordia esiste solo un’altra attestazione della <term xml:lang="la">gens Aemilia</term>: sempre nel sepolcreto, ma a nord della strada, si trova la sepoltura di <persName xml:lang="la" ref="./Zosimus.xml">Aemilius Zosimus</persName>, un sarcofago più antico di quello di <persName xml:lang="la">Apra</persName> e che infatti conserva il dittongo <term xml:lang="la">-ae</term> all’inizio del gentilizio.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">25</citedRange>
+                        <note type="number">nr. 11</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">291</citedRange>
+                        <note type="number">nr. 14</note>
+                    </bibl>
+                    <bibl xml:id="cilv8749">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8749</title>
+                    </bibl>
+                    <bibl xml:id="ilcv432">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 432</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">63-64</citedRange>
+                        <note type="number">nr. 21</note>
+                    </bibl>
+                    <bibl xml:id="edr097747">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097747">EDR097747</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-25">25-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
