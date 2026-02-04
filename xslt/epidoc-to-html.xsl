@@ -165,26 +165,33 @@
     <xsl:template match="text()[preceding::*[1][self::tei:lb[@break='no']]]" mode="interp" priority="5">
         <xsl:variable name="prevLb" select="preceding::tei:lb[1]"/>
         
-        <xsl:variable name="lastElemBefore" select="$prevLb/preceding::*[not(self::tei:reg) and not(self::tei:sic)][1]"/>
-        
-        <xsl:variable name="textInBetween" select="$lastElemBefore/following::text()[. &lt;&lt; $prevLb]"/>
-        
-        <xsl:variable name="isBrokenChoice" select="$lastElemBefore/ancestor-or-self::tei:choice[tei:reg and tei:orig] and normalize-space(string-join($textInBetween, '')) = ''"/>
-        
-        <xsl:variable name="trimmed" select="normalize-space(.)"/>
+        <xsl:variable name="isFirstTextAfterLb" select="generate-id(.) = generate-id($prevLb/following::text()[1])"/>
         
         <xsl:choose>
-            <xsl:when test="$isBrokenChoice and not($lastElemBefore/ancestor-or-self::tei:choice/tei:orig//tei:expan)">
+            <xsl:when test="$isFirstTextAfterLb">
+                <xsl:variable name="lastElemBefore" select="$prevLb/preceding::*[not(self::tei:reg) and not(self::tei:sic)][1]"/>
+                <xsl:variable name="textInBetween" select="$lastElemBefore/following::text()[. &lt;&lt; $prevLb]"/>
+                <xsl:variable name="isBrokenChoice" select="$lastElemBefore/ancestor-or-self::tei:choice[tei:reg and tei:orig] and normalize-space(string-join($textInBetween, '')) = ''"/>
+                
+                <xsl:variable name="trimmed" select="normalize-space(.)"/>
+                
                 <xsl:choose>
-                    <xsl:when test="contains($trimmed, ' ')">
-                        <xsl:value-of select="substring-before($trimmed, ' ')"/>
-                        <xsl:text> (!)</xsl:text>
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="substring-after($trimmed, ' ')"/>
+                    <xsl:when test="$isBrokenChoice and not($lastElemBefore/ancestor-or-self::tei:choice/tei:orig//tei:expan)">
+                        <xsl:choose>
+                            <xsl:when test="contains($trimmed, ' ')">
+                                <xsl:value-of select="substring-before($trimmed, ' ')"/>
+                                <xsl:text> (!)</xsl:text>
+                                <xsl:text> </xsl:text>
+                                <xsl:value-of select="substring-after($trimmed, ' ')"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="$trimmed"/>
+                                <xsl:text> (!)</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:value-of select="$trimmed"/>
-                        <xsl:text> (!)</xsl:text>
+                        <xsl:value-of select="."/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
