@@ -141,7 +141,7 @@
                        <name type="cognomen" nymRef="latin">Optata</name>
                        <name type="gens">Flavia</name>
                    </persName>
-                   <gender>unknown</gender>
+                   <gender>f</gender>
                    <note type="occupation">civil</note>
                    <note type="role">dedicator/deceased</note>
                </person>
