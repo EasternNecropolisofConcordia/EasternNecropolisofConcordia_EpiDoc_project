@@ -116,7 +116,9 @@
             <xsl:variable name="lineContent">
                 <xsl:apply-templates select="following-sibling::node()[not(self::tei:lb) and count(preceding-sibling::tei:lb) = count(current()/preceding-sibling::tei:lb) + 1]" mode="interp"/>
             </xsl:variable>
-            <xsl:value-of select="normalize-space($lineContent)"/>
+            
+            <xsl:copy-of select="$lineContent"/>
+            
             <xsl:if test="following-sibling::tei:lb[1]/@break='no'">
                 <xsl:text> =</xsl:text>
             </xsl:if>
@@ -203,6 +205,24 @@
     
     <xsl:template match="tei:supplied[@reason = 'omitted']" mode="interp">
         <xsl:text>&lt;</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp">
+        <u style="cursor: help;">
+            <xsl:attribute name="title">
+                <xsl:text>Source(s): </xsl:text>
+                <xsl:variable name="context" select="/"/>
+                <xsl:for-each select="tokenize(normalize-space(@corresp), '\s+')">
+                    <xsl:variable name="id" select="substring-after(., '#')"/>
+                    <xsl:value-of select="$context//tei:bibl[@xml:id = $id]/tei:title"/>
+                    <xsl:if test="position() != last()">
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:attribute>
+            
+            <xsl:apply-templates mode="interp"/>
+        </u>
     </xsl:template>
     
     <xsl:template match="tei:surplus" mode="interp">
