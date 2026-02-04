@@ -155,16 +155,13 @@
         
         <xsl:variable name="isWordBroken" select="$nextLb/@break='no' and normalize-space(string-join($textBetween, '')) = ''"/>
         
-        <xsl:if test="not(tei:orig//tei:expan) and not(tei:orig//tei:ex)">
-            <xsl:if test="not($isWordBroken)">
-                <xsl:text> (!)</xsl:text>
-            </xsl:if>
+        <xsl:if test="not($isWordBroken)">
+            <xsl:text> (!)</xsl:text>
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="text()[preceding::*[1][self::tei:lb[@break='no']]]" mode="interp" priority="5">
+    <xsl:template match="text()[preceding::*[1][self::tei:lb[@break='no']]]" mode="interp" priority="10">
         <xsl:variable name="prevLb" select="preceding::tei:lb[1]"/>
-        
         <xsl:variable name="isFirstTextAfterLb" select="generate-id(.) = generate-id($prevLb/following::text()[1])"/>
         
         <xsl:choose>
@@ -176,7 +173,7 @@
                 <xsl:variable name="trimmed" select="normalize-space(.)"/>
                 
                 <xsl:choose>
-                    <xsl:when test="$isBrokenChoice and not($lastElemBefore/ancestor-or-self::tei:choice/tei:orig//tei:expan)">
+                    <xsl:when test="$isBrokenChoice">
                         <xsl:choose>
                             <xsl:when test="contains($trimmed, ' ')">
                                 <xsl:value-of select="substring-before($trimmed, ' ')"/>
@@ -235,8 +232,14 @@
     </xsl:template>
     
     <xsl:template match="tei:reg | tei:sic" mode="interp" />
-    <xsl:template match="text()" mode="interp"><xsl:value-of select="."/></xsl:template>
-    <xsl:template match="*" mode="interp"><xsl:apply-templates mode="interp"/></xsl:template>
+    
+    <xsl:template match="text()" mode="interp" priority="1">
+        <xsl:value-of select="."/>
+    </xsl:template>
+    
+    <xsl:template match="*" mode="interp">
+        <xsl:apply-templates mode="interp"/>
+    </xsl:template>
     
     <xsl:template match="tei:gap[@reason='lost']" mode="interp">
         <xsl:choose>
