@@ -2,10 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="tei xs" version="2.0">
-
-    <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     
-    <!-- MAIN TEMPLATE -->
+    <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     
     <xsl:template match="/">
         <html xml:lang="en">
@@ -14,35 +12,26 @@
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </title>
                 <meta charset="UTF-8"/>
+                <style>
+                    .transcription { font-family: 'Courier New', monospace; line-height: 1.8; margin-bottom: 20px;}
+                    .line { display: block; }
+                    figure { margin: 20px 0; border: 1px solid #ccc; padding: 10px; display: inline-block; }
+                    figcaption { font-style: italic; font-size: 0.9em; margin-top: 5px; }
+                    img { max-width: 100%; height: auto; }
+                </style>
             </head>
             <body>
                 <h1>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </h1>
-
+                
                 <div class="metadata">
                     <h2>Findspot</h2>
-                    <p>
-                        <strong>City:</strong>
-                        <xsl:apply-templates
-                            select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'modern']"
-                        />
-                    </p>
-                    <p>
-                        <strong>Ancient city:</strong>
-                        <i>
-                            <xsl:apply-templates
-                                select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'ancient']"
-                            />
-                        </i>
-                    </p>
-                    <p>
-                        <strong>Date:</strong>
-                        <xsl:apply-templates select="//tei:history//tei:origDate[@xml:lang = 'en']"
-                        />
-                    </p>
+                    <p><strong>City:</strong> <xsl:apply-templates select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'modern']"/></p>
+                    <p><strong>Ancient city:</strong> <i><xsl:apply-templates select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'ancient']"/></i></p>
+                    <p><strong>Date:</strong> <xsl:apply-templates select="//tei:history//tei:origDate[@xml:lang = 'en']"/></p>
                 </div>
-
+                
                 <div class="inscription">
                     <h2>INSCRIPTION</h2>
                     <h3>TRANSCRIPTION</h3>
@@ -51,8 +40,15 @@
                             <xsl:choose>
                                 <xsl:when test=".//tei:div[@type = 'textpart']">
                                     <xsl:for-each select=".//tei:div[@type = 'textpart']">
-                                        <h4><xsl:value-of select="upper-case(replace(./@source, '_', ' '))"/>:</h4>
-                                        <div class="textpart" source="{@source}">
+                                        <h4>
+                                            <xsl:choose>
+                                                <xsl:when test="@subtype"><xsl:value-of select="upper-case(replace(@subtype, '_', ' '))"/></xsl:when>
+                                                <xsl:when test="@source"><xsl:value-of select="upper-case(replace(@source, '_', ' '))"/></xsl:when>
+                                                <xsl:otherwise>PART <xsl:value-of select="@n"/></xsl:otherwise>
+                                            </xsl:choose>
+                                            <xsl:text>:</xsl:text>
+                                        </h4>
+                                        <div class="textpart" data-location="{(@subtype, @source)[1]}">
                                             <xsl:apply-templates select="tei:ab" mode="interp"/>
                                         </div>
                                     </xsl:for-each>
@@ -66,17 +62,13 @@
                 </div>
                 
                 <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
-
+                
                 <div class="people">
                     <h2>People</h2>
                     <xsl:for-each select="//tei:listPerson/tei:person">
-                        <h3>
-                            <xsl:value-of select="tei:persName/tei:name[@type = 'full']"/>
-                        </h3>
-
+                        <h3><xsl:value-of select="tei:persName/tei:name[@type = 'full']"/></h3>
                         <ul>
-                            <li>
-                                <strong>Gender:</strong>
+                            <li><strong>Gender:</strong> 
                                 <xsl:choose>
                                     <xsl:when test="tei:gender = 'm'">male</xsl:when>
                                     <xsl:when test="tei:gender = 'f'">female</xsl:when>
@@ -84,15 +76,10 @@
                                 </xsl:choose>
                             </li>
                             <xsl:for-each select="tei:note">
-                                <li>
-                                    <strong><xsl:value-of select="@type"/>:</strong>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:value-of select="."/>
-
+                                <li><strong><xsl:value-of select="@type"/>:</strong> <xsl:text> </xsl:text><xsl:value-of select="."/>
                                     <xsl:if test="@type = 'relationship' and @corresp">
                                         <xsl:text> (→ </xsl:text>
-                                        <xsl:value-of
-                                            select="normalize-space(//tei:person[@xml:id = substring-after(current()/@corresp, '#')]/tei:persName/tei:name[@type = 'full'])"/>
+                                        <xsl:value-of select="normalize-space(//tei:person[@xml:id = substring-after(current()/@corresp, '#')]/tei:persName/tei:name[@type = 'full'])"/>
                                         <xsl:text>)</xsl:text>
                                     </xsl:if>
                                 </li>
@@ -103,30 +90,16 @@
             </body>
         </html>
     </xsl:template>
-
+    
     <!-- ========= -->
     <!-- TEMPLATES -->
     <!-- ========= -->
-
-    <!-- Symbols -->
-    <xsl:template match="tei:g" mode="interp">
-        <xsl:choose>
-            <xsl:when test="@ref='#chi-rho'">☧</xsl:when>
-            <xsl:when test="@ref='#cross'">†</xsl:when>
-            <xsl:otherwise>
-                <xsl:text>[</xsl:text><xsl:value-of select="substring-after(@ref, '#')"/><xsl:text>]</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-    <!-- ref -->
+    
+    <!-- FIgures -->
     <xsl:template match="tei:ref">
-        <a href="{@target}">
-            <xsl:apply-templates/>
-        </a>
+        <a href="{@target}"><xsl:apply-templates/></a>
     </xsl:template>
-
-    <!-- Image -->
+    
     <xsl:template match="tei:graphic">
         <figure>
             <img src="{@url}">
@@ -139,15 +112,9 @@
     </xsl:template>
     
     <xsl:template match="tei:desc[@type='figDesc']">
-        <figcaption>
-            <xsl:apply-templates/>
-        </figcaption>
+        <figcaption><xsl:apply-templates/></figcaption>
     </xsl:template>
-
-    <!-- ========================================== -->
-    <!-- KRUMMREY-PANCIERA DIACRITICS (mode="interp") -->
-    <!-- ========================================== -->
-
+    
     <xsl:template match="tei:ab" mode="interp">
         <div class="ab-content">
             <xsl:apply-templates select=".//tei:lb[1]" mode="line-start"/>
@@ -159,163 +126,91 @@
             <xsl:variable name="lineContent">
                 <xsl:apply-templates select="following-sibling::node()[not(self::tei:lb) and count(preceding-sibling::tei:lb) = count(current()/preceding-sibling::tei:lb) + 1]" mode="interp"/>
             </xsl:variable>
-            
             <xsl:variable name="nextLb" select="following-sibling::tei:lb[1]"/>
-            
-            <xsl:choose>
-                <xsl:when test="$nextLb/@break='no'">
-                    <xsl:copy-of select="$lineContent"/>
-                    <xsl:text>=</xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:copy-of select="$lineContent"/>
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:copy-of select="$lineContent"/>
+            <xsl:if test="$nextLb/@break='no'"><xsl:text>=</xsl:text></xsl:if>
         </span>
         <br/>
         <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
     </xsl:template>
     
-    <xsl:template match="tei:orig[not(parent::tei:choice)]" mode="interp">
-        <span style="text-transform: uppercase;">
-            <xsl:apply-templates mode="interp"/>
-        </span>
-    </xsl:template>
+    <!-- ========================================== -->
+    <!-- KRUMMREY-PANCIERA DIACRITICS (mode="interp") -->
+    <!-- ========================================== -->
     
-    <xsl:template match="tei:unclear" mode="interp">
+    <xsl:template match="tei:hi[@rend = 'ligature']" mode="interp">
         <xsl:variable name="text" select="string(.)"/>
         <xsl:analyze-string select="$text" regex=".">
             <xsl:matching-substring>
-                <xsl:value-of select="."/><xsl:text>&#x0323;</xsl:text>
+                <xsl:value-of select="."/>
+                <xsl:variable name="pos" select="position()"/>
+                <xsl:variable name="nextChar" select="substring($text, $pos + 1, 1)"/>
+                <xsl:if test=". != ' ' and $nextChar != '' and $nextChar != ' '">
+                    <xsl:text>&#x0302;</xsl:text>
+                </xsl:if>
             </xsl:matching-substring>
         </xsl:analyze-string>
     </xsl:template>
     
-    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp">
-        <u style="cursor: help;">
-            <xsl:attribute name="title">
-                <xsl:text>Source(s): </xsl:text>
-                <xsl:variable name="context" select="/"/>
-                <xsl:for-each select="tokenize(normalize-space(@corresp), '\s+')">
-                    <xsl:variable name="id" select="substring-after(., '#')"/>
-                    <xsl:value-of select="$context//tei:bibl[@xml:id = $id]/tei:title"/>
-                    <xsl:if test="position() != last()">
-                        <xsl:text>, </xsl:text>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:attribute>
-            <xsl:apply-templates mode="interp"/>
-        </u>
+    <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="interp">
+        <xsl:apply-templates select="tei:orig" mode="interp"/>
+        <xsl:variable name="followedByBreak" select="
+            following-sibling::node()[self::tei:lb][1][@break='no'] or 
+            parent::tei:w/following-sibling::node()[self::tei:lb][1][@break='no'] or
+            parent::tei:seg/following-sibling::node()[self::tei:lb][1][@break='no']"/>
+        
+        <xsl:if test="not(tei:orig//tei:expan) and not(tei:orig//tei:ex) and not($followedByBreak)">
+            <xsl:text> (!)</xsl:text>
+        </xsl:if>
     </xsl:template>
     
-    <xsl:template match="tei:hi[@rend = 'apex']" mode="interp">
-        <xsl:variable name="char" select="string(.)"/>
+    <xsl:template match="text()[preceding-sibling::*[1][self::tei:lb[@break='no']] or 
+        parent::tei:w/preceding-sibling::node()[1][self::tei:lb[@break='no']] or
+        parent::tei:seg/preceding-sibling::node()[1][self::tei:lb[@break='no']]]" mode="interp" priority="2">
+        <xsl:variable name="trimmed" select="normalize-space(.)"/>
         <xsl:choose>
-            <xsl:when test="$char = 'a'">á</xsl:when>
-            <xsl:when test="$char = 'e'">é</xsl:when>
-            <xsl:when test="$char = 'i'">í</xsl:when>
-            <xsl:when test="$char = 'o'">ó</xsl:when>
-            <xsl:when test="$char = 'u'">ú</xsl:when>
-            <xsl:otherwise><xsl:value-of select="$char"/></xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="tei:hi[@rend = 'supraline']" mode="interp">
-        <xsl:analyze-string select="string(.)" regex=".">
-            <xsl:matching-substring>
-                <xsl:value-of select="."/><xsl:text>&#x0304;</xsl:text>
-            </xsl:matching-substring>
-        </xsl:analyze-string>
-    </xsl:template>
-    
-    <xsl:template match="tei:hi[@rend = 'ligature']" mode="interp">
-        <xsl:for-each select="string-to-codepoints(string(.))">
-            <xsl:value-of select="codepoints-to-string(.)"/>
-            <xsl:if test="position() != last()"><xsl:text>&#x0302;</xsl:text></xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-    
-    <xsl:template match="tei:del[@rend = 'erasure']" mode="interp">
-        <xsl:text>⟦</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>⟧</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:subst" mode="interp">
-        <xsl:text>«</xsl:text><xsl:apply-templates select="tei:add[@place = 'overstrike']" mode="interp"/><xsl:text>»</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:add[@place = 'above'] | tei:add[@place = 'below']" mode="interp">
-        <xsl:text>‵</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>′</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:supplied[@reason = 'lost'][not(@evidence = 'previouseditor')]" mode="interp">
-        <xsl:text>[</xsl:text>
-        <xsl:apply-templates mode="interp"/>
-        <xsl:if test="@cert = 'low'"><xsl:text>?</xsl:text></xsl:if>
-        <xsl:text>]</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:gap[@reason = 'lost'][@unit = 'character'][@quantity]" mode="interp">
-        <xsl:text>[</xsl:text>
-        <xsl:for-each select="1 to xs:integer(@quantity)"><xsl:text>·</xsl:text></xsl:for-each>
-        <xsl:text>]</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:gap[@reason = 'lost'][@unit = 'character'][@extent = 'unknown']" mode="interp">
-        <xsl:text>[---]</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:gap[@reason = 'illegible'][@unit = 'character']" mode="interp">
-        <xsl:choose>
-            <xsl:when test="@quantity">
-                <xsl:text>[</xsl:text><xsl:for-each select="1 to xs:integer(@quantity)"><xsl:text>·</xsl:text></xsl:for-each><xsl:text>]</xsl:text>
+            <xsl:when test="contains($trimmed, ' ')">
+                <xsl:value-of select="substring-before($trimmed, ' ')"/>
+                <xsl:text> (!)</xsl:text>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="substring-after($trimmed, ' ')"/>
             </xsl:when>
-            <xsl:otherwise><xsl:text>[---]</xsl:text></xsl:otherwise>
+            <xsl:otherwise>
+                <xsl:value-of select="$trimmed"/>
+                <xsl:text> (!)</xsl:text>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="tei:surplus" mode="interp">
-        <xsl:text>{</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>}</xsl:text>
+    <xsl:template match="tei:unclear" mode="interp">
+        <xsl:analyze-string select="string(.)" regex=".">
+            <xsl:matching-substring><xsl:value-of select="."/><xsl:text>&#x0323;</xsl:text></xsl:matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    
+    <xsl:template match="tei:ex" mode="interp">
+        <xsl:text>(</xsl:text><xsl:apply-templates mode="interp"/><xsl:if test="@cert = 'low'"><xsl:text>?</xsl:text></xsl:if><xsl:text>)</xsl:text>
     </xsl:template>
     
     <xsl:template match="tei:supplied[@reason = 'omitted']" mode="interp">
         <xsl:text>&lt;</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>&gt;</xsl:text>
     </xsl:template>
     
-    <xsl:template match="tei:choice[tei:corr and tei:sic]" mode="interp">
-        <xsl:text>⸢</xsl:text>
-        <xsl:apply-templates select="tei:corr" mode="interp"/>
-        <xsl:text>⸣</xsl:text>
+    <xsl:template match="tei:surplus" mode="interp">
+        <xsl:text>{</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>}</xsl:text>
     </xsl:template>
     
-    <xsl:template match="tei:expan" mode="interp">
-        <xsl:apply-templates mode="interp"/>
-        <xsl:if test="ancestor::tei:orig or ancestor::tei:sic">
-            <xsl:text> (!)</xsl:text>
-        </xsl:if>
-    </xsl:template>
-    
-    <xsl:template match="tei:ex" mode="interp">
-        <xsl:text>(</xsl:text>
-        <xsl:apply-templates mode="interp"/>
-        <xsl:if test="@cert = 'low'"><xsl:text>?</xsl:text></xsl:if>
-        <xsl:text>)</xsl:text>
-    </xsl:template>
-    
-    <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="interp">
-        <xsl:apply-templates select="tei:orig" mode="interp"/>
-        <xsl:if test="not(tei:orig//tei:expan)">
-            <xsl:text> (!)</xsl:text>
-        </xsl:if>
+    <xsl:template match="tei:g" mode="interp">
+        <xsl:choose>
+            <xsl:when test="@ref='#chi-rho'">☧</xsl:when>
+            <xsl:when test="@ref='#cross'">†</xsl:when>
+            <xsl:when test="@ref='#hedera'">❧</xsl:when>
+            <xsl:otherwise>[<xsl:value-of select="substring-after(@ref, '#')"/>]</xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:reg | tei:sic" mode="interp" />
+    <xsl:template match="text()" mode="interp"><xsl:value-of select="."/></xsl:template>
+    <xsl:template match="*" mode="interp"><xsl:apply-templates mode="interp"/></xsl:template>
     
-    <xsl:template match="text()" mode="interp">
-        <xsl:value-of select="."/>
-    </xsl:template>
-    
-    <xsl:template match="*" mode="interp">
-        <xsl:apply-templates mode="interp"/>
-    </xsl:template>
-
 </xsl:stylesheet>
