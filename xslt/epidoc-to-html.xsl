@@ -123,11 +123,11 @@
             <xsl:variable name="lineContent">
                 <xsl:apply-templates select="following-sibling::node()[not(self::tei:lb) and count(preceding-sibling::tei:lb) = count(current()/preceding-sibling::tei:lb) + 1]" mode="interp"/>
             </xsl:variable>
-            <xsl:value-of select="normalize-space($lineContent)"/>
-            <xsl:if test="following-sibling::tei:lb[1]/@break='no'">
-                <xsl:text> =</xsl:text>
-            </xsl:if>
+            <xsl:variable name="nextLb" select="following-sibling::tei:lb[1]"/>
+            <xsl:copy-of select="$lineContent"/>
+            <xsl:if test="$nextLb/@break='no'"><xsl:text>=</xsl:text></xsl:if>
         </span>
+        <br/>
         <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
     </xsl:template>
     
