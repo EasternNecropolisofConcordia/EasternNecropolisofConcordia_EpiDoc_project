@@ -156,29 +156,27 @@
         </xsl:if>
     </xsl:template>
     
-    <!-- CORRETTO: Verifica che ci sia effettivamente un choice prima del lb -->
+
     <xsl:template match="text()[preceding-sibling::*[1][self::tei:lb[@break='no']] or 
         parent::tei:w/preceding-sibling::node()[1][self::tei:lb[@break='no']] or
         parent::tei:seg/preceding-sibling::node()[1][self::tei:lb[@break='no']]]" mode="interp" priority="2">
         
-        <!-- Trova il lb[@break='no'] precedente -->
+
         <xsl:variable name="lb" select="(preceding-sibling::tei:lb[@break='no'][1] | 
             parent::tei:w/preceding-sibling::tei:lb[@break='no'][1] |
             parent::tei:seg/preceding-sibling::tei:lb[@break='no'][1])[1]"/>
         
-        <!-- Trova il choice prima del lb -->
+
         <xsl:variable name="choiceBefore" select="($lb/preceding-sibling::tei:choice[tei:reg and tei:orig][1] |
             $lb/preceding-sibling::tei:w[1]//tei:choice[tei:reg and tei:orig][last()] |
             $lb/preceding-sibling::tei:seg[1]//tei:choice[tei:reg and tei:orig][last()])[last()]"/>
         
         <xsl:choose>
-            <xsl:when test="$choiceBefore">
-                <!-- C'è un choice prima del lb, quindi aggiungi (!) dopo la prima parola -->
+            <xsl:when test="$choiceBefore">>
                 <xsl:variable name="trimmed" select="normalize-space(.)"/>
                 <xsl:choose>
                     <xsl:when test="contains($trimmed, ' ')">
                         <xsl:value-of select="substring-before($trimmed, ' ')"/>
-                        <!-- Aggiungi (!) solo se il choice non ha expan -->
                         <xsl:if test="not($choiceBefore/tei:orig//tei:expan) and not($choiceBefore/tei:orig//tei:ex)">
                             <xsl:text> (!)</xsl:text>
                         </xsl:if>
@@ -187,7 +185,6 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="$trimmed"/>
-                        <!-- Aggiungi (!) solo se il choice non ha expan -->
                         <xsl:if test="not($choiceBefore/tei:orig//tei:expan) and not($choiceBefore/tei:orig//tei:ex)">
                             <xsl:text> (!)</xsl:text>
                         </xsl:if>
@@ -195,7 +192,6 @@
                 </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-                <!-- Nessun choice prima del lb, output normale del testo -->
                 <xsl:value-of select="."/>
             </xsl:otherwise>
         </xsl:choose>
