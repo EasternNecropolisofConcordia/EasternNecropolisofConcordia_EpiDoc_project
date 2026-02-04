@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Mercurius and Ursa</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Mercurius_Ursa.xml</idno>
+                <idno type="TM">125646</idno>
+                <idno type="EDR">EDR097905</idno>
+                <idno type="UEL">29310</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>328</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature textual-context" xml:lang="en">
+                                Mid-Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature textual-context" xml:lang="it">
+                                Metà IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">1740</note>
+                            <note type="plan_y">740</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note>Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                                    <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                                    <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                                    <date type="autopsy">2024</date>
+                                    <dimensions>
+                                        <height unit="cm">42.5</height>
+                                        <width unit="cm">83</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Slab broken trimmed at the bottom and damagedleft side of the frame.</p>
+                                    <p>Tabella resecata nel lato inferiore e danneggiata nel lato sinistro</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">40</height>
+                                        <width unit = "cm">77.5</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4" max="6" unit = "cm">4-6</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p> Right-facing direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, light incision. </p>
+                                    <p> The letter <g type="pl">A</g> shows a slightly oblique crossbar and a right stroke that extends beyond the point of intersection with the left one. </p>
+                                    <p> The letter <g type="pl">F</g> features an anomalous stroke below the <g type="pl">median stroke</g>, with three oblique strokes ascending towards the right. </p>
+                                    <p> The letter <g type="pl">G</g> has an oblique vertical element (<g type="pl">pilastrino</g>) descending towards the right. </p>
+                                    <p> The letter <g type="pl">M</g> is composed of four oblique strokes. </p>
+                                    <p> The letter <g type="pl">O</g> is positioned above the baseline and has a smaller module compared to the other letters. </p>
+                                    <p> The letter <g type="pl">P</g> has a laterally compressed bowl. </p>
+                                    <p> The letter <g type="pl">R</g> features a laterally compressed bowl and a tail that curves upwards upon reaching the baseline. </p>
+                                    <p> The letter <g type="pl">T</g> has a short top bar. </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p> Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, solco leggero. </p>
+                                    <p> La lettera <g type="pl">A</g> presenta una traversa leggermente obliqua e l'asta destra che si sviluppa oltre il punto di incrocio con quella sinistra. </p>
+                                    <p> La lettera <g type="pl">F</g> presenta un anomalo braccio sottostante alla <g type="pl">cravatta</g>, con tre tratti obliqui ascendenti verso destra. </p>
+                                    <p> La lettera <g type="pl">G</g> presenta un pilastrino obliquo discendente verso destra. </p>
+                                    <p> La lettera <g type="pl">M</g> è composta da quattro aste oblique. </p>
+                                    <p> La lettera <g type="pl">O</g> si trova al di sopra del rigo di base e presenta un modulo inferiore rispetto alle altre lettere. </p>
+                                    <p> La lettera <g type="pl">P</g> presenta un occhiello compresso lateralmente. </p>
+                                    <p> La lettera <g type="pl">R</g> presenta un occhiello compresso lateralmente e una coda che si incurva verso l’alto quando tocca il rigo di base. </p>
+                                    <p> La lettera <g type="pl">T</g> presenta il braccio superiore corto. </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>A <objectType>flat border</objectType> runs around the perimeter of the panel.</p>
+                                <p>According to Bertolini's report, two arches supported by columns are located at the sides of the inscription, with a vase positioned under one of them (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Una <objectType>cornice semplice</objectType> percorre il perimetro dello specchio epigrafico</p>.
+                                <p>Secondo quanto riportato da Bertolini, “ai lati della iscrizione due archi sostenuti da colonne e sotto uno d’essi un vaso” (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="mercurius">
+                   <persName>
+                       <name type="full">Flavius Mercurius</name>
+                       <name type="nomen" nymRef="latin">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Mercurius</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">fabricensis</note>
+                   <note type="rank">biarchus</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#ursa">husband</note>
+               </person>
+               <person xml:id="ursa">
+                 <persName>
+                     <name type="full">Flavia Severina</name>
+                     <name type="nomen" nymRef="latin">Flavia</name>
+                     <name type = "cognomen" nymRef="latin">Ursa</name>
+                     <name type="gens">Flavia</name>
+                 </persName>
+                  <gender value="f">f</gender>
+                  <note type = "occupation">civil</note>
+                  <note type="role">dedicator/deceased</note>
+                  <note type = "relationship" corresp="#mercurius">wife</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Mercurius_Ursa.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Mercurius and Ursa. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29310">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><persName corresp="#mercurius"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Mercurius</persName> <choice><reg>biarchus</reg><orig>biarcus</orig></choice>
+                    <lb n="2"/>fabricensis sibi et con
+                    <lb n="3" break="no"/>iugi suae <persName corresp="#ursa"><expan><abbr>Fl</abbr><ex>aviae</ex></expan> <choice><reg>Ursae</reg><orig>Urse</orig></choice></persName> vivi
+                    <lb n="4"/>de <w xml:id="w1"><choice><reg>rem</reg><orig>re</orig></choice></w> <w xml:id="w2">sua</w> <w xml:id="w3"><choice><reg>comparaverunt</reg><orig>conparaveru<hi rend="ligature">nt</hi></orig></choice></w>. 
+                    <lb n="5"/>Si quis post <choice><reg>obitum</reg><orig>hobitum</orig></choice> eorum
+                    <lb n="6"/>voluerit aperire <w xml:id="w4">dabit</w> <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri <expan><abbr>p</abbr><ex>ondo</ex></expan> duo</measure>.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="4" from="#w1" to="#w1">
+                        <lem>
+                            <choice><reg>rem</reg><orig>re</orig></choice>
+                        </lem>
+                        <note>
+                            According to <bibl ref="#lettich1983">Lettich</bibl>, this hypercorrection seems to confirm the absence of the pronunciation of the final -m during Late Antiquity.
+                        </note>
+                    </app>
+                    <app loc="4" from="#w2" to="#w2">
+                        <lem>
+                            sua
+                        </lem>
+                        <rdg source="#scarpabonazza_veronese1978">
+                            suam
+                        </rdg>
+                    </app>
+                    <app loc="4" from="#w3" to="#w3">
+                        <lem>
+                            <choice><reg>comparaverunt</reg><orig>conparaveru<hi rend="ligature">nt</hi></orig></choice>
+                        </lem>
+                        <rdg source="#bertolini1874b #bertolini1875b #scarpabonazza_veronese1978">
+                            comparaverunt
+                        </rdg>
+                    </app>
+                    <app loc="6" from="#w4" to="#w4">
+                        <lem>
+                            dabit
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            <expan><abbr>dab</abbr><ex>it</ex></expan><hi rend="ligature"><expan><abbr>v</abbr><ex>iribus</ex></expan> <expan><abbr>f</abbr><ex>isci</ex></expan></hi>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName>, <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>, for himself and for his wife <persName ref="#ursa" xml:lang="la">Flavia Ursa</persName>, while living, purchased (this) from their own resources.
+                </p>
+                <p>
+                    If anyone, after their death, should wish to open it, they shall pay two (roman) pounds of gold.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName>, <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>, per sé e per sua moglie <persName ref="#ursa" xml:lang="la">Flavia Ursa</persName>, da vivi, acquistarono con le proprie risorse.
+                </p>
+                <p>Se qualcuno, dopo la loro morte, vorrà aprirlo, pagherà due libbre d'oro.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    Like <persName ref="./FlaviusAlatancus_Bitorta.xml#martinianus" xml:lang="la">Flavius Martinianus</persName>, <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName> was also a <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>.
+                </p>
+                <p>
+                    This is the only epigraphic attestation of an individual named <persName xml:lang="la">Mercurius</persName> in the whole of Concordia, although this <term xml:lang="la">cognomen</term> appears in many other cities of the <term xml:lang="la">regio X</term>, such as Aquileia (<term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179690">EDR179690</ref>; <term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179693">EDR179693</ref>; <term xml:lang="la">CIL</term> V 8424 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179749">EDR179749</ref>).
+                </p>
+                <p>
+                    The inscription of a woman named <persName xml:lang="la">Ursa Iulia</persName> was found in Caorle and perhaps originally came from the city of Concordia (CIL V 1962 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR156654">EDR156654</ref>).
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    Come <persName ref="./FlaviusAlatancus_Bitorta.xml#martinianus" xml:lang="la">Flavius Martinianus</persName>, anche <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName> era un <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>.
+                </p>
+                <p>
+                    Questa è l'unica attestazione epigrafica di un individuo di nome <persName xml:lang="la">Mercurius</persName> nell'intera Concordia, sebbene questo <term xml:lang="la">cognomen</term> compaia in molte altre città della <term xml:lang="la">regio X</term>, come Aquileia (<term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179690">EDR179690</ref>; <term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179693">EDR179693</ref>; <term xml:lang="la">CIL</term> V 8424 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179749">EDR179749</ref>).
+                </p>
+                <p>
+                    L'iscrizione di una donna di nome <persName xml:lang="la">Ursa Iulia</persName> è stata rinvenuta a Caorle e forse proveniva originariamente dalla città di Concordia (CIL V 1962 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR156654">EDR156654</ref>).
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">24</citedRange>
+                        <note type="number">nr. 10</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">285</citedRange>
+                        <note type="number">nr. 6</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1875b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <title>Bertolini 1875b</title>
+                        <citedRange unit="page">116</citedRange>
+                        <note type="number">nr. 9</note>
+                    </bibl>
+                    <bibl xml:id="cilv8757">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8757</title>
+                    </bibl>
+                    <bibl xml:id="ilcv521">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 521</title>
+                    </bibl>
+                    <bibl xml:id="scarpabonazza_veronese1978">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#scarpabonazzabuoraveronese1978"/>
+                        <title>Scarpa Bonazza Buora Veronese 1978</title>
+                        <citedRange unit="page">74-75</citedRange>
+                        <note type="note">nt. 300</note>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">57-58</citedRange>
+                        <note type="number">nr. 14</note>
+                    </bibl>
+                    <bibl xml:id="edr097905">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097905">EDR097905</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

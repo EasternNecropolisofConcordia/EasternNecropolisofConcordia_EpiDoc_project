@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Peregrina</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Peregrina.xml</idno>
+                <idno>391</idno>
+                <idno type="TM">125663</idno>
+                <idno type="EDR">EDR097922</idno>
+                <idno type="UEL">29365</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient">Iulia Concordia</placeName>
+                                <placeName type="modern">Concordia Sagittaria</placeName>
+                                <date type="discovery">1873</date>
+                            </origPlace>
+                            <origDate notBefore-custom="0300" notAfter-custom="03500" evidence="lettering nomenclature" xml:lang="en">
+                                First Half of the Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0300" notAfter-custom="03500" evidence="lettering nomenclature" xml:lang="it">
+                                Prima Metà del IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">1490</note>
+                            <note type="plan_y">1440</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into a low wall in the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva incastonata in un muretto nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal tablet of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Tabella di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">41</height>
+                                        <width unit="cm">113.5</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Frontal tablet truncated at the lower part.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Tabella di sarcofago resecata nella parte inferiore.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">32</height>
+                                        <width unit = "cm">96</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4.5" max="5" unit = "cm">4.5-5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> regolare, interpunzione assente, solco leggero, impaginazione a sinistra.
+                                    </p>
+                                    <p><g type="pl">A</g> con traversa leggermente obliqua, ascendente verso destra.</p>
+                                    <p><g type="pl">B</g> compressa lateralmente.</p>
+                                    <p><g type="pl">E</g> compressa lateralmente e con bracci corti.</p>
+                                    <p><g type="pl">M</g> talvolta con le aste laterali oblique (r. 3).</p>
+                                    <p><g type="pl">N</g> talvolta con aste laterali oblique (r. 4).</p>
+                                    <p><g type="pl">P</g> con occhiello alto, che occupa quasi tutto il corpo della lettera.</p>
+                                    <p><g type="pl">R</g> con occhiello alto e con la coda corta e dal solco leggero.</p>
+                                    <p><g type="pl">Q</g> ampia e rotonda, con la coda interna al corpo della lettera.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Writing direction left to right, horizontal layout, vertical module, <term xml:lang="la">ductus</term> regular, no punctuation, shallow incision, alignment to the left.
+                                    </p>
+                                    <p><g type="pl">A</g> with slightly oblique crossbar, ascending to the right.</p>
+                                    <p><g type="pl">B</g> laterally compressed.</p> <p><g type="pl">E</g> laterally compressed with short arms.</p>
+                                    <p><g type="pl">M</g> sometimes with oblique lateral strokes (line 3).</p>
+                                    <p><g type="pl">N</g> sometimes with oblique lateral strokes (line 4).</p>
+                                    <p><g type="pl">P</g> with high bowl, occupying almost the entire body of the letter.</p>
+                                    <p><g type="pl">R</g> with high bowl, short leg, and shallow stroke.</p>
+                                    <p><g type="pl">Q</g> wide and rounded, with the tail contained within the body of the letter.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>
+                                    A molded cornice borders the front of the sarcophagus.
+                                </p>
+                                <p>
+                                    According to Bertolini <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 23)</ref>, they were originally carved on the sarcophagus, on either side of the inscription, as ‘two arches supported by very roughly executed columns’
+                                </p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>
+                                    Una cornice modanata corre lungo il perimetro della fronte del sarcofago.
+                                </p>
+                                <p>
+                                    Secondo Bertolini <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 23)</ref>, originariamente erano inscisi sul sarcofago, ai lati dell'epigrafe, “due archi sostenuti da colonne di rozzissimo lavoro”
+                                </p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="peregrina">
+                   <persName>
+                       <name type="full">Valeria Peregrina</name>
+                       <name type="nomen">Valeria</name>
+                       <name type="cognomen" nymRef="latin">Peregrina</name>
+                       <name type="gens">Valeria</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Peregrina.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Peregrina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29365">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <ab>
+                    <lb n="1"/><persName ref="#peregrina"><w xml:id="w1">Va<choice><corr>l</corr><sic>i</sic></choice>eria</w> Peregrina</persName>, arcam ex pro
+                    <lb n="2" break="no"/>prio suo <choice><reg>comparavit</reg><orig>conparavit</orig></choice>, in qua se
+                    <lb n="3"/>poni praecepit adque <w xml:id="w2"><supplied reason="omitted" cert="low">litteras</supplied></w> nominis
+                    <lb n="4"/>sui conscribi iussit.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1" to="#w1">
+                        <lem>
+                            Va<choice><corr>l</corr><sic>i</sic></choice>eria
+                        </lem>
+                        <rdg source="#bertolini1874a">
+                            Vateria
+                        </rdg>
+                        <rdg source="#cilv8774 #ilcv849 #lettich1983">
+                            Valeria
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w2" to="#w2">
+                        <lem><supplied reason="omitted" cert="low">litteras</supplied></lem>
+                        <rdg source="#bertolini1874a #bertolini1874b #cilv8774 #ilcv849"></rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    <persName corresp="#peregrina" xml:lang="la">Valeria Peregrina</persName> purchased the <term xml:lang="la">arca</term> with her own funds, in which she ordered to be placed and instructed that (the letters?) of her name be inscribed.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    <persName corresp="#peregrina" xml:lang="la">Valeria Peregrina</persName> comprò l’arca con i propri fondi, nella quale ordinò di essere posta e dispose che (le lettere?) del suo nome fossero iscritte.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    <bibl corresp="#lettich1983">Lettich</bibl> doubts that <term xml:lang="la">peregrina</term> is an adjective, since if Valeria had been a foreigner, she would probably have specified her place of origin; moreover, already in the early Imperial period there existed a freedwoman named <persName xml:lang="la">Peregrina</persName>(<term xml:lang="la">SupplIt</term> 414; <ref target="../Bibliography/Master_Bibliography.xml#lettich1994">Lettich 1994, 139.</ref>).
+                </p>
+                <p>
+                    It is unclear whether a term governing the genitive <term xml:lang="la">nominis</term> / <term xml:lang="la">sui</term> is missing; <bibl corresp="#lettich1983">Lettich</bibl> suggests <term xml:lang="la">litteras</term>, but the lack of examples of a similar formula in the Concordian inscriptions makes it impossible to emend the inscription.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    <bibl corresp="#lettich1983">Lettich</bibl> dubita che <term xml:lang="la">peregrina</term> sia un aggettivo, poiché se Valeria fosse stata straniera, avrebbe probabilmente specificato il luogo di provenienza; inoltre già in età alto imperiale esisteva una liberta dal nome <persName xml:lang="la">Peregrina</persName> (<term xml:lang="la">SupplIt</term> 414; <ref target="../Bibliography/Master_Bibliography.xml#lettich1994">Lettich 1994, 139.</ref>).
+                </p>
+                <p>
+                    Non è chiaro se manchi un termine che regge il genitivo <term xml:lang="la">nominis</term> / <term xml:lang="la">sui</term>; <bibl corresp="#lettich1983">Lettich</bibl> propone <term xml:lang="la">litteras</term>, ma la mancanza di esempi di analoga formula sulle epigrafi concordiesi rendono impossibile integrare l’iscrizione.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">23</citedRange>
+                        <note type="number">nr. 7</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">293</citedRange>
+                        <note type="number">nr. 17</note>
+                    </bibl>
+                    <bibl xml:id="cilv8774">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8774</title>
+                    </bibl>
+                    <bibl xml:id="ilcv849">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="term">ILCV</term> 849</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">105</citedRange>
+                        <note type="number">nr. 76</note>
+                    </bibl>
+                    <bibl xml:id="edr097922">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097922">EDR097922</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-29">29-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

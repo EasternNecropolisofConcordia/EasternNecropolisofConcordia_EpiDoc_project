@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Romulianus and Tahetis</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">Romulianus_Tahetis.xml</idno>
+                <idno type="TM">125598</idno>
+                <idno type="EDR">EDR097857</idno>
+                <idno type="UEL">29299</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <idno>358</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">1680</note>
+                            <note type="plan_y">2610</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">55.5</height>
+                                        <width unit="cm">115</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Front panel of sarcophagus fractured into eight pieces, lacking the left fragment and one piece at upper right.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Fronte di sarcofago fratta in otto pezzi mancante del frammento sinistro e di un pezzo in alto a destra.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">47</height>
+                                        <width unit="cm">97</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4" max="5" unit="cm">4-5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Right-to-left direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, triangular interpunction, left-aligned layout.</p>
+                                    
+                                    <p><g type="pl">F</g> with crossbar shorter than the upper arm;</p>
+                                    
+                                    <p><g type="pl">G</g> without serif;</p>
+                                    
+                                    <p><g type="pl">M</g> composed of four oblique strokes.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione triangoliforme, impaginazione a sinistra.</p>
+                                    
+                                    <p><g type="pl">F</g> con cravatta più corta rispetto al braccio superiore;</p>
+                                    
+                                    <p><g type="pl">G</g> senza pilastrino;</p>
+                                    
+                                    <p><g type="pl">M</g> composta da quattro aste oblique.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>The inscribed field is framed by a molded border, the lower side of which is now lost.</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Lo specchio epigrafico è delimitato da una cornice modanata, il cui lato inferiore è oggi perduto.</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person>
+                   <persName xml:id="romulianus">
+                       <name type="full">Flavius Romulianus</name>
+                       <name type="nomen">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Romulianus</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">fabricensis</note>
+                   <note type="rank">praepositus</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type="relationship" corresp="#tahetis">husband</note>
+               </person>
+               <person>
+                   <persName xml:id="tahetis">
+                       <name type="full">Tahetis</name>
+                       <name type="cognomen" nymRef="egyptian">Tahetis</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#romulianus">wife</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Romulianus_Tahetis.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Romulianus and Tahetis. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29299">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><expan><abbr>Fl</abbr><ex>avius</ex></expan> Romulianus <expan><abbr>p</abbr><ex>rae</ex><abbr>p</abbr><ex>ositus</ex></expan> <expan><abbr>fab</abbr><ex>ricae</ex></expan> <expan><abbr>sagit<unclear>t</unclear></abbr><ex>ariae</ex></expan>
+                    <lb n="2"/><unclear>f</unclear>ecit de suo <w xml:id="w1">pro<supplied reason="omitted">p</supplied>rio</w> memo<unclear>r</unclear><supplied reason="lost">ia</supplied>
+                    <lb n="3" break="no"/>m coniugi <w xml:id="w2">su<unclear>a</unclear>e</w> Taheti
+                    <lb n="4"/><supplied reason="lost">e</supplied><unclear>t</unclear> sibi. Si <unclear>q</unclear><unclear>u</unclear><supplied reason="lost">i</supplied>s <supplied reason="lost">p</supplied>ostea
+                    <lb n="5"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8697">in</supplied> eo loco corp<unclear>u</unclear>s alicuius
+                    <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8697">po</supplied><unclear>n</unclear>ere voluerit in<unclear>f</unclear><unclear>e</unclear>rt<unclear>u</unclear>rus
+                    <lb n="7"/>rei publicae <w xml:id="w3">pecun<supplied reason="lost">i</supplied>ae</w>
+                    <lb n="8"/><measure type="fine" unit="follis" quantity="1000">folles <w xml:id="w4">m<supplied reason="omitted">i</supplied>ll<surplus>i</surplus>e</w></measure>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="2" from="#w1" to="#w1">
+                        <lem>
+                            pro<supplied reason="omitted">p</supplied>rio
+                        </lem>
+                        <rdg source="#lettich1983">
+                            <choice><reg>proprio</reg><orig>propio</orig></choice>
+                        </rdg>
+                    </app>
+                    <app loc="2" from="#w2" to="#w2">
+                        <lem>
+                            su<unclear>a</unclear>e
+                        </lem>
+                        <rdg source="#bertolini1892">
+                            su<supplied reason="omitted">a</supplied>e
+                        </rdg>
+                        <rdg source="#lettich1983">
+                            su<supplied reason="lost">a</supplied>e
+                        </rdg>
+                    </app>
+                    <app loc="7" from="#w3" to="#w3">
+                        <lem>
+                            pecun<supplied reason="lost">i</supplied>ae
+                        </lem>
+                        <rdg source="#lettich1983">
+                            pecunia
+                        </rdg>
+                    </app>
+                    <app loc="8" from="w4" to="w4">
+                        <lem>
+                            pecun<supplied reason="lost">i</supplied>ae
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b #cilv8697 #ilcv538a">
+                            mille
+                        </rdg>
+                        <rdg source="#lettich1983">
+                            mill<surplus>i</surplus>e
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p><persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, <term xml:lang="la">praepositus</term> (superintendent) of the arrow factory, made this monument at his own expense for his wife <persName ref="#tahetis" xml:lang="la">Taheti</persName> and for himself.</p>
+                
+                <p>If anyone afterwards wishes to place the body of another in this place, he shall pay to the public treasury one thousand <term xml:lang="la">folles</term>.</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p><persName ref="#romulianus">Flavio Romuliano</persName>, <term xml:lang="la">praepositus</term> della fabbrica di frecce, fece a proprie spese questo monumento per la sua consorte <persName ref="#tahetis" xml:lang="la">Tahetis</persName> e per sé.</p>
+                
+                <p>Se qualcuno in seguito vorrà deporre in questo luogo il corpo di un altro, dovrà versare all'erario pubblico mille <term xml:lang="la">folles</term>.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p><persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, <term xml:lang="la">praepositus</term> of the arrow factory in Concordia, commissions the tomb for his wife <persName ref="#tahetis" xml:lang="la">Tahetis</persName> and himself. Anyone who placed the corpse of someone else in this sarcophagus would have to pay the <term xml:lang="la">res publica</term> one thousand <term xml:lang="la">folles</term>.</p>
+                
+                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, as <term xml:lang="la">praepositus</term>, was head of the arms factory. The same individual is mentioned in another epigraph found in the Persico estate where, again as dedicator, he commissions the burial for <ref target="./Romulianus_Domnula.xml"><persName xml:lang="la">Aurelia Domnula</persName></ref>. This is not the only evidence within the necropolis of a man who becomes widowed and remarries: consider the two inscriptions of <ref target="./Ursus_Decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
+                
+                <p>According to Lettich, <persName xml:lang="la">Domnula</persName> would be the second wife of the <term xml:lang="la">fabricensis</term>, since in this second epigraph it is written "<term xml:lang="la">ex p</term>(<term xml:lang="la">rae</term>)<term xml:lang="la">p</term>(<term xml:lang="la">ositus</term>)" and would therefore represent the retirement of <persName xml:lang="la">Romulianus</persName> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>). However, in the inscription found in the Persico estate, the intention of <persName xml:lang="la">Romulianus</persName> to be buried with <persName xml:lang="la">Domnula</persName> is not made explicit, unlike what is declared with his first wife <persName xml:lang="la">Tahetis</persName>.</p>
+                
+                <p>The name <persName xml:lang="la">Tahetis</persName> is foreign to both Latin and Greek onomastics and probably has Egyptian origins (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46</ref>). According to Mommsen, in this context <term xml:lang="la">res publica</term> would indicate the <term xml:lang="la">civitas Concordiensis</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V, p. 1060</ref>). The <term xml:lang="la">folles</term> were coins introduced by Diocletian that continued to be used until the middle of the 4th century (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>).</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p><persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, <term xml:lang="la">praepositus</term> della fabbrica di frecce a Concordia, commissiona l'arca per la moglie <persName ref="#tahetis" xml:lang="la">Tahetis</persName> e sé stesso. Chiunque avesse posto il cadavere di qualcun altro in questo sarcofago, avrebbe dovuto versare alla <term xml:lang="la">res publica</term> mille <term xml:lang="la">folles</term>.</p>
+                
+                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, in quanto <term xml:lang="la">praepositus</term>, era a capo della fabbrica d'armi. Lo stesso individuo è citato in un'altra epigrafe trovata nel fondo Persico dove, sempre come dedicante, commissiona la sepoltura per <ref target="./Romulianus_Domnula.xml"><persName xml:lang="la">Aurelia Domnula</persName></ref>. Non è l'unica testimonianza all'interno della necropoli di un uomo che diventa vedovo e si risposa: si pensi alle due iscrizioni di <ref target="./Ursus_Decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
+                
+                <p>Secondo Lettich, <persName xml:lang="la">Domnula</persName> sarebbe la seconda moglie del <term xml:lang="la">fabricensis</term>, dal momento che in questa seconda epigrafe è scritto "<term xml:lang="la">ex p</term>(<term xml:lang="la">rae</term>)<term xml:lang="la">p</term>(<term xml:lang="la">ositus</term>)" e rappresenterebbe dunque il pensionamento di <persName xml:lang="la">Romulianus</persName> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>). Tuttavia nell'iscrizione rinvenuta nel fondo Persico non è esplicitata l'intenzione da parte di <persName xml:lang="la">Romulianus</persName> di essere seppellito con <persName xml:lang="la">Domnula</persName>, a differenza di quanto viene dichiarato con la prima moglie <persName xml:lang="la">Tahetis</persName>.</p>
+                
+                <p>Il nome <persName xml:lang="la">Tahetis</persName> è estraneo sia all'onomastica latina sia a quella greca e probabilmente ha origini egiziane (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46</ref>). Secondo Mommsen, in questo contesto <term xml:lang="la">res publica</term> indicherebbe la <term xml:lang="la">civitas Concordiensis</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V, p. 1060</ref>). I <term xml:lang="la">folles</term> erano delle monete inaugurate da Diocleziano che continuarono ad essere utilizzate fino alla metà del IV secolo (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">32</citedRange>
+                        <note type="number">n. 28</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">294</citedRange>
+                        <note type="number">n. 21</note>
+                    </bibl>
+                    <bibl xml:id="cilv8697">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8697</title>
+                    </bibl>
+                    <bibl xml:id="cilv8721">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8721</title>
+                    </bibl>
+                    <bibl xml:id="bertolini1892">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1892"/>
+                        <title>Bertolini 1982</title>
+                        <citedRange unit="page">44</citedRange>
+                    </bibl>
+                    <bibl xml:id="ilcv538a">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 538 A</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">45-47</citedRange>
+                        <note type="number">n. 1</note>
+                    </bibl>
+                    <bibl xml:id="edr097857">
+                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097857">EDR097857</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
