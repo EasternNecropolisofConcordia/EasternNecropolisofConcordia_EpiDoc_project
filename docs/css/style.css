@@ -53,59 +53,46 @@
 
 /* Transcription */
 
-/* Transcription Container */
-/* Container Base Style */
 .transcription {
-    font-family: 'Cardo', 'Times New Roman', serif;
+    font-family: 'Cardo', serif;
     line-height: 1.8;
     max-width: 900px;
     margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #eee;
-    background-color: #fff;
     text-align: center;
 }
 
-/* 1. DEFAULT: in column for chest */
-.textpart, .ab-content {
-    width: 100%;
-    margin-bottom: 20px;
-    display: block;
-}
-
-/* 2. LID: Flex Container */
 div[data-location="lid"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 40px;
+    border-bottom: 2px solid #333;
     padding-bottom: 20px;
-    border-bottom: 2px double #ccc; /* Linea di separazione "architettonica" */
+    margin-bottom: 20px;
 }
 
-/* h4 and h5 (LID, CHEST, ACROTERION) */
-.transcription h4, .transcription h5 {
+div[data-location="lid"] > h4 {
     flex-basis: 100%;
-    margin: 10px 0;
-    text-transform: uppercase;
-    color: #555;
 }
 
-/* 3. ACOTERION: nearby only if in Lid */
 div[data-location="acroterion"] {
-    flex: 1 1 300px; /* Si espandono ma scendono a capo se lo schermo è stretto */
-    max-width: 45%;
-    background-color: #f9f9f9;
-    border: 1px solid #ececec;
-    padding: 15px;
+    flex: 0 1 auto;
+    min-width: 200px;
 }
 
-/* Tex-allignment */
+div[data-location="chest"] {
+    width: 100%;
+    margin-top: 20px;
+}
+
 .line {
     display: block;
-    white-space: pre-wrap;
-    text-align: center; 
+    white-space: nowrap;
+}
+
+.ab-content {
+    display: inline-block;
+    text-align: center;
 }
 
 /* Figures */
