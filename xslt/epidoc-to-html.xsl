@@ -38,20 +38,8 @@
                     <xsl:for-each select="//tei:div[@type = 'edition']">
                         <div class="transcription" lang="la">
                             <xsl:choose>
-                                <xsl:when test=".//tei:div[@type = 'textpart']">
-                                    <xsl:for-each select=".//tei:div[@type = 'textpart']">
-                                        <h4>
-                                            <xsl:choose>
-                                                <xsl:when test="@subtype"><xsl:value-of select="upper-case(replace(@subtype, '_', ' '))"/></xsl:when>
-                                                <xsl:when test="@source"><xsl:value-of select="upper-case(replace(@source, '_', ' '))"/></xsl:when>
-                                                <xsl:otherwise>PART <xsl:value-of select="@n"/></xsl:otherwise>
-                                            </xsl:choose>
-                                            <xsl:text>:</xsl:text>
-                                        </h4>
-                                        <div class="textpart" data-location="{(@subtype, @source)[1]}">
-                                            <xsl:apply-templates select="tei:ab" mode="interp"/>
-                                        </div>
-                                    </xsl:for-each>
+                                <xsl:when test="tei:div[@type = 'textpart']">
+                                    <xsl:apply-templates select="tei:div[@type = 'textpart']"/>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:apply-templates select="tei:ab" mode="interp"/>
@@ -91,11 +79,22 @@
         </html>
     </xsl:template>
     
-    <!-- ========= -->
-    <!-- TEMPLATES -->
-    <!-- ========= -->
+    <xsl:template match="tei:div[@type = 'textpart']">
+        <xsl:element name="{if (count(ancestor::tei:div[@type='textpart']) > 0) then 'h5' else 'h4'}">
+            <xsl:choose>
+                <xsl:when test="@subtype"><xsl:value-of select="upper-case(replace(@subtype, '_', ' '))"/></xsl:when>
+                <xsl:when test="@source"><xsl:value-of select="upper-case(replace(@source, '_', ' '))"/></xsl:when>
+                <xsl:otherwise>PART <xsl:value-of select="@n"/></xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>:</xsl:text>
+        </xsl:element>
+        
+        <div class="textpart" data-location="{(@subtype, @source)[1]}">
+            <xsl:apply-templates select="tei:div[@type = 'textpart']"/>
+            <xsl:apply-templates select="tei:ab" mode="interp"/>
+        </div>
+    </xsl:template>
     
-    <!-- FIgures -->
     <xsl:template match="tei:ref">
         <a href="{@target}"><xsl:apply-templates/></a>
     </xsl:template>
@@ -103,9 +102,7 @@
     <xsl:template match="tei:graphic">
         <figure>
             <img src="{@url}">
-                <xsl:attribute name="alt">
-                    <xsl:value-of select="tei:desc[@type='alt']"/>
-                </xsl:attribute>
+                <xsl:attribute name="alt"><xsl:value-of select="tei:desc[@type='alt']"/></xsl:attribute>
             </img>
             <xsl:apply-templates select="tei:desc[@type='figDesc']"/>
         </figure>
@@ -134,10 +131,6 @@
         <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
     </xsl:template>
     
-    <!-- ========================================== -->
-    <!-- KRUMMREY-PANCIERA DIACRITICS (mode="interp") -->
-    <!-- ========================================== -->
-    
     <xsl:template match="tei:hi[@rend = 'ligature']" mode="interp">
         <xsl:variable name="text" select="string(.)"/>
         <xsl:analyze-string select="$text" regex=".">
@@ -158,26 +151,52 @@
             following-sibling::node()[self::tei:lb][1][@break='no'] or 
             parent::tei:w/following-sibling::node()[self::tei:lb][1][@break='no'] or
             parent::tei:seg/following-sibling::node()[self::tei:lb][1][@break='no']"/>
-        
         <xsl:if test="not(tei:orig//tei:expan) and not(tei:orig//tei:ex) and not($followedByBreak)">
             <xsl:text> (!)</xsl:text>
         </xsl:if>
     </xsl:template>
     
+    <!-- CORRETTO: Verifica che ci sia effettivamente un choice prima del lb -->
     <xsl:template match="text()[preceding-sibling::*[1][self::tei:lb[@break='no']] or 
         parent::tei:w/preceding-sibling::node()[1][self::tei:lb[@break='no']] or
         parent::tei:seg/preceding-sibling::node()[1][self::tei:lb[@break='no']]]" mode="interp" priority="2">
-        <xsl:variable name="trimmed" select="normalize-space(.)"/>
+        
+        <!-- Trova il lb[@break='no'] precedente -->
+        <xsl:variable name="lb" select="(preceding-sibling::tei:lb[@break='no'][1] | 
+            parent::tei:w/preceding-sibling::tei:lb[@break='no'][1] |
+            parent::tei:seg/preceding-sibling::tei:lb[@break='no'][1])[1]"/>
+        
+        <!-- Trova il choice prima del lb -->
+        <xsl:variable name="choiceBefore" select="($lb/preceding-sibling::tei:choice[tei:reg and tei:orig][1] |
+            $lb/preceding-sibling::tei:w[1]//tei:choice[tei:reg and tei:orig][last()] |
+            $lb/preceding-sibling::tei:seg[1]//tei:choice[tei:reg and tei:orig][last()])[last()]"/>
+        
         <xsl:choose>
-            <xsl:when test="contains($trimmed, ' ')">
-                <xsl:value-of select="substring-before($trimmed, ' ')"/>
-                <xsl:text> (!)</xsl:text>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="substring-after($trimmed, ' ')"/>
+            <xsl:when test="$choiceBefore">
+                <!-- C'è un choice prima del lb, quindi aggiungi (!) dopo la prima parola -->
+                <xsl:variable name="trimmed" select="normalize-space(.)"/>
+                <xsl:choose>
+                    <xsl:when test="contains($trimmed, ' ')">
+                        <xsl:value-of select="substring-before($trimmed, ' ')"/>
+                        <!-- Aggiungi (!) solo se il choice non ha expan -->
+                        <xsl:if test="not($choiceBefore/tei:orig//tei:expan) and not($choiceBefore/tei:orig//tei:ex)">
+                            <xsl:text> (!)</xsl:text>
+                        </xsl:if>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="substring-after($trimmed, ' ')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$trimmed"/>
+                        <!-- Aggiungi (!) solo se il choice non ha expan -->
+                        <xsl:if test="not($choiceBefore/tei:orig//tei:expan) and not($choiceBefore/tei:orig//tei:ex)">
+                            <xsl:text> (!)</xsl:text>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="$trimmed"/>
-                <xsl:text> (!)</xsl:text>
+                <!-- Nessun choice prima del lb, output normale del testo -->
+                <xsl:value-of select="."/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -212,5 +231,13 @@
     <xsl:template match="tei:reg | tei:sic" mode="interp" />
     <xsl:template match="text()" mode="interp"><xsl:value-of select="."/></xsl:template>
     <xsl:template match="*" mode="interp"><xsl:apply-templates mode="interp"/></xsl:template>
+    
+    <xsl:template match="tei:gap[@reason='lost']" mode="interp">
+        <xsl:choose>
+            <xsl:when test="@extent='unknown' and @unit='character'">[---]</xsl:when>
+            <xsl:when test="@extent='unknown' and @unit='line'">- - - - - -</xsl:when>
+            <xsl:otherwise> </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     
 </xsl:stylesheet>
