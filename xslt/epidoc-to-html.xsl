@@ -123,11 +123,11 @@
             <xsl:variable name="lineContent">
                 <xsl:apply-templates select="following-sibling::node()[not(self::tei:lb) and count(preceding-sibling::tei:lb) = count(current()/preceding-sibling::tei:lb) + 1]" mode="interp"/>
             </xsl:variable>
-            <xsl:variable name="nextLb" select="following-sibling::tei:lb[1]"/>
-            <xsl:copy-of select="$lineContent"/>
-            <xsl:if test="$nextLb/@break='no'"><xsl:text>=</xsl:text></xsl:if>
+            <xsl:value-of select="normalize-space($lineContent)"/>
+            <xsl:if test="following-sibling::tei:lb[1]/@break='no'">
+                <xsl:text> =</xsl:text>
+            </xsl:if>
         </span>
-        <br/>
         <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
     </xsl:template>
     
@@ -147,47 +147,44 @@
     
     <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="interp">
         <xsl:apply-templates select="tei:orig" mode="interp"/>
-        <xsl:variable name="followedByBreak" select="
-            following-sibling::node()[self::tei:lb][1][@break='no'] or 
-            parent::tei:w/following-sibling::node()[self::tei:lb][1][@break='no'] or
-            parent::tei:seg/following-sibling::node()[self::tei:lb][1][@break='no']"/>
-        <xsl:if test="not(tei:orig//tei:expan) and not(tei:orig//tei:ex) and not($followedByBreak)">
-            <xsl:text> (!)</xsl:text>
+        
+        <xsl:variable name="currentChoice" select="."/>
+        <xsl:variable name="nextLb" select="following::tei:lb[1]"/>
+        
+        <xsl:variable name="textBetween" select="following::text()[. &gt;&gt; $currentChoice and . &lt;&lt; $nextLb]"/>
+        
+        <xsl:variable name="isWordBroken" select="$nextLb/@break='no' and normalize-space(string-join($textBetween, '')) = ''"/>
+        
+        <xsl:if test="not(tei:orig//tei:expan) and not(tei:orig//tei:ex)">
+            <xsl:if test="not($isWordBroken)">
+                <xsl:text> (!)</xsl:text>
+            </xsl:if>
         </xsl:if>
     </xsl:template>
     
-
-    <xsl:template match="text()[preceding-sibling::*[1][self::tei:lb[@break='no']] or 
-        parent::tei:w/preceding-sibling::node()[1][self::tei:lb[@break='no']] or
-        parent::tei:seg/preceding-sibling::node()[1][self::tei:lb[@break='no']]]" mode="interp" priority="2">
+    <xsl:template match="text()[preceding::*[1][self::tei:lb[@break='no']]]" mode="interp" priority="5">
+        <xsl:variable name="prevLb" select="preceding::tei:lb[1]"/>
         
-
-        <xsl:variable name="lb" select="(preceding-sibling::tei:lb[@break='no'][1] | 
-            parent::tei:w/preceding-sibling::tei:lb[@break='no'][1] |
-            parent::tei:seg/preceding-sibling::tei:lb[@break='no'][1])[1]"/>
+        <xsl:variable name="lastElemBefore" select="$prevLb/preceding::*[not(self::tei:reg) and not(self::tei:sic)][1]"/>
         
-
-        <xsl:variable name="choiceBefore" select="($lb/preceding-sibling::tei:choice[tei:reg and tei:orig][1] |
-            $lb/preceding-sibling::tei:w[1]//tei:choice[tei:reg and tei:orig][last()] |
-            $lb/preceding-sibling::tei:seg[1]//tei:choice[tei:reg and tei:orig][last()])[last()]"/>
+        <xsl:variable name="textInBetween" select="$lastElemBefore/following::text()[. &lt;&lt; $prevLb]"/>
+        
+        <xsl:variable name="isBrokenChoice" select="$lastElemBefore/ancestor-or-self::tei:choice[tei:reg and tei:orig] and normalize-space(string-join($textInBetween, '')) = ''"/>
+        
+        <xsl:variable name="trimmed" select="normalize-space(.)"/>
         
         <xsl:choose>
-            <xsl:when test="$choiceBefore">>
-                <xsl:variable name="trimmed" select="normalize-space(.)"/>
+            <xsl:when test="$isBrokenChoice and not($lastElemBefore/ancestor-or-self::tei:choice/tei:orig//tei:expan)">
                 <xsl:choose>
                     <xsl:when test="contains($trimmed, ' ')">
                         <xsl:value-of select="substring-before($trimmed, ' ')"/>
-                        <xsl:if test="not($choiceBefore/tei:orig//tei:expan) and not($choiceBefore/tei:orig//tei:ex)">
-                            <xsl:text> (!)</xsl:text>
-                        </xsl:if>
+                        <xsl:text> (!)</xsl:text>
                         <xsl:text> </xsl:text>
                         <xsl:value-of select="substring-after($trimmed, ' ')"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="$trimmed"/>
-                        <xsl:if test="not($choiceBefore/tei:orig//tei:expan) and not($choiceBefore/tei:orig//tei:ex)">
-                            <xsl:text> (!)</xsl:text>
-                        </xsl:if>
+                        <xsl:text> (!)</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
@@ -213,6 +210,12 @@
     
     <xsl:template match="tei:surplus" mode="interp">
         <xsl:text>{</xsl:text><xsl:apply-templates mode="interp"/><xsl:text>}</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:choice[tei:corr and tei:sic]" mode="interp">
+        <xsl:text>⸢</xsl:text>
+        <xsl:apply-templates select="tei:corr" mode="interp"/>
+        <xsl:text>⸣</xsl:text>
     </xsl:template>
     
     <xsl:template match="tei:g" mode="interp">
