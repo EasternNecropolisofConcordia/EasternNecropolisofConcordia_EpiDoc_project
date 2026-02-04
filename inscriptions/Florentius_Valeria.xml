@@ -170,7 +170,7 @@
                 <ab>
                     <lb n="1"/><persName ref="#maflorentius"><expan><abbr>M</abbr><ex>arci</ex></expan> Ateri Florenti</persName> et <persName ref="#valeria">Iuli</persName>
                     <lb n="2" break="no"/><persName ref="#valeria">ae Valeriae</persName>, vivi feci
-                    <lb n="3" break="no"/>mus de <choice><corr>dato</corr><orig>data</orig></choice> Dei.
+                    <lb n="3" break="no"/>mus de <choice><reg>dato</reg><orig>data</orig></choice> Dei.
                 </ab>
             </div>
             <div type="apparatus">
