@@ -199,9 +199,9 @@
                         <citedRange unit="page">30</citedRange>
                         <note type="number">n. 20</note>
                     </bibl>
-                    <bibl xml:id="cilv8688">
+                    <bibl xml:id="cilv8988">
                         <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
-                        <title><term xml:lang="la">CIL</term> V 8688</title>
+                        <title><term xml:lang="la">CIL</term> V 8988</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
                         <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
