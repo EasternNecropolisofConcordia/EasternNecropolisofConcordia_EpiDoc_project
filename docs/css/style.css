@@ -9,35 +9,38 @@ body {
   flex-direction: column;
   background-color: #EFEBD8; 
   background-image: 
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 80%),
-    linear-gradient(120deg, rgba(163, 158, 131, 0.05) 0%, transparent 50%),
-    linear-gradient(240deg, rgba(163, 158, 131, 0.05) 0%, transparent 50%),
-    radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 4px 4px;
+    radial-gradient(circle at 2px 2px, rgba(139, 134, 108, 0.2) 1px, transparent 0),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    linear-gradient(240deg, rgba(163, 158, 131, 0.1) 0%, transparent 50%);
+  background-size: 6px 6px, 100% 100%, 100% 100%;
   background-attachment: fixed;
 }
 
 main {
   flex: 1 0 auto;
   padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 248, 0.75); 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  width: 100%;
+  max-width: 950px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 252, 0.85); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 90%;
   box-sizing: border-box;
+  border-radius: 2px;
 }
 
 .main_title {
   width: 100%;
   text-align: center;
-  padding: 20px 10px;
-  box-sizing: border-box;
+  padding: 30px 10px;
+  color:
+  font-family: 'Cardo', serif;
 }
 
 .navbar {
   width: 100%;
-  background-color: #333;
+  background-color: #8B3A3A;
+  border-bottom: 3px solid #6D2D2D;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .menu {
@@ -50,13 +53,18 @@ main {
 .menu a {
   display: block;
   padding: 14px 16px;
-  color: white;
+  color: #FDFaf0;
   text-decoration: none;
   text-align: center;
+  font-family: 'Cardo', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
 .menu a:hover {
-  background-color: #111;
+  background-color: #6D2D2D;
+  color: #fff;
 }
 
 .inscription-list {
@@ -66,9 +74,9 @@ main {
 
 .inscription-list li {
   margin: 10px 0;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-left: 5px solid #2c3e50;
+  padding: 15px;
+  background-color: rgba(239, 235, 216, 0.3);
+  border-left: 4px solid #8B3A3A;
 }
 
 .inscription-list a {
