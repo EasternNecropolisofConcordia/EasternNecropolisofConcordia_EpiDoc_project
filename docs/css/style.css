@@ -14,9 +14,14 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color:
-  background-image: radial-gradient(#d3cbab 0.5px, transparent 0.5px);
-  background-size: 12px 12px;
+  background-color: #EFEBD8; 
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 80%),
+    linear-gradient(120deg, rgba(163, 158, 131, 0.05) 0%, transparent 50%),
+    linear-gradient(240deg, rgba(163, 158, 131, 0.05) 0%, transparent 50%),
+    radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 4px 4px;
+  background-attachment: fixed;
 }
 
 main {
@@ -24,8 +29,11 @@ main {
   padding: 40px 20px;
   max-width: 900px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  /* Bianco latte semitrasparente per far leggere bene il testo */
+  background-color: rgba(255, 255, 248, 0.75); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .main_title {
