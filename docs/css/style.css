@@ -122,4 +122,10 @@ figcaption {
 footer {
   font-size: 10px;
   text-align: center;
+  color: #555;
+  margin-top: 20px
+}
+
+footer p {
+  margin: 5px 0;
 }
