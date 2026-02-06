@@ -118,3 +118,8 @@ figcaption {
     margin-top: 8px;
     color: #666;
 }
+
+footer {
+  font-size: 10px;
+  text-align: center;
+}
