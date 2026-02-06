@@ -65,7 +65,7 @@ def run():
 </head>
 <body>
     <header>
-        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia</h1>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
