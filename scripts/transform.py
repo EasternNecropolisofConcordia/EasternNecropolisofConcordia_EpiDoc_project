@@ -12,7 +12,7 @@ def transform_xml():
         xslt_proc = proc.new_xslt30_processor()
         
         if not os.path.exists(xslt_path):
-            print(f"Errore: {xslt_path} non trovato")
+            print(f"Error: {xslt_path} non found")
             return
 
         # Navbar da iniettare per coerenza col tuo sito
@@ -40,12 +40,9 @@ def transform_xml():
                 output_path = os.path.join(output_dir, output_filename)
 
                 try:
-                    # Carica ed esegue XSLT 2.0/3.0
                     executable = xslt_proc.compile_stylesheet(stylesheet_file=xslt_path)
                     output = executable.transform_to_string(source_file=xml_path)
                     
-                    # Uniamo l'output dell'XSLT con il tuo layout globale
-                    # L'XSLT genera già <html>, quindi lo puliamo o lo avvolgiamo
                     full_page = f"<!DOCTYPE html><html><head><meta charset='UTF-8'><link rel='stylesheet' href='../css/style.css'></head><body>{header_html}<main>{output}</main></body></html>"
                     
                     with open(output_path, 'w', encoding='utf-8') as f:
