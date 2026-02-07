@@ -1,11 +1,12 @@
-name: Auto-Transform EpiDoc
+name: Auto-Transform EpiDoc and Bibliography
+
 on:
   push:
     branches:
-      - main  # Assicurati che il tuo branch si chiami main (o master)
+      - main  # Si attiva ogni volta che carichi qualcosa sul branch main
 
 permissions:
-  contents: write  # Permette a GitHub di salvare i file generati nella repository
+  contents: write  # Fondamentale per permettere a GitHub di salvare i file generati
 
 jobs:
   build-and-deploy:
@@ -17,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # Versione stabile e compatibile con saxonche
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -25,16 +26,29 @@ jobs:
           pip install saxonche
 
       - name: Run Transformation Script
+        # Trasforma i file XML delle iscrizioni in HTML
         run: python scripts/transform.py
 
       - name: Run List Generator Script
+        # Genera gli indici e le liste delle iscrizioni
         run: python scripts/generate_list.py
+
+      - name: Run Bibliography Script
+        # Genera la pagina della bibliografia
+        # NOTA: Se hai messo lo script dentro la cartella 'scripts', 
+        # cambia la riga sotto in: run: python scripts/transform_bibliography.py
+        run: python transform_bibliography.py
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          
+          # Aggiunge tutti i file generati nella cartella docs
           git add docs/
-          # Se non ci sono modifiche, non dare errore
-          git commit -m "Aggiornamento automatico HTML da XML via Saxon" || exit 0
+          
+          # Esegue il commit solo se ci sono effettive modifiche
+          git commit -m "Aggiornamento automatico EpiDoc e Bibliografia via GitHub Actions" || exit 0
+          
+          # Invia le modifiche al repository
           git push
