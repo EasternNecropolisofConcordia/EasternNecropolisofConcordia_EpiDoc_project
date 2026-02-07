@@ -69,6 +69,10 @@ main {
   color: #fff;
 }
 
+p {
+  text-aling: justify;
+}
+
 .inscription-list {
   list-style-type: none;
   padding: 0;
