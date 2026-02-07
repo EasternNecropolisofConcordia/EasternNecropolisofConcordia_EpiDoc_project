@@ -2,36 +2,37 @@ import os
 from saxonche import PySaxonProcessor
 
 def transform_bibliography():
-    # 1. Configurazione Percorsi
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    xml_path = os.path.join(base_dir, 'Bibliography', 'Master_Bibliography.xml')
-    xslt_path = os.path.join(base_dir, 'xslt', 'bibliography-to-html.xsl')
-    output_dir = os.path.join(base_dir, 'docs', 'pages')
+    script_dir = os.path.dirname(os.path.abspath(__file__)) # cartella 'scripts'
+    
+    root_dir = os.path.dirname(script_dir) 
+    
+
+    xml_path = os.path.join(root_dir, 'Bibliography', 'Master_Bibliography.xml')
+    xslt_path = os.path.join(root_dir, 'xslt', 'bibliography-to-html.xsl')
+    output_dir = os.path.join(root_dir, 'docs', 'pages')
     output_path = os.path.join(output_dir, 'bibliography.html')
     
     os.makedirs(output_dir, exist_ok=True)
     
+    print(f"Sto cercando l'XML in: {xml_path}")
+    print(f"Sto scrivendo l'HTML in: {output_path}")
 
-    if not os.path.exists(xml_path) or not os.path.exists(xslt_path):
-        print(f"Errore: File non trovati in {xml_path} o {xslt_path}")
+    if not os.path.exists(xml_path):
+        print(f"ERRORE: XML non trovato!")
         return
 
     header_html = """
     <header>
-        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of Iulia Concordia</h1>
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="inscriptions.html">Inscriptions</a></li>
-                <li><a href="history.html">History of the Eastern Necropolis</a></li>
-                <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
-                <li><a href="corpora_databases.html">Corpora and Databases</a></li>
                 <li><a href="bibliography.html">Bibliography</a></li>
             </ul>
         </nav>
     </header>
     """
-
 
     with PySaxonProcessor(license=False) as proc:
         xslt_proc = proc.new_xslt30_processor()
@@ -39,12 +40,11 @@ def transform_bibliography():
             executable = xslt_proc.compile_stylesheet(stylesheet_file=xslt_path)
             output = executable.transform_to_string(source_file=xml_path)
             
-            # HTML Finale
             full_page = f"<!DOCTYPE html><html lang='it'><head><meta charset='UTF-8'><link rel='stylesheet' href='../css/style.css'><title>Bibliography</title></head><body>{header_html}<main>{output}</main></body></html>"
             
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(full_page)
-            print(f"Successo: bibliography.html generato in {output_path}")
+            print("Trasformazione completata con successo!")
 
         except Exception as e:
             print(f"Errore durante la trasformazione: {e}")
