@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Master Bibliography</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Leonardo Battistella Project</publisher>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl type="bibliography">
+               <!-- Ameling -->
+               <bibl xml:id="ameling2019">
+                  <author>
+                     <persName>
+                        <forename>Walter</forename>
+                        <surname>Ameling</surname>
+                     </persName>
+                  </author>
+                  <date when="2019">2019</date>
+                  <title level="a">Epigraphische Kleinigkeiten IV</title>
+                  <title level="j">Zeitschrift für Papyrologie und Epigraphik</title>
+                  <biblScope unit="volume">210</biblScope>
+                  <biblScope unit="pp">185–193</biblScope>
+               </bibl>
+
+               <!-- Bertolini -->
+               <bibl xml:id="bertolini1873a">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1873a</date>
+                  <title level="a">Scavi di Portogruaro</title>
+                  <title level="j">Bullettino dell'Instituto di corrispondenza archeologica</title>
+                  <biblScope unit="volume">45</biblScope>
+                  <biblScope unit="pp">58-63</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1873b">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1873b</date>
+                  <title level="a">Iulia Concordia e la necropoli cristiana sopraterra</title>
+                  <title level="j">Archivio Veneto</title>
+                  <biblScope unit="volume">6</biblScope>
+                  <biblScope unit="pp">49-67</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1874a">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1874a</date>
+                  <title level="a">Scavi concordiesi</title>
+                  <title level="j">Bullettino dell'Instituto di corrispondenza archeologica</title>
+                  <biblScope unit="volume">46</biblScope>
+                  <biblScope unit="pp">18-39</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1874b">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1874b</date>
+                  <title level="a">Iulia Concordia e la necropoli cristiana sopraterra</title>
+                  <title level="j">Archivio Veneto</title>
+                  <biblScope unit="volume">7</biblScope>
+                  <biblScope unit="pp">276-300</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1875a">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1875a</date>
+                  <title level="a">Scavi concordiesi</title>
+                  <title level="j">Bullettino dell'Instituto di corrispondenza archeologica</title>
+                  <biblScope unit="volume">47</biblScope>
+                  <biblScope unit="pp">104-125</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1875b">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1875b</date>
+                  <title level="a">Iulia Concordia. La fabbrica d'armi</title>
+                  <title level="j">Archivio Veneto</title>
+                  <biblScope unit="volume">10</biblScope>
+                  <biblScope unit="pp">98-125</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1876a">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1876a</date>
+                  <title level="a">Scavi concordiesi</title>
+                  <title level="j">Bullettino dell'instituto di corrispondenza archeologica</title>
+                  <biblScope unit="volume">48</biblScope>
+                  <biblScope unit="pp">86-88</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1876b">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1876b</date>
+                  <title level="a">Concordia Sagittaria</title>
+                  <title level="j">Notizie degli Scavi di Antichità</title>
+                  <biblScope unit="volume">1</biblScope>
+                  <biblScope unit="pp">130-135</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1877">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1877</date>
+                  <title level="a">Sepolcreto di Concordia</title>
+                  <title level="j">Notizie degli Scavi di Antichità</title>
+                  <biblScope unit="volume">2</biblScope>
+                  <biblScope unit="pp">21-48</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1878">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1878</date>
+                  <title level="a">Concordia Sagittaria</title>
+                  <title level="j">Notizie degli Scavi di Antichità</title>
+                  <biblScope unit="volume">3</biblScope>
+                  <biblScope unit="pp">46-60</biblScope>
+               </bibl>
+               <bibl xml:id="bertolini1892">
+                  <author>
+                     <persName>
+                        <forename>Dario</forename>
+                        <surname>Bertolini</surname>
+                     </persName>
+                  </author>
+                  <date>1892</date>
+                  <title level="a">Concordia Sagittaria</title>
+                  <title level="j">Notizie degli Scavi di Antichità</title>
+                  <biblScope unit="volume">17</biblScope>
+                  <biblScope unit="pp">335-337</biblScope>
+               </bibl>
+
+               <!-- Broilo -->
+               <bibl xml:id="broilo1980">
+                  <author>
+                     <persName>
+                        <forename>Fulviomario</forename>
+                        <surname>Broilo</surname>
+                     </persName>
+                  </author>
+                  <date>1980</date>
+                  <title level="m">Iscrizioni lapidarie latine del museo nazionale concordiese di Portogruaro (I a.C.–III d.C.), vol. 1</title>
+                  <pubPlace>Treviso</pubPlace>
+                  <publisher>Zoppelli s.p.a.</publisher>
+               </bibl>
+               <bibl xml:id="broilo1984">
+                  <author>
+                     <persName>
+                        <forename>Fulviomario</forename>
+                        <surname>Broilo</surname>
+                     </persName>
+                  </author>
+                  <date>1984</date>
+                  <title level="m">Iscrizioni lapidarie latine del museo nazionale concordiese di Portogruaro (I a.C.–III d.C.), vol. 2</title>
+                  <pubPlace>Treviso</pubPlace>
+                  <publisher>Zoppelli s.p.a.</publisher>
+               </bibl>
+
+               <!-- Brusin & Zovatto -->
+               <bibl xml:id="brusinzovatto1960">
+                  <author>
+                     <persName>
+                        <forename>Giovanni Battista</forename>
+                        <surname>Brusin</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Paolo Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <date>1960</date>
+                  <title level="m">Monumenti romani e cristiani di Iulia Concordia</title>
+                  <pubPlace>Pordenone</pubPlace>
+                  <publisher>Il Noncello</publisher>
+               </bibl>
+
+               <!-- Buora -->
+               <bibl xml:id="buora">
+                  <author>
+                     <persName>
+                        <forename>Maurizio</forename>
+                        <surname>Buora</surname>
+                     </persName>
+                  </author>
+                  <title level="a" type="article">Il sarcofaco di Firmina nel Museo di Portogruaro e la decorazione a ghirlanda nei sarcofagi aquileiesi</title>
+                  <title level="j" type="book">Antichità Altoadriatiche XXV. Studi su Portogruaro e Concordia</title>
+                  <publisher>EUT Edizioni Università di Trieste</publisher>
+                  <pubPlace>Trieste</pubPlace>
+                  <date when="1984">1984</date>
+                  <biblScope unit="pp">47-67</biblScope>
+               </bibl>
+
+               <!-- Cabrol & Leclercq -->
+               <bibl xml:id="cabrol_leclercq">
+                  <author>
+                     <persName>
+                        <forename>Fernand</forename>
+                        <surname>Cabrol</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Henri</forename>
+                        <surname>Leclercq</surname>
+                     </persName>
+                  </author>
+                  <title level="m">Dictionnaire d'Archéologie Chrétienne et de Liturgie</title>
+                  <date from="1896" to="1953">1896–1953</date>
+               </bibl>
+
+               <!-- Calvelli -->
+               <bibl xml:id="calvelli">
+                  <author>
+                     <persName>
+                        <forename>L.</forename>
+                        <surname>Calvelli</surname>
+                     </persName>
+                  </author>
+                  <date when="2015">2015</date>
+                  <title level="a" type="article">L'iscrizione di Firmiteius. Note sulla prima comunità cristiana di Iulia Concordia (con appendice sul carteggio Bertolini-Mommsen)</title>
+                  <editor>
+                     <persName>
+                        <forename>F.</forename>
+                        <surname>Rinaldi</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </editor>
+                  <title level="j" type="book">La necropoli della media e tarda età imperiale (III-IV secolo d.C.) a Iulia Concordia e nell'arco altoadriatico. Organizzazione spaziale, aspetti monumentali e strutture sociali</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Grafiche Turato Edizioni</publisher>
+                  <biblScope unit="pp">87-102</biblScope>
+                  <series>L'Album 20</series>
+               </bibl>
+
+               <!-- Croce Da Villa -->
+               <bibl xml:id="villaa">
+                  <author>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </author>
+                  <date when="2001">2001a</date>
+                  <title level="a" type="article">Evoluzione dell'impianto urbano dell'antica Concordia. La forma urbis dal I sec. a.C. al VII sec. d.C.</title>
+                  <editor>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Di Filippo Balestrazzi</surname>
+                     </persName>
+                  </editor>
+                  <title level="j" type="book">Concordia sagittaria. Tremila anni di storia</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Esedra editrice</publisher>
+                  <biblScope unit="pp">125-145</biblScope>
+                  <series>Il mito e la storia 4</series>
+               </bibl>
+
+               <bibl xml:id="villab">
+                  <author>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </author>
+                  <date when="2001">2001b</date>
+                  <title level="a" type="article">Le Necropoli</title>
+                  <editor>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Di Filippo Balestrazzi</surname>
+                     </persName>
+                  </editor>
+                  <title level="j" type="book">Concordia sagittaria. Tremila anni di storia</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Esedra editrice</publisher>
+                  <biblScope unit="pp">125-145</biblScope>
+                  <series>Il mito e la storia 4</series>
+               </bibl>
+
+               <!-- Desinan -->
+               <bibl xml:id="desinan1990">
+                  <author>
+                     <persName>
+                        <forename>Cornelio</forename>
+                        <forename>Cesare</forename>
+                        <surname>Desinan</surname>
+                     </persName>
+                  </author>
+                  <date>1990</date>
+                  <title level="m">Toponomastica e archeologia del Friuli prelatino</title>
+                  <pubPlace>Pordenone</pubPlace>
+                  <publisher>Biblioteca civica di Montereale Valcellina</publisher>
+               </bibl>
+
+               <!-- Forlati Tamaro -->
+               <bibl xml:id="forlatitamaro1978">
+                  <author>
+                     <persName>
+                        <forename>Bruna</forename>
+                        <surname>Forlati Tamaro</surname>
+                     </persName>
+                  </author>
+                  <date>1978</date>
+                  <title level="a">Parte II A. Concordia paleocristiana</title>
+                  <editor>
+                     <orgName>Comune di Concordia Sagittaria</orgName>
+                     <note>(a cura di)</note>
+                  </editor>
+                  <title level="m">Iulia Concordia dall'età romana all'età moderna</title>
+                  <pubPlace>Treviso</pubPlace>
+                  <publisher>La Tipografica</publisher>
+                  <biblScope unit="pp">143-182</biblScope>
+               </bibl>
+
+               <!-- Grosse -->
+               <bibl xml:id="grosse">
+                  <author>
+                     <persName>
+                        <forename>Robert</forename>
+                        <surname>Grosse</surname>
+                     </persName>
+                  </author>
+                  <title level="m">Römische Militärgeschichte von Gallienus bis zum Beginn der byzantinischen Themenverfassung</title>
+                  <pubPlace>Berlin</pubPlace>
+                  <publisher>Weldmmansche Bbuchhandlung</publisher>
+               </bibl>
+
+               <!-- Hoffmann -->
+               <bibl xml:id="hoffmann1963">
+                  <author>
+                     <persName>
+                        <forename>Dietrich</forename>
+                        <surname>Hoffmann</surname>
+                     </persName>
+                  </author>
+                  <title level="a" xml:lang="de">Die spätrömischen Soldatengrabschriften von Concordia</title>
+                  <title level="j">Museum Helveticum</title>
+                  <biblScope unit="volume">20.1</biblScope>
+                  <biblScope unit="pp">22–57</biblScope>
+                  <date when="1963">1963</date>
+               </bibl>
+               <bibl xml:id="hoffmann1969">
+                  <author>
+                     <persName>
+                        <forename>Dietrich</forename>
+                        <surname>Hoffmann</surname>
+                     </persName>
+                  </author>
+                  <title level="m" xml:lang="de">Das spätrömische Bewegungsheer und die Notitia Dignitatum</title>
+                  <pubPlace>Düsseldorf</pubPlace>
+                  <date when="1969">1969</date>
+               </bibl>
+
+               <!-- Holder -->
+               <bibl xml:id="holder">
+                  <author>
+                     <persName>
+                        <forename>Alfred</forename>
+                        <surname>Holder</surname>
+                     </persName>
+                  </author>
+                  <title level="m">Alt-celtischer Sprachschatz</title>
+                  <pubPlace>Leipzig</pubPlace>
+                  <publisher>Teubner</publisher>
+                  <date from="1896" to="1907">1896–1907</date>
+                  <biblScope unit="volume">1 (1896); 2 (1904); 3 (1907)</biblScope>
+               </bibl>
+
+               <!-- Kajanto -->
+               <bibl xml:id="kajanto1982">
+                  <author>
+                     <persName>
+                        <forename>Iro</forename>
+                        <surname>Kajanto</surname>
+                     </persName>
+                  </author>
+                  <title level="m">The Latin Cognomina</title>
+                  <pubPlace>Roma</pubPlace>
+                  <date when="1982">1982</date>
+               </bibl>
+
+               <!-- Lettich -->
+               <bibl xml:id="lettich1983">
+                  <author>
+                     <persName>
+                        <forename>Giovanni</forename>
+                        <surname>Lettich</surname>
+                     </persName>
+                  </author>
+                  <date>1983</date>
+                  <title level="m">Le iscrizioni sepolcrali tarodantiche di Concordia</title>
+                  <pubPlace>Trieste</pubPlace>
+                  <publisher>Centro studi storico-religiosi Friuli-Venezia Giulia 11</publisher>
+               </bibl>
+               <bibl xml:id="lettich1994">
+                  <author>
+                     <persName>
+                        <forename>Giovanni</forename>
+                        <surname>Lettich</surname>
+                     </persName>
+                  </author>
+                  <date>1994</date>
+                  <title level="m">Le iscrizioni romane di Iulia Concordia</title>
+                  <pubPlace>Trieste</pubPlace>
+                  <publisher>Centro studi storico-religiosi Friuli-Venezia Giulia 26</publisher>
+               </bibl>
+
+               <!-- Pellegrini -->
+               <bibl xml:id="pellegrini1975">
+                  <author>
+                     <persName>
+                        <forename>Giovan Battista</forename>
+                        <surname>Pellegrini</surname>
+                     </persName>
+                  </author>
+                  <date when="1975">1975</date>
+                  <title level="m">Saggi di linguistica italiana: storia, struttura, società</title>
+                  <pubPlace>Torino</pubPlace>
+                  <publisher>Boringhieri</publisher>
+               </bibl>
+
+               <!-- Scarpa Bonazza Buora Veronese -->
+               <bibl xml:id="scarpabonazzabuoraveronese1978">
+                  <author>
+                     <persName>
+                        <forename>Beatrice</forename>
+                        <surname>Scarpa Bonazza Buora Veronese</surname>
+                     </persName>
+                  </author>
+                  <date when="1978">1978</date>
+                  <title level="a">Parte I. Concordia Romana</title>
+                  <editor>
+                     <orgName>Comune di Concordia Sagittaria</orgName>
+                  </editor>
+                  <title level="m">Iulia Concordia dall'età romana all'età moderna</title>
+                  <pubPlace>Treviso</pubPlace>
+                  <publisher>La Tipografica</publisher>
+                  <biblScope unit="pp">3–142</biblScope>
+               </bibl>
+
+               <!-- Speidel -->
+               <bibl xml:id="speidel1966">
+                  <author>
+                     <persName>
+                        <forename>Michael Paul</forename>
+                        <surname>Speidel</surname>
+                     </persName>
+                  </author>
+                  <date when="1966">1966</date>
+                  <title level="a">Raising New Units for the Late Roman Army: "Auxilia Palatina"</title>
+                  <title level="j">Dumbarton Oaks Papers</title>
+                  <biblScope unit="volume">50</biblScope>
+                  <biblScope unit="pp">163–170</biblScope>
+               </bibl>
+
+               <!-- Tomlin -->
+               <bibl xml:id="tomlin1972">
+                  <author>
+                     <persName>
+                        <forename>Roger S. O.</forename>
+                        <surname>Tomlin</surname>
+                     </persName>
+                  </author>
+                  <date when="1972">1972</date>
+                  <title level="a">Seniores-Iuniores in the Late_roman Field Army</title>
+                  <title level="j">American Journal of Philology</title>
+                  <biblScope unit="volume">93</biblScope>
+                  <biblScope unit="number">2</biblScope>
+                  <biblScope unit="pp">253-278</biblScope>
+               </bibl>
+
+               <!-- Zovatto -->
+               <bibl xml:id="zovatto1946">
+                  <author>
+                     <persName>
+                        <forename>Paolo</forename>
+                        <forename>Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <date>1946</date>
+                  <title level="a">Le epigrafi latine e greche nei sarcofagi paleocristiani della necropoli di Iulia Concordia</title>
+                  <title level="j">Epigraphica: rivista italiana di epigrafia</title>
+                  <biblScope unit="volume">8</biblScope>
+                  <biblScope unit="pp">74-83</biblScope>
+               </bibl>
+               <bibl xml:id="zovatto1949">
+                  <author>
+                     <persName>
+                        <forename>Paolo</forename>
+                        <forename>Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <date>1949</date>
+                  <title level="m">Antiche iscrizioni Cristiane</title>
+                  <pubPlace>Firenze</pubPlace>
+                  <publisher>Il melograno</publisher>
+                  <biblScope unit="pp">49</biblScope>
+               </bibl>
+               <bibl xml:id="zovatto1950">
+                  <author>
+                     <persName>
+                        <forename>Paolo</forename>
+                        <forename>Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <date>1950</date>
+                  <title level="m">Antichi monumenti cristiani di Iulia Concordia Sagittaria</title>
+                  <pubPlace>Città del Vaticano</pubPlace>
+                  <publisher>Monumenti di antichità cristiana, 7</publisher>
+               </bibl>
+               <bibl xml:id="zovatto1965">
+                  <author>
+                     <persName>
+                        <forename>Paolo</forename>
+                        <forename>Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <date>1965</date>
+                  <title level="m">Guida del Museo della Città di Portogruaro</title>
+                  <pubPlace>Portogruaro</pubPlace>
+                  <publisher>Premiata Tipografia Castion di Franceschina &amp; Sartor</publisher>
+               </bibl>
+               <bibl xml:id="zovatto1972">
+                  <author>
+                     <persName>
+                        <forename>Paolo</forename>
+                        <forename>Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <date>1972</date>
+                  <title level="m">Concordia e dintorni</title>
+                  <pubPlace>Portogruaro</pubPlace>
+                  <publisher>Tipografia Castion</publisher>
+               </bibl>
+               <bibl xml:id="zovatto1973">
+                  <author>
+                     <persName>
+                        <forename>Paolo</forename>
+                        <forename>Lino</forename>
+                        <surname>Zovatto</surname>
+                     </persName>
+                  </author>
+                  <editor>
+                     <persName>
+                        <forename>Carlo Ludovico</forename>
+                        <surname>Ragghianti</surname>
+                     </persName>
+                  </editor>
+                  <date>1973</date>
+                  <title level="a">Portogruaro: Museo nazionale concordiese; Concordia: scavi, battistero; Summaga: abbazia; Sesto al Réghena: abbazia; Caorle</title>
+                  <title level="j">Musei d'Italia. Meraviglie d'Italia, 5</title>
+               </bibl>
+
+               <listBibl type="epigraphic_corpora">
+                  <bibl xml:id="cil">
+                     <title><term xml:lang="la">Corpus Inscriptionum Latinarum</term></title>
+                     <abbr><term xml:lang="la">CIL</term></abbr>
+                     <pubPlace>Berlin</pubPlace>
+                     <date from="1862">1862-</date>
+                  </bibl>
+                  <bibl xml:id="ilcv">
+                     <title><term xml:lang="la">Inscriptiones Latinae Christianae Veteres</term></title>
+                     <abbr><term xml:lang="la">ILCV</term></abbr>
+                     <author>
+                        <persName>
+                           <forename>E.</forename>
+                           <surname>Diehl</surname>
+                        </persName>
+                     </author>
+                     <pubPlace>Berlin</pubPlace>
+                     <date from="1925" to="1931">1925-1931</date>
+                  </bibl>
+                  <bibl xml:id="ils">
+                     <title><term xml:lang="la">Inscriptiones Latinae Selectae</term></title>
+                     <abbr><term xml:lang="la">ILS</term></abbr>
+                     <author>
+                        <persName>
+                           <forename>H.</forename>
+                           <surname>Dessau</surname>
+                        </persName>
+                     </author>
+                     <pubPlace>Berlin</pubPlace>
+                     <date from="1892" to="1916">1892–1916</date>
+                  </bibl>
+               </listBibl>
+
+               <listBibl type="prosopographical_corpora">
+                  <bibl xml:id="pir2">
+                     <title><term xml:lang="la">Prosopographia Imperii Romani</term> saec. I. II. III.</title>
+                     <abbr><term xml:lang="la">PIR</term><hi rend="sup">2</hi></abbr>
+                     <pubPlace>Leipzig–Berlin</pubPlace>
+                     <date from="1933" to="2015">1933–2015</date>
+                  </bibl>
+                  <bibl xml:id="plre">
+                     <title>The Prosopography of the Later Roman Empire</title>
+                     <abbr>PLRE</abbr>
+                     <pubPlace>Cambridge</pubPlace>
+                     <date from="1971">1971–</date>
+                  </bibl>
+               </listBibl>
+
+               <listBibl type="databases">
+                  <bibl xml:id="edr">
+                     <title>Epigraphic Database Rome</title>
+                     <abbr>EDR</abbr>
+                     <ref target="http://www.edr-edr.it/default/index.php">http://www.edr-edr.it/default/index.php</ref>
+                  </bibl>
+               </listBibl>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <sourceDoc>
+      <addSpan/>
+   </sourceDoc>
+</TEI>
