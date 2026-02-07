@@ -1,7 +1,6 @@
 html {
   height: 100%;
 }
-
 body {
   margin: 0;
   min-height: 100%;
@@ -15,7 +14,6 @@ body {
   background-size: 6px 6px, 100% 100%, 100% 100%;
   background-attachment: fixed;
 }
-
 main {
   flex: 1 0 auto;
   padding: 40px 20px;
@@ -27,31 +25,27 @@ main {
   box-sizing: border-box;
   border-radius: 2px;
 }
-
 .main_title {
   width: 100%;
   text-align: center;
   padding: 30px 10px;
   color: #8B3A3A;
   font-family: 'Cardo', serif;
-  background-color: rgba(255, 255, 252, 0.85)
+  background-color: rgba(255, 255, 252, 0.85);
   border-color: #8B3A3A;
 }
-
 .navbar {
   width: 100%;
   background-color: #8B3A3A;
   border-bottom: 3px solid #6D2D2D;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 .menu {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-
 .menu a {
   display: block;
   padding: 14px 16px;
@@ -63,34 +57,28 @@ main {
   letter-spacing: 1px;
   font-size: 0.9rem;
 }
-
 .menu a:hover {
   background-color: #6D2D2D;
   color: #fff;
 }
-
 p {
-  text-aling: justify;
+  text-align: justify;
 }
-
 .inscription-list {
   list-style-type: none;
   padding: 0;
 }
-
 .inscription-list li {
   margin: 10px 0;
   padding: 15px;
   background-color: rgba(239, 235, 216, 0.3);
   border-left: 4px solid #8B3A3A;
 }
-
 .inscription-list a {
   text-decoration: none;
   font-weight: bold;
   color: #2c3e50;
 }
-
 .transcription {
   font-family: 'Cardo', serif;
   line-height: 1.8;
@@ -98,7 +86,6 @@ p {
   margin: 20px auto;
   text-align: center;
 }
-
 div[data-location="lid"] {
   display: flex;
   flex-wrap: wrap;
@@ -108,31 +95,25 @@ div[data-location="lid"] {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-
 div[data-location="lid"] > h4 {
   flex-basis: 100%;
 }
-
 div[data-location="acroterion"] {
   flex: 0 1 auto;
   min-width: 200px;
 }
-
 div[data-location="chest"] {
   width: 100%;
   margin-top: 20px;
 }
-
 .line {
   display: block;
   white-space: nowrap;
 }
-
 .ab-content {
   display: inline-block;
   text-align: center;
 }
-
 figure {
   margin: 20px auto;
   padding: 10px;
@@ -141,19 +122,16 @@ figure {
   border: 1px solid #ddd;
   text-align: left;
 }
-
 figure img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 figcaption {
   font-size: 0.8rem;
   margin-top: 8px;
   color: #666;
 }
-
 footer {
   flex-shrink: 0;
   font-size: 10px;
@@ -163,7 +141,6 @@ footer {
   padding: 20px 0;
   width: 100%;
 }
-
 footer p {
   margin: 5px 0;
 }
