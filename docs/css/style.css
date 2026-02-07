@@ -31,7 +31,7 @@ main {
   padding: 30px 10px;
   color: #8B3A3A;
   font-family: 'Cardo', serif;
-  background-color: rgba(255, 255, 252, 0.85);
+  background-color: rgba(255, 255, 252, 0.2);
   border-color: #8B3A3A;
 }
 .navbar {
