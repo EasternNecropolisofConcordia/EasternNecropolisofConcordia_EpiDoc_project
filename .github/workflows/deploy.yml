@@ -35,17 +35,17 @@ jobs:
 
       - name: Run Bibliography Script
         run: python scripts/transform_bibliography.py
+        
+      - name: Run Corpora Script
+        run: python scripts/transform_corpora_databases.py
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Aggiunge tutti i file generati nella cartella docs
           git add docs/
           
-          # Esegue il commit solo se ci sono effettive modifiche
-          git commit -m "Aggiornamento automatico EpiDoc e Bibliografia via GitHub Actions" || exit 0
+          git commit -m "Automatic Update of EpiDoc, Bibliograpy and Corpora via GitHub Actions" || exit 0
           
-          # Invia le modifiche al repository
           git push
