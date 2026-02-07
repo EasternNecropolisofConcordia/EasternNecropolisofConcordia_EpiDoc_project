@@ -2,7 +2,7 @@ import os
 from saxonche import PySaxonProcessor
 
 def transform_bibliography():
-    script_dir = os.path.dirname(os.path.abspath(__file__)) # cartella 'scripts'
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     
     root_dir = os.path.dirname(script_dir) 
     
