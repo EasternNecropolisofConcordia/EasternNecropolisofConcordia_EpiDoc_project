@@ -34,10 +34,7 @@ jobs:
         run: python scripts/generate_list.py
 
       - name: Run Bibliography Script
-        # Genera la pagina della bibliografia
-        # NOTA: Se hai messo lo script dentro la cartella 'scripts', 
-        # cambia la riga sotto in: run: python scripts/transform_bibliography.py
-        run: python transform_bibliography.py
+        run: python scripts/transform_bibliography.py
 
       - name: Commit and Push changes
         run: |
