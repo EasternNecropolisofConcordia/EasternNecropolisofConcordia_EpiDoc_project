@@ -25,7 +25,8 @@ def transform_xml():
                     <li><a href="inscriptions.html">Inscriptions</a></li>
                     <li><a href="history.html">History of the Eastern Necropolis</a></li>
                     <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
-                    <li><a href="about.html">About this project</a></li>
+                    <li><a href="corpora_databases.html">Corpora and Databases</a></li>
+                    <li><a href="bibliography.html">Bibliography</a></li>
                 </ul>
             </nav>
         </header>
