@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Artemisia.xml</idno>
+                <idno type="filename">artemisia.xml</idno>
                 <idno type="TM">125671</idno>
                 <idno type="EDR">EDR097930</idno>
                 <idno type="UEL">29475</idno>
@@ -174,10 +174,10 @@
                     In <placeName xml:lang="la">Concordia</placeName>, the <term xml:lang="la">gentilicium</term> <persName xml:lang="la">Claudius</persName>, which was extremely common during the High Empire, is rarely found in Late Antiquity. 
                 </p>
                 <p>
-                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Artemisia</persName> also does not appear to have other attestations in the city, though it is found in <placeName xml:lang="la">Aquileia</placeName> and <placeName xml:lang="la">Pola</placeName> in earlier inscriptions (<ref target="../Bibliography/Master_Bibliography.xml#cilV">CIL V 1142 = EDR117787</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cilV">CIL V 1365 = EDR117815</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cilV">CIL V 103 = EDR138829</ref>). 
+                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Artemisia</persName> also does not appear to have other attestations in the city, though it is found in <placeName xml:lang="la">Aquileia</placeName> and <placeName xml:lang="la">Pola</placeName> in earlier inscriptions (<ref target="../references/corpora_databases.xml#cil">CIL V 1142 = EDR117787</ref>; <ref target="../references/corpora_databases.xml#cil">CIL V 1365 = EDR117815</ref>; <ref target="../references/corpora_databases.xml#cil">CIL V 103 = EDR138829</ref>). 
                 </p>
                 <p>
-                    <persName xml:lang="la">Artemisia</persName> was also the name of the wife of a usurper, possibly <persName xml:lang="la">Procopius</persName>, who fell into ruin when her husband was killed (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 111-112</ref>).
+                    <persName xml:lang="la">Artemisia</persName> was also the name of the wife of a usurper, possibly <persName xml:lang="la">Procopius</persName>, who fell into ruin when her husband was killed (<ref target="../references/corpora_databases.xml#plre">PLRE I, 111-112</ref>).
                 </p>
             </div>
             <div type="commentary" xml:lang="it">
@@ -185,32 +185,36 @@
                     A <placeName>Concordia</placeName> il gentilizio <persName xml:lang="la">Claudius</persName>, diffusissimo in età alto imperiale, è poco presente durante l’antichità tarda. 
                 </p>
                 <p>
-                    Anche il <term xml:lang="la">cognomen</term> <persName xml:lang="la">Artemisia</persName> non sembra avere altri risconti nella città, ma si trova ad <placeName>Aquileia</placeName> e a <placeName>Pola</placeName> in epigrafi più antiche (<ref target="../Bibliography/Master_Bibliography.xml#cilV"><term xml:lang="la">CIL</term> V 1142</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR117787">EDR117787</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cilV"><term>CIL</term> V 1365</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR117815">EDR117815</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cilV"><term>CIL</term> V 103</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138829">EDR138829</ref>). 
+                    Anche il <term xml:lang="la">cognomen</term> <persName xml:lang="la">Artemisia</persName> non sembra avere altri risconti nella città, ma si trova ad <placeName>Aquileia</placeName> e a <placeName>Pola</placeName> in epigrafi più antiche (<ref target="../references/corpora_databases.xml#cilV"><term xml:lang="la">CIL</term> V 1142</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR117787">EDR117787</ref>; <ref target="../references/corpora_databases.xml#cil"><term>CIL</term> V 1365</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR117815">EDR117815</ref>; <ref target="../references/corpora_databases.xml#cil"><term>CIL</term> V 103</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138829">EDR138829</ref>). 
                 </p>
                 <p>
-                    <persName xml:lang="la">Artemisia</persName> era anche il nome della moglie di un usurpatore, forse <persName xml:lang="la">Procopius</persName>, che cadde in rovina quando il marito venne ucciso (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 111-112</ref>).
+                    <persName xml:lang="la">Artemisia</persName> era anche il nome della moglie di un usurpatore, forse <persName xml:lang="la">Procopius</persName>, che cadde in rovina quando il marito venne ucciso (<ref target="../references/corpora_databases.xml#plre">PLRE I, 111-112</ref>).
                 </p>
             </div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1877">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
                         <title>Bertolini 1877</title>
                         <citedRange unit="page">30</citedRange>
                         <note type="number">n. 20</note>
                     </bibl>
                     <bibl xml:id="cilv8988">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8988</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">107</citedRange>
                         <note type="number">n. 82</note>
                     </bibl>
                     <bibl xml:id="edr0EDR097930">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097930">EDR097930</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-21">21-11-2007</date>
