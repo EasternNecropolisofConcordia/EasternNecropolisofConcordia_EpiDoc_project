@@ -46,7 +46,7 @@ def run():
                 
             except Exception as e:
                 print(f"ERRORE nel file {filename}: {str(e)}")
-                inscriptions_data.append({'title': filename, 'link': filename.replace('.xml', '.html')})
+                inscriptions_data.append({'title': filename, 'link': "inscriptions/" + filename.replace('.xml', '.html')})
 
     # Ordinamento alfabetico
     inscriptions_data.sort(key=lambda x: x['title'])
