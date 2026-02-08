@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Eutherius.xml</idno>
+                <idno type="filename">eutherius.xml</idno>
                 <idno type="TM">125675</idno>
                 <idno type="EDR">EDR097934</idno>
                 <idno type="UEL">29366</idno>
@@ -210,41 +210,46 @@
             <div type="commentary" xml:lang="en">
                 <p><persName ref="#costantius" xml:lang="la">Flavius Costantius</persName> buries his son <persName ref="#eutherius" xml:lang="la">Eutherius</persName>, twenty-eight years old, trusting that the sight of the monument he commissioned for his son may comfort him.</p>
                 
-                <p>The name <persName xml:lang="la">Eutherius</persName> seems to have Eastern origins: a famous eunuch of the same name, a native of Armenia, was part of the court of Constantine and Constans and was subsequently appointed <term xml:lang="la">praepositus sacri cubiculi</term> under Emperor Julian when the latter was still Caesar (<ref target="../Bibliography/Master_Bibliography.xml">PLRE, 314-315</ref>).</p>
+                <p>The name <persName xml:lang="la">Eutherius</persName> seems to have Eastern origins: a famous eunuch of the same name, a native of Armenia, was part of the court of Constantine and Constans and was subsequently appointed <term xml:lang="la">praepositus sacri cubiculi</term> under Emperor Julian when the latter was still Caesar (<ref target="../bibliography/master_bibliography.xml">PLRE, 314-315</ref>).</p>
                 
-                <p>The use of the word <term xml:lang="la">memoria</term> is also found in the epigraph dedicated to <ref target="./Marinus.xml" xml:lang="la">Marinus</ref>, paleographically similar to this inscription.</p>
+                <p>The use of the word <term xml:lang="la">memoria</term> is also found in the epigraph dedicated to <ref target="./marinus.xml" xml:lang="la">Marinus</ref>, paleographically similar to this inscription.</p>
             </div>
             <div type="commentary" xml:lang="it">
                 <p><persName ref="#costantius" xml:lang="la">Flavius Costantius</persName> seppellisce il figlio <persName ref="#eutherius" xml:lang="la">Eutherius</persName> di ventott'anni, confidando che la vista del monumento che ha commissionato per il figlio possa confortarlo.</p>
                 
-                <p>Il nome <persName xml:lang="la">Eutherius</persName> sembra avere origini orientali: è famoso un eunuco omonimo, nativo dell'Armenia, che fece parte della corte di Costantino e di Costante e che fu successivamente nominato <term xml:lang="la">praepositus sacri cubiculi</term> alle dipendenze dell'imperatore Giuliano quando quest'ultimo era ancora Cesare (<ref target="../Bibliography/Master_Bibliography.xml">PLRE, 314-315</ref>).</p>
+                <p>Il nome <persName xml:lang="la">Eutherius</persName> sembra avere origini orientali: è famoso un eunuco omonimo, nativo dell'Armenia, che fece parte della corte di Costantino e di Costante e che fu successivamente nominato <term xml:lang="la">praepositus sacri cubiculi</term> alle dipendenze dell'imperatore Giuliano quando quest'ultimo era ancora Cesare (<ref target="../bibliography/master_bibliography.xml">PLRE, 314-315</ref>).</p>
                 
-                <p>L'uso della parola <term xml:lang="la">memoria</term> si trova anche nell'epigrafe dedicata a <ref target="./Marinus.xml" xml:lang="la">Marinus</ref>, paleograficamente simile a questa iscrizione.</p>
+                <p>L'uso della parola <term xml:lang="la">memoria</term> si trova anche nell'epigrafe dedicata a <ref target="./marinus.xml" xml:lang="la">Marinus</ref>, paleograficamente simile a questa iscrizione.</p>
             </div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1877">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
                         <title>Bertolini 1877</title>
                         <citedRange unit="page">120</citedRange>
                         <note type="number">n. 3</note>
                     </bibl>
                     <bibl xml:id="cilv8988d">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8988d</title>
                     </bibl>
                     <bibl xml:id="ilcv3606">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 3606</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">105</citedRange>
                         <note type="number">n. 77</note>
                     </bibl>
                     <bibl xml:id="edr097933">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097934">EDR097934</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-30">30-11-2007</date>
