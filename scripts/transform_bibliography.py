@@ -26,14 +26,18 @@ def transform_bibliography():
         <h1 class="main_title">Digital Approaches to the Inscriptions of Iulia Concordia</h1>
         <nav class="navbar">
             <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="inscriptions.html">Inscriptions</a></li>
-                <li><a href="history.html">History of the Eastern Necropolis</a></li>
-                <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
-                <li><a href="corpora_databases.html">Corpora and Databases</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../inscriptions.html">Inscriptions</a></li>
+                <li><a href="../history.html">History of the Eastern Necropolis</a></li>
+                <li><a href="../abouttheinscriptions.html">About the inscriptions</a></li>
+                <li class="dropdown">References ▾
+                <ul class="submenu">
                 <li><a href="bibliography.html">Bibliography</a></li>
-            </ul>
-        </nav>
+                <li><a href="corpora_databases.html">Corpora and Databases</a></li>
+      </ul>
+    </li>
+    </ul>
+    </nav>
     </header>
     """
 
