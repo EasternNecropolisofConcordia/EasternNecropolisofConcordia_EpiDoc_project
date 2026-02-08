@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Alexandria_Sopatrus.xml</idno>
+                <idno type="filename">alexandria_sopatrus.xml</idno>
                 <idno type="TM">EDR097893</idno>
                 <idno type="EDR">125634</idno>
                 <idno type="UEL">29354</idno>
@@ -244,33 +244,39 @@
             <div type="bibliography">
                 <listBibl>
                      <bibl xml:id="bertolini1874a">
-                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                         <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
                          <title>Bertolini 1874a</title>
                          <citedRange unit="page">25</citedRange>
                          <note type="number">n. 13</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">294</citedRange>
                         <note type="number">n. 19</note>
                     </bibl>
                     <bibl xml:id="cilv8734">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8734</title>
                     </bibl>
                     <bibl xml:id="ilcv823">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 823</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">99</citedRange>
                         <note type="number">nr. 63</note>
                     </bibl>
                     <bibl xml:id="edr097893">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097893">EDR097893</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-21">21-11-2007</date>
