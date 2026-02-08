@@ -23,7 +23,7 @@ def run():
             xml_path = os.path.join(xml_dir, filename)
             try:
                 node = proc.parse_xml(xml_file_name=xml_path)
-                xpath_processor.set_context_item(xdm_item=node)
+                xpath_processor.set_context(xdm_item=node)
                 
                 # XPath per il titolo TEI
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
