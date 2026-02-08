@@ -46,6 +46,9 @@ main {
   padding: 0;
   display: flex;
 }
+.menu > li {
+  position: relative;
+}
 .menu a {
   display: block;
   padding: 14px 16px;
@@ -57,9 +60,35 @@ main {
   letter-spacing: 1px;
   font-size: 0.9rem;
 }
-.menu a:hover {
+.menu a:hover, .menu li:hover > a {
   background-color: #6D2D2D;
   color: #fff;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8B3A3A;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  z-index: 1000;
+  border-bottom: 3px solid #6D2D2D;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.submenu li {
+  width: 100%;
+}
+.submenu a {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu li:hover > .submenu {
+  display: block;
 }
 main p {
   text-align: justify;
