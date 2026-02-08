@@ -47,7 +47,7 @@ def transform_bibliography():
             executable = xslt_proc.compile_stylesheet(stylesheet_file=xslt_path)
             output = executable.transform_to_string(source_file=xml_path)
             
-            full_page = f"<!DOCTYPE html><html lang='it'><head><meta charset='UTF-8'><link rel='stylesheet' href='../css/style.css'><title>Bibliography</title></head><body>{header_html}<main>{output}</main></body></html>"
+            full_page = f"<!DOCTYPE html><html lang='it'><head><meta charset='UTF-8'><link rel='stylesheet' href='../../css/style.css'><title>Bibliography</title></head><body>{header_html}<main>{output}</main></body></html>"
             
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(full_page)
