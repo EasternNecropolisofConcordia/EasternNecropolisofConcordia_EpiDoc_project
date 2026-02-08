@@ -9,7 +9,7 @@ def transform_bibliography():
 
     xml_path = os.path.join(root_dir, 'bibliography', 'master_bibliography.xml')
     xslt_path = os.path.join(root_dir, 'xslt', 'corpora_databases-to-html.xsl')
-    output_dir = os.path.join(root_dir, 'docs', 'pages')
+    output_dir = os.path.join(root_dir, 'docs', 'pages', 'references')
     output_path = os.path.join(output_dir, 'corpora_databases.html')
     
     os.makedirs(output_dir, exist_ok=True)
