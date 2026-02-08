@@ -7,7 +7,7 @@ def transform_bibliography():
     root_dir = os.path.dirname(script_dir) 
     
 
-    xml_path = os.path.join(root_dir, 'Bibliography', 'Master_Bibliography.xml')
+    xml_path = os.path.join(root_dir, 'bibliography', 'master_bibliography.xml')
     xslt_path = os.path.join(root_dir, 'xslt', 'bibliography-to-html.xsl')
     output_dir = os.path.join(root_dir, 'docs', 'pages')
     output_path = os.path.join(output_dir, 'bibliography.html')
