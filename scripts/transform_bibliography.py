@@ -29,13 +29,13 @@ def transform_bibliography():
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../inscriptions.html">Inscriptions</a></li>
                 <li class="dropdown">
-                <a href="#">Study & Context ▾</a>
-                <ul class="submenu">
-                <li><a href="../context/history.html">History</a></li>
-                <li><a href="../context/about_people.html">About People Buried</a></li>
-                <li><a href="../context/supports.html">Supports & Monuments</a></li>
-                <li><a href="../context/chronology.html">Dating & Chronology</a></li>
-                </ul>
+                    <a href="#">Study & Context ▾</a>
+                    <ul class="submenu">
+                        <li><a href="../context/history.html">History</a></li>
+                        <li><a href="../context/about_people.html">About People Buried</a></li>
+                        <li><a href="../context/supports.html">Supports & Monuments</a></li>
+                        <li><a href="../context/chronology.html">Dating & Chronology</a></li>
+                    </ul>
                 </li>
                 <li class="dropdown">
                 <li class="dropdown">
@@ -43,9 +43,9 @@ def transform_bibliography():
                 <ul class="submenu">
                 <li><a href="bibliography.html">Bibliography</a></li>
                 <li><a href="corpora_databases.html">Corpora and Databases</a></li>
-      </ul>
-    </li>
-    </ul>
+              </ul>
+            </li>
+        </ul>
     </nav>
     </header>
     """
