@@ -15,7 +15,6 @@
             <body>
                 <h2>BIBLIOGRAPHY</h2>
                 <div class="bibliography">
-                    <!-- Seleziona solo i bibl DIRETTI figli di listBibl[@type='bibliography'], escludendo quelli nei listBibl annidati -->
                     <xsl:apply-templates select="//tei:listBibl[@type='bibliography']/tei:bibl | //tei:listBibl[@type='bibliography']/tei:listBibl/tei:bibl[not(parent::tei:listBibl[@type='epigraphic_corpora' or @type='prosopographical_corpora' or @type='databases'])]" mode="bibliography"/>
                 </div>
             </body>
@@ -86,9 +85,14 @@
                     <dd><xsl:value-of select="tei:publisher"/></dd>
                 </xsl:if>
                 
-                <xsl:if test="tei:biblScope">
+                <xsl:if test="tei:biblScope[@unit='volume']">
+                    <dt>Volume</dt>
+                    <dd><xsl:value-of select="tei:biblScope[@unit='volume']"/></dd>
+                </xsl:if>
+                
+                <xsl:if test="tei:biblScope[@unit='pp']">
                     <dt>Pages</dt>
-                    <dd><xsl:value-of select="tei:biblScope"/></dd>
+                    <dd><xsl:value-of select="tei:biblScope[@unit='pp']"/></dd>
                 </xsl:if>
             </dl>
         </div>
