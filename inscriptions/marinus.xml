@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Marinus.xml</idno>
+                <idno type="filename">marinus.xml</idno>
                 <idno type="TM">125487</idno>
                 <idno type="EDR">EDR097744</idno>
                 <idno type="TM">29482</idno>
@@ -262,10 +262,10 @@
                 <p>
                     The comminatory formula, typical of other inscriptions in the burial ground, is missing; in its place, the formula <term xml:lang="la">memoriam dedicaverunt</term> is used. </p>
                 <p>
-                    The use of the word <term xml:lang="la">memoria</term> in inscriptions is a tradition already present in the classical period and used in other inscriptions of the burial ground, such as the one dedicated to <ref target="./Eutherius.xml"><persName xml:lang="la">Eutherius</persName></ref>.
+                    The use of the word <term xml:lang="la">memoria</term> in inscriptions is a tradition already present in the classical period and used in other inscriptions of the burial ground, such as the one dedicated to <ref target="./eutherius.xml"><persName xml:lang="la">Eutherius</persName></ref>.
                 </p>
                 <p>
-                    According to Bertolini (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 295-296</ref>), there may have existed in antiquity the <persName xml:lang="la">Exsuperantia</persName>/<persName xml:lang="la">Exuperantia</persName> family, to which Julius Exuperantius, the well-known epitomizer of Sallust (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 321</ref>), also belonged. This family might have given rise to the Superantii, a fictitious genealogy from which the <ref target="https://www.treccani.it/enciclopedia/soranzo_(Enciclopedia-Italiana)/">Soranzo</ref> family, part of the Venetian nobility, supposedly descended. This is certainly an erroneous conjecture: according to Kajanto, <persName xml:lang="la">Exsuperantius</persName> was a <term xml:lang="la">cognomen</term> and therefore could not refer to a gentilicium (<ref target="../Bibliography/Master_Bibliography.xml#kajanto1982">Kajanto 1982, 277</ref>).
+                    According to Bertolini (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 295-296</ref>), there may have existed in antiquity the <persName xml:lang="la">Exsuperantia</persName>/<persName xml:lang="la">Exuperantia</persName> family, to which Julius Exuperantius, the well-known epitomizer of Sallust (<ref target="../references/corpora_databases.xml#plre">PLRE I, 321</ref>), also belonged. This family might have given rise to the Superantii, a fictitious genealogy from which the <ref target="https://www.treccani.it/enciclopedia/soranzo_(Enciclopedia-Italiana)/">Soranzo</ref> family, part of the Venetian nobility, supposedly descended. This is certainly an erroneous conjecture: according to Kajanto, <persName xml:lang="la">Exsuperantius</persName> was a <term xml:lang="la">cognomen</term> and therefore could not refer to a gentilicium (<ref target="../references/bibliography.xml#kajanto1982">Kajanto 1982, 277</ref>).
                 </p>
             </div>
             <div type="commentary" xml:lang="it">
@@ -273,42 +273,48 @@
                     Manca la formula comminatoria, tipica delle altre iscrizioni del sepolcreto; al suo posto è utilizzata la formula <term xml:lang="la">memoriam dedicaverunt</term>.
                 </p>
                 <p>
-                    L’uso della parola memoria è nelle iscrizioni è una tradizione già presente nel periodo classico e utilizzata da altre iscrizioni del sepolcreto, come in quella dedicata a <ref target="./Eutherius.xml"><persName xml:lang="la">Eutherius</persName></ref>.
+                    L’uso della parola memoria è nelle iscrizioni è una tradizione già presente nel periodo classico e utilizzata da altre iscrizioni del sepolcreto, come in quella dedicata a <ref target="./eutherius.xml"><persName xml:lang="la">Eutherius</persName></ref>.
                 </p>
                 <p>
-                    Secondo Bertolini (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 295-296</ref>), sarebbe esistita in antichità la famiglia <persName xml:lang="la">Exsuperantia</persName>/<persName xml:lang="la">Exuperantia</persName> di cui avrebbe fatto parte anche Giulio Esuperanzio, noto epitomatore di Sallustio (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 321</ref>), e che potrebbe aver dato vita ai Superantii,159 una genealogia fittizia dalla quale sarebbe discesa la famiglia <ref target="https://www.treccani.it/enciclopedia/soranzo_(Enciclopedia-Italiana)/">Soranzo</ref>, che rientra nella nobiltà veneta. Si tratta di una congettura sicuramente erronea: secondo Kajanto, <persName xml:lang="la">Exsuperantius</persName> era un <term xml:lang="la">cognomen</term> e non poteva quindi riferirsi a un gentilizio (<ref target="../Bibliography/Master_Bibliography.xml#kajanto1982">Kajanto 1982, 277</ref>).
+                    Secondo Bertolini (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 295-296</ref>), sarebbe esistita in antichità la famiglia <persName xml:lang="la">Exsuperantia</persName>/<persName xml:lang="la">Exuperantia</persName> di cui avrebbe fatto parte anche Giulio Esuperanzio, noto epitomatore di Sallustio (<ref target="../references/corpora_databases.xml#plre">PLRE I, 321</ref>), e che potrebbe aver dato vita ai Superantii,159 una genealogia fittizia dalla quale sarebbe discesa la famiglia <ref target="https://www.treccani.it/enciclopedia/soranzo_(Enciclopedia-Italiana)/">Soranzo</ref>, che rientra nella nobiltà veneta. Si tratta di una congettura sicuramente erronea: secondo Kajanto, <persName xml:lang="la">Exsuperantius</persName> era un <term xml:lang="la">cognomen</term> e non poteva quindi riferirsi a un gentilizio (<ref target="../references/bibliography.xml#kajanto1982">Kajanto 1982, 277</ref>).
                 </p>
             </div>
             <div type="bibliography">
                 <listBibl>
                      <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                         <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
                          <title>Bertolini 1874a</title>
                         <citedRange unit="page">23</citedRange>
                         <note type="number">nr. 8</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">295</citedRange>
                         <note type="number">nr. 25</note>
                     </bibl>
                     <bibl xml:id="cilv8746">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8746</title>
                     </bibl>
                     <bibl xml:id="ilcv3607">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 3607</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">101</citedRange>
                         <note type="number">nr. 66</note>
                     </bibl>
                     <bibl xml:id="edr097744">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097744">EDR097744</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-25">25-11-2007</date>
