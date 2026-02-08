@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Peregrina.xml</idno>
+                <idno type="filename">peregrina.xml</idno>
                 <idno>391</idno>
                 <idno type="TM">125663</idno>
                 <idno type="EDR">EDR097922</idno>
@@ -137,7 +137,7 @@
                                     A molded cornice borders the front of the sarcophagus.
                                 </p>
                                 <p>
-                                    According to Bertolini <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 23)</ref>, they were originally carved on the sarcophagus, on either side of the inscription, as ‘two arches supported by very roughly executed columns’
+                                    According to Bertolini <ref target="../references/bibliography.xml#bertolini1874a">(Bertolini 1874a, 23)</ref>, they were originally carved on the sarcophagus, on either side of the inscription, as ‘two arches supported by very roughly executed columns’
                                 </p>
                             </decoNote>
                             <decoNote xml:lang="it">
@@ -145,7 +145,7 @@
                                     Una cornice modanata corre lungo il perimetro della fronte del sarcofago.
                                 </p>
                                 <p>
-                                    Secondo Bertolini <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 23)</ref>, originariamente erano inscisi sul sarcofago, ai lati dell'epigrafe, “due archi sostenuti da colonne di rozzissimo lavoro”
+                                    Secondo Bertolini <ref target="../references/bibliography.xml#bertolini1874a">(Bertolini 1874a, 23)</ref>, originariamente erano inscisi sul sarcofago, ai lati dell'epigrafe, “due archi sostenuti da colonne di rozzissimo lavoro”
                                 </p>
                             </decoNote>
                         </decoDesc>
@@ -218,7 +218,7 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    <bibl corresp="#lettich1983">Lettich</bibl> doubts that <term xml:lang="la">peregrina</term> is an adjective, since if Valeria had been a foreigner, she would probably have specified her place of origin; moreover, already in the early Imperial period there existed a freedwoman named <persName xml:lang="la">Peregrina</persName>(<term xml:lang="la">SupplIt</term> 414; <ref target="../Bibliography/Master_Bibliography.xml#lettich1994">Lettich 1994, 139.</ref>).
+                    <bibl corresp="#lettich1983">Lettich</bibl> doubts that <term xml:lang="la">peregrina</term> is an adjective, since if Valeria had been a foreigner, she would probably have specified her place of origin; moreover, already in the early Imperial period there existed a freedwoman named <persName xml:lang="la">Peregrina</persName>(<term xml:lang="la">SupplIt</term> 414; <ref target="../references/bibliography.xml#lettich1994">Lettich 1994, 139.</ref>).
                 </p>
                 <p>
                     It is unclear whether a term governing the genitive <term xml:lang="la">nominis</term> / <term xml:lang="la">sui</term> is missing; <bibl corresp="#lettich1983">Lettich</bibl> suggests <term xml:lang="la">litteras</term>, but the lack of examples of a similar formula in the Concordian inscriptions makes it impossible to emend the inscription.
@@ -226,7 +226,7 @@
             </div>
             <div type="commentary" xml:lang="it">
                 <p>
-                    <bibl corresp="#lettich1983">Lettich</bibl> dubita che <term xml:lang="la">peregrina</term> sia un aggettivo, poiché se Valeria fosse stata straniera, avrebbe probabilmente specificato il luogo di provenienza; inoltre già in età alto imperiale esisteva una liberta dal nome <persName xml:lang="la">Peregrina</persName> (<term xml:lang="la">SupplIt</term> 414; <ref target="../Bibliography/Master_Bibliography.xml#lettich1994">Lettich 1994, 139.</ref>).
+                    <bibl corresp="#lettich1983">Lettich</bibl> dubita che <term xml:lang="la">peregrina</term> sia un aggettivo, poiché se Valeria fosse stata straniera, avrebbe probabilmente specificato il luogo di provenienza; inoltre già in età alto imperiale esisteva una liberta dal nome <persName xml:lang="la">Peregrina</persName> (<term xml:lang="la">SupplIt</term> 414; <ref target="../references/bibliography.xml#lettich1994">Lettich 1994, 139.</ref>).
                 </p>
                 <p>
                     Non è chiaro se manchi un termine che regge il genitivo <term xml:lang="la">nominis</term> / <term xml:lang="la">sui</term>; <bibl corresp="#lettich1983">Lettich</bibl> propone <term xml:lang="la">litteras</term>, ma la mancanza di esempi di analoga formula sulle epigrafi concordiesi rendono impossibile integrare l’iscrizione.
@@ -235,33 +235,39 @@
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">23</citedRange>
                         <note type="number">nr. 7</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">293</citedRange>
                         <note type="number">nr. 17</note>
                     </bibl>
                     <bibl xml:id="cilv8774">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8774</title>
                     </bibl>
                     <bibl xml:id="ilcv849">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="term">ILCV</term> 849</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">105</citedRange>
                         <note type="number">nr. 76</note>
                     </bibl>
                     <bibl xml:id="edr097922">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097922">EDR097922</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-29">29-11-2007</date>
