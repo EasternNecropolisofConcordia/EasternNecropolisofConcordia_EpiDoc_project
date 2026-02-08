@@ -95,7 +95,7 @@
     <xsl:template match="tei:graphic">
         <figure>
             <img src="{@url}">
-                <xsl:attribute name="alt"><xsl:value-of select="tei:desc[@type='alt']"/></xsl:attribute>
+                <xsl:attribute name="alt">../<xsl:value-of select="tei:desc[@type='alt']"/></xsl:attribute>
             </img>
             <xsl:apply-templates select="tei:desc[@type='figDesc']"/>
         </figure>
