@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Ligurius_Vicotina.xml</idno>
+                <idno type="filename">ligurius_victorina.xml</idno>
                 <idno type="TM">125673</idno>
                 <idno type="EDR">EDR097932</idno>
                 <idno type="UEL">29476</idno>
@@ -225,7 +225,7 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    According to Lettich <ref target="../Bibliography/Master_Bibliography.xml#lettich1983">(Lettich 1983, 103, n. 73)</ref>, <persName xml:lang="la">Cricia</persName> could be a form derived from <persName xml:lang="la">Cicria</persName>. However, this inscription appears to be the only attestation of the <term xml:lang="la">nomen</term> <persName xml:lang="la">Cricia</persName> in the entire empire, whereas the <orgName type="gens" xml:lang="la">gens Cicria</orgName> is well attested at Concordia.
+                    According to Lettich <ref target="../references/bibliography.xml#lettich1983">(Lettich 1983, 103, n. 73)</ref>, <persName xml:lang="la">Cricia</persName> could be a form derived from <persName xml:lang="la">Cicria</persName>. However, this inscription appears to be the only attestation of the <term xml:lang="la">nomen</term> <persName xml:lang="la">Cricia</persName> in the entire empire, whereas the <orgName type="gens" xml:lang="la">gens Cicria</orgName> is well attested at Concordia.
                 </p>
                 <p>
                     It therefore seems more likely that the nomen recorded in the inscription is a scribal error, especially considering that in line 2 the final two letters of the word <term xml:lang="la">vivi</term> were also inverted. <persName corresp="#victorina" xml:lang="la">Victorina</persName> would thus have belonged to the <orgName type="gens" xml:lang="la">Cicrii</orgName> family, despite the fact that her burial is located further west than the group of other sarcophagi belonging to this family.
@@ -233,7 +233,7 @@
             </div>
             <div type="commentary" xml:lang="it">
                 <p>
-                    Secondo Lettich <ref target="../Bibliography/Master_Bibliography.xml#lettich1983">(Lettich 1983, 103, n. 73)</ref>, <persName xml:lang="la">Cricia</persName> potrebbe essere una forma derivata da <persName xml:lang="la">Cicria</persName>. Tuttavia, questa epigrafe risulta essere l’unica testimonianza del <term xml:lang="la">nomen</term> <persName xml:lang="la">Cricia</persName> in tutto l’impero, mentre la <orgName type="gens" xml:lang="la">gens Cicria</orgName> presenta numerose attestazioni a Concordia.
+                    Secondo Lettich <ref target="../references/bibliography.xml#lettich1983">(Lettich 1983, 103, n. 73)</ref>, <persName xml:lang="la">Cricia</persName> potrebbe essere una forma derivata da <persName xml:lang="la">Cicria</persName>. Tuttavia, questa epigrafe risulta essere l’unica testimonianza del <term xml:lang="la">nomen</term> <persName xml:lang="la">Cricia</persName> in tutto l’impero, mentre la <orgName type="gens" xml:lang="la">gens Cicria</orgName> presenta numerose attestazioni a Concordia.
                 </p>
                 <p>
                     Sembra dunque più probabile che il nomen presente nell’iscrizione sia un refuso, soprattutto se si considera che anche in r. 2 le due lettere finali della parola <term xml:lang="la">vivi</term> furono invertite. <persName corresp="#victorina" xml:lang="la">Victorina</persName> avrebbe dunque fatto parte della <orgName type="gens" xml:lang="la">Cicrii</orgName>, nonostante la sua sepoltura si trovi più a ovest rispetto al gruppo degli altri sarcofagi appartenenti a questa famiglia.
@@ -242,23 +242,27 @@
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1877">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
                         <title>Bertolini 1877</title>
                         <citedRange unit="page">120</citedRange>
                         <note type="number">n. 1</note>
                     </bibl>
                     <bibl xml:id="cilv8988b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8988b</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">103</citedRange>
                         <note type="number">n. 73</note>
                     </bibl>
                     <bibl xml:id="edr097932">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097932">EDR097932</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-30">30-11-2007</date>
