@@ -37,9 +37,9 @@ def run():
 
                 # Determiniamo il link
                 if idno_item is not None:
-                    target_link = idno_item.string_value.strip().replace('.xml', '.html')
+                    target_link = "inscriptions/" + idno_item.string_value.strip().replace('.xml', '.html')
                 else:
-                    target_link = filename.replace('.xml', '.html')
+                    target_link = "inscriptions/" + filename.replace('.xml', '.html')
                 
                 inscriptions_data.append({'title': display_title, 'link': target_link})
                 print(f"REGISTRATO: {display_title}")
