@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Gidnadius_Apra.xml</idno>
+                <idno type="filename">gidnadius_apra.xml</idno>
                 <idno type="TM">125490</idno>
                 <idno type="EDR">EDR097747</idno>
                 <idno type="UEL">29317</idno>
@@ -214,10 +214,10 @@
                     The specification <term xml:lang="la">solo Concordiensi</term> seems to suggest that the couple were not originally from Concordia, but had settled in the city after <persName xml:lang="la">Gidnadius</persName>’s military service.
                 </p>
                 <p>
-                    De Rossi believed that <term xml:lang="la">Gidnadius</term> was a scribal error for <term xml:lang="la">Gennadius</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8749</ref>), while Diehl did not exclude that it might be a case of epenthesis (<ref target="../Bibliography/Master_Bibliography.xml#ilcv"><term xml:lang="la">ILCV</term> 432</ref>). The cognomen <term xml:lang="la">Gennadius</term> is rarely attested epigraphically: the EDR database provides only three results, all inscriptions belonging to men of senatorial rank (<ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR073702">EDR073702</ref> - <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR102141">EDR102141</ref>).
+                    De Rossi believed that <term xml:lang="la">Gidnadius</term> was a scribal error for <term xml:lang="la">Gennadius</term> (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8749</ref>), while Diehl did not exclude that it might be a case of epenthesis (<ref target="../references/corpora_databases.xml#ilcv"><term xml:lang="la">ILCV</term> 432</ref>). The cognomen <term xml:lang="la">Gennadius</term> is rarely attested epigraphically: the EDR database provides only three results, all inscriptions belonging to men of senatorial rank (<ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR073702">EDR073702</ref> - <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR102141">EDR102141</ref>).
                 </p>
                 <p>
-                    Besides <persName xml:lang="la">Emilia Apra</persName>, there is only one other attestation of the <term xml:lang="la">gens Aemilia</term> in Concordia: within the same burial ground, but north of the road, lies the tomb of <persName xml:lang="la" ref="./Zosimus.xml">Aemilius Zosimus</persName>, a sarcophagus older than that of <persName xml:lang="la">Apra</persName> and which still preserves the diphthong <term xml:lang="la">-ae</term> at the beginning of the gentilicum.
+                    Besides <persName xml:lang="la">Emilia Apra</persName>, there is only one other attestation of the <term xml:lang="la">gens Aemilia</term> in Concordia: within the same burial ground, but north of the road, lies the tomb of <persName xml:lang="la" ref="./zosimus.xml">Aemilius Zosimus</persName>, a sarcophagus older than that of <persName xml:lang="la">Apra</persName> and which still preserves the diphthong <term xml:lang="la">-ae</term> at the beginning of the gentilicum.
                 </p>
             </div>
             <div type="commentary" xml:lang="it">
@@ -228,42 +228,48 @@
                     La precisazione <term xml:lang="la">solo Concordiensi</term> sembra suggerire che i due coniugi non fossero originari di Concordia, ma che si fossero stabiliti in città dopo il servizio militare di <persName xml:lang="la">Gidnadius</persName>.
                 </p>
                 <p>
-                    De Rossi ritiene che <term xml:lang="la">Gidnadius</term> fosse stato scritto per errore in luogo di <term xml:lang="la">Gennadius</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8749</ref>), mentre Diehl non esclude si tratti di un caso di epentesi (<ref target="../Bibliography/Master_Bibliography.xml#ilcv"><term xml:lang="la">ILCV</term> 432</ref>). Il <term xml:lang="la">cognomen</term> <term xml:lang="la">Gennadius</term> è poco attestato in ambito epigrafico: il database EDR fornisce solo tre risultati, tutte iscrizioni appartenute a uomini di ordine senatorio (<ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR073702">EDR073702</ref> - <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR102141">EDR102141</ref>).
+                    De Rossi ritiene che <term xml:lang="la">Gidnadius</term> fosse stato scritto per errore in luogo di <term xml:lang="la">Gennadius</term> (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8749</ref>), mentre Diehl non esclude si tratti di un caso di epentesi (<ref target="../references/corpora_databases.xml#ilcv"><term xml:lang="la">ILCV</term> 432</ref>). Il <term xml:lang="la">cognomen</term> <term xml:lang="la">Gennadius</term> è poco attestato in ambito epigrafico: il database EDR fornisce solo tre risultati, tutte iscrizioni appartenute a uomini di ordine senatorio (<ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR073702">EDR073702</ref> - <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR102141">EDR102141</ref>).
                 </p>
                 <p>
-                    Oltre a <persName xml:lang="la">Emilia Apra</persName>, a Concordia esiste solo un’altra attestazione della <term xml:lang="la">gens Aemilia</term>: sempre nel sepolcreto, ma a nord della strada, si trova la sepoltura di <persName xml:lang="la" ref="./Zosimus.xml">Aemilius Zosimus</persName>, un sarcofago più antico di quello di <persName xml:lang="la">Apra</persName> e che infatti conserva il dittongo <term xml:lang="la">-ae</term> all’inizio del gentilizio.
+                    Oltre a <persName xml:lang="la">Emilia Apra</persName>, a Concordia esiste solo un’altra attestazione della <term xml:lang="la">gens Aemilia</term>: sempre nel sepolcreto, ma a nord della strada, si trova la sepoltura di <persName xml:lang="la" ref="./zosimus.xml">Aemilius Zosimus</persName>, un sarcofago più antico di quello di <persName xml:lang="la">Apra</persName> e che infatti conserva il dittongo <term xml:lang="la">-ae</term> all’inizio del gentilizio.
                 </p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">25</citedRange>
                         <note type="number">nr. 11</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">291</citedRange>
                         <note type="number">nr. 14</note>
                     </bibl>
                     <bibl xml:id="cilv8749">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8749</title>
                     </bibl>
                     <bibl xml:id="ilcv432">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 432</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">63-64</citedRange>
                         <note type="number">nr. 21</note>
                     </bibl>
                     <bibl xml:id="edr097747">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097747">EDR097747</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-25">25-11-2007</date>
