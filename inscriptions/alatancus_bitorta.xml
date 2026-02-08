@@ -217,66 +217,75 @@
                 <p>È scritto: ciò che non vuoi ti sia fatto, non lo farai ad altri.</p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>The soldier <persName ref="#alatancus" xml:lang="la">Flavius Alatancus</persName> commissioned, together with his wife, the sarcophagus intended to house the two spouses after death. Both entrusted themselves to the church of Concordia so that no one would violate the tomb by burying other individuals there. The prohibition is made explicit even for members of their own family, a unique case in all of Concordia, although there are burials where, on the contrary, it is expressly stated that family members were exempt from the prohibition of reusing the sarcophagus (<ref target="./Cerealis.xml" xml:lang="la"><term xml:lang="la">CIL</term> V 8988e</ref>).</p>
+                <p>The soldier <persName ref="#alatancus" xml:lang="la">Flavius Alatancus</persName> commissioned, together with his wife, the sarcophagus intended to house the two spouses after death. Both entrusted themselves to the church of Concordia so that no one would violate the tomb by burying other individuals there. The prohibition is made explicit even for members of their own family, a unique case in all of Concordia, although there are burials where, on the contrary, it is expressly stated that family members were exempt from the prohibition of reusing the sarcophagus (<ref target="./cerealis.xml" xml:lang="la"><term xml:lang="la">CIL</term> V 8988e</ref>).</p>
                 
-                <p>The second peculiarity is a literal quotation (<term xml:lang="la">scriptum est</term>) from a passage in the life of Alexander Severus in the <term xml:lang="la">Historia Augusta</term>: <term xml:lang="la">"quod tibi fieri non vis alteri ne feceris"</term> (<ref target="../Bibliography/Master_Bibliography.xml">Hist. Aug., Alex. Sev., 51</ref>). The corps of <term xml:lang="la">protectores domestici</term>, in addition to providing security service for the emperor, had to assist him in everything concerning the interest of the state (Amm. 15, 5, 22). Some of these positions of trust included training recruits, controlling traffic and customs, and military police duties (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 61, 70-71</ref>).</p>
+                <p>The second peculiarity is a literal quotation (<term xml:lang="la">scriptum est</term>) from a passage in the life of Alexander Severus in the <term xml:lang="la">Historia Augusta</term>: <term xml:lang="la">"quod tibi fieri non vis alteri ne feceris"</term> (Hist. Aug., Alex. Sev., 51). The corps of <term xml:lang="la">protectores domestici</term>, in addition to providing security service for the emperor, had to assist him in everything concerning the interest of the state (Amm. 15, 5, 22). Some of these positions of trust included training recruits, controlling traffic and customs, and military police duties (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 61, 70-71</ref>).</p>
                 
-                <p>The name <persName xml:lang="la">Alatancus</persName> is considered Celtic by Holder (<ref target="../Bibliography/Master_Bibliography.xml#holder">Holder 1896, 74</ref>), Germanic by Hoffmann (<ref target="../Bibliography/Master_Bibliography.xml">Hoffmann 1970, 32, nt. 271</ref>). According to Holder, <persName xml:lang="la">Bitorta</persName> would have been erroneously written instead of <persName ref="#bitorta" xml:lang="la">Bitoria</persName>, which he considers a name of Celtic origin (<ref target="../Bibliography/Master_Bibliography.xml#holder">Holder 1896, 430</ref>).</p>
+                <p>The name <persName xml:lang="la">Alatancus</persName> is considered Celtic by Holder (<ref target="../references/bibliography.xml#holder">Holder 1896, 74</ref>), Germanic by Hoffmann (<ref target="../Bibliography/references/bibliography.xml">Hoffmann 1970, 32, nt. 271</ref>). According to Holder, <persName xml:lang="la">Bitorta</persName> would have been erroneously written instead of <persName ref="#bitorta" xml:lang="la">Bitoria</persName>, which he considers a name of Celtic origin (<ref target="../references/bibliography.xml#holder">Holder 1896, 430</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
-                <p>Il soldato <persName ref="#alatancus" xml:lang="la">Flavius Alatancus</persName> commissionò assieme alla moglie il sarcofago destinato a ospitare i due coniugi dopo la morte. Entrambi si affidarono alla chiesa di Concordia affinché nessuno violasse la tomba, seppellendovi altri individui. Il divieto è reso esplicito anche per i membri della propria famiglia, caso unico in tutta Concordia, sebbene vi siano sepolture dove, al contrario, è espressamente dichiarato che i familiari fossero esonerati dal divieto di riutilizzo del sarcofago (<ref target="./Cerealis.xml" xml:lang="la"><term xml:lang="la">CIL</term> V 8988e</ref>).</p>
+                <p>Il soldato <persName ref="#alatancus" xml:lang="la">Flavius Alatancus</persName> commissionò assieme alla moglie il sarcofago destinato a ospitare i due coniugi dopo la morte. Entrambi si affidarono alla chiesa di Concordia affinché nessuno violasse la tomba, seppellendovi altri individui. Il divieto è reso esplicito anche per i membri della propria famiglia, caso unico in tutta Concordia, sebbene vi siano sepolture dove, al contrario, è espressamente dichiarato che i familiari fossero esonerati dal divieto di riutilizzo del sarcofago (<ref target="./cerealis.xml" xml:lang="la"><term xml:lang="la">CIL</term> V 8988e</ref>).</p>
                 
-                <p>La seconda particolarità è una citazione letterale (<term xml:lang="la">scriptum est</term>) di un passo della vita di Alessandro Severo nell'<term xml:lang="la">Historia Augusta</term>: <term xml:lang="la">"quod tibi fieri non vis alteri ne feceris"</term> (Hist. Aug., Alex. Sev., 51). Il reparto dei <term xml:lang="la">protectores domestici</term>, oltre a svolgere un servizio di sicurezza dell'imperatore, doveva assisterlo in tutto ciò che riguardava l'interesse dello stato (Amm. 15, 5, 22). Alcuni di questi ruoli di fiducia erano l'istruzione delle reclute, il controllo dei traffici e delle dogane e compiti di polizia militare (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 61, 70-71</ref>).</p>
+                <p>La seconda particolarità è una citazione letterale (<term xml:lang="la">scriptum est</term>) di un passo della vita di Alessandro Severo nell'<term xml:lang="la">Historia Augusta</term>: <term xml:lang="la">"quod tibi fieri non vis alteri ne feceris"</term> (Hist. Aug., Alex. Sev., 51). Il reparto dei <term xml:lang="la">protectores domestici</term>, oltre a svolgere un servizio di sicurezza dell'imperatore, doveva assisterlo in tutto ciò che riguardava l'interesse dello stato (Amm. 15, 5, 22). Alcuni di questi ruoli di fiducia erano l'istruzione delle reclute, il controllo dei traffici e delle dogane e compiti di polizia militare (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 61, 70-71</ref>).</p>
                 
-                <p>Il nome <persName xml:lang="la">Alatancus</persName> è considerato celtico da Holder (<ref target="../Bibliography/Master_Bibliography.xml#holder">Holder 1896, 74</ref>), germanico da Hoffmann (<ref target="../Bibliography/Master_Bibliography.xml">Hoffmann 1970, 32, nt. 271</ref>). Secondo Holder, <persName xml:lang="la">Bitorta</persName> sarebbe stato erroneamente scritto in luogo di <persName ref="#bitorta" xml:lang="la">Bitoria</persName>, che egli considera un nome di origine celtica (<ref target="../Bibliography/Master_Bibliography.xml#holder">Holder 1896, 430</ref>).</p>
+                <p>Il nome <persName xml:lang="la">Alatancus</persName> è considerato celtico da Holder (<ref target="../references/bibliography.xml#holder">Holder 1896, 74</ref>), germanico da Hoffmann (<ref target="../references/bibliography.xml">Hoffmann 1970, 32, nt. 271</ref>). Secondo Holder, <persName xml:lang="la">Bitorta</persName> sarebbe stato erroneamente scritto in luogo di <persName ref="#bitorta" xml:lang="la">Bitoria</persName>, che egli considera un nome di origine celtica (<ref target="../references/bibliography.xml#holder">Holder 1896, 430</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl>
-                    <bibl xml:id="cilv8738">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
-                        <title><term xml:lang="la">CIL</term> V 8738</title>
-                    </bibl>
-                    <bibl xml:id="ils8257">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ils"/>
-                        <title><term xml:lang="la">ILS</term> 8257</title>
-                    </bibl>
-                    <bibl xml:id="ilcv476">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
-                        <title><term xml:lang="la">ILCV</term> 476</title>
-                    </bibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">28</citedRange>
                         <note type="number">nr. 22</note>
                     </bibl>
                     <bibl xml:id="bertolini1876b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1876a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1876b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1876b"/>
                         <title>Bertolini 1876b</title>
                         <citedRange unit="page">130-131</citedRange>
                     </bibl>
+                    <bibl xml:id="cilv8738">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8738</title>
+                    </bibl>
+                    <bibl xml:id="ils8257">
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
+                        <title><term xml:lang="la">ILS</term> 8257</title>
+                    </bibl>
+                    <bibl xml:id="ilcv476">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 476</title>
+                    </bibl>
                     <bibl xml:id="zovatto1946">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#zovatto1946"/>
+                        <ptr target="../bibliography/master_bibliography.xml#zovatto1946"/>
                     </bibl>
                     <bibl xml:id="brusinzovatto1960">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#brusinzovatto1960"/>
+                        <ptr target="../bibliography/master_bibliography.xml#brusinzovatto1960"/>
+                        <ptr target="../references/bibliography.xml#brusinzovatto1960"/>
                         <title>Brusin, Zovatto 1960</title>
                         <citedRange unit="page">90</citedRange>
                     </bibl>
                     <bibl xml:id="forlatitamaro1978">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#forlatitamaro1978"/>
+                        <ptr target="../bibliography/master_bibliography.xml#forlatitamaro1978"/>
+                        <ptr target="../references/bibliography.xml#forlatitamaro1978"/>
                         <title>Forlati Tamaro 1978</title>
                         <citedRange unit="page">147-148</citedRange>
                         <note type="number">nr. 2</note>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">60-62</citedRange>
                         <note type="number">nr. 19</note>
                     </bibl>
                     <bibl xml:id="edr097897">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097897">EDR097897</ref></title>
                     </bibl>
                 </listBibl>
