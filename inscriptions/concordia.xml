@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Concordia.xml</idno>
+                <idno type="filename">concordia.xml</idno>
                 <idno type="TM">125652</idno>
                 <idno type="EDR">EDR097911</idno>
                 <idno type="UEL">29359</idno>
@@ -180,39 +180,45 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Concordia</persName> is also attested in an <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098047">inscription from the third century A.D., discovered in the <placeName>Persico estate</placeName> in 1893</ref>. According to <ref target="../Bibliography/Master_Bibliography.xml#lettich1994">Lettich</ref>, the use of a toponym as a personal name is not unusual, citing the example of the burial of <persName xml:lang="la">Aurelia Alexandria</persName>, located only a few metres north of the sarcophagus of <persName corresp="#flconcordia" xml:lang="la">Flavia Concordia</persName>.
+                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Concordia</persName> is also attested in an <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098047">inscription from the third century A.D., discovered in the <placeName>Persico estate</placeName> in 1893</ref>. According to <ref target="../references/bibliography.xml#lettich1994">Lettich</ref>, the use of a toponym as a personal name is not unusual, citing the example of the burial of <persName xml:lang="la">Aurelia Alexandria</persName>, located only a few metres north of the sarcophagus of <persName corresp="#flconcordia" xml:lang="la">Flavia Concordia</persName>.
                 </p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">25</citedRange>
                         <note type="number">nr. 12</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">296</citedRange>
                         <note type="number">nr. 27</note>
                     </bibl>
                     <bibl xml:id="cilv8763">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8763</title>
                     </bibl>
                     <bibl xml:id="ilcv818b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 818 B</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">102</citedRange>
                         <note type="number">nr. 69</note>
                     </bibl>
                     <bibl xml:id="edr097911">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097911">EDR097911</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-26">26-11-2007</date>
