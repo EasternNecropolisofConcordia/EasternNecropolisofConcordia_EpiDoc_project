@@ -215,61 +215,71 @@
             </div>
             <div type="bibliography">
                 <listBibl>
-                    
                     <bibl xml:id="bertolini1875a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
                         <title>Bertolini 1875a</title>
                         <citedRange unit="page">111</citedRange>
                         <note type="number">nr. 49</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
                         <title>Bertolini 1875b</title>
                         <citedRange unit="page">111</citedRange>
                         <note type="number">nr. 3</note>
                     </bibl>
                     <bibl xml:id="cilv8740">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8740</title>
                     </bibl>
                     <bibl xml:id="ils2798">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
                         <title><term xml:lang="la">ILS</term> 2798</title>
                     </bibl>
                     <bibl xml:id="ilcv503">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 503</title>
                     </bibl>
                     <bibl xml:id="zovatto1946">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#zovatto1946"/>
+                        <ptr target="../bibliography/master_bibliography.xml#zovatto1946"/>
+                        <ptr target="../references/bibliography.xml#zovatto1946"/>
                         <title>Zovatto 1946</title>
                         <citedRange unit="page">82-83</citedRange>
                     </bibl>
                     <bibl xml:id="brusinzovatto1960">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#brusinzovatto1960"/>
+                        <ptr target="../bibliography/master_bibliography.xml#brusinzovatto1960"/>
+                        <ptr target="../references/bibliography.xml#brusinzovatto1960"/>
                         <title>Brusin, Zovatto 1960</title>
                         <citedRange unit="page">92-93</citedRange>
                     </bibl>
                     <bibl xml:id="hoffmann1963">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#hoffmann1963"/>
+                        <ptr target="../bibliography/master_bibliography.xml#hoffmann1963"/>
+                        <ptr target="../references/bibliography.xml#hoffmann1963"/>
                         <title>Hoffmann 1963</title>
                         <citedRange unit="page">37-38</citedRange>
                         <note type="number">nr. 14</note>
                     </bibl>
                     <bibl xml:id="forlatitamaro1978">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#forlatitamaro1978"/>
+                        <ptr target="../bibliography/master_bibliography.xml#forlatitamaro1978"/>
+                        <ptr target="../references/bibliography.xml#forlatitamaro1978"/>
                         <title>Forlati Tamaro 1978</title>
                         <citedRange unit="page">150</citedRange>
                         <note type="number">nr. 8</note>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">77-79</citedRange>
                         <note type="number">nr. 34</note>
                     </bibl>
                     <bibl xml:id="edr097899">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097899">EDR097899</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-22">22-11-2007</date>
