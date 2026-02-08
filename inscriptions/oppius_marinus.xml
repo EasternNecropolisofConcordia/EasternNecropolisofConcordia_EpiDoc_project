@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Oppius_Marinus.xml</idno>
+                <idno type="filename">oppius_marinus.xml</idno>
                 <idno type="TM">125658</idno>
                 <idno type="EDR">EDR097917</idno>
                 <idno type="UEL">29367</idno>
@@ -282,29 +282,34 @@
             <div type="bibliography">
                 <listBibl>
                      <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
                          <title>Bertolini 1874a</title>
                          <citedRange unit="page">27</citedRange>
                          <note type="number">nr. 17</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">296</citedRange>
                         <note type="number">nr. 28</note>
                     </bibl>
                     <bibl xml:id="cilv8769">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8769</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">105-106</citedRange>
                         <note type="number">nr. 78</note>
                     </bibl>
                     <bibl xml:id="edr097917">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097917">EDR097917</ref></title>
                         <author>Franco Luciani</author>
                         <date when="2014-10-30">30-10-2014</date>
