@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Alexander.xml</idno>
+                <idno type="filename">alexander.xml</idno>
                 <idno type="TM">125622</idno>
                 <idno type="EDR">EDR097881</idno>
                 <idno type="UEL">https://lupa.at/29352</idno>
@@ -124,16 +124,16 @@
                             <decoNote xml:lang="en">
                                 <p>The inscription is enclosed between two small columns.</p>
                                 
-                                <p>The rest of the figurative apparatus, now lost, was described by Bertolini as follows: beyond the small columns there was an empty space, then another column at each edge of the sarcophagus; on each wing of the lid a head was carved on the front, and on both pediments a wreath of leaves with ribbons extending horizontally below <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 31)</ref>.</p>
+                                <p>The rest of the figurative apparatus, now lost, was described by Bertolini as follows: beyond the small columns there was an empty space, then another column at each edge of the sarcophagus; on each wing of the lid a head was carved on the front, and on both pediments a wreath of leaves with ribbons extending horizontally below <ref target="../references/bibliography.xml#bertolini1874a">(Bertolini 1874a, 31)</ref>.</p>
                                 
-                                <p>Today only the two small columns on the sides of the inscription are visible, although Lettich <ref target="../Bibliography/Master_Bibliography.xml#lettich1983">(Lettich 1983, 98)</ref> suggests that four late antique acroteria depicting half-busts preserved at the Museo Nazionale Concordiese of Portogruaro (Inv. nr. 187, 188, 189, 191) correspond to the heads described by Bertolini.</p>
+                                <p>Today only the two small columns on the sides of the inscription are visible, although Lettich <ref target="../references/bibliography.xml#lettich1983">(Lettich 1983, 98)</ref> suggests that four late antique acroteria depicting half-busts preserved at the Museo Nazionale Concordiese of Portogruaro (Inv. nr. 187, 188, 189, 191) correspond to the heads described by Bertolini.</p>
                             </decoNote>
                             <decoNote xml:lang="it">
                                 <p>L’iscrizione è chiusa fra due colonnine.</p>
                                 
-                                <p>Il resto dell’apparato figurativo, oggi perduto, fu così descritto da Bertolini: “al di là delle (colonnine) uno spazio vuoto, poi un’altra colonna a ciascuno dei lembi dell’arca: sur ognuna delle ali del coperchio è incisa al dinnanzi una testa e sull’uno e l’altro dei timpani una corona di fronde coi nastri distesi al basso orizzontalmente” <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 31)</ref>.</p>
+                                <p>Il resto dell’apparato figurativo, oggi perduto, fu così descritto da Bertolini: “al di là delle (colonnine) uno spazio vuoto, poi un’altra colonna a ciascuno dei lembi dell’arca: sur ognuna delle ali del coperchio è incisa al dinnanzi una testa e sull’uno e l’altro dei timpani una corona di fronde coi nastri distesi al basso orizzontalmente” <ref target="../references/bibliography.xml#bertolini1874a">(Bertolini 1874a, 31)</ref>.</p>
                                 
-                                <p>Oggi sono solo visibili le due colonnine ai lati dell’epigrafe, anche se Lettich <ref target="../Bibliography/Master_Bibliography.xml#lettich1983">(Lettich 1983, 98)</ref> ipotizza che quattro acroteri tardo-antichi raffiguranti dei mezzi busti e conservati presso il Museo Nazionale Concordiese di Portogruaro (Inv. nr. 187, 188, 189, 191) corrispondano alle teste descritte da Bertolini.</p>
+                                <p>Oggi sono solo visibili le due colonnine ai lati dell’epigrafe, anche se Lettich <ref target="../references/bibliography.xml#lettich1983">(Lettich 1983, 98)</ref> ipotizza che quattro acroteri tardo-antichi raffiguranti dei mezzi busti e conservati presso il Museo Nazionale Concordiese di Portogruaro (Inv. nr. 187, 188, 189, 191) corrispondano alle teste descritte da Bertolini.</p>
                             </decoNote>
                         </decoDesc>
                     </physDesc>
@@ -225,57 +225,64 @@
                 <p>La madre <persName ref="#sabbatia">Sabbatia</persName>, piangendo la fine della vita del figlio, fece (questo monumento) anche per sé.</p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>The mother <persName ref="#sabbatia" xml:lang="la">Sabbatia</persName> dedicates the burial to her son, who died at seventeen and who was a <term xml:lang="la">notarum litteris eruditus</term>. According to Leclercq, the deceased was a stonecutter or a stenographer (<ref target="../Bibliography/Master_Bibliography.xml#cabrol_leclercq">Leclercq 1927, 295</ref>). Zovatto shares this hypothesis (<ref target="../Bibliography/Master_Bibliography.xml#zovatto1949">Zovatto 1949, 29</ref>), while Hoffmann believes he was a student (<ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">Hoffmann 1969, 64</ref>).</p>
+                <p>The mother <persName ref="#sabbatia" xml:lang="la">Sabbatia</persName> dedicates the burial to her son, who died at seventeen and who was a <term xml:lang="la">notarum litteris eruditus</term>. According to Leclercq, the deceased was a stonecutter or a stenographer (<ref target="../references/bibliography.xml#cabrol_leclercq">Leclercq 1927, 295</ref>). Zovatto shares this hypothesis (<ref target="../references/bibliography.xml#zovatto1949">Zovatto 1949, 29</ref>), while Hoffmann believes he was a student (<ref target="../references/bibliography.xml#hoffmann1969">Hoffmann 1969, 64</ref>).</p>
                 
-                <p>According to Lettich as well, <persName ref="#alexander" xml:lang="la">Alexander</persName> was a student already well trained in the use of tachygraphic signs: otherwise the clearer term <term xml:lang="la">exceptor</term> would have been used (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 98</ref>).</p>
+                <p>According to Lettich as well, <persName ref="#alexander" xml:lang="la">Alexander</persName> was a student already well trained in the use of tachygraphic signs: otherwise the clearer term <term xml:lang="la">exceptor</term> would have been used (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 98</ref>).</p>
                 
-                <p>The comminatory formula typical of Concordia's epigraphs is absent. The name <persName xml:lang="la">Alexander</persName> is quite widespread in Concordia (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 1915</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 1936</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 1939</ref>).</p>
+                <p>The comminatory formula typical of Concordia's epigraphs is absent. The name <persName xml:lang="la">Alexander</persName> is quite widespread in Concordia (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 1915</ref>; <ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 1936</ref>; <ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 1939</ref>).</p>
                 
-                <p>There are no epigraphic attestations of other individuals named <persName xml:lang="la">Sabbatia</persName> in <term xml:lang="la">Venetia</term>, although the presence of a woman of the same name in Milan during late antiquity is attested (<ref target="../Bibliography/Master_Bibliography.xml">CIL V 6267</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138618">EDR138618</ref>).</p>
+                <p>There are no epigraphic attestations of other individuals named <persName xml:lang="la">Sabbatia</persName> in <term xml:lang="la">Venetia</term>, although the presence of a woman of the same name in Milan during late antiquity is attested (<ref target="../references/corpora_databases.xml#cil">CIL V 6267</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138618">EDR138618</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
-                <p>La madre <persName ref="#sabbatia" xml:lang="la">Sabbatia</persName> dedica la sepoltura al figlio, morto diciasettenne, il quale era un <term xml:lang="la">notarum litteris eruditus</term>. Per Leclercq il defunto era un lapicida o uno stenografo (<ref target="../Bibliography/Master_Bibliography.xml#cabrol_leclercq">Leclercq 1927, 295</ref>). Zovatto condivide l'ipotesi (<ref target="../Bibliography/Master_Bibliography.xml#zovatto1949">Zovatto 1949, 29</ref>), mentre Hoffmann ritiene si tratti di uno studente (<ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">Hoffmann 1969, 64</ref>).</p>
+                <p>La madre <persName ref="#sabbatia" xml:lang="la">Sabbatia</persName> dedica la sepoltura al figlio, morto diciasettenne, il quale era un <term xml:lang="la">notarum litteris eruditus</term>. Per Leclercq il defunto era un lapicida o uno stenografo (<ref target="../references/bibliography.xml#cabrol_leclercq">Leclercq 1927, 295</ref>). Zovatto condivide l'ipotesi (<ref target="../references/bibliography.xml#zovatto1949">Zovatto 1949, 29</ref>), mentre Hoffmann ritiene si tratti di uno studente (<ref target="../references/bibliography.xml#hoffmann1969">Hoffmann 1969, 64</ref>).</p>
                 
-                <p>Anche secondo Lettich <persName ref="#alexander" xml:lang="la">Alexander</persName> era uno studente già abbastanza addestrato nell'uso dei segni tachigrafici: diversamente si sarebbe usato il più chiaro termine <term xml:lang="la">exceptor</term> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 98</ref>).</p>
+                <p>Anche secondo Lettich <persName ref="#alexander" xml:lang="la">Alexander</persName> era uno studente già abbastanza addestrato nell'uso dei segni tachigrafici: diversamente si sarebbe usato il più chiaro termine <term xml:lang="la">exceptor</term> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 98</ref>).</p>
                 
-                <p>Manca la formula comminatoria tipica delle epigrafi di Concordia. Il nome <persName xml:lang="la">Alexander</persName> è abbastanza diffuso a Concordia (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 1915</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 1936</ref>; <ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 1939</ref>).</p>
+                <p>Manca la formula comminatoria tipica delle epigrafi di Concordia. Il nome <persName xml:lang="la">Alexander</persName> è abbastanza diffuso a Concordia (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 1915</ref>; <ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 1936</ref>; <ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 1939</ref>).</p>
                 
-                <p>Non ci sono invece attestazioni epigrafiche di altri individui di nome <persName xml:lang="la">Sabbatia</persName> nella <term xml:lang="la">Venetia</term>, anche se è attestata la presenza di un'omonima donna a Milano, sempre durante la tarda antichità (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 6267</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138618">EDR138618</ref>).</p>
+                <p>Non ci sono invece attestazioni epigrafiche di altri individui di nome <persName xml:lang="la">Sabbatia</persName> nella <term xml:lang="la">Venetia</term>, anche se è attestata la presenza di un'omonima donna a Milano, sempre durante la tarda antichità (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 6267</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138618">EDR138618</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">31</citedRange>
                         <note type="number">n. 26</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">293</citedRange>
                         <note type="number">n. 18</note>
                     </bibl>
                     <bibl xml:id="cilv8722">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8722</title>
                     </bibl>
                     <bibl xml:id="ils7758">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ils"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
                         <title><term xml:lang="la">ILS</term> 7758</title>
                     </bibl>
                     <bibl xml:id="ilcv711">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 711</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">98</citedRange>
                         <note type="number">n. 61</note>
                     </bibl>
                     <bibl xml:id="edr097881">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097881">EDR097881</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-21">21-11-2007</date>
