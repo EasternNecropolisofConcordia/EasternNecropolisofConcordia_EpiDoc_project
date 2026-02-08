@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Iovina.xml</idno>
+                <idno type="filename">iovina.xml</idno>
                 <idno type="TM">125661</idno>
                 <idno type="EDR">EDR097920</idno>
                 <idno type="UEL">29364</idno>
@@ -199,40 +199,46 @@
                 <p>Se qualcuno vorrà aprire questa arca, verserà al fisco cinque libbre (romane) d'argento.</p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>The <term xml:lang="la">gens</term> <persName xml:lang="la">Turrania</persName> is abundantly documented in Concordia, including in this very necropolis <ref target="./Fabianus.xml">(<term xml:lang="la">CIL</term> V 8692)</ref>.</p>
+                <p>The <term xml:lang="la">gens</term> <persName xml:lang="la">Turrania</persName> is abundantly documented in Concordia, including in this very necropolis <ref target="./fabianus.xml">(<term xml:lang="la">CIL</term> V 8692)</ref>.</p>
             </div>
             <div type="commentary" xml:lang="it">
-                <p>La <term xml:lang="la">gens</term> <persName xml:lang="la">Turrania</persName> è molto attestata in Concordia anche nella stessa necropoli <ref target="./Fabianus.xml">(<term xml:lang="la">CIL</term> V 8692)</ref>.</p></div>
+                <p>La <term xml:lang="la">gens</term> <persName xml:lang="la">Turrania</persName> è molto attestata in Concordia anche nella stessa necropoli <ref target="./fabianus.xml">(<term xml:lang="la">CIL</term> V 8692)</ref>.</p></div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">31</citedRange>
                         <note type="number">n. 27</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">296</citedRange>
                         <note type="number">n. 26</note>
                     </bibl>
                     <bibl xml:id="cilv8772">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8772</title>
                     </bibl>
                     <bibl xml:id="ilcv816">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 816</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">104</citedRange>
                         <note type="number">n. 75</note>
                     </bibl>
                     <bibl xml:id="edr097920">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097920">EDR097920</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-21">21-11-2007</date>
