@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Numerianus.xml</idno>
+                <idno type="filename">numerianus.xml</idno>
                 <idno type="TM">125659</idno>
                 <idno type="EDR">EDR097918</idno>
                 <idno type="UEL">125659</idno>
@@ -229,7 +229,7 @@
                         <persName ref="#numerianus" xml:lang="la">Numerianus</persName> came from the city of <placeName>Mursa</placeName> in Pannonia, today’s Esseg-Osijek.
                     </p>
                     <p>
-                        According to <bibl ref="#hoffmann1963">Hoffmann</bibl>, <persName ref="#numerianus" xml:lang="la">Numerianus</persName> travelled to <placeName>Concordia</placeName> in the retinue of <persName>Theodosius</persName>, together with <persName ref="./Saturninus.xml/#saturninus" xml:lang="la">Saturninus</persName>, for the same purpose: to reorganize the territory after the Battle of the <placeName>Frigidus</placeName>.
+                        According to <bibl ref="#hoffmann1963">Hoffmann</bibl>, <persName ref="#numerianus" xml:lang="la">Numerianus</persName> travelled to <placeName>Concordia</placeName> in the retinue of <persName>Theodosius</persName>, together with <persName ref="./saturninus.xml/#saturninus" xml:lang="la">Saturninus</persName>, for the same purpose: to reorganize the territory after the Battle of the <placeName>Frigidus</placeName>.
                     </p>
                     <p>
                         If <bibl ref="#hoffmann1963">Hoffmann</bibl>’s hypothesis is accepted, the inscription would date to 394 AD or to the years immediately following. However, the paleographic features of the letterforms seem to suggest an earlier date.
@@ -243,7 +243,7 @@
                         <persName ref="#numerianus" xml:lang="la">Numerianus</persName> proveniva dalla città di <placeName>Mursa</placeName> in Pannonia, l’odierna Esseg-Osijek.
                     </p>
                     <p>
-                        <bibl ref="#hoffmann1963">Hoffmann</bibl> ritiene che <persName ref="#numerianus" xml:lang="la">Numerianus</persName> si fosse diretto a <placeName>Concordia</placeName> al seguito di <persName>Theodosius</persName> assieme a <persName ref="./Saturninus.xml/#saturninus" xml:lang="la">Saturninus</persName> per la stessa ragione: riorganizzare il territorio dopo la battaglia del <placeName>Frigido</placeName>.
+                        <bibl ref="#hoffmann1963">Hoffmann</bibl> ritiene che <persName ref="#numerianus" xml:lang="la">Numerianus</persName> si fosse diretto a <placeName>Concordia</placeName> al seguito di <persName>Theodosius</persName> assieme a <persName ref="./saturninus.xml/#saturninus" xml:lang="la">Saturninus</persName> per la stessa ragione: riorganizzare il territorio dopo la battaglia del <placeName>Frigido</placeName>.
                     </p>
                     <p>
                         Se si considera l’ipotesi di <bibl ref="#hoffmann1963">Hoffmann</bibl>, l’epigrafe sarebbe riconducibile al 394 d.C. o agli anni immediatamente successivi. Tuttavia, le caratteristiche paleografiche delle lettere sembrano suggerire una datazione più antica.
@@ -253,39 +253,46 @@
             <div type="bibliography">
                 <listBibl>
                      <bibl xml:id="bertolini1874a">
-                         <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                         <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
                          <title>Bertolini 1874a</title>
                          <citedRange unit="page">28</citedRange>
                          <note type="number">nr. 20</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">292</citedRange>
                         <note type="number">nr. 16</note>
                     </bibl>
                     <bibl xml:id="cilv8770">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8770</title>
                     </bibl>
                     <bibl xml:id="ilcv370">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 370</title>
                     </bibl>
                     <bibl xml:id="hoffmann1963">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#hoffmann1963"/>
+                        <ptr target="../bibliography/master_bibliography.xml#hoffmann1963"/>
+                        <ptr target="../references/bibliography.xml#hoffmann1963"/>
                         <title>Hoffmann 1963</title>
                         <citedRange unit="page">56</citedRange>
                         <note type="number">nr. 39</note>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">54</citedRange>
                         <note type="number">nr. 10</note>
                     </bibl>
                     <bibl xml:id="edr097918">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097918">EDR097918</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-29">29-11-2007</date>
