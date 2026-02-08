@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Dionisia_B.xml</idno>
+                <idno type="filename">dionisia_b.xml</idno>
                 <idno type="TM">125635</idno>
                 <idno type="EDR">EDR097894</idno>
                 <idno type="UEL">29370</idno>
@@ -148,7 +148,7 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person xml:id="dionisia" corresp="./Dionisia_B.xml#dionisia">
+               <person xml:id="dionisia" corresp="./dionisia_b.xml#dionisia">
                    <persName>
                        <name type="full">Aurelia Dionisia</name>
                        <name type="nomen">Aurelia</name>
@@ -246,7 +246,7 @@
             <div type="commentary">
                 <div type="commentary" xml:lang="en">
                     <p>
-                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> is addressed <ref target="Dionisia_A.xml">in another fragmentary inscription</ref> on a nearby sarcophagus, since both her age and the initials of her cognomen coincide.
+                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> is addressed <ref target="./dionisia_a.xml">in another fragmentary inscription</ref> on a nearby sarcophagus, since both her age and the initials of her cognomen coincide.
                     </p>
                     <p>
                         It is not clear why two sarcophagi would have been dedicated to <persName corresp="#dionisia" xml:lang="la">Dionisia</persName>. Mommsen, attempting to resolve this issue, maintains that both inscriptions belonged to the same <term xml:lang="la">arca</term>: this inscription would have been on the front of the sarcophagus, while the second on one of its sides.
@@ -258,12 +258,12 @@
                         Perhaps <persName corresp="#dionisia" xml:lang="la">Dionisia</persName>’s first sarcophagus had been damaged or subsequently occupied by others, or her body had initially been placed in a temporary arca intended for other members of the family—reasons that would have made it necessary to move her remains to another <term xml:lang="la">arca</term>.
                     </p>
                     <p>
-                        Indeed, the inscription of <ref target="./Cerealis.xml" xml:lang="la">Ennius Cerealis</ref> shows that tombs were at times cared for and restructured by relatives.
+                        Indeed, the inscription of <ref target="./cerealis.xml" xml:lang="la">Ennius Cerealis</ref> shows that tombs were at times cared for and restructured by relatives.
                     </p>
                 </div>
                 <div type="commentary" xml:lang="it">
                     <p>
-                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> viene apostrofata <ref target="Dionisia_A.xml">in un’altra iscrizione mutila</ref> di un sarcofago vicino, dal momento che coincidono sia l’età sia le iniziali del cognomen.
+                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> viene apostrofata <ref target="./dionisia_a.xml">in un’altra iscrizione mutila</ref> di un sarcofago vicino, dal momento che coincidono sia l’età sia le iniziali del cognomen.
                     </p>
                     <p>
                         Non risulta chiaro perché a <persName corresp="#dionisia" xml:lang="la">Dionisia</persName> siano stati dedicati due sarcofagi. Mommsen, cercando di ovviare a questo dubbio, sostiene che entrambe le epigrafi si trovassero sulla stessa arca: questa iscrizione sarebbe stata sulla fronte del sarcofago, mentre la seconda su uno dei lati. 
@@ -275,7 +275,7 @@
                         Forse il primo sarcofago di <persName corresp="#dionisia" xml:lang="la">Dionisia</persName> era stato rovinato o occupato da altre persone, oppure la sua salma era stata deposta in un’arca momentanea, dedicata ad altri membri della famiglia: motivi che avrebbero reso necessario lo spostamento in un’altra arca.
                     </p> 
                     <p>
-                        In effetti l’iscrizione di <ref target="./Cerealis.xml" xml:lang="la">Ennius Cerealis</ref> dimostra che talvolta le tombe venivano curate e ristrutturate dai parenti.
+                        In effetti l’iscrizione di <ref target="./cerealis.xml" xml:lang="la">Ennius Cerealis</ref> dimostra che talvolta le tombe venivano curate e ristrutturate dai parenti.
                     </p>
 
                 </div>
@@ -283,33 +283,39 @@
             <div type="bibliography">
                 <listBibl>
                      <bibl xml:id="bertolini1875a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1875a"/>
                          <title>Bertolini 1875a</title>
                         <citedRange unit="page">114</citedRange>
                         <note type="number">nr. 55</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
                         <title>Bertolini 1875b</title>
                         <citedRange unit="page">121</citedRange>
                         <note type="number">nr. 16</note>
                     </bibl>
                     <bibl xml:id="cilv8735a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8735a</title>
                     </bibl>
                     <bibl xml:id="ilcv817b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 817 B</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">107</citedRange>
                         <note type="number">nr. 81</note>
                     </bibl>
                     <bibl xml:id="edr097894">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097894">EDR097894</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2008-07-23">23-07-2008</date>
