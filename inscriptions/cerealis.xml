@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Cerealis.xml</idno>
+                <idno type="filename">cerealis.xml</idno>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
@@ -63,19 +63,19 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type = "execution" key = "scalpro">
+                                    <rs type="execution" key="scalpro">
                                         Inscribed
                                     </rs>
                                     <dimensions>
-                                        <height unit = "cm">27</height>
-                                        <width unit = "cm">126</width>
+                                        <height unit="cm">27</height>
+                                        <width unit="cm">126</width>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <height  min="3" max="4" unit = "cm">3-4</height>
+                                <height min="3" max="4" unit="cm">3-4</height>
                                 <note type="palaeographic" xml:lang="en">
                                     <p>
                                         Rightward stroke direction, horizontal layout, vertical and irregular module, irregular <term xml:lang="la">ductus</term>, shallow incision, centered layout.
@@ -127,32 +127,32 @@
                    <gender>m</gender>
                    <note type="occupation">civil</note>
                    <note type="role">deceased</note>
-                   <note type = "relationship" corresp="#asteria">grandfather</note>
+                   <note type="relationship" corresp="#asteria">grandfather</note>
                </person>
                <person xml:id="asteria">
                  <persName>
                      Ennia Asteria
                      <name type="nomen" nymRef="latin">Ennia</name>
-                     <name type = "cognomen" nymRef="latin">Asteria</name>
+                     <name type="cognomen" nymRef="latin">Asteria</name>
                      <name type="gens">Ennia</name>
                  </persName>
                   <gender>f</gender>
-                  <note type = "occupation">civil</note>
+                  <note type="occupation">civil</note>
                   <note type="role">dedicator (restoration)</note>
-                  <note type = "relationship" corresp="#asterius">daughter</note>
-                  <note type = "relationship" corresp="#cerealis">granddaughter</note>
+                  <note type="relationship" corresp="#asterius">daughter</note>
+                  <note type="relationship" corresp="#cerealis">granddaughter</note>
                </person>
                <person xml:id="asterius">
                  <persName>
                      Ennius Asterius
                      <name type="nomen" nymRef="latin">Ennius</name>
-                     <name type = "cognomen" nymRef="latin">Asterius</name>
+                     <name type="cognomen" nymRef="latin">Asterius</name>
                      <name type="gens">Ennia</name>
                  </persName>
                   <gender>m</gender>
-                  <note type = "occupation">civil</note>
+                  <note type="occupation">civil</note>
                   <note type="role">mentioned</note>
-                  <note type = "relationship" corresp="#asterius">father</note>
+                  <note type="relationship" corresp="#asterius">father</note>
               </person>
            </listPerson>
         </particDesc>
@@ -217,19 +217,22 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1877">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
                         <citedRange unit="page">120</citedRange>
                         <note type="number">nr. 5</note>
                     </bibl>
                     <bibl xml:id="cilv8988e">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title>CIL V 8988e</title>
                     </bibl>
                     <bibl xml:id="edr097935">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
-                        <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097935">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097935">
                             EDR097935
-                        </ref>
+                        </ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-30">30-11-2007</date>
                         <date type="revised" when="2022-04-28">28-04-2022</date>
