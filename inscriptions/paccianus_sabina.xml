@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">EnniusPaccianus_CusicaSabina.xml</idno>
+                <idno type="filename">paccianus_sabina.xml</idno>
                 <idno type="TM">125672</idno>
                 <idno type="EDR">EDR097931</idno>
                 <idno type="UEL">29219</idno>
@@ -179,7 +179,7 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    The gentilicon <persName xml:lang="la">Cusicus/Cusica</persName> derives from <persName xml:lang="la">Cusius</persName> and may have been formed with the addition of the suffix -igo of Celtic origin (<ref target="../Bibliography/Master_Bibliography.xml#pellegrini1975">Pellegrini 1975, 185-187</ref>), or with the suffix -ikos, which is typically Venetic(<ref target="../Bibliography/Master_Bibliography.xml#desinan1990">Desinan 1990, 128</ref>).
+                    The gentilicon <persName xml:lang="la">Cusicus/Cusica</persName> derives from <persName xml:lang="la">Cusius</persName> and may have been formed with the addition of the suffix -igo of Celtic origin (<ref target="../references/bibliography.xml#pellegrini1975">Pellegrini 1975, 185-187</ref>), or with the suffix -ikos, which is typically Venetic(<ref target="../references/bibliography.xml#desinan1990">Desinan 1990, 128</ref>).
                 </p>
                 <p>
                     <persName xml:lang="la">Paccianus</persName> derives from the gentilicon <term xml:lang="la">Paccius</term> and is not attested elsewhere in Concordia.
@@ -190,7 +190,7 @@
             </div>
             <div type="commentary" xml:lang="it">
                 <p>
-                    Il gentilizio <persName xml:lang="la">Cusicus/Cusica</persName> deriva da <persName xml:lang="la">Cusius</persName> ed è possibile che si sia formato con l’aggiunta del suffisso -igo di origine celtica (<ref target="../Bibliography/Master_Bibliography.xml#pellegrini1975">Pellegrini 1975, 185-187</ref>), o con il suffisso -ikos, tipicamente venetico (<ref target="../Bibliography/Master_Bibliography.xml#desinan1990">Desinan 1990, 128</ref>).
+                    Il gentilizio <persName xml:lang="la">Cusicus/Cusica</persName> deriva da <persName xml:lang="la">Cusius</persName> ed è possibile che si sia formato con l’aggiunta del suffisso -igo di origine celtica (<ref target="../references/bibliography.xml#pellegrini1975">Pellegrini 1975, 185-187</ref>), o con il suffisso -ikos, tipicamente venetico (<ref target="../references/bibliography.xml#desinan1990">Desinan 1990, 128</ref>).
                 </p>
                 <p>
                     <persName xml:lang="la">Paccianus</persName> deriva dal gentilizio <term xml:lang="la">Paccius</term> e non è attestato altrove a Concordia.
@@ -202,28 +202,33 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1877">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
                         <title>Bertolini 1877</title>
                         <citedRange unit="page">120</citedRange>
                         <note>nr. 4</note>
                     </bibl>
+                    <bibl xml:id="cilv8988">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <note><term xml:lang="la">CIL</term> V 8988</note>
+                    </bibl>
                     <bibl xml:id="pellegrini1975">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#pellegrini1975"/>
+                        <ptr target="../bibliography/master_bibliography.xml#pellegrini1975"/>
+                        <ptr target="../references/bibliography.xml#pellegrini1975"/>
                         <title>Pellegrini 1975</title>
                         <citedRange unit="page">186</citedRange>
                     </bibl>
                     <bibl xml:id="lettich1994">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1994"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1994"/>
+                        <ptr target="../references/bibliography.xml#lettich1994"/>
                         <title>Lettich 1994</title>
                         <citedRange unit="page">255–256</citedRange>
                         <note>nr. 171</note>
                     </bibl>
-                    <bibl xml:id="cilv8988">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
-                        <note><term xml:lang="la">CIL</term> V 8988</note>
-                    </bibl>
                     <bibl xml:id="edr097931">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097931">EDR097931</ref></title>
                     </bibl>
                 </listBibl>
