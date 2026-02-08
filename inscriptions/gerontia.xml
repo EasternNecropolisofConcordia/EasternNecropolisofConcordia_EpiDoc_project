@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Gerontia.xml</idno>
+                <idno type="filename">gerontia.xml</idno>
                 <idno type="TM">125654</idno>
                 <idno type="EDR">EDR097913</idno>
                 <idno type="UEL">29362</idno>
@@ -165,41 +165,47 @@
                 <p>Se qualcuno vorrà aprirla, verserà al fisco cinque libbre d'argento.</p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p><persName xml:lang="la">Gerontia</persName> is a name of Greek origin, coming from Asia Minor (<ref target="../Bibliography/Master_Bibliography.xml#holder">Holder 1904, 2014</ref>).</p>
+                <p><persName xml:lang="la">Gerontia</persName> is a name of Greek origin, coming from Asia Minor (<ref target="../references/bibliography.xml#holder">Holder 1904, 2014</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
-                <p><persName xml:lang="la">Gerontia</persName> è un nome di origine greca, proveniente dall’Asia Minore (<ref target="../Bibliography/Master_Bibliography.xml#holder">Holder 1904, 2014</ref>).</p>
+                <p><persName xml:lang="la">Gerontia</persName> è un nome di origine greca, proveniente dall’Asia Minore (<ref target="../references/bibliography.xml#holder">Holder 1904, 2014</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1875a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
                         <title>Bertolini 1875a</title>
                         <citedRange unit="page">114</citedRange>
                         <note type="number">n. 54</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
                         <title>Bertolini 1875b</title>
                         <citedRange unit="page">121</citedRange>
                         <note type="number">nr. 15</note>
                     </bibl>
                     <bibl xml:id="cilv8765">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8765</title>
                     </bibl>
                     <bibl xml:id="ilcv818a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 818 A</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">103</citedRange>
                         <note type="number">nr. 72</note>
                     </bibl>
                     <bibl xml:id="edr097913">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097913">EDR097913</ref></title>
                     </bibl>
                 </listBibl>
