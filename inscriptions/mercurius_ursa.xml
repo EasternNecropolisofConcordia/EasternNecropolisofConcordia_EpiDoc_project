@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Mercurius_Ursa.xml</idno>
+                <idno type="filename">mercurius_ursa.xml</idno>
                 <idno type="TM">125646</idno>
                 <idno type="EDR">EDR097905</idno>
                 <idno type="UEL">29310</idno>
@@ -119,11 +119,11 @@
                         <decoDesc>
                             <decoNote xml:lang="en">
                                 <p>A <objectType>flat border</objectType> runs around the perimeter of the panel.</p>
-                                <p>According to Bertolini's report, two arches supported by columns are located at the sides of the inscription, with a vase positioned under one of them (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
+                                <p>According to Bertolini's report, two arches supported by columns are located at the sides of the inscription, with a vase positioned under one of them (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
                             </decoNote>
                             <decoNote xml:lang="it">
                                 <p>Una <objectType>cornice semplice</objectType> percorre il perimetro dello specchio epigrafico</p>.
-                                <p>Secondo quanto riportato da Bertolini, “ai lati della iscrizione due archi sostenuti da colonne e sotto uno d’essi un vaso” (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
+                                <p>Secondo quanto riportato da Bertolini, “ai lati della iscrizione due archi sostenuti da colonne e sotto uno d’essi un vaso” (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
                             </decoNote>
                         </decoDesc>
                     </physDesc>
@@ -233,7 +233,7 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    Like <persName ref="./FlaviusAlatancus_Bitorta.xml#martinianus" xml:lang="la">Flavius Martinianus</persName>, <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName> was also a <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>.
+                    Like <persName ref="./alatancus_bitorta.xml#martinianus" xml:lang="la">Flavius Martinianus</persName>, <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName> was also a <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>.
                 </p>
                 <p>
                     This is the only epigraphic attestation of an individual named <persName xml:lang="la">Mercurius</persName> in the whole of Concordia, although this <term xml:lang="la">cognomen</term> appears in many other cities of the <term xml:lang="la">regio X</term>, such as Aquileia (<term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179690">EDR179690</ref>; <term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179693">EDR179693</ref>; <term xml:lang="la">CIL</term> V 8424 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179749">EDR179749</ref>).
@@ -244,7 +244,7 @@
             </div>
             <div type="commentary" xml:lang="it">
                 <p>
-                    Come <persName ref="./FlaviusAlatancus_Bitorta.xml#martinianus" xml:lang="la">Flavius Martinianus</persName>, anche <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName> era un <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>.
+                    Come <persName ref="./alatancus_bitorta.xml#martinianus" xml:lang="la">Flavius Martinianus</persName>, anche <persName ref="#mercurius" xml:lang="la">Flavius Mercurius</persName> era un <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>.
                 </p>
                 <p>
                     Questa è l'unica attestazione epigrafica di un individuo di nome <persName xml:lang="la">Mercurius</persName> nell'intera Concordia, sebbene questo <term xml:lang="la">cognomen</term> compaia in molte altre città della <term xml:lang="la">regio X</term>, come Aquileia (<term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179690">EDR179690</ref>; <term xml:lang="la">CIL</term> V 1390 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179693">EDR179693</ref>; <term xml:lang="la">CIL</term> V 8424 = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR179749">EDR179749</ref>).
@@ -256,45 +256,53 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">24</citedRange>
                         <note type="number">nr. 10</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">285</citedRange>
                         <note type="number">nr. 6</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
                         <title>Bertolini 1875b</title>
                         <citedRange unit="page">116</citedRange>
                         <note type="number">nr. 9</note>
                     </bibl>
                     <bibl xml:id="cilv8757">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8757</title>
                     </bibl>
                     <bibl xml:id="ilcv521">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 521</title>
                     </bibl>
                     <bibl xml:id="scarpabonazza_veronese1978">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#scarpabonazzabuoraveronese1978"/>
+                        <ptr target="../bibliography/master_bibliography.xml#scarpabonazzabuoraveronese1978"/>
+                        <ptr target="../references/bibliography.xml#scarpabonazzabuoraveronese1978"/>
                         <title>Scarpa Bonazza Buora Veronese 1978</title>
                         <citedRange unit="page">74-75</citedRange>
                         <note type="note">nt. 300</note>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">57-58</citedRange>
                         <note type="number">nr. 14</note>
                     </bibl>
                     <bibl xml:id="edr097905">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097905">EDR097905</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-26">26-11-2007</date>
