@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Florentius_Valeria.xml</idno>
+                <idno type="filename">florentius_valeria.xml</idno>
                 <idno type="TM">125578</idno>
                 <idno type="EDR">EDR097837</idno>
                 <idno type="UEL">29303</idno>
@@ -185,43 +185,49 @@
                 <p>[Proprietà] di <persName ref="#maflorentius">Marco Aterio Fiorente</persName> e di <persName ref="#valeria">Giulia Valeria</persName>; da vivi facemmo [quest'arca] per concessione di Dio.</p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>There are no other attestations of the gentilicon <persName xml:lang="la">Aterius</persName> in Concordia, while the cognomen <persName xml:lang="la">Florentius</persName> is also found in the Persico area, engraved on the inscription of the fabricensis <ref target="./Florentius.xml">Flavius Florentius</ref>.</p>
-                <p>The gentilicon <persName xml:lang="la">Valerius</persName>, on the other hand, is attested in Concordia in other inscriptions: in the immediate vicinity of the burial of <persName xml:lang="la">Florentius</persName> and <persName xml:lang="la">Valeria</persName>, the stele from the early Imperial age dedicated to <persName xml:lang="la">Titus Valerius Romulus</persName> was found (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8669</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097829">EDR097829</ref>), used as spolia for the base of a sarcophagus (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1877">Bertolini 1877, 31</ref>), and in the same necropolis is the inscription of <ref target="./Peregrina.xml"><persName xml:lang="la">Valeria Peregrina</persName></ref>.</p>
+                <p>There are no other attestations of the gentilicon <persName xml:lang="la">Aterius</persName> in Concordia, while the cognomen <persName xml:lang="la">Florentius</persName> is also found in the Persico area, engraved on the inscription of the fabricensis <ref target="./florentius.xml">Flavius Florentius</ref>.</p>
+                <p>The gentilicon <persName xml:lang="la">Valerius</persName>, on the other hand, is attested in Concordia in other inscriptions: in the immediate vicinity of the burial of <persName xml:lang="la">Florentius</persName> and <persName xml:lang="la">Valeria</persName>, the stele from the early Imperial age dedicated to <persName xml:lang="la">Titus Valerius Romulus</persName> was found (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8669</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097829">EDR097829</ref>), used as spolia for the base of a sarcophagus (<ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 31</ref>), and in the same necropolis is the inscription of <ref target="./peregrina.xml"><persName xml:lang="la">Valeria Peregrina</persName></ref>.</p>
             </div>
             <div type="commentary" xml:lang="it">
-                <p>Non risultano altre attestazioni del gentilizio <persName xml:lang="la">Aterius</persName> in Concordia, mentre il cognomen <persName xml:lang="la">Florentius</persName> si trova anche nel fondo Persico, inciso sull’epigrafe del fabricensis <ref target="./Florentius.xml">Flavius Florentius</ref>.</p>
-                <p>Il gentilizio <persName xml:lang="la">Valerius</persName> è invece attestato a Concordia in altre iscrizioni: proprio in prossimità del luogo di deposizione di <persName xml:lang="la">Florentius</persName> e <persName xml:lang="la">Valeria</persName>, è stata rinvenuta la stele di età alto imperiale dedicata a <persName xml:lang="la">Titus Valerius Romulus</persName> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 8669</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097829">EDR097829</ref>), usata come materiale di reimpiego per la base di un’arca (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1877">Bertolini 1877, 31</ref>) e sempre nella stessa necropoli, si trova l'epigrafe di <ref target="./Peregrina.xml"><persName xml:lang="la">Valeria Peregrina</persName></ref>.</p>
+                <p>Non risultano altre attestazioni del gentilizio <persName xml:lang="la">Aterius</persName> in Concordia, mentre il cognomen <persName xml:lang="la">Florentius</persName> si trova anche nel fondo Persico, inciso sull’epigrafe del fabricensis <ref target="./florentius.xml">Flavius Florentius</ref>.</p>
+                <p>Il gentilizio <persName xml:lang="la">Valerius</persName> è invece attestato a Concordia in altre iscrizioni: proprio in prossimità del luogo di deposizione di <persName xml:lang="la">Florentius</persName> e <persName xml:lang="la">Valeria</persName>, è stata rinvenuta la stele di età alto imperiale dedicata a <persName xml:lang="la">Titus Valerius Romulus</persName> (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8669</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097829">EDR097829</ref>), usata come materiale di reimpiego per la base di un’arca (<ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 31</ref>) e sempre nella stessa necropoli, si trova l'epigrafe di <ref target="./peregrina.xml"><persName xml:lang="la">Valeria Peregrina</persName></ref>.</p>
             </div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1876a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1876a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1876a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1876a"/>
                         <title>Bertolini 1876a</title>
                         <citedRange unit="page">87</citedRange>
                         <note type="number">n. 7</note>
                     </bibl>
                     <bibl xml:id="bertolini1877">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1877"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
                         <title>Bertolini 1877</title>
                         <citedRange unit="page">31</citedRange>
                         <note type="number">n. 24</note>
                     </bibl>
                     <bibl xml:id="cilv8677">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8677</title>
                     </bibl>
                     <bibl xml:id="ilcv1942">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 1942</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">49-50</citedRange>
                         <note type="number">n. 5</note>
                     </bibl>
                     <bibl xml:id="edr097837">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097837">EDR097837</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-21">21-11-2007</date>
