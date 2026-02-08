@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Ursus_Decentia.xml</idno>
+                <idno type="filename">ursus_decentia.xml</idno>
                 <idno type="TM">125636</idno>
                 <idno type="EDR">EDR097895</idno>
                 <idno type="UEL">29356</idno>
@@ -105,13 +105,13 @@
                                     <p>Right-facing direction, horizontal alignment, vertical module, regular <term xml:lang="la">ductus</term>, triangle-shaped punctuation, left-aligned layout.</p>
                                     <p>The inscription features triangular <g type="pl">apices</g> (serifs) at the ends of the arms, in the shape of <g type="pl">wolf-teeth</g> (serrated motif).</p>
                                     <p>The letter <g type="pl">M</g> is composed of four oblique strokes, whereas the first and third strokes of the <g type="pl">N</g> are vertical.</p>
-                                    <p>From a palaeographic perspective, this inscription is very similar to the nearby one belonging to <ref target="./Maximiani.xml"><persName xml:lang="la">Flavius Maximianus</persName></ref>.</p>
+                                    <p>From a palaeographic perspective, this inscription is very similar to the nearby one belonging to <ref target="./maximiani.xml"><persName xml:lang="la">Flavius Maximianus</persName></ref>.</p>
                                 </note>
                                 <note type="palaeographic" xml:lang="it">
                                     <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> regolare, interpunzione triangoliforme, impaginazione a sinistra.</p>
                                     <p>L'iscrizione presenta apicature triangolari in corrispondenza dell’estremità dei bracci a forma di <g type="pl">dente di lupo</g>.</p>
                                     <p>La lettera <g type="pl">M</g> è composta da quattro aste oblique, mentre la prima e la terza asta della <g type="pl">N</g> sono verticali.</p>
-                                    <p>Dal punto di vista paleografico, questa iscrizione è molto simile a quella vicina di <ref target="./Maximiani.xml"><persName xml:lang="la">Flavius Maximianus</persName></ref>.</p>
+                                    <p>Dal punto di vista paleografico, questa iscrizione è molto simile a quella vicina di <ref target="./maximiani.xml"><persName xml:lang="la">Flavius Maximianus</persName></ref>.</p>
                                 </note>
                             </handNote>
                         </handDesc>
@@ -194,44 +194,50 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>The <term xml:lang="la">gentilicium</term> <persName xml:lang="la">Cocceius</persName> likely dates back to the end of the 1st century AD. Its most famous representative is the Emperor <persName xml:lang="la">Cocceius Nerva</persName>, but epigraphy confirms the existence of this <term xml:lang="la">nomen</term> in the Veneto region during the Early Imperial period: a freedman named <persName xml:lang="la">Marcus Cocceius</persName> lived in <placeName>Altinum</placeName> (<term xml:lang="la">CIL</term> V 2217; <term xml:lang="la">CIL</term> V 2218), and <persName xml:lang="la">Cocceia Pompeia</persName> was buried in <placeName>Aquileia</placeName> (<term xml:lang="la">CIL</term> V 1172).</p>
-                <p>However, the epigraph of <persName xml:lang="la">Cocceius Ursus</persName> represents an interesting testimony because, as noted by <persName>Lettich</persName> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 100</ref>), it reveals the persistence of this <term xml:lang="la">gentilicium</term> during Late Antiquity.</p>
-                <p><persName>Lettich</persName> argues that this is the same <ref target="./Ursus_.xml"><persName xml:lang="la">Ursus</persName></ref> buried north of the road with another spouse: he would have therefore remarried, perhaps failing to keep the promise of being buried with his first wife (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
+                <p>However, the epigraph of <persName xml:lang="la">Cocceius Ursus</persName> represents an interesting testimony because, as noted by <persName>Lettich</persName> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>), it reveals the persistence of this <term xml:lang="la">gentilicium</term> during Late Antiquity.</p>
+                <p><persName>Lettich</persName> argues that this is the same <ref target="./ursus_.xml"><persName xml:lang="la">Ursus</persName></ref> buried north of the road with another spouse: he would have therefore remarried, perhaps failing to keep the promise of being buried with his first wife (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
                 <p>Il gentilizio <persName xml:lang="la">Cocceius</persName> risale probabilmente alla fine del I sec. d.C. Il più famoso esponente è l’imperatore <persName xml:lang="la">Cocceius Nerva</persName>, ma l’epigrafia attesta l’esistenza di questo <term xml:lang="la">nomen</term> in Veneto in età alto imperiale: ad <placeName>Altino</placeName> visse un liberto con il nome di <persName xml:lang="la">Marcus Cocceius</persName> (<term xml:lang="la">CIL</term> V 2217; <term xml:lang="la">CIL</term> V 2218) e ad <placeName>Aquileia</placeName> fu sepolta <persName xml:lang="la">Cocceia Pompeia</persName> (<term xml:lang="la">CIL</term> V 1172).</p>
-                <p>Tuttavia, l’epigrafe di <persName xml:lang="la">Cocceius Ursus</persName> rappresenta una testimonianza interessante poiché, come nota <persName>Lettich</persName> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 100</ref>), rivela la persistenza di questo gentilizio durante la tarda antichità.</p>
-                <p><persName>Lettich</persName> sostiene che si tratti dello stesso <ref target="./Ursus_.xml"><persName xml:lang="la">Ursus</persName></ref> seppellito a nord della strada con un’altra coniuge: si sarebbe dunque risposato, forse non mantenendo nemmeno la promessa di farsi seppellire con la prima moglie (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
+                <p>Tuttavia, l’epigrafe di <persName xml:lang="la">Cocceius Ursus</persName> rappresenta una testimonianza interessante poiché, come nota <persName>Lettich</persName> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>), rivela la persistenza di questo gentilizio durante la tarda antichità.</p>
+                <p><persName>Lettich</persName> sostiene che si tratti dello stesso <ref target="./ursus_.xml"><persName xml:lang="la">Ursus</persName></ref> seppellito a nord della strada con un’altra coniuge: si sarebbe dunque risposato, forse non mantenendo nemmeno la promessa di farsi seppellire con la prima moglie (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">26</citedRange>
                         <note type="number">nr. 15</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">294</citedRange>
                         <note type="number">nr. 20</note>
                     </bibl>
                     <bibl xml:id="cilv8736">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8736</title>
                     </bibl>
                     <bibl xml:id="ilcv844">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 844</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">100</citedRange>
                         <note type="number">nr. 65</note>
                     </bibl>
                     <bibl xml:id="edr097895">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097895">EDR097895</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-22">22-11-2007</date>
