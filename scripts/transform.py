@@ -4,7 +4,7 @@ from saxonche import PySaxonProcessor
 def transform_xml():
     xml_dir = 'inscriptions'
     xslt_path = 'xslt/epidoc-to-html.xsl'
-    output_dir = 'docs/pages'
+    output_dir = 'docs/pages/inscriptions'
 
     os.makedirs(output_dir, exist_ok=True)
 
@@ -15,22 +15,21 @@ def transform_xml():
             print(f"Error: {xslt_path} non found")
             return
 
-        # Navbar da iniettare per coerenza col tuo sito
         header_html = """
         <header>
             <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
             <nav class="navbar">
                 <ul class="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="inscriptions.html">Inscriptions</a></li>
-                    <li><a href="history.html">History of the Eastern Necropolis</a></li>
-                    <li><a href="abouttheinscriptions.html">About the inscriptions</a></li>
-                    <li><a href="corpora_databases.html">Corpora and Databases</a></li>
-                    <li><a href="bibliography.html">Bibliography</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../inscriptions.html">Inscriptions</a></li>
+                    <li><a href="../history.html">History of the Eastern Necropolis</a></li>
+                    <li><a href="../abouttheinscriptions.html">About the inscriptions</a></li>
+                    <li><a href="../corpora_databases.html">Corpora and Databases</a></li>
+                    <li><a href="../bibliography.html">Bibliography</a></li>
                 </ul>
             </nav>
         </header>
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../../css/style.css">
         """
 
         for filename in os.listdir(xml_dir):
