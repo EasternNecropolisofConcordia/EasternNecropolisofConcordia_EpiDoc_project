@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Saturninus.xml</idno>
+                <idno type="filename">saturninus.xml</idno>
                 <idno type="TM">125660</idno>
                 <idno type="EDR">EDR097919</idno>
                 <idno type="UEL">29308</idno>
@@ -138,12 +138,12 @@
                         <decoDesc>
                             <decoNote xml:lang="en">
                                 <p>
-                                    A molded cornice borders the front of the sarcophagus. According to Bertolini, the sarcophagus was described as one of the largest <term xml:lang="la">arcae</term> and as lacking any decoration, except for a chrismon carved on the pediment of the lid on its western side <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 21, no. 2)</ref>.
+                                    A molded cornice borders the front of the sarcophagus. According to Bertolini, the sarcophagus was described as one of the largest <term xml:lang="la">arcae</term> and as lacking any decoration, except for a chrismon carved on the pediment of the lid on its western side <ref target="../references/bibliography.xml#bertolini1874a">(Bertolini 1874a, 21, no. 2)</ref>.
                                 </p>
                             </decoNote>
                             <decoNote xml:lang="it">
                                 <p>
-                                    Una cornice modanata corre lungo il perimetro della fronte del sarcofago. Secondo Bertolini, il sarcofago era "una delle arche di maggior dimensione" e aveva “verun ornato, solo sul timpano del coperchio dal lato di ponente è scolpito un chrismon” <ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">(Bertolini 1874a, 21, nr. 2)</ref>.
+                                    Una cornice modanata corre lungo il perimetro della fronte del sarcofago. Secondo Bertolini, il sarcofago era "una delle arche di maggior dimensione" e aveva “verun ornato, solo sul timpano del coperchio dal lato di ponente è scolpito un chrismon” <ref target="../references/bibliography.xml#bertolini1874a">(Bertolini 1874a, 21, nr. 2)</ref>.
                                 </p>
                             </decoNote>
                         </decoDesc>
@@ -216,66 +216,74 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    In this context, the term <term xml:lang="la">centenarius</term> does not denote a military rank, but rather a civil official <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 63)</ref>. The designation originated in the Middle Imperial period to identify a category of officials receiving an annual salary of one hundred thousand sesterces, and it continued to be used even after this monetary unit had fallen into disuse <bibl corresp="#lettich1983">(Lettich 1983, 55)</bibl>.
+                    In this context, the term <term xml:lang="la">centenarius</term> does not denote a military rank, but rather a civil official <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 63)</ref>. The designation originated in the Middle Imperial period to identify a category of officials receiving an annual salary of one hundred thousand sesterces, and it continued to be used even after this monetary unit had fallen into disuse <bibl corresp="#lettich1983">(Lettich 1983, 55)</bibl>.
                 </p>
                 <p>
-                    The prefecture mentioned in the inscription is less clearly identifiable. According to Hoffmann, it cannot refer to the Praetorian Prefecture of Italy, Illyricum, and Africa, since in such a case the abbreviated title would have been <term xml:lang="la">praefectus Italiae</term> <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 90)</ref>, nor to the prefecture of Eastern Illyricum. He instead proposes a short-lived prefecture established when Illyricum was fully incorporated into the <term xml:lang="la">pars Orientis</term>, within a chronological framework spanning from 392 to 396 AD <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 90–91)</ref>.
+                    The prefecture mentioned in the inscription is less clearly identifiable. According to Hoffmann, it cannot refer to the Praetorian Prefecture of Italy, Illyricum, and Africa, since in such a case the abbreviated title would have been <term xml:lang="la">praefectus Italiae</term> <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 90)</ref>, nor to the prefecture of Eastern Illyricum. He instead proposes a short-lived prefecture established when Illyricum was fully incorporated into the <term xml:lang="la">pars Orientis</term>, within a chronological framework spanning from 392 to 396 AD <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 90–91)</ref>.
                 </p>
                 <p>
-                    Hoffmann further argues that officials originating from the Eastern Roman Empire would scarcely have travelled to Italy except in connection with an administrative reorganization following a major historical event, which he identifies as the Battle of the Frigidus, fought in September 394 AD <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 91)</ref>. Saturninus, therefore, prior to his arrival at Concordia, is likely to have held office in <term xml:lang="la">Dacia Ripensis</term>, a territorial division within the prefecture of Illyricum <ref target="../Bibliography/Master_Bibliography.xml#cil">(CIL V, p. 1060)</ref>.
+                    Hoffmann further argues that officials originating from the Eastern Roman Empire would scarcely have travelled to Italy except in connection with an administrative reorganization following a major historical event, which he identifies as the Battle of the Frigidus, fought in September 394 AD <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 91)</ref>. Saturninus, therefore, prior to his arrival at Concordia, is likely to have held office in <term xml:lang="la">Dacia Ripensis</term>, a territorial division within the prefecture of Illyricum <ref target="../references/corpora_databases.xml#cil">(CIL V, p. 1060)</ref>.
                 </p>
             </div>
             <div type="commentary" xml:lang="it">
                 <p>
-                    Il termine <term xml:lang="la">centenarius</term> in questo caso non si riferisce a un grado dell’esercito, ma a un funzionario civile <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 63)</ref>. Il nome nasce in età medio-imperiale per indicare una categoria di funzionari che percepiva un salario annuo di centomila sesterzi e sopravvive anche dopo il progressivo abbandono di questa unità monetaria <bibl corresp="#lettich1983">(Lettich 1983, 55)</bibl>.
+                    Il termine <term xml:lang="la">centenarius</term> in questo caso non si riferisce a un grado dell’esercito, ma a un funzionario civile <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 63)</ref>. Il nome nasce in età medio-imperiale per indicare una categoria di funzionari che percepiva un salario annuo di centomila sesterzi e sopravvive anche dopo il progressivo abbandono di questa unità monetaria <bibl corresp="#lettich1983">(Lettich 1983, 55)</bibl>.
                 </p>
                 <p>
-                    Meno chiara risulta la prefettura qui menzionata. Secondo Hoffmann non si tratta della prefettura del pretorio d’Italia, Illirico e Africa, poiché in tal caso l’abbreviazione sarebbe stata <term xml:lang="la">praefectus Italiae</term> <term xml:lang="la">praefectus Italiae</term> <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 90)</ref>, né della prefettura dell’Illirico Orientale. Egli propone piuttosto l’esistenza di una prefettura di breve durata, istituita quando l’Illirico fu completamente annesso alla <term xml:lang="la">pars Orientis</term>, in un arco cronologico compreso tra il 392 e il 396 d.C. <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 90–91)</ref>.
+                    Meno chiara risulta la prefettura qui menzionata. Secondo Hoffmann non si tratta della prefettura del pretorio d’Italia, Illirico e Africa, poiché in tal caso l’abbreviazione sarebbe stata <term xml:lang="la">praefectus Italiae</term> <term xml:lang="la">praefectus Italiae</term> <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 90)</ref>, né della prefettura dell’Illirico Orientale. Egli propone piuttosto l’esistenza di una prefettura di breve durata, istituita quando l’Illirico fu completamente annesso alla <term xml:lang="la">pars Orientis</term>, in un arco cronologico compreso tra il 392 e il 396 d.C. <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 90–91)</ref>.
                 </p>
                 <p>
-                    Hoffmann aggiunge che è poco probabile che funzionari provenienti dall’Impero d’Oriente si siano recati in Italia se non in occasione di una riorganizzazione amministrativa successiva a un evento di particolare rilevanza storica, individuato dallo studioso nella battaglia del Frigido, combattuta nel settembre del 394 d.C. <ref target="../Bibliography/Master_Bibliography.xml#hoffmann1969">(Hoffmann 1969, 91)</ref>. Saturninus, pertanto, prima di giungere a Concordia, avrebbe esercitato la propria funzione nella <term xml:lang="la">Dacia Ripensis</term>, circoscrizione appartenente alla prefettura dell’Illirico <ref target="../Bibliography/Master_Bibliography.xml#cil">(CIL V, p. 1060)</ref>.
+                    Hoffmann aggiunge che è poco probabile che funzionari provenienti dall’Impero d’Oriente si siano recati in Italia se non in occasione di una riorganizzazione amministrativa successiva a un evento di particolare rilevanza storica, individuato dallo studioso nella battaglia del Frigido, combattuta nel settembre del 394 d.C. <ref target="../references/bibliography.xml#hoffmann1969">(Hoffmann 1969, 91)</ref>. Saturninus, pertanto, prima di giungere a Concordia, avrebbe esercitato la propria funzione nella <term xml:lang="la">Dacia Ripensis</term>, circoscrizione appartenente alla prefettura dell’Illirico <ref target="../references/corpora_databases.xml#cil">(CIL V, p. 1060)</ref>.
                 </p>
             </div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1873a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1873a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1873a"/>
                         <title>Bertolini 1873a</title>
                         <citedRange unit="page">61</citedRange>
                     </bibl>
                     <bibl xml:id="bertolini1873b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1873b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1873b"/>
                         <title>Bertolini 1873b</title>
                         <citedRange unit="page">63-64</citedRange>
                     </bibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">21</citedRange>
                         <note type="number">nr. 2</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
                         <title>Bertolini 1875b</title>
                         <citedRange unit="page">114</citedRange>
                         <note type="number">nr. 6</note>
                     </bibl>
                     <bibl xml:id="cilv8771">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8771</title>
                     </bibl>
                     <bibl xml:id="ils1962">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ils"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
                         <title><term xml:lang="la">ILS</term> 1962</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">54-55</citedRange>
                         <note type="number">nr. 11</note>
                     </bibl>
                     <bibl xml:id="edr097919">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097919">EDR097919</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-29">29-11-2007</date>
