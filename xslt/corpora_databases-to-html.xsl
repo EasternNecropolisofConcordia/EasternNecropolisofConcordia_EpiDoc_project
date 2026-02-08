@@ -16,7 +16,6 @@
                 <div class="epigraphic_corpora">
                     <h2>EPIGRAPHIC CORPORA</h2>
                     <table>
-                        <caption>Epigraphic Corpora</caption>
                         <xsl:apply-templates
                             select="//tei:listBibl[@type = 'epigraphic_corpora']/tei:bibl"
                             mode="corpora"/>
@@ -26,7 +25,6 @@
                 <div class="prosopographical_corpora">
                     <h2>PROSOPOGRAPHICAL CORPORA</h2>
                     <table>
-                        <caption>Prosopographical Corpora</caption>
                         <xsl:apply-templates
                             select="//tei:listBibl[@type = 'prosopographical_corpora']/tei:bibl"
                             mode="corpora"/>
@@ -36,7 +34,6 @@
                 <div class="databases">
                     <h2>DIGITAL DATABASES</h2>
                     <table>
-                        <caption>Digital Databases</caption>
                         <xsl:apply-templates
                             select="//tei:listBibl[@type = 'databases']/tei:bibl"
                             mode="databases"/>
