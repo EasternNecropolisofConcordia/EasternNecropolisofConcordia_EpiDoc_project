@@ -6,7 +6,7 @@ def run():
     root_dir = os.path.abspath(os.path.join(script_dir, '..'))
     
     xml_dir = os.path.join(root_dir, 'inscriptions')
-    output_dir = os.path.join(root_dir, 'docs', 'pages')
+    output_dir = os.path.join(root_dir, 'docs', 'pages', 'inscriptions')
     output_file = os.path.join(output_dir, 'inscriptions.html')
 
     if not os.path.exists(xml_dir):
