@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Martinianus_Severina.xml</idno>
+                <idno type="filename">martinianus_severina.xml</idno>
                 <idno type="TM">125643</idno>
                 <idno type="EDR">EDR097902</idno>
             </publicationStmt>
@@ -56,7 +56,7 @@
                             <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
                             <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
                             <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
-                            <date>2024</date>
+                            <date type="autopsy">2024</date>
                         </provenance>
                     </history>
                     <physDesc>
@@ -77,7 +77,7 @@
                                     </material>
                                     <dimensions>
                                         <height unit="cm">51</height>
-                                        <width unit="cm">80,5</width>
+                                        <width unit="cm">80.5</width>
                                     </dimensions>
                                 </support>
                                 <condition>
@@ -118,12 +118,12 @@
                             <decoNote xml:lang="en">
                                 <p>A <objectType>moulded border</objectType> runs around the perimeter of the panel.</p>
                                 
-                                <p>The figurative apparatus, now lost, is described as follows: on the right side of the viewer (the lid) a dove was carved in relief, while on the western pediment appeared the Constantinian monogram enclosed within a wreath of foliage, whose ribbons extended horizontally downward. The short side of the sarcophagus beneath this pediment bore a sculpted temple supported by two columns, with a patera on its tympanum. On either side of the inscription were two arches, likewise supported by very roughly executed columns, beneath one of which stood a vessel. (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
+                                <p>The figurative apparatus, now lost, is described as follows: on the right side of the viewer (the lid) a dove was carved in relief, while on the western pediment appeared the Constantinian monogram enclosed within a wreath of foliage, whose ribbons extended horizontally downward. The short side of the sarcophagus beneath this pediment bore a sculpted temple supported by two columns, with a patera on its tympanum. On either side of the inscription were two arches, likewise supported by very roughly executed columns, beneath one of which stood a vessel. (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
                             </decoNote>
                             <decoNote xml:lang="it">
                                 <p>Lo specchio epigrafico è delimitato da una <objectType>cornice modanata</objectType>.</p>
                                 
-                                <p>L’apparato figurativo, oggi perduto, fu così descritto da Bertolini: “[…] sull’ala destra del riguardante (coperchio) ha in rilievo una colomba, e sul frontone occidentale il monogramma di Costantino in corona di fronde, le cui bende si stendono orizzontalmente al basso. Il lato minore dell’arca che è al disotto di questo frontone, porta scolpito un tempio sostenuto da due colonne e sul timpano d’esso una patera. Ai fianchi dell’epigrafe due archi sostenuti pure da rozzissime colonne e sotto uno di essi un vaso” (<ref target="../Bibliography/Master_Bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
+                                <p>L’apparato figurativo, oggi perduto, fu così descritto da Bertolini: “[…] sull’ala destra del riguardante (coperchio) ha in rilievo una colomba, e sul frontone occidentale il monogramma di Costantino in corona di fronde, le cui bende si stendono orizzontalmente al basso. Il lato minore dell’arca che è al disotto di questo frontone, porta scolpito un tempio sostenuto da due colonne e sul timpano d’esso una patera. Ai fianchi dell’epigrafe due archi sostenuti pure da rozzissime colonne e sotto uno di essi un vaso” (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
                             </decoNote>
                         </decoDesc>
                     </physDesc>
@@ -212,61 +212,68 @@
             <div type="commentary" xml:lang="en">
                 <p><persName ref="#martinianus" xml:lang="la">Flavius Martinianus</persName> commissioned during his lifetime a sarcophagus for himself and for his wife <persName ref="#severina" xml:lang="la">Aurelia Severina</persName>. Anyone who violated the tomb would have to pay the treasury three ounces of gold.</p>
                 
-                <p><persName xml:lang="la">Martinianus</persName> was a <term xml:lang="la">fabricensis</term>, a worker in the arrow factory of Concordia, and held the role of <term xml:lang="la">biarchus</term>, a subordinate military rank (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
+                <p><persName xml:lang="la">Martinianus</persName> was a <term xml:lang="la">fabricensis</term>, a worker in the arrow factory of Concordia, and held the role of <term xml:lang="la">biarchus</term>, a subordinate military rank (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
                 
-                <p>The <term xml:lang="la">cognomen Martinianus</term> is attested from the time of Emperor Carus (<ref target="../Bibliography/Master_Bibliography.xml">PIR² V, 23-24</ref>). In late antiquity, <persName xml:lang="la">Sextus Marcius Martinianus</persName> was famous, <term xml:lang="la">magister officiorum</term> of Emperor Licinius and appointed Caesar by the latter shortly before being deposed by Constantine and then executed (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 563</ref>).</p>
+                <p>The <term xml:lang="la">cognomen Martinianus</term> is attested from the time of Emperor Carus (<ref target="../references/corpora_databases.xml#pir2">PIR² V, 23-24</ref>). In late antiquity, <persName xml:lang="la">Sextus Marcius Martinianus</persName> was famous, <term xml:lang="la">magister officiorum</term> of Emperor Licinius and appointed Caesar by the latter shortly before being deposed by Constantine and then executed (<ref target="../references/corpora_databases.xml#plre">PLRE I, 563</ref>).</p>
                 
-                <p><persName xml:lang="la">Martinianus</persName> is also the name of a veteran born in Dacia in the second half of the 3rd century who, after serving for forty-five years, retired to Milan, where he established his tomb (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
+                <p><persName xml:lang="la">Martinianus</persName> is also the name of a veteran born in Dacia in the second half of the 3rd century who, after serving for forty-five years, retired to Milan, where he established his tomb (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
                 
-                <p>The <term xml:lang="la">gentilicium Aurelius</term>, already widespread in Concordia from the early imperial period (<ref target="../Bibliography/Master_Bibliography.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./Gaudentius_Martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./Alexandria_Sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./Dionisia_A.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./Dionisia_B.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./Aristo_Veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
+                <p>The <term xml:lang="la">gentilicium Aurelius</term>, already widespread in Concordia from the early imperial period (<ref target="../references/corpora_databases.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./gaudentius_martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./alexandria_sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./dionisia_a.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./dionisia_b.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./aristo_veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
                 <p><persName xml:lang="la">Flavius Martinianus</persName> commissionò da vivo un sarcofago per sé e per la moglie <persName xml:lang="la">Aurelia Severina</persName>. Chiunque avesse violato la tomba, avrebbe dovuto versare al fisco tre once d'oro.</p>
                 
-                <p><persName xml:lang="la">Martinianus</persName> era un <term xml:lang="la">fabricensis</term>, un operaio della fabbrica di frecce di Concordia e occupava il ruolo di <term xml:lang="la">biarchus</term>, un grado militare subalterno (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
+                <p><persName xml:lang="la">Martinianus</persName> era un <term xml:lang="la">fabricensis</term>, un operaio della fabbrica di frecce di Concordia e occupava il ruolo di <term xml:lang="la">biarchus</term>, un grado militare subalterno (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
                 
-                <p>Il <term xml:lang="la">cognomen Martinianus</term> è attestato già dai tempi dell'imperatore Caro (<ref target="../Bibliography/Master_Bibliography.xml">PIR² V, 23-24</ref>). In antichità tarda è famoso <persName xml:lang="la">Sesto Marzio Martiniano</persName>, <term xml:lang="la">magister officiorum</term> dell'imperatore Licinio e nominato da quest'ultimo Cesare poco prima che venisse destituito da Costantino per poi essere giustiziato (<ref target="../Bibliography/Master_Bibliography.xml#plre">PLRE I, 563</ref>).</p>
+                <p>Il <term xml:lang="la">cognomen Martinianus</term> è attestato già dai tempi dell'imperatore Caro (<ref target="../references/corpora_databases.xml#pir2">PIR² V, 23-24</ref>). In antichità tarda è famoso <persName xml:lang="la">Sesto Marzio Martiniano</persName>, <term xml:lang="la">magister officiorum</term> dell'imperatore Licinio e nominato da quest'ultimo Cesare poco prima che venisse destituito da Costantino per poi essere giustiziato (<ref target="../references/corpora_databases.xml#plre">PLRE I, 563</ref>).</p>
                 
-                <p><persName xml:lang="la">Martinianus</persName> è anche il nome di un veterano nato in Dacia nella seconda metà del III secolo che, dopo aver militato per quarantacinque anni, si ritirò a Milano, dove stabilì la propria tomba (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
+                <p><persName xml:lang="la">Martinianus</persName> è anche il nome di un veterano nato in Dacia nella seconda metà del III secolo che, dopo aver militato per quarantacinque anni, si ritirò a Milano, dove stabilì la propria tomba (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
                 
-                <p>Il gentilizio <term xml:lang="la">Aurelius</term>, già diffuso a Concordia a partire dall'alto impero (<ref target="../Bibliography/Master_Bibliography.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./Gaudentius_Martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./Alexandria_Sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./Dionisia_A.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./Dionisia_B.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./Aristo_Veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
+                <p>Il gentilizio <term xml:lang="la">Aurelius</term>, già diffuso a Concordia a partire dall'alto impero (<ref target="../references/corpora_databases.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./gaudentius_martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./alexandria_sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./dionisia_a.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./dionisia_b.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./aristo_veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">24</citedRange>
                         <note type="number">nr. 9</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">284</citedRange>
                         <note type="number">nr. 5</note>
                     </bibl>
                     <bibl xml:id="bertolini1875b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1875b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
                         <title>Bertolini 1875b</title>
                         <citedRange unit="page">116</citedRange>
                         <note type="number">nr. 8</note>
                     </bibl>
                     <bibl xml:id="cilv8754">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8754</title>
                     </bibl>
                     <bibl xml:id="ilcv520">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 520</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">56-57</citedRange>
                         <note type="number">nr. 13</note>
                     </bibl>
                     <bibl xml:id="edr097902">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097902">EDR097902</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-26">26-11-2007</date>
