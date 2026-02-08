@@ -30,7 +30,8 @@ def transform_bibliography():
                 <li><a href="../inscriptions.html">Inscriptions</a></li>
                 <li><a href="../history.html">History of the Eastern Necropolis</a></li>
                 <li><a href="../abouttheinscriptions.html">About the inscriptions</a></li>
-                <li class="dropdown">References ▾
+                <li class="dropdown">
+                <a href="#">References ▾</a>
                 <ul class="submenu">
                 <li><a href="bibliography.html">Bibliography</a></li>
                 <li><a href="corpora_databases.html">Corpora and Databases</a></li>
