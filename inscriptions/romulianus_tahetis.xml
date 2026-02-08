@@ -10,7 +10,7 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Romulianus_Tahetis.xml</idno>
+                <idno type="filename">romulianus_tahetis.xml</idno>
                 <idno type="TM">125598</idno>
                 <idno type="EDR">EDR097857</idno>
                 <idno type="UEL">29299</idno>
@@ -235,60 +235,68 @@
             <div type="commentary" xml:lang="en">
                 <p><persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, <term xml:lang="la">praepositus</term> of the arrow factory in Concordia, commissions the tomb for his wife <persName ref="#tahetis" xml:lang="la">Tahetis</persName> and himself. Anyone who placed the corpse of someone else in this sarcophagus would have to pay the <term xml:lang="la">res publica</term> one thousand <term xml:lang="la">folles</term>.</p>
                 
-                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, as <term xml:lang="la">praepositus</term>, was head of the arms factory. The same individual is mentioned in another epigraph found in the Persico estate where, again as dedicator, he commissions the burial for <ref target="./Romulianus_Domnula.xml"><persName xml:lang="la">Aurelia Domnula</persName></ref>. This is not the only evidence within the necropolis of a man who becomes widowed and remarries: consider the two inscriptions of <ref target="./Ursus_Decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
+                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, as <term xml:lang="la">praepositus</term>, was head of the arms factory. The same individual is mentioned in another epigraph found in the Persico estate where, again as dedicator, he commissions the burial for <ref target="./romulianus_domnula.xml"><persName xml:lang="la">Aurelia Domnula</persName></ref>. This is not the only evidence within the necropolis of a man who becomes widowed and remarries: consider the two inscriptions of <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
                 
-                <p>According to Lettich, <persName xml:lang="la">Domnula</persName> would be the second wife of the <term xml:lang="la">fabricensis</term>, since in this second epigraph it is written "<term xml:lang="la">ex p</term>(<term xml:lang="la">rae</term>)<term xml:lang="la">p</term>(<term xml:lang="la">ositus</term>)" and would therefore represent the retirement of <persName xml:lang="la">Romulianus</persName> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>). However, in the inscription found in the Persico estate, the intention of <persName xml:lang="la">Romulianus</persName> to be buried with <persName xml:lang="la">Domnula</persName> is not made explicit, unlike what is declared with his first wife <persName xml:lang="la">Tahetis</persName>.</p>
+                <p>According to Lettich, <persName xml:lang="la">Domnula</persName> would be the second wife of the <term xml:lang="la">fabricensis</term>, since in this second epigraph it is written "<term xml:lang="la">ex p</term>(<term xml:lang="la">rae</term>)<term xml:lang="la">p</term>(<term xml:lang="la">ositus</term>)" and would therefore represent the retirement of <persName xml:lang="la">Romulianus</persName> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>). However, in the inscription found in the Persico estate, the intention of <persName xml:lang="la">Romulianus</persName> to be buried with <persName xml:lang="la">Domnula</persName> is not made explicit, unlike what is declared with his first wife <persName xml:lang="la">Tahetis</persName>.</p>
                 
-                <p>The name <persName xml:lang="la">Tahetis</persName> is foreign to both Latin and Greek onomastics and probably has Egyptian origins (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46</ref>). According to Mommsen, in this context <term xml:lang="la">res publica</term> would indicate the <term xml:lang="la">civitas Concordiensis</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V, p. 1060</ref>). The <term xml:lang="la">folles</term> were coins introduced by Diocletian that continued to be used until the middle of the 4th century (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>).</p>
+                <p>The name <persName xml:lang="la">Tahetis</persName> is foreign to both Latin and Greek onomastics and probably has Egyptian origins (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46</ref>). According to Mommsen, in this context <term xml:lang="la">res publica</term> would indicate the <term xml:lang="la">civitas Concordiensis</term> (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V, p. 1060</ref>). The <term xml:lang="la">folles</term> were coins introduced by Diocletian that continued to be used until the middle of the 4th century (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
                 <p><persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, <term xml:lang="la">praepositus</term> della fabbrica di frecce a Concordia, commissiona l'arca per la moglie <persName ref="#tahetis" xml:lang="la">Tahetis</persName> e sé stesso. Chiunque avesse posto il cadavere di qualcun altro in questo sarcofago, avrebbe dovuto versare alla <term xml:lang="la">res publica</term> mille <term xml:lang="la">folles</term>.</p>
                 
-                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, in quanto <term xml:lang="la">praepositus</term>, era a capo della fabbrica d'armi. Lo stesso individuo è citato in un'altra epigrafe trovata nel fondo Persico dove, sempre come dedicante, commissiona la sepoltura per <ref target="./Romulianus_Domnula.xml"><persName xml:lang="la">Aurelia Domnula</persName></ref>. Non è l'unica testimonianza all'interno della necropoli di un uomo che diventa vedovo e si risposa: si pensi alle due iscrizioni di <ref target="./Ursus_Decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
+                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, in quanto <term xml:lang="la">praepositus</term>, era a capo della fabbrica d'armi. Lo stesso individuo è citato in un'altra epigrafe trovata nel fondo Persico dove, sempre come dedicante, commissiona la sepoltura per <ref target="./romulianus_domnula.xml"><persName xml:lang="la">Aurelia Domnula</persName></ref>. Non è l'unica testimonianza all'interno della necropoli di un uomo che diventa vedovo e si risposa: si pensi alle due iscrizioni di <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
                 
-                <p>Secondo Lettich, <persName xml:lang="la">Domnula</persName> sarebbe la seconda moglie del <term xml:lang="la">fabricensis</term>, dal momento che in questa seconda epigrafe è scritto "<term xml:lang="la">ex p</term>(<term xml:lang="la">rae</term>)<term xml:lang="la">p</term>(<term xml:lang="la">ositus</term>)" e rappresenterebbe dunque il pensionamento di <persName xml:lang="la">Romulianus</persName> (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>). Tuttavia nell'iscrizione rinvenuta nel fondo Persico non è esplicitata l'intenzione da parte di <persName xml:lang="la">Romulianus</persName> di essere seppellito con <persName xml:lang="la">Domnula</persName>, a differenza di quanto viene dichiarato con la prima moglie <persName xml:lang="la">Tahetis</persName>.</p>
+                <p>Secondo Lettich, <persName xml:lang="la">Domnula</persName> sarebbe la seconda moglie del <term xml:lang="la">fabricensis</term>, dal momento che in questa seconda epigrafe è scritto "<term xml:lang="la">ex p</term>(<term xml:lang="la">rae</term>)<term xml:lang="la">p</term>(<term xml:lang="la">ositus</term>)" e rappresenterebbe dunque il pensionamento di <persName xml:lang="la">Romulianus</persName> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>). Tuttavia nell'iscrizione rinvenuta nel fondo Persico non è esplicitata l'intenzione da parte di <persName xml:lang="la">Romulianus</persName> di essere seppellito con <persName xml:lang="la">Domnula</persName>, a differenza di quanto viene dichiarato con la prima moglie <persName xml:lang="la">Tahetis</persName>.</p>
                 
-                <p>Il nome <persName xml:lang="la">Tahetis</persName> è estraneo sia all'onomastica latina sia a quella greca e probabilmente ha origini egiziane (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46</ref>). Secondo Mommsen, in questo contesto <term xml:lang="la">res publica</term> indicherebbe la <term xml:lang="la">civitas Concordiensis</term> (<ref target="../Bibliography/Master_Bibliography.xml#cil"><term xml:lang="la">CIL</term> V, p. 1060</ref>). I <term xml:lang="la">folles</term> erano delle monete inaugurate da Diocleziano che continuarono ad essere utilizzate fino alla metà del IV secolo (<ref target="../Bibliography/Master_Bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>).</p>
+                <p>Il nome <persName xml:lang="la">Tahetis</persName> è estraneo sia all'onomastica latina sia a quella greca e probabilmente ha origini egiziane (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46</ref>). Secondo Mommsen, in questo contesto <term xml:lang="la">res publica</term> indicherebbe la <term xml:lang="la">civitas Concordiensis</term> (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V, p. 1060</ref>). I <term xml:lang="la">folles</term> erano delle monete inaugurate da Diocleziano che continuarono ad essere utilizzate fino alla metà del IV secolo (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl> 
                     <bibl xml:id="bertolini1874a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
                         <title>Bertolini 1874a</title>
                         <citedRange unit="page">32</citedRange>
                         <note type="number">n. 28</note>
                     </bibl>
                     <bibl xml:id="bertolini1874b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1874b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
                         <title>Bertolini 1874b</title>
                         <citedRange unit="page">294</citedRange>
                         <note type="number">n. 21</note>
                     </bibl>
                     <bibl xml:id="cilv8697">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8697</title>
                     </bibl>
                     <bibl xml:id="cilv8721">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8721</title>
                     </bibl>
                     <bibl xml:id="bertolini1892">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1892"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1892"/>
+                        <ptr target="../references/bibliography.xml#bertolini1892"/>
                         <title>Bertolini 1982</title>
                         <citedRange unit="page">44</citedRange>
                     </bibl>
                     <bibl xml:id="ilcv538a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 538 A</title>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">45-47</citedRange>
                         <note type="number">n. 1</note>
                     </bibl>
                     <bibl xml:id="edr097857">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097857">EDR097857</ref></title>
                         <author>Damiana Baldassarra</author>
                         <date when="2007-11-21">21-11-2007</date>
