@@ -15,6 +15,8 @@ def transform_xml():
             print(f"Error: {xslt_path} non found")
             return
 
+        # Definiamo l'header con i link che salgono di un livello (..) per tornare a /pages/ 
+        # e di due livelli (../../) per tornare alla root/index/css
         header_html = """
         <header>
             <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
@@ -29,7 +31,6 @@ def transform_xml():
                 </ul>
             </nav>
         </header>
-        <link rel="stylesheet" href="../../css/style.css">
         """
 
         for filename in os.listdir(xml_dir):
@@ -42,7 +43,21 @@ def transform_xml():
                     executable = xslt_proc.compile_stylesheet(stylesheet_file=xslt_path)
                     output = executable.transform_to_string(source_file=xml_path)
                     
-                    full_page = f"<!DOCTYPE html><html><head><meta charset='UTF-8'><link rel='stylesheet' href='../css/style.css'></head><body>{header_html}<main>{output}</main></body></html>"
+                    # CORREZIONE: Il CSS deve salire di due livelli per uscire da /inscriptions/ e poi da /pages/
+                    full_page = f"""<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='../../css/style.css'>
+</head>
+<body>
+    {header_html}
+    <main>
+        {output}
+    </main>
+</body>
+</html>"""
                     
                     with open(output_path, 'w', encoding='utf-8') as f:
                         f.write(full_page)
