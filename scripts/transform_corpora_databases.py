@@ -28,8 +28,15 @@ def transform_bibliography():
             <ul class="menu">
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../inscriptions.html">Inscriptions</a></li>
-                <li><a href="../history.html">History of the Eastern Necropolis</a></li>
-                <li><a href="../abouttheinscriptions.html">About the inscriptions</a></li>
+                <li class="dropdown">
+                <a href="#">Study & Context ▾</a>
+                <ul class="submenu">
+                <li><a href="../context/history.html">History</a></li>
+                <li><a href="../context/about_people.html">About People Buried</a></li>
+                <li><a href="../context/supports.html">Supports & Monuments</a></li>
+                <li><a href="../context/chronology.html">Dating & Chronology</a></li>
+                </ul>
+                </li>
                 <li class="dropdown">
                 <a href="#">References ▾</a>
                 <ul class="submenu">
