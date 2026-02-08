@@ -10,9 +10,10 @@
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">Vassio.xml</idno>
+                <idno type="filename">vassio.xml</idno>
                 <idno type="TM">125662</idno>
                 <idno type="EDR">EDR097921</idno>
+                <idno type="UEL">29333</idno>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
@@ -72,7 +73,7 @@
                                     <material xml:lang="en">
                                         Limestone.
                                     </material>
-                                    <material xml:id="it">
+                                    <material xml:lang="it">
                                         Pietra calcarea.
                                     </material>
                                     <dimensions>
@@ -83,10 +84,10 @@
                                 </support>
                                 <condition>
                                     <p xml:lang="en">
-                                        This is the only sarcophagus from the Eastern Necropolis preserved in its entirety, apart from that of <ref target="./Firmina.xml" xml:lang="la">Firmina</ref>.
+                                        This is the only sarcophagus from the Eastern Necropolis preserved in its entirety, apart from that of <ref target="./firmina.xml" xml:lang="la">Firmina</ref>.
                                     </p>
                                     <p xml:lang="it">
-                                        Si tratta dell'unico sarcofago della Necropoli di Levante preservato nella sua interezza oltre a quello di <ref target="./Firmina.xml" xml:lang="la">Firmina</ref>.
+                                        Si tratta dell'unico sarcofago della Necropoli di Levante preservato nella sua interezza oltre a quello di <ref target="./firmina.xml" xml:lang="la">Firmina</ref>.
                                     </p>
                                 </condition>
                             </supportDesc>
@@ -104,7 +105,7 @@
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <height min="5" max="7" unit="cm">3-4</height>
+                                <height min="5" max="7" unit="cm">5-7</height>
                                 <note type="palaeographic" xml:lang="en">
                                     <p>
                                         Left-to-right direction, horizontal layout, vertical module, irregular <term xml:lang="la">ductus</term>, triangular-shaped interpunction, deep incision, centered layout.
@@ -192,13 +193,13 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
-                <div type="textpart" source="side_of_the_lid">
+            <div type="edition" xml:lang="la">
+                <div type="textpart" subtype="side_of_the_lid">
                     <ab>
                         <lb n="1"/><g ref="#chi-rho"/>
                     </ab>
                 </div>
-                <div type="textpart" source="chest" n="b">
+                <div type="textpart" subtype="chest" n="b">
                     <ab>
                         <lb n="1"/>Arca<surplus>m</surplus> <persName ref="#vassio">Vassioni</persName> <w xml:id="w1"><expan><abbr>camp<choice><sic>e</sic><corr>i</corr></choice>d</abbr><ex>octori</ex></expan></w>
                         <lb n="2"/>numeri <choice><reg>Batavorum</reg><orig><expan><abbr>Bataor</abbr><ex>um</ex></expan></orig></choice> <expan><abbr>sen</abbr><ex>iorum</ex></expan> quem sepe
@@ -231,7 +232,7 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>
-                    The tomb of <persName corresp="#vassio" xml:lang="la">Vassio</persName>, <term xml:lang="la">campidoctor</term> of the <term xml:lang="la">numerus</term> of the numbers of the <term xml:lang="la">Batavi</term> <term xml:lang="la">seniores</term>, who was buried by his wife <persName corresp="#suandacca" xml:lang="la">Suandacca</persName>, who lived with him 22 years, served 35 years in the army, and reached the age of 60.
+                    The tomb of <persName ref="#vassio" xml:lang="la">Vassio</persName>, <term xml:lang="la">campidoctor</term> of the <term xml:lang="la">numerus</term> of the numbers of the <term xml:lang="la">Batavi</term> <term xml:lang="la">seniores</term>, who was buried by his wife <persName ref="#suandacca" xml:lang="la">Suandacca</persName>, who lived with him 22 years, served 35 years in the army, and reached the age of 60.
                 </p>
                 <p>
                     If anyone wishes to move this tomb, he shall pay twenty-five sesterces to the <term xml:lang="la">fiscus</term>.
@@ -239,7 +240,7 @@
             </div>
             <div type="translation" xml:lang="it">
                 <p>
-                    L’arca di <persName corresp="#vassio" xml:lang="la">Vassio</persName>, <term xml:lang="la">campidoctor</term> del <term xml:lang="la">numerus</term> dei <term xml:lang="la">Batavi</term> <term xml:lang="la">seniores</term>, che fu sepolto dalla moglie <persName corresp="#suandacca" xml:lang="la">Suandacca</persName>, la quale visse con lui 22 anni, militò 35 anni e raggiunse l’età di 60 anni.
+                    L’arca di <persName ref="#vassio" xml:lang="la">Vassio</persName>, <term xml:lang="la">campidoctor</term> del <term xml:lang="la">numerus</term> dei <term xml:lang="la">Batavi</term> <term xml:lang="la">seniores</term>, che fu sepolto dalla moglie <persName ref="#suandacca" xml:lang="la">Suandacca</persName>, la quale visse con lui 22 anni, militò 35 anni e raggiunse l’età di 60 anni.
                 </p>
                 <p>
                     Se qualcuno vorrà spostare quest’arca, dovrà pagare al <term xml:lang="la">fiscus</term> venticinque sesterzi.
@@ -247,77 +248,85 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    Holder includes <persName xml:lang="la" corresp="#vassio">Vassio</persName> in his <term xml:lang="la">Corpus</term> of Celtic personal names, but he does not exclude the possibility that it may instead be a Germanic name, coming from the Batavi or the Burgundians <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1907, 121)</ref>.
+                    Holder includes <persName xml:lang="la" ref="#vassio">Vassio</persName> in his <term xml:lang="la">Corpus</term> of Celtic personal names, but he does not exclude the possibility that it may instead be a Germanic name, coming from the Batavi or the Burgundians <ref target="../references/bibliography.xml#holder">(Holder 1907, 121)</ref>.
                 </p>
 
                 <p>
-                    As for the wife, hers is a peculiar name, not attested elsewhere: Holder records both <persName xml:lang="la">Suandacca</persName> and <persName xml:lang="la">Vandacca</persName>, without being able to determine the correct reading <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649; Holder 1907, 98)</ref>. The initial part of the name may derive from Breton *chwant*, meaning “desire” <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649)</ref>.
+                    As for the wife, hers is a peculiar name, not attested elsewhere: Holder records both <persName xml:lang="la">Suandacca</persName> and <persName xml:lang="la">Vandacca</persName>, without being able to determine the correct reading <ref target="../references/bibliography.xml#holder">(Holder 1904, 1649; Holder 1907, 98)</ref>. The initial part of the name may derive from Breton *chwant*, meaning “desire” <ref target="../references/bibliography.xml#holder">(Holder 1904, 1649)</ref>.
                 </p>
                 <p>
-                    The <term xml:lang="la">campidoctor</term> had the role of training recruits and supervising work inside military camps <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>. Although Vegetius states that the <term xml:lang="la">centenarius</term> performed a function similar to that formerly carried out by the <term xml:lang="la">centurio</term> — “<term xml:lang="la">centuriones</term> […] <term xml:lang="la">qui nunc centenarii nominantur</term>” (Veget. II, 8) — Grosse considers the <term xml:lang="la">campidoctor</term> the true successor of the <term xml:lang="la">centurio</term> both in duties and hierarchical importance <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>.
+                    The <term xml:lang="la">campidoctor</term> had the role of training recruits and supervising work inside military camps <ref target="../references/bibliography.xml#grosse">(Grosse 1920, 126)</ref>. Although Vegetius states that the <term xml:lang="la">centenarius</term> performed a function similar to that formerly carried out by the <term xml:lang="la">centurio</term> — “<term xml:lang="la">centuriones</term> […] <term xml:lang="la">qui nunc centenarii nominantur</term>” (Veget. II, 8) — Grosse considers the <term xml:lang="la">campidoctor</term> the true successor of the <term xml:lang="la">centurio</term> both in duties and hierarchical importance <ref target="../references/bibliography.xml#grosse">(Grosse 1920, 126)</ref>.
                 </p>
                 <p>
-                    Ammianus Marcellinus reports the promotion of a <term xml:lang="la">campidoctor</term> to <term xml:lang="la">tribunus vacans</term>, thus from NCO to officer (Amm. XV 3, 10); for this reason Grosse argues that the <term xml:lang="la">campidoctor</term> was the highest position among the non-commissioned officers <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 127)</ref>.  
+                    Ammianus Marcellinus reports the promotion of a <term xml:lang="la">campidoctor</term> to <term xml:lang="la">tribunus vacans</term>, thus from NCO to officer (Amm. XV 3, 10); for this reason Grosse argues that the <term xml:lang="la">campidoctor</term> was the highest position among the non-commissioned officers <ref target="../references/bibliography.xml#grosse">(Grosse 1920, 127)</ref>.  
                 </p>
                 <p>
-                    According to <bibl corresp="#lettich1983">Lettich</bibl>, the presence of such an elderly <term xml:lang="la">campidoctor</term> and the fact that he was buried by his wife would be indications of a prolonged stay in Concordia by the <term xml:lang="la">Batavi seniores</term>.
+                    According to <bibl ref="#lettich1983">Lettich</bibl>, the presence of such an elderly <term xml:lang="la">campidoctor</term> and the fact that he was buried by his wife would be indications of a prolonged stay in Concordia by the <term xml:lang="la">Batavi seniores</term>.
                 </p>
 
             </div>
             <div type="commentary" xml:lang="it">
                 <p>
-                    Holder include <persName xml:lang="la" corresp="#vassio">Vassio</persName> nel suo <term xml:lang="la">Corpus</term> di nomi di origine celtica, ma non esclude che possa essere invece un nome germanico, proveniente dai Batavi o dai Burgundi <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1907, 121)</ref>.
+                    Holder include <persName xml:lang="la" ref="#vassio">Vassio</persName> nel suo <term xml:lang="la">Corpus</term> di nomi di origine celtica, ma non esclude che possa essere invece un nome germanico, proveniente dai Batavi o dai Burgundi <ref target="../references/bibliography.xml#holder">(Holder 1907, 121)</ref>.
                 </p>
                 <p>
-                    Per quanto riguarda la coniuge, si tratta di un nome peculiare, non attestato altrove: Holder riporta sia <persName xml:lang="la">Suandacca</persName> sia <persName xml:lang="la">Vandacca</persName>, non riuscendo a scegliere la versione corretta <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649; HOLDER 1907, 98)</ref>. La parte iniziale del nome forse deriva dal bretone *chwant*, che significa “desiderio” <ref target="../Bibliography/Master_Bibliography.xml#holder">(Holder 1904, 1649)</ref>.</p>
+                    Per quanto riguarda la coniuge, si tratta di un nome peculiare, non attestato altrove: Holder riporta sia <persName xml:lang="la">Suandacca</persName> sia <persName xml:lang="la">Vandacca</persName>, non riuscendo a scegliere la versione corretta <ref target="../references/bibliography.xml#holder">(Holder 1904, 1649; HOLDER 1907, 98)</ref>. La parte iniziale del nome forse deriva dal bretone *chwant*, che significa “desiderio” <ref target="../references/bibliography.xml#holder">(Holder 1904, 1649)</ref>.</p>
                 <p>
-                    Il <term xml:lang="la">campidoctor</term> aveva la funzione di addestrare le reclute e di supervisionare i lavori all’interno dei campi militari <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>. Sebbene Vegezio affermi che il <term xml:lang="la">centenarius</term> svolgesse una funzione analoga a quella di chi una volta era chiamato <term xml:lang="la">centurio</term> — “<term xml:lang="la">centuriones</term> […] <term xml:lang="la">qui nunc centenarii nominantur</term>” (Veget II, 8) — Grosse considera il <term xml:lang="la">campidoctor</term> il vero successore del <term xml:lang="la">centurio</term> sia per mansione sia per importanza gerarchica <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 126)</ref>.
+                    Il <term xml:lang="la">campidoctor</term> aveva la funzione di addestrare le reclute e di supervisionare i lavori all’interno dei campi militari <ref target="../references/bibliography.xml#grosse">(Grosse 1920, 126)</ref>. Sebbene Vegezio affermi che il <term xml:lang="la">centenarius</term> svolgesse una funzione analoga a quella di chi una volta era chiamato <term xml:lang="la">centurio</term> — “<term xml:lang="la">centuriones</term> […] <term xml:lang="la">qui nunc centenarii nominantur</term>” (Veget II, 8) — Grosse considera il <term xml:lang="la">campidoctor</term> il vero successore del <term xml:lang="la">centurio</term> sia per mansione sia per importanza gerarchica <ref target="../references/bibliography.xml#grosse">(Grosse 1920, 126)</ref>.
                 </p>
                 <p>
-                    Ammiano Marcellino riporta la promozione di un <term xml:lang="la">campidoctor</term> a <term xml:lang="la">tribunus vacans</term>, dunque da sottoufficiale a ufficiale (Amm. XV 3, 10); per questo Grosse ritiene che il <term xml:lang="la">campidoctor</term> fosse la carica più alta tra i sottoufficiali <ref target="../Bibliography/Master_Bibliography.xml#grosse">(Grosse 1920, 127)</ref>.
+                    Ammiano Marcellino riporta la promozione di un <term xml:lang="la">campidoctor</term> a <term xml:lang="la">tribunus vacans</term>, dunque da sottoufficiale a ufficiale (Amm. XV 3, 10); per questo Grosse ritiene che il <term xml:lang="la">campidoctor</term> fosse la carica più alta tra i sottoufficiali <ref target="../references/bibliography.xml#grosse">(Grosse 1920, 127)</ref>.
                 </p>
                 <p>
-                    Secondo <bibl corresp="#lettich1983">Lettich</bibl>, la presenza di un <term xml:lang="la">campedoctor</term> così anziano e il fatto che lo abbia seppellito la moglie sarebbero indizi di una permanenza a Concordia prolungata da parte dei <term xml:lang="la">Batavi seniores</term>.
+                    Secondo <bibl ref="#lettich1983">Lettich</bibl>, la presenza di un <term xml:lang="la">campedoctor</term> così anziano e il fatto che lo abbia seppellito la moglie sarebbero indizi di una permanenza a Concordia prolungata da parte dei <term xml:lang="la">Batavi seniores</term>.
                 </p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl xml:id="bertolini1873a">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873a"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1873a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1873a"/>
                         <title>Bertolini 1873a</title>
                         <citedRange unit="page">59</citedRange>
                     </bibl>
                     <bibl xml:id="bertolini1873b">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#bertolini1873b"/>
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1873b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1873b"/>
                         <title>Bertolini 1873b</title>
                         <citedRange unit="page">59</citedRange>
                     </bibl>
                     <bibl xml:id="cilv8773">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#cil"/>
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
                         <title><term xml:lang="la">CIL</term> V 8773</title>
                     </bibl>
                     <bibl xml:id="ils2803">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ils"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
                         <title><term xml:lang="la">ILS</term> 2803</title>
                     </bibl>
                     <bibl xml:id="ilcv457">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#ilcv"/>
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
                         <title><term xml:lang="la">ILCV</term> 457</title>
                     </bibl>
                     <bibl xml:id="hoffmann1963">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#hoffmann1963"/>
+                        <ptr target="../bibliography/master_bibliography.xml#hoffmann1963"/>
+                        <ptr target="../references/bibliography.xml#hoffmann1963"/>
                         <title>Hoffmann 1963</title>
                         <citedRange unit="page">41-42</citedRange>
                         <note type="number">20</note>
                     </bibl>
                     <bibl xml:id="lettich1983">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#lettich1983"/>
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
                         <title>Lettich 1983</title>
                         <citedRange unit="page">83-84</citedRange>
                         <note type="number">nr. 40</note>
                     </bibl>
                     <bibl xml:id="edr097921">
-                        <ptr target="../Bibliography/Master_Bibliography.xml#edr"/>
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
                         <title>
                             <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097921">EDR097921</ref>
                         </title>
