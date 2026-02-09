@@ -2,7 +2,7 @@ import os
 from saxonche import PySaxonProcessor
 
 def run():
-    # Setup percorsi
+    # 1. Configurazione percorsi relativi
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.abspath(os.path.join(script_dir, '..'))
     
@@ -10,13 +10,15 @@ def run():
     output_dir = os.path.join(root_dir, 'docs', 'pages')
     output_file = os.path.join(output_dir, 'people.html')
 
+    # Verifica esistenza directory input
     if not os.path.exists(xml_dir):
         print(f"ERRORE: La cartella {xml_dir} non esiste!")
         return
 
     files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
-    people_data = {}  # Chiave = xml:id
+    people_data = {}  # Dizionario per deduplicazione (Key: xml:id)
 
+    # 2. Elaborazione XML
     with PySaxonProcessor(license=False) as proc:
         xpath_processor = proc.new_xpath_processor()
         
@@ -26,184 +28,186 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # 1. Dati generali dell'iscrizione
+                # Recupera Titolo Iscrizione e Nome File
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 idno_item = xpath_processor.evaluate("//*[local-name()='publicationStmt']/*[local-name()='idno'][@type='filename'][1]")
                 
                 inscription_title = title_item.string_value.strip() if title_item else filename
-                # Nome file HTML dell'iscrizione
-                insc_filename = idno_item.string_value.strip() if idno_item else filename
-                insc_link = insc_filename.replace('.xml', '.html')
                 
-                # 2. Trova le persone
+                # Calcola il link all'iscrizione (da .xml a .html)
+                raw_filename = idno_item.string_value.strip() if idno_item else filename
+                inscription_link_file = raw_filename.replace('.xml', '.html')
+                
+                # Trova tutte le persone nel file
                 people = xpath_processor.evaluate("//*[local-name()='listPerson']/*[local-name()='person']")
                 
                 if people is None:
                     continue
                 
-                # Normalizza in lista se è un singolo item
+                # Gestione singolo risultato vs lista
                 if not hasattr(people, '__iter__'):
                     people = [people]
                 
                 for person in people:
                     xpath_processor.set_context(xdm_item=person)
                     
-                    # ID
+                    # ID (xml:id)
                     person_id_item = xpath_processor.evaluate("@xml:id")
                     person_id = person_id_item.string_value.strip() if person_id_item else None
                     
                     if not person_id:
                         continue
                     
-                    # Se la persona esiste già, aggiungiamo solo l'iscrizione e passiamo oltre
+                    # Se la persona è già nel dizionario, aggiungi solo l'iscrizione e salta il resto
                     if person_id in people_data:
                         people_data[person_id]['inscriptions'].append({
                             'title': inscription_title,
-                            'link': insc_link
+                            'link': inscription_link_file
                         })
                         continue
 
-                    # --- RACCOLTA DATI PERSONA NUOVA ---
+                    # --- RACCOLTA DATI PERSONA (Solo se nuova) ---
 
-                    # Nome completo (per il titolo h3)
+                    # Nome completo
                     full_name_item = xpath_processor.evaluate("*[local-name()='persName']/*[local-name()='name'][@type='full']")
                     full_name = full_name_item.string_value.strip() if full_name_item else "Unknown"
                     
                     # Gender
                     gender_item = xpath_processor.evaluate("*[local-name()='gender']")
-                    gender_val = gender_item.string_value.strip() if gender_item else "unknown"
+                    gender = gender_item.string_value.strip() if gender_item else "unknown"
                     
-                    # Occupation (serve per l'immagine)
+                    # Occupation (per logica immagine)
                     occupation_item = xpath_processor.evaluate("*[local-name()='note'][@type='occupation']")
-                    occupation_val = occupation_item.string_value.strip() if occupation_item else ""
+                    occupation = occupation_item.string_value.strip() if occupation_item else ""
 
-                    # --- LOGICA IMMAGINE ---
-                    image_file = None
-                    if gender_val == 'f':
-                        image_file = "silhouette_female.png"
-                    elif gender_val == 'm':
-                        if occupation_val in ['civil', 'civil?']:
-                            image_file = "silhouette_civil.png"
-                        elif occupation_val in ['soldier', 'soldier?']:
-                            image_file = "silhouette_soldier.png"
-                        elif occupation_val in ['fabricensis', 'fabricensis?']:
-                            image_file = "silhouette_fabricensis.png"
-                        elif occupation_val in ['functionary', 'functionary?']:
-                            image_file = "silhouette_functionary.png"
-                    # Else rimane None
+                    # LOGICA IMMAGINI (Silhouette)
+                    silhouette = None
+                    if gender == 'f':
+                        silhouette = 'silhouette_female.png'
+                    elif gender == 'm':
+                        if occupation in ['civil', 'civil?']:
+                            silhouette = 'silhouette_civil.png'
+                        elif occupation in ['soldier', 'soldier?']:
+                            silhouette = 'silhouette_soldier.png'
+                        elif occupation in ['fabricensis', 'fabricensis?']:
+                            silhouette = 'silhouette_fabricensis.png'
+                        elif occupation in ['functionary', 'functionary?']:
+                            silhouette = 'silhouette_functionary.png'
+                        else:
+                            silhouette = 'silhouette_civil.png' # Fallback default maschio se occupazione non matcha o vuota? (Opzionale: rimuovi se vuoi 'nessuna immagine')
+                            # Rileggendo la richiesta: "nessuna immagine se else".
+                            # Correggo logica stretta richiesta:
+                            if occupation not in ['civil', 'civil?', 'soldier', 'soldier?', 'fabricensis', 'fabricensis?', 'functionary', 'functionary?']:
+                                silhouette = None # Nessuna immagine se maschio ma occupazione diversa o assente
 
-                    # --- LISTA NOMI (per il DL) ---
-                    names_list = []
+                    # Lista Nomi (persName/name)
+                    names_data = []
                     name_elements = xpath_processor.evaluate("*[local-name()='persName']/*[local-name()='name']")
                     if name_elements:
                         if not hasattr(name_elements, '__iter__'): name_elements = [name_elements]
-                        for n in name_elements:
-                            xpath_processor.set_context(xdm_item=n)
-                            n_type = xpath_processor.evaluate("@type").string_value.strip()
-                            n_val = n.string_value.strip()
-                            n_nymRef_item = xpath_processor.evaluate("@nymRef")
-                            n_nymRef = n_nymRef_item.string_value.strip() if n_nymRef_item else None
+                        for name_el in name_elements:
+                            xpath_processor.set_context(xdm_item=name_el)
                             
-                            names_list.append({
+                            n_type = xpath_processor.evaluate("@type").string_value.strip()
+                            n_val = name_el.string_value.strip()
+                            
+                            n_nymref_item = xpath_processor.evaluate("@nymRef")
+                            n_nymref = n_nymref_item.string_value.strip() if n_nymref_item else None
+                            
+                            names_data.append({
                                 'type': n_type,
                                 'value': n_val,
-                                'nymRef': n_nymRef
+                                'nymref': n_nymref
                             })
-                            xpath_processor.set_context(xdm_item=person) # Reset context
+                            # Reset contesto a person per sicurezza loop
+                            xpath_processor.set_context(xdm_item=person)
 
-                    # --- NOTE (per il DL) ---
-                    notes_list = []
+                    # Note (tutte le note dirette figlie di person)
+                    notes_data = []
                     note_elements = xpath_processor.evaluate("*[local-name()='note']")
                     if note_elements:
                         if not hasattr(note_elements, '__iter__'): note_elements = [note_elements]
-                        for note in note_elements:
-                            xpath_processor.set_context(xdm_item=note)
-                            note_type_item = xpath_processor.evaluate("@type")
-                            note_type = note_type_item.string_value.strip() if note_type_item else "note"
-                            note_val = note.string_value.strip()
-                            notes_list.append({'type': note_type, 'value': note_val})
-                            xpath_processor.set_context(xdm_item=person) # Reset context
+                        for note_el in note_elements:
+                            xpath_processor.set_context(xdm_item=note_el)
+                            nt_type_item = xpath_processor.evaluate("@type")
+                            nt_type = nt_type_item.string_value.strip() if nt_type_item else "note"
+                            nt_val = note_el.string_value.strip()
+                            
+                            notes_data.append({'type': nt_type, 'value': nt_val})
+                            xpath_processor.set_context(xdm_item=person)
 
-                    # Salva nel dizionario
+                    # Salva struttura dati
                     people_data[person_id] = {
                         'id': person_id,
                         'full_name': full_name,
-                        'gender': gender_val,
-                        'image': image_file,
-                        'names': names_list,
-                        'notes': notes_list,
+                        'gender': gender,
+                        'silhouette': silhouette,
+                        'names': names_data,
+                        'notes': notes_data,
                         'inscriptions': [{
                             'title': inscription_title,
-                            'link': insc_link
+                            'link': inscription_link_file
                         }]
                     }
                 
                 print(f"File processato: {filename}")
 
             except Exception as e:
-                print(f"ERRORE su {filename}: {e}")
+                print(f"ERRORE nel file {filename}: {str(e)}")
 
-    # --- GENERAZIONE HTML ---
+    # 3. Generazione Contenuto HTML (Il blocco centrale)
+    content_html = ""
     
-    html_content = ""
-    
-    # Ordiniamo per nome completo per pulizia
+    # Ordina per nome completo
     sorted_ids = sorted(people_data.keys(), key=lambda x: people_data[x]['full_name'])
 
     for pid in sorted_ids:
         p = people_data[pid]
         
-        # Preparazione immagine
-        img_tag = ""
-        if p['image']:
-            # Percorso relativo: da docs/pages/ a images/silhouette/
-            img_tag = f'<img src="../../images/silhouette/{p["image"]}" alt="{p["full_name"]}" style="float:left; margin-right:10px; height:50px;">'
-            # Nota: ho aggiunto uno stile inline minimo per allinearla a sinistra come richiesto, 
-            # ma l'ideale è gestirlo nel CSS con la classe .person img
+        # HTML Immagine
+        img_html = ""
+        if p['silhouette']:
+            # Path relativo da docs/pages/ a images/silhouette/
+            img_html = f'<img src="../../images/silhouette/{p["silhouette"]}" alt="Silhouette">'
 
-        # Apertura Div
-        html_content += f'<div class="person" id="{p["id"]}">\n'
+        # Costruzione DIV Person
+        content_html += f'<div class="person" id="{p["id"]}">\n'
+        content_html += f'   {img_html}<h3>{p["full_name"]}</h3>\n'
+        content_html += '   <dl>\n'
         
-        # Titolo con immagine a sinistra
-        html_content += f'    {img_tag}<h3>{p["full_name"]}</h3>\n'
-        html_content += f'    <div style="clear:both;"></div>\n' # Clear fix nel caso l'immagine fluttui
-        
-        # Apertura DL
-        html_content += '    <dl>\n'
-
-        # 1. Nomi
+        # A. Nomi
         for name in p['names']:
-            html_content += f'        <dt>{name["type"]}</dt>\n'
-            html_content += f'        <dd>{name["value"]}</dd>\n'
+            content_html += f'      <dt>{name["type"]}</dt>\n'
+            content_html += f'      <dd>{name["value"]}</dd>\n'
             # Logica nymRef
-            if name['type'] == 'cognomen' and name['nymRef']:
-                html_content += f'        <dt>origin of the cognomen</dt>\n'
-                html_content += f'        <dd>{name["nymRef"]}</dd>\n'
+            if name['type'] == 'cognomen' and name['nymref']:
+                 content_html += f'      <dt>origin of the cognomen</dt>\n'
+                 content_html += f'      <dd>{name["nymref"]}</dd>\n'
 
-        # 2. Gender
-        gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
-        html_content += f'        <dt>gender</dt>\n'
-        html_content += f'        <dd>{gender_display}</dd>\n'
+        # B. Gender
+        g_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
+        content_html += f'      <dt>gender</dt>\n'
+        content_html += f'      <dd>{g_display}</dd>\n'
 
-        # 3. Note
+        # C. Note
         for note in p['notes']:
-            html_content += f'        <dt>{note["type"]}</dt>\n'
-            html_content += f'        <dd>{note["value"]}</dd>\n'
+            content_html += f'      <dt>{note["type"]}</dt>\n'
+            content_html += f'      <dd>{note["value"]}</dd>\n'
 
-        # 4. Inscriptions
-        html_content += f'        <dt>inscription(s)</dt>\n'
-        html_content += f'        <dd>'
-        links_html = []
+        # D. Iscrizioni
+        content_html += f'      <dt>inscription(s)</dt>\n'
+        content_html += f'      <dd>'
+        links = []
         for insc in p['inscriptions']:
-            # Link relativo a ./inscriptions/nomefile.html
-            links_html.append(f'<a href="inscriptions/{insc["link"]}">{insc["title"]}</a>')
-        html_content += ' - '.join(links_html)
-        html_content += f'</dd>\n'
+            # Path: ./inscriptions/nomefile.html
+            links.append(f'<a href="./inscriptions/{insc["link"]}">{insc["title"]}</a>')
+        content_html += ' - '.join(links)
+        content_html += '</dd>\n'
 
-        html_content += '    </dl>\n'
-        html_content += '</div>\n\n'
+        content_html += '   </dl>\n'
+        content_html += '</div>\n\n'
 
-    # Template Base
+    # 4. Inserimento nel Template HTML Finale
     final_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,7 +251,7 @@ def run():
     
     <main class="container">
         <h2>Index of People</h2>
-        {html_content}
+        {content_html}
     </main>
 
     <footer>
@@ -257,12 +261,12 @@ def run():
 </body>
 </html>"""
 
-    # Scrittura su file
+    # 5. Scrittura su file
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(final_html)
     
-    print(f"Finito! Creato {output_file} con {len(people_data)} schede persona.")
+    print(f"SUCCESS: {output_file} generato con {len(people_data)} persone.")
 
 if __name__ == "__main__":
     run()
