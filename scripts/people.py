@@ -9,6 +9,7 @@ def run():
     output_file = os.path.join(output_dir, 'people.html')
 
     if not os.path.exists(xml_dir):
+        print(f"ERRORE: Cartella {xml_dir} non trovata")
         return
 
     people_data = {}
@@ -17,73 +18,73 @@ def run():
         xpath_processor = proc.new_xpath_processor()
         
         files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
-        
+        print(f"Inizio elaborazione di {len(files)} file XML...")
+
         for filename in files:
             xml_path = os.path.join(xml_dir, filename)
             try:
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # Titolo iscrizione (come nel tuo script)
+                # Titolo iscrizione (stessa logica del tuo script)
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 display_title = title_item.string_value.strip() if title_item else filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
-                # Trova tutte le persone con local-name
+                # Cerchiamo le persone
                 persons = xpath_processor.evaluate("//*[local-name()='person']")
-                if persons is None:
-                    continue
                 
-                # Saxon-Che ritorna un oggetto che va iterato per numero di item
-                for i in range(persons.size):
-                    person = persons.item_at(i)
-                    xpath_processor.set_context(xdm_item=person)
-                    
-                    # Estrazione ID (es. alatancus)
-                    id_val = xpath_processor.evaluate("string(@xml:id)")
-                    p_id = id_val.string_value.strip() if id_val else f"p{i}"
+                if persons is not None:
+                    print(f"File {filename}: trovate {persons.size} persone")
+                    for i in range(persons.size):
+                        person = persons.item_at(i)
+                        xpath_processor.set_context(xdm_item=person)
+                        
+                        # ID (usiamo local-name per l'id dell'attributo)
+                        id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
+                        p_id = id_item.string_value.strip() if id_item else f"unknown_{filename}_{i}"
 
-                    if p_id in people_data:
-                        # Se la persona esiste già, aggiungi solo il link all'iscrizione
-                        people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
-                        continue
+                        if p_id in people_data:
+                            # Aggiungiamo solo il link se la persona esiste già
+                            people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
+                            continue
 
-                    # Nome full
-                    name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
-                    name = name_item.string_value.strip() if name_item else "Unknown"
+                        # Nome
+                        name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
+                        name = name_item.string_value.strip() if name_item else "Unknown Name"
 
-                    # Genere
-                    gen_item = xpath_processor.evaluate(".//*[local-name()='gender']")
-                    gender = gen_item.string_value.strip() if gen_item else "u"
+                        # Genere
+                        gen_item = xpath_processor.evaluate(".//*[local-name()='gender']")
+                        gender = gen_item.string_value.strip() if gen_item else "not specified"
 
-                    # Note (tutte quelle presenti nell'XML)
-                    notes = []
-                    note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
-                    if note_elements:
-                        for j in range(note_elements.size):
-                            n = note_elements.item_at(j)
-                            n_type = n.get_attribute_value("type") or "info"
-                            notes.append({'label': n_type, 'text': n.string_value.strip()})
+                        # Tutte le note (occupation, role, etc.) senza filtri
+                        notes_list = []
+                        note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
+                        if note_elements is not None:
+                            for j in range(note_elements.size):
+                                n = note_elements.item_at(j)
+                                n_type = n.get_attribute_value("type") or "info"
+                                notes_list.append({'label': n_type, 'text': n.string_value.strip()})
 
-                    # Silhouette (solo maschio/femmina/base)
-                    img = "silhouette_female.png" if gender == 'f' else "silhouette_civil.png"
+                        # Silhouette
+                        img = "silhouette_female.png" if gender == 'f' else "silhouette_civil.png"
 
-                    people_data[p_id] = {
-                        'name': name,
-                        'gender': gender,
-                        'notes': notes,
-                        'img': img,
-                        'links': [{'title': display_title, 'url': target_link}]
-                    }
+                        people_data[p_id] = {
+                            'name': name,
+                            'gender': gender,
+                            'notes': notes_list,
+                            'img': img,
+                            'links': [{'title': display_title, 'url': target_link}]
+                        }
             except Exception as e:
-                print(f"Errore in {filename}: {e}")
+                print(f"ERRORE in {filename}: {str(e)}")
 
-    # Costruzione HTML
+    # Generazione HTML
     cards_html = ""
     for pid in sorted(people_data.keys()):
         p = people_data[pid]
         notes_li = "".join([f"<li><strong>{n['label'].capitalize()}:</strong> {n['text']}</li>" for n in p['notes']])
-        links_html = " | ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
+        links_li = ", ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
         
         cards_html += f"""
         <div class="person-card" style="border:1px solid #ddd; padding:15px; margin-bottom:15px; display:flex; gap:20px; background:#f9f9f9; border-radius:8px;">
@@ -93,12 +94,12 @@ def run():
                 <ul style="list-style:none; padding:0; margin:0; font-size:0.9em;">
                     <li><strong>Gender:</strong> {p['gender']}</li>
                     {notes_li}
-                    <li style="margin-top:8px;"><strong>Found in:</strong> {links_html}</li>
+                    <li style="margin-top:8px;"><strong>Found in:</strong> {links_li}</li>
                 </ul>
             </div>
         </div>"""
 
-    # Template identico al tuo stile
+    # Template
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +124,7 @@ def run():
             {cards_html if cards_html else "<p>No people found in the XML record.</p>"}
         </div>
     </main>
-    <footer>
+    <footer style="text-align:center; padding:20px; font-size:0.8em;">
         <p>Generated via Saxon-Che | &copy; 2026 - Leonardo Battistella</p>
     </footer>
 </body>
@@ -132,6 +133,7 @@ def run():
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
+    print(f"Completato! Generate {len(people_data)} schede biografiche.")
 
 if __name__ == "__main__":
     run()
