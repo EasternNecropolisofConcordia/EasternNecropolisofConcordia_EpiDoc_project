@@ -11,11 +11,37 @@ def run():
         return
 
     people_data = {}
+    # Dizionario per mappare xml:id → nome completo (per i link relationship)
+    people_names = {}
 
     with PySaxonProcessor(license=False) as proc:
         xpath_processor = proc.new_xpath_processor()
         files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
 
+        # PRIMO PASSAGGIO: raccogli tutti i nomi
+        for filename in files:
+            xml_path = os.path.join(xml_dir, filename)
+            try:
+                node = proc.parse_xml(xml_file_name=xml_path)
+                xpath_processor.set_context(xdm_item=node)
+                
+                persons = xpath_processor.evaluate("//*[local-name()='person']")
+                if persons is not None and persons.size > 0:
+                    for i in range(persons.size):
+                        person = persons.item_at(i)
+                        xpath_processor.set_context(xdm_item=person)
+                        
+                        id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
+                        p_id = id_item.string_value.strip() if id_item and hasattr(id_item, 'string_value') and id_item.string_value else None
+                        
+                        if p_id:
+                            full_name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
+                            if full_name_item and full_name_item.size > 0:
+                                people_names[p_id] = full_name_item.item_at(0).string_value.strip()
+            except:
+                pass
+
+        # SECONDO PASSAGGIO: raccogli tutti i dati
         for filename in files:
             xml_path = os.path.join(xml_dir, filename)
             try:
@@ -42,9 +68,33 @@ def run():
                         id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
                         p_id = id_item.string_value.strip() if id_item and hasattr(id_item, 'string_value') and id_item.string_value else f"p_{filename}_{i}"
 
-                        # Se già esiste, aggiungi solo il link
+                        # Se già esiste, aggiungi solo il link E unisci le note se diverse
                         if p_id in people_data:
                             people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
+                            
+                            # Aggiungi note se non già presenti
+                            note_elements_new = xpath_processor.evaluate(".//*[local-name()='note']")
+                            if note_elements_new and note_elements_new.size > 0:
+                                for j in range(note_elements_new.size):
+                                    n = note_elements_new.item_at(j)
+                                    n_type = n.get_attribute_value("type") or "info"
+                                    n_value = n.string_value.strip()
+                                    corresp = n.get_attribute_value("corresp")
+                                    
+                                    # Verifica se questa nota esiste già
+                                    note_exists = False
+                                    for existing_note in people_data[p_id]['notes']:
+                                        if existing_note['type'] == n_type and existing_note['value'] == n_value:
+                                            note_exists = True
+                                            break
+                                    
+                                    if not note_exists:
+                                        people_data[p_id]['notes'].append({
+                                            'type': n_type,
+                                            'value': n_value,
+                                            'corresp': corresp
+                                        })
+                            
                             continue
 
                         # Tutti i nomi
@@ -88,9 +138,12 @@ def run():
                                 n = note_elements.item_at(j)
                                 n_type = n.get_attribute_value("type") or "info"
                                 n_value = n.string_value.strip()
+                                corresp = n.get_attribute_value("corresp")
+                                
                                 notes_data.append({
                                     'type': n_type,
-                                    'value': n_value
+                                    'value': n_value,
+                                    'corresp': corresp
                                 })
                                 
                                 if n_type == "occupation":
@@ -146,9 +199,23 @@ def run():
         gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
         dl_content += f"<dt>gender</dt><dd>{gender_display}</dd>"
         
-        # Notes
+        # Notes con gestione relationship
         for note in p['notes']:
-            dl_content += f"<dt>{note['type']}</dt><dd>{note['value']}</dd>"
+            dl_content += f"<dt>{note['type']}</dt><dd>{note['value']}"
+            
+            # Se è relationship e c'è corresp, aggiungi link
+            if note['type'] == 'relationship' and note.get('corresp'):
+                corresp_id = note['corresp'].strip()
+                # Rimuovi # iniziale se presente
+                if corresp_id.startswith('#'):
+                    corresp_id = corresp_id[1:]
+                
+                # Trova il nome della persona correlata
+                if corresp_id in people_names:
+                    related_name = people_names[corresp_id]
+                    dl_content += f' (→ <a href="#{corresp_id}">{related_name}</a>)'
+            
+            dl_content += "</dd>"
         
         # Inscriptions
         links_str = " - ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
