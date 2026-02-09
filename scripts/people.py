@@ -22,12 +22,10 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # Titolo (logica del tuo script iscrizioni)
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 display_title = str(title_item).strip() if title_item else filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
-                # Cerchiamo le persone
                 persons = xpath_processor.evaluate("//*[local-name()='person']")
                 
                 if persons is not None:
@@ -35,7 +33,6 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ESTRAZIONE SICURA ID (usiamo str() invece di .string_value)
                         id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
                         p_id = str(id_item).strip() if id_item else f"p_{filename}_{i}"
 
@@ -43,15 +40,12 @@ def run():
                             people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
                             continue
 
-                        # Nome
                         name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
                         name = str(name_item).strip() if name_item else "Unknown Name"
 
-                        # Genere
                         gen_item = xpath_processor.evaluate(".//*[local-name()='gender']")
                         gender = str(gen_item).strip() if gen_item else "u"
 
-                        # Note
                         notes_html = ""
                         note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
                         if note_elements:
@@ -60,6 +54,7 @@ def run():
                                 n_type = n.get_attribute_value("type") or "info"
                                 notes_html += f"<li><strong>{n_type.capitalize()}:</strong> {str(n).strip()}</li>"
 
+                        # Selezione immagine in base al genere
                         img = "silhouette_female.png" if gender == 'f' else "silhouette_civil.png"
 
                         people_data[p_id] = {
@@ -72,14 +67,15 @@ def run():
             except Exception as e:
                 print(f"Errore in {filename}: {e}")
 
-    # Costruzione HTML
     cards = ""
     for pid in sorted(people_data.keys()):
         p = people_data[pid]
         links = ", ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
+        
+        # PERCORSO AGGIORNATO: ../images/ invece di ../../images/
         cards += f"""
         <div class="person-card" style="border:1px solid #ddd; padding:15px; margin-bottom:15px; display:flex; gap:20px; background:#f9f9f9; border-radius:8px;">
-            <img src="../../images/silhouette/{p['img']}" style="width:70px; height:70px;">
+            <img src="../images/silhouette/{p['img']}" style="width:70px; height:70px;" alt="silhouette">
             <div>
                 <h3 style="margin:0; color:#800000;">{p['name']}</h3>
                 <ul style="list-style:none; padding:0; margin:10px 0; font-size:0.9em;">
@@ -114,7 +110,7 @@ def run():
             {cards if cards else "<p>No people found in the XML record.</p>"}
         </div>
     </main>
-    <footer>
+    <footer style="text-align:center; padding:20px; font-size:0.8em;">
         <p>Generated via Saxon-Che | &copy; 2026 - Leonardo Battistella</p>
     </footer>
 </body>
