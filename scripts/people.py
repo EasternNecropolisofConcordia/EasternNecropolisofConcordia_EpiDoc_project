@@ -158,7 +158,7 @@ def run():
         # Header con immagine e nome
         silhouette_html = ""
         if person['silhouette']:
-            silhouette_html = f'<img src="../../images/silhouette/{person["silhouette"]}" alt="Silhouette" class="silhouette">'
+            silhouette_html = f'<img src="../images/silhouette/{person["silhouette"]}" alt="Silhouette" class="silhouette">'
         
         people_html += f'<div class="person" id="{person["id"]}">\n'
         people_html += f'  {silhouette_html}<h3>{person["full_name"]}</h3>\n'
@@ -190,7 +190,7 @@ def run():
         
         inscription_links = []
         for insc in person['inscriptions']:
-            inscription_links.append(f'<a href="./inscriptions/{insc["link"]}">{insc["title"]}</a>')
+            inscription_links.append(f'<a href="inscriptions/{insc["link"]}">{insc["title"]}</a>')
         
         people_html += ' - '.join(inscription_links)
         people_html += '</dd>\n'
