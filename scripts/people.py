@@ -22,90 +22,135 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # Titolo iscrizione
-                title_xpath = "//*[local-name()='titleStmt']/*[local-name()='title'][1]"
-                title_item = xpath_processor.evaluate(title_xpath)
-                display_title = title_item.item_at(0).string_value.strip() if title_item.size > 0 else filename
+                # Titolo iscrizione - usa str() direttamente
+                title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
+                display_title = str(title_item).strip() if title_item else filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
                 # Trova tutte le persone
                 persons = xpath_processor.evaluate("//*[local-name()='person']")
                 
-                if persons is not None and persons.size > 0:
+                if persons is not None:
                     for i in range(persons.size):
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID
-                        id_val = xpath_processor.evaluate("string(@*[local-name()='id'])")
-                        p_id = id_val.string_value.strip() if id_val else f"p_{filename}_{i}"
+                        # ID - usa string() nell'XPath
+                        id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
+                        p_id = str(id_item).strip() if id_item else f"p_{filename}_{i}"
 
+                        # Se già esiste, aggiungi solo il link
                         if p_id in people_data:
                             people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
                             continue
 
-                        # Nome
-                        n_item = xpath_processor.evaluate(".//*[local-name()='name']")
-                        p_name = n_item.item_at(0).string_value.strip() if n_item.size > 0 else "Unknown"
+                        # Tutti i nomi
+                        names_data = []
+                        name_elements = xpath_processor.evaluate(".//*[local-name()='persName']/*[local-name()='name']")
+                        if name_elements:
+                            for j in range(name_elements.size):
+                                name_elem = name_elements.item_at(j)
+                                name_type = name_elem.get_attribute_value("type") or "name"
+                                name_value = str(name_elem).strip()
+                                nymref = name_elem.get_attribute_value("nymRef")
+                                
+                                names_data.append({
+                                    'type': name_type,
+                                    'value': name_value,
+                                    'nymref': nymref
+                                })
+
+                        # Nome completo per titolo
+                        full_name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
+                        p_name = str(full_name_item).strip() if full_name_item else "Unknown"
 
                         # Genere
                         g_item = xpath_processor.evaluate(".//*[local-name()='gender']")
-                        p_gender = g_item.item_at(0).string_value.strip().lower() if g_item.size > 0 else ""
+                        p_gender = str(g_item).strip() if g_item else "unknown"
 
-                        # Occupazione per Silhouette
-                        occ_xpath = ".//*[local-name()='note'][@type='occupation']"
-                        occ_item = xpath_processor.evaluate(occ_xpath)
-                        p_occ = occ_item.item_at(0).string_value.strip().lower() if occ_item.size > 0 else ""
-
-                        # Logica Silhouette (Tua Specifica)
-                        img = None
-                        if p_gender == 'f':
-                            img = "silhouette_female.png"
-                        elif "soldier" in p_occ:
-                            img = "silhouette_soldier.png"
-                        elif "civil" in p_occ and p_gender == 'm':
-                            img = "silhouette_civil.png"
-                        elif "fabricensis" in p_occ:
-                            img = "silhouette_fabricensis.png"
-                        elif "functionary" in p_occ:
-                            img = "silhouette_functionary.png"
-
-                        # Note (per l'elenco della scheda)
-                        notes_list = []
+                        # Note
+                        notes_data = []
+                        occupation = None
                         note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
-                        if note_elements.size > 0:
+                        if note_elements:
                             for j in range(note_elements.size):
                                 n = note_elements.item_at(j)
                                 n_type = n.get_attribute_value("type") or "info"
-                                notes_list.append(f"<li><strong>{n_type.capitalize()}:</strong> {n.string_value.strip()}</li>")
+                                n_value = str(n).strip()
+                                notes_data.append({
+                                    'type': n_type,
+                                    'value': n_value
+                                })
+                                
+                                if n_type == "occupation":
+                                    occupation = n_value
+
+                        # Logica Silhouette
+                        img = None
+                        if p_gender == 'f':
+                            img = "silhouette_female.png"
+                        elif p_gender == 'm':
+                            if occupation in ['civil', 'civil?']:
+                                img = "silhouette_civil.png"
+                            elif occupation in ['soldier', 'soldier?']:
+                                img = "silhouette_soldier.png"
+                            elif occupation in ['fabricensis', 'fabricensis?']:
+                                img = "silhouette_fabricensis.png"
+                            elif occupation in ['functionary', 'functionary?']:
+                                img = "silhouette_functionary.png"
 
                         people_data[p_id] = {
+                            'id': p_id,
                             'name': p_name,
                             'gender': p_gender,
-                            'notes': "".join(notes_list),
+                            'names': names_data,
+                            'notes': notes_data,
                             'img': img,
                             'links': [{'title': display_title, 'url': target_link}]
                         }
+                        
             except Exception as e:
                 print(f"Errore su {filename}: {e}")
 
     # Generazione Card
     cards = ""
-    for pid in sorted(people_data.keys()):
+    for pid in sorted(people_data.keys(), key=lambda x: people_data[x]['name']):
         p = people_data[pid]
-        links_str = ", ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
-        img_html = f'<img src="../images/silhouette/{p["img"]}" style="width:70px; height:70px;" alt="silhouette">' if p['img'] else ''
+        
+        # Immagine
+        img_html = ""
+        if p['img']:
+            img_html = f'<img src="../images/silhouette/{p["img"]}" style="width:70px; height:70px;" alt="silhouette">'
+        
+        # Costruisci dl
+        dl_content = ""
+        
+        # Nomi
+        for name in p['names']:
+            dl_content += f"<dt>{name['type']}</dt><dd>{name['value']}</dd>"
+            if name['type'] == 'cognomen' and name['nymref']:
+                dl_content += f"<dt>origin of the cognomen</dt><dd>{name['nymref']}</dd>"
+        
+        # Gender
+        gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
+        dl_content += f"<dt>gender</dt><dd>{gender_display}</dd>"
+        
+        # Notes
+        for note in p['notes']:
+            dl_content += f"<dt>{note['type']}</dt><dd>{note['value']}</dd>"
+        
+        # Inscriptions
+        links_str = " - ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
+        dl_content += f"<dt>inscription(s)</dt><dd>{links_str}</dd>"
         
         cards += f"""
-        <div class="person-card" style="border:1px solid #ddd; padding:15px; margin-bottom:15px; display:flex; gap:20px; background:#f9f9f9; border-radius:8px;">
+        <div class="person" id="{p['id']}" style="border:1px solid #ddd; padding:15px; margin-bottom:15px; display:flex; gap:20px; background:#f9f9f9; border-radius:8px;">
             {img_html}
-            <div>
-                <h3 style="margin:0; color:#800000;">{p['name']}</h3>
-                <ul style="list-style:none; padding:0; margin:10px 0; font-size:0.9em;">
-                    <li><strong>Gender:</strong> {p['gender']}</li>
-                    {p['notes']}
-                    <li style="margin-top:5px;"><strong>Found in:</strong> {links_str}</li>
-                </ul>
+            <div style="flex:1;">
+                <h3 style="margin:0 0 10px 0; color:#800000;">{p['name']}</h3>
+                <dl style="margin:0; font-size:0.9em;">
+                    {dl_content}
+                </dl>
             </div>
         </div>"""
 
@@ -124,18 +169,38 @@ def run():
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="inscriptions.html">Inscriptions</a></li>
-                <li><a href="people.html">People</a></li>
+                <li class="dropdown">
+                    <a href="#">Study & Context ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./context/history.html">History</a></li>
+                        <li><a href="./context/about_people.html">About People Buried</a></li>
+                        <li><a href="./context/supports.html">Supports & Monuments</a></li>
+                        <li><a href="./context/chronology.html">Dating & Chronology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">References ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./references/bibliography.html">Bibliography</a></li>
+                        <li><a href="./references/corpora_databases.html">Corpora and Databases</a></li>
+                      </ul>
+                </li>
             </ul>
         </nav>
     </header>
-    <main class="container" style="padding:20px; max-width:800px; margin:auto;">
-        <h2>Index of People</h2>
+    <main class="container" style="padding:20px; max-width:900px; margin:auto;">
+        <h2>People in the Inscriptions</h2>
+        <p>This list is automatically generated from the EpiDoc XML files.</p>
         <div class="people-list">
             {cards if cards else "<p>No people found.</p>"}
         </div>
     </main>
-    <footer style="text-align:center; padding:20px; font-size:0.8em;">
-        <p>Generated via Saxon-Che | &copy; 2026 - Leonardo Battistella</p>
+    <footer style="text-align:center; padding:20px; font-size:0.8em; margin-top:40px; border-top:1px solid #ddd;">
+        <p>Generated via Saxon-Che & GitHub Actions</p>
+        <p>&copy; 2026 - Leonardo Battistella</p>
+        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
+        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
     </footer>
 </body>
 </html>"""
@@ -143,6 +208,7 @@ def run():
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
+    print(f"Fine: Pagina generata con {len(people_data)} persone.")
 
 if __name__ == "__main__":
     run()
