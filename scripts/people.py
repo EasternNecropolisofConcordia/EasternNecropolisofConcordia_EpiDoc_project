@@ -22,19 +22,21 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # Titolo: prendiamo solo il testo pulito
-                title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
-                display_title = title_item.item_at(0).string_value.strip() if title_item and title_item.size > 0 else filename
+                # Titolo iscrizione
+                title_xpath = "//*[local-name()='titleStmt']/*[local-name()='title'][1]"
+                title_item = xpath_processor.evaluate(title_xpath)
+                display_title = title_item.item_at(0).string_value.strip() if title_item.size > 0 else filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
+                # Trova tutte le persone
                 persons = xpath_processor.evaluate("//*[local-name()='person']")
                 
-                if persons is not None:
+                if persons is not None and persons.size > 0:
                     for i in range(persons.size):
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID della persona
+                        # ID
                         id_val = xpath_processor.evaluate("string(@*[local-name()='id'])")
                         p_id = id_val.string_value.strip() if id_val else f"p_{filename}_{i}"
 
@@ -42,58 +44,56 @@ def run():
                             people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
                             continue
 
-                        # NOME: usiamo string_value per evitare tag XML nell'HTML
-                        name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
-                        name = name_item.item_at(0).string_value.strip() if name_item and name_item.size > 0 else "Unknown Name"
+                        # Nome
+                        n_item = xpath_processor.evaluate(".//*[local-name()='name']")
+                        p_name = n_item.item_at(0).string_value.strip() if n_item.size > 0 else "Unknown"
 
-                        # GENERE
-                        gen_item = xpath_processor.evaluate(".//*[local-name()='gender']")
-                        gender = gen_item.item_at(0).string_value.strip().lower() if gen_item and gen_item.size > 0 else ""
+                        # Genere
+                        g_item = xpath_processor.evaluate(".//*[local-name()='gender']")
+                        p_gender = g_item.item_at(0).string_value.strip().lower() if g_item.size > 0 else ""
 
-                        # OCCUPAZIONE (per la logica silhouette)
-                        occ_item = xpath_processor.evaluate(".//*[local-name()='note'][@type='occupation']")
-                        occupation = occ_item.item_at(0).string_value.strip().lower() if occ_item and occ_item.size > 0 else ""
+                        # Occupazione per Silhouette
+                        occ_xpath = ".//*[local-name()='note'][@type='occupation']"
+                        occ_item = xpath_processor.evaluate(occ_xpath)
+                        p_occ = occ_item.item_at(0).string_value.strip().lower() if occ_item.size > 0 else ""
 
-                        # LOGICA SILHOUETTE (La tua specifica)
+                        # Logica Silhouette (Tua Specifica)
                         img = None
-                        if gender == 'f':
+                        if p_gender == 'f':
                             img = "silhouette_female.png"
-                        elif occupation in ["soldier", "soldier?"]:
+                        elif "soldier" in p_occ:
                             img = "silhouette_soldier.png"
-                        elif occupation in ["civil", "civil?"] and gender == 'm':
+                        elif "civil" in p_occ and p_gender == 'm':
                             img = "silhouette_civil.png"
-                        elif occupation in ["fabricensis", "fabricensis?"]:
+                        elif "fabricensis" in p_occ:
                             img = "silhouette_fabricensis.png"
-                        elif occupation in ["functionary", "functionary?"]:
+                        elif "functionary" in p_occ:
                             img = "silhouette_functionary.png"
 
-                        # NOTE per la lista HTML (pulite dai tag)
+                        # Note (per l'elenco della scheda)
                         notes_list = []
                         note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
-                        if note_elements:
+                        if note_elements.size > 0:
                             for j in range(note_elements.size):
                                 n = note_elements.item_at(j)
                                 n_type = n.get_attribute_value("type") or "info"
-                                n_text = n.string_value.strip() # Prende solo il testo, ignora xmlns
-                                notes_list.append(f"<li><strong>{n_type.capitalize()}:</strong> {n_text}</li>")
+                                notes_list.append(f"<li><strong>{n_type.capitalize()}:</strong> {n.string_value.strip()}</li>")
 
                         people_data[p_id] = {
-                            'name': name,
-                            'gender': gender,
+                            'name': p_name,
+                            'gender': p_gender,
                             'notes': "".join(notes_list),
                             'img': img,
                             'links': [{'title': display_title, 'url': target_link}]
                         }
             except Exception as e:
-                print(f"Errore in {filename}: {e}")
+                print(f"Errore su {filename}: {e}")
 
-    # Costruzione CARDS
+    # Generazione Card
     cards = ""
     for pid in sorted(people_data.keys()):
         p = people_data[pid]
-        links = ", ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
-        
-        # Tag immagine solo se img non è None
+        links_str = ", ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
         img_html = f'<img src="../images/silhouette/{p["img"]}" style="width:70px; height:70px;" alt="silhouette">' if p['img'] else ''
         
         cards += f"""
@@ -104,12 +104,12 @@ def run():
                 <ul style="list-style:none; padding:0; margin:10px 0; font-size:0.9em;">
                     <li><strong>Gender:</strong> {p['gender']}</li>
                     {p['notes']}
-                    <li style="margin-top:5px;"><strong>Found in:</strong> {links}</li>
+                    <li style="margin-top:5px;"><strong>Found in:</strong> {links_str}</li>
                 </ul>
             </div>
         </div>"""
 
-    # Template HTML (Navbar e Header invariati)
+    # Template HTML
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
