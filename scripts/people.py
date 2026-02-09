@@ -179,7 +179,8 @@ def run():
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="inscriptions.html">Inscriptions</a></li>
+                <li><a href="./inscriptions.html">Inscriptions</a></li>
+                <li><a href="people.html">People</a></li>
                 <li class="dropdown">
                     <a href="#">Study & Context ▾</a>
                     <ul class="submenu">
