@@ -22,8 +22,9 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
+                # Titolo: prendiamo solo il testo pulito
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
-                display_title = str(title_item).strip() if title_item else filename
+                display_title = title_item.item_at(0).string_value.strip() if title_item and title_item.size > 0 else filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
                 persons = xpath_processor.evaluate("//*[local-name()='person']")
@@ -33,26 +34,28 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
-                        p_id = str(id_item).strip() if id_item else f"p_{filename}_{i}"
+                        # ID della persona
+                        id_val = xpath_processor.evaluate("string(@*[local-name()='id'])")
+                        p_id = id_val.string_value.strip() if id_val else f"p_{filename}_{i}"
 
                         if p_id in people_data:
                             people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
                             continue
 
+                        # NOME: usiamo string_value per evitare tag XML nell'HTML
                         name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
-                        name = str(name_item).strip() if name_item else "Unknown Name"
+                        name = name_item.item_at(0).string_value.strip() if name_item and name_item.size > 0 else "Unknown Name"
 
+                        # GENERE
                         gen_item = xpath_processor.evaluate(".//*[local-name()='gender']")
-                        gender = str(gen_item).strip().lower() if gen_item else ""
+                        gender = gen_item.item_at(0).string_value.strip().lower() if gen_item and gen_item.size > 0 else ""
 
-                        # Logica Immagini basata sulla tua descrizione
-                        img = None
-                        
-                        # Recuperiamo l'occupazione
+                        # OCCUPAZIONE (per la logica silhouette)
                         occ_item = xpath_processor.evaluate(".//*[local-name()='note'][@type='occupation']")
-                        occupation = str(occ_item).strip().lower() if occ_item else ""
+                        occupation = occ_item.item_at(0).string_value.strip().lower() if occ_item and occ_item.size > 0 else ""
 
+                        # LOGICA SILHOUETTE (La tua specifica)
+                        img = None
                         if gender == 'f':
                             img = "silhouette_female.png"
                         elif occupation in ["soldier", "soldier?"]:
@@ -64,36 +67,38 @@ def run():
                         elif occupation in ["functionary", "functionary?"]:
                             img = "silhouette_functionary.png"
 
-                        # Note per il corpo della scheda
-                        notes_html = ""
+                        # NOTE per la lista HTML (pulite dai tag)
+                        notes_list = []
                         note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
                         if note_elements:
                             for j in range(note_elements.size):
                                 n = note_elements.item_at(j)
                                 n_type = n.get_attribute_value("type") or "info"
-                                notes_html += f"<li><strong>{n_type.capitalize()}:</strong> {str(n).strip()}</li>"
+                                n_text = n.string_value.strip() # Prende solo il testo, ignora xmlns
+                                notes_list.append(f"<li><strong>{n_type.capitalize()}:</strong> {n_text}</li>")
 
                         people_data[p_id] = {
                             'name': name,
                             'gender': gender,
-                            'notes': notes_html,
+                            'notes': "".join(notes_list),
                             'img': img,
                             'links': [{'title': display_title, 'url': target_link}]
                         }
             except Exception as e:
                 print(f"Errore in {filename}: {e}")
 
+    # Costruzione CARDS
     cards = ""
     for pid in sorted(people_data.keys()):
         p = people_data[pid]
         links = ", ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
         
-        # Gestione "nessuna immagine se else"
-        img_tag = f'<img src="../images/silhouette/{p["img"]}" style="width:70px; height:70px;" alt="silhouette">' if p['img'] else ''
+        # Tag immagine solo se img non è None
+        img_html = f'<img src="../images/silhouette/{p["img"]}" style="width:70px; height:70px;" alt="silhouette">' if p['img'] else ''
         
         cards += f"""
         <div class="person-card" style="border:1px solid #ddd; padding:15px; margin-bottom:15px; display:flex; gap:20px; background:#f9f9f9; border-radius:8px;">
-            {img_tag}
+            {img_html}
             <div>
                 <h3 style="margin:0; color:#800000;">{p['name']}</h3>
                 <ul style="list-style:none; padding:0; margin:10px 0; font-size:0.9em;">
@@ -104,7 +109,7 @@ def run():
             </div>
         </div>"""
 
-    # ... (il resto del template HTML rimane identico)
+    # Template HTML (Navbar e Header invariati)
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,7 +131,7 @@ def run():
     <main class="container" style="padding:20px; max-width:800px; margin:auto;">
         <h2>Index of People</h2>
         <div class="people-list">
-            {cards if cards else "<p>No people found in the XML record.</p>"}
+            {cards if cards else "<p>No people found.</p>"}
         </div>
     </main>
     <footer style="text-align:center; padding:20px; font-size:0.8em;">
@@ -135,6 +140,7 @@ def run():
 </body>
 </html>"""
 
+    os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
 
