@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Iovina</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">iovina.xml</idno>
+                <idno type="TM">125661</idno>
+                <idno type="EDR">EDR097920</idno>
+                <idno type="UEL">29364</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <idno>364</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV secolo.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">2330</note>
+                            <note type="plan_y">2770</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">36.5</height>
+                                        <width unit="cm">68</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Sarcophagus panel broken into four rejoined pieces, missing the lower frame and a small fragment.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Tabella di sarcofago fratta in quattro pezzi ricongiunti, mancante inferiormente della cornice e di un piccolo frammento.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">31.5</height>
+                                        <width unit="cm">61</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4" max="5" unit="cm">4-5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Right-to-left direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, triangular interpunction, centered layout.</p>
+                                    
+                                    <p><g type="pl">D</g> wide, with square module;</p>
+                                    
+                                    <p><g type="pl">M</g> composed of four oblique strokes;</p>
+                                    
+                                    <p><g type="pl">N</g> with vertical lateral strokes.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione triangoliforme, impaginazione centrata.</p>
+                                    
+                                    <p><g type="pl">D</g> ampia, dal modulo quadrato;</p>
+                                    
+                                    <p><g type="pl">M</g> composta da quattro aste oblique;</p>
+                                    
+                                    <p><g type="pl">N</g> con le aste laterali verticali.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>The inscribed field is framed by a molded border, the lower side of which is now lost.</p>
+                                
+                                <p>The figurative decoration of the sarcophagus, now lost, was described by <bibl ref="#bertolini1874a">Bertolini</bibl>: the tomb bore on both pediments of the lid the monogram of Constantine. The sides of the inscription had sculpted on the front, one a male head, the other a female head; on the sides of the inscription there were two arches supported by columns and in the center a small patera. On the minor faces there was on the north side an arch of equal workmanship and beneath it two vases, and on the south side the arch without other figures.</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Lo specchio epigrafico è delimitato da una cornice modanata, il cui lato inferiore è oggi perduto.</p>
+                                
+                                <p>The figurative decoration of the sarcophagus, now lost, was described by <bibl ref="#bertolini1874a">Bertolini</bibl> as follows: "this tomb bears on both pediments of the lid the monogram of Constantine. The sides of the inscription have sculpted on the front, one a male head, the other a female head; on the sides of the inscription there are two arches supported by columns and in the center a small patera. On the minor faces there is on the north side an arch of equal workmanship and beneath it two vases, and on the south side the arch without other figures".</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person>
+                   <persName xml:id="honoratus">
+                       <name type="full">Turranius Honoratus</name>
+                       <name type="nomen">Turranius</name>
+                       <name type="cognomen" nymRef="latin">Honoratus</name>
+                       <name type="gens">Turrania</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#iovina">husband</note>
+               </person>
+               <person>
+                   <persName xml:id="iovina">
+                       <name type="full">Aurelia Iovina</name>
+                       <name type="nomen">Aurelia</name>
+                       <name type="cognomen" nymRef="latin">Iovina</name>
+                       <name type="gens">Aurelia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#honoratus">wife</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/iovina.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Iovina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29364">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><persName ref="#honoratus">Turranius Hono<unclear>r</unclear>atus</persName>
+                    <lb n="2"/><expan><abbr>Aur</abbr><ex>eliae</ex></expan> Iovinae, dulcissimae <choice><reg>compari</reg><orig>conpari</orig></choice>
+                    <lb n="3"/>quae vixit mecum annos <num value="10">X</num>, menses <num value="2">II</num>.
+                    <lb n="4"/>Si quis <choice><reg>eam</reg><orig>ean</orig></choice> <supplied reason="omitted">arcam</supplied> voluerit aper<choice><corr>i</corr><sic>e</sic></choice>re
+                    <lb n="5"/>dabit fisco <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">argenti pondo
+                    <lb n="6"/>quinque</measure>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p><persName ref="#honoratus" xml:lang="la">Turranius Honoratus</persName>, to <persName ref="#iovina" xml:lang="la">Aurelia Iovina</persName>, sweetest companion, who lived with me 10 years and 2 months.</p>
+                
+                <p>If anyone wishes to open this sarcophagus, he shall pay to the treasury five (roman) pounds of silver.</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p><persName ref="#honoratus">Turranio Onorato</persName>, ad <persName ref="#iovina">Aurelia Iovina</persName>, dolcissima compagna, che visse con me 10 anni e 2 mesi.</p>
+                
+                <p>Se qualcuno vorrà aprire questa arca, verserà al fisco cinque libbre (romane) d'argento.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>The <term xml:lang="la">gens</term> <persName xml:lang="la">Turrania</persName> is abundantly documented in Concordia, including in this very necropolis <ref target="./fabianus.xml">(<term xml:lang="la">CIL</term> V 8692)</ref>.</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>La <term xml:lang="la">gens</term> <persName xml:lang="la">Turrania</persName> è molto attestata in Concordia anche nella stessa necropoli <ref target="./fabianus.xml">(<term xml:lang="la">CIL</term> V 8692)</ref>.</p></div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">31</citedRange>
+                        <note type="number">n. 27</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">296</citedRange>
+                        <note type="number">n. 26</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8772">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8772</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv816">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 816</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">104</citedRange>
+                        <note type="number">n. 75</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097920">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097920">EDR097920</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

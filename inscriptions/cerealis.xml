@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Ennius Cerealis</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">cerealis.xml</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></repository>
+                        <idno>56</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient">Iulia Concordia</placeName>
+                                <placeName type="modern">Concordia Sagittaria</placeName>
+                                <date type="discovery">1877</date>
+                            </origPlace>
+                            <origDate notBefore-custom="0275" notAfter-custom="0325">
+                                Late Third Century - Early Fourth Century A.D.
+                            </origDate>
+                        </origin>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the left nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva murata nella navata sinistra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2025</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">37</height>
+                                        <width unit="cm">142</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    Slab broken into two rejoined fragments and trimmed at the bottom of the frame.
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">27</height>
+                                        <width unit="cm">126</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="3" max="4" unit="cm">3-4</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Rightward stroke direction, horizontal layout, vertical and irregular module, irregular <term xml:lang="la">ductus</term>, shallow incision, centered layout.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> is formed by four oblique strokes.
+                                    </p>
+                                    <p>
+                                        <g type="pl">P</g> with open loop.
+                                    </p>
+                                    <p>
+                                        <g type="pl">Q</g> with tail that extends downward below the baseline.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo verticale e irregolare, <term xml:lang="la">ductus</term> irregolare, solco leggero, impaginazione centrata.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">P</g> con occhiello aperto.
+                                    </p>
+                                    <p>
+                                        <g type="pl">Q</g>con coda che si allunga verso il basso sotto il rigo di base
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">The front of the sarcophagus is framed by a molded border, the lower side of which is now lost.</decoNote>
+                            <decoNote xml:lang="it">La fronte del sarcofago è delimitata da una cornice modanata, il cui lato inferiore è oggi perduto.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="cerealis">
+                   <persName>
+                       <name type="full">Ennius Cerealis</name>
+                       <name type="nomen">Ennius</name>
+                       <name type="cognomen" nymRef="latin">Cerealis</name>
+                       <name type="gens">Ennia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#asteria">grandfather</note>
+               </person>
+               <person xml:id="asteria">
+                 <persName>
+                     <name type="full">Ennia Asteria</name>
+                     <name type="nomen">Ennia</name>
+                     <name type="cognomen" nymRef="latin">Asteria</name>
+                     <name type="gens">Ennia</name>
+                 </persName>
+                  <gender>f</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">dedicator (restoration)</note>
+                  <note type="relationship" corresp="#asterius">daughter</note>
+                  <note type="relationship" corresp="#cerealis">granddaughter</note>
+               </person>
+               <person xml:id="asterius">
+                 <persName>
+                     <name type="full">Ennius Asterius</name>
+                     <name type="nomen">Ennius</name>
+                     <name type="cognomen" nymRef="latin">Asterius</name>
+                     <name type="gens">Ennia</name>
+                 </persName>
+                  <gender>m</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">mentioned</note>
+                  <note type="relationship" corresp="#asterius">father</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/cerealis.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <div type="textpart" n="a">
+                    <ab>
+                        <lb n="1"/><w xml:id="w1"/>
+                    </ab>
+                </div>
+                <div type="textpart" n="b">
+                    <ab>
+                        <lb n="1"/><persName ref="#asteria">Ennia Asteria</persName>, <persName ref="#asterius">Enni Asteri</persName> filia,
+                        <lb n="2"/>ex origine <persName ref="#cerealis">Enni Cerealis</persName> avi sui arcam
+                        <lb n="3"/>suo nomine renovavit, quam post ex
+                        <lb n="4" break="no"/>cessum suum si quis <choice><reg>irrumperit</reg><orig>inruperit</orig></choice> inferet fisci
+                        <lb n="5"/>rationibus <measure type="fine" unit="sestertius" quantity="200"><choice><reg>sestertium</reg><orig>HS</orig></choice> <num value="200">CC</num> <choice><abbr>N</abbr><expan>N<ex>ummum</ex></expan></choice></measure>. Fili sane veniam habebunt.
+                    </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1a" from="#w1">
+                        <lem>
+                            
+                        </lem>
+                        <rdg source="#bertolini1877 #edr097935">
+                            <choice><abbr>D</abbr><expan>D<ex>is</ex></expan></choice> <choice><abbr>M</abbr><expan>M<ex>anibus</ex></expan></choice>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <div type="translation" xml:lang="en">
+                    <p>
+                        <persName ref="#asteria" xml:lang="la">Ennia Asteria</persName>, daughter of <persName ref="#asterius" xml:lang="la">Ennius Asterius</persName>, restored in her own name the arca that had belonged to her grandfather <persName ref="#cerealis" xml:lang="la">Ennius Cerealis</persName>.
+                    </p>
+                    <p>
+                        If anyone should violate it after her death, he shall pay two hundred sesterces to the accounts of the <term xml:lang="la">fiscus</term>. Her children, however, shall be exempt.
+                    </p>
+                </div>
+                <div type="translation" xml:lang="it">
+                    <p>
+                        <persName ref="#asteria" xml:lang="la">Ennia Asteria</persName>, figlia di <persName ref="#asterius" xml:lang="la">Ennius Asterius</persName>, restaurò a suo nome l’arca che era stata del nonno <persName ref="#cerealis" xml:lang="la">Ennius Cerealis</persName>.
+                    </p>
+                    <p>
+                        Se qualcuno, dopo la sua morte, dovesse violarla, pagherà alle casse del <term xml:lang="la">fiscus</term> duecento sesterzi. I figli, tuttavia, ne saranno esentati.
+                    </p>
+                </div>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                   
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
+                        <citedRange unit="page">120</citedRange>
+                        <note type="number">nr. 5</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8988e">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title>CIL V 8988e</title>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097935">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097935">
+                            EDR097935
+                        </ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-30">30-11-2007</date>
+                        <date type="revised" when="2022-04-28">28-04-2022</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

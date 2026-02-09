@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Andia</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">andia.xml</idno>
+                <idno type="TM">125640</idno>
+                <idno type="EDR">EDR097899</idno>
+                <idno type="UEL">29328</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></repository>
+                        <idno>244</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0388" notAfter-custom="0400" xml:lang="en">
+                                Late Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0388" notAfter-custom="0400" xml:lang="it">
+                                Fine IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">2220</note>
+                            <note type="plan_y">700</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note>Now set into the wall of the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">196</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Slab broken into three rejoined fragments.</p>
+                                    <p xml:lang="it">Fronte di sarcofago rotta in tre frammenti ricomposti.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">196</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4" max="6" unit="cm">4-6</height>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">A slab without any border.</decoNote>
+                            <decoNote xml:lang="it">Fronte di sarcofago senza cornici o decorazioni.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="flaviiservilii" role="group">
+                   <persName>
+                       <name type="full">Flavii Servilii</name>
+                       <name type="nomen" nymRef="latin">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Servilius</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>unknown</gender>
+                   <note type="occupation">soldier?</note>
+                   <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#andia">colleague?</note>
+               </person>
+               <person xml:id="otraustaguta">
+                 <persName>
+                     <name type="full">Otraustaguta</name>
+                     <name type="cognomen" nymRef="germanic">Otraustaguta</name>
+                 </persName>
+                  <gender value="f">m</gender>
+                  <note type="occupation">soldier</note>
+                  <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#andia">colleague</note>
+              </person>
+              <person xml:id="felicitas">
+                 <persName>
+                     <name type="full">Ilateuta Felicitas</name>
+                     <name type="cognomen" nymRef="germanic">Ilateuta</name>
+                     <name type="cognomen" nymRef="latin">Felicitas</name>
+                 </persName>
+                  <gender value="f">f</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">dedicator</note>
+              </person>
+               <person xml:id="andia">
+                   <persName>
+                       <name type="full">Flavius Andia</name>
+                       <name type="nomen">Flavius</name>
+                       <name type="cognomen" nymRef="germanic">Andia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier</note>
+                   <note type="rank">centenarius</note>
+                   <note type="numerus">Bracchiati</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#otraustaguta">colleague</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/andia.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Andia. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29328">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <ab>
+                    <lb n="1"/><persName corresp="#flaviiservilii"><w xml:id="w1">Flavii</w> Servili<supplied reason="omitted">i</supplied></persName> <persName corresp="#otraustaguta">Otraustaguta</persName> <w xml:id="w2">e<choice><corr>t</corr><sic>i</sic></choice></w> <persName corresp="#felicitas">Ilateuta Felicitas</persName>
+                    <lb n="2"/><persName corresp="#andia"><w xml:id="w3"><unclear>F</unclear><unclear>l</unclear>avio</w> Andiae</persName>, centenario numeri <w xml:id="w4">Bracchiatorum</w> <w xml:id="w5" next="#w6">col</w>
+                    <lb n="3" break="no"/><w xml:id="w6" prev="#w5"><supplied reason="lost">legae</supplied></w> <supplied reason="lost">o</supplied>ptimo, arcam de labore suo <choice><reg>comparavimus</reg><orig>conparavimus</orig></choice>, qu<choice><corr>a</corr><sic>e</sic></choice>m
+                    <lb n="4"/><supplied reason="lost">arca</supplied>m <choice><reg>commendamus</reg><orig>conmendamus</orig></choice> <choice><reg>sanctae</reg><orig>sancte</orig></choice> <choice><reg>ecclesiae</reg><orig>aeclesiae</orig></choice> <supplied reason="omitted">c</supplied>ivitatis conco<supplied reason="omitted">r</supplied>dien
+                    <lb n="5" break="no"/>sium. Si quis eam a<unclear>p</unclear><unclear>e</unclear><choice><corr>r</corr><sic>b</sic></choice>ire voluerit dabit fisco <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri pondo duo</measure> sin
+                    <lb n="6" break="no"/>e mora
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1" to="w1">
+                        <lem>Flavii</lem>
+                        <rdg source="#cilv8740 #ilcv503 #edr097899"><supplied reason="lost">F</supplied>lavii</rdg>
+                    </app>
+                    <app loc="1" from="#w2" to="w2">
+                        <lem>e<choice><corr>t</corr><sic>i</sic></choice></lem>
+                        <rdg source="#ils2798 #ilcv503 #hoffmann1963 #forlatitamaro1978">e<supplied reason="lost">t</supplied></rdg>
+                        <rdg source="#zovatto1946">et</rdg>
+                    </app>
+                    <app loc="2" from="#w3" to="w3">
+                        <lem><unclear>F</unclear><unclear>l</unclear>avio</lem>
+                        <rdg source="#ils2798"><supplied reason="lost">F</supplied>lavio</rdg>
+                    </app>
+                    <app loc="2" from="#w4" to="w4">
+                        <lem>Bracchiatorum</lem>
+                        <rdg source="#bertolini1875a #bertolini1875b #cilv8740 #ils2798 #ilcv503">Brac<supplied reason="omitted">c</supplied>hiatorum</rdg>
+                    </app>
+                    <app loc="2-3" from="#w5" to="w6">
+                        <lem><supplied reason="lost">legae</supplied></lem>
+                        <rdg source="#cilv8740 #ilcv503 #forlatitamaro1978"><supplied reason="lost">lege</supplied></rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p>
+                    The <persName ref="#flaviiservilii" xml:lang="la">Flavii Servilii</persName>, <persName ref="#otraustaguta" xml:lang="la">Otraustaguta</persName>, and <persName corresp="#felicitas" xml:lang="la">Ilateuta Felicitas</persName> to <persName ref="#andia" xml:lang="la">Flavius Andia</persName>, <term xml:lang="la">centenarius</term> of the unit of the Bracchiati, their best colleague, have purchased this chest with their own labor, which they entrust to the holy Church of the city of Concordia.
+                </p>
+                <p>
+                    If anyone should wish to open it, he shall pay to the treasury two pounds of gold without delay.
+                </p>
+            </div>
+            <div type="commentary">
+                <p>The most convincing interpretation is that proposed by Lettich. 
+                    The plural Flavii Servilii should be understood as referring to two or more members of the same family rather than to a single individual (Flavius Servilius). 
+                    The names Otraustaguta and Ilateuta Felicitas appear to designate a couple, as suggested by the conjunction et and by the combination of the Germanic Ilateuta with the Latin cognomen Felicitas. 
+                    Together, the Flavii Servilii, Otraustaguta, and Ilateuta Felicitas dedicated the inscription to Flavius Andia, described as collega optimus and centenarius of the numerus Brachiatorum. 
+                    The interpretation of Zovatto, who considered Andia a fabricensis, is unlikely, since such affiliation would normally be explicit in the text. 
+                    The inscription thus appears to be a military dedication by a group of comrades, possibly of Ostrogothic origin, to their superior officer</p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1875a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
+                        <title>Bertolini 1875a</title>
+                        <citedRange unit="page">111</citedRange>
+                        <note type="number">nr. 49</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1875b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
+                        <title>Bertolini 1875b</title>
+                        <citedRange unit="page">111</citedRange>
+                        <note type="number">nr. 3</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8740">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8740</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ils2798">
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
+                        <title><term xml:lang="la">ILS</term> 2798</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv503">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 503</title>
+                    </bibl>
+                    <bibl xml:id="zovatto1946">
+                        <ptr target="../bibliography/master_bibliography.xml#zovatto1946"/>
+                        <ptr target="../references/bibliography.xml#zovatto1946"/>
+                        <title>Zovatto 1946</title>
+                        <citedRange unit="page">82-83</citedRange>
+                    </bibl>
+                    <bibl xml:id="brusinzovatto1960">
+                        <ptr target="../bibliography/master_bibliography.xml#brusinzovatto1960"/>
+                        <ptr target="../references/bibliography.xml#brusinzovatto1960"/>
+                        <title>Brusin, Zovatto 1960</title>
+                        <citedRange unit="page">92-93</citedRange>
+                    </bibl>
+                    <bibl xml:id="hoffmann1963">
+                        <ptr target="../bibliography/master_bibliography.xml#hoffmann1963"/>
+                        <ptr target="../references/bibliography.xml#hoffmann1963"/>
+                        <title>Hoffmann 1963</title>
+                        <citedRange unit="page">37-38</citedRange>
+                        <note type="number">nr. 14</note>
+                    </bibl>
+                    <bibl xml:id="forlatitamaro1978">
+                        <ptr target="../bibliography/master_bibliography.xml#forlatitamaro1978"/>
+                        <ptr target="../references/bibliography.xml#forlatitamaro1978"/>
+                        <title>Forlati Tamaro 1978</title>
+                        <citedRange unit="page">150</citedRange>
+                        <note type="number">nr. 8</note>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">77-79</citedRange>
+                        <note type="number">nr. 34</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097899">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097899">EDR097899</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-22">22-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

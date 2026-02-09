@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Oppius Marinus</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">oppius_marinus.xml</idno>
+                <idno type="TM">125658</idno>
+                <idno type="EDR">EDR097917</idno>
+                <idno type="UEL">29367</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>348</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="en">
+                                FIrst Half of the Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="it">
+                                Prima Metà del IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">1270</note>
+                            <note type="plan_y">680</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                   <objectType xml:lang="en">
+                                        Frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">45</height>
+                                        <width unit="cm">121.5</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Front slab of a limestone sarcophagus, broken into four fragments, with a portion missing near the upper left corner.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Fronte di sarcofago in pietra calcarea fratta in quattro pezzi e resecata in prossimità dell’angolo superiore sinistro.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">45</height>
+                                        <width unit="cm">121.5</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="5" max="6" unit = "cm">5-6</height>
+                                <note type="palaeographic" xml:id="en">
+                                    <p>
+                                        Right-facing direction, horizontal alignment, vertical module, <term xml:lang="la">ductus</term> descending, no punctuation, left-aligned layout.
+                                    </p>
+                                    <p>
+                                        <g type="pl">F</g> with a >crossbar shorter than the upper arm.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> composed of four oblique strokes.
+                                    </p>
+                                    <p>
+                                        <g type="pl">N</g> composed of three oblique strokes.
+                                    </p>
+                                    <p>
+                                        <g type="pl">P</g> with a closed bowl.
+                                    </p>
+                                    <p>
+                                        <g type="pl">R</g> with an open bowl and thin descender.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:id="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> discendente, interpunzione assente, impaginazione a sinistra.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">F</g> con cravatta più corta rispetto al braccio superiore.
+                                    </p> 
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique.
+                                    </p>
+                                    <p>
+                                        <g type="pl">N</g> composta da tre aste oblique.
+                                    </p>
+                                    <p>
+                                        <g type="pl">P</g> con occhiello chiuso.
+                                    </p>
+                                    <p>
+                                        <g type="pl">R</g> con occhiello aperto e coda sottile.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="oppius_marinus">
+                   <persName>
+                       <name type="full">Oppius Marinus</name>
+                       <name type="nomen">Oppius</name>
+                       <name type="cognomen" nymRef="latin">Marinus</name>
+                       <name type="gens">Oppia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="role">dedicator/deceased</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/oppius_marinus.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Oppius Marinus. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29367">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                    <ab>
+                        <lb n="1"/><persName corresp="#oppius_marinus"><w xml:id="w1">Oppius</w> Marinus</persName> emit sibi de <w xml:id="w2"><choice><reg>proprio</reg><orig>bropid</orig></choice></w>
+                        <lb n="2"/><w xml:id="w3">labore</w> arcam et ita <w xml:id="w4"><choice><reg>scribi</reg><orig>scribsit</orig></choice></w> ius
+                        <lb n="3" break="no"/><w xml:id="w5">sit</w>: ut post obitum ipsius si <w xml:id="w6">quis</w>
+                        <lb n="4"/><w xml:id="w7"><choice><reg cert="low">alienigena</reg><orig>alicniscna</orig></choice></w> in ea se vo<damage>l</damage>uerit
+                        <lb n="5"/>poni, d<choice><corr>e</corr><sic>s</sic></choice>t fisco <measure type="fine" unit="roman_pound" commodity="silver" quantity="6">ar<choice><corr>g</corr><sic>s</sic></choice>e<supplied reason="omitted">n</supplied>ti p<supplied reason="omitted">o</supplied>ndo <expan><abbr>s</abbr><ex>ex</ex></expan></measure>.
+                    </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1" to="#w1">
+                        <lem>
+                            Oppius
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            <gap reason="lost" extent="unknown" unit="character"/>us
+                        </rdg>
+                        <rdg source="#cilv8769">
+                            <supplied reason="lost">Ve</supplied>ttius
+                        </rdg>
+                    </app>
+                    <app loc="1" from="#w2" to="#w2">
+                        <lem>
+                            <choice><reg>proprio</reg><orig>bropid</orig></choice>
+                        </lem>
+                        <rdg source="#bertolini1874a">
+                            <choice><reg>proprio</reg><orig>propio</orig></choice>
+                        </rdg>
+                        <rdg source="#bertolini1874b">
+                            proprio
+                        </rdg>
+                    </app>
+                    <app loc="2" from="#w3" to="#w3">
+                        <lem>
+                            labore
+                        </lem>
+                        <rdg source="#bertolini1874a">
+                            <supplied reason="lost">l</supplied>abore
+                        </rdg>
+                        <rdg source="#bertolini1874b">
+                            <gap reason="lost" extent="unknown" unit="character"/>abore
+                        </rdg>
+                    </app>
+                    <app loc="2" from="#w4" to="#w4">
+                        <lem>
+                            <choice><reg>scribi</reg><orig>scribsit</orig></choice>
+                        </lem>
+                        <rdg source="#cilv8769">
+                            <choice><reg>scribi</reg><orig>scribsi</orig></choice>
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w5" to="#w5">
+                        <lem>
+                            sit
+                        </lem>
+                        <rdg source="#bertolini1874a">
+                            s<supplied reason="lost">i</supplied>t
+                        </rdg>
+                        <rdg source="#bertolini1874b">
+                            s<gap reason="lost" extent="unknown" unit="character"/>t
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w6" to="#w6">
+                        <lem>
+                            quis
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            qui
+                        </rdg>
+                    </app>
+                    <app loc="4" from="#w7" to="#w7">
+                        <lem>
+                            <choice><reg>alienigena</reg><orig>alicniscna</orig></choice>
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            <choice><reg>a<gap reason="lost" extent="unknown" unit="character"/>lienigena</reg><orig>alicniscna</orig></choice>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p xml:lang="en">
+                    <persName ref="#oppius_marinus" xml:lang="la">Oppius Marinus</persName> purchased for himself, at his own expense, a chest and ordered that it be inscribed: if after his death any outsider wished to place themselves in it, they should pay six roman pound of silver to the <term xml:lang="la">fiscus</term>.
+                </p>
+                <p xml:lang="it">
+                    <persName ref="#oppius_marinus" xml:lang="la">Oppius Marinus</persName> acquistò per sé, con il proprio lavoro, un'arca e ordinò che fosse scritto: se dopo la sua morte qualcuno estraneo volesse collocarsi in essa, versi al <term xml:lang="la">fiscus</term> sei libbre d'argento.
+                </p>
+            </div>
+            <div type="commentary">
+                <div type="commentary" xml:lang="en">
+                    <p>The <term xml:lang="la">gens</term> <persName xml:lang="la">Oppia</persName> (<term xml:lang="la">CIL</term> V 8689; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097849">EDR097849</ref>) and the <term xml:lang="la">cognomen</term> <persName xml:lang="la">Marinus</persName> (<term xml:lang="la">CIL</term> V 1918; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097787">EDR097787</ref>) are already attested in Concordia as early as the Early Imperial period.</p>
+                </div>
+                <div type="commentary" xml:lang="it">
+                    <p>La <term xml:lang="la">gens</term> <persName xml:lang="la">Oppia</persName> (<term xml:lang="la">CIL</term> V 8689; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097849">EDR097849</ref>) e il <term xml:lang="la">cognomen</term> <persName xml:lang="la">Marinus</persName> (<term xml:lang="la">CIL</term> V 1918; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097787">EDR097787</ref>) sono attestati a Concordia già in età alto imperiale.</p>
+                </div>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                     <bibl xml:id="bertolini1874a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                         <title>Bertolini 1874a</title>
+                         <citedRange unit="page">27</citedRange>
+                         <note type="number">nr. 17</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">296</citedRange>
+                        <note type="number">nr. 28</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8769">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8769</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">105-106</citedRange>
+                        <note type="number">nr. 78</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097917">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097917">EDR097917</ref></title>
+                        <author>Franco Luciani</author>
+                        <date when="2014-10-30">30-10-2014</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

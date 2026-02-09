@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Εἰνάχιος</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">εἰνάχιος.xml</idno>
+                <idno type="TM">125655</idno>
+                <idno type="EDR">EDR097902</idno>
+                <idno type="UEL">29302</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>329</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">2900</note>
+                            <note type="plan_y">2900</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">The lid is located in the right aisle of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name><idno type="VIAF">124364831</idno></orgName>, while the fragmentary sarcophagus front is kept in storage.</note>
+                            <note xml:lang="it">Il coperchio si trova nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name><idno type="VIAF">124364831</idno></orgName>, mentre la fronte di sarcofago frammentaria è conservata in deposito</note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Lid and frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Coperchio e fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions xml:id="lid">
+                                        <height unit="cm">35</height>
+                                        <width unit="cm">212</width>
+                                        <depth unit="cm">74</depth>
+                                    </dimensions>
+                                    <dimensions xml:id="frag">
+                                        <height unit="cm">26</height>
+                                        <width unit="cm">40</width>
+                                        <depth unit="cm">8</depth>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Sarcophagus panel, broken into two pieces and missing the lower left corner.</p>
+                                    <p xml:lang="it">Tabella di sarcofago fratta in due pezzi e mancante dell’angolo inferiore sinistro.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions corresp="#frag">
+                                        <height unit="cm">26</height>
+                                        <width unit="cm">40</width>
+                                        <depth unit="cm">8</depth>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4.5" max="7.5" unit="cm">4.5-7.5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Right-facing direction; horizontal alignment; vertical module; regular <g type="pl">ductus</g>.</p>
+                                    <p>The letter <g type="pl">A</g> is strongly compressed laterally, while the <g type="pl">M</g> is broad.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso; andamento orizzontale; modulo verticale; <g type="pl">ductus</g> regolare.</p>
+                                    <p>La lettera <g type="pl">A</g> appare fortemente compressa lateralmente, mentre la <g type="pl">M</g> si presenta ampia.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p></p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p></p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="Εἰνάχιος">
+                   <persName>
+                       <name type="full">Εἰνάχιος</name>
+                       <name type="cognomen" nymRef="greek">Εἰνάχιος</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+               </person>
+               <person xml:id="hermias">
+                 <persName>
+                     <name type="full">Hermias</name>
+                     <name type="cognomen" nymRef="grek">Hermias</name>
+                 </persName>
+                  <gender>m</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">dedicator?</note>
+              </person>
+               <person xml:id="cispia">
+                 <persName>
+                     <name type="full">Cispia</name>
+                     <name type="nomen">Cispia</name>
+                 </persName>
+                  <gender>f</gender>
+                  <note type="occupation">civil</note>
+                  <note type="role">dedicator?</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/εἰνάχιος_Lid.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">Lid of the sarchophagus of Εἰνάχιος. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29302">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <facsimile>
+        <graphic url="../../images/inscriptions/εἰνάχιος_Acroterion1.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">Left acroterion of the sarchophagus of Εἰνάχιος. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29302">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <facsimile>
+        <graphic url="../../images/inscriptions/εἰνάχιος_Acroterion2.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">Right acroterion of the sarchophagus of Εἰνάχιος. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29302">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <facsimile>
+        <graphic url="../../images/inscriptions/εἰνάχιος_Chest.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">Frontal panel of the sarchophagus of Εἰνάχιος. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29302">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc">
+                <div type="textpart" subtype="lid" n="a">
+                    <div type="textpart" subtype="acroterion" n="1">
+                        <ab>
+                            <lb n="1"/>Εἰναχί
+                            <lb n="2" break="no"/>ῳ
+                        </ab>
+                    </div>
+                    <div type="textpart" subtype="acroterion" n="2">
+                        <ab>
+                            <lb n="1"/>ἀειμνήσ
+                            <lb n="2" break="no"/>τῳ
+                        </ab>
+                    </div>
+                </div>
+                <div type="textpart" subtype="chest" n="b" xml:lang="la">
+                    <ab>
+                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <persName ref="#hermias"><supplied reason="lost" evidence="previouseditor" source="#bertolini1876b #cilv8766">Her</supplied>miai</persName>
+                        <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName ref="#cispia"><supplied reason="lost" evidence="previouseditor" source="#bertolini1876b #cilv8766">Ci</supplied>spia</persName>
+                        <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w xml:id="w1">is</w>
+                        <lb n="4"/><gap reason="lost" extent="unknown" unit="line"/>
+                    </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="4b" from="#w1">
+                        <lem>
+                            is
+                        </lem>
+                        <rdg source="#bertolini1876b #cilv8766">
+                            iss
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>To Inachius, of everlasting memory.</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>A Inachio, di sempiterna memoria.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>This is the only bilingual epigraph in the entire burial ground. The inscription is too fragmentary to allow for a detailed historical commentary.</p>
+                <p>The letters in the last line appear to belong to a superlative; there are numerous epigraphs where the epithets <term xml:lang="la">dulcissimus/a</term>, <term xml:lang="la">pietissimus/a</term>, or <term xml:lang="la">carissimus/a</term> are attributed to a child or a spouse. </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p> Si tratta dell’unica <term>epigrafe bilingue</term> di tutto il <term>sepolcreto</term>. L’iscrizione è troppo frammentaria per poter redigere un commento storico. </p>
+                <p>Le lettere presenti nell’ultima riga sembrano appartenere a un <term>superlativo assoluto</term>; sono numerose le epigrafi dove si attribuisce a un figlio o a un coniuge l’<term>epiteto</term> <term xml:lang="la">dulcissimus/a</term>, <term xml:lang="la">pietissimus/a</term> o <term xml:lang="la">carissimus/a</term>.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1876b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1876b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1876b"/>
+                        <title>Bertolini 1876b</title>
+                        <citedRange unit="page">132</citedRange>
+                        <note type="number">nr. 11</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8766">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8766</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv4108a">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 4108 A</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">48-49</citedRange>
+                        <note type="number">nr. 4</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097914">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097914">EDR097914</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

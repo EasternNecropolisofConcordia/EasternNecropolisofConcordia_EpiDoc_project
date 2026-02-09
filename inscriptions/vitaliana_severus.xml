@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Vitaliana and Severus</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">vitaliana_severus.xml</idno>
+                <idno type="TM">125664</idno>
+                <idno type="EDR">EDR097923</idno>
+                <idno type="UEL">29368</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></repository>
+                        <idno>357</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">1580</note>
+                            <note type="plan_y">1580</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">50</height>
+                                        <width unit="cm">117</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Sarcophagus front truncated at the lower part.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Fronte di sarcofago resecata nella parte inferiore.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">43</height>
+                                        <width unit = "cm">110</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4.5" max="5" unit = "cm">4,5-5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Rightward slant, horizontal layout, vertical module, irregular ductus, shallow incision.</p>
+                                    <p>The inscription is difficult to read: the stone was not smoothed prior to the cutting of the letters, and the incision is shallow.</p>
+                                    <p><g type="pl">E</g> is strongly laterally compressed.</p>
+                                    <p><g type="pl">F</g> with an anomalous lower stroke beneath the median bar, rendering it almost indistinguishable from <g type="pl">E</g>.</p>
+                                    <p><g type="pl">M</g> composed of four oblique strokes.</p>
+                                    <p><g type="pl">N</g> with oblique lateral strokes.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, ductus irregolare, solco leggero.</p>
+                                    <p>L’epigrafe è di difficile lettura: la pietra non è stata levigata prima dell’incisione delle lettere e il solco è leggero.</p>
+                                    <p><g type="pl">E</g> fortemente compressa lateralmente.</p>
+                                    <p><g type="pl">F</g> con un anomalo braccio inferiore sottostante alla cravatta, che lo rende quasi indistinguibile dalla <g type="pl">E</g>.</p>
+                                    <p><g type="pl">M</g> composta da quattro aste oblique.</p>
+                                    <p><g type="pl">N</g> con aste laterali oblique.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">A molded cornice borders the front of the sarcophagus, while a chrismon is incised at the lower right of the epigraphic field.</decoNote>
+                            <decoNote xml:lang="it">Una cornice modanata corre lungo il perimetro della fronte del sarcofago, mentre un chrismon è inciso nella parte inferiore destra dello specchio epigrafico.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="vitaliana">
+                   <persName>
+                       <name type="full">Vettia Vitaliana</name>
+                       <name type="nomen">Vettia</name>
+                       <name type="cognomen" nymRef="latin">Vitaliana</name>
+                       <name type="gens">Vettia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#severus">wife</note>
+               </person>
+               <person xml:id="severus">
+                 <persName>
+                     <name type="full">Flavius Severus</name>
+                     <name type="nomen">Flavius</name>
+                     <name type = "cognomen" nymRef="latin">Severus</name>
+                     <name type="gens">Flavia</name>
+                 </persName>
+                  <gender>m</gender>
+                  <note type = "occupation">civil</note>
+                  <note type="role">dedicator/deceased</note>
+                  <note type = "relationship" corresp="#vitaliana">husband</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../data/Images/Vitaliana_Severus.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Vitaliana and Severus. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29368">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><seg xml:id="s1">arc<hi rend="ligature">am V</hi>et<supplied reason="omitted" cert="low">t</supplied>ia<supplied reason="omitted" cert="low">e</supplied> Vitali<surplus cert="low">ni</surplus>an<surplus cert="low">i</surplus><supplied reason="omitted" cert="low">ae</supplied> et <expan><abbr>Fl</abbr><ex>avi</ex></expan> Severi, <supplied reason="omitted" cert="low">qui</supplied></seg>
+                    <lb n="2"/><w xml:id="w1">emerunt</w> <w xml:id="w2">de</w> <w xml:id="w3">proprio</w> <w xml:id="w4">suo</w>; <w xml:id="w5"><choice><reg>compara</reg><orig>conpara</orig></choice></w>
+                    <lb n="3" break="no"/>verunt sibi ea<supplied reason="omitted">m</supplied> memorialibus meis, <supplied reason="omitted" cert="medium">si</supplied>
+                    <lb n="4"/><w xml:id="w6"><expan><abbr>q</abbr><ex>u</ex><abbr>i</abbr><ex>s</ex></expan></w> <w xml:id="w7"><choice><corr>e</corr><sic>i</sic></choice>a<supplied reason="omitted">m</supplied></w> <w xml:id="w8">aperire</w> <w xml:id="w9">volue<supplied reason="omitted">r</supplied>i<supplied reason="omitted">t</supplied></w>, <w xml:id="w10"><choice><reg>dabit</reg><orig>davit</orig></choice></w> <w xml:id="w11"><expan><abbr>fisc</abbr><ex>i</ex></expan></w> <w xml:id="w12">viri</w>
+                    <lb n="5" break="no"/>bus <measure type="fine" unit="roman_pound" commodity="silver" quantity="10"><w xml:id="w25">argenti</w> <w xml:id="w26"><expan><abbr>p</abbr><ex>ondo</ex></expan></w> <w xml:id="w27">dece<surplus>ce</surplus>m</w></measure>.
+                    <lb n="6"/><g ref="#chi-rho"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#s1" to="#s1">
+                        <lem>
+                            arc<hi rend="ligature">am</hi> <hi rend="ligature">V</hi>et<supplied reason="omitted" cert="low">t</supplied>ia<supplied reason="omitted" cert="low">e</supplied> Vitali<surplus cert="low">ni</surplus>an<surplus cert="low">i</surplus><supplied reason="omitted" cert="low">ae</supplied> et <choice><abbr>Fl</abbr><expan>Fl<ex>avi</ex></expan></choice> Severi, <supplied reason="omitted" cert="low">qui</supplied>
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            arca<gap reason="lost" extent="unknown" unit="character"/>
+                        </rdg>
+                        <rdg source="#cilv8775 #edr097923">
+                            arcvvetia Vitaliniani et Fl Severi
+                        </rdg>
+                        <rdg source="#ilcv716">
+                            arcu<unclear>s</unclear>e<unclear>l</unclear>ia Vitaliniani et Fl Severi
+                        </rdg>
+                    </app>
+                    <app loc="2" from="#w1" to="#w5">
+                        <lem>
+                            emerunt de proprio suo; <choice><reg>compara</reg><orig>conpara</orig></choice><lb n="3" break="no"/>verunt sibi ea<supplied reason="omitted">m</supplied> memorialibus memorialibus, <supplied reason="omitted" cert="medium">si</supplied>
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            <gap reason="lost" extent="unknown" unit="character"/> proprio suo conpa<lb n="3" break="no"/>raverunt sibi <gap reason="lost" extent="unknown" unit="character"/>
+                        </rdg>
+                    </app>
+                    <app loc="4" from="w6" to="#w12">
+                        <lem>
+                            <choice><abbr>qi</abbr><expan>q<ex>u</ex>i<ex>s</ex></expan></choice> <choice><corr>eam</corr><sic>ia</sic></choice> aperire <choice><abbr>voluei</abbr><expan>volue<ex>r</ex>i<ex>t</ex></expan></choice>, <choice><reg>dabit</reg><orig>davit</orig></choice> <choice><abbr>fisc</abbr><expan>fisc<ex>i</ex></expan></choice> viri<lb n="5" break="no"/>bus
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b">
+                            qui aperire volu<gap reason="lost" extent="unknown" unit="character"/> viri<lb n="5" break="no"/>bus
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <div type="translation" xml:lang="en">
+                    <p>The <term xml:lang="la">arca</term> of <persName corresp="#vitaliana" xml:lang="la">Vettia Vitaliana</persName> and <persName corresp="#severus" xml:lang="la">Flavius Severus</persName>, they purchased with their own funds; they acquired it for my memorial. If anyone wishes to open it, they shall pay ten Roman pounds of silver to the <term xml:lang="la">fiscus</term>.</p>
+                </div>
+                <div type="translation" xml:lang="it">
+                    <p>Arca di <persName corresp="#vitaliana" xml:lang="la">Vettia Vitaliana</persName> e <persName corresp="#severus" xml:lang="la">Flavio Severo</persName>, che acquistarono con i propri fondi; comprarono essa per la mia memoria. Se qualcuno vorrà aprirla, verserà al <term xml:lang="la">fiscus</term> dieci libbre romane di argento.</p>
+                </div>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    The initial formula is similar to that of the inscription of <ref target="./vassio.xml" xml:lang="la">Vassio</ref>: the first word is the noun <term xml:lang="la">arcam</term>, even though in this case the following names are in the genitive. The poorly executed letters and frequent orthographic mistakes make it difficult even to ascertain the number and names of the owners of the <term xml:lang="la">arca</term>. There may have been three (<term xml:lang="la">arcam Vet(t?)ia(e), Vital{in}iani et Fl(avi) Severi</term>), or only two, namely <persName xml:lang="la">Vettia Vitaliana</persName> and <term xml:lang="la">Flavius Severus</term>. I consider it more likely that there were two dedicators: many female individuals retained their <term xml:lang="la">dua nomina</term> even during Late Antiquity; one example among many is the inscription on the nearby <term xml:lang="la">arca</term> of <ref target="./peregrina.xml" xml:lang="la">Valeria Peregrina</ref>.
+                </p>
+                <p>
+                    In any case, it is difficult to assume that the inscription refers to the <term xml:lang="la">cognomen</term> <term xml:lang="la">Vitalinianus/Vitaliniana</term>: consulting the <term xml:lang="la">corpora</term> <term xml:lang="la">PIR²</term> and <term xml:lang="la">PLRE</term> and the EDR database, no evidence of such a name is found; it is probable that another syllable was inadvertently added, as also occurs in the fifth line with <term xml:lang="la">dece{ce}m</term>. Lettich hypothesizes that the first person is named <persName xml:lang="la">Flavius Vitalianus</persName>: he considers it plausible that the letter <g type="pl">V</g> was written instead of <g type="pl">A</g>, as occurs in other inscriptions, that <g type="pl">E</g> is in fact an <g type="pl">F</g> with an anomalous lower stroke beneath the crossbar, and that <g type="pl">T</g> is an <g type="pl">L</g>. However, this hypothesis is not compatible with my autoptic observation.
+                </p>
+                <p>
+                    Note the formula <term xml:lang="la">memorialibus meis</term>. Lettich argues that the noun <term xml:lang="la">memoriale</term> was written in place of the common <term xml:lang="la">memoria</term>, which in this context would indicate the tomb. Indeed, in the two inscriptions where it appears, the word <term xml:lang="la">memoria</term> acquires a physical meaning that replaces the more common term <term xml:lang="la">arca</term>. However, it is unclear why the word <term xml:lang="la">memoriale</term> is declined in the plural. Moreover, this noun cannot replace the term <term xml:lang="la">arca</term>, here already referred to by the pronoun <term xml:lang="la">ea(m)</term>. Furthermore, the personal pronoun <term xml:lang="la">meus</term> seems inconsistent: <term xml:lang="la">noster</term> would have been more appropriate, since the verbs <term xml:lang="la">ĕmo</term> and <term xml:lang="la">compăro</term> are conjugated in the third-person plural.
+                </p>
+                <p>
+                    One should ask whether the names in the first line were the dedicators and whether the beneficiary in the inscription speaks in the first person. Perhaps the name of the deceased was inscribed on a side or on the lid of the sarcophagus, but Bertolini does not report the discovery of another inscription (<ref target="../references/bibliography.xml#bertolini1874">Bertolini 1874, 29-30</ref>).
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    La formula iniziale è simile a quella dell’iscrizione di <ref target="./vassio.xml" xml:lang="la">Vassio</ref>: la prima parola è il sostantivo <term xml:lang="la">arcam</term>, anche se in questo caso i nomi che seguono sono al genitivo. Le lettere poco curate e i frequenti errori ortografici rendono difficile persino comprendere il numero e i nomi dei proprietari dell’arca. Potrebbero essere tre (<term xml:lang="la">arcam Vet(t?)ia(e), Vital{in}iani et Fl(avi) Severi</term>), oppure solamente due, ovvero <persName xml:lang="la">Vettia Vitaliana</persName> e <term xml:lang="la">Flavius Severus</term>. Ritengo più probabile che i dedicanti siano due: molti individui di sesso femminile conservarono i <term xml:lang="la">dua nomina</term> anche durante la tardo-antichità; un esempio tra i tanti è l’epigrafe della vicina <term xml:lang="la">arca</term> di <ref target="./peregrina.xml" xml:lang="la">Valeria Peregrina</ref>.
+                </p>
+                <p>
+                    Ad ogni modo, risulta difficile che l’iscrizione faccia riferimento al <term xml:lang="la">cognomen</term> <term xml:lang="la">Vitalinianus/Vitaliniana</term>: confrontandosi con il database EDR e con i <term xml:lang="la">corpora</term> <term xml:lang="la">PIR²</term> e <term xml:lang="la">PLRE</term> non risulta l’esistenza di tal nome; probabilmente è stata inavvertitamente aggiunta un’altra sillaba, come avvenuto anche nella quinta riga, con <term xml:lang="la">dece{ce}m</term>. <bibl corresp="#lettich1983">Lettich</bibl> ipotizza che la prima persona si chiami <persName xml:lang="la">Flavius Vitalianus</persName>: ritiene plausibile che la lettera <g type="pl">V</g> fosse stata scritta al posto della <g type="pl">A</g>, come accade in altre iscrizioni, che la <g type="pl">E</g> sia in realtà una <g type="pl">F</g> con un anomalo braccio inferiore sottostante alla cravatta e che la <g type="pl">T</g> sia una <g type="pl">L</g>. Tuttavia questa ipotesi non è compatibile con il mio riscontro autoptico.
+                </p>
+                <p>
+                    Si noti la formula <term xml:lang="la">memorialibus meis</term>. <term xml:lang="la">Lettich</term> ritiene che il sostantivo <term xml:lang="la">memoriale</term> fosse stato scritto in luogo del comune <term xml:lang="la">memoria</term>, che in questo contesto indicherebbe il sepolcro. Effettivamente, nelle due epigrafi dove essa compare, la parola <term xml:lang="la">memoria</term> assume un significato fisico che sostituisce il più comune termine <term xml:lang="la">arca</term>. Non è però chiaro il motivo per il quale la parola <term xml:lang="la">memoriale</term> venga declinata al plurale. Inoltre, tale sostantivo non può sostituire il termine <term xml:lang="la">arca</term>, qui già apostrofato dal pronome <term xml:lang="la">ea(m)</term>. Sembra per giunta incoerente il pronome personale <term xml:lang="la">meus</term>: sarebbe stato più appropriato <term xml:lang="la">noster</term> visto che i verbi <term xml:lang="la">ĕmo</term> e <term xml:lang="la">compăro</term> sono declinati alla terza persona plurale.
+                </p>
+                <p>
+                    Bisognerebbe chiedersi se i nomi presenti nella prima riga fossero dei dedicanti e se il beneficiario nell’iscrizione parli in prima persona. Forse il nome del defunto era inciso su un lato o sul coperchio del sarcofago, ma <term xml:lang="la">Bertolini</term> non riporta il ritrovamento di un’altra iscrizione (<ref target="../references/bibliography.xml#bertolini1874">Bertolini 1874, 29-30</ref>).
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">30</citedRange>
+                        <note type="number">nr. 25</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">294</citedRange>
+                        <note type="number">nr. 22</note>
+                    </bibl>
+                    <bibl xml:id="cilv8775">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8775</title>
+                    </bibl>
+                    <bibl xml:id="ilcv716">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 716</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">106</citedRange>
+                        <note type="number">nr. 79</note>
+                    </bibl>
+                    <bibl xml:id="edr097923">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097923">EDR097923</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2008-11-30">30-11-2008</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

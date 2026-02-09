@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Flavia Concordia</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">concordia.xml</idno>
+                <idno type="TM">125652</idno>
+                <idno type="EDR">EDR097911</idno>
+                <idno type="UEL">29359</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>344</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient">Iulia Concordia</placeName>
+                                <placeName type="modern">Concordia Sagittaria</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0350" notAfter-custom="0400" xml:lang="en">
+                                Second half of the fourth century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0350" notAfter-custom="0400" xml:lang="it">
+                                Seconda Metà del IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">2120</note>
+                            <note type="plan_y">980</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">47</height>
+                                        <width unit="cm">78</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Slab broken into two rejoined fragments.</p>
+                                    <p xml:lang="it">Fronte di sarcofago rotta in due frammenti ricongiunti.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">47</height>
+                                        <width unit = "cm">78</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  unit = "cm" min="5" max="6">5-6</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Right-to-left direction, vertical <hi rend="italic">module</hi>, regular <term xml:lang="la">ductus</term>, triangular punctuation, groove shallower near the right margin.
+                                    </p>
+                                    <p>
+                                        According to <bibl corresp="#bertolini1874a">Bertolini</bibl>, the inscription would be “among the most perfect and, in every respect, flawless, considering the period.” 
+                                    </p>
+                                    <p>
+                                        In reality, the difficulty of the lapidary in arranging the text is evident, as shown by the irregular <hi rend="italic">module</hi>: letters near the right margin are more compressed laterally.
+                                    </p>
+                                    <p>
+                                        The letter <g type="pl">A</g> sometimes shows a broken median stroke; <hi rend="italic">E</hi> and <hi rend="italic">F</hi> are laterally compressed, each with three short arms; the only distinguishing feature of the letters is the upper arm, which in <hi rend="italic">F</hi> is longer than in the others and oblique, rising to the right.
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> consists of four oblique strokes.
+                                    </p>
+                                    <p>
+                                        <g type="pl">N</g> has vertical side strokes.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">The inscription has not any decoration.</decoNote>
+                            <decoNote xml:lang="it"></decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="flconcordia">
+                   <persName>
+                       <name type="full">Flavia Concordia</name>
+                       <name type="nomen" nymRef="latin">Flavia</name>
+                       <name type="cognomen" nymRef="latin">Concordia</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/concordia.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Flavia Concordia. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29359">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/><persName corresp="#flconcordia"><expan><abbr>Fl</abbr><ex>avia</ex></expan> Concordia</persName> de pr
+                    <lb n="2" break="no"/>oprio suo arcam sibi
+                    <lb n="3"/>posuit Si quis eam aperi
+                    <lb n="4" break="no"/>re voluerit dabit fis
+                    <lb n="5" break="no"/>ci viribus <measure xml:id="m1" next="#m2" type="fine" unit="roman_pound" commodity="silver" quantity="10">argen</measure>
+                    <lb n="6" break="no"/><measure xml:id="m2" prev="#m1">ti libras decem</measure>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    <persName xml:lang="la">Flavia Concordia</persName> placed a coffin (or sarcophagus) for herself from her own property. 
+                </p>
+                <p>
+                    If anyone wishes to open it, he/she will pay ten Roman pounds of silver to the <term xml:lang="la">fiscus</term> (treasury).
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Concordia</persName> is also attested in an <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098047">inscription from the third century A.D., discovered in the <placeName>Persico estate</placeName> in 1893</ref>. According to <ref target="../references/bibliography.xml#lettich1994">Lettich</ref>, the use of a toponym as a personal name is not unusual, citing the example of the burial of <persName xml:lang="la">Aurelia Alexandria</persName>, located only a few metres north of the sarcophagus of <persName corresp="#flconcordia" xml:lang="la">Flavia Concordia</persName>.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">25</citedRange>
+                        <note type="number">nr. 12</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">296</citedRange>
+                        <note type="number">nr. 27</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8763">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8763</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv818b">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 818 B</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">102</citedRange>
+                        <note type="number">nr. 69</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097911">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097911">EDR097911</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

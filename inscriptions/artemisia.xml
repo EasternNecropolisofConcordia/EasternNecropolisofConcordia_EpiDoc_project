@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Artemisia</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">artemisia.xml</idno>
+                <idno type="TM">125671</idno>
+                <idno type="EDR">EDR097930</idno>
+                <idno type="UEL">29475</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <idno>275</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="en">
+                                First Half of the Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="it">
+                                Prima Metà del IV secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1876</date>
+                            <note type="plan_x">2750</note>
+                            <note type="plan_y">3160</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now preserved in the storage facilities of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva nel deposito del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">24</height>
+                                        <width unit="cm">106</width>
+                                        <depth unit="cm">8.5</depth>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Front panel of sarcophagus fractured into two pieces.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Fronte di sarcofago fratta in due pezzi.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">24</height>
+                                        <width unit="cm">100</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="5" max="6" unit="cm">5-6</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Right-facing direction, horizontal alignment, vertical module, regular <term xml:lang="la">ductus</term>, triangular interpunction, deep groove, centered layout.</p>
+                                    
+                                    <p><g type="pl">A</g> strongly compressed laterally.</p>
+                                    
+                                    <p><g type="pl">L</g> with short arm.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> regolare, interpunzione triangoliforme, solco profondo, impaginazione centrata.</p>
+                                    
+                                    <p><g type="pl">A</g> fortemente compressa lateralmente;</p>
+                                    
+                                    <p><g type="pl">L</g> con braccio corto.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>The epigraphic field was originally enclosed by a moulded frame, which now survives only along the left side of the remaining portion of the sarcophagus front.</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Originariamente il perimetro dello specchio epigrafico doveva essere delimitato da una cornice modanata, della quale si conserva traccia solo lungo il lato sinistro del frammento superstite della fronte di sarcofago.</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person>
+                   <persName xml:id="artemisia">
+                       <name type="full">Claudia Artemisia</name>
+                       <name type="nomen">Claudia</name>
+                       <name type="cognomen" nymRef="latin">Artemisia</name>
+                       <name type="gens">Claudia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/artemisia.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Artemisia. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>.</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <ab>
+                    <lb n="1"/>Claudia Art<choice><corr>e</corr><sic>i</sic></choice>mi
+                    <lb n="2" break="no"/>sia, viva posu
+                    <lb n="3" break="no"/>it sibi.
+                </ab>
+            </div>
+            <div type="apparatus">
+                
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>Claudia Artemisia, while living, set (this sarcophagus) up for herself..</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>Claudia Artemisia dispose (il sarcofago) da viva per sé stessa.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    In <placeName xml:lang="la">Concordia</placeName>, the <term xml:lang="la">gentilicium</term> <persName xml:lang="la">Claudius</persName>, which was extremely common during the High Empire, is rarely found in Late Antiquity. 
+                </p>
+                <p>
+                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Artemisia</persName> also does not appear to have other attestations in the city, though it is found in <placeName xml:lang="la">Aquileia</placeName> and <placeName xml:lang="la">Pola</placeName> in earlier inscriptions (<ref target="../references/corpora_databases.xml#cil">CIL V 1142 = EDR117787</ref>; <ref target="../references/corpora_databases.xml#cil">CIL V 1365 = EDR117815</ref>; <ref target="../references/corpora_databases.xml#cil">CIL V 103 = EDR138829</ref>). 
+                </p>
+                <p>
+                    <persName xml:lang="la">Artemisia</persName> was also the name of the wife of a usurper, possibly <persName xml:lang="la">Procopius</persName>, who fell into ruin when her husband was killed (<ref target="../references/corpora_databases.xml#plre">PLRE I, 111-112</ref>).
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    A <placeName>Concordia</placeName> il gentilizio <persName xml:lang="la">Claudius</persName>, diffusissimo in età alto imperiale, è poco presente durante l’antichità tarda. 
+                </p>
+                <p>
+                    Anche il <term xml:lang="la">cognomen</term> <persName xml:lang="la">Artemisia</persName> non sembra avere altri risconti nella città, ma si trova ad <placeName>Aquileia</placeName> e a <placeName>Pola</placeName> in epigrafi più antiche (<ref target="../references/corpora_databases.xml#cilV"><term xml:lang="la">CIL</term> V 1142</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR117787">EDR117787</ref>; <ref target="../references/corpora_databases.xml#cil"><term>CIL</term> V 1365</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR117815">EDR117815</ref>; <ref target="../references/corpora_databases.xml#cil"><term>CIL</term> V 103</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR138829">EDR138829</ref>). 
+                </p>
+                <p>
+                    <persName xml:lang="la">Artemisia</persName> era anche il nome della moglie di un usurpatore, forse <persName xml:lang="la">Procopius</persName>, che cadde in rovina quando il marito venne ucciso (<ref target="../references/corpora_databases.xml#plre">PLRE I, 111-112</ref>).
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
+                        <title>Bertolini 1877</title>
+                        <citedRange unit="page">30</citedRange>
+                        <note type="number">n. 20</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8988">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8988</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">107</citedRange>
+                        <note type="number">n. 82</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr0EDR097930">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097930">EDR097930</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

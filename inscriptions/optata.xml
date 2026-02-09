@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Optata</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">optata.xml</idno>
+                <idno type="TM">125653</idno>
+                <idno type="EDR">EDR097912</idno>
+                <idno type="UEL">29350</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>289</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0375" notAfter-custom="0425" evidence="lettering textual-context" xml:lang="en">
+                                Late Fourth Century A.D. - Early Fifth Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0375" notAfter-custom="0425" evidence="lettering textual-context" xml:lang="it">
+                                Fine IV - Inizio V Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">1490</note>
+                            <note type="plan_y">280</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">37</height>
+                                        <width unit="cm">94</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Slab broken into two rejoined fragments.</p>
+                                    <p xml:lang="it">Fronte di sarcofago fratta in due pezzi ricongiunti.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">37</height>
+                                        <width unit = "cm">94</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="4" max="6" unit = "cm">4-6</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Right-facing direction; horizontal alignment; vertical and irregular module; irregular <term xml:lang="la">ductus</term>; light incision, triangle-shaped punctuation.</p>
+                                    <p> The letter <g type="pl">A</g> shows a broken crossbar.</p>
+                                    <p>The letter <g type="pl">F</g> features an oblique top bar, ascending towards the right.</p>
+                                    <p>The letter <g type="pl">E</g> has three short arms and is difficult to distinguish from the letter <g type="pl">I</g>.</p>
+                                    <p>The letter <g type="pl">L</g> features an oblique lower arm that drops below the baseline.</p>
+                                    <p>The letter <g type="pl">M</g> is composed of four oblique strokes.</p>
+                                    <p>The letter <g type="pl">N</g> is composed of three oblique strokes.</p>
+                                    <p>The text ends with an <term xml:lang="la">hedera distinguens</term>.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso; andamento orizzontale; modulo verticale e irregolare; <term xml:lang="la">ductus</term> irregolare; solco leggero, interpunzione triangoliforme.</p>
+                                    <p>La lettera <g type="pl">A</g> presenta una traversa spezzata.</p>
+                                    <p>La lettera <g type="pl">F</g> presenta il braccio superiore obliquo, ascendente verso destra.</p>
+                                    <p>La lettera <g type="pl">E</g> presenta tre bracci corti ed è difficilmente distinguibile dalla <g type="pl">I</g>.</p>
+                                    <p>La lettera <g type="pl">L</g> presenta il braccio inferiore obliquo che scende sotto il rigo di base.</p>
+                                    <p>La lettera <g type="pl">M</g> è composta da quattro aste oblique.</p>
+                                    <p>La lettera <g type="pl">N</g> è composta da tre aste oblique.</p>
+                                    <p>Il testo termina con un’<term xml:lang="la">hedera distinguens</term>.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">The text of inscription ends with an <term xml:lang="la">hedera distinguens</term>.</decoNote>
+                            <decoNote xml:lang="it">Il testo dell'iscrizione termina con un'<term xml:lang="la">hedera distinguens</term>.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="optata">
+                   <persName>
+                       <name type="full">Flavia Optata</name>
+                       <name type="nomen" nymRef="latin">Flavia</name>
+                       <name type="cognomen" nymRef="latin">Optata</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/optata.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Optata. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29350/photos/1">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la">
+                <ab>
+                    <lb n="1"/>Flavia Optata <expan><abbr>mili</abbr><ex>tis</ex></expan> de
+                    <lb n="2"/><expan><abbr>num</abbr><ex>ero</ex></expan> <expan><abbr>Regi</abbr><ex>orum</ex></expan>, <w xml:id="w1">em<choice><corr>i</corr><sic>e</sic></choice><supplied reason="omitted">t</supplied></w> <w xml:id="w2"><choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice></w> <w xml:id="w3">de</w>
+                    <lb n="3"/><w xml:id="w4"><expan><abbr>r</abbr><ex>e</ex></expan></w> <w xml:id="w5"><expan><abbr>v</abbr><ex>iri</ex></expan></w>. Si quis <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovit</abbr><ex>um</ex></expan></orig></choice>
+                    <lb n="4"/><expan><abbr>me</abbr><ex>um</ex></expan> <expan><abbr>arc</abbr><ex>am</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan> <expan><abbr>ap</abbr><ex>erire</ex></expan>, <w xml:id="w6"><choice><corr>i</corr><sic>e</sic></choice>nfe</w>
+                    <lb n="5" break="no"/><expan><abbr>r</abbr><ex>et</ex></expan> <supplied reason="omitted" cert="medium">fisci</supplied> <expan><abbr>vi</abbr><ex>ribus</ex></expan> <expan><abbr>aur</abbr><ex>i</ex></expan> <expan><abbr>lib</abbr><ex>ram</ex></expan> una<supplied reason="omitted">m</supplied>. <g ref="#hedera"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="2-3" from="#w1" to="#w5">
+                        <lem>
+                            em<choice><corr>i</corr><sic>e</sic></choice><supplied reason="omitted">t</supplied> <choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice> de
+                            <lb n="3"/><expan><abbr>r</abbr><ex>e</ex></expan> <expan><abbr>v</abbr><ex>iri</ex></expan>
+                        </lem>
+                        <rdg source="#cilv8764">
+                            <expan><abbr>emes</abbr><ex>enorum</ex></expan> Iudeo
+                            <lb n="3" break="no"/><expan><abbr>ru</abbr><ex>m</ex></expan>
+                        </rdg>
+                        <rdg source="#hoffmann1963">
+                            <expan><abbr>emes</abbr><ex>enorum</ex></expan> <expan><abbr>Iud</abbr><ex>a</ex><abbr>e</abbr><ex>o</ex></expan>
+                            <lb n="3" break="no"/><expan><abbr>ru</abbr><ex>m</ex></expan>
+                        </rdg>
+                        <rdg source="#lettich1983">
+                            <expan cert="medium"><abbr>emes</abbr><ex>enorum</ex></expan> <expan><abbr>Iud</abbr><ex>a</ex><abbr>e</abbr><ex>o</ex></expan>
+                            <lb n="3" break="no"/><abbr>ru</abbr><supplied reason="omitted">m</supplied>
+                        </rdg>
+                    </app>
+                    <app loc="4" from="#w6" to="#w6">
+                        <lem>
+                            <choice><reg>i</reg><orig>e</orig></choice>nfe
+                        </lem>
+                        <rdg source="#cilv8764">
+                            <supplied reason="omitted">i</supplied>nfe
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    <persName ref="#optata" xml:lang="la">Flavia Optata</persName>, <term xml:lang="la">miles</term> of the <term xml:lang="la">numerus</term> of the <term xml:lang="la">Regii</term>, purchased (this sarcophagus) for herself with the funds (of her husband?).
+                </p>
+                <p>
+                    If anyone after my death should wish to open the <term xml:lang="la">arca</term>, they shall pay to the resources (of the <term xml:lang="la">fiscus</term>?) one (roman) pound of gold.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    <persName ref="#optata" xml:lang="la">Flavia Optata</persName>, <term xml:lang="la">miles</term> del <term xml:lang="la">numerus</term> dei <term xml:lang="la">Regii</term>, acquistò (il sarcofago) per sé con i fondi (del marito?).
+                </p>
+                <p>
+                    Se qualcuno dopo la mia morte vorrà aprire l’<term xml:lang="la">arca</term>, verserà alle risorse (del <term xml:lang="la">fiscus</term>?) una <term xml:lang="la">libra</term> d’oro.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>The inscription, which is difficult to read and interpret, testifies to the burial of <persName ref="#optata" xml:lang="la">Flavia Optata</persName>, a woman who would belong to a <term xml:lang="la">numerus</term>. <persName>Mommsen</persName> (<term xml:lang="la">CIL</term> V 8764) and <persName>Diehl</persName> (<term xml:lang="la">ILCV</term> 4857) believed that the name of the husband, to whom the noun <term xml:lang="la">militis</term> would refer, had been forgotten.</p>
+                <p>On the contrary, <persName>Hoffmann</persName> did not consider it plausible that the husband's name had been omitted by mistake; <persName xml:lang="la">Flavia Optata</persName> would therefore be the <term xml:lang="la">miles</term> of that <term xml:lang="la">numerus</term>: according to the scholar, at this time the wives and children of soldiers were considered members of the same military unit as the husband or father (<ref target="../references/bibliography.xml#hoffmann1963">Hoffmann 1963, 50</ref>). Given the absence of the soldier's name, <persName>Hoffmann</persName> considers it more likely that <persName xml:lang="la">Optata</persName> was a concubine or a daughter (<ref target="../references/bibliography.xml#hoffmann1963">Hoffmann 1963, 50</ref>).</p>
+                <p>The unit to which the text refers is also unclear. <persName>Mommsen</persName>, <persName>Diehl</persName>, and <persName>Hoffmann</persName> argue that the epigraph alludes to the <term xml:lang="la">numerus Regiorum Iudeorum Emensorum</term> (<term xml:lang="la">CIL</term> V 8764 - <term xml:lang="la">ILCV</term> 4857), and <persName>Lettich</persName> also reports the same integration, albeit reluctantly (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 95-96</ref>). This unit is not attested by any source, not even by the <term xml:lang="la">Notitia dignitatum</term>, which only cites the <term xml:lang="la">legio comitatensis</term> of the <term xml:lang="la">Regii</term> stationed in Italy (<term xml:lang="la">ND occ.</term> 5, 229; 7, 32.) and the <term xml:lang="la">auxilium palatinum</term> of the same name included in the eastern army (<term xml:lang="la">ND or.</term> 6, 49.).</p>
+                <p><persName>Hoffmann</persName> defended the existence of the <term xml:lang="la">Regii Iudei Emensi</term>, claiming that there had been a correction by a later scribe who, considering the law of <persName>Honorius</persName> and <persName>Theodosius II</persName> of March 10, 418 AD, which prohibited the recruitment of Jews (<term xml:lang="la">C. Th.</term> 16, 8, 24.), would have modified the name of the unit, leaving only the word <term xml:lang="la">Regii</term>. However, <persName>Tomlin</persName> asserts that the <term xml:lang="la">Notitia dignitatum</term> shows no changes later than 395 AD (<ref target="../references/bibliography.xml#tomlin1972">Tomlin 1972, 270.</ref>). Furthermore, <persName>Hoffmann</persName>'s version would not explain the omission of the <term xml:lang="la">Emensi</term>.</p>
+                <p>Even <persName>Lettich</persName> considers it unlikely that a military unit was composed exclusively or predominantly of Jews even in the period preceding the aforementioned law (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 96</ref>). <persName>Speidel</persName> noted that the <term xml:lang="la">Regii</term> did not come from <term>Emesa</term> nor were they Jews and, comparing it with the formula present in other sarcophagi where it is declared that the burial was paid for at one's own expense (<term xml:lang="la">arcam emit sibi de proprio</term>), he argues that <persName xml:lang="la">Optata</persName> commissioned her own sarcofagus with her husband's money (<ref target="../references/bibliography.xml#speidel1996">Speidel 1996, 165.</ref>).</p>
+                <p><persName>Speidel</persName>'s criticism of the supposed existence of the <term xml:lang="la">Regii Emensi Iudei</term> is shared by <persName>Ameling</persName> (<ref target="../references/bibliography.xml#ameling2019">Ameling 2019, 188</ref>). The beneficiary of the payment of the fine is not clear but, considering the other inscriptions of the burial ground, it is likely the <term xml:lang="la">fiscus</term>.</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>L’iscrizione, di difficile lettura e interpretazione, testimonia la sepoltura di <persName ref="#optata" xml:lang="la">Flavia Optata</persName>, una donna che rientrerebbe in un <term xml:lang="la">numerus</term>. <persName>Mommsen</persName> (<term xml:lang="la">CIL</term> V 8764) e <persName>Diehl</persName> (<term xml:lang="la">ILCV</term> 4857) ritenevano che il nome del marito al quale si riferirebbe il sostantivo <term xml:lang="la">militis</term>, fosse stato dimenticato.</p>
+                <p>Al contrario, <persName>Hoffmann</persName> non considerava plausibile che il nome del marito fosse stato omesso per errore; <persName xml:lang="la">Flavia Optata</persName> sarebbe quindi la <term xml:lang="la">miles</term> di quel <term xml:lang="la">numerus</term>: secondo lo studioso, in quest’epoca mogli e figli dei soldati erano considerati membri dello stesso reparto militare del marito o padre (<ref target="../references/bibliography.xml#hoffmann1963">Hoffmann 1963, 50</ref>). Vista la mancanza del nome del soldato, <persName>Hoffmann</persName> ritiene più probabile che <persName xml:lang="la">Optata</persName> fosse una concubina o una figlia (<ref target="../references/bibliography.xml#hoffmann1963">Hoffmann 1963, 50</ref>).</p>
+                <p>Non risulta nemmeno chiaro il reparto a cui il testo fa riferimento. <persName>Mommsen</persName>, <persName>Diehl</persName> e <persName>Hoffmann</persName> sostengono che l’epigrafe alluda al <term xml:lang="la">numerus Regiorum Iudeorum Emensorum</term> (<term xml:lang="la">CIL</term> V 8764 - <term xml:lang="la">ILCV</term> 4857) e anche <persName>Lettich</persName>, sebbene con riluttanza, riporta la stessa integrazione (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 95-96</ref>). Tale reparto non è attestato da nessuna fonte, nemmeno dalla <term xml:lang="la">Notitia dignitatum</term>, che cita solo la <term xml:lang="la">legio comitatensis</term> dei <term xml:lang="la">Regii</term> dislocati in Italia (<term xml:lang="la">ND occ.</term> 5, 229; 7, 32.) e l’omonimo <term xml:lang="la">auxilium palatinum</term> compreso nell’esercito orientale (<term xml:lang="la">ND or.</term> 6, 49.).</p>
+                <p><persName>Hoffmann</persName> ha difeso l’esistenza dei <term xml:lang="la">Regii Iudei Emensi</term>, sostenendo che ci fosse stata la rettifica di un amanuense successivo che, considerando la legge di <persName>Onorio</persName> e <persName>Teodosio II</persName> del 10 marzo 418 d.C. che vietava l’arruolamento degli Ebrei (<term xml:lang="la">C. Th.</term> 16, 8, 24.), avrebbe modificato il nome del reparto, lasciando solo la parola <term xml:lang="la">Regii</term>. Tuttavia, <persName>Tomlin</persName> asserisce che la <term xml:lang="la">Notitia dignitatum</term> non mostra modifiche successive al 395 d.C. (<ref target="../references/bibliography.xml#tomlin1972">Tomlin 1972, 270.</ref>). Inoltre, la versione di <persName>Hoffmann</persName> non spiegherebbe l’omissione degli <term xml:lang="la">Emensi</term>.</p>
+                <p>Persino <persName>Lettich</persName> ritiene poco probabile che un reparto militare fosse composto esclusivamente o prevalentemente da Giudei anche in età antecedente alla legge sopracitata (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 96</ref>). <persName>Speidel</persName> ha notato come i <term xml:lang="la">Regii</term> non venissero da <term>Emesa</term> e nemmeno fossero ebrei e, confrontandosi con la formula presente negli altri sarcofagi dove viene dichiarato che la sepoltura fu pagata a spese proprie (<term xml:lang="la">arcam emit sibi de proprio</term>), sostiene che <persName xml:lang="la">Optata</persName> commissionò il proprio sarcofago con i soldi del marito (<ref target="../references/bibliography.xml#speidel1996">Speidel 1996, 165.</ref>).</p>
+                <p>La critica di <persName>Speidel</persName> nei confronti della supposta esistenza dei <term xml:lang="la">Regii Emensi Iudei</term> è condivisa da <persName>Ameling</persName> (<ref target="../references/bibliography.xml#ameling2019">Ameling 2019, 188</ref>). Non è chiaro il beneficiario del versamento della pena pecuniaria ma, considerando le altre iscrizioni del sepolcreto, è probabile che si tratti del <term xml:lang="la">fiscus</term>.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">29</citedRange>
+                        <note type="number">nr. 23</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">290</citedRange>
+                        <note type="number">nr. 12</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8764">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8764</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv4857">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 4857</title>
+                    </bibl>
+                    <bibl xml:id="hoffmann1963">
+                        <ptr target="../bibliography/master_bibliography.xml#hoffmann1963"/>
+                        <ptr target="../references/bibliography.xml#hoffmann1963"/>
+                        <title>Hoffmann 1963</title>
+                        <citedRange unit="page">50-51</citedRange>
+                        <note type="number">nr. 36</note>
+                    </bibl>
+                    <bibl xml:id="scarpabonazzabuoraveronese1978">
+                        <ptr target="../bibliography/master_bibliography.xml#scarpabonazzabuoraveronese1978"/>
+                        <ptr target="../references/bibliography.xml#scarpabonazzabuoraveronese1978"/>
+                        <title>Scarpa Bonazza Buora Veronese 1978</title>
+                        <citedRange unit="page">70</citedRange>
+                        <note type="figure">fig. 40</note>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">95-96</citedRange>
+                        <note type="number">nr. 57</note>
+                    </bibl>
+                    <bibl xml:id="speidel1996">
+                        <ptr target="../bibliography/master_bibliography.xml#speidel1996"/>
+                        <ptr target="../references/bibliography.xml#speidel1996"/>
+                        <title>Speidel 1996</title>
+                        <citedRange unit="page">164</citedRange>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097912">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097912">EDR097912</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                        <date type="revised" when="2020-10-06">06-10-2020</date>
+                    </bibl>
+                    <bibl xml:id="ameling2019">
+                        <ptr target="../bibliography/master_bibliography.xml#ameling2019"/>
+                        <ptr target="../references/bibliography.xml#ameling2019"/>
+                        <title>Ameling 2019</title>
+                        <citedRange unit="page">187-188</citedRange>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

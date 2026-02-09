@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Firmina</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">firmina.xml</idno>
+                <idno type="TM">125597</idno>
+                <idno type="EDR">EDR097856</idno>
+                <idno type="UEL">29226</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                </name>
+                                <idno type="VIAF">124364831</idno>
+                            </orgName>
+                        </repository>
+                        <idno>405</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0200" notAfter-custom="0300" evidence="archaeological-context lettering" xml:lang="en">
+                                Third Century A.D.
+                            </origDate>
+                            <origDate notBefore-custom="0200" notAfter-custom="0300" evidence="archaeological-context lettering" xml:lang="it">
+                                III Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">3300</note>
+                            <note type="plan_y">2630</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now preserved in the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
+                            <note xml:lang="it">Si conserva nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
+                            <date>2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">100</height>
+                                        <width unit="cm">192</width>
+                                        <depth unit="cm">70</depth>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        This is the only sarcophagus from the Eastern Necropolis preserved in its entirety, apart from that of <ref target="./vassio.xml" xml:lang="la">Vassio</ref>.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Si tratta dell'unico sarcofago della Necropoli di Levante preservato nella sua interezza oltre a quello di <ref target="./vassio.xml" xml:lang="la">Vassio</ref>.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type = "execution" key = "scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit = "cm">39</height>
+                                        <width unit = "cm">101</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height  min="7" max="8" unit = "cm">7-8</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Left-to-right direction, horizontal orientation, square module, regular <term xml:lang="la">ductus</term>, triangular punctuation marks, deep incision, centered layout.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso, andamento orizzontale, modulo quadrato, <term xml:lang="la">ductus</term> regolare, interpunzione triangoliforme, solco profondo, impaginazione centrata.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>
+                                    The front of the sarcophagus is arranged in three framed panels: the central and largest panel bears the inscription, while the lateral panels depict two winged <term xml:lang="la">genii</term> supporting the <term xml:lang="la">tabula</term>.
+                                </p>
+                                <p>
+                                    The sides are decorated with garlands, and the lid, shaped like a pitched roof, is adorned with four <term xml:lang="la">acroteria</term>.
+                                </p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>
+                                    La fronte del sarcofago è articolata in tre riquadri incorniciati: quello centrale, più ampio, ospita l’epigrafe, mentre nei pannelli laterali sono scolpiti due geni alati che sorreggono la <term xml:lang="la">tabula</term>.
+                                </p>
+                                <p>
+                                    I fianchi sono decorati con ghirlande, mentre il coperchio, a forma di tetto spiovente, presenta quattro acroteri.
+                                </p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="firmina">
+                   <persName>
+                       <name type="full">Firmina</name>
+                       <name type="cognomen" nymRef="latin">Firmina</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/firmina.jpg">
+            <desc type="alt">Limestone sarcophagus with inscribed front.</desc>
+            <desc type="figDesc">The sarcophagus of Firmina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29226">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <ab>
+                    <lb n="1"/><persName corresp="#firmina">Firmina</persName> viva
+                    <lb n="2"/>fecit sibi.
+                </ab>
+            </div>
+            <div type="apparatus">
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    Firmina commissioned (this tomb) for herself while alive.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    Firmina commissionò (l'arca) da viva per sé stessa.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    The absence of the <term xml:lang="la">nomen</term> in the inscription seems to indicate the servile status of the deceased, although it appears unlikely that a slave could have afforded such an expensive sarcophagus.
+                </p>
+                <p>
+                    <persName xml:lang="la">Brusin</persName> hypothesizes the existence of a burial area of the <term xml:lang="la">gens Fabia</term> <ref target="../references/bibliography.xml#brusinzovatto1960">(Brusin 1960, 59)</ref>, to which the tomb of <persName xml:lang="la">Firmina</persName> might belong: this would explain the omission of the gentilic name on the inscription, considered a pleonasm since it was already present on the main monument, a view shared by <persName xml:lang="la">Buora</persName> <ref target="../references/bibliography.xml#buora">(Buora 1984, 46-47)</ref>. However, according to <persName xml:lang="la">Lettich</persName>, there is insufficient evidence to demonstrate the existence of a common burial area for members of this family <ref target="../references/bibliography.xml#lettich1994">(Lettich 1994, 264)</ref>.
+                </p>
+                <p>
+                    Although the dating of the sarcophagus and its figurative program suggest the deceased’s pagan faith, it cannot be excluded that she was Christian and that the absence of the <term xml:lang="la">nomen</term> reflected her intention not to claim familial ties, in order to fully identify with the Christian community. Two sarcophagi found in Concordia, on Via San Pietro, show a similar onomastic pattern: in the first case only the <term xml:lang="la">praenomen</term> and <term xml:lang="la">cognomen</term> of the dedicant <persName xml:lang="la">Publius Firmiteius</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR156657">(EDR156657)</ref> are recorded, while in the other only those of the deceased <persName xml:lang="la">Publius Impostor</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098072">(EDR098072)</ref>, showing that the <term xml:lang="la">nomen</term> was deliberately omitted.
+                </p>
+                <p>
+                    The presence of the <term xml:lang="la">praenomen</term> in these cases is linked to the male sex of the individuals, who intended to assert their non-servile status while omitting the <term xml:lang="la">gentilizio</term> in order to identify exclusively with the Christian community <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 92-93)</ref>, a choice probably shared by <persName xml:lang="la">Firmina</persName>.
+                </p>
+                <p>
+                    Note that in one of the two inscriptions the dedicant bears the <term xml:lang="la">cognomen</term> <persName xml:lang="la">Firmiteius</persName>, which he shares with <persName xml:lang="la">Firmina</persName> through the root <term xml:lang="la">firmitas</term>, a concept recurrent in patristic literature and a symbol of the firmness of Christian faith <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 93-94)</ref>.
+                </p>
+                <p>
+                    Although <persName xml:lang="la">Firmina</persName>’s sarcophagus does not bear Christian symbols but rather winged geni linked to the pagan world, it should be noted that Christians often did not attribute religious meaning to certain formal elements: for example, two letters dedicating the tomb to the gods <term xml:lang="la">Mani</term> appear on the sarcophagus of <persName xml:lang="la">Firmiteius</persName> and in the bisoma burial of <persName ref="./martinianus_severina.xml#martinianus" xml:lang="la">Flavius Martinianus</persName> and <persName ref="./martinianus_severina.xml#severina">Severina</persName>, which also contained a Constantinian monogram.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    La mancanza del <term xml:lang="la">nomen</term> nell’iscrizione sembra indicare la condizione servile della defunta, anche se appare improbabile che una schiava potesse permettersi un’arca così costosa.
+                </p>
+                <p>
+                    Brusin ipotizza l’esistenza di un’area sepolcrale della <term xml:lang="la">gens Fabia</term> <ref target="../references/bibliography.xml#brusinzovatto1960">(Brusin 1960, 59)</ref>, alla quale potrebbe appartenere la sepoltura di <persName xml:lang="la">Firmina</persName>: ciò spiegherebbe l’omissione del gentilizio sull’epigrafe, considerata un pleonasmo in quanto già presente sul monumento principale, tesi condivisa da Buora <ref target="../references/bibliography.xml#buora">(Buora 1984, 46-47)</ref>. Tuttavia, secondo Lettich, non vi sono elementi sufficienti a dimostrare l’esistenza di un’area sepolcrale comune ai membri di questa famiglia <ref target="../references/bibliography.xml#lettich1994">(Lettich 1994, 264)</ref>.
+                </p>
+                <p>
+                    Nonostante la datazione del sarcofago e il relativo apparato figurativo indichino la fede pagana della defunta, non si può escludere che fosse cristiana e che l’assenza del <term xml:lang="la">nomen</term> rispecchiasse la sua volontà di non rivendicare legami familiari, per identificarsi pienamente con la comunità cristiana. Due sarcofagi rinvenuti a Concordia, in via San Pietro, presentano uno schema onomastico simile: nel primo caso il <term xml:lang="la">praenomen</term> e il <term xml:lang="la">cognomen</term> compaiono del dedicante <persName xml:lang="la">Publius Firmiteius</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR156657">(EDR156657)</ref>, mentre nell’altro caso quelli del defunto <persName xml:lang="la">Publius Impostor</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098072">(EDR098072)</ref>, prova che il <term xml:lang="la">nomen</term> fu deliberatamente omesso.
+                </p>
+                <p>
+                    La presenza del <term xml:lang="la">praenomen</term> in questi esempi è legata al sesso maschile degli individui, che intendevano rivendicare la loro condizione non servile, pur omettendo il <term xml:lang="la">gentilizio</term> per identificarsi esclusivamente con la comunità cristiana <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 92-93)</ref>, scelta probabilmente condivisa da <persName xml:lang="la">Firmina</persName>.
+                </p>
+                <p>
+                    Si noti che in una delle due epigrafi il dedicante porta il <term xml:lang="la">cognomen</term> <persName xml:lang="la">Firmiteius</persName>, che condivide con <persName xml:lang="la">Firmina</persName> la radice <term xml:lang="la">firmitas</term>, concetto ricorrente nella letteratura patristica e simbolo della fermezza della fede cristiana <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 93-94)</ref>.
+                </p>
+                <p>
+                    Sebbene sull’arca di <persName xml:lang="la">Firmina</persName> non siano presenti simboli cristiani, ma geni alati riferibili al mondo pagano, va considerato che spesso i cristiani non attribuivano significato religioso ad alcuni aspetti formali: ad esempio, due lettere di dedica agli dèi <term xml:lang="la">Mani</term> compaiono sul sarcofago di <persName xml:lang="la">Firmiteius</persName> e nella sepoltura bisoma di <persName ref="./martinianus_severina.xml#martinianus" xml:lang="la">Flavius Martinianus</persName> e <persName ref="./martinianus_severina.xml#severina">Severina</persName>, dove si trovava anche un monogramma costantiniano.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1875a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
+                        <title>Bertolini 1875a</title>
+                        <citedRange unit="page">115</citedRange>
+                        <note type="number">nr. 56</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
+                        <title>Bertolini 1877</title>
+                        <citedRange unit="page">29</citedRange>
+                        <note type="number">nr. 12</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8696">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8696</title>
+                    </bibl>
+                    <bibl xml:id="lettich1994">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1994"/>
+                        <ptr target="../references/bibliography.xml#lettich1994"/>
+                        <title>Lettich 1994</title>
+                        <citedRange unit="page">263-264</citedRange>
+                        <note type="number">nr. 181</note>
+                    </bibl>
+                    <bibl xml:id="villab">
+                        <ptr target="../bibliography/master_bibliography.xml#villab"/>
+                        <ptr target="../references/bibliography.xml#villab"/>
+                        <title>Croce Da Villa 2001b</title>
+                        <citedRange unit="page">202, 207</citedRange>
+                        <note type="number">nr. 24</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097856">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097856">EDR097856</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-19">19-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
