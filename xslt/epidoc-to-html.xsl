@@ -1,422 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="tei xs" version="2.0">
-
-    <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
-
-    <xsl:template match="/">
-        <html xml:lang="en">
-            <head>
-                <title>
-                    <xsl:value-of select="//tei:titleStmt/tei:title"/>
-                </title>
-                <meta charset="UTF-8"/>
-            </head>
-            <body>
-                <h1>
-                    <xsl:value-of select="//tei:titleStmt/tei:title"/>
-                </h1>
-
-                <div class="metadata">
-                    <h2>Findspot</h2>
-                    <p>
-                        <strong>City:</strong>
-                        <xsl:apply-templates
-                            select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'modern']"
-                        />
-                    </p>
-                    <p>
-                        <strong>Ancient city:</strong>
-                        <i>
-                            <xsl:apply-templates
-                                select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'ancient']"
-                            />
-                        </i>
-                    </p>
-                    <p>
-                        <strong>Date:</strong>
-                        <xsl:apply-templates select="//tei:history//tei:origDate[@xml:lang = 'en']"
-                        />
-                    </p>
-                </div>
-
-                <div class="inscription">
-                    <h2>INSCRIPTION</h2>
-                    <h3>TRANSCRIPTION</h3>
-                    <xsl:for-each select="//tei:div[@type = 'edition']">
-                        <div class="transcription" lang="la">
-                            <xsl:choose>
-                                <xsl:when test="tei:div[@type = 'textpart']">
-                                    <xsl:apply-templates select="tei:div[@type = 'textpart']"/>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:apply-templates select="tei:ab" mode="interp"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </div>
-                    </xsl:for-each>
-                </div>
-
-                <details class="translation">
-                    <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = 'en']/tei:p">
-                        <p>
-                            <xsl:apply-templates/>
-                        </p>
-                    </xsl:for-each>
-                </details>
-
-                <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
-
-                <div class="people">
-                    <h2>People</h2>
-                    <xsl:for-each select="//tei:listPerson/tei:person">
-                        <xsl:element name="div">
-                            <xsl:attribute name="class">person_record</xsl:attribute>
-                            <xsl:attribute name="id">
-                                <xsl:value-of select="@xml:id"/>
-                            </xsl:attribute>
-                            <h3>
-                                <xsl:value-of select="tei:persName/tei:name[@type = 'full']"/>
-                            </h3>
-                            <dl>
-                                <xsl:for-each select="tei:persName/tei:name">
-                                    <xsl:if test="@type != 'full'">
-                                        <dt>
-                                            <strong><xsl:value-of select="upper-case(@type)"/></strong>
-                                        </dt>
-                                        <dd>
-                                            <xsl:value-of select="."/>
-                                        </dd>
-                                    </xsl:if>
-                                </xsl:for-each>
-                                <xsl:if test="tei:persName/tei:name[@type = 'cognomen'][@nymRef]">
-                                    <xsl:for-each
-                                        select="tei:persName/tei:name[@type = 'cognomen' and @nymRef]">
-                                        <dt><strong>ORIGIN (of the name <xsl:value-of select="."/>)</strong></dt>
-                                        <dd>
-                                            <xsl:value-of select="@nymRef"/>
-                                        </dd>
-                                    </xsl:for-each>
-                                </xsl:if>
-                                <dt><strong>GENDER</strong></dt>
-                                <dd>
-                                    <xsl:choose>
-                                        <xsl:when test="tei:gender = 'm'">male</xsl:when>
-                                        <xsl:when test="tei:gender = 'f'">female</xsl:when>
-                                        <xsl:otherwise>unknown</xsl:otherwise>
-                                    </xsl:choose>
-                                </dd>
-                                <xsl:for-each select="tei:note">
-                                    <dt>
-                                        <strong><xsl:value-of select="upper-case(@type)"/></strong>
-                                    </dt>
-                                    <dd>
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="@type = 'relationship' and @corresp">
-                                            <xsl:text> (→ </xsl:text>
-                                            <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="@corresp"/></xsl:attribute><xsl:value-of
-                                                select="normalize-space(//tei:person[@xml:id = substring-after(current()/@corresp, '#')]/tei:persName/tei:name[@type = 'full'])"/>
-                                            <xsl:text>)</xsl:text></xsl:element>
-                                        </xsl:if>
-                                    </dd>
-                                </xsl:for-each>
-                            </dl>
-                        </xsl:element>
-                    </xsl:for-each>
-                </div>
-                <div class="bibliography">
-                    <xsl:apply-templates select="//tei:listBibl/tei:bibl[not(@type = 'database')]"
-                        mode="bibliography"/>
-                    <xsl:apply-templates select="//tei:listBibl/tei:bibl[@type = 'database']"
-                        mode="bibliography_database"/>
-                </div>
-            </body>
-        </html>
-    </xsl:template>
-
-    <xsl:template match="tei:div[@type = 'textpart']">
-        <xsl:element
-            name="{if (count(ancestor::tei:div[@type='textpart']) > 0) then 'h5' else 'h4'}">
-            <xsl:choose>
-                <xsl:when test="@subtype">
-                    <xsl:value-of select="upper-case(replace(@subtype, '_', ' '))"/>
-                </xsl:when>
-                <xsl:when test="@source">
-                    <xsl:value-of select="upper-case(replace(@source, '_', ' '))"/>
-                </xsl:when>
-                <xsl:otherwise>PART <xsl:value-of select="@n"/></xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>:</xsl:text>
-        </xsl:element>
-
-        <div class="textpart" data-location="{(@subtype, @source)[1]}">
-            <xsl:apply-templates select="tei:div[@type = 'textpart']"/>
-            <xsl:apply-templates select="tei:ab" mode="interp"/>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="tei:ref">
-        <a href="{@target}">
-            <xsl:apply-templates/>
-        </a>
-    </xsl:template>
-
-    <xsl:template match="tei:graphic">
-        <figure>
-            <img src="{@url}">
-                <xsl:attribute name="alt">../<xsl:value-of select="tei:desc[@type = 'alt']"
-                    /></xsl:attribute>
-            </img>
-            <xsl:apply-templates select="tei:desc[@type = 'figDesc']"/>
-        </figure>
-    </xsl:template>
-
-    <xsl:template match="tei:desc[@type = 'figDesc']">
-        <figcaption>
-            <xsl:apply-templates/>
-        </figcaption>
-    </xsl:template>
-
-    <xsl:template match="tei:ab" mode="interp">
-        <div class="ab-content">
-            <xsl:apply-templates select=".//tei:lb[1]" mode="line-start"/>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="tei:lb" mode="line-start">
-        <span class="line" n="{@n}">
-            <xsl:variable name="lineContent">
-                <xsl:apply-templates
-                    select="following-sibling::node()[not(self::tei:lb) and count(preceding-sibling::tei:lb) = count(current()/preceding-sibling::tei:lb) + 1]"
-                    mode="interp"/>
-            </xsl:variable>
-
-            <xsl:copy-of select="$lineContent"/>
-
-            <xsl:if test="following-sibling::tei:lb[1]/@break = 'no'">
-                <xsl:text> =</xsl:text>
-            </xsl:if>
-        </span>
-        <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
-    </xsl:template>
-
-    <xsl:template match="tei:bibl" mode="bibliography">
-        <xsl:choose>
-            <xsl:when test="@type = 'corpus'">
-                <xsl:element name="span">
-                    <xsl:attribute name="id">
-                        <xsl:value-of select="@xml:id"/>
-                    </xsl:attribute>
-                    <xsl:apply-templates select="tei:title"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:element name="span">
-                    <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
-                    <xsl:value-of select="tei:title"/><xsl:if test="tei:citedRange">, <xsl:value-of
-                            select="tei:citedRange"/></xsl:if><xsl:if
-                        test="tei:note[@type = 'number']">, <xsl:value-of
-                            select="tei:note[@type = 'number']"/></xsl:if>. </xsl:element>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-    <xsl:template match="tei:bibl[@type = 'database']" mode="bibliography_database">
-        <xsl:element name="dd">
-            <xsl:attribute name="id">
-                <xsl:value-of select="@xml:id"/>
-            </xsl:attribute>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <title>The Epigraphy of Alexandria and Sopatrus</title>
+      <meta charset="UTF-8"/>
+   </head>
+   <body>
+      <h1>The Epigraphy of Alexandria and Sopatrus</h1>
+      <div class="metadata">
+         <h2>Findspot</h2>
+         <p>
+            <strong>City:</strong>Concordia Sagittaria</p>
+         <p>
+            <strong>Ancient city:</strong>
+            <i>Iulia Concordia</i>
+         </p>
+         <p>
+            <strong>Date:</strong>
+                                First Half of the Fourth Century A.D.
+                            </p>
+      </div>
+      <div class="inscription">
+         <h2>INSCRIPTION</h2>
+         <h3>TRANSCRIPTION</h3>
+         <div class="transcription" lang="la">
+            <h4>LID:</h4>
+            <div class="textpart" data-location="lid">
+               <div class="ab-content">
+                  <span class="line" n="1">
+                     <u style="cursor: help;"
+                        title="Source(s): Bertolini 1874a, Bertolini 1874b, CIL V 8734">M(anibus) D(iis)</u>
+                  </span>
+               </div>
+            </div>
+            <h4>CHEST:</h4>
+            <div class="textpart" data-location="chest">
+               <div class="ab-content">
+                  <span class="line" n="1">Aur(elia) Alexandria arcam conpa
+                         =</span>
+                  <span class="line" n="2">ravi (!) mihi etFl(avio) Sopatro marito
+                        </span>
+                  <span class="line" n="3">meo dulcissimo q(ui) v(ixit) mecum an(nis)
+                        </span>
+                  <span class="line" n="4">XVIIII ita ut post obitum nost(rum) n̂ull
+                         =</span>
+                  <span class="line" n="5">us eandem putet se violare si qui&lt;s&gt;
+                        </span>
+                  <span class="line" n="6">
+                     <u style="cursor: help;"
+                        title="Source(s): Bertolini 1874a, Bertolini 1874b, CIL V 8734">crediderit</u> dab(it) fisci virib(us) sol(idos) XX v(el) i(n)  a(rgento)u(ncias) L
+                    </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <details class="translation">
+         <p>To the <em>Manes</em> gods.</p>
+         <p>
+                    Aurelia Alexandria purchased the sarcophagus for herself and for her dearest husband Flavius Sopatrus a sarcophagus, with whom she lived for nineteen years.
+                </p>
+         <p>
+                    She ordered that, after their death, no one should presume to violate it.
+                </p>
+         <p>
+                    Whoever does so shall pay, to the public treasury, a fine of twenty gold solidi or fifty ounces of silver.
+                </p>
+      </details>
+      <figure>
+         <img src="../../images/inscriptions/alexandria_sopatrus.jpg"
+              alt="../Inscribed front panel of a limestone sarcophagus"/>
+         <figcaption>The iscription of Martinianus and Severina. Photograph courtesy of the <a href="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</a>, <a href="https://viaf.org/en/viaf/148456131">Portogruaro</a>; photo by Ortolf Harl (<a href="https://lupa.at/29354">Ubi Erat Lupa</a>).</figcaption>
+      </figure>
+      <div class="people">
+         <h2>People</h2>
+         <div class="person_record" id="alexandria">
+            <h3>Aurelia Alexandria</h3>
+            <dl>
+               <dt>
+                  <strong>NOMEN</strong>
+               </dt>
+               <dd>Aurelia</dd>
+               <dt>
+                  <strong>COGNOMEN</strong>
+               </dt>
+               <dd>Alexandria</dd>
+               <dt>
+                  <strong>GENS</strong>
+               </dt>
+               <dd>Aurelia</dd>
+               <dt>
+                  <strong>ORIGIN (of the name Alexandria)</strong>
+               </dt>
+               <dd>latin</dd>
+               <dt>
+                  <strong>GENDER</strong>
+               </dt>
+               <dd>female</dd>
+               <dt>
+                  <strong>OCCUPATION</strong>
+               </dt>
+               <dd>civil</dd>
+               <dt>
+                  <strong>ROLE</strong>
+               </dt>
+               <dd>dedicator/deceased</dd>
+               <dt>
+                  <strong>RELATIONSHIP</strong>
+               </dt>
+               <dd>wife (→ <a href="#sopatrus">Flavius Sopatrus)</a>
+               </dd>
+            </dl>
+         </div>
+         <div class="person_record" id="sopatrus">
+            <h3>Flavius Sopatrus</h3>
+            <dl>
+               <dt>
+                  <strong>NOMEN</strong>
+               </dt>
+               <dd>Flavius</dd>
+               <dt>
+                  <strong>COGNOMEN</strong>
+               </dt>
+               <dd>Sopatrus</dd>
+               <dt>
+                  <strong>GENS</strong>
+               </dt>
+               <dd>Flavia</dd>
+               <dt>
+                  <strong>ORIGIN (of the name Sopatrus)</strong>
+               </dt>
+               <dd>unknown</dd>
+               <dt>
+                  <strong>GENDER</strong>
+               </dt>
+               <dd>male</dd>
+               <dt>
+                  <strong>OCCUPATION</strong>
+               </dt>
+               <dd>civil</dd>
+               <dt>
+                  <strong>ROLE</strong>
+               </dt>
+               <dd>deceased</dd>
+               <dt>
+                  <strong>RELATIONSHIP</strong>
+               </dt>
+               <dd>husband (→ <a href="#alexandria">Aurelia Alexandria)</a>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="bibliography">
+         <span id="bertolini1874a">Bertolini 1874a, 25, n. 13. </span>
+         <span id="bertolini1874b">Bertolini 1874b, 294, n. 19. </span>
+         <span id="cilv8734">
+            <em>CIL</em> V 8734</span>
+         <span id="ilcv823">
+            <em>ILCV</em> 823</span>
+         <span id="lettich1983">Lettich 1983, 99, nr. 63. </span>
+         <dd id="edr097893">
             <dt>
-                <h5>
-                    <xsl:apply-templates select="tei:title"/>
-                </h5>
+               <h5>
+                  <a href="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097893">EDR097893</a>
+               </h5>
             </dt>
             <dd/>
-            <xsl:if test="tei:author">
-                <dt>Author of the record:</dt>
-                <dd>
-                    <xsl:value-of select="tei:author"/>
-                </dd>
-            </xsl:if>
-            <xsl:if test="tei:date">
-                <dt>Date:</dt>
-                <dd>
-                    <xsl:value-of select="tei:date"/>
-                </dd>
-            </xsl:if>
-        </xsl:element>
-    </xsl:template>
-
-    <xsl:template match="tei:hi[@rend = 'ligature']" mode="interp">
-        <xsl:variable name="text" select="string(.)"/>
-        <xsl:analyze-string select="$text" regex=".">
-            <xsl:matching-substring>
-                <xsl:value-of select="."/>
-                <xsl:variable name="pos" select="position()"/>
-                <xsl:variable name="nextChar" select="substring($text, $pos + 1, 1)"/>
-                <xsl:if test=". != ' ' and $nextChar != '' and $nextChar != ' '">
-                    <xsl:text>&#x0302;</xsl:text>
-                </xsl:if>
-            </xsl:matching-substring>
-        </xsl:analyze-string>
-    </xsl:template>
-
-    <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="interp">
-        <xsl:apply-templates select="tei:orig" mode="interp"/>
-
-        <xsl:variable name="currentChoice" select="."/>
-        <xsl:variable name="nextLb" select="following::tei:lb[1]"/>
-
-        <xsl:variable name="textBetween"
-            select="following::text()[. &gt;&gt; $currentChoice and . &lt;&lt; $nextLb]"/>
-
-        <xsl:variable name="isWordBroken"
-            select="$nextLb/@break = 'no' and normalize-space(string-join($textBetween, '')) = ''"/>
-
-        <xsl:if test="not($isWordBroken)">
-            <xsl:text> (!)</xsl:text>
-        </xsl:if>
-    </xsl:template>
-
-    <xsl:template match="text()[preceding::*[1][self::tei:lb[@break = 'no']]]" mode="interp"
-        priority="10">
-        <xsl:variable name="prevLb" select="preceding::tei:lb[1]"/>
-        <xsl:variable name="isFirstTextAfterLb"
-            select="generate-id(.) = generate-id($prevLb/following::text()[1])"/>
-
-        <xsl:choose>
-            <xsl:when test="$isFirstTextAfterLb">
-                <xsl:variable name="lastElemBefore"
-                    select="$prevLb/preceding::*[not(self::tei:reg) and not(self::tei:sic)][1]"/>
-                <xsl:variable name="textInBetween"
-                    select="$lastElemBefore/following::text()[. &lt;&lt; $prevLb]"/>
-                <xsl:variable name="isBrokenChoice"
-                    select="$lastElemBefore/ancestor-or-self::tei:choice[tei:reg and tei:orig] and normalize-space(string-join($textInBetween, '')) = ''"/>
-
-                <xsl:variable name="trimmed" select="normalize-space(.)"/>
-
-                <xsl:choose>
-                    <xsl:when test="$isBrokenChoice">
-                        <xsl:choose>
-                            <xsl:when test="contains($trimmed, ' ')">
-                                <xsl:value-of select="substring-before($trimmed, ' ')"/>
-                                <xsl:text> (!)</xsl:text>
-                                <xsl:text> </xsl:text>
-                                <xsl:value-of select="substring-after($trimmed, ' ')"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="$trimmed"/>
-                                <xsl:text> (!)</xsl:text>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="."/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="."/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-    <xsl:template match="tei:unclear" mode="interp">
-        <xsl:analyze-string select="string(.)" regex=".">
-            <xsl:matching-substring>
-                <xsl:value-of select="."/>
-                <xsl:text>&#x0323;</xsl:text>
-            </xsl:matching-substring>
-        </xsl:analyze-string>
-    </xsl:template>
-
-    <xsl:template match="tei:ex" mode="interp">
-        <xsl:text>(</xsl:text>
-        <xsl:apply-templates mode="interp"/>
-        <xsl:if test="@cert = 'low'">
-            <xsl:text>?</xsl:text>
-        </xsl:if>
-        <xsl:text>)</xsl:text>
-    </xsl:template>
-
-    <xsl:template match="tei:supplied[@reason = 'omitted']" mode="interp">
-        <xsl:text>&lt;</xsl:text>
-        <xsl:apply-templates mode="interp"/>
-        <xsl:text>&gt;</xsl:text>
-    </xsl:template>
-
-    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp">
-        <u style="cursor: help;">
-            <xsl:attribute name="title">
-                <xsl:text>Source(s): </xsl:text>
-                <xsl:variable name="context" select="/"/>
-                <xsl:for-each select="tokenize(normalize-space(@corresp), '\s+')">
-                    <xsl:variable name="id" select="substring-after(., '#')"/>
-                    <xsl:value-of select="$context//tei:bibl[@xml:id = $id]/tei:title"/>
-                    <xsl:if test="position() != last()">
-                        <xsl:text>, </xsl:text>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:attribute>
-
-            <xsl:apply-templates mode="interp"/>
-        </u>
-    </xsl:template>
-
-    <xsl:template match="tei:surplus" mode="interp">
-        <xsl:text>{</xsl:text>
-        <xsl:apply-templates mode="interp"/>
-        <xsl:text>}</xsl:text>
-    </xsl:template>
-
-    <xsl:template match="tei:choice[tei:corr and tei:sic]" mode="interp">
-        <xsl:text>⸢</xsl:text>
-        <xsl:apply-templates select="tei:corr" mode="interp"/>
-        <xsl:text>⸣</xsl:text>
-    </xsl:template>
-
-    <xsl:template match="tei:g" mode="interp">
-        <xsl:choose>
-            <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
-            <xsl:when test="@ref = '#cross'">†</xsl:when>
-            <xsl:when test="@ref = '#hedera'">❧</xsl:when>
-            <xsl:otherwise>[<xsl:value-of select="substring-after(@ref, '#')"/>]</xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-    <xsl:template match="tei:reg | tei:sic" mode="interp"/>
-
-    <xsl:template match="text()" mode="interp" priority="1">
-        <xsl:value-of select="."/>
-    </xsl:template>
-
-    <xsl:template match="*" mode="interp">
-        <xsl:apply-templates mode="interp"/>
-    </xsl:template>
-
-    <xsl:template match="tei:gap[@reason = 'lost']" mode="interp">
-        <xsl:choose>
-            <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
-            <xsl:when test="@extent = 'unknown' and @unit = 'line'">- - - - - -</xsl:when>
-            <xsl:otherwise> </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-
-    <!-- STYLE -->
-    <!-- Latin Terms -->
-    <xsl:template match="tei:term[@xml:lang = 'la'][not(ancestor::tei:div[@type = 'edition'])]">
-        <em>
-            <xsl:apply-templates/>
-        </em>
-    </xsl:template>
-
-    <!-- Letters -->
-    <xsl:template match="tei:g[@xml:type = 'pl'][not(ancestor::tei:div[@type = 'edition'])]">
-        <strong>
-            <xsl:apply-templates/>
-        </strong>
-    </xsl:template>
-
-</xsl:stylesheet>
+            <dt>Author of the record:</dt>
+            <dd>Damiana Baldassarra</dd>
+            <dt>Date:</dt>
+            <dd>21-11-2007</dd>
+         </dd>
+      </div>
+   </body>
+</html>
