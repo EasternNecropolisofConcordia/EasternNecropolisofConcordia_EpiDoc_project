@@ -360,3 +360,26 @@ footer p {
         text-align: center;
     }
 }
+
+.person img {
+    width: 75px; 
+    height: 75px;
+    
+    object-fit: contain; 
+    
+    flex-shrink: 0;
+    background-color: #fff;
+    border: 1px solid rgba(139, 58, 58, 0.15);
+    border-radius: 4px;
+    padding: 5px;
+    filter: sepia(0.2) contrast(0.9);
+}
+
+/* Fix per Mobile */
+@media (max-width: 650px) {
+    .person img {
+        width: 100px; /* Un po' più grande su mobile visto che è centrata */
+        height: 100px;
+        margin-bottom: 15px;
+    }
+}
