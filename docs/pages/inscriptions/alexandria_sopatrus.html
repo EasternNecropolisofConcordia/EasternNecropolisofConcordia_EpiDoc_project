@@ -1,214 +1,288 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='../../css/style.css'>
-</head>
-<body>
-    
-        <header>
-            <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
-            <nav class="navbar">
-            <ul class="menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../inscriptions.html">Inscriptions</a></li>
-                <li><a href="../people.html">People</a></li>
-                <li class="dropdown">
-                <a href="#">Study & Context ▾</a>
-                <ul class="submenu">
-                <li><a href="../context/history.html">History</a></li>
-                <li><a href="../context/about_people.html">About People Buried</a></li>
-                <li><a href="../context/supports.html">Supports & Monuments</a></li>
-                <li><a href="../context/chronology.html">Dating & Chronology</a></li>
-                </ul>
-                </li>
-                <li class="dropdown">
-                <li class="dropdown">
-                <a href="#">References ▾</a>
-                <ul class="submenu">
-                <li><a href="../references/bibliography.html">Bibliography</a></li>
-                <li><a href="../references/corpora_databases.html">Corpora and Databases</a></li>
-                </ul>
-                </li>
-                </ul>
-                </nav>
-        </header>
-        
-    <main>
-        <?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-   <head>
-      <title>The Epigraphy of Alexandria and Sopatrus</title>
-      <meta charset="UTF-8"/>
-   </head>
-   <body>
-      <h1>The Epigraphy of Alexandria and Sopatrus</h1>
-      <div class="metadata">
-         <h2>Findspot</h2>
-         <p>
-            <strong>City:</strong>Concordia Sagittaria</p>
-         <p>
-            <strong>Ancient city:</strong>
-            <i>Iulia Concordia</i>
-         </p>
-         <p>
-            <strong>Date:</strong>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Alexandria and Sopatrus</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">alexandria_sopatrus.xml</idno>
+                <idno type="TM">EDR097893</idno>
+                <idno type="EDR">125634</idno>
+                <idno type="UEL">29354</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository><orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName></repository>
+                        <idno>379</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" xml:lang="en">
                                 First Half of the Fourth Century A.D.
-                            </p>
-      </div>
-      <div class="inscription">
-         <h2>INSCRIPTION</h2>
-         <h3>TRANSCRIPTION</h3>
-         <div class="transcription" lang="la">
-            <h4>LID:</h4>
-            <div class="textpart" data-location="lid">
-               <div class="ab-content">
-                  <span class="line" n="1">
-                     <u style="cursor: help;" title="Source(s): ">MM(anibus)</u> DD(iis)
-                    </span>
-               </div>
+                            </origDate>
+                            <origDate notBefore-custom="0300" notAfter-custom="0350" xml:lang="it">
+                                Prima metà del IV secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
+                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                            <placeName type="estate">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">2040</note>
+                            <note type="plan_y">1160</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
+                            <note xml:lang="en">Now set into the wall of the right nave of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <note xml:lang="it">Si conserva murata nella navata destra del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
+                            <date>2025</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Panel of the frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Tabella di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">50</height>
+                                        <width unit="cm">102</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Sarcophagus panel, partially mutilated in the lower left corner; two fractures are present.</p>
+                                    <p xml:lang="it">Tabella di sarcofago in pietra calcareaparzialmente mutila nell’angolo inferiore sinistro; sono presenti due fratture.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed.
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">38</height>
+                                        <width unit="cm">88</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4.5" max="7.5" unit="cm">4.5-7.5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>
+                                        Rightward direction; horizontal layout; vertical module; <term xml:lang="la">ductus</term> regular; shallow groove. Triangular-shaped interpuncts.
+                                    </p>
+                                    <p>
+                                        The stonecutter made some layout mistakes, and, in order to fit the text within the available space, the last letters of the final line are strongly compressed laterally, with words abbreviated to a single letter.
+                                    </p>
+                                    <p>
+                                        To save space, four letters were also carved in ligature: in the fourth line, the <g type="pl">N</g> and <g type="pl">V</g> of <term xml:lang="la">nullus</term> share a common vertical stroke, and likewise the <g type="pl">A</g> and <g type="pl">V</g> in the last line.
+                                    </p>
+                                    <p>
+                                        The letter <hi rend="italic">E</hi> displays triangular <term>wolf-tooth terminals</term> at the ends of its arms.
+                                    </p>
+                                    <p>
+                                        The <g type="pl">M</g> is composed of four oblique strokes, while the lateral strokes of the <g type="pl">N</g> are vertical.
+                                    </p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>
+                                        Verso destrorso; orientamento orizzontale; modulo verticale; <term xml:lang="la">ductus</term> regolare; solco poco profondo. Segni di interpunzione a forma triangolare.
+                                    </p>
+                                    <p>
+                                        Il lapicida ha commesso alcuni errori di impaginazione e, per far rientrare il testo nello spazio disponibile, le ultime lettere dell'ultima riga risultano fortemente compresse lateralmente, con parole abbreviate a una singola lettera.
+                                    </p>
+                                    <p>
+                                        Per risparmiare spazio, quattro lettere sono state incise in legatura: nella quarta riga, la <g type="pl">N</g> e la <g type="pl">V</g> di <term xml:lang="la">nullus</term> condividono un tratto verticale comune, e allo stesso modo la <g type="pl">A</g> e la <g type="pl">V</g> nell'ultima riga.
+                                    </p>
+                                    <p>
+                                        La lettera <hi rend="italic">E</hi> mostra apici triangolari <term>a dente di lupo</term> alle estremità dei tratti orizzontali.
+                                    </p>
+                                    <p>
+                                        La <g type="pl">M</g> è composta da quattro tratti obliqui, mentre i tratti laterali della <g type="pl">N</g> sono verticali.
+                                    </p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>A molded frame runs along the perimeter of the sarcophagus panel.</p>
+                                <p>According to <bibl ref="#bertolini1874a">Bertolini</bibl>, the decorative program of the now-lost ark included some unusual ornaments at the sides of the inscription, a leaf-patterned cross among them, and a wreath of foliage on the west side of the lid’s pediment.</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>A molded frame runs along the perimeter of the sarcophagus panel.</p>
+                                <p><bibl ref="#bertolini1874a">Bertolini</bibl> descrive così l’apparato figurativo dell’arca, ora perduta: “ai lati della iscrizione alcuni ornamenti bizzarri, in mezzo ai quali una croce di foglie […] e sul timpano del coperchio ad occidente una corona di fronde”.</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="alexandria">
+                   <persName>
+                       <name type="full">Aurelia Alexandria</name>
+                       <name type="nomen">Aurelia</name>
+                       <name type="cognomen" nymRef="latin">Alexandria</name>
+                       <name type="gens">Aurelia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type="relationship" corresp="#sopatrus">wife</note>
+               </person>
+               <person xml:id="sopatrus">
+                 <persName>
+                     <name type="full">Flavius Sopatrus</name>
+                     <name type="nomen">Flavius</name>
+                     <name type="cognomen" nymRef="unknown">Sopatrus</name>
+                     <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#alexandria">husband</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/alexandria_sopatrus.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Martinianus and Severina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29354">Ubi Erat Lupa</ref>).</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                <div type="textpart" source="lid" n="a">
+                    <ab>
+                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8734"><expan><abbr>M</abbr><ex>anibus</ex></expan> <expan><abbr>D</abbr><ex>iis</ex></expan></supplied>
+                    </ab>
+                </div>
+                <div type="textpart" source="chest" n="b">
+                    <ab>
+                        <lb n="1"/><persName corresp="#alexandria"><expan><abbr>Aur</abbr><ex>elia</ex></expan> Alexandria</persName> arcam <choice><reg>compa</reg><orig>conpa</orig></choice>
+                        <lb n="2" break="no"/>ravi mihi et <persName corresp="#sopatrus"><expan><abbr>Fl</abbr><ex>avio</ex></expan> Sopatro</persName> marito
+                        <lb n="3"/>meo dulcissimo <expan><abbr>q</abbr><ex>ui</ex></expan> <expan><abbr>v</abbr><ex>ixit</ex></expan> mecum <expan><abbr>an</abbr><ex>nis</ex></expan>
+                        <lb n="4"/>XVIIII ita ut post obitum <w xml:id="w1"><expan><abbr>nost</abbr><ex>rum</ex></expan></w> <hi rend="ligature">nu</hi>ll
+                        <lb n="5" break="no"/>us eandem putet se violare si qui<supplied reason="omitted">s</supplied>
+                        <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8734">crediderit</supplied> <w xml:id="w2"><expan><abbr>dab</abbr><ex>it</ex></expan></w> fisci <expan><abbr>virib</abbr><ex>us</ex></expan> <measure type="fine" unit="solidus" quantity="20"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="20">XX</num></measure> <expan><abbr>v</abbr><ex>el</ex></expan> <expan><abbr>i</abbr><ex>n</ex></expan> <measure type="fine" unit="uncia" commodity="silver" quantity="50"><hi rend="ligature"><expan><abbr>a</abbr><ex>rgento</ex></expan> <expan><abbr>u</abbr><ex>ncias</ex></expan></hi> <num value="50">L</num></measure>
+                    </ab>
+                </div>
             </div>
-            <h4>CHEST:</h4>
-            <div class="textpart" data-location="chest">
-               <div class="ab-content">
-                  <span class="line" n="1">Aur(elia) Alexandria arcam conpa
-                         =</span>
-                  <span class="line" n="2">ravi (!) mihi etFl(avio) Sopatro marito
-                        </span>
-                  <span class="line" n="3">meo dulcissimo q(ui) v(ixit) mecum an(nis)
-                        </span>
-                  <span class="line" n="4">XVIIII ita ut post obitum nost(rum) n̂ull
-                         =</span>
-                  <span class="line" n="5">us eandem putet se violare si qui&lt;s&gt;
-                        </span>
-                  <span class="line" n="6">
-                     <u style="cursor: help;" title="Source(s): ">crediderit</u> dab(it) fisci virib(us) sol(idos) XX v(el) i(n) âr̂ĝên̂t̂o ûn̂ĉîâs L
-                    </span>
-               </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="4" from="#w1" to="#w1">
+                        <lem>
+                            <expan><abbr>nost</abbr><ex>rum</ex></expan>
+                        </lem>
+                        <rdg source="#lettich1983 #edr097902">
+                            <expan><abbr>nostr</abbr><ex>um</ex></expan>
+                        </rdg>
+                    </app>
+                </listApp>
             </div>
-         </div>
-      </div>
-      <details class="translation">
-         <p>To the <em>Manes</em> gods.</p>
-         <p>
-                    Aurelia Alexandria purchased the sarcophagus for herself and for her dearest husband Flavius Sopatrus a sarcophagus, with whom she lived for nineteen years.
+            <div type="translation" xml:lang="en">
+                <p>To the <term xml:lang="la">Manes</term> gods.</p>
+                <p>
+                    <persName corresp="#alexandria">Aurelia Alexandria</persName> purchased the sarcophagus for herself and for her dearest husband <persName corresp="#sopatrus">Flavius Sopatrus</persName> a sarcophagus, with whom she lived for nineteen years.
                 </p>
-         <p>
+                <p>
                     She ordered that, after their death, no one should presume to violate it.
                 </p>
-         <p>
-                    Whoever does so shall pay, to the public treasury, a fine of twenty gold solidi or fifty ounces of silver.
+                <p>
+                    Whoever does so shall pay, to the public treasury, a fine of <measure type="fine" unit="solidus" commodity="gold" quantity="20">twenty gold solidi</measure> or <measure type="fine" unit="unciae" commodity="silver" quantity="50">fifty ounces of silver</measure>.
                 </p>
-      </details>
-      <figure>
-         <img src="../../images/inscriptions/alexandria_sopatrus.jpg"
-              alt="../Inscribed front panel of a limestone sarcophagus"/>
-         <figcaption>The iscription of Martinianus and Severina. Photograph courtesy of the <a href="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</a>, <a href="https://viaf.org/en/viaf/148456131">Portogruaro</a>; photo by Ortolf Harl (<a href="https://lupa.at/29354">Ubi Erat Lupa</a>).</figcaption>
-      </figure>
-      <div class="people">
-         <h2>People</h2>
-         <div class="person_record" id="alexandria">
-            <h3>Aurelia Alexandria</h3>
-            <dl>
-               <dt>
-                  <strong>NOMEN</strong>
-               </dt>
-               <dd>Aurelia</dd>
-               <dt>
-                  <strong>COGNOMEN</strong>
-               </dt>
-               <dd>Alexandria</dd>
-               <dt>
-                  <strong>GENS</strong>
-               </dt>
-               <dd>Aurelia</dd>
-               <dt>
-                  <strong>ORIGIN (of the name Alexandria)</strong>
-               </dt>
-               <dd>latin</dd>
-               <dt>
-                  <strong>GENDER</strong>
-               </dt>
-               <dd>female</dd>
-               <dt>
-                  <strong>OCCUPATION</strong>
-               </dt>
-               <dd>civil</dd>
-               <dt>
-                  <strong>ROLE</strong>
-               </dt>
-               <dd>dedicator/deceased</dd>
-               <dt>
-                  <strong>RELATIONSHIP</strong>
-               </dt>
-               <dd>wife (→ <a href="#sopatrus">Flavius Sopatrus)</a>
-               </dd>
-            </dl>
-         </div>
-         <div class="person_record" id="sopatrus">
-            <h3>Flavius Sopatrus</h3>
-            <dl>
-               <dt>
-                  <strong>NOMEN</strong>
-               </dt>
-               <dd>Flavius</dd>
-               <dt>
-                  <strong>COGNOMEN</strong>
-               </dt>
-               <dd>Sopatrus</dd>
-               <dt>
-                  <strong>GENS</strong>
-               </dt>
-               <dd>Flavia</dd>
-               <dt>
-                  <strong>ORIGIN (of the name Sopatrus)</strong>
-               </dt>
-               <dd>unknown</dd>
-               <dt>
-                  <strong>GENDER</strong>
-               </dt>
-               <dd>male</dd>
-               <dt>
-                  <strong>OCCUPATION</strong>
-               </dt>
-               <dd>civil</dd>
-               <dt>
-                  <strong>ROLE</strong>
-               </dt>
-               <dd>deceased</dd>
-               <dt>
-                  <strong>RELATIONSHIP</strong>
-               </dt>
-               <dd>husband (→ <a href="#alexandria">Aurelia Alexandria)</a>
-               </dd>
-            </dl>
-         </div>
-      </div>
-      <div class="bibliography">
-         <span id="bertolini1874a">Bertolini 1874a, 25, n. 13. </span>
-         <span id="bertolini1874b">Bertolini 1874b, 294, n. 19. </span>
-         <span id="cilv8734">
-            <em>CIL</em> V 8734</span>
-         <span id="ilcv823">
-            <em>ILCV</em> 823</span>
-         <span id="lettich1983">Lettich 1983, 99, nr. 63. </span>
-         <dd id="edr097893">
-            <dt>
-               <h5>
-                  <a href="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097893">EDR097893</a>
-               </h5>
-            </dt>
-            <dd/>
-            <dt>Author of the record:</dt>
-            <dd>Damiana Baldassarra</dd>
-            <dt>Date:</dt>
-            <dd>21-11-2007</dd>
-         </dd>
-      </div>
-   </body>
-</html>
-
-    </main>
-</body>
-</html>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    Agli dèi Mani.
+                </p>
+                <p>
+                    <persName corresp="#alexandria">Aurelia Alexandria</persName> acquistò l'arca per sé e per <persName corresp="#sopatrus">Flavius Sopatrus</persName>, suo dolcissimo marito, che visse con lei per diciannove anni.
+                </p>
+                <p>
+                    Dispose che dopo la loro morte nessuno creda di poterla violare.
+                </p>
+                <p>
+                    Se qualcuno vi avrà attentato, verserà alle casse del fisco <measure type="fine" unit="solidus" commodity="gold" quantity="20">venti solidi</measure> oppure <measure type="fine" unit="unciae" commodity="silver" quantity="50">cinquanta once d'argento</measure>.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+            </div>
+            <div type="commentary" xml:lang="it"></div>
+            <div type="bibliography">
+                <listBibl>
+                     <bibl xml:id="bertolini1874a">
+                         <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                         <title>Bertolini 1874a</title>
+                         <citedRange unit="page">25</citedRange>
+                         <note type="number">n. 13</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">294</citedRange>
+                        <note type="number">n. 19</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8734">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8734</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv823">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 823</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">99</citedRange>
+                        <note type="number">nr. 63</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097893">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097893">EDR097893</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
