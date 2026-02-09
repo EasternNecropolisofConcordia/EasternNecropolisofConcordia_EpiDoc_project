@@ -28,6 +28,7 @@ def transform_bibliography():
             <ul class="menu">
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../inscriptions.html">Inscriptions</a></li>
+                <li><a href="../people.html">People</a></li>
                 <li class="dropdown">
                     <a href="#">Study & Context ▾</a>
                     <ul class="submenu">
@@ -41,7 +42,7 @@ def transform_bibliography():
                 <li class="dropdown">
                 <a href="#">References ▾</a>
                 <ul class="submenu">
-                <li><a href="bibliography.html">Bibliography</a></li>
+                <li><a href="./bibliography.html">Bibliography</a></li>
                 <li><a href="corpora_databases.html">Corpora and Databases</a></li>
               </ul>
             </li>
