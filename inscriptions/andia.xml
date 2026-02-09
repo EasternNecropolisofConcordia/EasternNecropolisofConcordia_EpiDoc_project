@@ -116,34 +116,34 @@
                    <gender>unknown</gender>
                    <note type="occupation">soldier?</note>
                    <note type="role">dedicator</note>
-                   <note type = "relationship" corresp="#andia">colleague?</note>
+                   <note type="relationship" corresp="#andia">colleague?</note>
                </person>
                <person xml:id="otraustaguta">
                  <persName>
                      <name type="full">Otraustaguta</name>
-                     <name type = "cognomen" nymRef="germanic">Otraustaguta</name>
+                     <name type="cognomen" nymRef="germanic">Otraustaguta</name>
                  </persName>
                   <gender value="f">m</gender>
-                  <note type = "occupation">soldier</note>
+                  <note type="occupation">soldier</note>
                   <note type="role">dedicator</note>
-                   <note type = "relationship" corresp="#andia">colleague</note>
+                   <note type="relationship" corresp="#andia">colleague</note>
               </person>
               <person xml:id="felicitas">
                  <persName>
                      <name type="full">Ilateuta Felicitas</name>
-                     <name type = "cognomen" nymRef="germanic">Ilateuta</name>
+                     <name type="cognomen" nymRef="germanic">Ilateuta</name>
                      <name type="cognomen" nymRef="latin">Felicitas</name>
                  </persName>
                   <gender value="f">f</gender>
-                  <note type = "occupation">civil</note>
-                  <note type = "role">dedicator</note>
+                  <note type="occupation">civil</note>
+                  <note type="role">dedicator</note>
               </person>
                <person xml:id="andia">
                    <persName>
                        <name type="full">Flavius Andia</name>
                        <name type="nomen">Flavius</name>
                        <name type="cognomen" nymRef="germanic">Andia</name>
-                       <note type = "occupation">soldier</note>
+                       <note type="occupation">soldier</note>
                        <note type="rank">centenarius</note>
                        <note type="numerus">Bracchiati</note>
                        <note type="role">deceased</note>
