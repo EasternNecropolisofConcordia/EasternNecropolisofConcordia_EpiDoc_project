@@ -22,9 +22,9 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # Titolo iscrizione - usa str() direttamente
+                # Titolo iscrizione - usa string_value
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
-                display_title = str(title_item).strip() if title_item else filename
+                display_title = title_item.string_value.strip() if title_item else filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
                 # Trova tutte le persone
@@ -35,9 +35,9 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - usa string() nell'XPath
+                        # ID - usa string() nell'XPath e string_value
                         id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
-                        p_id = str(id_item).strip() if id_item else f"p_{filename}_{i}"
+                        p_id = id_item.string_value.strip() if id_item and id_item.string_value else f"p_{filename}_{i}"
 
                         # Se già esiste, aggiungi solo il link
                         if p_id in people_data:
@@ -51,7 +51,7 @@ def run():
                             for j in range(name_elements.size):
                                 name_elem = name_elements.item_at(j)
                                 name_type = name_elem.get_attribute_value("type") or "name"
-                                name_value = str(name_elem).strip()
+                                name_value = name_elem.string_value.strip()
                                 nymref = name_elem.get_attribute_value("nymRef")
                                 
                                 names_data.append({
@@ -62,11 +62,11 @@ def run():
 
                         # Nome completo per titolo
                         full_name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
-                        p_name = str(full_name_item).strip() if full_name_item else "Unknown"
+                        p_name = full_name_item.string_value.strip() if full_name_item else "Unknown"
 
                         # Genere
                         g_item = xpath_processor.evaluate(".//*[local-name()='gender']")
-                        p_gender = str(g_item).strip() if g_item else "unknown"
+                        p_gender = g_item.string_value.strip() if g_item else "unknown"
 
                         # Note
                         notes_data = []
@@ -76,7 +76,7 @@ def run():
                             for j in range(note_elements.size):
                                 n = note_elements.item_at(j)
                                 n_type = n.get_attribute_value("type") or "info"
-                                n_value = str(n).strip()
+                                n_value = n.string_value.strip()
                                 notes_data.append({
                                     'type': n_type,
                                     'value': n_value
