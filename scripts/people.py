@@ -54,6 +54,8 @@ def run():
                             for j in range(name_elements.size):
                                 name_elem = name_elements.item_at(j)
                                 name_type = name_elem.get_attribute_value("type") or "name"
+                                if name_type == "full":
+                                    continue
                                 name_value = name_elem.string_value.strip()
                                 nymref = name_elem.get_attribute_value("nymRef")
                                 
