@@ -131,7 +131,7 @@ def run():
         # Immagine
         img_html = ""
         if p['img']:
-            img_html = f'<img src="../images/silhouette/{p["img"]}" style="width:70px; height:70px;" alt="silhouette">'
+            img_html = f'<img src="../images/silhouette/{p["img"]}" alt="silhouette">'
         
         # Costruisci dl
         dl_content = ""
@@ -155,11 +155,11 @@ def run():
         dl_content += f"<dt>inscription(s)</dt><dd>{links_str}</dd>"
         
         cards += f"""
-        <div class="person" id="{p['id']}" style="border:1px solid #ddd; padding:15px; margin-bottom:15px; display:flex; gap:20px; background:#f9f9f9; border-radius:8px;">
+        <div class="person" id="{p['id']}">
             {img_html}
-            <div style="flex:1;">
-                <h3 style="margin:0 0 10px 0; color:#800000;">{p['name']}</h3>
-                <dl style="margin:0; font-size:0.9em;">
+            <div>
+                <h3>{p['name']}</h3>
+                <dl>
                     {dl_content}
                 </dl>
             </div>
@@ -199,14 +199,14 @@ def run():
             </ul>
         </nav>
     </header>
-    <main class="container" style="padding:20px; max-width:900px; margin:auto;">
+    <main class="container">
         <h2>People in the Inscriptions</h2>
         <p>This list is automatically generated from the EpiDoc XML files.</p>
         <div class="people-list">
             {cards if cards else "<p>No people found.</p>"}
         </div>
     </main>
-    <footer style="text-align:center; padding:20px; font-size:0.8em; margin-top:40px; border-top:1px solid #ddd;">
+    <footer>
         <p>Generated via Saxon-Che & GitHub Actions</p>
         <p>&copy; 2026 - Leonardo Battistella</p>
         <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
