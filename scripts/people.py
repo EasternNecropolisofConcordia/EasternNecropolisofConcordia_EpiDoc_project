@@ -31,8 +31,10 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
-                        p_id = id_item.string_value.strip() if id_item and hasattr(id_item, 'string_value') and id_item.string_value else None
+                        # ID
+                        p_id = person.get_attribute_value("id")
+                        if not p_id:
+                            p_id = person.get_attribute_value("{http://www.w3.org/XML/1998/namespace}id")
                         
                         if p_id:
                             full_name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
@@ -64,9 +66,12 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID
-                        id_item = xpath_processor.evaluate("string(@*[local-name()='id'])")
-                        p_id = id_item.string_value.strip() if id_item and hasattr(id_item, 'string_value') and id_item.string_value else f"p_{filename}_{i}"
+                        # ID - usa get_attribute_value direttamente
+                        p_id = person.get_attribute_value("id")
+                        if not p_id:
+                            # Fallback con namespace xml
+                            id_attr = person.get_attribute_value("{http://www.w3.org/XML/1998/namespace}id")
+                            p_id = id_attr if id_attr else f"p_{filename}_{i}"
 
                         # Se già esiste, aggiungi solo il link E unisci le note se diverse
                         if p_id in people_data:
