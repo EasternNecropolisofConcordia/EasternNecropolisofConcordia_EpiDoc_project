@@ -148,7 +148,7 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person xml:id="dionisia" corresp="./dionisia_b.xml#dionisia">
+               <person xml:id="dionisia" corresp="./dionisia_a.xml#dionisia">
                    <persName>
                        <name type="full">Aurelia Dionisia</name>
                        <name type="nomen">Aurelia</name>
