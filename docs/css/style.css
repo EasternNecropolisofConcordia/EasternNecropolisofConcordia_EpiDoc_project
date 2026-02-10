@@ -158,7 +158,6 @@ main p {
 }
 
 /* Line numbers - show every 5 lines */
-.line[n="1"]::before,
 .line[n="5"]::before,
 .line[n="10"]::before,
 .line[n="15"]::before,
