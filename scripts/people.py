@@ -31,18 +31,17 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - prova tutti i metodi
+                        # ID - usa XPath con namespace binding
                         p_id = None
-                        p_id = person.get_attribute_value("id")
-                        if not p_id:
-                            p_id = person.get_attribute_value("{http://www.w3.org/XML/1998/namespace}id")
-                        if not p_id:
-                            try:
-                                id_xpath = xpath_processor.evaluate("string(@xml:id)")
-                                if id_xpath and hasattr(id_xpath, 'string_value'):
-                                    p_id = id_xpath.string_value.strip()
-                            except:
-                                pass
+                        try:
+                            xpath_processor.declare_namespace("xml", "http://www.w3.org/XML/1998/namespace")
+                            id_result = xpath_processor.evaluate("string(@xml:id)")
+                            if id_result and hasattr(id_result, 'string_value'):
+                                p_id = id_result.string_value.strip()
+                                if p_id == "":
+                                    p_id = None
+                        except:
+                            pass
                         
                         if p_id:
                             full_name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
@@ -74,23 +73,21 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - prova tutti i metodi possibili
+                        # ID - usa XPath con namespace XML dichiarato
                         p_id = None
-                        # Metodo 1: attributo senza namespace
-                        p_id = person.get_attribute_value("id")
-                        # Metodo 2: con namespace xml
-                        if not p_id:
-                            p_id = person.get_attribute_value("{http://www.w3.org/XML/1998/namespace}id")
-                        # Metodo 3: con prefisso xml:
-                        if not p_id:
-                            try:
-                                id_xpath = xpath_processor.evaluate("string(@xml:id)")
-                                if id_xpath and hasattr(id_xpath, 'string_value'):
-                                    p_id = id_xpath.string_value.strip()
-                            except:
-                                pass
+                        try:
+                            # Dichiara il namespace xml e usa XPath
+                            xpath_processor.declare_namespace("xml", "http://www.w3.org/XML/1998/namespace")
+                            id_result = xpath_processor.evaluate("string(@xml:id)")
+                            if id_result and hasattr(id_result, 'string_value'):
+                                p_id = id_result.string_value.strip()
+                                if p_id == "":
+                                    p_id = None
+                        except Exception as e:
+                            print(f"  Errore leggendo xml:id: {e}")
+                        
                         # Fallback: genera ID automatico
-                        if not p_id or p_id == "":
+                        if not p_id:
                             p_id = f"p_{filename}_{i}"
                         
                         print(f"DEBUG: File {filename}, persona {i}, ID trovato: {p_id}")
