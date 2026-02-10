@@ -395,7 +395,6 @@ footer p {
     padding-left: 40px; /* Smaller space for line numbers on tablets */
   }
 
-  .line[n="1"]::before,
   .line[n="5"]::before,
   .line[n="10"]::before,
   .line[n="15"]::before,
@@ -455,7 +454,6 @@ footer p {
     padding-left: 30px; /* Even smaller on mobile */
   }
 
-  .line[n="1"]::before,
   .line[n="5"]::before,
   .line[n="10"]::before,
   .line[n="15"]::before,
