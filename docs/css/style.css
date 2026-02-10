@@ -16,6 +16,7 @@ body {
   background-attachment: fixed;
 }
 
+/* --- MAIN CONTAINER --- */
 main {
   flex: 1 0 auto;
   padding: 40px 20px;
@@ -26,19 +27,45 @@ main {
   width: 90%;
   box-sizing: border-box;
   border-radius: 2px;
-  text-align: center; 
+  text-align: center; /* Centra i titoli H1, H2... */
 }
 
+/* --- TITOLI --- */
 .main_title {
   width: 100%;
-  text-align: center;
   padding: 30px 10px;
   color: #8B3A3A;
   font-family: 'Cardo', serif;
   background-color: rgba(255, 255, 252, 0.2);
   border-color: #8B3A3A;
+  box-sizing: border-box;
 }
 
+main h1, main h2, main h3, main h4 {
+  color: #8B3A3A;
+  font-family: 'Cardo', serif;
+  margin-bottom: 20px;
+}
+
+/* --- SEZIONI PRINCIPALI (Blocchi centrati, testo a sx) --- */
+.metadata, 
+.inscription, 
+.people, 
+.bibliography, 
+figure {
+  max-width: 800px;
+  /* Aumentato spazio verticale a 60px */
+  margin: 60px auto; 
+  text-align: left; /* Testo impaginato a sinistra */
+}
+
+/* Paragraphs justify inside blocks */
+main p, .metadata p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
 .navbar {
   width: 100%;
   background-color: #8B3A3A;
@@ -51,6 +78,7 @@ main {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: flex-start;
 }
 
 .menu > li {
@@ -89,9 +117,7 @@ main {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.submenu li {
-  width: 100%;
-}
+.submenu li { width: 100%; }
 
 .submenu a {
   text-align: left;
@@ -100,22 +126,9 @@ main {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.menu li:hover > .submenu {
-  display: block;
-}
+.menu li:hover > .submenu { display: block; }
 
-main h1, main h2, main h3, main h4, main h5 {
-    text-align: center;
-    color: #8B3A3A;
-    font-family: 'Cardo', serif;
-}
-
-main p, .metadata p {
-  text-align: left;
-  max-width: 800px;
-  margin: 10px auto;
-}
-
+/* --- INSCRIPTION LIST (Index page) --- */
 .inscription-list {
   list-style-type: none;
   padding: 0;
@@ -135,18 +148,20 @@ main p, .metadata p {
   color: #2c3e50;
 }
 
+/* --- TRANSCRIPTION --- */
 .transcription {
   font-family: 'Cardo', serif;
   line-height: 1.8;
   max-width: 900px;
   margin: 20px auto;
-  text-align: center;
+  text-align: left; /* Testo a sinistra */
 }
 
+/* Centra il blocco visivo ma mantiene il testo allineato */
 .textpart {
   margin: 30px 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .ab-content {
@@ -163,6 +178,7 @@ main p, .metadata p {
   min-height: 1.8em;
 }
 
+/* Line numbers styling */
 .line[n="5"]::before,
 .line[n="10"]::before,
 .line[n="15"]::before,
@@ -180,6 +196,7 @@ main p, .metadata p {
   opacity: 0.6;
 }
 
+/* Special handling for lid */
 div[data-location="lid"] {
   display: flex;
   flex-wrap: wrap;
@@ -189,69 +206,61 @@ div[data-location="lid"] {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
+div[data-location="lid"] > h4 { flex-basis: 100%; text-align: center; }
+div[data-location="lid"] .ab-content { padding-left: 0; }
+div[data-location="lid"] .line::before { display: none; }
+div[data-location="acroterion"] { flex: 0 1 auto; min-width: 200px; }
+div[data-location="chest"] { width: 100%; margin-top: 20px; }
 
-div[data-location="lid"] > h4 {
-  flex-basis: 100%;
-}
-
-div[data-location="lid"] .ab-content {
-  text-align: center;
-  padding-left: 0; 
-}
-
-div[data-location="lid"] .line::before {
-  display: none; 
-}
-
-div[data-location="acroterion"] {
-  flex: 0 1 auto;
-  min-width: 200px;
-}
-
-div[data-location="chest"] {
-  width: 100%;
-  margin-top: 20px;
-}
-
-/* TRANSLATION DETAILS */
+/* --- TRANSLATION DETAILS --- */
+/* Nasconde il testo di default "Dettagli" rendendo il testo trasparente sul container */
 details.translation {
-    max-width: 800px;
-    margin: 30px auto;
-    text-align: left;
-    border-left: 5px solid #8B3A3A;
-    background-color: rgba(255, 255, 252, 0.6);
-    padding: 10px;
-    cursor: pointer;
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: left;
+  border-left: 5px solid #8B3A3A;
+  background-color: rgba(255, 255, 252, 0.6);
+  padding: 10px 20px;
+  cursor: pointer;
+  color: transparent; /* Hack per nascondere "Dettagli" */
 }
 
+/* Nasconde il triangolino di default */
+details.translation > summary {
+  list-style: none;
+}
+details.translation > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Crea la nuova etichetta */
 details.translation::before {
-    content: "Translation ▾";
-    display: block;
-    color: #8B3A3A;
-    font-family: 'Cardo', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
+  content: "Translation ▾";
+  display: block;
+  color: #8B3A3A; /* Colore visibile */
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 details.translation[open]::before {
-    content: "Translation ▴";
+  content: "Translation ▴";
 }
 
-details.translation p {
-    margin: 10px 0;
-    font-style: italic;
+/* Ripristina il colore del testo per il contenuto interno */
+details.translation p, details.translation > * {
+  color: #2c3e50;
+  font-style: italic;
+  margin: 0;
 }
 
+/* --- IMAGES --- */
 figure {
-  margin: 20px auto;
   padding: 10px;
-  max-width: 400px; 
-  width: 100%;
   background-color: #fff;
   border: 1px solid #ddd;
-  text-align: left;
   box-sizing: border-box;
 }
 
@@ -267,29 +276,11 @@ figcaption {
   color: #666;
 }
 
-footer {
-  flex-shrink: 0;
-  font-size: 10px;
-  text-align: center;
-  color: #555;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  padding: 20px 0;
-  width: 100%;
-}
-
-footer p {
-  margin: 5px 0;
-  text-align: center;
-}
-
+/* --- BIBLIOGRAPHY (Semplificata & Affiancata) --- */
 .bibliography {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .biblio-item {
@@ -298,7 +289,6 @@ footer p {
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.03);
   transition: transform 0.2s ease;
-  text-align: left;
 }
 
 .biblio-item:hover {
@@ -306,27 +296,26 @@ footer p {
   background-color: rgba(255, 255, 252, 0.9);
 }
 
+/* Grid per affiancare DT e DD */
 .biblio-item dl, .bibliography dl {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 140px 1fr; /* Colonna fissa per l'etichetta */
   margin: 0;
-  gap: 8px 15px;
-  text-align: left;
+  gap: 10px 15px;
+  align-items: baseline;
 }
 
 .biblio-item dt, .bibliography dt {
   font-family: 'Cardo', serif;
   font-weight: bold;
-  color: #fff;
-  background-color: #8B3A3A;
-  padding: 2px 6px;
+  color: #fff; /* Testo bianco */
+  background-color: #8B3A3A; /* Sfondo Rosso */
+  padding: 3px 8px;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.5px;
-  display: inline-block;
-  align-self: start;
-  justify-self: start;
+  text-align: center;
 }
 
 .biblio-item dd, .bibliography dd {
@@ -341,14 +330,7 @@ footer p {
   text-decoration: underline;
 }
 
-.people {
-  margin-top: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Updated .person_record to match .biblio-item style */
+/* --- PEOPLE CARDS (Affiancate come Bibliografia) --- */
 .person_record, .person {
   background-color: rgba(255, 255, 252, 0.6);
   border-left: 5px solid #8B3A3A;
@@ -356,8 +338,7 @@ footer p {
   margin-bottom: 25px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.03);
   transition: transform 0.2s ease, background-color 0.2s ease;
-  display: block; 
-  text-align: left;
+  display: block;
 }
 
 .person_record:hover, .person:hover {
@@ -365,35 +346,23 @@ footer p {
   background-color: rgba(255, 255, 252, 0.9);
 }
 
-.person img {
-  width: 75px; 
-  height: 75px;
-  object-fit: contain; 
-  flex-shrink: 0;
-  background-color: #fff;
-  border: 1px solid rgba(139, 58, 58, 0.15);
-  border-radius: 4px;
-  padding: 5px;
-  filter: sepia(0.2) contrast(0.9);
-  float: right; 
-  margin-left: 20px;
-}
-
 .person h3, .person_record h3 {
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   font-family: 'Cardo', serif;
   color: #6D2D2D;
   font-size: 1.4rem;
   border-bottom: 1px solid rgba(139, 58, 58, 0.2);
   padding-bottom: 5px;
-  text-align: left;
+  text-align: left; /* Nome allineato a sinistra */
 }
 
+/* Grid per affiancare DT e DD */
 .person dl, .person_record dl {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 180px 1fr; /* Etichetta un po' più larga per i nomi lunghi */
   margin: 0;
-  gap: 8px 20px;
+  gap: 10px 20px;
+  align-items: baseline;
 }
 
 .person dt, .person_record dt {
@@ -403,17 +372,15 @@ footer p {
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
 }
 
 .person dd, .person_record dd {
   margin: 0;
   font-family: 'Cardo', serif;
   color: #2c3e50;
-  line-height: 1.5;
 }
 
+/* Link nelle persone */
 .person dd a, .person_record dd a {
   color: #8B3A3A;
   font-weight: bold;
@@ -421,85 +388,57 @@ footer p {
   border-bottom: 1px solid transparent;
   transition: border 0.2s ease;
 }
+.person dd a:hover { border-bottom: 1px solid #8B3A3A; }
 
-.person dd a:hover, .person_record dd a:hover {
-  border-bottom: 1px solid #8B3A3A;
+/* Immagine profilo flottante a destra */
+.person img {
+  width: 75px; 
+  height: 75px;
+  object-fit: contain; 
+  background-color: #fff;
+  border: 1px solid rgba(139, 58, 58, 0.15);
+  border-radius: 4px;
+  padding: 5px;
+  filter: sepia(0.2) contrast(0.9);
+  float: right; 
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  .ab-content {
-    padding-left: 40px;
-  }
+/* --- FOOTER --- */
+footer {
+  flex-shrink: 0;
+  font-size: 10px;
+  text-align: center;
+  color: #555;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding: 20px 0;
+  width: 100%;
+}
 
-  .line[n="5"]::before,
-  .line[n="10"]::before,
-  .line[n="15"]::before,
-  .line[n="20"]::before,
-  .line[n="25"]::before,
-  .line[n="30"]::before {
-    left: -40px;
-    width: 30px;
-  }
+footer p { margin: 5px 0; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .ab-content { padding-left: 40px; }
+  .line[n]::before { left: -40px; width: 30px; }
 }
 
 @media (max-width: 650px) {
-  .person, .person_record {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .person img {
-    float: none;
-    margin: 0 0 15px 0;
-    width: 100px;
-    height: 100px;
-  }
-
-  .person dl, .person_record dl {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .person dt, .person_record dt {
-    margin-top: 10px;
-    border-bottom: 1px solid rgba(139, 58, 58, 0.1);
-    justify-content: center;
-  }
-
-  .person dd, .person_record dd {
-    text-align: center;
-  }
-
-  .person h3, .person_record h3 {
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
+  /* Mobile: le card diventano a colonna singola */
+  .person dl, .person_record dl, 
   .biblio-item dl, .bibliography dl {
     grid-template-columns: 1fr;
   }
+  
+  .person img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
 
-  .biblio-item dt, .bibliography dt {
+  .person dt, .biblio-item dt {
     margin-top: 10px;
     display: inline-block;
-  }
-
-  .ab-content {
-    padding-left: 30px; 
-  }
-
-  .line[n="5"]::before,
-  .line[n="10"]::before,
-  .line[n="15"]::before,
-  .line[n="20"]::before,
-  .line[n="25"]::before,
-  .line[n="30"]::before {
-    left: -30px;
-    width: 25px;
-    font-size: 0.75em;
   }
 }
