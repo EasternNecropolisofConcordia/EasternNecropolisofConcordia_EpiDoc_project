@@ -88,7 +88,19 @@
                             <dt><strong>City</strong></dt>
                             <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='city' and @subtype = 'modern']"/></dd>
                             <dt><strong>Ancient City</strong></dt>
-                            <dd><em><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='city' and @subtype = 'ancient']"/></em></dd>
+                            <dd>
+                                <div class="dropdown">
+                                    <button class="dropbtn"><em><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='city' and @subtype = 'ancient']"/></em></button>
+                                    <div class="dropdown-content">
+                                        <xsl:for-each select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:history/tei:provenance[@type='found']/tei:settlement[@type='city' and @subtype = 'ancient']/@ref, '#')]/tei:catDesc/tei:ref">
+                                            <xsl:element name="a">
+                                                <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+                                                <xsl:value-of select="upper-case(@type)"/> ID: <xsl:value-of select="tei:idno"/>
+                                            </xsl:element>
+                                        </xsl:for-each>
+                                    </div>
+                                </div>
+                            </dd>
                             <xsl:if test="normalize-space(//tei:history/tei:provenance[@type='found']/tei:settlement[@type='site' and @xml:lang = 'en']) != ''">
                                 <dt><strong>Site</strong></dt>
                                 <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='site' and @xml:lang = 'en']"/></dd>
@@ -141,6 +153,7 @@
                     </div>
                 </div>
                 <details class="palaeography">
+                    <h3>Palaeographic Comment</h3>
                     <xsl:for-each select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
                         <p>
                             <xsl:value-of select="normalize-space(.)"/>
