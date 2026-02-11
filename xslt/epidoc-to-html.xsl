@@ -17,30 +17,126 @@
                 <h1>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </h1>
-
                 <div class="metadata">
-                    <h2>Findspot</h2>
-                    <p>
-                        <strong>City:</strong>
-                        <xsl:apply-templates
-                            select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'modern']"
-                        />
-                    </p>
-                    <p>
-                        <strong>Ancient city:</strong>
-                        <i>
-                            <xsl:apply-templates
-                                select="//tei:history//tei:origPlace/tei:settlement/tei:placeName[@type = 'ancient']"
-                            />
-                        </i>
-                    </p>
-                    <p>
-                        <strong>Date:</strong>
-                        <xsl:apply-templates select="//tei:history//tei:origDate[@xml:lang = 'en']"
-                        />
-                    </p>
+                    <h2>METADATA</h2>
+                    <div class="repository">
+                        <h3>Current Location</h3>
+                        <dl>
+                            <dt><strong>Institution</strong></dt>
+                            <dd>
+                                <div class="dropdown">
+                                    <button class="dropbtn"><xsl:value-of select="//tei:repository/tei:orgName/tei:name/text()"/></button>
+                                    <div class="dropdown-content">
+                                        <xsl:for-each select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName/@ref, '#')]/tei:catDesc/tei:ref">
+                                            <xsl:element name="a">
+                                                <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+                                                <xsl:value-of select="upper-case(@type)"/> ID: <xsl:value-of select="tei:idno"/>
+                                            </xsl:element>
+                                        </xsl:for-each>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dt><strong>Inventory Number</strong></dt>
+                            <dd><xsl:value-of select="//tei:msIdentifier/tei:idno[@type='inventory']"/></dd>
+                        </dl>
+                    </div>
+                    <div class="external_databases">
+                        <xsl:if test="//tei:publicationStmt/tei:idno[@type!='filename']">
+                            <dl>
+                                <xsl:if test="//tei:publicationStmt/tei:idno[@type='tm']">
+                                    <dt><strong>TrisMegistos</strong></dt>
+                                    <dd>
+                                        <xsl:element name="a">
+                                            <xsl:attribute name="href">https://www.trismegistos.org/text/<xsl:value-of select="//tei:publicationStmt/tei:idno[@type='tm']"/></xsl:attribute>
+                                            <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='tm']"/>
+                                        </xsl:element>
+                                    </dd>
+                                </xsl:if>
+                                <xsl:if test="//tei:publicationStmt/tei:idno[@type='edr']">
+                                    <dt><strong>Epigraphic Database Rome</strong></dt>
+                                    <dd>
+                                        <xsl:element name="a">
+                                            <xsl:attribute name="href">http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=<xsl:value-of select="//tei:publicationStmt/tei:idno[@type='edr']"/></xsl:attribute>
+                                            <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='edr']"/>
+                                        </xsl:element>
+                                    </dd>
+                                </xsl:if>
+                                <xsl:if test="//tei:publicationStmt/tei:idno[@type='uel']">
+                                    <dt><strong>Ubi Erat Lupa</strong></dt>
+                                    <dd>
+                                        <xsl:element name="a">
+                                            <xsl:attribute name="href">https://lupa.at/<xsl:value-of select="//tei:publicationStmt/tei:idno[@type='uel']"/></xsl:attribute>
+                                            <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='uel']"/>
+                                        </xsl:element>
+                                    </dd>
+                                </xsl:if>
+                            </dl>
+                        </xsl:if>
+                    </div>
+                    <div class="findspot">
+                        <h3>Findspot and Place of Origin</h3>
+                        <dl>
+                            <dt><strong>Country</strong></dt>
+                            <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:placeName[@type='country' and @subtype = 'modern' and @xml:lang='en']"/></dd>
+                            <dt><strong>Region</strong></dt>
+                            <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:placeName[@type='region' and @subtype = 'modern']"/></dd>
+                            <dt><strong>Ancient Region</strong></dt>
+                            <dd><em><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:placeName[@type='region' and @subtype = 'ancient']"/></em></dd>
+                            <dt><strong>City</strong></dt>
+                            <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='city' and @subtype = 'modern']"/></dd>
+                            <dt><strong>Ancient City</strong></dt>
+                            <dd><em><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='city' and @subtype = 'ancient']"/></em></dd>
+                            <xsl:if test="normalize-space(//tei:history/tei:provenance[@type='found']/tei:settlement[@type='site' and @xml:lang = 'en']) != ''">
+                                <dt><strong>Site</strong></dt>
+                                <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='site' and @xml:lang = 'en']"/></dd>
+                            </xsl:if>
+                            <xsl:if test="normalize-space(//tei:history/tei:provenance[@type='found']/tei:settlement[@type='plot']) != ''">
+                                <dt><strong>Plot</strong></dt>
+                                <dd><xsl:value-of select="//tei:history/tei:provenance[@type='found']/tei:settlement[@type='plot']"/></dd>
+                            </xsl:if>
+                        </dl>
+                    </div>
+                    <div class="chronology">
+                        <h3>Chronology</h3>
+                        <xsl:if test="normalize-space(//tei:history//tei:provenance[@type='found']/date[@type='discovery']) != ''">
+                            <h4>Discovery date</h4>
+                            <dl>
+                                <dt><strong>Date</strong></dt>
+                                <dd><xsl:value-of select="//tei:history//tei:provenance[@type='found']/date[@type='discovery']"/></dd>
+                            </dl>
+                        </xsl:if>
+                        <h4>Date of the inscription</h4>
+                        <dl>
+                            <dt><strong>Date</strong></dt>
+                            <dd><xsl:value-of select="normalize-space(//tei:origDate[@xml:lang='en'])"/></dd>
+                            <dt><strong>Dating criteria</strong></dt>
+                            <dd><xsl:apply-templates select="//tei:origDate[@xml:lang='en']" mode="orig_date"/></dd>
+                        </dl>
+                    </div>
+                    <div class="autopsy">
+                        <h3>Autopsy</h3>
+                        <dl>
+                            <dt><strong>Institution</strong></dt>
+                            <dd>
+                                <div class="dropdown">
+                                    <button class="dropbtn"><xsl:value-of select="//tei:repository/tei:orgName/tei:name/text()"/></button>
+                                    <div class="dropdown-content">
+                                        <xsl:for-each select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName/@ref, '#')]/tei:catDesc/tei:ref">
+                                            <xsl:element name="a">
+                                                <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+                                                <xsl:value-of select="upper-case(@type)"/> ID: <xsl:value-of select="tei:idno"/>
+                                            </xsl:element>
+                                        </xsl:for-each>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dt><strong>Location within museum</strong></dt>
+                            <dd>the <xsl:value-of select="//tei:provenance[@type='observed']/tei:note[@type='observed' and @xml:lang='en']/tei:seg[@type='location']"/></dd>
+                            <dt><strong>Date of observation</strong></dt>
+                            <dd><xsl:value-of select="//tei:provenance[@type='observed']/tei:date[@type='autopsy']"/></dd>
+                        </dl>
+                    </div>
                 </div>
-
                 <div class="inscription">
                     <h2>INSCRIPTION</h2>
                     <h3>TRANSCRIPTION</h3>
@@ -67,6 +163,43 @@
                 </details>
 
                 <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
+                
+                <xsl:if test="//tei:div[@type='apparatus']/tei:listApp/tei:app">
+                    <div class="apparatus">
+                        <h2><em>APPARATUS CRITICUS</em></h2>
+                        <xsl:variable name="root" select="/"/>
+                        <xsl:for-each select="//tei:div[@type='apparatus']/tei:listApp/tei:app/@loc[not(. = preceding::tei:app/@loc)]">
+                            <xsl:variable name="current_loc" select="."/>
+                            <span class="app-line" data-line="{.}">
+                                <xsl:value-of select="."/><xsl:text>. </xsl:text>
+                                <xsl:for-each select="$root//tei:div[@type='apparatus']/tei:listApp/tei:app[@loc = $current_loc]">
+                                    <xsl:variable name="from_id" select="substring-after(@from, '#')"/>
+                                    <xsl:variable name="to_id" select="substring-after(@to, '#')"/>
+                                    <span class="app-entry" id="{if ($from_id = $to_id) then $from_id else $from_id}">
+                                        <xsl:for-each select="tei:rdg">
+                                            <xsl:variable name="rdg_content">
+                                                <xsl:apply-templates select="." mode="apparatus"/>
+                                            </xsl:variable>
+                                            <xsl:value-of select="normalize-space($rdg_content)"/><xsl:text>, </xsl:text>
+                                            <xsl:variable name="sources" select="tokenize(normalize-space(@source), '\s+')"/>
+                                            <xsl:for-each select="$sources">
+                                                <xsl:variable name="source_id" select="substring-after(., '#')"/>
+                                                <a href="#{$source_id}">
+                                                    <xsl:apply-templates select="$root//tei:listBibl/tei:bibl[@xml:id = $source_id]/tei:title"/>
+                                                </a>
+                                                <xsl:if test="position() != last()"><xsl:text>, </xsl:text></xsl:if>
+                                            </xsl:for-each>
+                                            <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
+                                        </xsl:for-each>
+                                    </span>
+                                    <xsl:if test="position() != last()"><xsl:text> </xsl:text></xsl:if>
+                                </xsl:for-each>
+                                <xsl:text>.</xsl:text>
+                            </span>
+                            <xsl:text> </xsl:text>
+                        </xsl:for-each>
+                    </div>
+                </xsl:if>
 
                 <div class="people">
                     <h2>People</h2>
@@ -83,7 +216,9 @@
                                 <xsl:for-each select="tei:persName/tei:name">
                                     <xsl:if test="@type != 'full'">
                                         <dt>
-                                            <strong><xsl:value-of select="upper-case(@type)"/></strong>
+                                            <strong>
+                                                <xsl:value-of select="upper-case(@type)"/>
+                                            </strong>
                                         </dt>
                                         <dd>
                                             <xsl:value-of select="."/>
@@ -93,13 +228,18 @@
                                 <xsl:if test="tei:persName/tei:name[@type = 'cognomen'][@nymRef]">
                                     <xsl:for-each
                                         select="tei:persName/tei:name[@type = 'cognomen' and @nymRef]">
-                                        <dt><strong>ORIGIN (of the name <xsl:value-of select="."/>)</strong></dt>
+                                        <dt>
+                                            <strong>ORIGIN (of the name <xsl:value-of select="."
+                                                />)</strong>
+                                        </dt>
                                         <dd>
                                             <xsl:value-of select="@nymRef"/>
                                         </dd>
                                     </xsl:for-each>
                                 </xsl:if>
-                                <dt><strong>GENDER</strong></dt>
+                                <dt>
+                                    <strong>GENDER</strong>
+                                </dt>
                                 <dd>
                                     <xsl:choose>
                                         <xsl:when test="tei:gender = 'm'">male</xsl:when>
@@ -109,15 +249,22 @@
                                 </dd>
                                 <xsl:for-each select="tei:note">
                                     <dt>
-                                        <strong><xsl:value-of select="upper-case(@type)"/></strong>
+                                        <strong>
+                                            <xsl:value-of select="upper-case(@type)"/>
+                                        </strong>
                                     </dt>
                                     <dd>
                                         <xsl:value-of select="."/>
                                         <xsl:if test="@type = 'relationship' and @corresp">
                                             <xsl:text> (→ </xsl:text>
-                                            <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="@corresp"/></xsl:attribute><xsl:value-of
-                                                select="normalize-space(//tei:person[@xml:id = substring-after(current()/@corresp, '#')]/tei:persName/tei:name[@type = 'full'])"/>
-                                            <xsl:text>)</xsl:text></xsl:element>
+                                            <xsl:element name="a">
+                                                <xsl:attribute name="href">
+                                                  <xsl:value-of select="@corresp"/>
+                                                </xsl:attribute>
+                                                <xsl:value-of
+                                                  select="normalize-space(//tei:person[@xml:id = substring-after(current()/@corresp, '#')]/tei:persName/tei:name[@type = 'full'])"/>
+                                                <xsl:text>)</xsl:text>
+                                            </xsl:element>
                                         </xsl:if>
                                     </dd>
                                 </xsl:for-each>
@@ -135,6 +282,31 @@
             </body>
         </html>
     </xsl:template>
+    
+    <xsl:template match="tei:origDate[@xml:lang='en']" mode="orig_date">
+        <xsl:variable name="evidence-tokens" select="tokenize(@evidence, '\s+')"/>
+        <xsl:for-each select="$evidence-tokens">
+            <xsl:choose>
+                <xsl:when test=". = 'archaeological-context'">archaeological context</xsl:when>
+                <xsl:when test=". = 'internal-date'">explicit internal date</xsl:when>
+                <xsl:when test=". = 'lettering'">palaeography</xsl:when>
+                <xsl:when test=". = 'material-context'">material and monument type</xsl:when>
+                <xsl:when test=". = 'nomenclature'">onomastics</xsl:when>
+                <xsl:when test=". = 'office'">office, rank, or reign</xsl:when>
+                <xsl:when test=". = 'prosopography'">prosopography</xsl:when>
+                <xsl:when test=". = 'textual-content'">textual/linguistic content</xsl:when>
+                <xsl:when test=". = 'titulature'">official titles</xsl:when>
+                <xsl:when test=". = 'iconography'">iconography</xsl:when>
+                <xsl:when test=". = 'artistic-style'">artistic style</xsl:when>
+                <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+            </xsl:choose>
+            <xsl:if test="position() != last()">
+                <xsl:text>, </xsl:text>
+            </xsl:if>
+        </xsl:for-each>.
+    </xsl:template>
+    
+
 
     <xsl:template match="tei:div[@type = 'textpart']">
         <xsl:element
@@ -203,24 +375,28 @@
     </xsl:template>
 
     <xsl:template match="tei:bibl" mode="bibliography">
-        <xsl:choose>
-            <xsl:when test="@type = 'corpus'">
-                <xsl:element name="span">
-                    <xsl:attribute name="id">
-                        <xsl:value-of select="@xml:id"/>
-                    </xsl:attribute>
-                    <xsl:apply-templates select="tei:title"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:element name="span">
-                    <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
-                    <xsl:value-of select="tei:title"/><xsl:if test="tei:citedRange">, <xsl:value-of
-                            select="tei:citedRange"/></xsl:if><xsl:if
-                        test="tei:note[@type = 'number']">, <xsl:value-of
-                            select="tei:note[@type = 'number']"/></xsl:if>. </xsl:element>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:element name="span">
+            <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
+            
+            <!-- Trova il ptr con 'references' e crea il link -->
+            <xsl:variable name="ref-target" select="tei:ptr[contains(@target, 'references')]/@target"/>
+            <xsl:variable name="html-target" select="replace($ref-target, '\.xml', '.html')"/>
+            
+            <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="$html-target"/></xsl:attribute>
+                
+                <xsl:choose>
+                    <xsl:when test="@type = 'corpus'">
+                        <xsl:apply-templates select="tei:title"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="tei:title"/>
+                        <xsl:if test="tei:citedRange">, <xsl:value-of select="tei:citedRange"/></xsl:if>
+                        <xsl:if test="tei:note[@type = 'number']">, <xsl:value-of select="tei:note[@type = 'number']"/></xsl:if>.
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:element>
+        </xsl:element>
     </xsl:template>
 
     <xsl:template match="tei:bibl[@type = 'database']" mode="bibliography_database">
@@ -260,7 +436,8 @@
                     <xsl:variable name="pos" select="position()"/>
                     <xsl:variable name="nextChar" select="substring($text, $pos + 1, 1)"/>
                     <!-- Aggiungi combining circumflex solo tra lettere, non prima di spazi o parentesi -->
-                    <xsl:if test=". != ' ' and $nextChar != '' and $nextChar != ' ' and $nextChar != '('">
+                    <xsl:if
+                        test=". != ' ' and $nextChar != '' and $nextChar != ' ' and $nextChar != '('">
                         <xsl:text>&#x0302;</xsl:text>
                     </xsl:if>
                 </xsl:matching-substring>
@@ -392,6 +569,37 @@
             <xsl:otherwise>[<xsl:value-of select="substring-after(@ref, '#')"/>]</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="tei:w[@xml:id][ancestor::tei:persName[@ref]]" mode="interp">
+        <span class="dropdown dual-reference">
+            <button class="dropbtn word-with-refs">
+                <xsl:apply-templates mode="interp"/>
+            </button>
+            <div class="dropdown-content">
+                <a href="#{@xml:id}">→ Apparatus</a>
+                <a href="{ancestor::tei:persName[@ref][1]/@ref}">→ Person</a>
+            </div>
+        </span>
+    </xsl:template>
+    
+    <!-- Template per persName senza w@xml:id -->
+    <xsl:template match="tei:persName[@ref][not(.//tei:w[@xml:id])]" mode="interp">
+        <a class="person_reference" href="{@ref}">
+            <xsl:apply-templates mode="interp"/>
+        </a>
+    </xsl:template>
+    
+    <!-- Template per persName che contiene w@xml:id - passa attraverso -->
+    <xsl:template match="tei:persName[@ref][.//tei:w[@xml:id]]" mode="interp">
+        <xsl:apply-templates mode="interp"/>
+    </xsl:template>
+    
+    <!-- Template per w@xml:id senza ancestor persName -->
+    <xsl:template match="tei:w[@xml:id][not(ancestor::tei:persName[@ref])]" mode="interp">
+        <a class="apparatus_reference" href="#{@xml:id}">
+            <xsl:apply-templates mode="interp"/>
+        </a>
+    </xsl:template>
 
     <xsl:template match="tei:reg | tei:sic" mode="interp"/>
 
@@ -409,6 +617,82 @@
             <xsl:when test="@extent = 'unknown' and @unit = 'line'">- - - - - -</xsl:when>
             <xsl:otherwise> </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    
+    
+    
+    <!-- Template per apparatus criticus - maiuscole e u→v -->
+    <xsl:template match="text()" mode="apparatus" priority="1">
+        <xsl:value-of select="upper-case(translate(., 'u', 'v'))"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:ex" mode="apparatus">
+        <xsl:text>(</xsl:text>
+        <xsl:apply-templates mode="apparatus"/>
+        <xsl:if test="@cert = 'low'">
+            <xsl:text>?</xsl:text>
+        </xsl:if>
+        <xsl:text>)</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:abbr" mode="apparatus">
+        <xsl:apply-templates mode="apparatus"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:expan" mode="apparatus">
+        <xsl:apply-templates mode="apparatus"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:supplied[@reason = 'lost']" mode="apparatus">
+        <xsl:text>[</xsl:text>
+        <xsl:apply-templates mode="apparatus"/>
+        <xsl:text>]</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:supplied[@reason = 'omitted']" mode="apparatus">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:apply-templates mode="apparatus"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:surplus" mode="apparatus">
+        <xsl:text>{</xsl:text>
+        <xsl:apply-templates mode="apparatus"/>
+        <xsl:text>}</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:choice[tei:corr and tei:sic]" mode="apparatus">
+        <xsl:text>⸢</xsl:text>
+        <xsl:apply-templates select="tei:corr" mode="apparatus"/>
+        <xsl:text>⸣</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="apparatus">
+        <xsl:apply-templates select="tei:orig" mode="apparatus"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:g" mode="apparatus">
+        <xsl:choose>
+            <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
+            <xsl:when test="@ref = '#cross'">†</xsl:when>
+            <xsl:when test="@ref = '#hedera'">❧</xsl:when>
+            <xsl:otherwise>[<xsl:value-of select="upper-case(substring-after(@ref, '#'))"/>]</xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:gap[@reason = 'lost']" mode="apparatus">
+        <xsl:choose>
+            <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
+            <xsl:when test="@extent = 'unknown' and @unit = 'line'">- - - - - -</xsl:when>
+            <xsl:otherwise> </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:reg | tei:sic | tei:corr" mode="apparatus"/>
+    
+    <xsl:template match="*" mode="apparatus">
+        <xsl:apply-templates mode="apparatus"/>
     </xsl:template>
 
 
