@@ -485,6 +485,8 @@
                         <ptr target="../bibliography/master_bibliography.xml#edr"/>
                         <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097897">EDR097897</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-22">22-11-2007</date>
                     </bibl>
                 </listBibl>
             </div>
