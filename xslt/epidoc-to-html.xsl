@@ -412,7 +412,7 @@
 
                 <!-- PEOPLE SECTION -->
                 <div class="people">
-                    <h2>People</h2>
+                    <h2>PEOPLE</h2>
                     <xsl:for-each select="//tei:listPerson/tei:person">
                         <xsl:element name="div">
                             <xsl:attribute name="class">person_record</xsl:attribute>
