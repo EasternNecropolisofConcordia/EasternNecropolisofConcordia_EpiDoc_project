@@ -65,9 +65,9 @@
                                     Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
                                 </name>
                             </orgName>
-                            <note xml:lang="en">Now <seg type="location" xml:lang="en">set into the wall of the right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
-                            <note xml:lang="it">Si conserva <seg type="location" xml:lang="en">murata nella navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
-                            <date>2024</date>
+                            <note type="observed" xml:lang="en">Now <seg type="location" xml:lang="en">set into the wall of the right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <note type="observed" xml:lang="it">Si conserva <seg type="location" xml:lang="en">murata nella navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <date type="autopsy">2024</date>
                         </provenance>
                     </history>
                     <physDesc>
