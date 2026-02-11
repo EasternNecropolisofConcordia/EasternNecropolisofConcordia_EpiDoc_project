@@ -10,9 +10,9 @@
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
                 <idno type="filename">alatancus_bitorta.xml</idno>
-                <idno type="TM">125638</idno>
-                <idno type="EDR">EDR097897</idno>
-                <idno type="UEL">29315</idno>
+                <idno type="tm">125638</idno>
+                <idno type="edr">EDR097897</idno>
+                <idno type="uel">29315</idno>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
@@ -396,8 +396,7 @@
                     </app>
                     <app loc="3" from="#w5" to="#w5">
                         <lem>omn<choice><sic>i</sic><corr>e</corr></choice>m</lem>
-                        <rdg source="bertolini1874a">omn<supplied reason="omitted">e</supplied>m</rdg>
-                        <rdg source="#cilv8738 #ils8257 #ilcv476 #zovatto1946 #brusinzovatto1960"/>
+                        <rdg source="#bertolini1874a">omn<supplied reason="omitted">e</supplied>m</rdg>
                     </app>
                 </listApp>
             </div>
