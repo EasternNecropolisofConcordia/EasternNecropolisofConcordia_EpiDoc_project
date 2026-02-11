@@ -62,11 +62,11 @@
                         <provenance type="observed">
                             <orgName type="museum" ref="#museo-concordiese">
                                 <name>
-                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro"><placeName>Portogruaro</placeName></settlement>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
                                 </name>
                             </orgName>
-                            <note type="observed" subtype="autopsied" xml:lang="en">Now preserved in the <seg type="location" xml:lang="en">right nave</seg> of the Museo Nazionale Concordiese in Portogruaro.</note>
-                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva nella <seg type="location" xml:lang="it">navata destra</seg> del Museo Nazionale Concordiese di Portogruaro</note>
+                            <note type="observed" subtype="autopsied" xml:lang="en">Now preserved in the <seg type="location" xml:lang="en">right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva nella <seg type="location" xml:lang="it">navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
                             <date type="autopsy">2024</date>
                         </provenance>
                     </history>
@@ -159,8 +159,8 @@
                             </handNote>
                         </handDesc>
                         <decoDesc>
-                            <decoNote xml:lang="en">A Constantinian monogram is carved on one side of the lid of the sarcophagus.</decoNote>
-                            <decoNote xml:lang="it">Un momogramma costantiniano è inciso su uno dei lati del coperchio del sarcofago.</decoNote>
+                            <decoNote xml:lang="en">A <g ref="#chi-rho">Constantinian monogram</g> is carved on one side of the lid of the sarcophagus.</decoNote>
+                            <decoNote xml:lang="it">Un <g ref="#chi-rho">momogramma costantiniano</g> è inciso su uno dei lati del coperchio del sarcofago.</decoNote>
                         </decoDesc>
                     </physDesc>
                 </msDesc>
@@ -222,6 +222,17 @@
                     </category>
                 </taxonomy>
                 <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
                     <category xml:id="campidoctor">
                         <catDesc>
                             <term xml:lang="la">campidoctor</term>
@@ -380,7 +391,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/vassio.jpg">
             <desc type="alt">Limestone sarcophagus with inscribed front.</desc>
-            <desc type="figDesc">The sarcophagus of Vassio. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The sarcophagus of Vassio. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
