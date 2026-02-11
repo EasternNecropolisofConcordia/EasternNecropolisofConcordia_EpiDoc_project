@@ -140,6 +140,16 @@
                         </dl>
                     </div>
                 </div>
+                <details class="palaeography">
+                    <xsl:for-each select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
+                        <p>
+                            <xsl:value-of select="normalize-space(.)"/>
+                        </p>
+                    </xsl:for-each>
+                </details>
+                
+                <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
+                
                 <div class="inscription">
                     <h2>INSCRIPTION</h2>
                     <h3>TRANSCRIPTION</h3>
@@ -165,8 +175,6 @@
                     </xsl:for-each>
                 </details>
 
-                <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
-                
                 <xsl:if test="//tei:div[@type='apparatus']/tei:listApp/tei:app">
                     <div class="apparatus">
                         <h2><em>APPARATUS CRITICUS</em></h2>
@@ -342,10 +350,12 @@
     <xsl:template match="tei:graphic">
         <figure>
             <img src="{@url}">
-                <xsl:attribute name="alt">../<xsl:value-of select="tei:desc[@type = 'alt']"
-                    /></xsl:attribute>
+                <xsl:attribute name="alt">
+                    <xsl:value-of select="tei:desc[@type = 'alt']"/>
+                </xsl:attribute>
             </img>
             <xsl:apply-templates select="tei:desc[@type = 'figDesc']"/>
+            <xsl:apply-templates select="tei:label[@type = 'disclaimer']"/>
         </figure>
     </xsl:template>
 
@@ -353,6 +363,12 @@
         <figcaption>
             <xsl:apply-templates/>
         </figcaption>
+    </xsl:template>
+    
+    <xsl:template match="tei:label[@type = 'disclaimer']">
+        <span class="disclaimer">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
     <xsl:template match="tei:ab" mode="interp">
