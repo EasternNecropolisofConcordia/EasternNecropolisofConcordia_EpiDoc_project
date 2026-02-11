@@ -485,8 +485,10 @@ footer p {
 }
 
 .bibliography > span {
+  display: block;
   width: 100%;
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .biblio-item {
