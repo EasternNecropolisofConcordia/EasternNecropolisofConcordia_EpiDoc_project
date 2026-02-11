@@ -412,7 +412,7 @@
                         <citedRange unit="page">107</citedRange>
                         <note type="number">n. 82</note>
                     </bibl>
-                    <bibl type="database" xml:id="edr0EDR097930">
+                    <bibl type="database" xml:id="edr097930">
                         <ptr target="../bibliography/master_bibliography.xml#edr"/>
                         <ptr target="../references/corpora_databases.xml#edr"/>
                         <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097930">EDR097930</ref></title>
