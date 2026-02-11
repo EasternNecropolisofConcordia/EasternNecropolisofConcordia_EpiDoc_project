@@ -227,10 +227,24 @@
                                             <xsl:variable name="rdg_content">
                                                 <xsl:apply-templates select="." mode="apparatus"/>
                                             </xsl:variable>
-                                            <xsl:value-of select="normalize-space($rdg_content)"/><xsl:text>, </xsl:text>
+                                            
+                                            <!-- Only show content if rdg is not empty -->
+                                            <xsl:if test="normalize-space($rdg_content) != ''">
+                                                <xsl:value-of select="normalize-space($rdg_content)"/><xsl:text>, </xsl:text>
+                                            </xsl:if>
+                                            
                                             <xsl:variable name="sources" select="tokenize(normalize-space(@source), '\s+')"/>
                                             <xsl:for-each select="$sources">
-                                                <xsl:variable name="source_id" select="substring-after(., '#')"/>
+                                                <xsl:variable name="source_id">
+                                                    <xsl:choose>
+                                                        <xsl:when test="starts-with(., '#')">
+                                                            <xsl:value-of select="substring-after(., '#')"/>
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="."/>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </xsl:variable>
                                                 <a href="#{$source_id}">
                                                     <xsl:apply-templates select="$root//tei:listBibl/tei:bibl[@xml:id = $source_id]/tei:title"/>
                                                 </a>
@@ -460,6 +474,7 @@
         <xsl:element name="span">
             <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
             
+            <!-- Find ptr with 'references' in path and convert .xml to .html -->
             <xsl:variable name="ref-target" select="tei:ptr[contains(@target, 'references')]/@target"/>
             <xsl:variable name="html-target" select="replace($ref-target, '\.xml', '.html')"/>
             
@@ -668,7 +683,7 @@
     <!-- Link words to apparatus and persons        -->
     <!-- ========================================== -->
     
-    <!-- Word with both apparatus and person reference -->
+    <!-- Word with both apparatus and person reference: create dropdown -->
     <xsl:template match="tei:w[@xml:id][ancestor::tei:persName[@ref]]" mode="interp">
         <span class="dropdown dual-reference">
             <button class="dropbtn word-with-refs">
@@ -681,19 +696,19 @@
         </span>
     </xsl:template>
     
-    <!-- Person name without apparatus reference -->
+    <!-- Person name without apparatus reference: simple link -->
     <xsl:template match="tei:persName[@ref][not(.//tei:w[@xml:id])]" mode="interp">
         <a class="person_reference" href="{@ref}">
             <xsl:apply-templates mode="interp"/>
         </a>
     </xsl:template>
     
-    <!-- Person name containing apparatus reference (pass through) -->
+    <!-- Person name containing apparatus reference: pass through to child w -->
     <xsl:template match="tei:persName[@ref][.//tei:w[@xml:id]]" mode="interp">
         <xsl:apply-templates mode="interp"/>
     </xsl:template>
     
-    <!-- Word with apparatus reference only -->
+    <!-- Word with apparatus reference only: simple link -->
     <xsl:template match="tei:w[@xml:id][not(ancestor::tei:persName[@ref])]" mode="interp">
         <a class="apparatus_reference" href="#{@xml:id}">
             <xsl:apply-templates mode="interp"/>
@@ -724,13 +739,15 @@
     
     <!-- ========================================== -->
     <!-- APPARATUS CRITICUS RENDERING               -->
-    <!-- Converts to uppercase with v→u             -->
+    <!-- Converts to uppercase with u→v             -->
     <!-- ========================================== -->
     
+    <!-- Convert text to uppercase and u→v for apparatus -->
     <xsl:template match="text()" mode="apparatus" priority="1">
         <xsl:value-of select="upper-case(translate(., 'u', 'v'))"/>
     </xsl:template>
     
+    <!-- Abbreviation expansion in apparatus -->
     <xsl:template match="tei:ex" mode="apparatus">
         <xsl:text>(</xsl:text>
         <xsl:apply-templates mode="apparatus"/>
@@ -740,42 +757,68 @@
         <xsl:text>)</xsl:text>
     </xsl:template>
     
+    <!-- Abbreviation in apparatus -->
     <xsl:template match="tei:abbr" mode="apparatus">
         <xsl:apply-templates mode="apparatus"/>
     </xsl:template>
     
+    <!-- Expansion in apparatus -->
     <xsl:template match="tei:expan" mode="apparatus">
         <xsl:apply-templates mode="apparatus"/>
     </xsl:template>
     
+    <!-- Supplied text (lost) in apparatus -->
     <xsl:template match="tei:supplied[@reason = 'lost']" mode="apparatus">
         <xsl:text>[</xsl:text>
         <xsl:apply-templates mode="apparatus"/>
         <xsl:text>]</xsl:text>
     </xsl:template>
     
+    <!-- Supplied text (omitted) in apparatus -->
     <xsl:template match="tei:supplied[@reason = 'omitted']" mode="apparatus">
         <xsl:text>&lt;</xsl:text>
         <xsl:apply-templates mode="apparatus"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
     
+    <!-- Surplus text in apparatus -->
     <xsl:template match="tei:surplus" mode="apparatus">
         <xsl:text>{</xsl:text>
         <xsl:apply-templates mode="apparatus"/>
         <xsl:text>}</xsl:text>
     </xsl:template>
     
+    <!-- Editorial correction in apparatus -->
     <xsl:template match="tei:choice[tei:corr and tei:sic]" mode="apparatus">
         <xsl:text>⸢</xsl:text>
         <xsl:apply-templates select="tei:corr" mode="apparatus"/>
         <xsl:text>⸣</xsl:text>
     </xsl:template>
     
+    <!-- Regularization in apparatus: show original -->
     <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="apparatus">
         <xsl:apply-templates select="tei:orig" mode="apparatus"/>
     </xsl:template>
     
+    <!-- Ligature in apparatus: add combining circumflex between letters -->
+    <xsl:template match="tei:hi[@rend = 'ligature']" mode="apparatus">
+        <xsl:for-each select="text()">
+            <xsl:variable name="text" select="."/>
+            <xsl:analyze-string select="$text" regex=".">
+                <xsl:matching-substring>
+                    <xsl:value-of select="upper-case(translate(., 'u', 'v'))"/>
+                    <xsl:variable name="pos" select="position()"/>
+                    <xsl:variable name="nextChar" select="substring($text, $pos + 1, 1)"/>
+                    <xsl:if test=". != ' ' and $nextChar != '' and $nextChar != ' ' and $nextChar != '('">
+                        <xsl:text>&#x0302;</xsl:text>
+                    </xsl:if>
+                </xsl:matching-substring>
+            </xsl:analyze-string>
+        </xsl:for-each>
+        <xsl:apply-templates select="*" mode="apparatus"/>
+    </xsl:template>
+    
+    <!-- Symbols and glyphs in apparatus -->
     <xsl:template match="tei:g" mode="apparatus">
         <xsl:choose>
             <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
@@ -785,6 +828,7 @@
         </xsl:choose>
     </xsl:template>
     
+    <!-- Gap in apparatus -->
     <xsl:template match="tei:gap[@reason = 'lost']" mode="apparatus">
         <xsl:choose>
             <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
@@ -793,8 +837,10 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="tei:reg | tei:sic | tei:corr" mode="apparatus"/>
+    <!-- Suppress reg and sic in apparatus mode (but NOT corr) -->
+    <xsl:template match="tei:reg | tei:sic" mode="apparatus"/>
     
+    <!-- Default element handling in apparatus mode -->
     <xsl:template match="*" mode="apparatus">
         <xsl:apply-templates mode="apparatus"/>
     </xsl:template>
