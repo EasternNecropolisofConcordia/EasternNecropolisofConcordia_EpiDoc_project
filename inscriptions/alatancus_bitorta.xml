@@ -24,7 +24,7 @@
                                 </name>
                             </orgName>
                         </repository>
-                        <idno>270</idno>
+                        <idno type="inventory">270</idno>
                     </msIdentifier>
                     <history>
                         <origin>
