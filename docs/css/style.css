@@ -116,6 +116,39 @@ main p {
   margin: 10px auto;
 }
 
+.metadata {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.metadata > h2 {
+  grid-column: 1 / -1;
+}
+
+.metadata-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.repository,
+.external_databases {
+  background-color: rgba(255, 255, 252, 0.6);
+  border-left: 5px solid #8B3A3A;
+  padding: 20px;
+}
+
+.findspot,
+.chronology,
+.autopsy {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 252, 0.6);
+  border-left: 5px solid #8B3A3A;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .metadata dl {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -145,6 +178,21 @@ main p {
   text-align: left;
   max-width: 800px;
   margin: 10px auto;
+}
+
+.dropdown .dropbtn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.dropdown .dropbtn:hover {
+  text-decoration-style: solid;
 }
 
 .inscription-list {
@@ -457,6 +505,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .metadata-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .ab-content {
     padding-left: 40px;
   }
