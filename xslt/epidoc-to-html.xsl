@@ -41,6 +41,7 @@
                         </dl>
                     </div>
                     <div class="external_databases">
+                        <h3>External Resources</h3>
                         <xsl:if test="//tei:publicationStmt/tei:idno[@type!='filename']">
                             <dl>
                                 <xsl:if test="//tei:publicationStmt/tei:idno[@type='tm']">
