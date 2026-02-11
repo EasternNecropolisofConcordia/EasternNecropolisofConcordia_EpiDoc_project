@@ -5,59 +5,70 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>The Epigraphy of Firmina</title>
+                <title>The Epigraphy of Felix and Lucia</title>
                 <author>Leonardo Battistella</author>
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari Venezia</authority>
-                <idno type="filename">firmina.xml</idno>
-                <idno type="TM">125597</idno>
-                <idno type="EDR">EDR097856</idno>
-                <idno type="UEL">29226</idno>
+                <idno type="filename">felix_lucia.xml</idno>
+                <idno type="tm">125489</idno>
+                <idno type="edr">EDR097746</idno>
+                <idno type="uel">29357</idno>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
                         <repository>
-                            <orgName type="museum">
+                            <orgName type="museum" ref="#museo-concordiese">
                                 <name>
-                                    Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
                                 </name>
-                                <idno type="VIAF">124364831</idno>
                             </orgName>
                         </repository>
-                        <idno>405</idno>
+                        <idno type="inventory">376</idno>
                     </msIdentifier>
                     <history>
                         <origin>
                             <origPlace>
-                                <settlement><placeName type="ancient" xml:lang="la">Iulia Concordia</placeName><idno>138379387</idno></settlement>
-                                <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                                <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                                <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                                <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                                <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
                                 <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
-                                <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
                             </origPlace>
-                            <origDate notBefore-custom="0200" notAfter-custom="0300" evidence="archaeological-context lettering" xml:lang="en">
-                                Third Century A.D.
+                            <origDate ana="#late-roman-empire" notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="en">
+                                First half of the fourth century A.D.
                             </origDate>
-                            <origDate notBefore-custom="0200" notAfter-custom="0300" evidence="archaeological-context lettering" xml:lang="it">
-                                III Secolo d.C.
+                            <origDate ana="#late-roman-empire" notBefore-custom="0300" notAfter-custom="0350" evidence="lettering nomenclature" xml:lang="it">
+                                Prima Metà del IV Secolo d.C.
                             </origDate>
                         </origin>
                         <provenance type="found">
-                            <settlement><placeName type="ancient">Iulia Concordia</placeName><idno>138379387</idno></settlement>
-                            <settlement><placeName type="modern">Concordia Sagittaria</placeName><idno>138379387</idno></settlement>
+                            <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                            <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                            <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                            <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
                             <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
-                            <placeName type="site" xml:lang="it">Necropoli di Levante</placeName>
-                            <placeName type="estate">Perulli</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            <placeName type="plot">Perulli</placeName>
                             <date type="discovery">1873</date>
-                            <note type="plan_x">3300</note>
-                            <note type="plan_y">2630</note>
+                            <note type="plan_x">1840</note>
+                            <note type="plan_y">1290</note>
                         </provenance>
                         <provenance type="observed">
-                            <placeName>Museo Nazionale Concordiese di <placeName>Portogruaro</placeName></placeName>
-                            <note xml:lang="en">Now preserved in the right nave of the Museo Nazionale Concordiese in Portogruaro.</note>
-                            <note xml:lang="it">Si conserva nella navata destra del Museo Nazionale Concordiese di Portogruaro</note>
-                            <date>2024</date>
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                            <note type="observed" subtype="autopsied" xml:lang="en">Now <seg type="location" xml:lang="en">set into a low wall in the right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva <seg type="location" xml:lang="it">murata nella navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <date type="autopsy">2024</date>
                         </provenance>
                     </history>
                     <physDesc>
@@ -65,29 +76,28 @@
                             <supportDesc>
                                 <support>
                                     <objectType xml:lang="en">
-                                        Sarcophagus.
+                                        Panel of the frontal slab of the sarcophagus.
                                     </objectType>
                                     <objectType xml:lang="it">
-                                        Sarcofago.
+                                        Tabella di sarcofago.
                                     </objectType>
                                     <material xml:lang="en">
-                                        Limestone.
+                                        Limestone
                                     </material>
-                                    <material xml:id="it">
+                                    <material xml:lang="it">
                                         Pietra calcarea.
                                     </material>
                                     <dimensions>
-                                        <height unit="cm">100</height>
-                                        <width unit="cm">192</width>
-                                        <depth unit="cm">70</depth>
+                                        <height unit="cm">45</height>
+                                        <width unit="cm">82</width>
                                     </dimensions>
                                 </support>
                                 <condition>
                                     <p xml:lang="en">
-                                        This is the only sarcophagus from the Eastern Necropolis preserved in its entirety, apart from that of <ref target="./vassio.xml" xml:lang="la">Vassio</ref>.
+                                        The front of the sarcophagus is re-cut near the left side.
                                     </p>
                                     <p xml:lang="it">
-                                        Si tratta dell'unico sarcofago della Necropoli di Levante preservato nella sua interezza oltre a quello di <ref target="./vassio.xml" xml:lang="la">Vassio</ref>.
+                                        Tabella di sarcofago resecata in prossimità del lato sinistro.
                                     </p>
                                 </condition>
                             </supportDesc>
@@ -97,43 +107,48 @@
                                         Inscribed
                                     </rs>
                                     <dimensions>
-                                        <height unit = "cm">39</height>
-                                        <width unit = "cm">101</width>
+                                        <height unit = "cm">42</height>
+                                        <width unit = "cm">80</width>
                                     </dimensions>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <height  min="7" max="8" unit = "cm">7-8</height>
-                                <note type="palaeographic" xml:lang="en">
+                                <height  min="4" max="5" unit = "cm">4-5</height>
+                                <note type="palaeographic" xml:id="en">
                                     <p>
-                                        Left-to-right direction, horizontal orientation, square module, regular <term xml:lang="la">ductus</term>, triangular punctuation marks, deep incision, centered layout.
+                                        Left-to-right direction; horizontal alignment; vertical module; irregular <term xml:lang="la">ductus</term>; triangular punctuation marks.
+                                    </p>
+
+                                    <p>
+                                        The letter <g type="pl">F</g> features a shorter crossbar compared to the upper arm and sometimes a lower arm (line 2).
+                                    </p>
+                                    <p>
+                                        The letter <g type="pl">M</g> is composed of four oblique strokes.
                                     </p>
                                 </note>
-                                <note type="palaeographic" xml:lang="it">
+                                <note type="palaeographic" xml:id="it">
                                     <p>
-                                        Verso destrorso, andamento orizzontale, modulo quadrato, <term xml:lang="la">ductus</term> regolare, interpunzione triangoliforme, solco profondo, impaginazione centrata.
+                                        Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione triangoliforme.
+                                    </p>
+                                    <p>
+                                        <g type="pl">F</g> con cravatta più corta rispetto al braccio superiore e talvolta con braccio inferiore (r. 2).
+                                    </p>
+                                    <p>
+                                        <g type="pl">M</g> composta da quattro aste oblique.
                                     </p>
                                 </note>
                             </handNote>
                         </handDesc>
                         <decoDesc>
                             <decoNote xml:lang="en">
-                                <p>
-                                    The front of the sarcophagus is arranged in three framed panels: the central and largest panel bears the inscription, while the lateral panels depict two winged <term xml:lang="la">genii</term> supporting the <term xml:lang="la">tabula</term>.
-                                </p>
-                                <p>
-                                    The sides are decorated with garlands, and the lid, shaped like a pitched roof, is adorned with four <term xml:lang="la">acroteria</term>.
-                                </p>
+                                According to <bibl ref="#bertolini1873a">Bertolini</bibl>, the decorative scheme, now lost, included two small leafy crosses in the shape of a Greek cross flanking the inscription among rather elaborate ornaments. 
+                                On the eastern pediment there was an axe, while on the western one the Chi-Rho monogram appeared within a wreath of leaves tied with ribbons extending horizontally downward.
                             </decoNote>
                             <decoNote xml:lang="it">
-                                <p>
-                                    La fronte del sarcofago è articolata in tre riquadri incorniciati: quello centrale, più ampio, ospita l’epigrafe, mentre nei pannelli laterali sono scolpiti due geni alati che sorreggono la <term xml:lang="la">tabula</term>.
-                                </p>
-                                <p>
-                                    I fianchi sono decorati con ghirlande, mentre il coperchio, a forma di tetto spiovente, presenta quattro acroteri.
-                                </p>
+                                L’apparato figurativo, oggi perduto, è così descritto da <bibl ref="#bertolini1873a">Bertolini</bibl>: “Ai lati della scritta fra ornati alquanto bizzarri due piccole croci a foglie di questa forma (croce greca); 
+                                sul timpano dal lato orientale un’ascia, sull’occidentale il monogramma di Costantino in una corona di fronde legata con nastri che si stendono al basso orizzontalmente”
                             </decoNote>
                         </decoDesc>
                     </physDesc>
@@ -143,126 +158,310 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person xml:id="firmina">
+               <person xml:id="felix">
                    <persName>
-                       <name type="full">Firmina</name>
-                       <name type="cognomen" nymRef="latin">Firmina</name>
+                       <name type="full">Flavius Felix</name>
+                       <name type="nomen">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Felix</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type = "relationship" corresp="#lucia">husband</note>
+               </person>
+               <person xml:id="lucia">
+                 <persName>
+                     <name type="full">Lucia</name>
+                     <name type="cognomen" nymRef="latin">Lucia</name>
                    </persName>
                    <gender>f</gender>
                    <note type="occupation">civil</note>
                    <note type="role">dedicator/deceased</note>
-               </person>
+                   <note type = "relationship" corresp="#felix">wife</note>
+              </person>
            </listPerson>
         </particDesc>
      </profileDesc>
+     <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="decorations">
+                    <category xml:id="chi-rho">
+                        <catDesc>
+                            <term xml:lang="en">Chi-Rho (Christogram)</term>
+                            <term xml:lang="it">Crismon / Chi-Rho</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/591">
+                                <idno>591</idno>
+                            </ref>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300310602">
+                                <idno>300310602</idno>
+                            </ref>
+                            <idno type="unicode">U+2627</idno>
+                        </catDesc>
+                    </category>
+                    <category xml:id="hedera">
+                        <catDesc>
+                            <term xml:lang="la">Hedera Distinguens</term>
+                            <term xml:lang="en">Ivy leaf</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/155">
+                                <idno>155</idno>
+                            </ref>
+                            <idno type="unicode">U+2766</idno>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="military-ranks">
+                    <category xml:id="campidoctor">
+                        <catDesc>
+                            <term xml:lang="la">campidoctor</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2008107">
+                                <idno>2008107</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="centenarius">
+                        <catDesc>
+                            <term xml:lang="la">centenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2009414">
+                                <idno>2009414</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="ducenarius">
+                        <catDesc>
+                            <term xml:lang="la">ducenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2018365">
+                                <idno>2018365</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="magister-primus">
+                        <catDesc>
+                            <term xml:lang="la">magister (primus)</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009655">
+                                <idno>1009655</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="miles">
+                        <catDesc>
+                            <term xml:lang="la">miles</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009936">
+                                <idno>1009936</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector">
+                        <catDesc>
+                            <term xml:lang="la">protector domesticus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2048603">
+                                <idno>2048603</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector-domesticus">
+                        <catDesc>
+                            <term xml:lang="la">(protector) domesticus</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q1237339">
+                                <idno>Q1237339</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="semissalis">
+                        <catDesc>
+                            <term xml:lang="la">semissalis</term>
+                            <gloss xml:lang="en">Late Roman military rank; received 1 capitum (fodder ration, indicating mounted service) and 1½ annonae (one and a half food rations). Function unclear; attested in African and Sardinian ducal officia</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 111</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="senator-military">
+                        <catDesc>
+                            <term xml:lang="la">senator</term>
+                            <gloss xml:lang="en">Late Roman military rank, superior to ducenarius; attested in scholae, fabricenses, and infantry units. Originally granted to ducenarii of agentes in rebus from 390 CE; the transfer of the senatorial title to military context remains unclear.</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 119-120</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="tribunus">
+                        <catDesc>
+                            <term xml:lang="la">tribunus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1016734">
+                                <idno>1016734</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="periods">
+                    <category xml:id="late-roman-empire">
+                        <catDesc>
+                            <term xml:lang="en">Late Roman Empire</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/30">
+                                <idno>30</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="principate">
+                        <catDesc>
+                            <term xml:lang="en">Principate (High Roman Empire)</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/22">
+                                <idno>22</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="places">
+                    <category xml:id="concordia">
+                        <catDesc>
+                            <term xml:lang="la">Iulia Concordia</term>
+                            <ref type="tm" target="https://www.trismegistos.org/place/12269">
+                                <idno>12269</idno>
+                            </ref>
+                            <ref type="dare" target="https://imperium.ahlfeldt.se/places/10645.html">
+                                <idno>10645</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="portogruaro">
+                        <catDesc>
+                            <term xml:lang="en">Portogruaro</term>
+                            <ref type="tgn" target="https://www.getty.edu/vow/TGNFullDisplay?find=Portogruaro&amp;place=&amp;nation=&amp;prev_page=1&amp;english=Y&amp;subjectid=7003045">
+                                <idno>7003045</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="museo-concordiese">
+                        <catDesc>
+                            <term xml:lang="en">National Concordiese Museum of Portogruaro</term>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/124364831">
+                                <idno>124364831</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="occupation">
+                    <category xml:id="soldier">
+                        <catDesc>
+                            <term xml:lang="en">Soldier</term>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300185678">
+                                <idno>300185678</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="fabricenses">
+                        <catDesc>
+                            <term xml:lang="la">Fabricensis</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2021497">
+                                <idno>2021497</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="../../images/inscriptions/firmina.jpg">
-            <desc type="alt">Limestone sarcophagus with inscribed front.</desc>
-            <desc type="figDesc">The sarcophagus of Firmina. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29226">Ubi Erat Lupa</ref>).</desc>
+        <graphic url="../../images/inscriptions/felix_lucia.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Felix and Lucia. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
-                <ab>
-                    <lb n="1"/><persName corresp="#firmina">Firmina</persName> viva
-                    <lb n="2"/>fecit sibi.
-                </ab>
+            <div type="edition" xml:space="preserve" xml:lang="Latin">
+                    <ab>
+                        <lb n="1"/><persName corresp="#felix"><expan><abbr><unclear>F</unclear>l</abbr><ex>avius</ex></expan> Felix</persName> sibi et <persName corresp="#lucia"><choice><reg>Luciae</reg><orig>Lucie</orig></choice></persName> co<supplied reason="omitted">n</supplied>i
+                        <lb n="2" break="no"/>ugi de <choice><reg>proprio</reg><orig>propio</orig></choice> suo vivi fece
+                        <lb n="3" break="no"/>runt <w xml:id="w1">ut</w> nul<supplied reason="omitted">l</supplied>us <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig>ovitum</orig></choice>
+                        <lb n="4"/>nostrum in hac sepultura
+                        <lb n="5"/>ponatur <choice><reg>dabit</reg><orig>davit</orig></choice> <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">fisco auri po</measure>
+                        <lb n="6" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2"><unclear>n</unclear>do <choice><reg>duo</reg><orig>dua</orig></choice></measure>
+                    </ab>
             </div>
             <div type="apparatus">
+                <listApp>
+                    <app loc="3" from="#w1" to="#w1">
+                        <lem>
+                            ut 
+                        </lem>
+                        <rdg source="#bertolini1873a #bertolini1873b"></rdg>
+                    </app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en">
-                <p>
-                    Firmina commissioned (this tomb) for herself while alive.
+            <div type="translation">
+                <p xml:lang="en">
+                    <persName ref="#felix" xml:lang="la">Flavius Felix</persName>, for himself and for his wife 
+                    <persName ref="#lucia" xml:lang="la">Lucia</persName>, had this made during their lifetime at their own expense. 
+                    So that no one, after their death, may be buried in this tomb, a fine of two pounds of gold shall be paid to the treasury.
                 </p>
-            </div>
-            <div type="translation" xml:lang="it">
-                <p>
-                    Firmina commissionò (l'arca) da viva per sé stessa.
+                <p xml:lang="it">
+                    <persName ref="#felix" xml:lang="la">Flavius Felix</persName>, per sé e per la moglie <persName ref="#lucia" xml:lang="la">Lucia</persName>, fece realizzare quest’arca da vivo, a proprie spese.  
+                    Affinché nessuno, dopo la loro morte, venga deposto in questa sepoltura, è prevista una multa di due libbre d’oro a favore del fisco.
                 </p>
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    The absence of the <term xml:lang="la">nomen</term> in the inscription seems to indicate the servile status of the deceased, although it appears unlikely that a slave could have afforded such an expensive sarcophagus.
-                </p>
-                <p>
-                    <persName xml:lang="la">Brusin</persName> hypothesizes the existence of a burial area of the <term xml:lang="la">gens Fabia</term> <ref target="../references/bibliography.xml#brusinzovatto1960">(Brusin 1960, 59)</ref>, to which the tomb of <persName xml:lang="la">Firmina</persName> might belong: this would explain the omission of the gentilic name on the inscription, considered a pleonasm since it was already present on the main monument, a view shared by <persName xml:lang="la">Buora</persName> <ref target="../references/bibliography.xml#buora">(Buora 1984, 46-47)</ref>. However, according to <persName xml:lang="la">Lettich</persName>, there is insufficient evidence to demonstrate the existence of a common burial area for members of this family <ref target="../references/bibliography.xml#lettich1994">(Lettich 1994, 264)</ref>.
-                </p>
-                <p>
-                    Although the dating of the sarcophagus and its figurative program suggest the deceased’s pagan faith, it cannot be excluded that she was Christian and that the absence of the <term xml:lang="la">nomen</term> reflected her intention not to claim familial ties, in order to fully identify with the Christian community. Two sarcophagi found in Concordia, on Via San Pietro, show a similar onomastic pattern: in the first case only the <term xml:lang="la">praenomen</term> and <term xml:lang="la">cognomen</term> of the dedicant <persName xml:lang="la">Publius Firmiteius</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR156657">(EDR156657)</ref> are recorded, while in the other only those of the deceased <persName xml:lang="la">Publius Impostor</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098072">(EDR098072)</ref>, showing that the <term xml:lang="la">nomen</term> was deliberately omitted.
-                </p>
-                <p>
-                    The presence of the <term xml:lang="la">praenomen</term> in these cases is linked to the male sex of the individuals, who intended to assert their non-servile status while omitting the <term xml:lang="la">gentilizio</term> in order to identify exclusively with the Christian community <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 92-93)</ref>, a choice probably shared by <persName xml:lang="la">Firmina</persName>.
-                </p>
-                <p>
-                    Note that in one of the two inscriptions the dedicant bears the <term xml:lang="la">cognomen</term> <persName xml:lang="la">Firmiteius</persName>, which he shares with <persName xml:lang="la">Firmina</persName> through the root <term xml:lang="la">firmitas</term>, a concept recurrent in patristic literature and a symbol of the firmness of Christian faith <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 93-94)</ref>.
-                </p>
-                <p>
-                    Although <persName xml:lang="la">Firmina</persName>’s sarcophagus does not bear Christian symbols but rather winged geni linked to the pagan world, it should be noted that Christians often did not attribute religious meaning to certain formal elements: for example, two letters dedicating the tomb to the gods <term xml:lang="la">Mani</term> appear on the sarcophagus of <persName xml:lang="la">Firmiteius</persName> and in the bisoma burial of <persName ref="./martinianus_severina.xml#martinianus" xml:lang="la">Flavius Martinianus</persName> and <persName ref="./martinianus_severina.xml#severina">Severina</persName>, which also contained a Constantinian monogram.
+                   
                 </p>
             </div>
-            <div type="commentary" xml:lang="it">
-                <p>
-                    La mancanza del <term xml:lang="la">nomen</term> nell’iscrizione sembra indicare la condizione servile della defunta, anche se appare improbabile che una schiava potesse permettersi un’arca così costosa.
-                </p>
-                <p>
-                    Brusin ipotizza l’esistenza di un’area sepolcrale della <term xml:lang="la">gens Fabia</term> <ref target="../references/bibliography.xml#brusinzovatto1960">(Brusin 1960, 59)</ref>, alla quale potrebbe appartenere la sepoltura di <persName xml:lang="la">Firmina</persName>: ciò spiegherebbe l’omissione del gentilizio sull’epigrafe, considerata un pleonasmo in quanto già presente sul monumento principale, tesi condivisa da Buora <ref target="../references/bibliography.xml#buora">(Buora 1984, 46-47)</ref>. Tuttavia, secondo Lettich, non vi sono elementi sufficienti a dimostrare l’esistenza di un’area sepolcrale comune ai membri di questa famiglia <ref target="../references/bibliography.xml#lettich1994">(Lettich 1994, 264)</ref>.
-                </p>
-                <p>
-                    Nonostante la datazione del sarcofago e il relativo apparato figurativo indichino la fede pagana della defunta, non si può escludere che fosse cristiana e che l’assenza del <term xml:lang="la">nomen</term> rispecchiasse la sua volontà di non rivendicare legami familiari, per identificarsi pienamente con la comunità cristiana. Due sarcofagi rinvenuti a Concordia, in via San Pietro, presentano uno schema onomastico simile: nel primo caso il <term xml:lang="la">praenomen</term> e il <term xml:lang="la">cognomen</term> compaiono del dedicante <persName xml:lang="la">Publius Firmiteius</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR156657">(EDR156657)</ref>, mentre nell’altro caso quelli del defunto <persName xml:lang="la">Publius Impostor</persName> <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098072">(EDR098072)</ref>, prova che il <term xml:lang="la">nomen</term> fu deliberatamente omesso.
-                </p>
-                <p>
-                    La presenza del <term xml:lang="la">praenomen</term> in questi esempi è legata al sesso maschile degli individui, che intendevano rivendicare la loro condizione non servile, pur omettendo il <term xml:lang="la">gentilizio</term> per identificarsi esclusivamente con la comunità cristiana <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 92-93)</ref>, scelta probabilmente condivisa da <persName xml:lang="la">Firmina</persName>.
-                </p>
-                <p>
-                    Si noti che in una delle due epigrafi il dedicante porta il <term xml:lang="la">cognomen</term> <persName xml:lang="la">Firmiteius</persName>, che condivide con <persName xml:lang="la">Firmina</persName> la radice <term xml:lang="la">firmitas</term>, concetto ricorrente nella letteratura patristica e simbolo della fermezza della fede cristiana <ref target="../references/bibliography.xml#calvelli">(Calvelli 2015, 93-94)</ref>.
-                </p>
-                <p>
-                    Sebbene sull’arca di <persName xml:lang="la">Firmina</persName> non siano presenti simboli cristiani, ma geni alati riferibili al mondo pagano, va considerato che spesso i cristiani non attribuivano significato religioso ad alcuni aspetti formali: ad esempio, due lettere di dedica agli dèi <term xml:lang="la">Mani</term> compaiono sul sarcofago di <persName xml:lang="la">Firmiteius</persName> e nella sepoltura bisoma di <persName ref="./martinianus_severina.xml#martinianus" xml:lang="la">Flavius Martinianus</persName> e <persName ref="./martinianus_severina.xml#severina">Severina</persName>, dove si trovava anche un monogramma costantiniano.
-                </p>
-            </div>
+            <div type="commentary" xml:lang="it"></div>
             <div type="bibliography">
-                <listBibl> 
-                    <bibl xml:id="bertolini1875a">
-                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
-                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
-                        <title>Bertolini 1875a</title>
-                        <citedRange unit="page">115</citedRange>
-                        <note type="number">nr. 56</note>
+                <listBibl>
+                    <bibl xml:id="bertolini1873a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1873a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1873a"/>
+                        <title>Bertolini 1873a</title>
+                        <citedRange unit="page">62</citedRange>
                     </bibl>
-                    <bibl xml:id="bertolini1877">
-                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
-                        <ptr target="../references/bibliography.xml#bertolini1877"/>
-                        <title>Bertolini 1877</title>
-                        <citedRange unit="page">29</citedRange>
-                        <note type="number">nr. 12</note>
+                    <bibl xml:id="bertolini1873b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1873b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1873b"/>
+                        <title>Bertolini 1873b</title>
+                        <citedRange unit="page">66</citedRange>
                     </bibl>
-                    <bibl type="corpus" xml:id="cilv8696">
+                     <bibl xml:id="bertolini1874a">
+                         <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                         <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                         <title>Bertolini 1874a</title>
+                        <citedRange unit="page">21</citedRange>
+                        <note type="number">nr. 3</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8748">
                         <ptr target="../bibliography/master_bibliography.xml#cil"/>
                         <ptr target="../references/corpora_databases.xml#cil"/>
-                        <title><term xml:lang="la">CIL</term> V 8696</title>
+                        <title><term xml:lang="la">CIL</term> V 8748</title>
                     </bibl>
-                    <bibl xml:id="lettich1994">
-                        <ptr target="../bibliography/master_bibliography.xml#lettich1994"/>
-                        <ptr target="../references/bibliography.xml#lettich1994"/>
-                        <title>Lettich 1994</title>
-                        <citedRange unit="page">263-264</citedRange>
-                        <note type="number">nr. 181</note>
+                    <bibl type="corpus" xml:id="ilcv812">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 812</title>
                     </bibl>
-                    <bibl xml:id="villab">
-                        <ptr target="../bibliography/master_bibliography.xml#villab"/>
-                        <ptr target="../references/bibliography.xml#villab"/>
-                        <title>Croce Da Villa 2001b</title>
-                        <citedRange unit="page">202, 207</citedRange>
-                        <note type="number">nr. 24</note>
+                    <bibl xml:id="forlatitamaro1978">
+                        <ptr target="../bibliography/master_bibliography.xml#forlatitamaro1978"/>
+                        <ptr target="../references/bibliography.xml#forlatitamaro1978"/>
+                        <title>Forlati Tamaro 1978</title>
+                        <citedRange unit="page">149-150</citedRange>
+                        <note type="number">nr. 6</note>
                     </bibl>
-                    <bibl type="database" xml:id="edr097856">
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">101</citedRange>
+                        <note type="number">nr. 67</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097746">
                         <ptr target="../bibliography/master_bibliography.xml#edr"/>
                         <ptr target="../references/corpora_databases.xml#edr"/>
-                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097856">EDR097856</ref></title>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097746">EDR097746</ref></title>
                         <author>Damiana Baldassarra</author>
-                        <date when="2007-11-19">19-11-2007</date>
+                        <date when="2008-07-03">03-07-2008</date>
                     </bibl>
                 </listBibl>
             </div>
