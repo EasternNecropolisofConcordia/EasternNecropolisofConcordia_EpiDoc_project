@@ -377,27 +377,33 @@ details.palaeography summary {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 0.9rem;
-}
-
-details.translation summary::before {
-    content: "Translation ▾";
-}
-
-details.translation[open] summary::before {
-    content: "Translation ▴";
-}
-
-details.palaeography summary::before {
-    content: "Palaeographic Comment ▾";
-}
-
-details.palaeography[open] summary::before {
-    content: "Palaeographic Comment ▴";
+    cursor: pointer;
 }
 
 details.translation summary::-webkit-details-marker,
 details.palaeography summary::-webkit-details-marker {
     display: none;
+}
+
+details.translation summary::marker,
+details.palaeography summary::marker {
+    display: none;
+}
+
+details.translation summary::after {
+    content: " ▾";
+}
+
+details.translation[open] summary::after {
+    content: " ▴";
+}
+
+details.palaeography summary::after {
+    content: " ▾";
+}
+
+details.palaeography[open] summary::after {
+    content: " ▴";
 }
 
 details.translation p,
@@ -470,11 +476,16 @@ footer p {
 .bibliography {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   margin-top: 30px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bibliography > span {
+  width: 100%;
   text-align: left;
 }
 
