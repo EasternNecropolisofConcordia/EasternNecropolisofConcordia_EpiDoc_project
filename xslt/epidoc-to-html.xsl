@@ -5,6 +5,9 @@
 
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
 
+    <!-- ========================================== -->
+    <!-- MAIN TEMPLATE: HTML STRUCTURE              -->
+    <!-- ========================================== -->
     <xsl:template match="/">
         <html xml:lang="en">
             <head>
@@ -17,6 +20,8 @@
                 <h1>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </h1>
+                
+                <!-- METADATA SECTION -->
                 <div class="metadata">
                     <h2>METADATA</h2>
                     <div class="metadata-grid">
@@ -29,6 +34,18 @@
                                         <button class="dropbtn"><xsl:value-of select="//tei:repository/tei:orgName/tei:name/text()"/></button>
                                         <div class="dropdown-content">
                                             <xsl:for-each select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName/@ref, '#')]/tei:catDesc/tei:ref">
+                                                <xsl:element name="a">
+                                                    <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+                                                    <xsl:value-of select="upper-case(@type)"/> ID: <xsl:value-of select="tei:idno"/>
+                                                </xsl:element>
+                                            </xsl:for-each>
+                                        </div>
+                                    </div>
+                                    <xsl:text> </xsl:text>
+                                    <div class="dropdown">
+                                        <button class="dropbtn"><xsl:value-of select="//tei:repository/tei:orgName/tei:name/tei:settlement"/></button>
+                                        <div class="dropdown-content">
+                                            <xsl:for-each select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName//tei:settlement/@ref, '#')]/tei:catDesc/tei:ref">
                                                 <xsl:element name="a">
                                                     <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
                                                     <xsl:value-of select="upper-case(@type)"/> ID: <xsl:value-of select="tei:idno"/>
@@ -152,6 +169,8 @@
                         </dl>
                     </div>
                 </div>
+                
+                <!-- PALAEOGRAPHIC COMMENT -->
                 <details class="palaeography">
                     <h3>Palaeographic Comment</h3>
                     <xsl:for-each select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
@@ -161,8 +180,10 @@
                     </xsl:for-each>
                 </details>
                 
+                <!-- IMAGES -->
                 <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
                 
+                <!-- INSCRIPTION SECTION -->
                 <div class="inscription">
                     <h2>INSCRIPTION</h2>
                     <h3>TRANSCRIPTION</h3>
@@ -180,6 +201,7 @@
                     </xsl:for-each>
                 </div>
 
+                <!-- TRANSLATION -->
                 <details class="translation">
                     <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = 'en']/tei:p">
                         <p>
@@ -188,6 +210,7 @@
                     </xsl:for-each>
                 </details>
 
+                <!-- APPARATUS CRITICUS -->
                 <xsl:if test="//tei:div[@type='apparatus']/tei:listApp/tei:app">
                     <div class="apparatus">
                         <h2><em>APPARATUS CRITICUS</em></h2>
@@ -225,6 +248,7 @@
                     </div>
                 </xsl:if>
 
+                <!-- PEOPLE SECTION -->
                 <div class="people">
                     <h2>People</h2>
                     <xsl:for-each select="//tei:listPerson/tei:person">
@@ -296,6 +320,8 @@
                         </xsl:element>
                     </xsl:for-each>
                 </div>
+                
+                <!-- BIBLIOGRAPHY -->
                 <div class="bibliography">
                     <h2>Bibliography</h2>
                     <xsl:apply-templates select="//tei:listBibl/tei:bibl[not(@type = 'database')]"
@@ -307,6 +333,11 @@
         </html>
     </xsl:template>
     
+    <!-- ========================================== -->
+    <!-- DATING CRITERIA CONVERSION                 -->
+    <!-- Converts EpiDoc evidence values to        -->
+    <!-- human-readable dating criteria             -->
+    <!-- ========================================== -->
     <xsl:template match="tei:origDate[@xml:lang='en']" mode="orig_date">
         <xsl:variable name="evidence-tokens" select="tokenize(@evidence, '\s+')"/>
         <xsl:for-each select="$evidence-tokens">
@@ -331,8 +362,11 @@
         </xsl:for-each>
     </xsl:template>
     
-
-
+    <!-- ========================================== -->
+    <!-- TEXTPART HANDLING                          -->
+    <!-- Handles div[@type='textpart'] elements     -->
+    <!-- for multi-location inscriptions            -->
+    <!-- ========================================== -->
     <xsl:template match="tei:div[@type = 'textpart']">
         <xsl:element
             name="{if (count(ancestor::tei:div[@type='textpart']) > 0) then 'h5' else 'h4'}">
@@ -354,12 +388,18 @@
         </div>
     </xsl:template>
 
+    <!-- ========================================== -->
+    <!-- REFERENCE LINKS                            -->
+    <!-- ========================================== -->
     <xsl:template match="tei:ref">
         <a href="{@target}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
 
+    <!-- ========================================== -->
+    <!-- IMAGE HANDLING                             -->
+    <!-- ========================================== -->
     <xsl:template match="tei:graphic">
         <figure>
             <img src="{@url}">
@@ -384,6 +424,11 @@
         </span>
     </xsl:template>
 
+    <!-- ========================================== -->
+    <!-- LINE-BY-LINE TRANSCRIPTION BUILDER         -->
+    <!-- Constructs text line by line from lb       -->
+    <!-- elements within ab                         -->
+    <!-- ========================================== -->
     <xsl:template match="tei:ab" mode="interp">
         <div class="ab-content">
             <xsl:apply-templates select=".//tei:lb[1]" mode="line-start"/>
@@ -400,6 +445,7 @@
 
             <xsl:copy-of select="$lineContent"/>
 
+            <!-- Add line-break marker if next line continues the word -->
             <xsl:if test="following-sibling::tei:lb[1]/@break = 'no'">
                 <xsl:text> =</xsl:text>
             </xsl:if>
@@ -407,6 +453,9 @@
         <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
     </xsl:template>
 
+    <!-- ========================================== -->
+    <!-- BIBLIOGRAPHY RENDERING                     -->
+    <!-- ========================================== -->
     <xsl:template match="tei:bibl" mode="bibliography">
         <xsl:element name="span">
             <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
@@ -457,6 +506,13 @@
         </xsl:element>
     </xsl:template>
 
+    <!-- ========================================== -->
+    <!-- KRUMMREY-PANCIERA DIACRITICS (mode="interp") -->
+    <!-- Convert TEI markup to Leiden conventions   -->
+    <!-- for epigraphic transcription               -->
+    <!-- ========================================== -->
+    
+    <!-- Ligature: add combining circumflex between letters -->
     <xsl:template match="tei:hi[@rend = 'ligature']" mode="interp">
         <xsl:for-each select="text()">
             <xsl:variable name="text" select="."/>
@@ -475,6 +531,7 @@
         <xsl:apply-templates select="*" mode="interp"/>
     </xsl:template>
 
+    <!-- Regularization: show original with (!) marker -->
     <xsl:template match="tei:choice[tei:reg and tei:orig]" mode="interp">
         <xsl:apply-templates select="tei:orig" mode="interp"/>
 
@@ -492,6 +549,7 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- Handle (!) marker placement for line-broken regularizations -->
     <xsl:template match="text()[preceding::*[1][self::tei:lb[@break = 'no']]]" mode="interp"
         priority="10">
         <xsl:variable name="prevLb" select="preceding::tei:lb[1]"/>
@@ -535,6 +593,7 @@
         </xsl:choose>
     </xsl:template>
 
+    <!-- Unclear letters: add combining dot below -->
     <xsl:template match="tei:unclear" mode="interp">
         <xsl:analyze-string select="string(.)" regex=".">
             <xsl:matching-substring>
@@ -544,6 +603,7 @@
         </xsl:analyze-string>
     </xsl:template>
 
+    <!-- Abbreviation expansion: (text) -->
     <xsl:template match="tei:ex" mode="interp">
         <xsl:text>(</xsl:text>
         <xsl:apply-templates mode="interp"/>
@@ -553,12 +613,14 @@
         <xsl:text>)</xsl:text>
     </xsl:template>
 
+    <!-- Supplied text (omitted): <text> -->
     <xsl:template match="tei:supplied[@reason = 'omitted']" mode="interp">
         <xsl:text>&lt;</xsl:text>
         <xsl:apply-templates mode="interp"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
 
+    <!-- Supplied text from previous editor: underline with source tooltip -->
     <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp">
         <u style="cursor: help;">
             <xsl:attribute name="title">
@@ -577,18 +639,21 @@
         </u>
     </xsl:template>
 
+    <!-- Surplus text: {text} -->
     <xsl:template match="tei:surplus" mode="interp">
         <xsl:text>{</xsl:text>
         <xsl:apply-templates mode="interp"/>
         <xsl:text>}</xsl:text>
     </xsl:template>
 
+    <!-- Editorial correction: ⸢text⸣ -->
     <xsl:template match="tei:choice[tei:corr and tei:sic]" mode="interp">
         <xsl:text>⸢</xsl:text>
         <xsl:apply-templates select="tei:corr" mode="interp"/>
         <xsl:text>⸣</xsl:text>
     </xsl:template>
 
+    <!-- Symbols and glyphs -->
     <xsl:template match="tei:g" mode="interp">
         <xsl:choose>
             <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
@@ -598,6 +663,12 @@
         </xsl:choose>
     </xsl:template>
     
+    <!-- ========================================== -->
+    <!-- INTERACTIVE REFERENCES                     -->
+    <!-- Link words to apparatus and persons        -->
+    <!-- ========================================== -->
+    
+    <!-- Word with both apparatus and person reference -->
     <xsl:template match="tei:w[@xml:id][ancestor::tei:persName[@ref]]" mode="interp">
         <span class="dropdown dual-reference">
             <button class="dropbtn word-with-refs">
@@ -610,32 +681,39 @@
         </span>
     </xsl:template>
     
+    <!-- Person name without apparatus reference -->
     <xsl:template match="tei:persName[@ref][not(.//tei:w[@xml:id])]" mode="interp">
         <a class="person_reference" href="{@ref}">
             <xsl:apply-templates mode="interp"/>
         </a>
     </xsl:template>
     
+    <!-- Person name containing apparatus reference (pass through) -->
     <xsl:template match="tei:persName[@ref][.//tei:w[@xml:id]]" mode="interp">
         <xsl:apply-templates mode="interp"/>
     </xsl:template>
     
+    <!-- Word with apparatus reference only -->
     <xsl:template match="tei:w[@xml:id][not(ancestor::tei:persName[@ref])]" mode="interp">
         <a class="apparatus_reference" href="#{@xml:id}">
             <xsl:apply-templates mode="interp"/>
         </a>
     </xsl:template>
 
+    <!-- Suppress reg and sic in interpretive mode -->
     <xsl:template match="tei:reg | tei:sic" mode="interp"/>
 
+    <!-- Default text handling in interpretive mode -->
     <xsl:template match="text()" mode="interp" priority="1">
         <xsl:value-of select="."/>
     </xsl:template>
 
+    <!-- Default element handling in interpretive mode -->
     <xsl:template match="*" mode="interp">
         <xsl:apply-templates mode="interp"/>
     </xsl:template>
 
+    <!-- Gap in text -->
     <xsl:template match="tei:gap[@reason = 'lost']" mode="interp">
         <xsl:choose>
             <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
@@ -644,8 +722,10 @@
         </xsl:choose>
     </xsl:template>
     
-    
-    
+    <!-- ========================================== -->
+    <!-- APPARATUS CRITICUS RENDERING               -->
+    <!-- Converts to uppercase with v→u             -->
+    <!-- ========================================== -->
     
     <xsl:template match="text()" mode="apparatus" priority="1">
         <xsl:value-of select="upper-case(translate(., 'u', 'v'))"/>
@@ -719,13 +799,18 @@
         <xsl:apply-templates mode="apparatus"/>
     </xsl:template>
 
-
+    <!-- ========================================== -->
+    <!-- TEXT STYLING                               -->
+    <!-- ========================================== -->
+    
+    <!-- Italicize Latin terms outside edition -->
     <xsl:template match="tei:term[@xml:lang = 'la'][not(ancestor::tei:div[@type = 'edition'])]">
         <em>
             <xsl:apply-templates/>
         </em>
     </xsl:template>
 
+    <!-- Bold Palmyrene letters outside edition -->
     <xsl:template match="tei:g[@xml:type = 'pl'][not(ancestor::tei:div[@type = 'edition'])]">
         <strong>
             <xsl:apply-templates/>
