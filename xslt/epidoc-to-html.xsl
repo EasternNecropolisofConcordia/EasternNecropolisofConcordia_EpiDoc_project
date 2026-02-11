@@ -163,7 +163,7 @@
                                 </div>
                             </dd>
                             <dt><strong>Location within museum</strong></dt>
-                            <dd>the <xsl:value-of select="//tei:provenance[@type='observed']/tei:note[@type='observed' and @xml:lang='en']/tei:seg[@type='location']"/></dd>
+                            <dd><xsl:value-of select="//tei:provenance[@type='observed']/tei:note[@type='observed' and @xml:lang='en']/tei:seg[@type='location']"/></dd>
                             <dt><strong>Date of observation</strong></dt>
                             <dd><xsl:value-of select="//tei:provenance[@type='observed']/tei:date[@type='autopsy']"/></dd>
                         </dl>
