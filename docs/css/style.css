@@ -475,6 +475,7 @@ footer p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 .biblio-item {
@@ -524,6 +525,13 @@ footer p {
 .biblio-item dd a, .bibliography dd a {
   color: #8B3A3A;
   text-decoration: underline;
+}
+
+.bibliography h5 {
+  margin: 0;
+  text-align: left;
+  color: #8B3A3A;
+  font-family: 'Cardo', serif;
 }
 
 .people {
