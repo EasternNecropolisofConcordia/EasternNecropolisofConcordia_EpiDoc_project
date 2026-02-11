@@ -185,16 +185,15 @@ main p {
   display: inline-block;
 }
 
-/* IMPORTANTE: nascondi sempre il contenuto di default */
 .dropdown .dropdown-content {
-  display: none !important; /* Aggiungi !important per forzare */
+  display: none !important;
   position: absolute;
   background-color: #8B3A3A;
   min-width: 200px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000; /* Aumenta z-index */
+  z-index: 1000;
   border: 1px solid #6D2D2D;
-  top: 100%; /* Posiziona sotto il button */
+  top: 100%;
   left: 0;
 }
 
@@ -205,14 +204,13 @@ main p {
   display: block;
   font-family: 'Cardo', serif;
   font-size: 0.85rem;
-  white-space: nowrap; /* Evita che il testo vada a capo */
+  white-space: nowrap;
 }
 
 .dropdown .dropdown-content a:hover {
   background-color: #6D2D2D;
 }
 
-/* Mostra al hover */
 .dropdown:hover .dropdown-content {
   display: block !important;
 }
@@ -230,6 +228,26 @@ main p {
 
 .dropdown .dropbtn:hover {
   text-decoration-style: solid;
+}
+
+.word-with-refs {
+  display: inline;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #8B3A3A;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+.word-with-refs:hover {
+  background-color: rgba(139, 58, 58, 0.1);
+}
+
+.dual-reference {
+  display: inline-block;
 }
 
 .inscription-list {
@@ -257,6 +275,16 @@ main p {
   max-width: 900px;
   margin: 20px auto;
   text-align: center;
+}
+
+.transcription a {
+  color: #8B3A3A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.transcription a:hover {
+  background-color: rgba(139, 58, 58, 0.1);
 }
 
 .textpart {
@@ -329,7 +357,8 @@ div[data-location="chest"] {
   margin-top: 20px;
 }
 
-details.translation {
+details.translation,
+details.palaeography {
     max-width: 800px;
     margin: 30px auto;
     text-align: left;
@@ -339,9 +368,9 @@ details.translation {
     cursor: pointer;
 }
 
-details.translation::before {
-    content: "Translation ▾";
-    display: block;
+details.translation summary,
+details.palaeography summary {
+    list-style: none;
     color: #8B3A3A;
     font-family: 'Cardo', serif;
     font-weight: bold;
@@ -350,14 +379,43 @@ details.translation::before {
     font-size: 0.9rem;
 }
 
-details.translation[open]::before {
+details.translation summary::before {
+    content: "Translation ▾";
+}
+
+details.translation[open] summary::before {
     content: "Translation ▴";
 }
 
-details.translation p {
+details.palaeography summary::before {
+    content: "Palaeographic Comment ▾";
+}
+
+details.palaeography[open] summary::before {
+    content: "Palaeographic Comment ▴";
+}
+
+details.translation summary::-webkit-details-marker,
+details.palaeography summary::-webkit-details-marker {
+    display: none;
+}
+
+details.translation p,
+details.palaeography p {
     margin: 10px 0;
     font-style: italic;
     text-align: justify;
+}
+
+.apparatus {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.app-line {
+    display: block;
+    margin-bottom: 10px;
 }
 
 figure {
