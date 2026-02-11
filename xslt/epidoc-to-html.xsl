@@ -653,29 +653,29 @@
 
     <xsl:template match="tei:bibl[@type = 'database']" mode="bibliography_database">
         <dl>
-            <xsl:element name="dd">
+            <xsl:element name="dt">
                 <xsl:attribute name="id">
                     <xsl:value-of select="@xml:id"/>
                 </xsl:attribute>
-                <dt>
-                    <h5>
-                        <xsl:apply-templates select="tei:title"/>
-                    </h5>
-                </dt>
-                <dd/>
-                <xsl:if test="tei:author">
-                    <dt>Author of the record:</dt>
-                    <dd>
-                        <xsl:value-of select="tei:author"/>
-                    </dd>
-                </xsl:if>
-                <xsl:if test="tei:date">
-                    <dt>Date:</dt>
-                    <dd>
-                        <xsl:value-of select="tei:date"/>
-                    </dd>
-                </xsl:if>
+                EDR
             </xsl:element>
+            <dd>
+                <h5>
+                    <xsl:apply-templates select="tei:title"/>
+                </h5>
+            </dd>
+            <xsl:if test="tei:author">
+                <dt>Author of the record:</dt>
+                <dd>
+                    <xsl:value-of select="tei:author"/>
+                </dd>
+            </xsl:if>
+            <xsl:if test="tei:date">
+                <dt>Date:</dt>
+                <dd>
+                    <xsl:value-of select="tei:date"/>
+                </dd>
+            </xsl:if>
         </dl>
     </xsl:template>
 
