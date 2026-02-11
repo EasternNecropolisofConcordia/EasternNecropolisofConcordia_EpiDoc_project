@@ -60,7 +60,11 @@
                             <note type="plan_y">2610</note>
                         </provenance>
                         <provenance type="observed">
-                            <orgName type="museum"><name>Museo Nazionale Concordiese di <settlement><placeName>Portogruaro</placeName><idno type="VIAF">148456131</idno></settlement></name><idno type="VIAF">124364831</idno></orgName>
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
                             <note xml:lang="en">Now <seg type="location" xml:lang="en">set into the wall of the right nave</seg> of the <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
                             <note xml:lang="it">Si conserva <seg type="location" xml:lang="en">murata nella navata destra</seg> del <orgName type="museum"><name>Museo Nazionale Concordiese di Portogruaro</name>.<idno type="VIAF">124364831</idno></orgName></note>
                             <date>2024</date>
