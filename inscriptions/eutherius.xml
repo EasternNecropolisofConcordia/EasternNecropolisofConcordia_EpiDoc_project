@@ -164,7 +164,7 @@
                    </persName>
                    <gender>m</gender>
                    <note type="occupation">civil</note>
-                   <note type="role">dedicatator</note>
+                   <note type="role">dedicator</note>
                    <note type="relationship" corresp="#eutherius">father</note>
                </person>
                <person xml:id="eutherius">
