@@ -248,29 +248,15 @@ def run():
         for name in p['names']:
             dl_content += f"<dt>{name['type']}</dt><dd>{name['value']}</dd>"
             if name['type'] == 'cognomen' and name['nymref']:
-                dl_content += f"<dt>origin of the cognomen</dt><dd>{name['nymref']}</dd>"
+                dl_content += f"<dt>ORIGIN (of the cognomen {name['value']})</dt><dd>{name['nymref']}</dd>"
         
         # Gender
         gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
         dl_content += f"<dt>gender</dt><dd>{gender_display}</dd>"
         
-        # Notes con gestione relationship
+        # Notes (occupation, role, relationship)
         for note in p['notes']:
-            dl_content += f"<dt>{note['type']}</dt><dd>{note['value']}"
-            
-            # Se è relationship e c'è corresp, aggiungi link
-            if note['type'] == 'relationship' and note.get('corresp'):
-                corresp_id = note['corresp'].strip()
-                # Rimuovi # iniziale se presente
-                if corresp_id.startswith('#'):
-                    corresp_id = corresp_id[1:]
-                
-                # Trova il nome della persona correlata
-                if corresp_id in people_names:
-                    related_name = people_names[corresp_id]
-                    dl_content += f' (→ <a href="#{corresp_id}">{related_name}</a>)'
-            
-            dl_content += "</dd>"
+            dl_content += f"<dt>{note['type']}</dt><dd>{note['value']}</dd>"
         
         # Inscriptions
         links_str = " - ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
