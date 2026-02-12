@@ -818,7 +818,7 @@
     </xsl:template>
     
     <!-- Supplied text (lost) -->
-    <xsl:template match="tei:supplied[@reason = 'lost']" mode="interp">
+    <xsl:template match="tei:supplied[@reason = 'lost']" mode="interp" priority="1">
         <xsl:text>[</xsl:text>
         <xsl:apply-templates mode="interp"/>
         <xsl:text>]</xsl:text>
@@ -832,7 +832,7 @@
     </xsl:template>
 
     <!-- Supplied text from previous editor: underline with source tooltip -->
-    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp">
+    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp" priority="2">
         <u style="cursor: help;">
             <xsl:attribute name="title">
                 <xsl:text>Source(s): </xsl:text>
