@@ -160,8 +160,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="alexander">
+               <person xml:id="alexander">
+                   <persName>
                        <name type="full">Alexander</name>
                        <name type="cognomen" nymRef="greek">Alexander</name>
                    </persName>
@@ -170,8 +170,8 @@
                    <note type="role">deceased</note>
                    <note type="relationship" corresp="#sabbatia">son</note>
                </person>
-               <person>
-                   <persName xml:id="sabbatia">
+               <person xml:id="sabbatia">
+                   <persName>
                        <name type="full">Sabbatia</name>
                        <name type="cognomen" nymRef="jewish">Sabbatia</name>
                    </persName>
