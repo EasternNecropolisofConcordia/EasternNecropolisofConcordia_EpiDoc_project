@@ -248,7 +248,7 @@ def run():
         for name in p['names']:
             dl_content += f"<dt>{name['type'].upper()}</dt><dd>{name['value']}</dd>"
             if name['type'] == 'cognomen' and name['nymref']:
-                dl_content += f"<dt>ORIGIN (OF THE COGNOMEN {name['value']})</dt><dd>{name['nymref']}</dd>"
+                dl_content += f"<dt>ORIGIN (of the cognomen {name['value']})</dt><dd>{name['nymref']}</dd>"
         
         # Gender
         gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
@@ -355,6 +355,12 @@ def run():
                     <h4>Role</h4>
                     <div class="filter-options" id="filterRole"></div>
                     <button class="show-more" id="showMoreRole" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Relationship</h4>
+                    <div class="filter-options" id="filterRelationship"></div>
+                    <button class="show-more" id="showMoreRelationship" style="display:none">+ more</button>
                 </div>
                 
                 <button id="clearFilters" class="clear-btn">Clear all filters</button>
@@ -579,7 +585,8 @@ def run():
                 gens: {{}},
                 origin: {{}},
                 occupation: {{}},
-                role: {{}}
+                role: {{}},
+                relationship: {{}}
             }};
             
             peopleCards.forEach(card => {{
@@ -619,6 +626,14 @@ def run():
                         filterData.role[r] = (filterData.role[r] || 0) + 1;
                     }});
                 }}
+                
+                // Relationship
+                const relationship = card.getAttribute('data-relationship');
+                if (relationship) {{
+                    relationship.split(',').filter(r => r).forEach(r => {{
+                        filterData.relationship[r] = (filterData.relationship[r] || 0) + 1;
+                    }});
+                }}
             }});
             
             // Popola i filtri
@@ -627,6 +642,7 @@ def run():
             populateFilter('filterOrigin', filterData.origin, 'origin', 5);
             populateFilter('filterOccupation', filterData.occupation, 'occupation');
             populateFilter('filterRole', filterData.role, 'role', 5);
+            populateFilter('filterRelationship', filterData.relationship, 'relationship', 5);
             
             // Funzione per popolare i filtri
             function populateFilter(containerId, data, attribute, limit = null) {{
@@ -717,7 +733,8 @@ def run():
                     gens: [],
                     origin: [],
                     occupation: [],
-                    role: []
+                    role: [],
+                    relationship: []
                 }};
                 
                 // Raccogli filtri attivi
@@ -779,6 +796,14 @@ def run():
                         }}
                     }}
                     
+                    // Filtro relationship
+                    if (visible && activeFilters.relationship.length > 0) {{
+                        const relationships = (card.getAttribute('data-relationship') || '').split(',').filter(r => r);
+                        if (!relationships.some(r => activeFilters.relationship.includes(r))) {{
+                            visible = false;
+                        }}
+                    }}
+                    
                     // Mostra/nascondi card
                     if (visible) {{
                         card.classList.remove('hidden');
@@ -811,4 +836,3 @@ def run():
 
 if __name__ == "__main__":
     run()
-        
