@@ -376,12 +376,12 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
-                <div type="textpart" source="lid" n="a">
+                <div type="textpart" subtype="lid" n="a">
                     <ab>
-                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8754 #ilcv520"><expan><abbr>M</abbr><ex>anibus</ex></expan> <expan><abbr>D</abbr><ex>is</ex></expan></supplied>
+                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8754 #ilcv520"><expan><abbr>M</abbr><ex>anibus</ex></expan> <expan><abbr>D</abbr><ex>is</ex></expan></supplied>
                     </ab>
                 </div>
-                <div type="textpart" source="chest" n="b">
+                <div type="textpart" subtype="chest" n="b">
                     <ab>
                         <lb n="1"/><persName ref="#martinianus"><w xml:id="w1">Flavius</w> Martinia</persName>
                         <lb n="2" break="no"/><persName ref="#martinianus">nus</persName> <choice><reg>biarchus</reg><orig>biarcus</orig></choice> fabri
