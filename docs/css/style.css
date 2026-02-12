@@ -476,12 +476,18 @@ footer p {
 .bibliography {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
   margin-top: 30px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bibliography > div,
+.bibliography > dd {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .bibliography > span {
