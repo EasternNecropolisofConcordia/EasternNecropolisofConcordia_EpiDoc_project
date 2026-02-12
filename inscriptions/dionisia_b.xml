@@ -367,10 +367,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                     <ab>
-                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a ">Aur</supplied>elia Dionis<supplied reason="lost" evidence="parallel" cert="high">ia</supplied> <w xml:id="w1"><supplied reason="lost" cert="medium">quae vixi</supplied></w><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">t</supplied>
-                        <lb n="2"/><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">anni</supplied>s <num value="9">VIIII</num> <choice><abbr>m</abbr><expan>m<ex>ensibus</ex></expan></choice> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <w xml:id="w2"><supplied reason="lost" evidence="parallel" cert="medium">Si</supplied></w> <supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">qui</supplied>
+                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a ">Aur</supplied>elia Dionis<supplied reason="lost" evidence="parallel" cert="high">ia</supplied> <w xml:id="w1"><supplied reason="lost" cert="medium">quae vixi</supplied></w><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">t</supplied>
+                        <lb n="2"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">anni</supplied>s <num value="9">VIIII</num> <choice><abbr>m</abbr><expan>m<ex>ensibus</ex></expan></choice> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <w xml:id="w2"><supplied reason="lost" evidence="parallel" cert="medium">Si</supplied></w> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">qui</supplied>
                         <lb n="3" break="no"/>s eam voluerit <w xml:id="w3"><supplied reason="lost" cert="low">inr</supplied>umpere</w>
-                        <lb n="4"/><choice><reg>dabit</reg><orig><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">davit</supplied></orig></choice> <w xml:id="w4"><choice><reg>fisco</reg><orig><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">fi</supplied><unclear>s</unclear>ci</orig></choice></w> <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">arge<supplied reason="lost">nti</supplied> <supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">libras <num value="5">V</num></supplied></measure>
+                        <lb n="4"/><choice><reg>dabit</reg><orig><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">davit</supplied></orig></choice> <w xml:id="w4"><choice><reg>fisco</reg><orig><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">fi</supplied><unclear>s</unclear>ci</orig></choice></w> <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">arge<supplied reason="lost">nti</supplied> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">libras <num value="5">V</num></supplied></measure>
                     </ab>
             </div>
             <div type="apparatus">
@@ -410,7 +410,7 @@
                     </app>
                     <app loc="4" from="#w4" to="#w4">
                         <lem>
-                            <choice><reg>fisco</reg><orig><supplied reason="lost" evidence="previouseditor" corresp="#bertolini1875a #bertolini1875b #cilv8735a">fi</supplied><damage>s</damage>ci</orig></choice>
+                            <choice><reg>fisco</reg><orig><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">fi</supplied><damage>s</damage>ci</orig></choice>
                         </lem>
                         <rdg source="#lettich1983">
                             fisci <supplied reason="omitted">viribus</supplied>
