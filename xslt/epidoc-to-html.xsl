@@ -587,7 +587,7 @@
     <!-- REFERENCE LINKS                            -->
     <!-- ========================================== -->
     <xsl:template match="tei:ref">
-        <a href="{@target}">
+        <a href="{replace(@target, '\.xml', '.html')}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
