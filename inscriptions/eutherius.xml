@@ -155,8 +155,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="costantius">
+               <person xml:id="costantius">
+                   <persName>
                        <name type="full">Flavius Costantius</name>
                        <name type="nomen">Flavius</name>
                        <name type="cognomen" nymRef="latin">Costantius</name>
@@ -167,8 +167,8 @@
                    <note type="role">dedicatator</note>
                    <note type="relationship" corresp="#eutherius">father</note>
                </person>
-               <person>
-                   <persName xml:id="eutherius">
+               <person xml:id="eutherius">
+                   <persName>
                        <name type="full">Eutherius</name>
                        <name type="cognomen" nymRef="oriental">Eutherius</name>
                    </persName>
