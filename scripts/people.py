@@ -31,15 +31,14 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - usa XPath con namespace binding
+                        # ID - usa namespace-uri nell'XPath
                         p_id = None
                         try:
-                            xpath_processor.declare_namespace("xml", "http://www.w3.org/XML/1998/namespace")
-                            id_result = xpath_processor.evaluate("string(@xml:id)")
+                            id_result = xpath_processor.evaluate('string(@*[namespace-uri()="http://www.w3.org/XML/1998/namespace" and local-name()="id"])')
                             if id_result and hasattr(id_result, 'string_value'):
-                                p_id = id_result.string_value.strip()
-                                if p_id == "":
-                                    p_id = None
+                                p_id_value = id_result.string_value.strip()
+                                if p_id_value and p_id_value != "":
+                                    p_id = p_id_value
                         except:
                             pass
                         
@@ -73,16 +72,15 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - usa XPath con namespace XML dichiarato
+                        # ID - usa namespace-uri nell'XPath
                         p_id = None
                         try:
-                            # Dichiara il namespace xml e usa XPath
-                            xpath_processor.declare_namespace("xml", "http://www.w3.org/XML/1998/namespace")
-                            id_result = xpath_processor.evaluate("string(@xml:id)")
+                            # Usa namespace-uri e local-name per trovare xml:id
+                            id_result = xpath_processor.evaluate('string(@*[namespace-uri()="http://www.w3.org/XML/1998/namespace" and local-name()="id"])')
                             if id_result and hasattr(id_result, 'string_value'):
-                                p_id = id_result.string_value.strip()
-                                if p_id == "":
-                                    p_id = None
+                                p_id_value = id_result.string_value.strip()
+                                if p_id_value and p_id_value != "":
+                                    p_id = p_id_value
                         except Exception as e:
                             print(f"  Errore leggendo xml:id: {e}")
                         
@@ -315,4 +313,3 @@ def run():
 
 if __name__ == "__main__":
     run()
-
