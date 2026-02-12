@@ -159,8 +159,8 @@
                    <note type="role">dedicator/deceased</note>
                    <note type="relationship" corresp="#paccianus">wife</note>
                </person>
-               <person>
-                   <persName xml:id="paccianus">
+               <person xml:id="paccianus">
+                   <persName>
                        <name type="full">Ennius Paccianus</name>
                        <name type="nomen">Ennius</name>
                        <name type="cognomen" nymRef="latin">Paccianus</name>
