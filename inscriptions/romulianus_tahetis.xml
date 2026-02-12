@@ -151,8 +151,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="romulianus">
+               <person xml:id="romulianus">
+                   <persName>
                        <name type="full">Flavius Romulianus</name>
                        <name type="nomen">Flavius</name>
                        <name type="cognomen" nymRef="latin">Romulianus</name>
@@ -164,8 +164,8 @@
                    <note type="role">dedicator/deceased</note>
                    <note type="relationship" corresp="#tahetis">husband</note>
                </person>
-               <person>
-                   <persName xml:id="tahetis">
+               <person xml:id="tahetis">
+                   <persName>
                        <name type="full">Tahetis</name>
                        <name type="cognomen" nymRef="egyptian">Tahetis</name>
                    </persName>
