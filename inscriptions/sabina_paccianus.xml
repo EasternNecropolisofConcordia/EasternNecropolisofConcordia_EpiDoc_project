@@ -378,7 +378,7 @@
         <body>
             <div type="edition" xml:space="preserve">
                 <ab>
-                    <lb n="1"/><choice><abbr>D</abbr><expan>D<ex>is</ex></expan></choice> <choice><abbr>M</abbr><expan>M<ex>anibus</ex></expan></choice>
+                    <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan>
                     <lb n="2"/>Cusica Sabin<supplied reason="lost">a</supplied>
                     <lb n="3"/>sibi et Ennio Pac
                     <lb n="4" break="no"/>ciano, con<supplied reason="lost">iu</supplied>gi
