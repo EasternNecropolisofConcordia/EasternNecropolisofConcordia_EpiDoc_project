@@ -302,7 +302,7 @@
 
                 <!-- PALAEOGRAPHIC COMMENT -->
                 <details class="palaeography">
-                    <h3>Palaeographic Comment</h3>
+                    <summary><h2>PALAEOGRAPHIC COMMENT</h2></summary>
                     <xsl:for-each
                         select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
                         <p>
@@ -334,6 +334,7 @@
 
                 <!-- TRANSLATION -->
                 <details class="translation">
+                    <summary><h2>TRANSLATION</h2></summary>
                     <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = 'en']/tei:p">
                         <p>
                             <xsl:apply-templates/>
