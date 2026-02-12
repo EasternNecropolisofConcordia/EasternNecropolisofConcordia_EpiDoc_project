@@ -31,14 +31,13 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - usa namespace-uri nell'XPath
+                        # ID - prendi il primo attributo
                         p_id = None
                         try:
-                            id_result = xpath_processor.evaluate('string(@*[namespace-uri()="http://www.w3.org/XML/1998/namespace" and local-name()="id"])')
-                            if id_result and hasattr(id_result, 'string_value'):
-                                p_id_value = id_result.string_value.strip()
-                                if p_id_value and p_id_value != "":
-                                    p_id = p_id_value
+                            all_attrs = xpath_processor.evaluate("@*")
+                            if all_attrs and all_attrs.size > 0:
+                                first_attr = all_attrs.item_at(0)
+                                p_id = first_attr.string_value.strip()
                         except:
                             pass
                         
@@ -72,29 +71,20 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - usa namespace-uri nell'XPath
+                        # ID - prendi il primo attributo (che è xml:id)
                         p_id = None
                         try:
-                            # Test 1: Vediamo se ci sono attributi
                             all_attrs = xpath_processor.evaluate("@*")
                             if all_attrs and all_attrs.size > 0:
-                                print(f"  File {filename}, persona {i} ha {all_attrs.size} attributi")
-                                for idx in range(all_attrs.size):
-                                    attr = all_attrs.item_at(idx)
-                                    print(f"    Attributo {idx}: {attr.string_value if hasattr(attr, 'string_value') else str(attr)}")
-                            
-                            # Test 2: Prova namespace-uri
-                            id_result = xpath_processor.evaluate('string(@*[namespace-uri()="http://www.w3.org/XML/1998/namespace" and local-name()="id"])')
-                            if id_result and hasattr(id_result, 'string_value'):
-                                p_id_value = id_result.string_value.strip()
-                                print(f"    XPath namespace-uri result: '{p_id_value}'")
-                                if p_id_value and p_id_value != "":
-                                    p_id = p_id_value
+                                # Il primo attributo è sempre xml:id
+                                first_attr = all_attrs.item_at(0)
+                                p_id = first_attr.string_value.strip()
+                                print(f"  File {filename}, persona {i}: xml:id = '{p_id}'")
                         except Exception as e:
-                            print(f"  ERRORE leggendo xml:id: {e}")
+                            print(f"  ERRORE leggendo attributi: {e}")
                         
                         # Fallback: genera ID automatico
-                        if not p_id:
+                        if not p_id or p_id == "":
                             p_id = f"p_{filename}_{i}"
                         
                         print(f"DEBUG: File {filename}, persona {i}, ID trovato: {p_id}")
