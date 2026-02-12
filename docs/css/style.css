@@ -413,6 +413,38 @@ details.palaeography p {
     text-align: justify;
 }
 
+.physical_description {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 252, 0.6);
+  border-left: 5px solid #8B3A3A;
+  padding: 20px;
+}
+
+.physical_description dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 20px;
+  text-align: left;
+  margin: 15px auto;
+}
+
+.physical_description dt {
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+  color: #8B3A3A;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.physical_description dd {
+  margin: 0;
+  font-family: 'Cardo', serif;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
 .apparatus {
     max-width: 800px;
     margin: 30px auto;
@@ -723,6 +755,14 @@ footer p {
   }
   
   .metadata dt {
+    margin-top: 10px;
+  }
+  
+  .physical_description dl {
+    grid-template-columns: 1fr;
+  }
+  
+  .physical_description dt {
     margin-top: 10px;
   }
 }
