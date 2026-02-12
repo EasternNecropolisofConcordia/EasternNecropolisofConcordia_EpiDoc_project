@@ -424,8 +424,24 @@ def run():
             padding: 15px;
             border-radius: 5px;
             height: fit-content;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
             position: sticky;
             top: 20px;
+        }}
+        .filters-sidebar::-webkit-scrollbar {{
+            width: 8px;
+        }}
+        .filters-sidebar::-webkit-scrollbar-track {{
+            background: #e0e0e0;
+            border-radius: 4px;
+        }}
+        .filters-sidebar::-webkit-scrollbar-thumb {{
+            background: #2c5f2d;
+            border-radius: 4px;
+        }}
+        .filters-sidebar::-webkit-scrollbar-thumb:hover {{
+            background: #1e4620;
         }}
         .filters-sidebar h3 {{
             margin-top: 0;
@@ -448,7 +464,8 @@ def run():
             gap: 5px;
         }}
         .filter-option {{
-            display: flex;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
             align-items: center;
             gap: 8px;
             font-size: 13px;
@@ -457,14 +474,19 @@ def run():
         }}
         .filter-option input[type="checkbox"] {{
             cursor: pointer;
+            margin: 0;
         }}
         .filter-option label {{
             cursor: pointer;
-            flex: 1;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }}
         .filter-count {{
             color: #888;
             font-size: 12px;
+            justify-self: end;
         }}
         .show-more {{
             background: none;
