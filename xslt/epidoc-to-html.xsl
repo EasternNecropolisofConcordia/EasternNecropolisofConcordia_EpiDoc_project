@@ -642,7 +642,7 @@
 
             <!-- Add line-break marker if next line continues the word -->
             <xsl:if test="following-sibling::tei:lb[1]/@break = 'no'">
-                <xsl:text> =</xsl:text>
+                <xsl:text>=</xsl:text>
             </xsl:if>
         </span>
         <xsl:apply-templates select="following-sibling::tei:lb[1]" mode="line-start"/>
