@@ -816,6 +816,13 @@
         </xsl:if>
         <xsl:text>)</xsl:text>
     </xsl:template>
+    
+    <!-- Supplied text (lost) -->
+    <xsl:template match="tei:supplied[@reason = 'lost']" mode="interp">
+        <xsl:text>[</xsl:text>
+        <xsl:apply-templates mode="interp"/>
+        <xsl:text>]</xsl:text>
+    </xsl:template>
 
     <!-- Supplied text (omitted): <text> -->
     <xsl:template match="tei:supplied[@reason = 'omitted']" mode="interp">
