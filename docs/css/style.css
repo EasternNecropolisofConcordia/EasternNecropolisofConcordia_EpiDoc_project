@@ -358,7 +358,8 @@ div[data-location="chest"] {
 }
 
 details.translation,
-details.palaeography {
+details.palaeography,
+details.commentary {
     max-width: 800px;
     margin: 30px auto;
     text-align: left;
@@ -369,7 +370,8 @@ details.palaeography {
 }
 
 details.translation summary,
-details.palaeography summary {
+details.palaeography summary,
+details.commentary summary {
     list-style: none;
     color: #8B3A3A;
     font-family: 'Cardo', serif;
@@ -381,33 +383,36 @@ details.palaeography summary {
 }
 
 details.translation summary::-webkit-details-marker,
-details.palaeography summary::-webkit-details-marker {
+details.palaeography summary::-webkit-details-marker,
+details.commentary summary::-webkit-details-marker {
     display: none;
 }
 
 details.translation summary::marker,
-details.palaeography summary::marker {
+details.palaeography summary::marker,
+details.commentary summary::marker {
     display: none;
 }
 
-details.translation summary::after {
+details.translation summary::after,
+details.palaeography summary::after,
+details.commentary summary::after {
     content: " ▾";
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-left: 5px;
 }
 
-details.translation[open] summary::after {
+details.translation[open] summary::after,
+details.palaeography[open] summary::after,
+details.commentary[open] summary::after {
     content: " ▴";
-}
-
-details.palaeography summary::after {
-    content: " ▾";
-}
-
-details.palaeography[open] summary::after {
-    content: " ▴";
+    font-size: 1.3rem;
 }
 
 details.translation p,
-details.palaeography p {
+details.palaeography p,
+details.commentary p {
     margin: 10px 0;
     font-style: italic;
     text-align: justify;
