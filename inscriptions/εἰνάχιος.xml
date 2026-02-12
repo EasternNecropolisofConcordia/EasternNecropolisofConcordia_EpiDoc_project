@@ -156,7 +156,7 @@
                <person xml:id="hermias">
                  <persName>
                      <name type="full">Hermias</name>
-                     <name type="cognomen" nymRef="grek">Hermias</name>
+                     <name type="cognomen" nymRef="greek">Hermias</name>
                  </persName>
                   <gender>m</gender>
                   <note type="occupation">civil</note>
