@@ -367,7 +367,7 @@
         </encodingDesc>
     </teiHeader>
     <facsimile>
-        <graphic url="../data/Images/Vitaliana_Severus.jpg">
+        <graphic url="../data/images/vitaliana_severus.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
             <desc type="figDesc">The iscription of Vitaliana and Severus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
