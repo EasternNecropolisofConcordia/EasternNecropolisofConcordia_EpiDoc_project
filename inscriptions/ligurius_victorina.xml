@@ -156,8 +156,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="ligurius">
+               <person xml:id="ligurius">
+                   <persName>
                        <name type="full">Flavius Ligurius</name>
                        <name type="nomen">Flavius</name>
                        <name type="cognomen" nymRef="latin">Ligurius</name>
