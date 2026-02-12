@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People - Iulia Concordia</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./inscriptions.html">Inscriptions</a></li>
+                <li><a href="people.html">People</a></li>
+                <li class="dropdown">
+                    <a href="#">Study & Context ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./context/history.html">History</a></li>
+                        <li><a href="./context/about_people.html">About People Buried</a></li>
+                        <li><a href="./context/supports.html">Supports & Monuments</a></li>
+                        <li><a href="./context/chronology.html">Dating & Chronology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">References ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./references/bibliography.html">Bibliography</a></li>
+                        <li><a href="./references/corpora_databases.html">Corpora and Databases</a></li>
+                      </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>People in the Inscriptions</h2>
+        
+        <div class="search-filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name..." />
+                <button id="searchBtn">🔍</button>
+                <span id="resultCount" class="result-count">Showing: <strong id="countCurrent">61</strong>/<strong id="countTotal">61</strong></span>
+            </div>
+        </div>
+        
+        <div class="people-container">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Gender</h4>
+                    <div class="filter-options" id="filterGender"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Gens</h4>
+                    <div class="filter-options" id="filterGens"></div>
+                    <button class="show-more" id="showMoreGens" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Origin</h4>
+                    <div class="filter-options" id="filterOrigin"></div>
+                    <button class="show-more" id="showMoreOrigin" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Occupation</h4>
+                    <div class="filter-options" id="filterOccupation"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Role</h4>
+                    <div class="filter-options" id="filterRole"></div>
+                    <button class="show-more" id="showMoreRole" style="display:none">+ more</button>
+                </div>
+                
+                <button id="clearFilters" class="clear-btn">Clear all filters</button>
+            </aside>
+            
+            <div class="people-list" id="peopleList">
+                
+        <div class="person" id="alexander" data-gender="m" data-gens="" data-origin="greek" data-occupation="civil" data-role="deceased" data-relationship="son" data-name="alexander">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Alexander</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Alexander</dd><dt>ORIGIN (OF THE COGNOMEN Alexander)</dt><dd>greek</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>son (→ <a href="#sabbatia">Sabbatia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/alexander.html">The Epigraphy of Alexander</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="ap_" data-gender="f" data-gens="Aurelia?" data-origin="latin?" data-occupation="civil" data-role="dedicator" data-relationship="grandmother" data-name="ap[---]">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Ap[---]</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Aurelia?</dd><dt>COGNOMEN</dt><dd>Ap[---]</dd><dt>ORIGIN (OF THE COGNOMEN Ap[---])</dt><dd>latin?</dd><dt>GENS</dt><dd>Aurelia?</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>grandmother (→ <a href="#dionisia">Aurelia Dionisia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/dionisia_a.html">The Epigraphy of Dionisia_A</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="alexandria" data-gender="f" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="aurelia alexandria">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Aurelia Alexandria</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Aurelia</dd><dt>COGNOMEN</dt><dd>Alexandria</dd><dt>ORIGIN (OF THE COGNOMEN Alexandria)</dt><dd>latin</dd><dt>GENS</dt><dd>Aurelia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#sopatrus">Flavius Sopatrus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/alexandria_sopatrus.html">The Epigraphy of Alexandria and Sopatrus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="dionisia" data-gender="f" data-gens="Aurelia" data-origin="greek" data-occupation="civil" data-role="deceased" data-relationship="granddaughter" data-name="aurelia dionisia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Aurelia Dionisia</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Aurelia</dd><dt>COGNOMEN</dt><dd>Dionisia</dd><dt>ORIGIN (OF THE COGNOMEN Dionisia)</dt><dd>greek</dd><dt>GENS</dt><dd>Aurelia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>granddaughter (→ <a href="#ap_">Ap[---]</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/dionisia_b.html">The Epigraphy of Dionisia_B</a> - <a href="inscriptions/dionisia_a.html">The Epigraphy of Dionisia_A</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="iovina" data-gender="f" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="aurelia iovina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Aurelia Iovina</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Aurelia</dd><dt>COGNOMEN</dt><dd>Iovina</dd><dt>ORIGIN (OF THE COGNOMEN Iovina)</dt><dd>latin</dd><dt>GENS</dt><dd>Aurelia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#honoratus">Turranius Honoratus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/iovina.html">The Epigraphy of Iovina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="severina" data-gender="f" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="aurelia severina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Aurelia Severina</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Aurelia</dd><dt>COGNOMEN</dt><dd>Severina</dd><dt>ORIGIN (OF THE COGNOMEN Severina)</dt><dd>latin</dd><dt>GENS</dt><dd>Aurelia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#martinianus">Flavius Martinianus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/martinianus_severina.html">The Epigraphy of Martinianus and Severina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="gaudentius" data-gender="m" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="aurelius gaudentius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Aurelius Gaudentius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Aurelius</dd><dt>COGNOMEN</dt><dd>Gaudentius</dd><dt>ORIGIN (OF THE COGNOMEN Gaudentius)</dt><dd>latin</dd><dt>GENS</dt><dd>Aurelia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#martina">Martina</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/gaudentius_martina.html">The Epigraphy of Flavius Gaudentius and Martina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="baicca" data-gender="m" data-gens="" data-origin="illyric" data-occupation="civil?" data-role="dedicator/deceased" data-relationship="" data-name="baicca">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Baicca</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Baicca</dd><dt>ORIGIN (OF THE COGNOMEN Baicca)</dt><dd>illyric</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil?</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/baicca.html">The Epigraphy of Baicca</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="bitorta" data-gender="f" data-gens="" data-origin="celtic" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="bitorta">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Bitorta</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Bitorta</dd><dt>ORIGIN (OF THE COGNOMEN Bitorta)</dt><dd>celtic</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#alatancus">Flavius Alatancus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/alatancus_bitorta.html">The Epigraphy of Alatancus and Bitorta</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="victorina" data-gender="f" data-gens="Cicria" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="cicria victorina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Cicria Victorina</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Cicria</dd><dt>COGNOMEN</dt><dd>Victorina</dd><dt>ORIGIN (OF THE COGNOMEN Victorina)</dt><dd>latin</dd><dt>GENS</dt><dd>Cicria</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#ligurius">Flavius Ligurius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/ligurius_victorina.html">The Epigraphy of Ligurius and Victorina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="cispia" data-gender="f" data-gens="" data-origin="" data-occupation="civil" data-role="dedicator?" data-relationship="" data-name="cispia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Cispia</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Cispia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator?</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/εἰνάχιος.html">The Epigraphy of Εἰνάχιος</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="artemisia" data-gender="f" data-gens="Claudia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="claudia artemisia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Claudia Artemisia</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Claudia</dd><dt>COGNOMEN</dt><dd>Artemisia</dd><dt>ORIGIN (OF THE COGNOMEN Artemisia)</dt><dd>latin</dd><dt>GENS</dt><dd>Claudia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/artemisia.html">The Epigraphy of Artemisia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="ursus" data-gender="m" data-gens="Cocceia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="cocceius ursus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Cocceius Ursus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Cocceius</dd><dt>COGNOMEN</dt><dd>Ursus</dd><dt>ORIGIN (OF THE COGNOMEN Ursus)</dt><dd>latin</dd><dt>GENS</dt><dd>Cocceia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#decentia">Decentia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/ursus_decentia.html">The Epigraphy of Ursus and Decentia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="constantia" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="wife,mother" data-name="constantia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Constantia</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Constantia</dd><dt>ORIGIN (OF THE COGNOMEN Constantia)</dt><dd>latin</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#exsuperantius">Flavius Exsuperantius</a>)</dd><dt>RELATIONSHIP</dt><dd>mother (→ <a href="#marinus">Marinus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/marinus.html">The Epigraphy of Marinus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="sabina" data-gender="f" data-gens="Cusica" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="cusica sabina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Cusica Sabina</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Cusica</dd><dt>COGNOMEN</dt><dd>Sabina</dd><dt>ORIGIN (OF THE COGNOMEN Sabina)</dt><dd>latin</dd><dt>GENS</dt><dd>Cusica</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#paccianus">Ennius Paccianus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/sabina_paccianus.html">The Epigraphy of Sabina and Paccianus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="decentia" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="decentia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Decentia</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Decentia</dd><dt>ORIGIN (OF THE COGNOMEN Decentia)</dt><dd>latin</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#ursus">Cocceius Ursus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/ursus_decentia.html">The Epigraphy of Ursus and Decentia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="apra" data-gender="f" data-gens="Aemilia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="emilia apra">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Emilia Apra</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Emilia</dd><dt>COGNOMEN</dt><dd>Apra</dd><dt>ORIGIN (OF THE COGNOMEN Apra)</dt><dd>latin</dd><dt>GENS</dt><dd>Aemilia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#gidnadius">Flavius Gidnadius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/gidnadius_apra.html">The Epigraphy of Gidnadius and Apra</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="asteria" data-gender="f" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="dedicator (restoration)" data-relationship="daughter,granddaughter" data-name="ennia asteria">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Ennia Asteria</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Ennia</dd><dt>COGNOMEN</dt><dd>Asteria</dd><dt>ORIGIN (OF THE COGNOMEN Asteria)</dt><dd>latin</dd><dt>GENS</dt><dd>Ennia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator (restoration)</dd><dt>RELATIONSHIP</dt><dd>daughter (→ <a href="#asterius">Ennius Asterius</a>)</dd><dt>RELATIONSHIP</dt><dd>granddaughter (→ <a href="#cerealis">Ennius Cerealis</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/cerealis.html">The Epigraphy of Ennius Cerealis</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="asterius" data-gender="m" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="mentioned" data-relationship="father" data-name="ennius asterius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Ennius Asterius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Ennius</dd><dt>COGNOMEN</dt><dd>Asterius</dd><dt>ORIGIN (OF THE COGNOMEN Asterius)</dt><dd>latin</dd><dt>GENS</dt><dd>Ennia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>mentioned</dd><dt>RELATIONSHIP</dt><dd>father (→ <a href="#asterius">Ennius Asterius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/cerealis.html">The Epigraphy of Ennius Cerealis</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="cerealis" data-gender="m" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="grandfather" data-name="ennius cerealis">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Ennius Cerealis</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Ennius</dd><dt>COGNOMEN</dt><dd>Cerealis</dd><dt>ORIGIN (OF THE COGNOMEN Cerealis)</dt><dd>latin</dd><dt>GENS</dt><dd>Ennia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>grandfather (→ <a href="#asteria">Ennia Asteria</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/cerealis.html">The Epigraphy of Ennius Cerealis</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="paccianus" data-gender="m" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="husband" data-name="ennius paccianus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Ennius Paccianus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Ennius</dd><dt>COGNOMEN</dt><dd>Paccianus</dd><dt>ORIGIN (OF THE COGNOMEN Paccianus)</dt><dd>latin</dd><dt>GENS</dt><dd>Ennia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#sabina">Cusica Sabina</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/sabina_paccianus.html">The Epigraphy of Sabina and Paccianus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="eutherius" data-gender="m" data-gens="" data-origin="oriental" data-occupation="civil" data-role="deceased" data-relationship="son" data-name="eutherius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Eutherius</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Eutherius</dd><dt>ORIGIN (OF THE COGNOMEN Eutherius)</dt><dd>oriental</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>son (→ <a href="#costantius">Flavius Costantius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/eutherius.html">The Epigraphy of Eutherius</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="firmina" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="firmina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Firmina</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Firmina</dd><dt>ORIGIN (OF THE COGNOMEN Firmina)</dt><dd>latin</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/firmina.html">The Epigraphy of Firmina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="flconcordia" data-gender="f" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="flavia concordia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Flavia Concordia</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavia</dd><dt>COGNOMEN</dt><dd>Concordia</dd><dt>ORIGIN (OF THE COGNOMEN Concordia)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/concordia.html">The Epigraphy of Flavia Concordia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="optata" data-gender="f" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="flavia optata">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Flavia Optata</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavia</dd><dt>COGNOMEN</dt><dd>Optata</dd><dt>ORIGIN (OF THE COGNOMEN Optata)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/optata.html">The Epigraphy of Optata</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="ursa" data-gender="f" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="flavia severina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Flavia Severina</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavia</dd><dt>COGNOMEN</dt><dd>Ursa</dd><dt>ORIGIN (OF THE COGNOMEN Ursa)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#mercurius">Flavius Mercurius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/mercurius_ursa.html">The Epigraphy of Mercurius and Ursa</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="flaviiservilii" data-gender="unknown" data-gens="Flavia" data-origin="latin" data-occupation="soldier?" data-role="dedicator" data-relationship="colleague?" data-name="flavii servilii">
+            
+            <h3>Flavii Servilii</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Servilius</dd><dt>ORIGIN (OF THE COGNOMEN Servilius)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>unknown</dd><dt>OCCUPATION</dt><dd>soldier?</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>colleague? (→ <a href="#andia">Flavius Andia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/andia.html">The Epigraphy of Andia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="alatancus" data-gender="m" data-gens="Flavia" data-origin="" data-occupation="soldier" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius alatancus">
+            <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
+            <h3>Flavius Alatancus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Alatancus</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>soldier</dd><dt>RANK</dt><dd>domesticus</dd><dt>NUMERUS</dt><dd>unknown</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#bitorta">Bitorta</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/alatancus_bitorta.html">The Epigraphy of Alatancus and Bitorta</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="andia" data-gender="m" data-gens="" data-origin="germanic" data-occupation="soldier" data-role="deceased" data-relationship="colleague" data-name="flavius andia">
+            <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
+            <h3>Flavius Andia</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Andia</dd><dt>ORIGIN (OF THE COGNOMEN Andia)</dt><dd>germanic</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>soldier</dd><dt>RANK</dt><dd>centenarius</dd><dt>NUMERUS</dt><dd>Bracchiati</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>colleague (→ <a href="#otraustaguta">Otraustaguta</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/andia.html">The Epigraphy of Andia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="costantius" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="father" data-name="flavius costantius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Costantius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Costantius</dd><dt>ORIGIN (OF THE COGNOMEN Costantius)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>father (→ <a href="#eutherius">Eutherius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/eutherius.html">The Epigraphy of Eutherius</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="exsuperantius" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="husband,father" data-name="flavius exsuperantius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Exsuperantius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Exsuperantius</dd><dt>ORIGIN (OF THE COGNOMEN Exsuperantius)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#constantia">Constantia</a>)</dd><dt>RELATIONSHIP</dt><dd>father (→ <a href="#marinus">Marinus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/marinus.html">The Epigraphy of Marinus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="felix" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius felix">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Felix</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Felix</dd><dt>ORIGIN (OF THE COGNOMEN Felix)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#lucia">Lucia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/felix_lucia.html">The Epigraphy of Felix and Lucia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="gidnadius" data-gender="m" data-gens="Flavia" data-origin="unknown" data-occupation="soldier" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius gidnadius">
+            <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
+            <h3>Flavius Gidnadius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Gidnadius</dd><dt>ORIGIN (OF THE COGNOMEN Gidnadius)</dt><dd>unknown</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>soldier</dd><dt>RANK</dt><dd>veteranus</dd><dt>NUMERUS</dt><dd>unknown</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#apra">Emilia Apra</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/gidnadius_apra.html">The Epigraphy of Gidnadius and Apra</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="ligurius" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius ligurius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Ligurius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Ligurius</dd><dt>ORIGIN (OF THE COGNOMEN Ligurius)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#victorina">Cicria Victorina</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/ligurius_victorina.html">The Epigraphy of Ligurius and Victorina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="martinianus" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="fabricensis" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius martinianus">
+            <img src="../images/silhouette/silhouette_fabricensis.png" alt="silhouette">
+            <h3>Flavius Martinianus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Martinianus</dd><dt>ORIGIN (OF THE COGNOMEN Martinianus)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>fabricensis</dd><dt>RANK</dt><dd>biarchus</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#severina">Aurelia Severina</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/martinianus_severina.html">The Epigraphy of Martinianus and Severina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="maximianusiunior" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="son" data-name="flavius maximianus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Maximianus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Maximianus</dd><dt>ORIGIN (OF THE COGNOMEN Maximianus)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>son (→ <a href="#maximianusmaior">Flavius Maximianus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/maximiani.html">The Epigraphy of the two Maximiani</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="maximianusmaior" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="father" data-name="flavius maximianus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Maximianus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Maximianus</dd><dt>ORIGIN (OF THE COGNOMEN Maximianus)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>father (→ <a href="#maximianusiunior">Flavius Maximianus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/maximiani.html">The Epigraphy of the two Maximiani</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="mercurius" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="fabricensis" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius mercurius">
+            <img src="../images/silhouette/silhouette_fabricensis.png" alt="silhouette">
+            <h3>Flavius Mercurius</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Mercurius</dd><dt>ORIGIN (OF THE COGNOMEN Mercurius)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>fabricensis</dd><dt>RANK</dt><dd>biarchus</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#ursa">Flavia Severina</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/mercurius_ursa.html">The Epigraphy of Mercurius and Ursa</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="romulianus" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="fabricensis" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius romulianus">
+            <img src="../images/silhouette/silhouette_fabricensis.png" alt="silhouette">
+            <h3>Flavius Romulianus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Romulianus</dd><dt>ORIGIN (OF THE COGNOMEN Romulianus)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>fabricensis</dd><dt>RANK</dt><dd>praepositus</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#tahetis">Tahetis</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/romulianus_tahetis.html">The Epigraphy of Romulianus and Tahetis</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="severus" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius severus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Severus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Severus</dd><dt>ORIGIN (OF THE COGNOMEN Severus)</dt><dd>latin</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#vitaliana">Vettia Vitaliana</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/vitaliana_severus.html">The Epigraphy of Vitaliana and Severus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="sopatrus" data-gender="m" data-gens="Flavia" data-origin="unknown" data-occupation="civil" data-role="deceased" data-relationship="husband" data-name="flavius sopatrus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Flavius Sopatrus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Flavius</dd><dt>COGNOMEN</dt><dd>Sopatrus</dd><dt>ORIGIN (OF THE COGNOMEN Sopatrus)</dt><dd>unknown</dd><dt>GENS</dt><dd>Flavia</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#alexandria">Aurelia Alexandria</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/alexandria_sopatrus.html">The Epigraphy of Alexandria and Sopatrus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="gerontia" data-gender="f" data-gens="" data-origin="greek" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="gerontia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Gerontia</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Gerontia</dd><dt>ORIGIN (OF THE COGNOMEN Gerontia)</dt><dd>greek</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/gerontia.html">The Epigraphy of Gerontia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="hermias" data-gender="m" data-gens="" data-origin="greek" data-occupation="civil" data-role="dedicator?" data-relationship="" data-name="hermias">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Hermias</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Hermias</dd><dt>ORIGIN (OF THE COGNOMEN Hermias)</dt><dd>greek</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator?</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/εἰνάχιος.html">The Epigraphy of Εἰνάχιος</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="felicitas" data-gender="f" data-gens="" data-origin="latin,germanic" data-occupation="civil" data-role="dedicator" data-relationship="" data-name="ilateuta felicitas">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Ilateuta Felicitas</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Ilateuta</dd><dt>ORIGIN (OF THE COGNOMEN Ilateuta)</dt><dd>germanic</dd><dt>COGNOMEN</dt><dd>Felicitas</dd><dt>ORIGIN (OF THE COGNOMEN Felicitas)</dt><dd>latin</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/andia.html">The Epigraphy of Andia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="valeria" data-gender="f" data-gens="Aurelia,Valeria" data-origin="" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="iulia valeria">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Iulia Valeria</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Iulia</dd><dt>NOMEN</dt><dd>Valeria</dd><dt>GENS</dt><dd>Aurelia</dd><dt>GENS</dt><dd>Valeria</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#maflorentius">Marcus Aterius Florentius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/florentius_valeria.html">The Epigraphy of Florentius and Valeria</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="lucia" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="lucia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Lucia</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Lucia</dd><dt>ORIGIN (OF THE COGNOMEN Lucia)</dt><dd>latin</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#felix">Flavius Felix</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/felix_lucia.html">The Epigraphy of Felix and Lucia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="maflorentius" data-gender="m" data-gens="Ateria" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="marcus aterius florentius">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Marcus Aterius Florentius</h3>
+            <dl>
+                <dt>PRAENOMEN</dt><dd>Marcus</dd><dt>NOMEN</dt><dd>Aterius</dd><dt>COGNOMEN</dt><dd>Florentius</dd><dt>ORIGIN (OF THE COGNOMEN Florentius)</dt><dd>latin</dd><dt>GENS</dt><dd>Ateria</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#valeria">Iulia Valeria</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/florentius_valeria.html">The Epigraphy of Florentius and Valeria</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="marinus" data-gender="m" data-gens="" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="son,son" data-name="marinus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Marinus</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Marinus</dd><dt>ORIGIN (OF THE COGNOMEN Marinus)</dt><dd>latin</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>son (→ <a href="#exsuperantius">Flavius Exsuperantius</a>)</dd><dt>RELATIONSHIP</dt><dd>son (→ <a href="#constantia">Constantia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/marinus.html">The Epigraphy of Marinus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="martina" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="martina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Martina</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Martina</dd><dt>ORIGIN (OF THE COGNOMEN Martina)</dt><dd>latin</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#gaudentius">Aurelius Gaudentius</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/gaudentius_martina.html">The Epigraphy of Flavius Gaudentius and Martina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="numerianus" data-gender="m" data-gens="" data-origin="latin" data-occupation="functionary" data-role="dedicator/deceased" data-relationship="" data-name="numerianus">
+            <img src="../images/silhouette/silhouette_functionary.png" alt="silhouette">
+            <h3>Numerianus</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Numerianus</dd><dt>ORIGIN (OF THE COGNOMEN Numerianus)</dt><dd>latin</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>functionary</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/numerianus.html">The Epigraphy of Numerianus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="oppius_marinus" data-gender="m" data-gens="Oppia" data-origin="latin" data-occupation="" data-role="dedicator/deceased" data-relationship="" data-name="oppius marinus">
+            
+            <h3>Oppius Marinus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Oppius</dd><dt>COGNOMEN</dt><dd>Marinus</dd><dt>ORIGIN (OF THE COGNOMEN Marinus)</dt><dd>latin</dd><dt>GENS</dt><dd>Oppia</dd><dt>GENDER</dt><dd>male</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/oppius_marinus.html">The Epigraphy of Oppius Marinus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="otraustaguta" data-gender="m" data-gens="" data-origin="germanic" data-occupation="soldier" data-role="dedicator" data-relationship="colleague" data-name="otraustaguta">
+            <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
+            <h3>Otraustaguta</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Otraustaguta</dd><dt>ORIGIN (OF THE COGNOMEN Otraustaguta)</dt><dd>germanic</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>soldier</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>colleague (→ <a href="#andia">Flavius Andia</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/andia.html">The Epigraphy of Andia</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="sabbatia" data-gender="f" data-gens="" data-origin="jewish" data-occupation="civil" data-role="dedicator/deceased" data-relationship="mother" data-name="sabbatia">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Sabbatia</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Sabbatia</dd><dt>ORIGIN (OF THE COGNOMEN Sabbatia)</dt><dd>jewish</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>mother (→ <a href="#alexander">Alexander</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/alexander.html">The Epigraphy of Alexander</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="saturninus" data-gender="m" data-gens="" data-origin="latin" data-occupation="functionary" data-role="dedicator/deceased" data-relationship="" data-name="saturninus">
+            <img src="../images/silhouette/silhouette_functionary.png" alt="silhouette">
+            <h3>Saturninus</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Saturninus</dd><dt>ORIGIN (OF THE COGNOMEN Saturninus)</dt><dd>latin</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>functionary</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/saturninus.html">The Epigraphy of Saturninus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="suandacca" data-gender="f" data-gens="" data-origin="celtic" data-occupation="civil" data-role="dedicator" data-relationship="wife" data-name="suandacca">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Suandacca</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Suandacca</dd><dt>ORIGIN (OF THE COGNOMEN Suandacca)</dt><dd>celtic</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#vassio">Vassio</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/vassio.html">The Epigraphy of Vassio</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="tahetis" data-gender="f" data-gens="" data-origin="egyptian" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="tahetis">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Tahetis</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Tahetis</dd><dt>ORIGIN (OF THE COGNOMEN Tahetis)</dt><dd>egyptian</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#romulianus">Flavius Romulianus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/romulianus_tahetis.html">The Epigraphy of Romulianus and Tahetis</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="honoratus" data-gender="m" data-gens="Turrania" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="husband" data-name="turranius honoratus">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Turranius Honoratus</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Turranius</dd><dt>COGNOMEN</dt><dd>Honoratus</dd><dt>ORIGIN (OF THE COGNOMEN Honoratus)</dt><dd>latin</dd><dt>GENS</dt><dd>Turrania</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#iovina">Aurelia Iovina</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/iovina.html">The Epigraphy of Iovina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="peregrina" data-gender="f" data-gens="Valeria" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="valeria peregrina">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Valeria Peregrina</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Valeria</dd><dt>COGNOMEN</dt><dd>Peregrina</dd><dt>ORIGIN (OF THE COGNOMEN Peregrina)</dt><dd>latin</dd><dt>GENS</dt><dd>Valeria</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/peregrina.html">The Epigraphy of Peregrina</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="vassio" data-gender="m" data-gens="" data-origin="celtic" data-occupation="soldier" data-role="deceased" data-relationship="husband" data-name="vassio">
+            <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
+            <h3>Vassio</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Vassio</dd><dt>ORIGIN (OF THE COGNOMEN Vassio)</dt><dd>celtic</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>soldier</dd><dt>RANK</dt><dd>campidoctor</dd><dt>NUMERUS</dt><dd>Batavi</dd><dt>ROLE</dt><dd>deceased</dd><dt>RELATIONSHIP</dt><dd>husband (→ <a href="#suandacca">Suandacca</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/vassio.html">The Epigraphy of Vassio</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="vitaliana" data-gender="f" data-gens="Vettia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="vettia vitaliana">
+            <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
+            <h3>Vettia Vitaliana</h3>
+            <dl>
+                <dt>NOMEN</dt><dd>Vettia</dd><dt>COGNOMEN</dt><dd>Vitaliana</dd><dt>ORIGIN (OF THE COGNOMEN Vitaliana)</dt><dd>latin</dd><dt>GENS</dt><dd>Vettia</dd><dt>GENDER</dt><dd>female</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>dedicator/deceased</dd><dt>RELATIONSHIP</dt><dd>wife (→ <a href="#severus">Flavius Severus</a>)</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/vitaliana_severus.html">The Epigraphy of Vitaliana and Severus</a></dd>
+            </dl>
+        </div>
+        <div class="person" id="Εἰνάχιος" data-gender="m" data-gens="" data-origin="greek" data-occupation="civil" data-role="deceased" data-relationship="" data-name="εἰνάχιος">
+            <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
+            <h3>Εἰνάχιος</h3>
+            <dl>
+                <dt>COGNOMEN</dt><dd>Εἰνάχιος</dd><dt>ORIGIN (OF THE COGNOMEN Εἰνάχιος)</dt><dd>greek</dd><dt>GENDER</dt><dd>male</dd><dt>OCCUPATION</dt><dd>civil</dd><dt>ROLE</dt><dd>deceased</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/εἰνάχιος.html">The Epigraphy of Εἰνάχιος</a></dd>
+            </dl>
+        </div>
+            </div>
+        </div>
+    </main>
+    <style>
+        /* Search and filter section */
+        .search-filter-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 252, 0.6);
+            border-left: 5px solid #8B3A3A;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #searchInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid rgba(139, 58, 58, 0.3);
+            border-radius: 2px;
+            font-size: 14px;
+            font-family: 'Cardo', serif;
+            background: white;
+        }
+        #searchInput:focus {
+            outline: none;
+            border-color: #8B3A3A;
+        }
+        #searchBtn {
+            padding: 10px 20px;
+            background: #8B3A3A;
+            color: #FDFaf0;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: 'Cardo', serif;
+            transition: background 0.2s ease;
+        }
+        #searchBtn:hover {
+            background: #6D2D2D;
+        }
+        .result-count {
+            font-size: 14px;
+            color: #2c3e50;
+            font-family: 'Cardo', serif;
+        }
+        .result-count strong {
+            color: #8B3A3A;
+        }
+        
+        /* Container con sidebar e lista */
+        .people-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        /* Sidebar filtri */
+        .filters-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 252, 0.6);
+            border-left: 5px solid #8B3A3A;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            height: fit-content;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
+            position: sticky;
+            top: 20px;
+        }
+        .filters-sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .filters-sidebar::-webkit-scrollbar-track {
+            background: rgba(239, 235, 216, 0.3);
+            border-radius: 2px;
+        }
+        .filters-sidebar::-webkit-scrollbar-thumb {
+            background: #8B3A3A;
+            border-radius: 2px;
+        }
+        .filters-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #6D2D2D;
+        }
+        .filters-sidebar h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #6D2D2D;
+            font-family: 'Cardo', serif;
+            text-align: left;
+            border-bottom: 1px solid rgba(139, 58, 58, 0.2);
+            padding-bottom: 5px;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .filter-group h4 {
+            font-size: 0.85rem;
+            margin: 0 0 10px 0;
+            color: #8B3A3A;
+            font-weight: bold;
+            font-family: 'Cardo', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .filter-option {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 3px 0;
+            font-family: 'Cardo', serif;
+        }
+        .filter-option input[type="checkbox"] {
+            cursor: pointer;
+            margin: 0;
+            accent-color: #8B3A3A;
+        }
+        .filter-option label {
+            cursor: pointer;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #2c3e50;
+        }
+        .filter-option:hover label {
+            color: #8B3A3A;
+        }
+        .filter-count {
+            color: #888;
+            font-size: 12px;
+            justify-self: end;
+        }
+        .show-more {
+            background: none;
+            border: none;
+            color: #8B3A3A;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 5px 0;
+            text-decoration: underline;
+            font-family: 'Cardo', serif;
+        }
+        .show-more:hover {
+            color: #6D2D2D;
+            text-decoration-style: solid;
+        }
+        .clear-btn {
+            width: 100%;
+            padding: 10px;
+            background: #8B3A3A;
+            color: #FDFaf0;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-top: 10px;
+            font-family: 'Cardo', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.2s ease;
+        }
+        .clear-btn:hover {
+            background: #6D2D2D;
+        }
+        
+        /* Lista persone */
+        .people-list {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .person.hidden {
+            display: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .people-container {
+                flex-direction: column;
+            }
+            .filters-sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                max-height: none;
+            }
+            .people-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        // Inizializzazione
+        document.addEventListener('DOMContentLoaded', function() {
+            const peopleCards = document.querySelectorAll('.person');
+            const totalCount = peopleCards.length;
+            
+            // Raccogli tutti i valori per i filtri
+            const filterData = {
+                gender: {},
+                gens: {},
+                origin: {},
+                occupation: {},
+                role: {}
+            };
+            
+            peopleCards.forEach(card => {
+                // Gender
+                const gender = card.getAttribute('data-gender');
+                if (gender) {
+                    const genderLabel = gender === 'm' ? 'Male' : (gender === 'f' ? 'Female' : 'Unknown');
+                    filterData.gender[gender] = (filterData.gender[gender] || 0) + 1;
+                }
+                
+                // Gens
+                const gens = card.getAttribute('data-gens');
+                if (gens) {
+                    gens.split(',').filter(g => g).forEach(g => {
+                        filterData.gens[g] = (filterData.gens[g] || 0) + 1;
+                    });
+                }
+                
+                // Origin
+                const origin = card.getAttribute('data-origin');
+                if (origin) {
+                    origin.split(',').filter(o => o).forEach(o => {
+                        filterData.origin[o] = (filterData.origin[o] || 0) + 1;
+                    });
+                }
+                
+                // Occupation
+                const occupation = card.getAttribute('data-occupation');
+                if (occupation) {
+                    filterData.occupation[occupation] = (filterData.occupation[occupation] || 0) + 1;
+                }
+                
+                // Role
+                const role = card.getAttribute('data-role');
+                if (role) {
+                    role.split(',').filter(r => r).forEach(r => {
+                        filterData.role[r] = (filterData.role[r] || 0) + 1;
+                    });
+                }
+            });
+            
+            // Popola i filtri
+            populateFilter('filterGender', filterData.gender, 'gender');
+            populateFilter('filterGens', filterData.gens, 'gens', 5);
+            populateFilter('filterOrigin', filterData.origin, 'origin', 5);
+            populateFilter('filterOccupation', filterData.occupation, 'occupation');
+            populateFilter('filterRole', filterData.role, 'role', 5);
+            
+            // Funzione per popolare i filtri
+            function populateFilter(containerId, data, attribute, limit = null) {
+                const container = document.getElementById(containerId);
+                const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
+                
+                entries.forEach((([value, count], index) => {
+                    if (limit && index >= limit) {
+                        const option = createFilterOption(value, count, attribute);
+                        option.style.display = 'none';
+                        option.classList.add('extra-option');
+                        container.appendChild(option);
+                    } else {
+                        container.appendChild(createFilterOption(value, count, attribute));
+                    }
+                }));
+                
+                // Gestisci pulsante "show more"
+                if (limit && entries.length > limit) {
+                    const showMoreBtn = document.getElementById('showMore' + containerId.replace('filter', ''));
+                    if (showMoreBtn) {
+                        showMoreBtn.style.display = 'block';
+                        showMoreBtn.addEventListener('click', function() {
+                            container.querySelectorAll('.extra-option').forEach(opt => {
+                                opt.style.display = 'flex';
+                            });
+                            showMoreBtn.style.display = 'none';
+                        });
+                    }
+                }
+            }
+            
+            function createFilterOption(value, count, attribute) {
+                const div = document.createElement('div');
+                div.className = 'filter-option';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `filter_${attribute}_${value}`;
+                checkbox.value = value;
+                checkbox.dataset.attribute = attribute;
+                
+                const label = document.createElement('label');
+                label.htmlFor = checkbox.id;
+                
+                // Formatta label per gender
+                let displayValue = value;
+                if (attribute === 'gender') {
+                    displayValue = value === 'm' ? 'Male' : (value === 'f' ? 'Female' : 'Unknown');
+                }
+                
+                label.textContent = displayValue.charAt(0).toUpperCase() + displayValue.slice(1);
+                
+                const countSpan = document.createElement('span');
+                countSpan.className = 'filter-count';
+                countSpan.textContent = `(${count})`;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                div.appendChild(countSpan);
+                
+                checkbox.addEventListener('change', applyFilters);
+                
+                return div;
+            }
+            
+            // Ricerca per nome
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            searchInput.addEventListener('input', applyFilters);
+            searchBtn.addEventListener('click', applyFilters);
+            
+            // Clear filters
+            document.getElementById('clearFilters').addEventListener('click', function() {
+                document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                });
+                searchInput.value = '';
+                applyFilters();
+            });
+            
+            // Funzione principale di filtraggio
+            function applyFilters() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeFilters = {
+                    gender: [],
+                    gens: [],
+                    origin: [],
+                    occupation: [],
+                    role: []
+                };
+                
+                // Raccogli filtri attivi
+                document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
+                    const attr = cb.dataset.attribute;
+                    activeFilters[attr].push(cb.value);
+                });
+                
+                let visibleCount = 0;
+                
+                peopleCards.forEach(card => {
+                    let visible = true;
+                    
+                    // Filtro ricerca nome
+                    if (searchTerm) {
+                        const name = card.getAttribute('data-name') || '';
+                        if (!name.includes(searchTerm)) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro gender
+                    if (visible && activeFilters.gender.length > 0) {
+                        const gender = card.getAttribute('data-gender');
+                        if (!activeFilters.gender.includes(gender)) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro gens
+                    if (visible && activeFilters.gens.length > 0) {
+                        const gens = (card.getAttribute('data-gens') || '').split(',').filter(g => g);
+                        if (!gens.some(g => activeFilters.gens.includes(g))) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro origin
+                    if (visible && activeFilters.origin.length > 0) {
+                        const origin = (card.getAttribute('data-origin') || '').split(',').filter(o => o);
+                        if (!origin.some(o => activeFilters.origin.includes(o))) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro occupation
+                    if (visible && activeFilters.occupation.length > 0) {
+                        const occupation = card.getAttribute('data-occupation');
+                        if (!activeFilters.occupation.includes(occupation)) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro role
+                    if (visible && activeFilters.role.length > 0) {
+                        const roles = (card.getAttribute('data-role') || '').split(',').filter(r => r);
+                        if (!roles.some(r => activeFilters.role.includes(r))) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Mostra/nascondi card
+                    if (visible) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                // Aggiorna contatore
+                document.getElementById('countCurrent').textContent = visibleCount;
+                document.getElementById('countTotal').textContent = totalCount;
+            }
+        });
+    </script>
+    <footer>
+        <p>Generated via Saxon-Che & GitHub Actions</p>
+        <p>&copy; 2026 - Leonardo Battistella</p>
+        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
+        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
+    </footer>
+</body>
+</html>
