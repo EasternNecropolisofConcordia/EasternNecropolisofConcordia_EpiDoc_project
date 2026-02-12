@@ -34,10 +34,53 @@
     </header>
     <main class="container">
         <h2>People in the Inscriptions</h2>
-        <p>This list is automatically generated from the EpiDoc XML files.</p>
-        <div class="people-list">
+        
+        <div class="search-filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name..." />
+                <button id="searchBtn">🔍</button>
+                <span id="resultCount" class="result-count">Showing: <strong id="countCurrent">61</strong>/<strong id="countTotal">61</strong></span>
+            </div>
+        </div>
+        
+        <div class="people-container">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Gender</h4>
+                    <div class="filter-options" id="filterGender"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Gens</h4>
+                    <div class="filter-options" id="filterGens"></div>
+                    <button class="show-more" id="showMoreGens" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Origin</h4>
+                    <div class="filter-options" id="filterOrigin"></div>
+                    <button class="show-more" id="showMoreOrigin" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Occupation</h4>
+                    <div class="filter-options" id="filterOccupation"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Role</h4>
+                    <div class="filter-options" id="filterRole"></div>
+                    <button class="show-more" id="showMoreRole" style="display:none">+ more</button>
+                </div>
+                
+                <button id="clearFilters" class="clear-btn">Clear all filters</button>
+            </aside>
             
-        <div class="person" id="p_alexander.xml_0">
+            <div class="people-list" id="peopleList">
+                
+        <div class="person" id="p_alexander.xml_0" data-gender="m" data-gens="" data-origin="greek" data-occupation="civil" data-role="deceased" data-relationship="son" data-name="alexander">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Alexander</h3>
@@ -46,7 +89,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="ap_">
+        <div class="person" id="ap_" data-gender="f" data-gens="Aurelia?" data-origin="latin?" data-occupation="civil" data-role="dedicator" data-relationship="grandmother" data-name="ap[---]">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Ap[---]</h3>
@@ -55,7 +98,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="alexandria">
+        <div class="person" id="alexandria" data-gender="f" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="aurelia alexandria">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Aurelia Alexandria</h3>
@@ -64,7 +107,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="dionisia">
+        <div class="person" id="dionisia" data-gender="f" data-gens="Aurelia" data-origin="greek-origin" data-occupation="civil" data-role="deceased" data-relationship="granddaughter" data-name="aurelia dionisia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Aurelia Dionisia</h3>
@@ -73,7 +116,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_iovina.xml_1">
+        <div class="person" id="p_iovina.xml_1" data-gender="f" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="aurelia iovina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Aurelia Iovina</h3>
@@ -82,7 +125,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="severina">
+        <div class="person" id="severina" data-gender="f" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="aurelia severina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Aurelia Severina</h3>
@@ -91,7 +134,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="gaudentius">
+        <div class="person" id="gaudentius" data-gender="m" data-gens="Aurelia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="aurelius gaudentius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Aurelius Gaudentius</h3>
@@ -100,7 +143,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_baicca.xml_0">
+        <div class="person" id="p_baicca.xml_0" data-gender="m" data-gens="" data-origin="illyric" data-occupation="civil?" data-role="dedicatator/deceased" data-relationship="" data-name="baicca">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Baicca</h3>
@@ -109,7 +152,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="bitorta">
+        <div class="person" id="bitorta" data-gender="f" data-gens="" data-origin="celtic" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="bitorta">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Bitorta</h3>
@@ -118,7 +161,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="victorina">
+        <div class="person" id="victorina" data-gender="f" data-gens="Cicria" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="cicria victorina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Cicria Victorina</h3>
@@ -127,7 +170,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="cispia">
+        <div class="person" id="cispia" data-gender="f" data-gens="" data-origin="" data-occupation="civil" data-role="dedicator?" data-relationship="" data-name="cispia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Cispia</h3>
@@ -136,7 +179,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_artemisia.xml_0">
+        <div class="person" id="p_artemisia.xml_0" data-gender="f" data-gens="Claudia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="claudia artemisia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Claudia Artemisia</h3>
@@ -145,7 +188,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="ursus">
+        <div class="person" id="ursus" data-gender="m" data-gens="Cocceia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="cocceius ursus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Cocceius Ursus</h3>
@@ -154,7 +197,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="constantia">
+        <div class="person" id="constantia" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="wife,mother" data-name="constantia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Constantia</h3>
@@ -163,7 +206,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="sabina">
+        <div class="person" id="sabina" data-gender="f" data-gens="Cusica" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="cusica sabina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Cusica Sabina</h3>
@@ -172,7 +215,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="decentia">
+        <div class="person" id="decentia" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="decentia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Decentia</h3>
@@ -181,7 +224,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="apra">
+        <div class="person" id="apra" data-gender="f" data-gens="Aemilia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="emilia apra">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Emilia Apra</h3>
@@ -190,7 +233,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="asteria">
+        <div class="person" id="asteria" data-gender="f" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="dedicator (restoration)" data-relationship="daughter,granddaughter" data-name="ennia asteria">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Ennia Asteria</h3>
@@ -199,7 +242,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="asterius">
+        <div class="person" id="asterius" data-gender="m" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="mentioned" data-relationship="father" data-name="ennius asterius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Ennius Asterius</h3>
@@ -208,7 +251,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="cerealis">
+        <div class="person" id="cerealis" data-gender="m" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="grandfather" data-name="ennius cerealis">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Ennius Cerealis</h3>
@@ -217,7 +260,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_sabina_paccianus.xml_1">
+        <div class="person" id="p_sabina_paccianus.xml_1" data-gender="m" data-gens="Ennia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="husband" data-name="ennius paccianus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Ennius Paccianus</h3>
@@ -226,7 +269,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_eutherius.xml_1">
+        <div class="person" id="p_eutherius.xml_1" data-gender="m" data-gens="" data-origin="oriental" data-occupation="civil" data-role="deceased" data-relationship="son" data-name="eutherius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Eutherius</h3>
@@ -235,7 +278,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="firmina">
+        <div class="person" id="firmina" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="firmina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Firmina</h3>
@@ -244,7 +287,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="flconcordia">
+        <div class="person" id="flconcordia" data-gender="f" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="flavia concordia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Flavia Concordia</h3>
@@ -253,7 +296,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="optata">
+        <div class="person" id="optata" data-gender="f" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="flavia optata">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Flavia Optata</h3>
@@ -262,7 +305,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="ursa">
+        <div class="person" id="ursa" data-gender="f" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="flavia severina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Flavia Severina</h3>
@@ -271,7 +314,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="flaviiservilii">
+        <div class="person" id="flaviiservilii" data-gender="unknown" data-gens="Flavia" data-origin="latin" data-occupation="soldier?" data-role="dedicator" data-relationship="colleague?" data-name="flavii servilii">
             
             <div>
                 <h3>Flavii Servilii</h3>
@@ -280,7 +323,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="alatancus">
+        <div class="person" id="alatancus" data-gender="m" data-gens="Flavia" data-origin="" data-occupation="soldier" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius alatancus">
             <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
             <div>
                 <h3>Flavius Alatancus</h3>
@@ -289,7 +332,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="andia">
+        <div class="person" id="andia" data-gender="m" data-gens="" data-origin="germanic" data-occupation="soldier" data-role="deceased" data-relationship="colleague" data-name="flavius andia">
             <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
             <div>
                 <h3>Flavius Andia</h3>
@@ -298,7 +341,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_eutherius.xml_0">
+        <div class="person" id="p_eutherius.xml_0" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicatator" data-relationship="father" data-name="flavius costantius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Costantius</h3>
@@ -307,7 +350,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="exsuperantius">
+        <div class="person" id="exsuperantius" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="husband,father" data-name="flavius exsuperantius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Exsuperantius</h3>
@@ -316,7 +359,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="felix">
+        <div class="person" id="felix" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius felix">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Felix</h3>
@@ -325,7 +368,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="gidnadius">
+        <div class="person" id="gidnadius" data-gender="m" data-gens="Flavia" data-origin="unknown" data-occupation="soldier" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius gidnadius">
             <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
             <div>
                 <h3>Flavius Gidnadius</h3>
@@ -334,7 +377,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_ligurius_victorina.xml_0">
+        <div class="person" id="p_ligurius_victorina.xml_0" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicatator/deceased" data-relationship="husband" data-name="flavius ligurius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Ligurius</h3>
@@ -343,7 +386,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="martinianus">
+        <div class="person" id="martinianus" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="fabricensis" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius martinianus">
             <img src="../images/silhouette/silhouette_fabricensis.png" alt="silhouette">
             <div>
                 <h3>Flavius Martinianus</h3>
@@ -352,7 +395,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="maximianusiunior">
+        <div class="person" id="maximianusiunior" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="son" data-name="flavius maximianus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Maximianus</h3>
@@ -361,7 +404,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="maximianusmaior">
+        <div class="person" id="maximianusmaior" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="father" data-name="flavius maximianus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Maximianus</h3>
@@ -370,7 +413,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="mercurius">
+        <div class="person" id="mercurius" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="fabricensis" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius mercurius">
             <img src="../images/silhouette/silhouette_fabricensis.png" alt="silhouette">
             <div>
                 <h3>Flavius Mercurius</h3>
@@ -379,7 +422,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_romulianus_tahetis.xml_0">
+        <div class="person" id="p_romulianus_tahetis.xml_0" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="fabricensis" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius romulianus">
             <img src="../images/silhouette/silhouette_fabricensis.png" alt="silhouette">
             <div>
                 <h3>Flavius Romulianus</h3>
@@ -388,7 +431,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="severus">
+        <div class="person" id="severus" data-gender="m" data-gens="Flavia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="flavius severus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Severus</h3>
@@ -397,7 +440,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="sopatrus">
+        <div class="person" id="sopatrus" data-gender="m" data-gens="Flavia" data-origin="unknown" data-occupation="civil" data-role="deceased" data-relationship="husband" data-name="flavius sopatrus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Flavius Sopatrus</h3>
@@ -406,7 +449,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="gerontia">
+        <div class="person" id="gerontia" data-gender="f" data-gens="" data-origin="greek" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="gerontia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Gerontia</h3>
@@ -415,7 +458,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="hermias">
+        <div class="person" id="hermias" data-gender="m" data-gens="" data-origin="grek" data-occupation="civil" data-role="dedicator?" data-relationship="" data-name="hermias">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Hermias</h3>
@@ -424,7 +467,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="felicitas">
+        <div class="person" id="felicitas" data-gender="f" data-gens="" data-origin="germanic,latin" data-occupation="civil" data-role="dedicator" data-relationship="" data-name="ilateuta felicitas">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Ilateuta Felicitas</h3>
@@ -433,7 +476,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_florentius_valeria.xml_1">
+        <div class="person" id="p_florentius_valeria.xml_1" data-gender="f" data-gens="Aurelia,Valeria" data-origin="" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="iulia valeria">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Iulia Valeria</h3>
@@ -442,7 +485,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="lucia">
+        <div class="person" id="lucia" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="lucia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Lucia</h3>
@@ -451,7 +494,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_florentius_valeria.xml_0">
+        <div class="person" id="p_florentius_valeria.xml_0" data-gender="m" data-gens="Ateria" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="husband" data-name="marcus aterius florentius">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Marcus Aterius Florentius</h3>
@@ -460,7 +503,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="marinus">
+        <div class="person" id="marinus" data-gender="m" data-gens="" data-origin="latin" data-occupation="civil" data-role="deceased" data-relationship="son,son" data-name="marinus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Marinus</h3>
@@ -469,7 +512,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="martina">
+        <div class="person" id="martina" data-gender="f" data-gens="" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="martina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Martina</h3>
@@ -478,7 +521,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="numerianus">
+        <div class="person" id="numerianus" data-gender="m" data-gens="" data-origin="latin" data-occupation="functionary" data-role="dedicator/deceased" data-relationship="" data-name="numerianus">
             <img src="../images/silhouette/silhouette_functionary.png" alt="silhouette">
             <div>
                 <h3>Numerianus</h3>
@@ -487,7 +530,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="oppius_marinus">
+        <div class="person" id="oppius_marinus" data-gender="m" data-gens="Oppia" data-origin="latin" data-occupation="" data-role="dedicator/deceased" data-relationship="" data-name="oppius marinus">
             
             <div>
                 <h3>Oppius Marinus</h3>
@@ -496,7 +539,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="otraustaguta">
+        <div class="person" id="otraustaguta" data-gender="m" data-gens="" data-origin="germanic" data-occupation="soldier" data-role="dedicator" data-relationship="colleague" data-name="otraustaguta">
             <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
             <div>
                 <h3>Otraustaguta</h3>
@@ -505,7 +548,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_alexander.xml_1">
+        <div class="person" id="p_alexander.xml_1" data-gender="f" data-gens="" data-origin="jewish" data-occupation="civil" data-role="dedicator/deceased" data-relationship="mother" data-name="sabbatia">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Sabbatia</h3>
@@ -514,7 +557,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="saturninus">
+        <div class="person" id="saturninus" data-gender="m" data-gens="" data-origin="latin" data-occupation="functionary" data-role="dedicator/deceased" data-relationship="" data-name="saturninus">
             <img src="../images/silhouette/silhouette_functionary.png" alt="silhouette">
             <div>
                 <h3>Saturninus</h3>
@@ -523,7 +566,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="suandacca">
+        <div class="person" id="suandacca" data-gender="f" data-gens="" data-origin="celtic" data-occupation="civil" data-role="dedicator" data-relationship="wife" data-name="suandacca">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Suandacca</h3>
@@ -532,7 +575,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_romulianus_tahetis.xml_1">
+        <div class="person" id="p_romulianus_tahetis.xml_1" data-gender="f" data-gens="" data-origin="egyptian" data-occupation="civil" data-role="deceased" data-relationship="wife" data-name="tahetis">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Tahetis</h3>
@@ -541,7 +584,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_iovina.xml_0">
+        <div class="person" id="p_iovina.xml_0" data-gender="m" data-gens="Turrania" data-origin="latin" data-occupation="civil" data-role="dedicator" data-relationship="husband" data-name="turranius honoratus">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Turranius Honoratus</h3>
@@ -550,7 +593,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="peregrina">
+        <div class="person" id="peregrina" data-gender="f" data-gens="Valeria" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="" data-name="valeria peregrina">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Valeria Peregrina</h3>
@@ -559,7 +602,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="vassio">
+        <div class="person" id="vassio" data-gender="m" data-gens="" data-origin="celtic" data-occupation="soldier" data-role="deceased" data-relationship="husband" data-name="vassio">
             <img src="../images/silhouette/silhouette_soldier.png" alt="silhouette">
             <div>
                 <h3>Vassio</h3>
@@ -568,7 +611,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="vitaliana">
+        <div class="person" id="vitaliana" data-gender="f" data-gens="Vettia" data-origin="latin" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="vettia vitaliana">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Vettia Vitaliana</h3>
@@ -577,7 +620,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="Εἰνάχιος">
+        <div class="person" id="Εἰνάχιος" data-gender="m" data-gens="" data-origin="greek" data-occupation="civil" data-role="deceased" data-relationship="" data-name="εἰνάχιος">
             <img src="../images/silhouette/silhouette_civil.png" alt="silhouette">
             <div>
                 <h3>Εἰνάχιος</h3>
@@ -586,8 +629,393 @@
                 </dl>
             </div>
         </div>
+            </div>
         </div>
     </main>
+    <style>
+        /* Search and filter section */
+        .search-filter-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #searchInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        #searchBtn {
+            padding: 10px 20px;
+            background: #2c5f2d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #searchBtn:hover {
+            background: #1e4620;
+        }
+        .result-count {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        /* Container con sidebar e lista */
+        .people-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        /* Sidebar filtri */
+        .filters-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .filters-sidebar h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #2c5f2d;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .filter-group h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #333;
+            font-weight: 600;
+        }
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 3px 0;
+        }
+        .filter-option input[type="checkbox"] {
+            cursor: pointer;
+        }
+        .filter-option label {
+            cursor: pointer;
+            flex: 1;
+        }
+        .filter-count {
+            color: #888;
+            font-size: 12px;
+        }
+        .show-more {
+            background: none;
+            border: none;
+            color: #2c5f2d;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 5px 0;
+            text-decoration: underline;
+        }
+        .show-more:hover {
+            color: #1e4620;
+        }
+        .clear-btn {
+            width: 100%;
+            padding: 10px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .clear-btn:hover {
+            background: #b71c1c;
+        }
+        
+        /* Lista persone */
+        .people-list {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .person {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+        .person.hidden {
+            display: none;
+        }
+        .person:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .people-container {
+                flex-direction: column;
+            }
+            .filters-sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+            .people-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        // Inizializzazione
+        document.addEventListener('DOMContentLoaded', function() {
+            const peopleCards = document.querySelectorAll('.person');
+            const totalCount = peopleCards.length;
+            
+            // Raccogli tutti i valori per i filtri
+            const filterData = {
+                gender: {},
+                gens: {},
+                origin: {},
+                occupation: {},
+                role: {}
+            };
+            
+            peopleCards.forEach(card => {
+                // Gender
+                const gender = card.getAttribute('data-gender');
+                if (gender) {
+                    const genderLabel = gender === 'm' ? 'Male' : (gender === 'f' ? 'Female' : 'Unknown');
+                    filterData.gender[gender] = (filterData.gender[gender] || 0) + 1;
+                }
+                
+                // Gens
+                const gens = card.getAttribute('data-gens');
+                if (gens) {
+                    gens.split(',').filter(g => g).forEach(g => {
+                        filterData.gens[g] = (filterData.gens[g] || 0) + 1;
+                    });
+                }
+                
+                // Origin
+                const origin = card.getAttribute('data-origin');
+                if (origin) {
+                    origin.split(',').filter(o => o).forEach(o => {
+                        filterData.origin[o] = (filterData.origin[o] || 0) + 1;
+                    });
+                }
+                
+                // Occupation
+                const occupation = card.getAttribute('data-occupation');
+                if (occupation) {
+                    filterData.occupation[occupation] = (filterData.occupation[occupation] || 0) + 1;
+                }
+                
+                // Role
+                const role = card.getAttribute('data-role');
+                if (role) {
+                    role.split(',').filter(r => r).forEach(r => {
+                        filterData.role[r] = (filterData.role[r] || 0) + 1;
+                    });
+                }
+            });
+            
+            // Popola i filtri
+            populateFilter('filterGender', filterData.gender, 'gender');
+            populateFilter('filterGens', filterData.gens, 'gens', 5);
+            populateFilter('filterOrigin', filterData.origin, 'origin', 5);
+            populateFilter('filterOccupation', filterData.occupation, 'occupation');
+            populateFilter('filterRole', filterData.role, 'role', 5);
+            
+            // Funzione per popolare i filtri
+            function populateFilter(containerId, data, attribute, limit = null) {
+                const container = document.getElementById(containerId);
+                const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
+                
+                entries.forEach((([value, count], index) => {
+                    if (limit && index >= limit) {
+                        const option = createFilterOption(value, count, attribute);
+                        option.style.display = 'none';
+                        option.classList.add('extra-option');
+                        container.appendChild(option);
+                    } else {
+                        container.appendChild(createFilterOption(value, count, attribute));
+                    }
+                }));
+                
+                // Gestisci pulsante "show more"
+                if (limit && entries.length > limit) {
+                    const showMoreBtn = document.getElementById('showMore' + containerId.replace('filter', ''));
+                    if (showMoreBtn) {
+                        showMoreBtn.style.display = 'block';
+                        showMoreBtn.addEventListener('click', function() {
+                            container.querySelectorAll('.extra-option').forEach(opt => {
+                                opt.style.display = 'flex';
+                            });
+                            showMoreBtn.style.display = 'none';
+                        });
+                    }
+                }
+            }
+            
+            function createFilterOption(value, count, attribute) {
+                const div = document.createElement('div');
+                div.className = 'filter-option';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `filter_${attribute}_${value}`;
+                checkbox.value = value;
+                checkbox.dataset.attribute = attribute;
+                
+                const label = document.createElement('label');
+                label.htmlFor = checkbox.id;
+                
+                // Formatta label per gender
+                let displayValue = value;
+                if (attribute === 'gender') {
+                    displayValue = value === 'm' ? 'Male' : (value === 'f' ? 'Female' : 'Unknown');
+                }
+                
+                label.textContent = displayValue.charAt(0).toUpperCase() + displayValue.slice(1);
+                
+                const countSpan = document.createElement('span');
+                countSpan.className = 'filter-count';
+                countSpan.textContent = `(${count})`;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                div.appendChild(countSpan);
+                
+                checkbox.addEventListener('change', applyFilters);
+                
+                return div;
+            }
+            
+            // Ricerca per nome
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            searchInput.addEventListener('input', applyFilters);
+            searchBtn.addEventListener('click', applyFilters);
+            
+            // Clear filters
+            document.getElementById('clearFilters').addEventListener('click', function() {
+                document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                });
+                searchInput.value = '';
+                applyFilters();
+            });
+            
+            // Funzione principale di filtraggio
+            function applyFilters() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeFilters = {
+                    gender: [],
+                    gens: [],
+                    origin: [],
+                    occupation: [],
+                    role: []
+                };
+                
+                // Raccogli filtri attivi
+                document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
+                    const attr = cb.dataset.attribute;
+                    activeFilters[attr].push(cb.value);
+                });
+                
+                let visibleCount = 0;
+                
+                peopleCards.forEach(card => {
+                    let visible = true;
+                    
+                    // Filtro ricerca nome
+                    if (searchTerm) {
+                        const name = card.getAttribute('data-name') || '';
+                        if (!name.includes(searchTerm)) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro gender
+                    if (visible && activeFilters.gender.length > 0) {
+                        const gender = card.getAttribute('data-gender');
+                        if (!activeFilters.gender.includes(gender)) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro gens
+                    if (visible && activeFilters.gens.length > 0) {
+                        const gens = (card.getAttribute('data-gens') || '').split(',').filter(g => g);
+                        if (!gens.some(g => activeFilters.gens.includes(g))) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro origin
+                    if (visible && activeFilters.origin.length > 0) {
+                        const origin = (card.getAttribute('data-origin') || '').split(',').filter(o => o);
+                        if (!origin.some(o => activeFilters.origin.includes(o))) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro occupation
+                    if (visible && activeFilters.occupation.length > 0) {
+                        const occupation = card.getAttribute('data-occupation');
+                        if (!activeFilters.occupation.includes(occupation)) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Filtro role
+                    if (visible && activeFilters.role.length > 0) {
+                        const roles = (card.getAttribute('data-role') || '').split(',').filter(r => r);
+                        if (!roles.some(r => activeFilters.role.includes(r))) {
+                            visible = false;
+                        }
+                    }
+                    
+                    // Mostra/nascondi card
+                    if (visible) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                // Aggiorna contatore
+                document.getElementById('countCurrent').textContent = visibleCount;
+                document.getElementById('countTotal').textContent = totalCount;
+            }
+        });
+    </script>
     <footer>
         <p>Generated via Saxon-Che & GitHub Actions</p>
         <p>&copy; 2026 - Leonardo Battistella</p>
