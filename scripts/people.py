@@ -75,14 +75,23 @@ def run():
                         # ID - usa namespace-uri nell'XPath
                         p_id = None
                         try:
-                            # Usa namespace-uri e local-name per trovare xml:id
+                            # Test 1: Vediamo se ci sono attributi
+                            all_attrs = xpath_processor.evaluate("@*")
+                            if all_attrs and all_attrs.size > 0:
+                                print(f"  File {filename}, persona {i} ha {all_attrs.size} attributi")
+                                for idx in range(all_attrs.size):
+                                    attr = all_attrs.item_at(idx)
+                                    print(f"    Attributo {idx}: {attr.string_value if hasattr(attr, 'string_value') else str(attr)}")
+                            
+                            # Test 2: Prova namespace-uri
                             id_result = xpath_processor.evaluate('string(@*[namespace-uri()="http://www.w3.org/XML/1998/namespace" and local-name()="id"])')
                             if id_result and hasattr(id_result, 'string_value'):
                                 p_id_value = id_result.string_value.strip()
+                                print(f"    XPath namespace-uri result: '{p_id_value}'")
                                 if p_id_value and p_id_value != "":
                                     p_id = p_id_value
                         except Exception as e:
-                            print(f"  Errore leggendo xml:id: {e}")
+                            print(f"  ERRORE leggendo xml:id: {e}")
                         
                         # Fallback: genera ID automatico
                         if not p_id:
