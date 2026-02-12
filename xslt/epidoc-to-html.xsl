@@ -870,7 +870,7 @@
             <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
             <xsl:when test="@ref = '#cross'">†</xsl:when>
             <xsl:when test="@ref = '#hedera'">❧</xsl:when>
-            <xsl:otherwise>[<xsl:value-of select="substring-after(@ref, '#')"/>]</xsl:otherwise>
+            <xsl:otherwise>((<xsl:value-of select="substring-after(@ref, '#')"/>))</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
@@ -1021,8 +1021,7 @@
             <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
             <xsl:when test="@ref = '#cross'">†</xsl:when>
             <xsl:when test="@ref = '#hedera'">❧</xsl:when>
-            <xsl:otherwise>[<xsl:value-of select="upper-case(substring-after(@ref, '#'))"
-                />]</xsl:otherwise>
+            <xsl:otherwise>((<xsl:value-of select="upper-case(substring-after(@ref, '#'))"/>))</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
