@@ -246,34 +246,40 @@ def run():
         
         # Nomi
         for name in p['names']:
-            dl_content += f"<dt>{name['type']}</dt><dd>{name['value']}</dd>"
+            dl_content += f"<dt>{name['type'].upper()}</dt><dd>{name['value']}</dd>"
             if name['type'] == 'cognomen' and name['nymref']:
-                dl_content += f"<dt>ORIGIN (of the cognomen {name['value']})</dt><dd>{name['nymref']}</dd>"
+                dl_content += f"<dt>ORIGIN (OF THE COGNOMEN {name['value']})</dt><dd>{name['nymref']}</dd>"
         
         # Gender
         gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
-        dl_content += f"<dt>gender</dt><dd>{gender_display}</dd>"
+        dl_content += f"<dt>GENDER</dt><dd>{gender_display}</dd>"
         
         # Notes (occupation, role, relationship)
         for note in p['notes']:
-            dl_content += f"<dt>{note['type']}</dt><dd>{note['value']}</dd>"
+            note_type_upper = note['type'].upper()
+            
+            # Se è una relationship con corresp, crea il link
+            if note['type'] == 'relationship' and note['corresp']:
+                corresp_id = note['corresp'].replace('#', '')
+                corresp_name = people_names.get(corresp_id, corresp_id)
+                dl_content += f"<dt>{note_type_upper}</dt><dd>{note['value']} (→ <a href=\"#{corresp_id}\">{corresp_name}</a>)</dd>"
+            else:
+                dl_content += f"<dt>{note_type_upper}</dt><dd>{note['value']}</dd>"
         
         # Inscriptions
         links_str = " - ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
-        dl_content += f"<dt>inscription(s)</dt><dd>{links_str}</dd>"
+        dl_content += f"<dt>INSCRIPTION(S)</dt><dd>{links_str}</dd>"
         
         cards += f"""
         <div class="person" id="{p['id']}" {data_attrs_str}>
             {img_html}
-            <div>
-                <h3>{p['name']}</h3>
-                <dl>
-                    {dl_content}
-                </dl>
-            </div>
+            <h3>{p['name']}</h3>
+            <dl>
+                {dl_content}
+            </dl>
         </div>"""
 
-    # Template HTML
+    # Template HTML completo con CSS e JavaScript inline
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -805,3 +811,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+        
