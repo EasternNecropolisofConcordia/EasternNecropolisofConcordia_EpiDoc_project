@@ -467,7 +467,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="felicitas" data-gender="f" data-gens="" data-origin="germanic,latin" data-occupation="civil" data-role="dedicator" data-relationship="" data-name="ilateuta felicitas">
+        <div class="person" id="felicitas" data-gender="f" data-gens="" data-origin="latin,germanic" data-occupation="civil" data-role="dedicator" data-relationship="" data-name="ilateuta felicitas">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Ilateuta Felicitas</h3>
@@ -476,7 +476,7 @@
                 </dl>
             </div>
         </div>
-        <div class="person" id="p_florentius_valeria.xml_1" data-gender="f" data-gens="Aurelia,Valeria" data-origin="" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="iulia valeria">
+        <div class="person" id="p_florentius_valeria.xml_1" data-gender="f" data-gens="Valeria,Aurelia" data-origin="" data-occupation="civil" data-role="dedicator/deceased" data-relationship="wife" data-name="iulia valeria">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <div>
                 <h3>Iulia Valeria</h3>
@@ -683,8 +683,24 @@
             padding: 15px;
             border-radius: 5px;
             height: fit-content;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
             position: sticky;
             top: 20px;
+        }
+        .filters-sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .filters-sidebar::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 4px;
+        }
+        .filters-sidebar::-webkit-scrollbar-thumb {
+            background: #2c5f2d;
+            border-radius: 4px;
+        }
+        .filters-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #1e4620;
         }
         .filters-sidebar h3 {
             margin-top: 0;
@@ -707,7 +723,8 @@
             gap: 5px;
         }
         .filter-option {
-            display: flex;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
             align-items: center;
             gap: 8px;
             font-size: 13px;
@@ -716,14 +733,19 @@
         }
         .filter-option input[type="checkbox"] {
             cursor: pointer;
+            margin: 0;
         }
         .filter-option label {
             cursor: pointer;
-            flex: 1;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .filter-count {
             color: #888;
             font-size: 12px;
+            justify-self: end;
         }
         .show-more {
             background: none;
