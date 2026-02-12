@@ -23,7 +23,7 @@
 
                 <!-- METADATA SECTION -->
                 <div class="metadata">
-                    <h2>METADATA</h2>
+                    <h2>INSCRIPTION DETAILS</h2>
                     <div class="metadata-grid">
                         <div class="repository">
                             <h3>Current Location</h3>
