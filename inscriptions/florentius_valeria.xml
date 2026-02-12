@@ -139,8 +139,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="maflorentius">
+               <person xml:id="maflorentius">
+                   <persName>
                        <name type="full">Marcus Aterius Florentius</name>
                        <name type="praenomen">Marcus</name>
                        <name type="nomen">Aterius</name>
@@ -152,8 +152,8 @@
                    <note type="role">dedicator/deceased</note>
                    <note type="relationship" corresp="#valeria">husband</note>
                </person>
-               <person>
-                   <persName xml:id="valeria">
+               <person xml:id="valeria">
+                   <persName>
                        <name type="full">Iulia Valeria</name>
                        <name type="nomen">Iulia</name>
                        <name type="nomen">Valeria</name>
