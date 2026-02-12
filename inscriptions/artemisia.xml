@@ -66,8 +66,8 @@
                                     Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
                                 </name>
                             </orgName>
-                            <note type="observed" xml:lang="en">Now preserved in the <seg type="location" xml:lang="en">storage facilities</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese in Portogruaro</orgName>.</note>
-                            <note type="observed" xml:lang="it">Si conserva nel <seg type="location" xml:lang="it">deposito</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese in Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="en">Now preserved in the <seg type="location" xml:lang="en">storage facilities</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese in Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva nel <seg type="location" xml:lang="it">deposito</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese in Portogruaro</orgName>.</note>
                             <date type="autopsy">2024</date>
                         </provenance>
                     </history>
@@ -148,8 +148,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="artemisia">
+               <person xml:id="artemisia">
+                   <persName>
                        <name type="full">Claudia Artemisia</name>
                        <name type="nomen">Claudia</name>
                        <name type="cognomen" nymRef="latin">Artemisia</name>
