@@ -202,6 +202,40 @@ def run():
     for pid in sorted(people_data.keys(), key=lambda x: people_data[x]['name']):
         p = people_data[pid]
         
+        # Prepara attributi data-* per filtri JavaScript
+        data_attrs = []
+        data_attrs.append(f'data-gender="{p["gender"]}"')
+        
+        # Raccogli tutti i valori per i filtri
+        gens_set = set()
+        origin_set = set()
+        occupation_val = ""
+        role_vals = []
+        relationship_vals = []
+        
+        for name in p['names']:
+            if name['type'] == 'gens' and name['value']:
+                gens_set.add(name['value'])
+            if name['type'] == 'cognomen' and name.get('nymref'):
+                origin_set.add(name['nymref'])
+        
+        for note in p['notes']:
+            if note['type'] == 'occupation':
+                occupation_val = note['value']
+            elif note['type'] == 'role':
+                role_vals.append(note['value'])
+            elif note['type'] == 'relationship':
+                relationship_vals.append(note['value'])
+        
+        data_attrs.append(f'data-gens="{",".join(gens_set)}"')
+        data_attrs.append(f'data-origin="{",".join(origin_set)}"')
+        data_attrs.append(f'data-occupation="{occupation_val}"')
+        data_attrs.append(f'data-role="{",".join(role_vals)}"')
+        data_attrs.append(f'data-relationship="{",".join(relationship_vals)}"')
+        data_attrs.append(f'data-name="{p["name"].lower()}"')
+        
+        data_attrs_str = " ".join(data_attrs)
+        
         # Immagine
         img_html = ""
         if p['img']:
@@ -243,7 +277,7 @@ def run():
         dl_content += f"<dt>inscription(s)</dt><dd>{links_str}</dd>"
         
         cards += f"""
-        <div class="person" id="{p['id']}">
+        <div class="person" id="{p['id']}" {data_attrs_str}>
             {img_html}
             <div>
                 <h3>{p['name']}</h3>
@@ -290,11 +324,439 @@ def run():
     </header>
     <main class="container">
         <h2>People in the Inscriptions</h2>
-        <p>This list is automatically generated from the EpiDoc XML files.</p>
-        <div class="people-list">
-            {cards if cards else "<p>No people found.</p>"}
+        
+        <div class="search-filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name..." />
+                <button id="searchBtn">🔍</button>
+                <span id="resultCount" class="result-count">Showing: <strong id="countCurrent">{len(people_data)}</strong>/<strong id="countTotal">{len(people_data)}</strong></span>
+            </div>
+        </div>
+        
+        <div class="people-container">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Gender</h4>
+                    <div class="filter-options" id="filterGender"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Gens</h4>
+                    <div class="filter-options" id="filterGens"></div>
+                    <button class="show-more" id="showMoreGens" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Origin</h4>
+                    <div class="filter-options" id="filterOrigin"></div>
+                    <button class="show-more" id="showMoreOrigin" style="display:none">+ more</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Occupation</h4>
+                    <div class="filter-options" id="filterOccupation"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Role</h4>
+                    <div class="filter-options" id="filterRole"></div>
+                    <button class="show-more" id="showMoreRole" style="display:none">+ more</button>
+                </div>
+                
+                <button id="clearFilters" class="clear-btn">Clear all filters</button>
+            </aside>
+            
+            <div class="people-list" id="peopleList">
+                {cards if cards else "<p>No people found.</p>"}
+            </div>
         </div>
     </main>
+    <style>
+        /* Search and filter section */
+        .search-filter-section {{
+            margin: 20px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }}
+        .search-box {{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }}
+        #searchInput {{
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }}
+        #searchBtn {{
+            padding: 10px 20px;
+            background: #2c5f2d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }}
+        #searchBtn:hover {{
+            background: #1e4620;
+        }}
+        .result-count {{
+            font-size: 14px;
+            color: #555;
+        }}
+        
+        /* Container con sidebar e lista */
+        .people-container {{
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }}
+        
+        /* Sidebar filtri */
+        .filters-sidebar {{
+            width: 250px;
+            flex-shrink: 0;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }}
+        .filters-sidebar h3 {{
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #2c5f2d;
+        }}
+        .filter-group {{
+            margin-bottom: 20px;
+        }}
+        .filter-group h4 {{
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #333;
+            font-weight: 600;
+        }}
+        .filter-options {{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }}
+        .filter-option {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 3px 0;
+        }}
+        .filter-option input[type="checkbox"] {{
+            cursor: pointer;
+        }}
+        .filter-option label {{
+            cursor: pointer;
+            flex: 1;
+        }}
+        .filter-count {{
+            color: #888;
+            font-size: 12px;
+        }}
+        .show-more {{
+            background: none;
+            border: none;
+            color: #2c5f2d;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 5px 0;
+            text-decoration: underline;
+        }}
+        .show-more:hover {{
+            color: #1e4620;
+        }}
+        .clear-btn {{
+            width: 100%;
+            padding: 10px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-top: 10px;
+        }}
+        .clear-btn:hover {{
+            background: #b71c1c;
+        }}
+        
+        /* Lista persone */
+        .people-list {{
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }}
+        .person {{
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            transition: all 0.3s;
+        }}
+        .person.hidden {{
+            display: none;
+        }}
+        .person:hover {{
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }}
+        
+        /* Responsive */
+        @media (max-width: 768px) {{
+            .people-container {{
+                flex-direction: column;
+            }}
+            .filters-sidebar {{
+                width: 100%;
+                position: relative;
+                top: 0;
+            }}
+            .people-list {{
+                grid-template-columns: 1fr;
+            }}
+        }}
+    </style>
+    <script>
+        // Inizializzazione
+        document.addEventListener('DOMContentLoaded', function() {{
+            const peopleCards = document.querySelectorAll('.person');
+            const totalCount = peopleCards.length;
+            
+            // Raccogli tutti i valori per i filtri
+            const filterData = {{
+                gender: {{}},
+                gens: {{}},
+                origin: {{}},
+                occupation: {{}},
+                role: {{}}
+            }};
+            
+            peopleCards.forEach(card => {{
+                // Gender
+                const gender = card.getAttribute('data-gender');
+                if (gender) {{
+                    const genderLabel = gender === 'm' ? 'Male' : (gender === 'f' ? 'Female' : 'Unknown');
+                    filterData.gender[gender] = (filterData.gender[gender] || 0) + 1;
+                }}
+                
+                // Gens
+                const gens = card.getAttribute('data-gens');
+                if (gens) {{
+                    gens.split(',').filter(g => g).forEach(g => {{
+                        filterData.gens[g] = (filterData.gens[g] || 0) + 1;
+                    }});
+                }}
+                
+                // Origin
+                const origin = card.getAttribute('data-origin');
+                if (origin) {{
+                    origin.split(',').filter(o => o).forEach(o => {{
+                        filterData.origin[o] = (filterData.origin[o] || 0) + 1;
+                    }});
+                }}
+                
+                // Occupation
+                const occupation = card.getAttribute('data-occupation');
+                if (occupation) {{
+                    filterData.occupation[occupation] = (filterData.occupation[occupation] || 0) + 1;
+                }}
+                
+                // Role
+                const role = card.getAttribute('data-role');
+                if (role) {{
+                    role.split(',').filter(r => r).forEach(r => {{
+                        filterData.role[r] = (filterData.role[r] || 0) + 1;
+                    }});
+                }}
+            }});
+            
+            // Popola i filtri
+            populateFilter('filterGender', filterData.gender, 'gender');
+            populateFilter('filterGens', filterData.gens, 'gens', 5);
+            populateFilter('filterOrigin', filterData.origin, 'origin', 5);
+            populateFilter('filterOccupation', filterData.occupation, 'occupation');
+            populateFilter('filterRole', filterData.role, 'role', 5);
+            
+            // Funzione per popolare i filtri
+            function populateFilter(containerId, data, attribute, limit = null) {{
+                const container = document.getElementById(containerId);
+                const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
+                
+                entries.forEach((([value, count], index) => {{
+                    if (limit && index >= limit) {{
+                        const option = createFilterOption(value, count, attribute);
+                        option.style.display = 'none';
+                        option.classList.add('extra-option');
+                        container.appendChild(option);
+                    }} else {{
+                        container.appendChild(createFilterOption(value, count, attribute));
+                    }}
+                }}));
+                
+                // Gestisci pulsante "show more"
+                if (limit && entries.length > limit) {{
+                    const showMoreBtn = document.getElementById('showMore' + containerId.replace('filter', ''));
+                    if (showMoreBtn) {{
+                        showMoreBtn.style.display = 'block';
+                        showMoreBtn.addEventListener('click', function() {{
+                            container.querySelectorAll('.extra-option').forEach(opt => {{
+                                opt.style.display = 'flex';
+                            }});
+                            showMoreBtn.style.display = 'none';
+                        }});
+                    }}
+                }}
+            }}
+            
+            function createFilterOption(value, count, attribute) {{
+                const div = document.createElement('div');
+                div.className = 'filter-option';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `filter_${{attribute}}_${{value}}`;
+                checkbox.value = value;
+                checkbox.dataset.attribute = attribute;
+                
+                const label = document.createElement('label');
+                label.htmlFor = checkbox.id;
+                
+                // Formatta label per gender
+                let displayValue = value;
+                if (attribute === 'gender') {{
+                    displayValue = value === 'm' ? 'Male' : (value === 'f' ? 'Female' : 'Unknown');
+                }}
+                
+                label.textContent = displayValue.charAt(0).toUpperCase() + displayValue.slice(1);
+                
+                const countSpan = document.createElement('span');
+                countSpan.className = 'filter-count';
+                countSpan.textContent = `(${{count}})`;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                div.appendChild(countSpan);
+                
+                checkbox.addEventListener('change', applyFilters);
+                
+                return div;
+            }}
+            
+            // Ricerca per nome
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            searchInput.addEventListener('input', applyFilters);
+            searchBtn.addEventListener('click', applyFilters);
+            
+            // Clear filters
+            document.getElementById('clearFilters').addEventListener('click', function() {{
+                document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(cb => {{
+                    cb.checked = false;
+                }});
+                searchInput.value = '';
+                applyFilters();
+            }});
+            
+            // Funzione principale di filtraggio
+            function applyFilters() {{
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeFilters = {{
+                    gender: [],
+                    gens: [],
+                    origin: [],
+                    occupation: [],
+                    role: []
+                }};
+                
+                // Raccogli filtri attivi
+                document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {{
+                    const attr = cb.dataset.attribute;
+                    activeFilters[attr].push(cb.value);
+                }});
+                
+                let visibleCount = 0;
+                
+                peopleCards.forEach(card => {{
+                    let visible = true;
+                    
+                    // Filtro ricerca nome
+                    if (searchTerm) {{
+                        const name = card.getAttribute('data-name') || '';
+                        if (!name.includes(searchTerm)) {{
+                            visible = false;
+                        }}
+                    }}
+                    
+                    // Filtro gender
+                    if (visible && activeFilters.gender.length > 0) {{
+                        const gender = card.getAttribute('data-gender');
+                        if (!activeFilters.gender.includes(gender)) {{
+                            visible = false;
+                        }}
+                    }}
+                    
+                    // Filtro gens
+                    if (visible && activeFilters.gens.length > 0) {{
+                        const gens = (card.getAttribute('data-gens') || '').split(',').filter(g => g);
+                        if (!gens.some(g => activeFilters.gens.includes(g))) {{
+                            visible = false;
+                        }}
+                    }}
+                    
+                    // Filtro origin
+                    if (visible && activeFilters.origin.length > 0) {{
+                        const origin = (card.getAttribute('data-origin') || '').split(',').filter(o => o);
+                        if (!origin.some(o => activeFilters.origin.includes(o))) {{
+                            visible = false;
+                        }}
+                    }}
+                    
+                    // Filtro occupation
+                    if (visible && activeFilters.occupation.length > 0) {{
+                        const occupation = card.getAttribute('data-occupation');
+                        if (!activeFilters.occupation.includes(occupation)) {{
+                            visible = false;
+                        }}
+                    }}
+                    
+                    // Filtro role
+                    if (visible && activeFilters.role.length > 0) {{
+                        const roles = (card.getAttribute('data-role') || '').split(',').filter(r => r);
+                        if (!roles.some(r => activeFilters.role.includes(r))) {{
+                            visible = false;
+                        }}
+                    }}
+                    
+                    // Mostra/nascondi card
+                    if (visible) {{
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    }} else {{
+                        card.classList.add('hidden');
+                    }}
+                }});
+                
+                // Aggiorna contatore
+                document.getElementById('countCurrent').textContent = visibleCount;
+                document.getElementById('countTotal').textContent = totalCount;
+            }}
+        }});
+    </script>
     <footer>
         <p>Generated via Saxon-Che & GitHub Actions</p>
         <p>&copy; 2026 - Leonardo Battistella</p>
