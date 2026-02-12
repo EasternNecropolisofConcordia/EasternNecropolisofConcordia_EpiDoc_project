@@ -318,18 +318,17 @@
                         <dt>Letters Height</dt>
                         <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/></dd>
                     </dl>
+                    <details class="palaeography">
+                        <summary><h3>Palaeographic comment</h3></summary>
+                        <xsl:for-each
+                            select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
+                            <p>
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </p>
+                        </xsl:for-each>
+                    </details>
                 </div>
-
-                <!-- PALAEOGRAPHIC COMMENT -->
-                <details class="palaeography">
-                    <summary><h2>PALAEOGRAPHIC COMMENT</h2></summary>
-                    <xsl:for-each
-                        select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
-                        <p>
-                            <xsl:value-of select="normalize-space(.)"/>
-                        </p>
-                    </xsl:for-each>
-                </details>
+                
 
                 <!-- IMAGES -->
                 <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
@@ -352,15 +351,6 @@
                     </xsl:for-each>
                 </div>
 
-                <!-- TRANSLATION -->
-                <details class="translation">
-                    <summary><h2>TRANSLATION</h2></summary>
-                    <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = 'en']/tei:p">
-                        <p>
-                            <xsl:apply-templates/>
-                        </p>
-                    </xsl:for-each>
-                </details>
 
                 <!-- APPARATUS CRITICUS -->
                 <xsl:if test="//tei:div[@type = 'apparatus']/tei:listApp/tei:app">
@@ -430,6 +420,26 @@
                         </xsl:for-each>
                     </div>
                 </xsl:if>
+                
+                <!-- TRANSLATION -->
+                <details class="translation">
+                    <summary><h2>TRANSLATION</h2></summary>
+                    <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = 'en']/tei:p">
+                        <p>
+                            <xsl:apply-templates/>
+                        </p>
+                    </xsl:for-each>
+                </details>
+                
+                <!-- COMMENTARY -->
+                <details class="commentary">
+                    <summary><h2>COMMENTARY</h2></summary>
+                    <xsl:for-each select="//tei:div[@type = 'commentary'][@xml:lang = 'en']/tei:p">
+                        <p>
+                            <xsl:apply-templates/>
+                        </p>
+                    </xsl:for-each>
+                </details>
 
                 <!-- PEOPLE SECTION -->
                 <div class="people">
