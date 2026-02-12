@@ -29,15 +29,15 @@ def run():
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 idno_item = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]")
                 
-                # Usiamo .string_value per ottenere il testo contenuto nel tag
-                if title_item is not None:
-                    display_title = title_item.string_value.strip()
+                # Usa .item_at(0) per Saxon-Che (collections, non singoli valori)
+                if title_item is not None and title_item.size > 0:
+                    display_title = title_item.item_at(0).string_value.strip()
                 else:
                     display_title = filename
 
                 # Determiniamo il link
-                if idno_item is not None:
-                    target_link = "inscriptions/" + idno_item.string_value.strip().replace('.xml', '.html')
+                if idno_item is not None and idno_item.size > 0:
+                    target_link = "inscriptions/" + idno_item.item_at(0).string_value.strip().replace('.xml', '.html')
                 else:
                     target_link = "inscriptions/" + filename.replace('.xml', '.html')
                 
@@ -101,7 +101,7 @@ def run():
         <p>Generated via Saxon-Che & GitHub Actions</p>
         <p>&copy; 2026 - Leonardo Battistella</p>
         <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
-        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca’ Foscari University of Venice.</p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
         <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
     </footer>
 </body>
