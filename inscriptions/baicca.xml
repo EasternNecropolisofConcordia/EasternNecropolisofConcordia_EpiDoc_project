@@ -167,8 +167,8 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person>
-                   <persName xml:id="baicca">
+               <person xml:id="baicca">
+                   <persName>
                        <name type="full">Baicca</name>
                        <name type="cognomen" nymRef="illyric">Baicca</name>
                    </persName>
