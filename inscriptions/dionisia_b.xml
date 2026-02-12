@@ -163,7 +163,7 @@
                    <persName>
                        <name type="full">Aurelia Dionisia</name>
                        <name type="nomen">Aurelia</name>
-                       <name type="cognomen" nymRef="greek-origin">Dionisia</name>
+                       <name type="cognomen" nymRef="greek">Dionisia</name>
                        <name type="gens">Aurelia</name>
                    </persName>
                    <gender>f</gender>
