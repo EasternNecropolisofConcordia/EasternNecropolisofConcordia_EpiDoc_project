@@ -378,8 +378,9 @@ def run():
         .search-filter-section {{
             margin: 20px 0;
             padding: 15px;
-            background: #f5f5f5;
-            border-radius: 5px;
+            background: rgba(255, 255, 252, 0.6);
+            border-left: 5px solid #8B3A3A;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }}
         .search-box {{
             display: flex;
@@ -389,24 +390,36 @@ def run():
         #searchInput {{
             flex: 1;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 1px solid rgba(139, 58, 58, 0.3);
+            border-radius: 2px;
             font-size: 14px;
+            font-family: 'Cardo', serif;
+            background: white;
+        }}
+        #searchInput:focus {{
+            outline: none;
+            border-color: #8B3A3A;
         }}
         #searchBtn {{
             padding: 10px 20px;
-            background: #2c5f2d;
-            color: white;
+            background: #8B3A3A;
+            color: #FDFaf0;
             border: none;
-            border-radius: 4px;
+            border-radius: 2px;
             cursor: pointer;
+            font-family: 'Cardo', serif;
+            transition: background 0.2s ease;
         }}
         #searchBtn:hover {{
-            background: #1e4620;
+            background: #6D2D2D;
         }}
         .result-count {{
             font-size: 14px;
-            color: #555;
+            color: #2c3e50;
+            font-family: 'Cardo', serif;
+        }}
+        .result-count strong {{
+            color: #8B3A3A;
         }}
         
         /* Container con sidebar e lista */
@@ -420,9 +433,10 @@ def run():
         .filters-sidebar {{
             width: 250px;
             flex-shrink: 0;
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
+            background: rgba(255, 255, 252, 0.6);
+            border-left: 5px solid #8B3A3A;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             height: fit-content;
             max-height: calc(100vh - 100px);
             overflow-y: auto;
@@ -433,30 +447,37 @@ def run():
             width: 8px;
         }}
         .filters-sidebar::-webkit-scrollbar-track {{
-            background: #e0e0e0;
-            border-radius: 4px;
+            background: rgba(239, 235, 216, 0.3);
+            border-radius: 2px;
         }}
         .filters-sidebar::-webkit-scrollbar-thumb {{
-            background: #2c5f2d;
-            border-radius: 4px;
+            background: #8B3A3A;
+            border-radius: 2px;
         }}
         .filters-sidebar::-webkit-scrollbar-thumb:hover {{
-            background: #1e4620;
+            background: #6D2D2D;
         }}
         .filters-sidebar h3 {{
             margin-top: 0;
             margin-bottom: 15px;
-            font-size: 18px;
-            color: #2c5f2d;
+            font-size: 1.2rem;
+            color: #6D2D2D;
+            font-family: 'Cardo', serif;
+            text-align: left;
+            border-bottom: 1px solid rgba(139, 58, 58, 0.2);
+            padding-bottom: 5px;
         }}
         .filter-group {{
             margin-bottom: 20px;
         }}
         .filter-group h4 {{
-            font-size: 14px;
+            font-size: 0.85rem;
             margin: 0 0 10px 0;
-            color: #333;
-            font-weight: 600;
+            color: #8B3A3A;
+            font-weight: bold;
+            font-family: 'Cardo', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
         }}
         .filter-options {{
             display: flex;
@@ -471,10 +492,12 @@ def run():
             font-size: 13px;
             cursor: pointer;
             padding: 3px 0;
+            font-family: 'Cardo', serif;
         }}
         .filter-option input[type="checkbox"] {{
             cursor: pointer;
             margin: 0;
+            accent-color: #8B3A3A;
         }}
         .filter-option label {{
             cursor: pointer;
@@ -482,6 +505,10 @@ def run():
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: #2c3e50;
+        }}
+        .filter-option:hover label {{
+            color: #8B3A3A;
         }}
         .filter-count {{
             color: #888;
@@ -491,28 +518,34 @@ def run():
         .show-more {{
             background: none;
             border: none;
-            color: #2c5f2d;
+            color: #8B3A3A;
             cursor: pointer;
             font-size: 12px;
             padding: 5px 0;
             text-decoration: underline;
+            font-family: 'Cardo', serif;
         }}
         .show-more:hover {{
-            color: #1e4620;
+            color: #6D2D2D;
+            text-decoration-style: solid;
         }}
         .clear-btn {{
             width: 100%;
             padding: 10px;
-            background: #d32f2f;
-            color: white;
+            background: #8B3A3A;
+            color: #FDFaf0;
             border: none;
-            border-radius: 4px;
+            border-radius: 2px;
             cursor: pointer;
             font-size: 13px;
             margin-top: 10px;
+            font-family: 'Cardo', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.2s ease;
         }}
         .clear-btn:hover {{
-            background: #b71c1c;
+            background: #6D2D2D;
         }}
         
         /* Lista persone */
@@ -522,19 +555,8 @@ def run():
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }}
-        .person {{
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            transition: all 0.3s;
-        }}
         .person.hidden {{
             display: none;
-        }}
-        .person:hover {{
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
         }}
         
         /* Responsive */
@@ -546,6 +568,7 @@ def run():
                 width: 100%;
                 position: relative;
                 top: 0;
+                max-height: none;
             }}
             .people-list {{
                 grid-template-columns: 1fr;
