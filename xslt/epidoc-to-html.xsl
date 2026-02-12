@@ -305,7 +305,7 @@
                         <dt><strong>Type</strong></dt>
                         <dd><xsl:value-of select="normalize-space(//tei:physDesc//tei:objectType[@xml:lang='en'])"/></dd>
                         <dt><strong>Material(s)</strong></dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:physDesc//material[@xml:lang='en'])"/></dd>
+                        <dd><xsl:value-of select="normalize-space(//tei:physDesc//tei:material[@xml:lang='en'])"/></dd>
                         <dt><strong>Execution</strong></dt>
                         <dd><xsl:value-of select="normalize-space(//tei:layoutDesc/tei:layout/tei:rs)"/>.</dd>
                         <dt><strong>Dimensions</strong></dt>
@@ -316,7 +316,7 @@
                             <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:height"/> × <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:width"/><xsl:text> cm</xsl:text>
                         </dd>
                         <dt>Letters Height</dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/>.</dd>
+                        <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/></dd>
                     </dl>
                 </div>
 
