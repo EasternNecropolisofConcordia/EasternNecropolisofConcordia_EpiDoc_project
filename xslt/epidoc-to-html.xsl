@@ -299,6 +299,26 @@
                         </dl>
                     </div>
                 </div>
+                <div class="physical_description">
+                    <h2>PHYSICAL DESCRIPTION</h2>
+                    <dl>
+                        <dt><strong>Type</strong></dt>
+                        <dd><xsl:value-of select="normalize-space(//tei:physDesc//tei:objectType[@xml:lang='en'])"/></dd>
+                        <dt><strong>Material(s)</strong></dt>
+                        <dd><xsl:value-of select="normalize-space(//tei:physDesc//material[@xml:lang='en'])"/></dd>
+                        <dt><strong>Execution</strong></dt>
+                        <dd><xsl:value-of select="normalize-space(//tei:layoutDesc/tei:layout/tei:rs)"/>.</dd>
+                        <dt><strong>Dimensions</strong></dt>
+                        <dd><xsl:value-of select="//tei:supportDesc/tei:support/tei:dimensions/tei:height"/> × <xsl:value-of select="//tei:supportDesc/tei:support/tei:dimensions/tei:width"/><xsl:if test="//tei:supportDesc/tei:support/tei:dimensions/tei:depth"> × <xsl:value-of select="//tei:supportDesc/tei:support/tei:dimensions/tei:depth"/> </xsl:if><xsl:text> cm</xsl:text>
+                        </dd>
+                        <dt><strong>Epigraphic Field</strong></dt>
+                        <dd>
+                            <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:height"/> × <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:width"/><xsl:text> cm</xsl:text>
+                        </dd>
+                        <dt>Letters Height</dt>
+                        <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/>.</dd>
+                    </dl>
+                </div>
 
                 <!-- PALAEOGRAPHIC COMMENT -->
                 <details class="palaeography">
