@@ -377,7 +377,7 @@
                     <lb n="2"/><num value="9">VIIII</num> <expan><abbr><unclear>m</unclear></abbr><ex>ensibus</ex></expan> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" evidence="previouseditor" corresp="#bertolini1874a #bertolini1874b">cum</supplied>
                     <lb n="3"/>avia sua <persName corresp="#ap_">Ap<gap reason="lost" extent="unknown" unit="character"/></persName> <supplied reason="lost" evidence="previouseditor" corresp="#bertolini1874a #bertolini1874b">si quis</supplied>
                     <lb n="4"/><unclear>e</unclear>am <w xml:id="w3">volu<supplied reason="lost">erit aper</supplied>ire</w> d<unclear>a</unclear>
-                    <lb n="5" break="no"/>vit fi<supplied reason="omitted">s</supplied>co <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">ar<supplied reason="lost">genti</supplied> <supplied reason="lost">p</supplied>ondo <num value="5">V</num></measure>
+                    <lb n="5" break="no"/>vit fi<supplied reason="omitted">s</supplied>co <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">ar<supplied reason="lost">genti p</supplied>ondo <num value="5">V</num></measure>
                 </ab>
             </div>
             <div type="apparatus">
