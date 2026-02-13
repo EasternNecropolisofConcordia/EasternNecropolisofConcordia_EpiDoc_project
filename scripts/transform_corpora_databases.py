@@ -14,7 +14,7 @@ def transform_bibliography():
     
     os.makedirs(output_dir, exist_ok=True)
     
-    print(f"Searching for l'XML in: {xml_path}")
+    print(f"Searching for XML in: {xml_path}")
     print(f"Writing HTML to: {output_path}")
 
     if not os.path.exists(xml_path):
@@ -62,10 +62,10 @@ def transform_bibliography():
             
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(full_page)
-            print("Trasformazione completata con successo!")
+            print("Transformation completed successfully!")
 
         except Exception as e:
-            print(f"Errore durante la trasformazione: {e}")
+            print(f"Error during transformation: {e}")
 
 if __name__ == "__main__":
     transform_bibliography()
