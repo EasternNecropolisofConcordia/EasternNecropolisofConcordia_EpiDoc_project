@@ -180,13 +180,17 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             padding: 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             font-family: 'Cardo', serif;
-            max-width: 260px;
+            max-width: 280px;
+            white-space: normal;
         }
         .inscription-tooltip .leaflet-tooltip-content {
             margin: 0;
         }
         .tooltip-inner {
             padding: 10px 12px;
+            overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         .tooltip-inner a.tooltip-title {
             display: block;
@@ -196,6 +200,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             text-decoration: none;
             margin-bottom: 6px;
             line-height: 1.3;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
         .tooltip-inner a.tooltip-title:hover {
             text-decoration: underline;
@@ -216,6 +223,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             border-top: 1px solid rgba(139,58,58,0.15);
             padding-top: 6px;
             margin-top: 4px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* ── Leaflet popup override (click) ────────────── */
@@ -229,7 +238,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         }
         .inscription-popup .leaflet-popup-content {
             margin: 0;
-            max-width: 260px;
+            max-width: 280px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         .inscription-popup .leaflet-popup-tip {
             background: rgba(255, 255, 252, 0.97);
@@ -436,7 +447,7 @@ var LEGEND = __LEGEND_JSON__;
             // Click → popup (stays until user closes / clicks elsewhere)
             circle.bindPopup(cardHtml, {
                 className: 'inscription-popup',
-                maxWidth: 260,
+                maxWidth: 280,
                 offset: [0, -10],
                 closeButton: true
             });
