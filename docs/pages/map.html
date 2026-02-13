@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map – Eastern Necropolis of Iulia Concordia</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        /* ── Map container ─────────────────────────────── */
+        #map-container {
+            width: 100%;
+            margin: 20px auto;
+        }
+        #map {
+            width: 100%;
+            height: 70vh;
+            min-height: 450px;
+            border: 1px solid rgba(139, 58, 58, 0.3);
+            border-radius: 2px;
+            background: #f5f3e8;
+        }
+
+        /* ── Leaflet tooltip override ──────────────────── */
+        .inscription-tooltip {
+            background: rgba(255, 255, 252, 0.97);
+            border: 1px solid #8B3A3A;
+            border-radius: 2px;
+            padding: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-family: 'Cardo', serif;
+            max-width: 260px;
+        }
+        .inscription-tooltip .leaflet-tooltip-content {
+            margin: 0;
+        }
+        .tooltip-inner {
+            padding: 10px 12px;
+        }
+        .tooltip-inner a.tooltip-title {
+            display: block;
+            color: #8B3A3A;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        .tooltip-inner a.tooltip-title:hover {
+            text-decoration: underline;
+        }
+        .tooltip-inner img {
+            display: block;
+            max-width: 100%;
+            max-height: 120px;
+            object-fit: contain;
+            margin: 6px 0;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+        .tooltip-inner .tooltip-people {
+            font-size: 0.8rem;
+            color: #2c3e50;
+            line-height: 1.4;
+            border-top: 1px solid rgba(139,58,58,0.15);
+            padding-top: 6px;
+            margin-top: 4px;
+        }
+
+        /* ── Custom legend ─────────────────────────────── */
+        .map-legend {
+            background: rgba(255, 255, 252, 0.95);
+            border: 1px solid #8B3A3A;
+            border-radius: 2px;
+            padding: 10px 14px;
+            font-family: 'Cardo', serif;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .map-legend h4 {
+            margin: 0 0 6px 0;
+            font-size: 0.85rem;
+            color: #8B3A3A;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-circle {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid;
+            flex-shrink: 0;
+        }
+
+        /* ── Intro text ────────────────────────────────── */
+        .map-intro {
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            text-align: justify;
+            font-family: 'Cardo', serif;
+            color: #2c3e50;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* ── Responsive ────────────────────────────────── */
+        @media (max-width: 600px) {
+            #map {
+                height: 55vh;
+                min-height: 350px;
+            }
+            .map-legend {
+                font-size: 0.7rem;
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./inscriptions.html">Inscriptions</a></li>
+                <li><a href="./people.html">People</a></li>
+                <li><a href="./map.html">Map</a></li>
+                <li>
+                    <a href="#">Study &amp; Context ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./context/history.html">History</a></li>
+                        <li><a href="./context/about_people.html">About People Buried</a></li>
+                        <li><a href="./context/supports.html">Supports &amp; Monuments</a></li>
+                        <li><a href="./context/chronology.html">Dating &amp; Chronology</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">References ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./references/bibliography.html">Bibliography</a></li>
+                        <li><a href="./references/corpora_databases.html">Corpora and Databases</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Interactive Map of the Eastern Necropolis</h2>
+
+        <p class="map-intro">
+            The map below shows the positions of the inscribed sarcophagi within the
+            Eastern Necropolis (<em>Sepolcreto dei Militi</em>) of <em>Iulia Concordia</em>,
+            based on the 1879 planimetry. Each marker is colour-coded according to the
+            occupation of the deceased. Hover over a marker to see the inscription details;
+            click the title to visit the full record.
+        </p>
+
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Generated via Saxon-Che &amp; GitHub Actions</p>
+        <p>&copy; 2026 – Leonardo Battistella</p>
+        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
+        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
+    </footer>
+
+<script>
+// ── Marker data injected by Python ────────────────────────────────
+var MARKERS = [
+  {
+    "x": 2850.0,
+    "y": 150.0,
+    "title": "The Epigraphy of Alatancus and Bitorta",
+    "url": "inscriptions/alatancus_bitorta.html",
+    "image": "../images/inscriptions/alatancus_bitorta.jpg",
+    "people": [
+      "Bitorta",
+      "Flavius Alatancus"
+    ],
+    "category": "soldier_civil",
+    "color": "#8B2252"
+  },
+  {
+    "x": 1680.0,
+    "y": 2610.0,
+    "title": "The Epigraphy of Alexander",
+    "url": "inscriptions/alexander.html",
+    "image": "../images/inscriptions/alexander.jpg",
+    "people": [
+      "Alexander",
+      "Sabbatia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2040.0,
+    "y": 1160.0,
+    "title": "The Epigraphy of Alexandria and Sopatrus",
+    "url": "inscriptions/alexandria_sopatrus.html",
+    "image": "../images/inscriptions/alexandria_sopatrus.jpg",
+    "people": [
+      "Aurelia Alexandria",
+      "Flavius Sopatrus"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2220.0,
+    "y": 700.0,
+    "title": "The Epigraphy of Andia",
+    "url": "inscriptions/andia.html",
+    "image": "../images/inscriptions/andia.jpg",
+    "people": [
+      "Flavii Servilii",
+      "Otraustaguta",
+      "Ilateuta Felicitas",
+      "Flavius Andia"
+    ],
+    "category": "soldier",
+    "color": "#DC143C"
+  },
+  {
+    "x": 2750.0,
+    "y": 3160.0,
+    "title": "The Epigraphy of Artemisia",
+    "url": "inscriptions/artemisia.html",
+    "image": "../images/inscriptions/artemisia.jpg",
+    "people": [
+      "Claudia Artemisia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 460.0,
+    "y": 2520.0,
+    "title": "The Epigraphy of Baicca",
+    "url": "inscriptions/baicca.html",
+    "image": "../images/inscriptions/baicca.jpg",
+    "people": [
+      "Baicca"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 480.0,
+    "y": 2850.0,
+    "title": "The Epigraphy of Ennius Cerealis",
+    "url": "inscriptions/cerealis.html",
+    "image": "../images/inscriptions/cerealis.jpg",
+    "people": [
+      "Ennius Cerealis",
+      "Ennia Asteria",
+      "Ennius Asterius"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2120.0,
+    "y": 980.0,
+    "title": "The Epigraphy of Flavia Concordia",
+    "url": "inscriptions/concordia.html",
+    "image": "../images/inscriptions/concordia.jpg",
+    "people": [
+      "Flavia Concordia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1280.0,
+    "y": 100.0,
+    "title": "The Epigraphy of Dionisia_A",
+    "url": "inscriptions/dionisia_a.html",
+    "image": "../images/inscriptions/dionisia_a.jpg",
+    "people": [
+      "Aurelia Dionisia",
+      "Ap[---]"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1280.0,
+    "y": 1050.0,
+    "title": "The Epigraphy of Dionisia_B",
+    "url": "inscriptions/dionisia_b.html",
+    "image": "../images/inscriptions/dionisia_b.jpg",
+    "people": [
+      "Aurelia Dionisia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 640.0,
+    "y": 2560.0,
+    "title": "The Epigraphy of Eutherius",
+    "url": "inscriptions/eutherius.html",
+    "image": "../images/inscriptions/eutherius.jpg",
+    "people": [
+      "Flavius Costantius",
+      "Eutherius"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1840.0,
+    "y": 1290.0,
+    "title": "The Epigraphy of Felix and Lucia",
+    "url": "inscriptions/felix_lucia.html",
+    "image": "../images/inscriptions/felix_lucia.jpg",
+    "people": [
+      "Flavius Felix",
+      "Lucia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 3300.0,
+    "y": 2630.0,
+    "title": "The Epigraphy of Firmina",
+    "url": "inscriptions/firmina.html",
+    "image": "../images/inscriptions/firmina.jpg",
+    "people": [
+      "Firmina"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 3490.0,
+    "y": 2570.0,
+    "title": "The Epigraphy of Florentius and Valeria",
+    "url": "inscriptions/florentius_valeria.html",
+    "image": "../images/inscriptions/florentius_valeria.jpg",
+    "people": [
+      "Marcus Aterius Florentius",
+      "Iulia Valeria"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2460.0,
+    "y": 990.0,
+    "title": "The Epigraphy of Flavius Gaudentius and Martina",
+    "url": "inscriptions/gaudentius_martina.html",
+    "image": "../images/inscriptions/gaudentius_martina.jpg",
+    "people": [
+      "Aurelius Gaudentius",
+      "Martina"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2670.0,
+    "y": 180.0,
+    "title": "The Epigraphy of Gerontia",
+    "url": "inscriptions/gerontia.html",
+    "image": "../images/inscriptions/gerontia.jpg",
+    "people": [
+      "Gerontia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1890.0,
+    "y": 800.0,
+    "title": "The Epigraphy of Gidnadius and Apra",
+    "url": "inscriptions/gidnadius_apra.html",
+    "image": "../images/inscriptions/gidnadius_apra.jpg",
+    "people": [
+      "Flavius Gidnadius",
+      "Emilia Apra"
+    ],
+    "category": "soldier_civil",
+    "color": "#8B2252"
+  },
+  {
+    "x": 2330.0,
+    "y": 2770.0,
+    "title": "The Epigraphy of Iovina",
+    "url": "inscriptions/iovina.html",
+    "image": "../images/inscriptions/iovina.jpg",
+    "people": [
+      "Turranius Honoratus",
+      "Aurelia Iovina"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 540.0,
+    "y": 2600.0,
+    "title": "The Epigraphy of Ligurius and Victorina",
+    "url": "inscriptions/ligurius_victorina.html",
+    "image": "../images/inscriptions/ligurius_victorina.jpg",
+    "people": [
+      "Flavius Ligurius",
+      "Cicria Victorina"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1690.0,
+    "y": 1150.0,
+    "title": "The Epigraphy of Marinus",
+    "url": "inscriptions/marinus.html",
+    "image": "../images/inscriptions/marinus.jpg",
+    "people": [
+      "Flavius Exsuperantius",
+      "Constantia",
+      "Marinus"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1750.0,
+    "y": 810.0,
+    "title": "The Epigraphy of Martinianus and Severina",
+    "url": "inscriptions/martinianus_severina.html",
+    "image": "../images/inscriptions/martinianus_severina.jpg",
+    "people": [
+      "Flavius Martinianus",
+      "Aurelia Severina"
+    ],
+    "category": "fabricensis_civil",
+    "color": "#2E8B8B"
+  },
+  {
+    "x": 2150.0,
+    "y": 1110.0,
+    "title": "The Epigraphy of the two Maximiani",
+    "url": "inscriptions/maximiani.html",
+    "image": "../images/inscriptions/maximiani.jpg",
+    "people": [
+      "Flavius Maximianus",
+      "Flavius Maximianus"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1740.0,
+    "y": 740.0,
+    "title": "The Epigraphy of Mercurius and Ursa",
+    "url": "inscriptions/mercurius_ursa.html",
+    "image": "../images/inscriptions/mercurius_ursa.jpg",
+    "people": [
+      "Flavius Mercurius",
+      "Flavia Severina"
+    ],
+    "category": "fabricensis_civil",
+    "color": "#2E8B8B"
+  },
+  {
+    "x": 1740.0,
+    "y": 900.0,
+    "title": "The Epigraphy of Numerianus",
+    "url": "inscriptions/numerianus.html",
+    "image": "../images/inscriptions/numerianus.jpg",
+    "people": [
+      "Numerianus"
+    ],
+    "category": "functionary",
+    "color": "#8A2BE2"
+  },
+  {
+    "x": 1270.0,
+    "y": 680.0,
+    "title": "The Epigraphy of Oppius Marinus",
+    "url": "inscriptions/oppius_marinus.html",
+    "image": "../images/inscriptions/oppius_marinus.jpg",
+    "people": [
+      "Oppius Marinus"
+    ],
+    "category": "unknown",
+    "color": "#888888"
+  },
+  {
+    "x": 1490.0,
+    "y": 280.0,
+    "title": "The Epigraphy of Optata",
+    "url": "inscriptions/optata.html",
+    "image": "../images/inscriptions/optata.jpg",
+    "people": [
+      "Flavia Optata"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1490.0,
+    "y": 1440.0,
+    "title": "The Epigraphy of Peregrina",
+    "url": "inscriptions/peregrina.html",
+    "image": "../images/inscriptions/peregrina.jpg",
+    "people": [
+      "Valeria Peregrina"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1680.0,
+    "y": 2610.0,
+    "title": "The Epigraphy of Romulianus and Tahetis",
+    "url": "inscriptions/romulianus_tahetis.html",
+    "image": "../images/inscriptions/romulianus_tahetis.jpg",
+    "people": [
+      "Flavius Romulianus",
+      "Tahetis"
+    ],
+    "category": "fabricensis_civil",
+    "color": "#2E8B8B"
+  },
+  {
+    "x": 170.0,
+    "y": 2700.0,
+    "title": "The Epigraphy of Sabina and Paccianus",
+    "url": "inscriptions/sabina_paccianus.html",
+    "image": "../images/inscriptions/sabina_paccianus.jpg",
+    "people": [
+      "Cusica Sabina",
+      "Ennius Paccianus"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 1790.0,
+    "y": 1610.0,
+    "title": "The Epigraphy of Saturninus",
+    "url": "inscriptions/saturninus.html",
+    "image": "../images/inscriptions/saturninus.jpg",
+    "people": [
+      "Saturninus"
+    ],
+    "category": "functionary",
+    "color": "#8A2BE2"
+  },
+  {
+    "x": 2080.0,
+    "y": 1060.0,
+    "title": "The Epigraphy of Ursus and Decentia",
+    "url": "inscriptions/ursus_decentia.html",
+    "image": "../images/inscriptions/ursus_decentia.jpg",
+    "people": [
+      "Cocceius Ursus",
+      "Decentia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2010.0,
+    "y": 1560.0,
+    "title": "The Epigraphy of Vassio",
+    "url": "inscriptions/vassio.html",
+    "image": "../images/inscriptions/vassio.jpg",
+    "people": [
+      "Vassio",
+      "Suandacca"
+    ],
+    "category": "soldier",
+    "color": "#DC143C"
+  },
+  {
+    "x": 1580.0,
+    "y": 1580.0,
+    "title": "The Epigraphy of Vitaliana and Severus",
+    "url": "inscriptions/vitaliana_severus.html",
+    "image": "../images/inscriptions/vitaliana_severus.jpg",
+    "people": [
+      "Vettia Vitaliana",
+      "Flavius Severus"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  },
+  {
+    "x": 2900.0,
+    "y": 2900.0,
+    "title": "The Epigraphy of Εἰνάχιος",
+    "url": "inscriptions/εἰνάχιος.html",
+    "image": "../images/inscriptions/εἰνάχιος.jpg",
+    "people": [
+      "Εἰνάχιος",
+      "Hermias",
+      "Cispia"
+    ],
+    "category": "civilian",
+    "color": "#4169E1"
+  }
+];
+
+// ── Legend entries ─────────────────────────────────────────────────
+var LEGEND = [{"label": "Soldier", "color": "#DC143C"}, {"label": "Civilian", "color": "#4169E1"}, {"label": "Functionary", "color": "#8A2BE2"}, {"label": "Fabricensis & Civilian", "color": "#2E8B8B"}, {"label": "Soldier & Civilian", "color": "#8B2252"}, {"label": "Unknown / Other", "color": "#888888"}];
+
+// ── Initialise map once the planimetry image has loaded ───────────
+(function () {
+    var IMG_URL = '../images/plan/Eastern_Necropolis_Plan_1879.jpg';
+    var img = new Image();
+
+    img.onload = function () {
+        var h = this.naturalHeight;
+        var w = this.naturalWidth;
+        initMap(w, h);
+    };
+
+    img.onerror = function () {
+        // Fallback: assume a reasonable size so the page isn't blank
+        console.warn('Could not load planimetry image; using fallback dimensions.');
+        initMap(3000, 2000);
+    };
+
+    img.src = IMG_URL;
+
+    function initMap(imgW, imgH) {
+        // CRS.Simple: y goes up, image y goes down → invert
+        var bounds = [[0, 0], [imgH, imgW]];
+
+        var map = L.map('map', {
+            crs: L.CRS.Simple,
+            minZoom: -2,
+            maxZoom: 3,
+            zoomSnap: 0.25,
+            attributionControl: false
+        });
+
+        L.imageOverlay(IMG_URL, bounds).addTo(map);
+        map.fitBounds(bounds);
+
+        // ── Add markers ───────────────────────────────────────────
+        MARKERS.forEach(function (m) {
+            // Invert y for Leaflet
+            var latLng = [imgH - m.y, m.x];
+
+            var circle = L.circleMarker(latLng, {
+                radius: 10,
+                color: m.color,
+                weight: 2.5,
+                opacity: 0.9,
+                fillColor: m.color,
+                fillOpacity: 0.25
+            }).addTo(map);
+
+            // Build tooltip HTML
+            var peopleHtml = m.people.map(function (n) { return n; }).join(', ');
+            var tooltipHtml =
+                '<div class="tooltip-inner">' +
+                    '<a class="tooltip-title" href="' + m.url + '">' + m.title + '</a>' +
+                    '<img src="' + m.image + '" alt="inscription" onerror="this.style.display=\'none\'">' +
+                    '<div class="tooltip-people">' + peopleHtml + '</div>' +
+                '</div>';
+
+            circle.bindTooltip(tooltipHtml, {
+                direction: 'top',
+                offset: [0, -12],
+                className: 'inscription-tooltip',
+                interactive: true,
+                opacity: 1
+            });
+        });
+
+        // ── Legend control ─────────────────────────────────────────
+        var legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function () {
+            var div = L.DomUtil.create('div', 'map-legend');
+            var html = '<h4>Legend</h4>';
+            LEGEND.forEach(function (entry) {
+                html +=
+                    '<div class="legend-item">' +
+                        '<span class="legend-circle" style="background:' +
+                            entry.color + ';border-color:' + entry.color + '"></span>' +
+                        '<span>' + entry.label + '</span>' +
+                    '</div>';
+            });
+            div.innerHTML = html;
+            return div;
+        };
+        legend.addTo(map);
+    }
+})();
+</script>
+</body>
+</html>
