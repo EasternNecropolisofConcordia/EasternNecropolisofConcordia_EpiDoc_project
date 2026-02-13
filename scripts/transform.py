@@ -5,45 +5,43 @@ def transform_xml():
     xml_dir = 'inscriptions'
     xslt_path = 'xslt/epidoc-to-html.xsl'
     output_dir = 'docs/pages/inscriptions'
-
     os.makedirs(output_dir, exist_ok=True)
 
     with PySaxonProcessor(license=False) as proc:
         xslt_proc = proc.new_xslt30_processor()
-        
+
         if not os.path.exists(xslt_path):
-            print(f"Error: {xslt_path} non found")
+            print(f"Error: {xslt_path} not found")
             return
 
-
         header_html = """
-        <header>
+        <header class="site-header">
             <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
             <nav class="navbar">
-            <ul class="menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../inscriptions.html">Inscriptions</a></li>
-                <li><a href="../people.html">People</a></li>
-                <li><a href="../map.html">Map</a></li>
-                <li class="dropdown">
-                <a href="#">Study & Context ▾</a>
-                <ul class="submenu">
-                <li><a href="../context/history.html">History</a></li>
-                <li><a href="../context/about_people.html">About People Buried</a></li>
-                <li><a href="../context/supports.html">Supports & Monuments</a></li>
-                <li><a href="../context/chronology.html">Dating & Chronology</a></li>
+                <ul class="menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../inscriptions.html">Inscriptions</a></li>
+                    <li><a href="../people.html">People</a></li>
+                    <li><a href="../map.html">Map</a></li>
+                    <li class="dropdown">
+                        <a href="#">Study &amp; Context ▾</a>
+                        <ul class="submenu">
+                            <li><a href="../context/history.html">History</a></li>
+                            <li><a href="../context/about_people.html">About People Buried</a></li>
+                            <li><a href="../context/supports.html">Supports &amp; Monuments</a></li>
+                            <li><a href="../context/chronology.html">Dating &amp; Chronology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
+                    <li class="dropdown">
+                        <a href="#">References ▾</a>
+                        <ul class="submenu">
+                            <li><a href="../references/bibliography.html">Bibliography</a></li>
+                            <li><a href="../references/corpora_databases.html">Corpora and Databases</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-                <li><a href="../krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
-                <li class="dropdown">
-                <a href="#">References ▾</a>
-                <ul class="submenu">
-                <li><a href="../references/bibliography.html">Bibliography</a></li>
-                <li><a href="../references/corpora_databases.html">Corpora and Databases</a></li>
-                </ul>
-                </li>
-                </ul>
-                </nav>
+            </nav>
         </header>
         """
 
@@ -56,7 +54,8 @@ def transform_xml():
                 try:
                     executable = xslt_proc.compile_stylesheet(stylesheet_file=xslt_path)
                     output = executable.transform_to_string(source_file=xml_path)
-                    
+
+                    full_page = f"""<!DOCTYPE html>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
@@ -70,12 +69,12 @@ def transform_xml():
     </main>
 </body>
 </html>"""
-                    
+
                     with open(output_path, 'w', encoding='utf-8') as f:
                         f.write(full_page)
-                    print(f"Trasformato con successo: {filename}")
+                    print(f"Successfully transformed: {filename}")
                 except Exception as e:
-                    print(f"Errore su {filename}: {e}")
+                    print(f"Error on {filename}: {e}")
 
 if __name__ == "__main__":
     transform_xml()
