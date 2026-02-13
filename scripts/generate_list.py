@@ -71,6 +71,7 @@ def run():
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="inscriptions.html">Inscriptions</a></li>
                 <li><a href="./people.html">People</a></li>
+                <li><a href="./map.html">Map</a></li>
                 <li class="dropdown">
                     <a href="#">Study & Context ▾</a>
                     <ul class="submenu">
@@ -80,6 +81,7 @@ def run():
                         <li><a href="./context/chronology.html">Dating & Chronology</a></li>
                     </ul>
                 </li>
+                <li><a href="./krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
                 <li class="dropdown">
                     <a href="#">References ▾</a>
                     <ul class="submenu">
