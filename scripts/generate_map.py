@@ -107,6 +107,10 @@ def collect_markers(xml_dir: str) -> list:
                             display_name += ' (dedicator)'
                         elif role_lower == 'dedicator?':
                             display_name += ' (dedicator?)'
+                        elif role_lower == 'dedicator (restoration)':
+                            display_name += ' (restoration patron)'
+                        elif role_lower == 'mentioned':
+                            display_name += ' (mentioned)'
 
                         people_names.append(display_name)
 
@@ -292,7 +296,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./inscriptions.html">Inscriptions</a></li>
                 <li><a href="./people.html">People</a></li>
-                <li><a href="map.html">Map</a></li>
+                <li><a href="./map.html">Map</a></li>
                 <li>
                     <a href="#">Study &amp; Context ▾</a>
                     <ul class="submenu">
@@ -302,7 +306,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                         <li><a href="./context/chronology.html">Dating &amp; Chronology</a></li>
                     </ul>
                 </li>
-                <li><a href="krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
                 <li>
                     <a href="#">References ▾</a>
                     <ul class="submenu">
@@ -318,7 +321,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <h2>Interactive Map of the Eastern Necropolis</h2>
 
         <p class="map-intro">
-            The map below shows the positions of the inscribed sarcophagi within the Perulli's plot of the
+            The map below shows the positions of the inscribed sarcophagi within the
             Eastern Necropolis (<em>Sepolcreto dei Militi</em>) of <em>Iulia Concordia</em>,
             based on the 1879 planimetry. Each marker is colour-coded according to the
             occupation of the deceased. Hover over a marker for a quick preview;
