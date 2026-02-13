@@ -215,6 +215,10 @@ def run():
             except Exception as e:
                 print(f"Error on {filename}: {e}")
 
+    # Helper: capitalize first letter of a string
+    def cap(s):
+        return s[0].upper() + s[1:] if s else s
+
     # Card generation
     cards = ""
     for pid in sorted(people_data.keys(), key=lambda x: people_data[x]['name']):
@@ -266,17 +270,17 @@ def run():
         
         # Names
         for name in p['names']:
-            dl_content += f"<dt>{name['type'].upper()}</dt><dd>{name['value']}</dd>"
+            dl_content += f"<dt>{name['type'].upper()}</dt><dd>{cap(name['value'])}</dd>"
             if name['type'] == 'cognomen' and name['nymref']:
-                dl_content += f"<dt>ORIGIN (of the cognomen {name['value']})</dt><dd>{name['nymref']}</dd>"
+                dl_content += f"<dt>ORIGIN (of the cognomen {cap(name['value'])})</dt><dd>{cap(name['nymref'])}</dd>"
         
         # Gender
-        gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
+        gender_display = "Male" if p['gender'] == 'm' else ("Female" if p['gender'] == 'f' else "Unknown")
         dl_content += f"<dt>GENDER</dt><dd>{gender_display}</dd>"
 
         # Group
         if p.get('is_group'):
-            dl_content += "<dt>TYPE</dt><dd>group</dd>"
+            dl_content += "<dt>TYPE</dt><dd>Group</dd>"
         
         # Notes (occupation, role, relationship)
         for note in p['notes']:
@@ -286,9 +290,9 @@ def run():
             if note['type'] == 'relationship' and note['corresp']:
                 corresp_id = note['corresp'].replace('#', '')
                 corresp_name = people_names.get(corresp_id, corresp_id)
-                dl_content += f"<dt>{note_type_upper}</dt><dd>{note['value']} (→ <a href=\"#{corresp_id}\">{corresp_name}</a>)</dd>"
+                dl_content += f"<dt>{note_type_upper}</dt><dd>{cap(note['value'])} (→ <a href=\"#{corresp_id}\">{corresp_name}</a>)</dd>"
             else:
-                dl_content += f"<dt>{note_type_upper}</dt><dd>{note['value']}</dd>"
+                dl_content += f"<dt>{note_type_upper}</dt><dd>{cap(note['value'])}</dd>"
         
         # Inscriptions
         links_str = " - ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
@@ -314,7 +318,6 @@ def run():
 <body>
     <header class="site-header">
         <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
-        <h2 class="main_subtitle">From Autoptic Analysis to TEI-based Edition</h2>
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
@@ -850,11 +853,8 @@ def run():
         <p>Generated via Saxon-Che &amp; GitHub Actions</p>
         <p>&copy; 2026 - Leonardo Battistella</p>
         <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
-        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca’ Foscari University of Venice.</p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
         <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
-        <p>____________________________________________________________________________________________________</p>
-        <p>The images provided by the Ministry of Culture and the Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
-        <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
     </footer>
 </body>
 </html>"""
