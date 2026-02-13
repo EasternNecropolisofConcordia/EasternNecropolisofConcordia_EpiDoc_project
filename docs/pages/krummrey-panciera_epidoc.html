@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krummrey-Panciera Conventions &amp; EpiDoc</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./inscriptions.html">Inscriptions</a></li>
+                <li><a href="./people.html">People</a></li>
+                <li><a href="./map.html">Map</a></li>
+                <li>
+                    <a href="#">Study &amp; Context ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./context/history.html">History</a></li>
+                        <li><a href="./context/about_people.html">About People Buried</a></li>
+                        <li><a href="./context/supports.html">Supports &amp; Monuments</a></li>
+                        <li><a href="./context/chronology.html">Dating &amp; Chronology</a></li>
+                    </ul>
+                </li>
+                <li>
+                <li><a href="krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
+                    <a href="#">References ▾</a>
+                    <ul class="submenu">
+                        <li><a href="./references/bibliography.html">Bibliography</a></li>
+                        <li><a href="./references/corpora_databases.html">Corpora and Databases</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Leiden Conventions &amp; EpiDoc Encoding</h2>
+
+        <p class="map-intro" style="max-width:800px; margin:0 auto 25px auto; text-align:justify;">
+            The following table presents a unified reference of the Leiden epigraphic conventions
+            (as formulated in 1931–1932 and refined in 1980 and 1991 by Krummrey–Panciera),
+            alongside their corresponding TEI/EpiDoc XML encoding and concrete examples drawn from
+            the <em>Corpus Inscriptionum Latinarum</em>.
+        </p>
+
+        <div class="conventions-table-wrapper">
+            <table class="conventions">
+                <thead>
+                    <tr>
+                        <th>Siglum 1980</th>
+                        <th>Siglum 1991</th>
+                        <th>Description</th>
+                        <th>EpiDoc Encoding</th>
+                        <th>Concrete Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- ═══ DIVISION ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Division of Text</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>abc</em> / 5 <em>abc</em></td>
+                        <td class="col-siglum91"><em>ab</em>=<br><em>c</em></td>
+                        <td class="col-description">Division of verses (word divided across lines).</td>
+                        <td class="col-epidoc">&lt;lb n="6"/&gt;ab&lt;lb n="7" break="no"/&gt;c</td>
+                        <td class="col-example">et / 5 Cantia (<em>CIL</em>, VI 4, vv. 4–5); T. Iulius Genesia/cus et Caecilia / Balbilla ceri/ 10 olaria duo Satu/ri (<em>CIL</em>, VI 18, vv. 7–11).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>abc</em> // <em>abc</em></td>
+                        <td class="col-siglum91 empty">—</td>
+                        <td class="col-description">Division of pages.</td>
+                        <td class="col-epidoc empty">—</td>
+                        <td class="col-example">P. Roscius Agathopus I. // Min(istri): / Thiasus, /5 Stephanus (<em>CIL</em>, VI 163, p.1, v.10 et p.2, vv. 3–5).</td>
+                    </tr>
+
+                    <!-- ═══ LETTERFORMS & LEGIBILITY ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Letterforms &amp; Legibility</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>abc</em></td>
+                        <td class="col-siglum91"><em>abc</em></td>
+                        <td class="col-description">Letters fully legible for a word or part.</td>
+                        <td class="col-epidoc">abc</td>
+                        <td class="col-example">Anabestas (<em>CIL</em>, VI 21); [---]imo iisque qui [---] (<em>CIL</em>, VI 2119, v. 2).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>ABC</em></td>
+                        <td class="col-siglum91"><em>ABC</em></td>
+                        <td class="col-description">Fully legible letters, uncertain attachment to word (uninterpreted characters).</td>
+                        <td class="col-epidoc">&lt;orig&gt;abc&lt;/orig&gt;</td>
+                        <td class="col-example">[---]MVM[---] (<em>CIL</em>, VI 906 b, v. 2).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>ạḅc̣</em></td>
+                        <td class="col-siglum91"><em>ạḅc̣</em></td>
+                        <td class="col-description">Damaged letters not recognisable outside context (ambiguous characters).</td>
+                        <td class="col-epidoc">&lt;unclear&gt;abc&lt;/unclear&gt;</td>
+                        <td class="col-example">Sancịo Sancto (<em>CIL</em>, VI 569, v. 1).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">+ + +</td>
+                        <td class="col-siglum91 empty">—</td>
+                        <td class="col-description">Traces of letters too corrupted to recognise; one cross per letter.</td>
+                        <td class="col-epidoc empty">—</td>
+                        <td class="col-example">[Ca]esar / [---]esar / [---]esar ++ (<em>CIL</em>, VI 1210).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><span style="text-decoration:underline; text-decoration-style:double;"><em>abc</em></span></td>
+                        <td class="col-siglum91"><span style="text-decoration:underline; text-decoration-style:double;"><em>abc</em></span></td>
+                        <td class="col-description">Letters previously read but now lost (text visible to previous editor).</td>
+                        <td class="col-epidoc">&lt;supplied reason="lost" evidence="previouseditor"&gt;abc&lt;/supplied&gt;</td>
+                        <td class="col-example"><span style="text-decoration:underline; text-decoration-style:double;">Iun</span>oni Reginae (<em>CIL</em>, VI 364).</td>
+                    </tr>
+
+                    <!-- ═══ DIACRITICS, SUPRALINEAR LINES, LIGATURES ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Diacritics, Supralinear Lines &amp; Ligatures</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>á</em>, <em>é</em>, <em>í</em>, <em>ó</em>, <em>ú</em></td>
+                        <td class="col-siglum91"><em>á</em>, <em>é</em>, <em>í</em>, <em>ó</em>, <em>ú</em></td>
+                        <td class="col-description">Vowels marked with apices and other ancient diacritics.</td>
+                        <td class="col-epidoc">&lt;hi rend="apex"&gt;a&lt;/hi&gt;,
+&lt;hi rend="apex"&gt;e&lt;/hi&gt;, etc.</td>
+                        <td class="col-example">Fortúnae Reduci (<em>CIL</em>, VI 196, v. 1).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><span style="text-decoration:overline;"><em>abc</em></span>, <span style="text-decoration:overline;"><em>V</em></span></td>
+                        <td class="col-siglum91"><span style="text-decoration:overline;"><em>abc</em></span>, <span style="text-decoration:overline;"><em>V</em></span></td>
+                        <td class="col-description">Letters or numerals indicated with supralinear lines (overlines).</td>
+                        <td class="col-epidoc">&lt;hi rend="supraline"&gt;abc&lt;/hi&gt;,
+&lt;hi rend="supraline"&gt;V&lt;/hi&gt;</td>
+                        <td class="col-example">(rae)(ositus) corp(oris) mag(nariorum) digno (rono) (<em>CIL</em>, VI 1696, v. 18).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><span class="ligature-arc"><em>ab</em></span>, <span class="ligature-arc"><em>abc</em></span></td>
+                        <td class="col-siglum91"><em>âb</em>, <em>âb̂c</em></td>
+                        <td class="col-description">Connected letters (ligatures).</td>
+                        <td class="col-epidoc">&lt;hi rend="ligature"&gt;ab&lt;/hi&gt;,
+&lt;hi rend="ligature"&gt;abc&lt;/hi&gt;</td>
+                        <td class="col-example">Pro salu | pro salu<span class="ligature-arc">te</span> (<em>CIL</em>, VI 13, in fronte, v. 1).</td>
+                    </tr>
+
+                    <!-- ═══ ERASURE & ANCIENT MODIFICATIONS ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Erasure &amp; Ancient Modifications</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">⟦<em>abc</em>⟧</td>
+                        <td class="col-siglum91">⟦<em>abc</em>⟧</td>
+                        <td class="col-description">Anciently erased letters, still readable or probable.</td>
+                        <td class="col-epidoc">&lt;del rend="erasure"&gt;abc&lt;/del&gt;</td>
+                        <td class="col-example">⟦P. Septimio Getae⟧ (<em>CIL</em>, VI 220, v. 4).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91">⟦[···]⟧</td>
+                        <td class="col-description">Erased text, now lost (illegible).</td>
+                        <td class="col-epidoc">&lt;del rend="erasure"&gt;
+  &lt;gap reason="lost" quantity="3" unit="character"/&gt;
+&lt;/del&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">«<em>abc</em>»</td>
+                        <td class="col-siglum91">«<em>abc</em>»</td>
+                        <td class="col-description">Letters inscribed in place of erased ones, readable or probable (text struck over erasure).</td>
+                        <td class="col-epidoc">&lt;subst&gt;
+  &lt;add place="overstrike"&gt;abc&lt;/add&gt;
+  &lt;del&gt;def&lt;/del&gt;
+&lt;/subst&gt;</td>
+                        <td class="col-example">«Brittanicis p(atribus) p(atriae)» (<em>CIL</em>, VI 220, v. 2).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">‵<em>abc</em>′</td>
+                        <td class="col-siglum91">‵<em>abc</em>′</td>
+                        <td class="col-description">Ancient addition to correct or supplement text.</td>
+                        <td class="col-epidoc">&lt;add&gt;abc&lt;/add&gt;</td>
+                        <td class="col-example">Cn. Serius Oppian‵ic′us (<em>CIL</em>, VI 1979, v. 21).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91">‵<em>abc</em>′</td>
+                        <td class="col-description">Text added by ancient hand (above the line).</td>
+                        <td class="col-epidoc">&lt;add place="above"&gt;abc&lt;/add&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91">‵<em>abc</em>′</td>
+                        <td class="col-description">Text added by ancient hand (below the line).</td>
+                        <td class="col-epidoc">&lt;add place="below"&gt;abc&lt;/add&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <!-- ═══ LACUNAE & RESTORATIONS ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Lacunae &amp; Restorations</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">[<em>abc</em>]</td>
+                        <td class="col-siglum91">[<em>abc</em>]</td>
+                        <td class="col-description">Letters lost due to damage, restored by editor.</td>
+                        <td class="col-epidoc">&lt;supplied reason="lost"&gt;abc&lt;/supplied&gt;</td>
+                        <td class="col-example">Apollini sa[crum] (<em>CIL</em>, VI 25, v. 1).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91">[<em>abc</em>?]</td>
+                        <td class="col-description">Letters lost, uncertainly restored.</td>
+                        <td class="col-epidoc">&lt;supplied reason="lost" cert="low"&gt;abc&lt;/supplied&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">[···]</td>
+                        <td class="col-siglum91">[···]</td>
+                        <td class="col-description">Completely lost letters, number known; one dot per letter.</td>
+                        <td class="col-epidoc">&lt;gap reason="lost" quantity="3" unit="character"/&gt;</td>
+                        <td class="col-example">[···]icius Camerinus (<em>CIL</em>, VI 2042 d, v. 14 in.).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">[- - -]</td>
+                        <td class="col-siglum91">[- - -]</td>
+                        <td class="col-description">Completely lost letters, number unknown, not restored.</td>
+                        <td class="col-epidoc">&lt;gap reason="illegible" extent="unknown" unit="character"/&gt;</td>
+                        <td class="col-example">[---]imo iisque qui [---] (<em>CIL</em>, VI 2119, v. 2).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">[-]</td>
+                        <td class="col-siglum91 empty">—</td>
+                        <td class="col-description">Lost praenomen, number of letters unknown.</td>
+                        <td class="col-epidoc empty">—</td>
+                        <td class="col-example">[-] Helvius Hermog[---] (<em>CIL</em>, VI 32533 b, v. 35).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">[------]</td>
+                        <td class="col-siglum91">[------]</td>
+                        <td class="col-description">Lacuna at beginning or end of inscription, one full verse lost (lost lines, quantity known).</td>
+                        <td class="col-epidoc">&lt;gap reason="lost" quantity="2" unit="line"/&gt;</td>
+                        <td class="col-example">[------] / A. L. [---]s L.f. Flaccus, / aid(iles), d(e) stipe Aesculapi (<em>CIL</em>, VI 7, vv. 1–3).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">------</td>
+                        <td class="col-siglum91">------</td>
+                        <td class="col-description">Lacuna for multiple verses, number uncertain (lost lines, quantity unknown).</td>
+                        <td class="col-epidoc">&lt;gap reason="lost" extent="unknown" unit="line"/&gt;</td>
+                        <td class="col-example">------ / Veius post urbem / captam commigra/ri passus non est (<em>CIL</em>, VI 1308 in.).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">[--- ?], [- ?],<br>[------ ?],<br>------?</td>
+                        <td class="col-siglum91">------?</td>
+                        <td class="col-description">Uncertain if letters / lines were lost by fracture.</td>
+                        <td class="col-epidoc">&lt;gap reason="lost" extent="unknown" unit="line"&gt;
+  &lt;certainty match=".." locus="name"/&gt;
+&lt;/gap&gt;</td>
+                        <td class="col-example">[---? -] Helvius Hermug[---] (<em>CIL</em>, VI 32533 b, v. 35).</td>
+                    </tr>
+
+                    <!-- ═══ EDITORIAL CORRECTIONS ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Editorial Corrections &amp; Supplements</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">{<em>abc</em>}</td>
+                        <td class="col-siglum91">{<em>abc</em>}</td>
+                        <td class="col-description">Letters erroneously added by stonecutter, removed by editor (superfluous characters).</td>
+                        <td class="col-epidoc">&lt;surplus&gt;abc&lt;/surplus&gt;</td>
+                        <td class="col-example">dedika{ra}runt (<em>CIL</em>, VI 224, v. 21).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">&lt;<em>abc</em>&gt;</td>
+                        <td class="col-siglum91">&lt;<em>abc</em>&gt;</td>
+                        <td class="col-description">Letters erroneously omitted by stonecutter, added by editor.</td>
+                        <td class="col-epidoc">&lt;supplied reason="omitted"&gt;abc&lt;/supplied&gt;</td>
+                        <td class="col-example">huma&lt;na&gt;rum (<em>CIL</em>, VI 930, v. 18 in.).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">⸢<em>abc</em>⸣</td>
+                        <td class="col-siglum91">⸢<em>abc</em>⸣</td>
+                        <td class="col-description">Letters corrected by editor (erroneous characters).</td>
+                        <td class="col-epidoc">&lt;choice&gt;
+  &lt;corr&gt;abc&lt;/corr&gt;
+  &lt;sic&gt;def&lt;/sic&gt;
+&lt;/choice&gt;</td>
+                        <td class="col-example">C. Iulius C. ⸢f.⸣ Arn(ensis) (<em>CIL</em>, VI 100, v. 2).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91"><em>abc</em> (!)</td>
+                        <td class="col-description">Regularisation of dialect or late spellings, etc.</td>
+                        <td class="col-epidoc">&lt;choice&gt;
+  &lt;reg&gt;def&lt;/reg&gt;
+  &lt;orig&gt;abc&lt;/orig&gt;
+&lt;/choice&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <!-- ═══ ABBREVIATIONS ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Abbreviations</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>a</em>(<em>bc</em>)</td>
+                        <td class="col-siglum91"><em>a</em>(<em>bc</em>)</td>
+                        <td class="col-description">Abbreviated word, fully expanded by editor.</td>
+                        <td class="col-epidoc">&lt;expan&gt;
+  &lt;abbr&gt;a&lt;/abbr&gt;
+  &lt;ex&gt;bc&lt;/ex&gt;
+&lt;/expan&gt;</td>
+                        <td class="col-example">Gallicano et Vetere co(n)s(ulibus) (<em>CIL</em>, VI 209, v. 1).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91"><em>a</em>(<em>bc</em>?)</td>
+                        <td class="col-description">Abbreviated word, uncertainly expanded.</td>
+                        <td class="col-epidoc">&lt;expan&gt;a&lt;ex cert="low"&gt;bc&lt;/ex&gt;&lt;/expan&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80"><em>a</em>(---)</td>
+                        <td class="col-siglum91"><em>a</em>(---)</td>
+                        <td class="col-description">Abbreviated word, cannot be solved.</td>
+                        <td class="col-epidoc">&lt;abbr&gt;a&lt;/abbr&gt;</td>
+                        <td class="col-example">C. H(---)C. H(---)C. H M(---)M(---)M (<em>CIL</em>, VI 38, v. 3).</td>
+                    </tr>
+
+                    <!-- ═══ EDITORIAL SUPPLEMENTS & NOTES ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Editorial Supplements &amp; Notes</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">(<em>abc</em>)</td>
+                        <td class="col-siglum91">(<em>abc</em>)</td>
+                        <td class="col-description">Word placed by editor in place of reversed letters or notes; editor makes "subaudible" word manifest.</td>
+                        <td class="col-epidoc">&lt;supplied reason="subaudible"&gt;abc&lt;/supplied&gt;</td>
+                        <td class="col-example">Mummia / (mulieris) liberta / Fortunata (<em>CIL</em>, VI 9799 a).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">(scil. <em>abc</em>)</td>
+                        <td class="col-siglum91">(scil. <em>abc</em>)</td>
+                        <td class="col-description">Word not written but supplied by editor.</td>
+                        <td class="col-epidoc">&lt;supplied reason="subaudible"&gt;abc&lt;/supplied&gt;</td>
+                        <td class="col-example">Antigonus M. Iuni Erotis (scil. servus) (<em>CIL</em>, VI 446, v. 4).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">(---)</td>
+                        <td class="col-siglum91">⟨---⟩</td>
+                        <td class="col-description">Inscription not completed (text not completed; omission not restored).</td>
+                        <td class="col-epidoc">&lt;gap reason="omitted" extent="unknown" unit="character"/&gt;</td>
+                        <td class="col-example">Iul(ius) / Rodo et (---) | Iul(ius) / Rodo et ⟨---⟩ (<em>CIL</em>, III 11121, vv. 5–6).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">(!)</td>
+                        <td class="col-siglum91 empty">—</td>
+                        <td class="col-description">Editorial note for attention (<em>sic</em>).</td>
+                        <td class="col-epidoc empty">—</td>
+                        <td class="col-example">corpus / exanimis (!) (<em>CIL</em>, VI 2160, vv. 1–2).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">…</td>
+                        <td class="col-siglum91">…</td>
+                        <td class="col-description">Word(s) omitted by editor from old or recent text.</td>
+                        <td class="col-epidoc">&lt;gap reason="ellipsis"/&gt;</td>
+                        <td class="col-example">Domino Aesculapio et Hygiae … T. Iulius Genesiacus (<em>CIL</em>, VI 18, vv. 1–8).</td>
+                    </tr>
+
+                    <!-- ═══ VACAT ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Vacat (Uninscribed Space)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">vac.3 <em>or</em><br>vac.c.3 <em>or</em><br>vac.</td>
+                        <td class="col-siglum91">(vac. 3) <em>or</em><br>(vac.c.3) <em>or</em><br>(vac.)</td>
+                        <td class="col-description">Line apparently not inscribed; length in letters estimated.<br><br>If unknown: (vac.)</td>
+                        <td class="col-epidoc">&lt;space quantity="3" unit="character"/&gt;
+
+&lt;space quantity="unknown" unit="character"/&gt;</td>
+                        <td class="col-example">XVI k(alendas) Iun(ias) vac.c.5 dom(i) | XVI k(alendas) Iun(ias) (vac.c.5) dom(i) (<em>CIL</em>, VI 2046, v. 4).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80">vac.?</td>
+                        <td class="col-siglum91">(vac.?)</td>
+                        <td class="col-description">Surface too corrupt to determine if inscribed (possible vacat).</td>
+                        <td class="col-epidoc">&lt;space quantity="5" unit="character"&gt;
+  &lt;certainty match=".." locus="name"/&gt;
+&lt;/space&gt;</td>
+                        <td class="col-example">vac.? T. Aurelius Norbanu[s] | (vac.?) T. Aurelius Norbanu[s] (<em>CIL</em>, VI 32515 e, p. II, v. 19).</td>
+                    </tr>
+
+                    <!-- ═══ NUMERALS & SYMBOLS ═══ -->
+                    <tr class="section-header">
+                        <td colspan="5">Numerals &amp; Symbols</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91"><em>V</em></td>
+                        <td class="col-description">Numeral, value known.</td>
+                        <td class="col-epidoc">&lt;num value="5"&gt;V&lt;/num&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-siglum80 empty">—</td>
+                        <td class="col-siglum91">((chi-rho))</td>
+                        <td class="col-description">Symbols: Chi-Rho (Christogram).</td>
+                        <td class="col-epidoc">&lt;g ref="#chi-rho"/&gt;</td>
+                        <td class="col-example empty">—</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Generated via Saxon-Che &amp; GitHub Actions</p>
+        <p>&copy; 2026 – Leonardo Battistella</p>
+        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
+        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
+    </footer>
+</body>
+</html>
