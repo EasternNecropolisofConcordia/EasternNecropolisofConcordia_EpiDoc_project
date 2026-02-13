@@ -46,6 +46,19 @@ def transform_xml():
         </header>
         """
 
+        footer_html = """
+        <footer>
+            <p>Generated via Saxon-Che &amp; GitHub Actions</p>
+            <p>&copy; 2026 - Leonardo Battistella</p>
+            <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+            <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca’ Foscari University of Venice.</p>
+            <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
+            <p>____________________________________________________________________________________________________</p>
+            <p>The images provided by the Ministry of Culture and the Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
+            <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
+        </footer>
+        """
+
         for filename in os.listdir(xml_dir):
             if filename.endswith('.xml'):
                 xml_path = os.path.join(xml_dir, filename)
@@ -68,6 +81,7 @@ def transform_xml():
     <main>
         {output}
     </main>
+        {footer_html}
 </body>
 </html>"""
 
