@@ -11,14 +11,14 @@ def run():
         return
 
     people_data = {}
-    # Dizionario per mappare xml:id → nome completo (per i link relationship)
+    # Dictionary to map xml:id → full name (for relationship links)
     people_names = {}
 
     with PySaxonProcessor(license=False) as proc:
         xpath_processor = proc.new_xpath_processor()
         files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
 
-        # PRIMO PASSAGGIO: raccogli tutti i nomi
+        # FIRST PASS: collect all names
         for filename in files:
             xml_path = os.path.join(xml_dir, filename)
             try:
@@ -31,7 +31,7 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - prendi il primo attributo
+                        # ID - get first attribute
                         p_id = None
                         try:
                             all_attrs = xpath_processor.evaluate("@*")
@@ -48,14 +48,14 @@ def run():
             except:
                 pass
 
-        # SECONDO PASSAGGIO: raccogli tutti i dati
+        # SECOND PASS: collect all data
         for filename in files:
             xml_path = os.path.join(xml_dir, filename)
             try:
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # Titolo iscrizione
+                # Inscription title
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 if title_item and title_item.size > 0:
                     display_title = title_item.item_at(0).string_value.strip()
@@ -63,7 +63,7 @@ def run():
                     display_title = filename
                 target_link = "inscriptions/" + filename.replace('.xml', '.html')
 
-                # Trova tutte le persone
+                # Find all persons
                 persons = xpath_processor.evaluate("//*[local-name()='person']")
                 
                 if persons is not None and persons.size > 0:
@@ -71,29 +71,40 @@ def run():
                         person = persons.item_at(i)
                         xpath_processor.set_context(xdm_item=person)
                         
-                        # ID - prendi il primo attributo (che è xml:id)
+                        # ID - get first attribute (which is xml:id)
                         p_id = None
                         try:
                             all_attrs = xpath_processor.evaluate("@*")
                             if all_attrs and all_attrs.size > 0:
-                                # Il primo attributo è sempre xml:id
+                                # First attribute is always xml:id
                                 first_attr = all_attrs.item_at(0)
                                 p_id = first_attr.string_value.strip()
-                                print(f"  File {filename}, persona {i}: xml:id = '{p_id}'")
+                                print(f"  File {filename}, person {i}: xml:id = '{p_id}'")
                         except Exception as e:
-                            print(f"  ERRORE leggendo attributi: {e}")
+                            print(f"  ERROR reading attributes: {e}")
                         
-                        # Fallback: genera ID automatico
+                        # Fallback: generate automatic ID
                         if not p_id or p_id == "":
                             p_id = f"p_{filename}_{i}"
                         
-                        print(f"DEBUG: File {filename}, persona {i}, ID trovato: {p_id}")
+                        print(f"DEBUG: File {filename}, person {i}, ID found: {p_id}")
 
-                        # Se già esiste, aggiungi solo il link E unisci le note se diverse
+                        # Detect if this is a group
+                        is_group = False
+                        try:
+                            role_attr = xpath_processor.evaluate("@role")
+                            if role_attr and role_attr.size > 0:
+                                role_attr_val = role_attr.item_at(0).string_value.strip().lower()
+                                if role_attr_val == 'group':
+                                    is_group = True
+                        except:
+                            pass
+
+                        # If already exists, add link and merge notes if different
                         if p_id in people_data:
                             people_data[p_id]['links'].append({'title': display_title, 'url': target_link})
                             
-                            # Aggiungi note se non già presenti
+                            # Add notes if not already present
                             note_elements_new = xpath_processor.evaluate(".//*[local-name()='note']")
                             if note_elements_new and note_elements_new.size > 0:
                                 for j in range(note_elements_new.size):
@@ -102,7 +113,7 @@ def run():
                                     n_value = n.string_value.strip()
                                     corresp = n.get_attribute_value("corresp")
                                     
-                                    # Verifica se questa nota esiste già
+                                    # Check if this note already exists
                                     note_exists = False
                                     for existing_note in people_data[p_id]['notes']:
                                         if existing_note['type'] == n_type and existing_note['value'] == n_value:
@@ -118,7 +129,7 @@ def run():
                             
                             continue
 
-                        # Tutti i nomi
+                        # All names
                         names_data = []
                         name_elements = xpath_processor.evaluate(".//*[local-name()='persName']/*[local-name()='name']")
                         if name_elements and name_elements.size > 0:
@@ -136,21 +147,21 @@ def run():
                                     'nymref': nymref
                                 })
 
-                        # Nome completo per titolo
+                        # Full name for title
                         full_name_item = xpath_processor.evaluate(".//*[local-name()='name'][@type='full']")
                         if full_name_item and full_name_item.size > 0:
                             p_name = full_name_item.item_at(0).string_value.strip()
                         else:
                             p_name = "Unknown"
 
-                        # Genere
+                        # Gender
                         g_item = xpath_processor.evaluate(".//*[local-name()='gender']")
                         if g_item and g_item.size > 0:
                             p_gender = g_item.item_at(0).string_value.strip()
                         else:
                             p_gender = "unknown"
 
-                        # Note
+                        # Notes
                         notes_data = []
                         occupation = None
                         note_elements = xpath_processor.evaluate(".//*[local-name()='note']")
@@ -170,9 +181,15 @@ def run():
                                 if n_type == "occupation":
                                     occupation = n_value
 
-                        # Logica Silhouette
+                        # Silhouette logic
                         img = None
-                        if p_gender == 'f':
+                        if is_group:
+                            # Group silhouettes
+                            if occupation in ['soldier', 'soldier?']:
+                                img = "silhouette_group_soldiers.png"
+                            elif occupation in ['civil', 'civil?']:
+                                img = "silhouette_group_civilians.png"
+                        elif p_gender == 'f':
                             img = "silhouette_female.png"
                         elif p_gender == 'm':
                             if occupation in ['civil', 'civil?']:
@@ -188,6 +205,7 @@ def run():
                             'id': p_id,
                             'name': p_name,
                             'gender': p_gender,
+                            'is_group': is_group,
                             'names': names_data,
                             'notes': notes_data,
                             'img': img,
@@ -195,18 +213,18 @@ def run():
                         }
                         
             except Exception as e:
-                print(f"Errore su {filename}: {e}")
+                print(f"Error on {filename}: {e}")
 
-    # Generazione Card
+    # Card generation
     cards = ""
     for pid in sorted(people_data.keys(), key=lambda x: people_data[x]['name']):
         p = people_data[pid]
         
-        # Prepara attributi data-* per filtri JavaScript
+        # Prepare data-* attributes for JavaScript filters
         data_attrs = []
         data_attrs.append(f'data-gender="{p["gender"]}"')
         
-        # Raccogli tutti i valori per i filtri
+        # Collect all values for filters
         gens_set = set()
         origin_set = set()
         occupation_val = ""
@@ -233,18 +251,20 @@ def run():
         data_attrs.append(f'data-role="{",".join(role_vals)}"')
         data_attrs.append(f'data-relationship="{",".join(relationship_vals)}"')
         data_attrs.append(f'data-name="{p["name"].lower()}"')
+        if p.get('is_group'):
+            data_attrs.append('data-group="true"')
         
         data_attrs_str = " ".join(data_attrs)
         
-        # Immagine
+        # Image
         img_html = ""
         if p['img']:
             img_html = f'<img src="../images/silhouette/{p["img"]}" alt="silhouette">'
         
-        # Costruisci dl
+        # Build dl
         dl_content = ""
         
-        # Nomi
+        # Names
         for name in p['names']:
             dl_content += f"<dt>{name['type'].upper()}</dt><dd>{name['value']}</dd>"
             if name['type'] == 'cognomen' and name['nymref']:
@@ -253,12 +273,16 @@ def run():
         # Gender
         gender_display = "male" if p['gender'] == 'm' else ("female" if p['gender'] == 'f' else "unknown")
         dl_content += f"<dt>GENDER</dt><dd>{gender_display}</dd>"
+
+        # Group
+        if p.get('is_group'):
+            dl_content += "<dt>TYPE</dt><dd>group</dd>"
         
         # Notes (occupation, role, relationship)
         for note in p['notes']:
             note_type_upper = note['type'].upper()
             
-            # Se è una relationship con corresp, crea il link
+            # If relationship with corresp, create link
             if note['type'] == 'relationship' and note['corresp']:
                 corresp_id = note['corresp'].replace('#', '')
                 corresp_name = people_names.get(corresp_id, corresp_id)
@@ -279,7 +303,7 @@ def run():
             </dl>
         </div>"""
 
-    # Template HTML completo con CSS e JavaScript inline
+    # Full HTML template with inline CSS and JavaScript
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -288,7 +312,7 @@ def run():
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
         <nav class="navbar">
             <ul class="menu">
@@ -297,12 +321,12 @@ def run():
                 <li><a href="people.html">People</a></li>
                 <li><a href="./map.html">Map</a></li>
                 <li class="dropdown">
-                    <a href="#">Study & Context ▾</a>
+                    <a href="#">Study &amp; Context ▾</a>
                     <ul class="submenu">
                         <li><a href="./context/history.html">History</a></li>
                         <li><a href="./context/about_people.html">About People Buried</a></li>
-                        <li><a href="./context/supports.html">Supports & Monuments</a></li>
-                        <li><a href="./context/chronology.html">Dating & Chronology</a></li>
+                        <li><a href="./context/supports.html">Supports &amp; Monuments</a></li>
+                        <li><a href="./context/chronology.html">Dating &amp; Chronology</a></li>
                     </ul>
                 </li>
                 <li><a href="./krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
@@ -422,14 +446,14 @@ def run():
             color: #8B3A3A;
         }}
         
-        /* Container con sidebar e lista */
+        /* Container with sidebar and list */
         .people-container {{
             display: flex;
             gap: 20px;
             margin-top: 20px;
         }}
         
-        /* Sidebar filtri */
+        /* Filters sidebar */
         .filters-sidebar {{
             width: 250px;
             flex-shrink: 0;
@@ -548,7 +572,7 @@ def run():
             background: #6D2D2D;
         }}
         
-        /* Lista persone */
+        /* People list */
         .people-list {{
             flex: 1;
             display: grid;
@@ -576,12 +600,12 @@ def run():
         }}
     </style>
     <script>
-        // Inizializzazione
+        // Initialisation
         document.addEventListener('DOMContentLoaded', function() {{
             const peopleCards = document.querySelectorAll('.person');
             const totalCount = peopleCards.length;
             
-            // Raccogli tutti i valori per i filtri
+            // Collect all filter values
             const filterData = {{
                 gender: {{}},
                 gens: {{}},
@@ -638,7 +662,7 @@ def run():
                 }}
             }});
             
-            // Popola i filtri
+            // Populate filters
             populateFilter('filterGender', filterData.gender, 'gender');
             populateFilter('filterGens', filterData.gens, 'gens', 5);
             populateFilter('filterOrigin', filterData.origin, 'origin', 5);
@@ -646,7 +670,7 @@ def run():
             populateFilter('filterRole', filterData.role, 'role', 5);
             populateFilter('filterRelationship', filterData.relationship, 'relationship', 5);
             
-            // Funzione per popolare i filtri
+            // Function to populate filters
             function populateFilter(containerId, data, attribute, limit = null) {{
                 const container = document.getElementById(containerId);
                 const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
@@ -662,7 +686,7 @@ def run():
                     }}
                 }}));
                 
-                // Gestisci pulsante "show more"
+                // Handle button "show more"
                 if (limit && entries.length > limit) {{
                     const showMoreBtn = document.getElementById('showMore' + containerId.replace('filter', ''));
                     if (showMoreBtn) {{
@@ -690,7 +714,7 @@ def run():
                 const label = document.createElement('label');
                 label.htmlFor = checkbox.id;
                 
-                // Formatta label per gender
+                // Format label for gender
                 let displayValue = value;
                 if (attribute === 'gender') {{
                     displayValue = value === 'm' ? 'Male' : (value === 'f' ? 'Female' : 'Unknown');
@@ -711,7 +735,7 @@ def run():
                 return div;
             }}
             
-            // Ricerca per nome
+            // Search by name
             const searchInput = document.getElementById('searchInput');
             const searchBtn = document.getElementById('searchBtn');
             
@@ -727,7 +751,7 @@ def run():
                 applyFilters();
             }});
             
-            // Funzione principale di filtraggio
+            // Main filtering function
             function applyFilters() {{
                 const searchTerm = searchInput.value.toLowerCase().trim();
                 const activeFilters = {{
@@ -739,7 +763,7 @@ def run():
                     relationship: []
                 }};
                 
-                // Raccogli filtri attivi
+                // Collect active filters
                 document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {{
                     const attr = cb.dataset.attribute;
                     activeFilters[attr].push(cb.value);
@@ -750,7 +774,7 @@ def run():
                 peopleCards.forEach(card => {{
                     let visible = true;
                     
-                    // Filtro ricerca nome
+                    // Name search filter
                     if (searchTerm) {{
                         const name = card.getAttribute('data-name') || '';
                         if (!name.includes(searchTerm)) {{
@@ -758,7 +782,7 @@ def run():
                         }}
                     }}
                     
-                    // Filtro gender
+                    // Gender filter
                     if (visible && activeFilters.gender.length > 0) {{
                         const gender = card.getAttribute('data-gender');
                         if (!activeFilters.gender.includes(gender)) {{
@@ -766,7 +790,7 @@ def run():
                         }}
                     }}
                     
-                    // Filtro gens
+                    // Gens filter
                     if (visible && activeFilters.gens.length > 0) {{
                         const gens = (card.getAttribute('data-gens') || '').split(',').filter(g => g);
                         if (!gens.some(g => activeFilters.gens.includes(g))) {{
@@ -774,7 +798,7 @@ def run():
                         }}
                     }}
                     
-                    // Filtro origin
+                    // Origin filter
                     if (visible && activeFilters.origin.length > 0) {{
                         const origin = (card.getAttribute('data-origin') || '').split(',').filter(o => o);
                         if (!origin.some(o => activeFilters.origin.includes(o))) {{
@@ -782,7 +806,7 @@ def run():
                         }}
                     }}
                     
-                    // Filtro occupation
+                    // Occupation filter
                     if (visible && activeFilters.occupation.length > 0) {{
                         const occupation = card.getAttribute('data-occupation');
                         if (!activeFilters.occupation.includes(occupation)) {{
@@ -790,7 +814,7 @@ def run():
                         }}
                     }}
                     
-                    // Filtro role
+                    // Role filter
                     if (visible && activeFilters.role.length > 0) {{
                         const roles = (card.getAttribute('data-role') || '').split(',').filter(r => r);
                         if (!roles.some(r => activeFilters.role.includes(r))) {{
@@ -798,7 +822,7 @@ def run():
                         }}
                     }}
                     
-                    // Filtro relationship
+                    // Relationship filter
                     if (visible && activeFilters.relationship.length > 0) {{
                         const relationships = (card.getAttribute('data-relationship') || '').split(',').filter(r => r);
                         if (!relationships.some(r => activeFilters.relationship.includes(r))) {{
@@ -806,7 +830,7 @@ def run():
                         }}
                     }}
                     
-                    // Mostra/nascondi card
+                    // Show/hide card
                     if (visible) {{
                         card.classList.remove('hidden');
                         visibleCount++;
@@ -815,14 +839,14 @@ def run():
                     }}
                 }});
                 
-                // Aggiorna contatore
+                // Update counter
                 document.getElementById('countCurrent').textContent = visibleCount;
                 document.getElementById('countTotal').textContent = totalCount;
             }}
         }});
     </script>
     <footer>
-        <p>Generated via Saxon-Che & GitHub Actions</p>
+        <p>Generated via Saxon-Che &amp; GitHub Actions</p>
         <p>&copy; 2026 - Leonardo Battistella</p>
         <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
         <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
@@ -834,7 +858,7 @@ def run():
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
-    print(f"Fine: Pagina generata con {len(people_data)} persone.")
+    print(f"Done: Page generated with {len(people_data)} people.")
 
 if __name__ == "__main__":
     run()
