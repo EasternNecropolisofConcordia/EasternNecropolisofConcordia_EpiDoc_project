@@ -10,7 +10,7 @@ def run():
     output_file = os.path.join(output_dir, 'inscriptions.html')
 
     if not os.path.exists(xml_dir):
-        print(f"ERRORE: La cartella {xml_dir} non esiste!")
+        print(f"ERROR: Directory {xml_dir} does not exist!")
         return
 
     files = [f for f in os.listdir(xml_dir) if f.lower().endswith('.xml')]
@@ -42,10 +42,10 @@ def run():
                     target_link = "inscriptions/" + filename.replace('.xml', '.html')
                 
                 inscriptions_data.append({'title': display_title, 'link': target_link})
-                print(f"REGISTRATO: {display_title}")
+                print(f"REGISTERED: {display_title}")
                 
             except Exception as e:
-                print(f"ERRORE nel file {filename}: {str(e)}")
+                print(f"ERROR on file {filename}: {str(e)}")
                 inscriptions_data.append({'title': filename, 'link': "inscriptions/" + filename.replace('.xml', '.html')})
 
     # Alphabetic Order
@@ -104,7 +104,7 @@ def run():
         <p>&copy; 2026 - Leonardo Battistella</p>
         <p>Generated via Saxon-Che &amp; GitHub Actions</p>
         <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
-        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca’ Foscari University of Venice.</p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
         <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
         <p>____________________________________________________________________________________________________</p>
         <p>The images provided by the Ministry of Culture and the Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
@@ -116,7 +116,7 @@ def run():
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_html)
-    print(f"Fine: Pagina generata con {len(inscriptions_data)} link.")
+    print(f"Done: Page generated with {len(inscriptions_data)} links.")
 
 if __name__ == "__main__":
     run()
