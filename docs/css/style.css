@@ -16,17 +16,12 @@ body {
   background-attachment: fixed;
 }
 
-main {
-  flex: 1 0 auto;
-  padding: 40px 20px;
-  max-width: 950px;
-  margin: 20px auto;
-  background-color: rgba(255, 255, 252, 0.85); 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  width: 90%;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center; 
+/* ===== STICKY HEADER ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
 }
 
 .main_title {
@@ -35,8 +30,10 @@ main {
   padding: 30px 10px;
   color: #8B3A3A;
   font-family: 'Cardo', serif;
-  background-color: rgba(255, 255, 252, 0.2);
+  background-color: #EFEBD8;
   border-color: #8B3A3A;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .navbar {
@@ -51,6 +48,7 @@ main {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menu > li {
@@ -104,6 +102,20 @@ main {
   display: block;
 }
 
+/* ===== MAIN CONTENT ===== */
+main {
+  flex: 1 0 auto;
+  padding: 40px 20px;
+  max-width: 950px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 252, 0.85); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center; 
+}
+
 main h1, main h2, main h3, main h4, main h5 {
     text-align: center;
     color: #8B3A3A;
@@ -116,6 +128,7 @@ main p {
   margin: 10px auto;
 }
 
+/* ===== METADATA ===== */
 .metadata {
   max-width: 900px;
   margin: 30px auto;
@@ -180,6 +193,7 @@ main p {
   margin: 10px auto;
 }
 
+/* ===== DROPDOWNS ===== */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -230,6 +244,7 @@ main p {
   text-decoration-style: solid;
 }
 
+/* ===== WORD REFERENCES ===== */
 .word-with-refs {
   display: inline;
   padding: 0;
@@ -250,6 +265,7 @@ main p {
   display: inline-block;
 }
 
+/* ===== INSCRIPTION LIST ===== */
 .inscription-list {
   list-style-type: none;
   padding: 0;
@@ -261,20 +277,25 @@ main p {
   padding: 15px;
   background-color: rgba(239, 235, 216, 0.3);
   border-left: 4px solid #8B3A3A;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .inscription-list a {
   text-decoration: none;
   font-weight: bold;
   color: #2c3e50;
+  word-break: break-word;
 }
 
+/* ===== TRANSCRIPTION ===== */
 .transcription {
   font-family: 'Cardo', serif;
   line-height: 1.8;
   max-width: 900px;
   margin: 20px auto;
   text-align: center;
+  overflow-x: auto;
 }
 
 .transcription a {
@@ -291,6 +312,7 @@ main p {
   margin: 30px 0;
   display: flex;
   justify-content: center;
+  overflow-x: auto;
 }
 
 .ab-content {
@@ -357,6 +379,7 @@ div[data-location="chest"] {
   margin-top: 20px;
 }
 
+/* ===== TRANSLATION / PALAEOGRAPHY / COMMENTARY ===== */
 details.translation,
 details.palaeography,
 details.commentary {
@@ -418,6 +441,7 @@ details.commentary p {
     text-align: justify;
 }
 
+/* ===== PHYSICAL DESCRIPTION ===== */
 .physical_description {
   max-width: 900px;
   margin: 50px auto 30px auto;
@@ -455,6 +479,7 @@ details.commentary p {
   line-height: 1.5;
 }
 
+/* ===== APPARATUS ===== */
 .apparatus {
     max-width: 800px;
     margin: 30px auto;
@@ -466,6 +491,7 @@ details.commentary p {
     margin-bottom: 10px;
 }
 
+/* ===== FIGURES ===== */
 figure {
   margin: 20px auto;
   padding: 10px;
@@ -500,6 +526,7 @@ figcaption {
     padding-top: 5px;
 }
 
+/* ===== FOOTER ===== */
 footer {
   flex-shrink: 0;
   font-size: 10px;
@@ -515,6 +542,7 @@ footer p {
   text-align: center;
 }
 
+/* ===== BIBLIOGRAPHY ===== */
 .bibliography {
   display: flex;
   flex-direction: column;
@@ -598,6 +626,7 @@ footer p {
   font-family: 'Cardo', serif;
 }
 
+/* ===== PEOPLE ===== */
 .people {
   margin-top: 30px;
   max-width: 800px;
@@ -682,6 +711,11 @@ footer p {
   border-bottom: 1px solid #8B3A3A;
 }
 
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* --- Tablet --- */
 @media (max-width: 768px) {
   .metadata-grid {
     grid-template-columns: 1fr;
@@ -700,8 +734,19 @@ footer p {
     left: -40px;
     width: 30px;
   }
+
+  /* Sticky header: reduce title padding on tablet */
+  .main_title {
+    padding: 20px 10px;
+  }
+
+  .menu a {
+    padding: 12px 12px;
+    font-size: 0.8rem;
+  }
 }
 
+/* --- Small tablets / large phones --- */
 @media (max-width: 650px) {
   .person, .person_record {
     display: flex;
@@ -738,18 +783,46 @@ footer p {
   }
 }
 
+/* --- Phones --- */
 @media (max-width: 600px) {
-  .biblio-item dl, .bibliography dl {
-    grid-template-columns: 1fr;
+  /* Sticky header: compact on mobile */
+  .main_title {
+    padding: 12px 10px;
+    font-size: 0.9em;
   }
 
-  .biblio-item dt, .bibliography dt {
-    margin-top: 10px;
-    display: inline-block;
+  .main_title h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu a {
+    padding: 10px 10px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* Transcription: allow horizontal scroll for long lines */
+  .transcription {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .textpart {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
   }
 
   .ab-content {
     padding-left: 30px; 
+    min-width: 0;
   }
 
   .line[n="5"]::before,
@@ -761,6 +834,12 @@ footer p {
     left: -30px;
     width: 25px;
     font-size: 0.75em;
+  }
+
+  /* Inscription list */
+  .inscription-list li {
+    padding: 12px 10px;
+    font-size: 0.9rem;
   }
   
   .metadata dl {
@@ -777,5 +856,75 @@ footer p {
   
   .physical_description dt {
     margin-top: 10px;
+  }
+
+  .biblio-item dl, .bibliography dl {
+    grid-template-columns: 1fr;
+  }
+
+  .biblio-item dt, .bibliography dt {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  /* Main content: less padding on mobile */
+  main {
+    padding: 20px 12px;
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  /* Details sections */
+  details.translation,
+  details.palaeography,
+  details.commentary {
+    padding: 8px;
+    margin: 20px auto;
+  }
+
+  /* Lid layout: stack on mobile */
+  div[data-location="lid"] {
+    gap: 20px;
+  }
+
+  div[data-location="acroterion"] {
+    min-width: 150px;
+  }
+}
+
+/* --- Very small phones --- */
+@media (max-width: 400px) {
+  .main_title {
+    padding: 8px 5px;
+  }
+
+  .main_title h1 {
+    font-size: 1rem;
+  }
+
+  .menu a {
+    padding: 8px 6px;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+
+  main {
+    padding: 15px 8px;
+    width: 98%;
+  }
+
+  .ab-content {
+    padding-left: 25px;
+  }
+
+  .line[n="5"]::before,
+  .line[n="10"]::before,
+  .line[n="15"]::before,
+  .line[n="20"]::before,
+  .line[n="25"]::before,
+  .line[n="30"]::before {
+    left: -25px;
+    width: 20px;
+    font-size: 0.7em;
   }
 }
