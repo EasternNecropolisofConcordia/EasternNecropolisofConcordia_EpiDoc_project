@@ -53,13 +53,26 @@ def transform_bibliography():
     </header>
     """
 
+    footer_html = """
+    <footer>
+        <p>Generated via Saxon-Che &amp; GitHub Actions</p>
+        <p>&copy; 2026 - Leonardo Battistella</p>
+        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca’ Foscari University of Venice.</p>
+        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
+        <p>____________________________________________________________________________________________________</p>
+        <p>The images provided by the Ministry of Culture and the Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
+        <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
+    </footer>
+    """
+    
     with PySaxonProcessor(license=False) as proc:
         xslt_proc = proc.new_xslt30_processor()
         try:
             executable = xslt_proc.compile_stylesheet(stylesheet_file=xslt_path)
             output = executable.transform_to_string(source_file=xml_path)
             
-            full_page = f"<!DOCTYPE html><html lang='it'><head><meta charset='UTF-8'><link rel='stylesheet' href='../../css/style.css'><title>Bibliography</title></head><body>{header_html}<main>{output}</main></body></html>"
+            full_page = f"<!DOCTYPE html><html lang='it'><head><meta charset='UTF-8'><link rel='stylesheet' href='../../css/style.css'><title>Bibliography</title></head><body>{header_html}<main>{output}</main>{footer_html}</body></html>"
             
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(full_page)
