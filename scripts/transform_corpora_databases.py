@@ -23,7 +23,8 @@ def transform_bibliography():
 
     header_html = """
     <header>
-        <h1 class="main_title">Digital Approaches to the Inscriptions of Iulia Concordia</h1>
+        <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
+        <h2 class="main_title">From Autoptic Analysis to TEI-based Edition</h2>
         <nav class="navbar">
             <ul class="menu">
                 <li><a href="../../index.html">Home</a></li>
