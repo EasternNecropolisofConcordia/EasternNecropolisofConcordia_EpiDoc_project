@@ -657,8 +657,7 @@ var LEGEND = [{"label": "Soldier", "color": "#DC143C"}, {"label": "Civilian", "c
 
         // ── Add markers ───────────────────────────────────────────
         MARKERS.forEach(function (m) {
-            // Invert y for Leaflet
-            var latLng = [imgH - m.y, m.x];
+            var latLng = [m.y, m.x];
 
             var circle = L.circleMarker(latLng, {
                 radius: 10,
