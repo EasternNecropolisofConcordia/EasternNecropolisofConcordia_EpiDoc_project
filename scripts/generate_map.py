@@ -318,6 +318,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                         <li><a href="./context/chronology.html">Dating &amp; Chronology</a></li>
                     </ul>
                 </li>
+                <li><a href="./krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
                 <li>
                     <a href="#">References ▾</a>
                     <ul class="submenu">
