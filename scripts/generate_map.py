@@ -292,7 +292,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./inscriptions.html">Inscriptions</a></li>
                 <li><a href="./people.html">People</a></li>
-                <li><a href="./map.html">Map</a></li>
+                <li><a href="map.html">Map</a></li>
                 <li>
                     <a href="#">Study &amp; Context ▾</a>
                     <ul class="submenu">
@@ -302,6 +302,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                         <li><a href="./context/chronology.html">Dating &amp; Chronology</a></li>
                     </ul>
                 </li>
+                <li><a href="krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
                 <li>
                     <a href="#">References ▾</a>
                     <ul class="submenu">
