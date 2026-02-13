@@ -711,6 +711,56 @@ footer p {
   border-bottom: 1px solid #8B3A3A;
 }
 
+/* ===== NOTES SECTION ===== */
+.notes {
+  max-width: 800px;
+  margin: 40px auto 20px auto;
+  text-align: left;
+  border-top: 2px solid rgba(139, 58, 58, 0.25);
+  padding-top: 20px;
+}
+
+.notes h2 {
+  text-align: left;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.notes ol {
+  padding-left: 30px;
+  margin: 0;
+}
+
+.notes li {
+  font-family: 'Cardo', serif;
+  font-size: 0.85rem;
+  color: #2c3e50;
+  line-height: 1.6;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.notes li:target {
+  background-color: rgba(139, 58, 58, 0.08);
+  border-radius: 2px;
+  padding: 2px 4px;
+}
+
+a.note-ref {
+  color: #8B3A3A;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  vertical-align: super;
+  line-height: 0;
+  transition: color 0.2s ease;
+}
+
+a.note-ref:hover {
+  color: #6D2D2D;
+  text-decoration: underline;
+}
+
 /* ===== CONVENTIONS TABLE ===== */
 .conventions-table-wrapper {
   max-width: 100%;
