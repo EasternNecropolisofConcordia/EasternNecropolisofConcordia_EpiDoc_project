@@ -58,7 +58,7 @@
                             <placeName type="plot">Perulli</placeName>
                             <date type="discovery">1875</date>
                             <note type="plan_x">1280</note>
-                            <note type="plan_y">100</note>
+                            <note type="plan_y">1000</note>
                         </provenance>
                         <provenance type="observed">
                             <orgName type="museum" ref="#museo-concordiese">
