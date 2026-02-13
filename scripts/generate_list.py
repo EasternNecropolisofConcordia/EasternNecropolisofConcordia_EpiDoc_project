@@ -48,13 +48,13 @@ def run():
                 print(f"ERRORE nel file {filename}: {str(e)}")
                 inscriptions_data.append({'title': filename, 'link': "inscriptions/" + filename.replace('.xml', '.html')})
 
-    # Ordinamento alfabetico
+    # Alphabetic Order
     inscriptions_data.sort(key=lambda x: x['title'])
     
-    # Costruzione della lista link
+    # Link
     links_html = "".join([f'<li><a href="{item["link"]}">{item["title"]}</a></li>' for item in inscriptions_data])
     
-    # Template con Navbar (uguale a quella delle singole iscrizioni)
+    # Template with Navbar
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
