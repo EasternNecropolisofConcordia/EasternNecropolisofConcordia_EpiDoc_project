@@ -336,7 +336,7 @@
                 <!-- INSCRIPTION SECTION -->
                 <div class="inscription">
                     <h2>INSCRIPTION</h2>
-                    <h3>TRANSCRIPTION</h3>
+                    <h3>INTERPRETATIVE TRANSCRIPTION</h3>
                     <xsl:for-each select="//tei:div[@type = 'edition']">
                         <div class="transcription" lang="la">
                             <xsl:choose>
