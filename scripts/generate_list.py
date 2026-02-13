@@ -25,17 +25,17 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-                # XPath per il titolo TEI
+
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 idno_item = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]")
                 
-                # Usa .item_at(0) per Saxon-Che (collections, non singoli valori)
+
                 if title_item is not None and title_item.size > 0:
                     display_title = title_item.item_at(0).string_value.strip()
                 else:
                     display_title = filename
 
-                # Determiniamo il link
+
                 if idno_item is not None and idno_item.size > 0:
                     target_link = "inscriptions/" + idno_item.item_at(0).string_value.strip().replace('.xml', '.html')
                 else:
