@@ -359,8 +359,7 @@ var LEGEND = __LEGEND_JSON__;
 
         // ── Add markers ───────────────────────────────────────────
         MARKERS.forEach(function (m) {
-            // Invert y for Leaflet
-            var latLng = [imgH - m.y, m.x];
+            var latLng = [m.y, m.x];
 
             var circle = L.circleMarker(latLng, {
                 radius: 10,
