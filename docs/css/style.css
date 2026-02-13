@@ -37,7 +37,7 @@ body {
 }
 
 .navbar {
-  width: 100%;
+  wih: 100%;
   background-color: #8B3A3A;
   border-bottom: 3px solid #6D2D2D;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -624,6 +624,103 @@ footer p {
   text-align: left;
   color: #8B3A3A;
   font-family: 'Cardo', serif;
+}
+
+
+/* ===== CORPORA AND DATABASES ===== */
+.epigraphic_corpora, 
+.prosopographical_corpora, 
+.databases {
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: 'Cardo', serif;
+}
+
+.epigraphic_corpora h2, 
+.prosopographical_corpora h2, 
+.databases h2 {
+    color: #8B3A3A;
+    border-bottom: 2px solid #8B3A3A;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.epigraphic_corpora table, 
+.prosopographical_corpora table, 
+.databases table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.epigraphic_corpora tr, 
+.prosopographical_corpora tr, 
+.databases tr {
+    background-color: rgba(255, 255, 252, 0.7);
+    border-left: 5px solid #8B3A3A;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease;
+}
+
+.epigraphic_corpora tr:hover, 
+.prosopographical_corpora tr:hover, 
+.databases tr:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 252, 1);
+}
+
+.epigraphic_corpora td:first-child, 
+.prosopographical_corpora td:first-child, 
+.databases td:first-child {
+    padding: 15px;
+    width: 110px;
+    vertical-align: middle;
+}
+
+.epigraphic_corpora td:first-child strong, 
+.prosopographical_corpora td:first-child strong, 
+.databases td:first-child strong {
+    display: inline-block;
+    background-color: #8B3A3A;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    text-align: center;
+    min-width: 70px;
+}
+
+.epigraphic_corpora td:last-child, 
+.prosopographical_corpora td:last-child, 
+.databases td:last-child {
+    padding: 15px;
+    color: #2c3e50;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.databases td a {
+    color: #8B3A3A;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .epigraphic_corpora tr, 
+    .prosopographical_corpora tr, 
+    .databases tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .epigraphic_corpora td:first-child, 
+    .prosopographical_corpora td:first-child, 
+    .databases td:first-child {
+        width: 100%;
+        padding-bottom: 5px;
+    }
 }
 
 /* ===== PEOPLE ===== */
