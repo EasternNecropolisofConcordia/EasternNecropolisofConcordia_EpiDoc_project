@@ -14,8 +14,8 @@ def transform_bibliography():
     
     os.makedirs(output_dir, exist_ok=True)
     
-    print(f"Sto cercando l'XML in: {xml_path}")
-    print(f"Sto scrivendo l'HTML in: {output_path}")
+    print(f"Searching for l'XML in: {xml_path}")
+    print(f"Writing HTML to: {output_path}")
 
     if not os.path.exists(xml_path):
         print(f"ERRORE: XML non trovato!")
