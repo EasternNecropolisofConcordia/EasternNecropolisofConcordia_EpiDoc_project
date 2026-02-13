@@ -92,7 +92,6 @@ def collect_markers(xml_dir: str) -> list:
                         )
                         full_name = (nm.item_at(0).string_value.strip()
                                      if nm and nm.size > 0 else "Unknown")
-                        people_names.append(full_name)
 
                         # Role
                         rl = xp.evaluate(
@@ -100,6 +99,16 @@ def collect_markers(xml_dir: str) -> list:
                         )
                         role = (rl.item_at(0).string_value.strip()
                                 if rl and rl.size > 0 else "")
+
+                        # Annotate dedicators in the display name
+                        display_name = full_name
+                        role_lower = role.lower().strip()
+                        if role_lower == 'dedicator':
+                            display_name += ' (dedicator)'
+                        elif role_lower == 'dedicator?':
+                            display_name += ' (dedicator?)'
+
+                        people_names.append(display_name)
 
                         # Occupation
                         oc = xp.evaluate(
@@ -154,8 +163,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         }
         #map {
             width: 100%;
-            height: 70vh;
-            min-height: 450px;
             border: 1px solid rgba(139, 58, 58, 0.3);
             border-radius: 2px;
             background: #f5f3e8;
@@ -207,6 +214,24 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             margin-top: 4px;
         }
 
+        /* ── Leaflet popup override (click) ────────────── */
+        .inscription-popup .leaflet-popup-content-wrapper {
+            background: rgba(255, 255, 252, 0.97);
+            border: 1px solid #8B3A3A;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-family: 'Cardo', serif;
+            padding: 0;
+        }
+        .inscription-popup .leaflet-popup-content {
+            margin: 0;
+            max-width: 260px;
+        }
+        .inscription-popup .leaflet-popup-tip {
+            background: rgba(255, 255, 252, 0.97);
+            border: 1px solid #8B3A3A;
+        }
+
         /* ── Custom legend ─────────────────────────────── */
         .map-legend {
             background: rgba(255, 255, 252, 0.95);
@@ -252,10 +277,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 
         /* ── Responsive ────────────────────────────────── */
         @media (max-width: 600px) {
-            #map {
-                height: 55vh;
-                min-height: 350px;
-            }
             .map-legend {
                 font-size: 0.7rem;
                 padding: 8px 10px;
@@ -299,8 +320,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             The map below shows the positions of the inscribed sarcophagi within the
             Eastern Necropolis (<em>Sepolcreto dei Militi</em>) of <em>Iulia Concordia</em>,
             based on the 1879 planimetry. Each marker is colour-coded according to the
-            occupation of the deceased. Hover over a marker to see the inscription details;
-            click the title to visit the full record.
+            occupation of the deceased. Hover over a marker for a quick preview;
+            click on it to pin the card in place. Click anywhere else on the map to dismiss it.
         </p>
 
         <div id="map-container">
@@ -335,7 +356,6 @@ var LEGEND = __LEGEND_JSON__;
     };
 
     img.onerror = function () {
-        // Fallback: assume a reasonable size so the page isn't blank
         console.warn('Could not load planimetry image; using fallback dimensions.');
         initMap(3000, 2000);
     };
@@ -343,7 +363,16 @@ var LEGEND = __LEGEND_JSON__;
     img.src = IMG_URL;
 
     function initMap(imgW, imgH) {
-        // CRS.Simple: y goes up, image y goes down → invert
+        // ── Set map container height to match image aspect ratio ──
+        var mapEl = document.getElementById('map');
+        var containerW = mapEl.offsetWidth;
+        var aspectH = Math.round(containerW * (imgH / imgW));
+        // Clamp between 350px and 85vh
+        var maxH = Math.round(window.innerHeight * 0.85);
+        var minH = 350;
+        aspectH = Math.max(minH, Math.min(aspectH, maxH));
+        mapEl.style.height = aspectH + 'px';
+
         var bounds = [[0, 0], [imgH, imgW]];
 
         var map = L.map('map', {
@@ -356,6 +385,26 @@ var LEGEND = __LEGEND_JSON__;
 
         L.imageOverlay(IMG_URL, bounds).addTo(map);
         map.fitBounds(bounds);
+
+        // ── Resize handler ────────────────────────────────────────
+        window.addEventListener('resize', function () {
+            var newW = mapEl.offsetWidth;
+            var newH = Math.round(newW * (imgH / imgW));
+            var maxH2 = Math.round(window.innerHeight * 0.85);
+            newH = Math.max(350, Math.min(newH, maxH2));
+            mapEl.style.height = newH + 'px';
+            map.invalidateSize();
+        });
+
+        // ── Build shared card HTML for tooltip & popup ────────────
+        function buildCardHtml(m) {
+            var peopleHtml = m.people.map(function (n) { return n; }).join(', ');
+            return '<div class="tooltip-inner">' +
+                '<a class="tooltip-title" href="' + m.url + '">' + m.title + '</a>' +
+                '<img src="' + m.image + '" alt="inscription" onerror="this.style.display=\'none\'">' +
+                '<div class="tooltip-people">' + peopleHtml + '</div>' +
+            '</div>';
+        }
 
         // ── Add markers ───────────────────────────────────────────
         MARKERS.forEach(function (m) {
@@ -370,21 +419,27 @@ var LEGEND = __LEGEND_JSON__;
                 fillOpacity: 0.25
             }).addTo(map);
 
-            // Build tooltip HTML
-            var peopleHtml = m.people.map(function (n) { return n; }).join(', ');
-            var tooltipHtml =
-                '<div class="tooltip-inner">' +
-                    '<a class="tooltip-title" href="' + m.url + '">' + m.title + '</a>' +
-                    '<img src="' + m.image + '" alt="inscription" onerror="this.style.display=\'none\'">' +
-                    '<div class="tooltip-people">' + peopleHtml + '</div>' +
-                '</div>';
+            var cardHtml = buildCardHtml(m);
 
-            circle.bindTooltip(tooltipHtml, {
+            // Hover → tooltip (disappears on mouse out)
+            circle.bindTooltip(cardHtml, {
                 direction: 'top',
                 offset: [0, -12],
                 className: 'inscription-tooltip',
-                interactive: true,
                 opacity: 1
+            });
+
+            // Click → popup (stays until user closes / clicks elsewhere)
+            circle.bindPopup(cardHtml, {
+                className: 'inscription-popup',
+                maxWidth: 260,
+                offset: [0, -10],
+                closeButton: true
+            });
+
+            // When popup opens, hide tooltip to avoid overlap
+            circle.on('click', function () {
+                circle.closeTooltip();
             });
         });
 
