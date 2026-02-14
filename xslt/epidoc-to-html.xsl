@@ -316,7 +316,7 @@
                             <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:height"/> × <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:width"/><xsl:text> cm</xsl:text>
                         </dd>
                         <dt>Letters Height</dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/></dd>
+                        <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/> cm</dd>
                     </dl>
                     <details class="palaeography">
                         <summary><h3>Palaeographic comment</h3></summary>
