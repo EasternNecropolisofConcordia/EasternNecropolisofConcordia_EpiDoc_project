@@ -416,15 +416,15 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app from="#w1" to="#w1">
+                    <app loc="2" from="#w1" to="#w1">
                         <lem><choice><reg>carissime</reg><orig><choice><corr>c</corr><sic>l</sic></choice>arissime</orig></choice></lem>
                         <rdg source="#lettich1994"><choice><corr>k</corr><sic>l</sic></choice>arissimae</rdg>
                     </app>
-                    <app from="#w2" to="#w2">
+                    <app loc="2" from="#w2" to="#w2">
                         <lem><choice><reg>castissimaeque</reg><orig>castissimeque</orig></choice></lem>
                         <rdg source="#lettich1994">castissimaeque</rdg>
                     </app>
-                    <app from="#w3" to="#w3">
+                    <app loc="5" from="#w3" to="#w3">
                         <lem><choice><reg>dulcissimae</reg><orig>dulcissime</orig></choice></lem>
                         <rdg source="#lettich1994">dulcissimae</rdg>
                     </app>
