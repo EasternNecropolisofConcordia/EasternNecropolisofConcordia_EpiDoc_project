@@ -1,4 +1,5 @@
 import os
+from collections import OrderedDict
 from saxonche import PySaxonProcessor
 
 def run():
@@ -283,16 +284,31 @@ def run():
             dl_content += "<dt>TYPE</dt><dd>Group</dd>"
         
         # Notes (occupation, role, relationship)
+        # Group notes by type to combine values (e.g. role: "dedicator & deceased")
+        notes_grouped = OrderedDict()
         for note in p['notes']:
-            note_type_upper = note['type'].upper()
+            n_type = note['type']
+            if n_type not in notes_grouped:
+                notes_grouped[n_type] = []
+            notes_grouped[n_type].append(note)
+        
+        for n_type, notes_list in notes_grouped.items():
+            note_type_upper = n_type.upper()
             
-            # If relationship with corresp, create link
-            if note['type'] == 'relationship' and note['corresp']:
-                corresp_id = note['corresp'].replace('#', '')
-                corresp_name = people_names.get(corresp_id, corresp_id)
-                dl_content += f"<dt>{note_type_upper}</dt><dd>{cap(note['value'])} (→ <a href=\"#{corresp_id}\">{corresp_name}</a>)</dd>"
+            if n_type == 'relationship':
+                # Each relationship gets its own line (different targets)
+                for note in notes_list:
+                    if note['corresp']:
+                        corresp_raw = note['corresp']
+                        corresp_id = corresp_raw.split('#')[-1] if '#' in corresp_raw else corresp_raw
+                        corresp_name = people_names.get(corresp_id, corresp_id)
+                        dl_content += f"<dt>{note_type_upper}</dt><dd>{cap(note['value'])} (→ <a href=\"#{corresp_id}\">{corresp_name}</a>)</dd>"
+                    else:
+                        dl_content += f"<dt>{note_type_upper}</dt><dd>{cap(note['value'])}</dd>"
             else:
-                dl_content += f"<dt>{note_type_upper}</dt><dd>{cap(note['value'])}</dd>"
+                # Combine values with " & " (e.g. "Dedicator & Deceased")
+                combined = " & ".join(cap(n['value']) for n in notes_list)
+                dl_content += f"<dt>{note_type_upper}</dt><dd>{combined}</dd>"
         
         # Inscriptions
         links_str = " - ".join([f'<a href="{l["url"]}">{l["title"]}</a>' for l in p['links']])
