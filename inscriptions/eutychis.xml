@@ -39,11 +39,11 @@
                                 <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
                                 <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
                             </origPlace>
-                            <origDate ana="#late-roman-empire" notBefore-custom="0350" notAfter-custom="0400" evidence="lettering nomenclature" xml:lang="en">
-                                Second Half of the Fourth Century.
+                            <origDate ana="#principate" notBefore-custom="0225" notAfter-custom="0275" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Third Century AD.
                             </origDate>
-                            <origDate ana="#late-roman-empire" notBefore-custom="0350" notAfter-custom="0400" evidence="lettering nomenclature" xml:lang="it">
-                                Seconda Metà del IV secolo.
+                            <origDate ana="#principate" notBefore-custom="0225" notAfter-custom="0275" evidence="lettering nomenclature" xml:lang="it">
+                                Metà III secolo d.C.
                             </origDate>
                         </origin>
                         <provenance type="found">
@@ -402,7 +402,7 @@
                     <bibl xml:id="bertolini1876b">
                         <ptr target="../bibliography/master_bibliography.xml#bertolini1876b"/>
                         <ptr target="../references/bibliography.xml#bertolini1876b"/>
-                        <title>Bertolini 1876a</title>
+                        <title>Bertolini 1876b</title>
                         <citedRange unit="page">131</citedRange>
                         <note type="number">n. 3</note>
                     </bibl>
