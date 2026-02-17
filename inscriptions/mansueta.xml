@@ -371,7 +371,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#mansueta">Cicriae Mansuetae</persName>,
                     <lb n="2"/>coniugi incomparabili,
