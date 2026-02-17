@@ -154,6 +154,7 @@
                    <note type="relationship" corresp="#yperanthes">wife</note>
                    <note type="relationship" corresp="#eutyches">daughter</note>
                    <note type="relationship" corresp="#mansueta">daughter</note>
+                   <note type="relationship" corresp="./eutychis.xml#eutychis">sister</note>
                </person>
                <person xml:id="yperanthes">
                    <persName>
@@ -184,6 +185,7 @@
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#mansueta">husband</note>
                    <note type="relationship" corresp="#eutychiana">father</note>
+                   <note type="relationship" corresp="./eutychis.xml#eutychis">father</note>
                    <note type="relationship" corresp="#yperanthes">father-in-law</note>
                </person>
                <person xml:id="mansueta">
@@ -198,6 +200,7 @@
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#eutyches">wife</note>
                    <note type="relationship" corresp="#eutychiana">mother</note>
+                   <note type="relationship" corresp="./eutychis.xml#eutychis">mother</note>
                    <note type="relationship" corresp="#yperanthes">mother-in-law</note>
                </person>
            </listPerson>
@@ -405,7 +408,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#eutychiana">Cicria <choice><reg>Eutychianae</reg><orig>Eutychiane</orig></choice></persName>. <persName ref="#yperanthes">Iulius Yperan</persName>
                     <lb n="2" break="no"/><persName ref="#yperanthes">thes</persName>, coniugi <w xml:id="w1"><choice><reg>carissime</reg><orig><choice><corr>c</corr><sic>l</sic></choice>arissime</orig></choice></w> <w xml:id="w2"><choice><reg>castissimaeque</reg><orig>castissimeque</orig></choice></w>.
