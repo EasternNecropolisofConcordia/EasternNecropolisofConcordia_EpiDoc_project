@@ -5,12 +5,12 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>The Epigraphy of Mansueta</title>
+                <title>The Epigraphy of Eutychis</title>
                 <author>Leonardo Battistella</author>
             </titleStmt>
             <publicationStmt>
                 <authority>Università Ca’ Foscari di Venezia</authority>
-                <idno type="filename">mansueta.xml</idno>
+                <idno type="filename">eutychis.xml</idno>
                 <idno type="tm">125588</idno>
                 <idno type="edr">EDR097847</idno>
                 <idno type="uel">29232</idno>
