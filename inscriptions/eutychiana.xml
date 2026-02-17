@@ -145,7 +145,7 @@
                    <persName>
                        <name type="full">Cicria Eutychiana</name>
                        <name type="nomen">Cicria</name>
-                       <name type="cognomen" nymRef="latin">Eutychiana</name>
+                       <name type="cognomen" nymRef="greek">Eutychiana</name>
                        <name type="gens">Cicria</name>
                    </persName>
                    <gender>f</gender>
@@ -159,7 +159,7 @@
                    <persName>
                        <name type="full">Iulius Yperanthes</name>
                        <name type="nomen">Iulius</name>
-                       <name type="cognomen">Yperanthes</name>
+                       <name type="cognomen" nymRef="greek">Yperanthes</name>
                        <name type="gens">Iulia</name>
                    </persName>
                    <gender>m</gender>
@@ -175,7 +175,7 @@
                        <name type="praenomen">Publius</name>
                        <name type="nomen">Atilius</name>
                        <name type="nomen">Cicrius</name>
-                       <name type="cognomen">Eutyches</name>
+                       <name type="cognomen" nymRef="greek">Eutyches</name>
                        <name type="gens">Atilia</name>
                        <name type="gens">Cicria</name>
                    </persName>
@@ -190,7 +190,7 @@
                    <persName>
                        <name type="full">Cicria Mansueta</name>
                        <name type="nomen">Cicria</name>
-                       <name type="cognomen">Mansueta</name>
+                       <name type="cognomen" nymRef="latin">Mansueta</name>
                        <name type="gens">Cicria</name>
                    </persName>
                    <gender>f</gender>
