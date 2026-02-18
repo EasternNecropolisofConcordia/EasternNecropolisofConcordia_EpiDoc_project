@@ -389,7 +389,7 @@
                 <listApp>
                     <app loc="4-5" from="w1" to="w2">
                         <lem><choice><reg>com</reg><orig>coni</orig></choice><lb n="5" break="no"/>paraverunt</lem>
-                        <rdg source="#bertolini1876b #bertolini1877 #cilv8741 #ils7797 #ilcv833 #lettich1983"><choice><reg>con</reg><orig>coni</orig></choice><lb n="5" break="no"/>paraverunt</rdg>
+                        <rdg source="#bertolini1876b #bertolini1877 #cilv8741 #ils7797 #ilcv833 #lettich1983"><choice><reg>com</reg><orig>con</orig></choice><lb n="5" break="no"/>paraverunt</rdg>
                     </app>
                     <app loc="6" from="#w3" to="#w3">
                         <lem><choice><reg>eorum</reg><orig>eorun</orig></choice></lem>
