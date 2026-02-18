@@ -387,7 +387,7 @@
                     </app>
                     <app loc="3" from="#w2" to="#w3">
                         <lem>incomparabili co<supplied reason="omitted">n</supplied>iugi</lem>
-                        <rdg source="#bertolini1876b #bertolini1877 #cilv8741"><gap reason="illegible" extent="unknown" unit="character"></gap> coniugi</rdg>
+                        <rdg source="#bertolini1876b #bertolini1877 #cilv8741"><gap reason="illegible" extent="unknown" unit="character"/> coniugi</rdg>
                     </app>
                     <app loc="4" from="#w4" to="#w4">
                         <lem><gap reason="illegible" extent="unknown" unit="character"/></lem>
