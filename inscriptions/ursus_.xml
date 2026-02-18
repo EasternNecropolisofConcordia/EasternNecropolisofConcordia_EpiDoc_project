@@ -381,7 +381,7 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="1" from="w1" to="w1">
+                    <app loc="1" from="#w1" to="#w1">
                         <lem>Coc<supplied reason="omitted" cert="low">c</supplied>eius</lem>
                         <rdg source="#bertolini1876b #cilv8741">Cicrius</rdg>
                     </app>
