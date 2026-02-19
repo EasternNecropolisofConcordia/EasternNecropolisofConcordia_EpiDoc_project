@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Epigraphy of Paulina</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari di Venezia</authority>
+                <idno type="filename">paulina.xml</idno>
+                <idno type="tm">125595</idno>
+                <idno type="edr">EDR097854</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                        </repository>
+                        <idno type="inventory">354</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                                <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                                <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                                <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            </origPlace>
+                            <origDate ana="#principate" notBefore-custom="0200" notAfter-custom="0250" evidence="archaeological-context" xml:lang="en">
+                                First Half of the III Century AD.
+                            </origDate>
+                            <origDate ana="#principate" notBefore-custom="0200" notAfter-custom="0250" evidence="archaeological-context" xml:lang="it">
+                                Prima Metà del III secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                            <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                            <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                            <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            <placeName type="plot">Perulli</placeName>
+                            <date type="discovery">1876</date>
+                            <note type="plan_x">3080</note>
+                            <note type="plan_y">2660</note>
+                        </provenance>
+                        <provenance type="not-observed" subtype="reported-lost">
+                            <p xml:lang="en">The inscription is <seg type="location" xml:lang="en">currently lost</seg>; its knowledge is based exclusively on the facsimiles published by Bertolini and Mommsen.</p>
+                            <p xml:lang="it">L'iscrizione è <seg type="location" xml:lang="it">attualmente perduta</seg>; la sua conoscenza si basa esclusivamente sui facsimili pubblicati da Bertolini e Mommsen.</p>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:id="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">The inscription is <seg type="location" xml:lang="en">currently lost</seg>; its knowledge is based exclusively on the facsimiles published by Bertolini and Mommsen.</p>
+                                    <p xml:lang="it">L'iscrizione è <seg type="location" xml:lang="it">attualmente perduta</seg>; la sua conoscenza si basa esclusivamente sui facsimili pubblicati da Bertolini e Mommsen.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Rightward direction, horizontal orientation.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="paulina">
+                   <persName>
+                       <name type="full">Fabia Paulina</name>
+                       <name type="nomen">Fabia</name>
+                       <name type="cognomen" nymRef="latin">Paulina</name>
+                       <name type="nomen">Fabia</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civil</note>
+                   <note type="role">deceased</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+     <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="decorations">
+                    <category xml:id="chi-rho">
+                        <catDesc>
+                            <term xml:lang="en">Chi-Rho (Christogram)</term>
+                            <term xml:lang="it">Crismon / Chi-Rho</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/591">
+                                <idno>591</idno>
+                            </ref>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300310602">
+                                <idno>300310602</idno>
+                            </ref>
+                            <idno type="unicode">U+2627</idno>
+                        </catDesc>
+                    </category>
+                    <category xml:id="hedera">
+                        <catDesc>
+                            <term xml:lang="la">Hedera Distinguens</term>
+                            <term xml:lang="en">Ivy leaf</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/155">
+                                <idno>155</idno>
+                            </ref>
+                            <idno type="unicode">U+2766</idno>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="campidoctor">
+                        <catDesc>
+                            <term xml:lang="la">campidoctor</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2008107">
+                                <idno>2008107</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="centenarius">
+                        <catDesc>
+                            <term xml:lang="la">centenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2009414">
+                                <idno>2009414</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="ducenarius">
+                        <catDesc>
+                            <term xml:lang="la">ducenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2018365">
+                                <idno>2018365</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="magister-primus">
+                        <catDesc>
+                            <term xml:lang="la">magister (primus)</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009655">
+                                <idno>1009655</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="miles">
+                        <catDesc>
+                            <term xml:lang="la">miles</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009936">
+                                <idno>1009936</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector">
+                        <catDesc>
+                            <term xml:lang="la">protector domesticus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2048603">
+                                <idno>2048603</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector-domesticus">
+                        <catDesc>
+                            <term xml:lang="la">(protector) domesticus</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q1237339">
+                                <idno>Q1237339</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="semissalis">
+                        <catDesc>
+                            <term xml:lang="la">semissalis</term>
+                            <gloss xml:lang="en">Late Roman military rank; received 1 capitum (fodder ration, indicating mounted service) and 1½ annonae (one and a half food rations). Function unclear; attested in African and Sardinian ducal officia</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 111</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="senator-military">
+                        <catDesc>
+                            <term xml:lang="la">senator</term>
+                            <gloss xml:lang="en">Late Roman military rank, superior to ducenarius; attested in scholae, fabricenses, and infantry units. Originally granted to ducenarii of agentes in rebus from 390 CE; the transfer of the senatorial title to military context remains unclear.</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 119-120</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="tribunus">
+                        <catDesc>
+                            <term xml:lang="la">tribunus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1016734">
+                                <idno>1016734</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="periods">
+                    <category xml:id="late-roman-empire">
+                        <catDesc>
+                            <term xml:lang="en">Late Roman Empire</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/30">
+                                <idno>30</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="principate">
+                        <catDesc>
+                            <term xml:lang="en">Principate (High Roman Empire)</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/22">
+                                <idno>22</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="places">
+                    <category xml:id="concordia">
+                        <catDesc>
+                            <term xml:lang="la">Iulia Concordia</term>
+                            <ref type="tm" target="https://www.trismegistos.org/place/12269">
+                                <idno>12269</idno>
+                            </ref>
+                            <ref type="dare" target="https://imperium.ahlfeldt.se/places/10645.html">
+                                <idno>10645</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="portogruaro">
+                        <catDesc>
+                            <term xml:lang="en">Portogruaro</term>
+                            <ref type="tgn" target="https://www.getty.edu/vow/TGNFullDisplay?find=Portogruaro&amp;place=&amp;nation=&amp;prev_page=1&amp;english=Y&amp;subjectid=7003045">
+                                <idno>7003045</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="museo-concordiese">
+                        <catDesc>
+                            <term xml:lang="en">National Concordiese Museum of Portogruaro</term>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/124364831">
+                                <idno>124364831</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="occupation">
+                    <category xml:id="soldier">
+                        <catDesc>
+                            <term xml:lang="en">Soldier</term>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300185678">
+                                <idno>300185678</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="fabricenses">
+                        <catDesc>
+                            <term xml:lang="la">Fabricensis</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2021497">
+                                <idno>2021497</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/paulina.png">
+            <desc type="alt">Facsimile of an inscription.</desc>
+            <desc type="figDesc">A facsimile of the iscription of Paulina. <ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 30, n. 19</ref>.</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la">
+                <ab>
+                    <lb n="1"/><persName ref="#paulina">Fabiae Paulinae</persName>.
+                </ab>
+            </div>
+            <div type="apparatus">
+                
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>To <persName ref="#paulina" xml:lang="la">Fabia Paulina</persName>.</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>A <persName ref="#paulina" xml:lang="la">Fabia Paulina</persName>.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>Bertolini is the only one who performed an autopsy of the monument: Mommsen reports his version in the <ref target="../references/corpora_databases.xml#cil">CIL</ref> (<ref target="../references/corpora_databases.xml#cil">CIL V 8692</ref>). The inscription is intact and lacks further additions (<ref target="../references/bibliography.xml#bertolini1876b">Bertolini 1876b, 132.</ref>).</p>
+                <p>Note the proximity of this inscription to another sarcophagus belonging to another member of the <foreign xml:lang="la">gens Fabia</foreign>, <ref target="./fabianus.xml">Quintus Fabius Fabianus</ref>, and to a fragment of an early imperial inscription, also belonging to another <foreign xml:lang="la">Fabius</foreign> (<ref target="../references/corpora_databases.xml#cil">CIL V 8693</ref>). It is impossible to date the inscription based on onomastic and paleographic criteria.</p>
+                <p>However, thanks to Bertolini, it appears that this inscription was found at a lower level than the other burials (<ref target="../references/bibliography.xml#bertolini1876b">Bertolini 1876b, 132</ref>; <ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 30</ref>). The inscription of Paulina was likely contemporary with the burials of <ref target="./fabianus.xml">Fabianus</ref> and <ref target="./firmina.xml">Firmina</ref>, and can therefore be dated to the first half of the 3rd century AD.</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>Bertolini è l’unico che svolse l’autopsia del monumento: Mommsen riporta nel <ref target="../references/corpora_databases.xml#cil">CIL</ref> la sua versione (<ref target="../references/corpora_databases.xml#cil">CIL V 8692</ref>). Si tratta di un’iscrizione integra, priva di altre aggiunte (<ref target="../references/bibliography.xml#bertolini1876b">Bertolini 1876b, 132.</ref>).</p>
+                <p>Si noti la vicinanza di quest’epigrafe con un altro sarcofago appartenuto a un altro membro della <foreign xml:lang="la">gens Fabia</foreign>, <ref target="./fabianus.xml">Quintus Fabius Fabianus</ref>, e al frammento di un'iscrizione di età alto imperiale, appartenuta anch'essa a un altro <foreign xml:lang="la">Fabius</foreign> (<ref target="../references/corpora_databases.xml#cil">CIL V 8693</ref>). Risulta impossibile datare l’iscrizione secondo criteri onomastici e paleografici.</p>
+                <p>Tuttavia, grazie a Bertolini, si evince che tale epigrafe fu rinvenuta a un livello inferiore rispetto alle altre sepolture (<ref target="../references/bibliography.xml#bertolini1876b">Bertolini 1876b, 132</ref>; <ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 30</ref>). L’iscrizione di Paulina era probabilmente coeva alle sepolture di <ref target="./fabianus.xml">Fabianus</ref> e di <ref target="./firmina.xml">Firmina</ref>, e può quindi essere datata alla prima metà del III secolo d.C.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1876b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1876b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1876b"/>
+                        <title>Bertolini 1875a</title>
+                        <citedRange unit="page">132</citedRange>
+                        <note type="number">n. 6</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
+                        <title>Bertolini 1877</title>
+                        <citedRange unit="page">30</citedRange>
+                        <note type="number">n. 19</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8694">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8694</title>
+                    </bibl>
+                    <bibl xml:id="lettich1994">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1994"/>
+                        <ptr target="../references/bibliography.xml#lettich1994"/>
+                        <title>Lettich 1994</title>
+                        <citedRange unit="page">196</citedRange>
+                        <note type="number">n. 114</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097854">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097852">EDR097854</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-19">19-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
