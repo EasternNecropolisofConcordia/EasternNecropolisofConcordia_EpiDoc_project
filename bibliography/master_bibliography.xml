@@ -379,9 +379,10 @@
                         <surname>Grosse</surname>
                      </persName>
                   </author>
+                  <date when="1920">1920</date>
                   <title level="m">Römische Militärgeschichte von Gallienus bis zum Beginn der byzantinischen Themenverfassung</title>
                   <pubPlace>Berlin</pubPlace>
-                  <publisher>Weldmmansche Bbuchhandlung</publisher>
+                  <publisher>Weidmannsche Buchhandlung</publisher>
                </bibl>
 
                <!-- Hoffmann -->
@@ -476,6 +477,20 @@
                   <title level="m">Saggi di linguistica italiana: storia, struttura, società</title>
                   <pubPlace>Torino</pubPlace>
                   <publisher>Boringhieri</publisher>
+               </bibl>
+               
+               <!-- Rohrbacher -->
+               <bibl xml:id="rohrbacher2002">
+                  <author>
+                     <persName>
+                        <forename>David</forename>
+                        <surname>Rohrbacher</surname>
+                     </persName>
+                  </author>
+                  <date when="2002">2002</date>
+                  <title level="m">The historians of late antiquity</title>
+                  <pubPlace>London, New York</pubPlace>
+                  <publisher>Routledge</publisher>
                </bibl>
 
                <!-- Scarpa Bonazza Buora Veronese -->
