@@ -925,7 +925,7 @@
     </xsl:template>
 
     <!-- Gap in text -->
-    <xsl:template match="tei:gap[@reason = 'lost']" mode="interp">
+    <xsl:template match="tei:gap[@reason = 'lost' or @reason = 'illegible']" mode="interp">
         <xsl:choose>
             <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
             <xsl:when test="@extent = 'unknown' and @unit = 'line'">- - - - - -</xsl:when>
@@ -1024,9 +1024,9 @@
             <xsl:otherwise>((<xsl:value-of select="upper-case(substring-after(@ref, '#'))"/>))</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-
+    
     <!-- Gap in apparatus -->
-    <xsl:template match="tei:gap[@reason = 'lost']" mode="apparatus">
+    <xsl:template match="tei:gap[@reason = 'lost' or @reason='illegible']" mode="apparatus">
         <xsl:choose>
             <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
             <xsl:when test="@extent = 'unknown' and @unit = 'line'">- - - - - -</xsl:when>
