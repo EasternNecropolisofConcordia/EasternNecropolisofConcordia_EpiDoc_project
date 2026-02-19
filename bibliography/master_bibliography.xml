@@ -479,6 +479,20 @@
                   <publisher>Boringhieri</publisher>
                </bibl>
                
+               <!-- Rocco -->
+               <bibl xml:id="rocco2012">
+                  <author>
+                     <persName>
+                        <forename>Marco</forename>
+                        <surname>Rocco</surname>
+                     </persName>
+                  </author>
+                  <date when="2012">2012</date>
+                  <title level="m">L'esercito romano tardoantico. Persistenze e cesure dai Severi a Teodosio I</title>
+                  <pubPlace>Padova</pubPlace>
+                  <publisher>libreriauniversitaria.it edizioni Webster srl</publisher>
+               </bibl>
+               
                <!-- Rohrbacher -->
                <bibl xml:id="rohrbacher2002">
                   <author>
