@@ -39,10 +39,10 @@
                                 <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
                                 <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
                             </origPlace>
-                            <origDate ana="#late-roman-empire" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="en">
+                            <origDate ana="#principatee" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="en">
                                 First Half of the III Century AD.
                             </origDate>
-                            <origDate ana="#late-roman-empire" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="it">
+                            <origDate ana="#principate" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="it">
                                 Prima Metà del III secolo d.C.
                             </origDate>
                         </origin>
