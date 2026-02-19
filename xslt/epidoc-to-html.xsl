@@ -1033,6 +1033,11 @@
             <xsl:otherwise> </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <!-- Line breaks in the apparatus -->
+    <xsl:template match="tei:lb" mode="apparatus">
+        <xsl:text>/</xsl:text>
+    </xsl:template>
 
     <!-- Suppress reg and sic in apparatus mode (but NOT corr) -->
     <xsl:template match="tei:reg | tei:sic" mode="apparatus"/>
