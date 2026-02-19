@@ -400,7 +400,7 @@
                     </app>
                 </listApp>
             </div>
-            <div type="translation">
+            <div type="translation" xml:lang="en">
                 <p>
                     The <persName ref="#flaviiservilii" xml:lang="la">Flavii Servilii</persName>, <persName ref="#otraustaguta" xml:lang="la">Otraustaguta</persName>, and <persName corresp="#felicitas" xml:lang="la">Ilateuta Felicitas</persName> to <persName ref="#andia" xml:lang="la">Flavius Andia</persName>, <term xml:lang="la">centenarius</term> of the unit of the Bracchiati, their best colleague, have purchased this chest with their own labor, which they entrust to the holy Church of the city of Concordia.
                 </p>
@@ -408,7 +408,7 @@
                     If anyone should wish to open it, he shall pay to the treasury two pounds of gold without delay.
                 </p>
             </div>
-            <div type="commentary">
+            <div type="commentary" xml:lang="en">
                 <p>The most convincing interpretation is that proposed by Lettich. 
                     The plural Flavii Servilii should be understood as referring to two or more members of the same family rather than to a single individual (Flavius Servilius). 
                     The names Otraustaguta and Ilateuta Felicitas appear to designate a couple, as suggested by the conjunction et and by the combination of the Germanic Ilateuta with the Latin cognomen Felicitas. 
