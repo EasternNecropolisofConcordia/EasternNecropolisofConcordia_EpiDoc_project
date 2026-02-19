@@ -135,8 +135,8 @@
                    <gender>m</gender>
                    <note type="occupation">soldier</note>
                    <note type="rank" ana="#centenarius">centenarius</note>
-                   <note type="numerus">Bracchiati</note>
-                   <note type="role">Equites Sagittarii Seniores</note>
+                   <note type="numerus">Equites Sagittarii Seniores</note>
+                   <note type="role">dedicator/deceased</note>
                </person>
            </listPerson>
         </particDesc>
