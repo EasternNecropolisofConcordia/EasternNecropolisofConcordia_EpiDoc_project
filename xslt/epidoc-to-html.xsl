@@ -22,7 +22,7 @@
                 </h1>
 
                 <!-- METADATA SECTION -->
-                <div class="metadata">
+                <details class="metadata">
                     <h2>INSCRIPTION DETAILS</h2>
                     <div class="metadata-grid">
                         <div class="repository">
@@ -298,7 +298,7 @@
                             </dd>
                         </dl>
                     </div>
-                </div>
+                </details>
                 <div class="physical_description">
                     <h2>PHYSICAL DESCRIPTION</h2>
                     <dl>
