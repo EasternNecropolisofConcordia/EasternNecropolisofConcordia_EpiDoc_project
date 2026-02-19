@@ -395,10 +395,14 @@ div[data-location="chest"] {
   margin-top: 20px;
 }
 
-/* ===== TRANSLATION / PALAEOGRAPHY / COMMENTARY ===== */
-details.translation,
+/* ===== PHYSICAL DESCRIPTION / PALAEOGRAPHY / APPARATUS / TRANSLATION / COMMENTARY / PEOPLE ===== */
+
+details.physical_description,
 details.palaeography,
-details.commentary {
+details.apparatus,
+details.translation,
+details.commentary,
+details.people {
     max-width: 800px;
     margin: 30px auto;
     text-align: left;
@@ -408,9 +412,12 @@ details.commentary {
     cursor: pointer;
 }
 
-details.translation summary,
+details.physical_description summary,
 details.palaeography summary,
-details.commentary summary {
+details.apparatus summary,
+details.translation summary,
+details.commentary summary,
+details.people summary {
     list-style: none;
     color: #8B3A3A;
     font-family: 'Cardo', serif;
@@ -421,37 +428,52 @@ details.commentary summary {
     cursor: pointer;
 }
 
-details.translation summary::-webkit-details-marker,
+details.physical_description summary::-webkit-details-marker,
 details.palaeography summary::-webkit-details-marker,
-details.commentary summary::-webkit-details-marker {
+details.apparatus summary::-webkit-details-marker,
+details.translation summary::-webkit-details-marker,
+details.commentary summary::-webkit-details-marker,
+details.people summary::-webkit-details-marker {
     display: none;
 }
 
-details.translation summary::marker,
+details.physical_description summary::marker,
 details.palaeography summary::marker,
-details.commentary summary::marker {
+details.apparatus summary::marker,
+details.translation summary::marker,
+details.commentary summary::marker,
+details.people summary::marker {
     display: none;
 }
 
-details.translation summary::after,
+details.physical_description summary::after,
 details.palaeography summary::after,
-details.commentary summary::after {
+details.apparatus summary::after,
+details.translation summary::after,
+details.commentary summary::after,
+details.people summary::after {
     content: " ▾";
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     display: inline-block;
     margin-left: 5px;
 }
 
-details.translation[open] summary::after,
+details.physical_description[open] summary::after,
 details.palaeography[open] summary::after,
-details.commentary[open] summary::after {
+details.apparatus[open] summary::after,
+details.translation summary::after,
+details.commentary[open] summary::after,
+details.people[open] summary::after {
     content: " ▴";
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
-details.translation p,
+details.physical_description p,
 details.palaeography p,
-details.commentary p {
+details.apparatus p,
+details.commentary p,
+details.translation p,
+details.people p {
     margin: 10px 0;
     font-style: italic;
     text-align: justify;
