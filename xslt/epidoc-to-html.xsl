@@ -300,26 +300,62 @@
                     </div>
                 </div>
                 <details class="physical_description">
-                    <h2>PHYSICAL DESCRIPTION</h2>
+                    <summary><h2>PHYSICAL DESCRIPTION</h2></summary>
                     <dl>
-                        <dt><strong>Type</strong></dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:physDesc//tei:objectType[@xml:lang='en'])"/></dd>
-                        <dt><strong>Material(s)</strong></dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:physDesc//tei:material[@xml:lang='en'])"/></dd>
-                        <dt><strong>Execution</strong></dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:layoutDesc/tei:layout/tei:rs)"/>.</dd>
-                        <dt><strong>Dimensions</strong></dt>
-                        <dd><xsl:value-of select="//tei:supportDesc/tei:support/tei:dimensions/tei:height"/> × <xsl:value-of select="//tei:supportDesc/tei:support/tei:dimensions/tei:width"/><xsl:if test="//tei:supportDesc/tei:support/tei:dimensions/tei:depth"> × <xsl:value-of select="//tei:supportDesc/tei:support/tei:dimensions/tei:depth"/> </xsl:if><xsl:text> cm</xsl:text>
-                        </dd>
-                        <dt><strong>Epigraphic Field</strong></dt>
+                        <dt>
+                            <strong>Type</strong>
+                        </dt>
                         <dd>
-                            <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:height"/> × <xsl:value-of select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:width"/><xsl:text> cm</xsl:text>
+                            <xsl:value-of
+                                select="normalize-space(//tei:physDesc//tei:objectType[@xml:lang = 'en'])"
+                            />
+                        </dd>
+                        <dt>
+                            <strong>Material(s)</strong>
+                        </dt>
+                        <dd>
+                            <xsl:value-of
+                                select="normalize-space(//tei:physDesc//tei:material[@xml:lang = 'en'])"
+                            />
+                        </dd>
+                        <dt>
+                            <strong>Execution</strong>
+                        </dt>
+                        <dd><xsl:value-of
+                                select="normalize-space(//tei:layoutDesc/tei:layout/tei:rs)"/>.</dd>
+                        <dt>
+                            <strong>Dimensions</strong>
+                        </dt>
+                        <dd><xsl:value-of
+                                select="//tei:supportDesc/tei:support/tei:dimensions/tei:height"/> ×
+                                <xsl:value-of
+                                select="//tei:supportDesc/tei:support/tei:dimensions/tei:width"
+                                /><xsl:if
+                                test="//tei:supportDesc/tei:support/tei:dimensions/tei:depth"> ×
+                                    <xsl:value-of
+                                    select="//tei:supportDesc/tei:support/tei:dimensions/tei:depth"
+                                />
+                            </xsl:if><xsl:text> cm</xsl:text>
+                        </dd>
+                        <dt>
+                            <strong>Epigraphic Field</strong>
+                        </dt>
+                        <dd>
+                            <xsl:value-of
+                                select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:height"/> ×
+                                <xsl:value-of
+                                select="//tei:layoutDesc/tei:layout/tei:dimensions/tei:width"
+                            /><xsl:text> cm</xsl:text>
                         </dd>
                         <dt>Letters Height</dt>
-                        <dd><xsl:value-of select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/> cm</dd>
+                        <dd><xsl:value-of
+                                select="normalize-space(//tei:handDesc/tei:handNote/tei:height)"/>
+                            cm</dd>
                     </dl>
                     <details class="palaeography">
-                        <summary><h3>Palaeographic comment</h3></summary>
+                        <summary>
+                            <h3>Palaeographic comment</h3>
+                        </summary>
                         <xsl:for-each
                             select="//tei:handNote/tei:note[@type = 'palaeographic' and @xml:lang = 'en']/tei:p">
                             <p>
@@ -328,7 +364,7 @@
                         </xsl:for-each>
                     </details>
                 </details>
-                
+
 
                 <!-- IMAGES -->
                 <xsl:apply-templates select="//tei:facsimile/tei:graphic"/>
@@ -355,9 +391,11 @@
                 <!-- APPARATUS CRITICUS -->
                 <xsl:if test="//tei:div[@type = 'apparatus']/tei:listApp/tei:app">
                     <details class="apparatus">
-                        <h2>
-                            <em>APPARATUS CRITICUS</em>
-                        </h2>
+                        <summary>
+                            <h2>
+                                <em>APPARATUS CRITICUS</em>
+                            </h2>
+                        </summary>
                         <xsl:variable name="root" select="/"/>
                         <xsl:for-each
                             select="//tei:div[@type = 'apparatus']/tei:listApp/tei:app/@loc[not(. = preceding::tei:app/@loc)]">
@@ -420,20 +458,24 @@
                         </xsl:for-each>
                     </details>
                 </xsl:if>
-                
+
                 <!-- TRANSLATION -->
                 <details class="translation">
-                    <summary><h2>TRANSLATION</h2></summary>
+                    <summary>
+                        <h2>TRANSLATION</h2>
+                    </summary>
                     <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = 'en']/tei:p">
                         <p>
                             <xsl:apply-templates/>
                         </p>
                     </xsl:for-each>
                 </details>
-                
+
                 <!-- COMMENTARY -->
                 <details class="commentary">
-                    <summary><h2>COMMENTARY</h2></summary>
+                    <summary>
+                        <h2>COMMENTARY</h2>
+                    </summary>
                     <xsl:for-each select="//tei:div[@type = 'commentary'][@xml:lang = 'en']/tei:p">
                         <p>
                             <xsl:apply-templates/>
@@ -443,7 +485,7 @@
 
                 <!-- PEOPLE SECTION -->
                 <details class="people">
-                    <h2>PEOPLE</h2>
+                    <summary><h2>PEOPLE</h2></summary>
                     <xsl:for-each select="//tei:listPerson/tei:person">
                         <xsl:element name="div">
                             <xsl:attribute name="class">person_record</xsl:attribute>
@@ -687,9 +729,7 @@
             <xsl:element name="dt">
                 <xsl:attribute name="id">
                     <xsl:value-of select="@xml:id"/>
-                </xsl:attribute>
-                EDR
-            </xsl:element>
+                </xsl:attribute> EDR </xsl:element>
             <dd>
                 <h5>
                     <xsl:apply-templates select="tei:title"/>
@@ -816,7 +856,7 @@
         </xsl:if>
         <xsl:text>)</xsl:text>
     </xsl:template>
-    
+
     <!-- Supplied text (lost) -->
     <xsl:template match="tei:supplied[@reason = 'lost']" mode="interp" priority="1">
         <xsl:text>[</xsl:text>
@@ -832,7 +872,8 @@
     </xsl:template>
 
     <!-- Supplied text from previous editor: underline with source tooltip -->
-    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp" priority="2">
+    <xsl:template match="tei:supplied[@reason = 'lost'][@evidence = 'previouseditor']" mode="interp"
+        priority="2">
         <u style="cursor: help;">
             <xsl:attribute name="title">
                 <xsl:text>Source(s): </xsl:text>
@@ -1021,19 +1062,20 @@
             <xsl:when test="@ref = '#chi-rho'">☧</xsl:when>
             <xsl:when test="@ref = '#cross'">†</xsl:when>
             <xsl:when test="@ref = '#hedera'">❧</xsl:when>
-            <xsl:otherwise>((<xsl:value-of select="upper-case(substring-after(@ref, '#'))"/>))</xsl:otherwise>
+            <xsl:otherwise>((<xsl:value-of select="upper-case(substring-after(@ref, '#'))"
+                />))</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- Gap in apparatus -->
-    <xsl:template match="tei:gap[@reason = 'lost' or @reason='illegible']" mode="apparatus">
+    <xsl:template match="tei:gap[@reason = 'lost' or @reason = 'illegible']" mode="apparatus">
         <xsl:choose>
             <xsl:when test="@extent = 'unknown' and @unit = 'character'">[---]</xsl:when>
             <xsl:when test="@extent = 'unknown' and @unit = 'line'">- - - - - -</xsl:when>
             <xsl:otherwise> </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <!-- Line breaks in the apparatus -->
     <xsl:template match="tei:lb" mode="apparatus">
         <xsl:text>/</xsl:text>
