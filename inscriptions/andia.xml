@@ -162,6 +162,7 @@
                        <name type="full">Flavius Andia</name>
                        <name type="nomen">Flavius</name>
                        <name type="cognomen" nymRef="germanic">Andia</name>
+                       <name type="gens">Flavia</name>
                    </persName>
                    <gender>m</gender>
                    <note type="occupation">soldier</note>
