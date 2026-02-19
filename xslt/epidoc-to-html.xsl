@@ -22,7 +22,7 @@
                 </h1>
 
                 <!-- METADATA SECTION -->
-                <details class="metadata">
+                <div class="metadata">
                     <h2>INSCRIPTION DETAILS</h2>
                     <div class="metadata-grid">
                         <div class="repository">
@@ -298,8 +298,8 @@
                             </dd>
                         </dl>
                     </div>
-                </details>
-                <div class="physical_description">
+                </div>
+                <details class="physical_description">
                     <h2>PHYSICAL DESCRIPTION</h2>
                     <dl>
                         <dt><strong>Type</strong></dt>
@@ -327,7 +327,7 @@
                             </p>
                         </xsl:for-each>
                     </details>
-                </div>
+                </details>
                 
 
                 <!-- IMAGES -->
@@ -354,7 +354,7 @@
 
                 <!-- APPARATUS CRITICUS -->
                 <xsl:if test="//tei:div[@type = 'apparatus']/tei:listApp/tei:app">
-                    <div class="apparatus">
+                    <details class="apparatus">
                         <h2>
                             <em>APPARATUS CRITICUS</em>
                         </h2>
@@ -418,7 +418,7 @@
                             </span>
                             <xsl:text> </xsl:text>
                         </xsl:for-each>
-                    </div>
+                    </details>
                 </xsl:if>
                 
                 <!-- TRANSLATION -->
@@ -442,7 +442,7 @@
                 </details>
 
                 <!-- PEOPLE SECTION -->
-                <div class="people">
+                <details class="people">
                     <h2>PEOPLE</h2>
                     <xsl:for-each select="//tei:listPerson/tei:person">
                         <xsl:element name="div">
@@ -512,7 +512,7 @@
                             </dl>
                         </xsl:element>
                     </xsl:for-each>
-                </div>
+                </details>
 
                 <!-- BIBLIOGRAPHY -->
                 <div class="bibliography">
