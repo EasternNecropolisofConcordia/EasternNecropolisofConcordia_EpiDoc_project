@@ -1,7 +1,6 @@
 html {
   min-height: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 220px;
 }
 
 body {
@@ -18,7 +17,7 @@ body {
   background-attachment: fixed;
 }
 
-/* ===== HEADER ===== */
+/* ===== PEEK HEADER ===== */
 .site-header {
   position: relative;
   z-index: 999;
@@ -159,14 +158,10 @@ main p {
   margin: 10px auto;
 }
 
-/* ===== METADATA ===== */
-.metadata {
+/* ===== LOCATION & DATABASES (always visible top section) ===== */
+.location_databases {
   max-width: 900px;
   margin: 30px auto;
-}
-
-.metadata > h2 {
-  grid-column: 1 / -1;
 }
 
 .metadata-grid {
@@ -183,17 +178,7 @@ main p {
   padding: 20px;
 }
 
-.findspot,
-.chronology,
-.autopsy {
-  grid-column: 1 / -1;
-  background-color: rgba(255, 255, 252, 0.6);
-  border-left: 5px solid #8B3A3A;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.metadata dl {
+.location_databases dl {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px 20px;
@@ -202,7 +187,7 @@ main p {
   margin: 15px auto;
 }
 
-.metadata dt {
+.location_databases dt {
   font-family: 'Cardo', serif;
   font-weight: bold;
   color: #8B3A3A;
@@ -211,17 +196,179 @@ main p {
   letter-spacing: 0.5px;
 }
 
-.metadata dd {
+.location_databases dd {
   margin: 0;
   font-family: 'Cardo', serif;
   color: #2c3e50;
   line-height: 1.5;
 }
 
-.metadata p {
+/* ===== COLLAPSIBLE SECTIONS (all <details>) ===== */
+details.metadata,
+details.physical_description,
+details.palaeography,
+details.apparatus,
+details.translation,
+details.commentary,
+details.people {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: left;
+    border-left: 5px solid #8B3A3A;
+    background-color: rgba(255, 255, 252, 0.6);
+    padding: 20px;
+}
+
+details.metadata summary,
+details.physical_description summary,
+details.palaeography summary,
+details.apparatus summary,
+details.translation summary,
+details.commentary summary,
+details.people summary {
+    list-style: none;
+    color: #8B3A3A;
+    font-family: 'Cardo', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+details.metadata summary::-webkit-details-marker,
+details.physical_description summary::-webkit-details-marker,
+details.palaeography summary::-webkit-details-marker,
+details.apparatus summary::-webkit-details-marker,
+details.translation summary::-webkit-details-marker,
+details.commentary summary::-webkit-details-marker,
+details.people summary::-webkit-details-marker {
+    display: none;
+}
+
+details.metadata summary::marker,
+details.physical_description summary::marker,
+details.palaeography summary::marker,
+details.apparatus summary::marker,
+details.translation summary::marker,
+details.commentary summary::marker,
+details.people summary::marker {
+    display: none;
+}
+
+details.metadata summary::after,
+details.physical_description summary::after,
+details.palaeography summary::after,
+details.apparatus summary::after,
+details.translation summary::after,
+details.commentary summary::after,
+details.people summary::after {
+    content: " ▾";
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+details.metadata[open] summary::after,
+details.physical_description[open] summary::after,
+details.palaeography[open] summary::after,
+details.apparatus[open] summary::after,
+details.translation[open] summary::after,
+details.commentary[open] summary::after,
+details.people[open] summary::after {
+    content: " ▴";
+    font-size: 1.8rem;
+}
+
+details.translation p,
+details.palaeography p,
+details.commentary p {
+    margin: 10px 0;
+    font-style: italic;
+    text-align: justify;
+}
+
+/* ===== METADATA DETAILS (findspot, chronology, autopsy) ===== */
+.findspot,
+.chronology,
+.autopsy {
+  background-color: rgba(255, 255, 252, 0.6);
+  border-left: 5px solid #8B3A3A;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+details.metadata dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 20px;
+  text-align: left;
+  max-width: 800px;
+  margin: 15px auto;
+}
+
+details.metadata dt {
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+  color: #8B3A3A;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+details.metadata dd {
+  margin: 0;
+  font-family: 'Cardo', serif;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+details.metadata p {
   text-align: left;
   max-width: 800px;
   margin: 10px auto;
+}
+
+/* ===== PHYSICAL DESCRIPTION ===== */
+.physical_description {
+  border-top: 2px solid rgba(139, 58, 58, 0.2);
+}
+
+.physical_description h2 {
+  margin-top: 0;
+}
+
+.physical_description dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 20px;
+  text-align: left;
+  margin: 15px auto;
+}
+
+.physical_description dt {
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+  color: #8B3A3A;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.physical_description dd {
+  margin: 0;
+  font-family: 'Cardo', serif;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+/* Nested palaeography inside physical_description */
+details.palaeography {
+  border-left: none;
+  padding: 10px;
+  margin: 15px 0 0 0;
+  max-width: none;
 }
 
 /* ===== DROPDOWNS ===== */
@@ -410,143 +557,8 @@ div[data-location="chest"] {
   margin-top: 20px;
 }
 
-/* ===== PHYSICAL DESCRIPTION / PALAEOGRAPHY / APPARATUS / TRANSLATION / COMMENTARY / PEOPLE ===== */
-
-details.metadata,
-details.physical_description,
-details.palaeography,
-details.apparatus,
-details.translation,
-details.commentary,
-details.people {
-    max-width: 900px;
-    margin: 30px auto;
-    text-align: left;
-    border-left: 5px solid #8B3A3A;
-    background-color: rgba(255, 255, 252, 0.6);
-    padding: 20px;
-    cursor: pointer;
-}
-
-details.metadata summary,
-details.physical_description summary,
-details.palaeography summary,
-details.apparatus summary,
-details.translation summary,
-details.commentary summary,
-details.people summary {
-    list-style: none;
-    color: #8B3A3A;
-    font-family: 'Cardo', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-details.metadata summary::-webkit-details-marker,
-details.physical_description summary::-webkit-details-marker,
-details.palaeography summary::-webkit-details-marker,
-details.apparatus summary::-webkit-details-marker,
-details.translation summary::-webkit-details-marker,
-details.commentary summary::-webkit-details-marker,
-details.people summary::-webkit-details-marker {
-    display: none;
-}
-
-details.metadata summary::marker,
-details.physical_description summary::marker,
-details.palaeography summary::marker,
-details.apparatus summary::marker,
-details.translation summary::marker,
-details.commentary summary::marker,
-details.people summary::marker {
-    display: none;
-}
-
-details.metadata summary::after,
-details.physical_description summary::after,
-details.palaeography summary::after,
-details.apparatus summary::after,
-details.translation summary::after,
-details.commentary summary::after,
-details.people summary::after {
-    content: " ▾";
-    font-size: 1.8rem;
-    display: inline-block;
-    margin-left: 5px;
-}
-
-details.metadata[open] summary::after,
-details.physical_description[open] summary::after,
-details.palaeography[open] summary::after,
-details.apparatus[open] summary::after,
-details.translation summary::after,
-details.commentary[open] summary::after,
-details.people[open] summary::after {
-    content: " ▴";
-    font-size: 1.8rem;
-}
-
-details.metadata p,
-details.physical_description p,
-details.palaeography p,
-details.apparatus p,
-details.commentary p,
-details.translation p,
-details.people p {
-    margin: 10px 0;
-    font-style: italic;
-    text-align: justify;
-}
-
-/* ===== PHYSICAL DESCRIPTION ===== */
-.physical_description {
-  max-width: 900px;
-  margin: 50px auto 30px auto;
-  background-color: rgba(255, 255, 252, 0.6);
-  border-left: 5px solid #8B3A3A;
-  padding: 20px;
-  border-top: 2px solid rgba(139, 58, 58, 0.2);
-}
-
-.physical_description h2 {
-  margin-top: 0;
-}
-
-.physical_description dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px 20px;
-  text-align: left;
-  margin: 15px auto;
-}
-
-.physical_description dt {
-  font-family: 'Cardo', serif;
-  font-weight: bold;
-  color: #8B3A3A;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-}
-
-.physical_description dd {
-  margin: 0;
-  font-family: 'Cardo', serif;
-  color: #2c3e50;
-  line-height: 1.5;
-}
-
 /* ===== APPARATUS ===== */
-.apparatus {
-    max-width: 800px;
-    margin: 30px auto;
-    text-align: left;
-}
-
-.app-line {
+.apparatus .app-line {
     display: block;
     margin-bottom: 10px;
 }
@@ -639,7 +651,7 @@ footer p {
 .bibliography > div,
 .bibliography > dd {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   text-align: left;
   margin-bottom: 5px;
 }
@@ -647,7 +659,7 @@ footer p {
 .bibliography > span {
   display: block;
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   text-align: left;
   margin-bottom: 5px;
 }
@@ -795,7 +807,7 @@ footer p {
 
 /* ===== NOTES SECTION ===== */
 .notes {
-  max-width: 900px;
+  max-width: 800px;
   margin: 40px auto 20px auto;
   text-align: left;
   border-top: 2px solid rgba(139, 58, 58, 0.25);
@@ -1035,9 +1047,6 @@ table.conventions td.empty {
 
 /* --- Tablet --- */
 @media (max-width: 768px) {
-  html {
-    scroll-padding-top: 190px;
-  }
   .metadata-grid {
     grid-template-columns: 1fr;
   }
@@ -1056,7 +1065,6 @@ table.conventions td.empty {
     width: 30px;
   }
 
-  /* Sticky header: reduce title padding on tablet */
   .main_title {
     padding: 20px 10px 3px 10px;
   }
@@ -1071,7 +1079,6 @@ table.conventions td.empty {
     font-size: 0.8rem;
   }
 
-  /* Conventions table */
   table.conventions {
     font-size: 0.8rem;
   }
@@ -1126,10 +1133,6 @@ table.conventions td.empty {
 
 /* --- Phones --- */
 @media (max-width: 600px) {
-  html {
-    scroll-padding-top: 160px;
-  }
-  /* Sticky header: compact on mobile */
   .main_title {
     padding: 12px 10px 2px 10px;
     font-size: 0.9em;
@@ -1156,7 +1159,6 @@ table.conventions td.empty {
     letter-spacing: 0.5px;
   }
 
-  /* Transcription: allow horizontal scroll for long lines */
   .transcription {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1185,17 +1187,18 @@ table.conventions td.empty {
     font-size: 0.75em;
   }
 
-  /* Inscription list */
   .inscription-list li {
     padding: 12px 10px;
     font-size: 0.9rem;
   }
   
-  .metadata dl {
+  .location_databases dl,
+  details.metadata dl {
     grid-template-columns: 1fr;
   }
   
-  .metadata dt {
+  .location_databases dt,
+  details.metadata dt {
     margin-top: 10px;
   }
   
@@ -1216,22 +1219,23 @@ table.conventions td.empty {
     display: inline-block;
   }
 
-  /* Main content: less padding on mobile */
   main {
     padding: 20px 12px;
     margin: 10px auto;
     width: 95%;
   }
 
-  /* Details sections */
-  details.translation,
+  details.metadata,
+  details.physical_description,
   details.palaeography,
-  details.commentary {
-    padding: 8px;
+  details.apparatus,
+  details.translation,
+  details.commentary,
+  details.people {
+    padding: 12px;
     margin: 20px auto;
   }
 
-  /* Lid layout: stack on mobile */
   div[data-location="lid"] {
     gap: 20px;
   }
@@ -1243,9 +1247,6 @@ table.conventions td.empty {
 
 /* --- Very small phones --- */
 @media (max-width: 400px) {
-  html {
-    scroll-padding-top: 130px;
-  }
   .main_title {
     padding: 8px 5px 2px 5px;
   }
