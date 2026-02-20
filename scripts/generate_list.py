@@ -25,16 +25,13 @@ def run():
                 node = proc.parse_xml(xml_file_name=xml_path)
                 xpath_processor.set_context(xdm_item=node)
                 
-
                 title_item = xpath_processor.evaluate("//*[local-name()='titleStmt']/*[local-name()='title'][1]")
                 idno_item = xpath_processor.evaluate("//*[local-name()='idno'][@type='filename'][1]")
                 
-
                 if title_item is not None and title_item.size > 0:
                     display_title = title_item.item_at(0).string_value.strip()
                 else:
                     display_title = filename
-
 
                 if idno_item is not None and idno_item.size > 0:
                     target_link = "inscriptions/" + idno_item.item_at(0).string_value.strip().replace('.xml', '.html')
@@ -119,30 +116,28 @@ def run():
 
     window.addEventListener('scroll', function() {{
         if (window.scrollY <= headerH) {{
-            header.classList.remove('header-peek', 'header-hidden');
-            header.style.position = 'relative';
+            header.classList.remove('header-fixed', 'header-animate', 'header-visible');
             peeking = false;
         }} else if (!peeking) {{
-            header.classList.add('header-hidden');
-            header.classList.remove('header-peek');
-            header.style.position = '';
+            header.classList.add('header-fixed');
+            header.classList.remove('header-animate', 'header-visible');
         }}
     }});
 
     document.addEventListener('mousemove', function(e) {{
         if (window.scrollY <= headerH) return;
-        if (e.clientY < 40) {{
-            header.classList.remove('header-hidden');
-            header.classList.add('header-peek');
+        if (e.clientY < 40 && !peeking) {{
+            header.classList.add('header-fixed', 'header-animate', 'header-visible');
             peeking = true;
         }} else if (e.clientY > headerH && peeking) {{
-            header.classList.remove('header-peek');
-            header.classList.add('header-hidden');
+            header.classList.remove('header-visible');
             peeking = false;
         }}
     }});
 }})();
-</script>"""
+</script>
+</body>
+</html>"""
 
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
