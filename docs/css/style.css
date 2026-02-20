@@ -412,6 +412,7 @@ div[data-location="chest"] {
 
 /* ===== PHYSICAL DESCRIPTION / PALAEOGRAPHY / APPARATUS / TRANSLATION / COMMENTARY / PEOPLE ===== */
 
+details.metadata,
 details.physical_description,
 details.palaeography,
 details.apparatus,
@@ -427,6 +428,7 @@ details.people {
     cursor: pointer;
 }
 
+details.metadata summary,
 details.physical_description summary,
 details.palaeography summary,
 details.apparatus summary,
@@ -443,6 +445,7 @@ details.people summary {
     cursor: pointer;
 }
 
+details.metadata summary::-webkit-details-marker,
 details.physical_description summary::-webkit-details-marker,
 details.palaeography summary::-webkit-details-marker,
 details.apparatus summary::-webkit-details-marker,
@@ -452,6 +455,7 @@ details.people summary::-webkit-details-marker {
     display: none;
 }
 
+details.metadata summary::marker,
 details.physical_description summary::marker,
 details.palaeography summary::marker,
 details.apparatus summary::marker,
@@ -461,6 +465,7 @@ details.people summary::marker {
     display: none;
 }
 
+details.metadata summary::after,
 details.physical_description summary::after,
 details.palaeography summary::after,
 details.apparatus summary::after,
@@ -473,6 +478,7 @@ details.people summary::after {
     margin-left: 5px;
 }
 
+details.metadata[open] summary::after,
 details.physical_description[open] summary::after,
 details.palaeography[open] summary::after,
 details.apparatus[open] summary::after,
@@ -483,6 +489,7 @@ details.people[open] summary::after {
     font-size: 1.8rem;
 }
 
+details.metadata p,
 details.physical_description p,
 details.palaeography p,
 details.apparatus p,
