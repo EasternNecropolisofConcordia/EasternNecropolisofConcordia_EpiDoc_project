@@ -51,7 +51,7 @@ def transform_xml():
             <p>Generated via Saxon-Che &amp; GitHub Actions</p>
             <p>&copy; 2026 - Leonardo Battistella</p>
             <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
-            <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca’ Foscari University of Venice.</p>
+            <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
             <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
             <p>____________________________________________________________________________________________________</p>
             <p>The images provided by the Ministry of Culture and the Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
@@ -81,16 +81,17 @@ def transform_xml():
     <main>
         {output}
     </main>
-        {footer_html}
+    {footer_html}
     <script>
-    document.querySelectorAll('figure img').forEach(function(img) {
-                    img.style.cursor = 'zoom-in';
-                    img.addEventListener('click', function() {
-                    var overlay = document.getElementById('lightbox');
-                    document.getElementById('lightbox-img').src = this.src;
-                    overlay.style.display = 'flex';
-                    });
-                    });
+document.querySelectorAll('figure img').forEach(function(img) {{
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function() {{
+        var overlay = document.getElementById('lightbox');
+        document.getElementById('lightbox-img').src = this.src;
+        overlay.style.display = 'flex';
+    }});
+}});
+
 (function() {{
     var header = document.querySelector('.site-header');
     if (!header) return;
