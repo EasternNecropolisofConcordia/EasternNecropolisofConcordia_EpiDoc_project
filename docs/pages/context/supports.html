@@ -104,6 +104,34 @@
     <p>The images provided by the Ministry of Culture and the Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
     <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
 </footer>
+<script>
+(function() {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    var headerH = header.offsetHeight;
+    var peeking = false;
 
+    window.addEventListener('scroll', function() {
+        if (window.scrollY <= headerH) {
+            header.classList.remove('header-fixed', 'header-animate', 'header-visible');
+            peeking = false;
+        } else if (!peeking) {
+            header.classList.add('header-fixed');
+            header.classList.remove('header-animate', 'header-visible');
+        }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (window.scrollY <= headerH) return;
+        if (e.clientY < 40 && !peeking) {
+            header.classList.add('header-fixed', 'header-animate', 'header-visible');
+            peeking = true;
+        } else if (e.clientY > headerH && peeking) {
+            header.classList.remove('header-visible');
+            peeking = false;
+        }
+    });
+})();
+</script>
 </body>
 </html>
