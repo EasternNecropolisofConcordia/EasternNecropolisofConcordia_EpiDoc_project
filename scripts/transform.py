@@ -83,6 +83,14 @@ def transform_xml():
     </main>
         {footer_html}
     <script>
+    document.querySelectorAll('figure img').forEach(function(img) {
+                    img.style.cursor = 'zoom-in';
+                    img.addEventListener('click', function() {
+                    var overlay = document.getElementById('lightbox');
+                    document.getElementById('lightbox-img').src = this.src;
+                    overlay.style.display = 'flex';
+                    });
+                    });
 (function() {{
     var header = document.querySelector('.site-header');
     if (!header) return;
