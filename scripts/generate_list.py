@@ -111,40 +111,38 @@ def run():
         <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
     </footer>
     <script>
-(function() {
+(function() {{
     var header = document.querySelector('.site-header');
     if (!header) return;
     var headerH = header.offsetHeight;
     var peeking = false;
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY <= headerH) {
+    window.addEventListener('scroll', function() {{
+        if (window.scrollY <= headerH) {{
             header.classList.remove('header-peek', 'header-hidden');
             header.style.position = 'relative';
             peeking = false;
-        } else if (!peeking) {
+        }} else if (!peeking) {{
             header.classList.add('header-hidden');
             header.classList.remove('header-peek');
             header.style.position = '';
-        }
-    });
+        }}
+    }});
 
-    document.addEventListener('mousemove', function(e) {
+    document.addEventListener('mousemove', function(e) {{
         if (window.scrollY <= headerH) return;
-        if (e.clientY < 40) {
+        if (e.clientY < 40) {{
             header.classList.remove('header-hidden');
             header.classList.add('header-peek');
             peeking = true;
-        } else if (e.clientY > headerH && peeking) {
+        }} else if (e.clientY > headerH && peeking) {{
             header.classList.remove('header-peek');
             header.classList.add('header-hidden');
             peeking = false;
-        }
-    });
-})();
-</script>
-</body>
-</html>"""
+        }}
+    }});
+}})();
+</script>"""
 
     os.makedirs(output_dir, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
