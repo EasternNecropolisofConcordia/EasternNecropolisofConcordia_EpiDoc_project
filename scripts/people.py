@@ -873,6 +873,35 @@ def run():
         <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
         <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
     </footer>
+    <script>
+(function() {{
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    var headerH = header.offsetHeight;
+    var peeking = false;
+
+    window.addEventListener('scroll', function() {{
+        if (window.scrollY <= headerH) {{
+            header.classList.remove('header-fixed', 'header-animate', 'header-visible');
+            peeking = false;
+        }} else if (!peeking) {{
+            header.classList.add('header-fixed');
+            header.classList.remove('header-animate', 'header-visible');
+        }}
+    }});
+
+    document.addEventListener('mousemove', function(e) {{
+        if (window.scrollY <= headerH) return;
+        if (e.clientY < 40 && !peeking) {{
+            header.classList.add('header-fixed', 'header-animate', 'header-visible');
+            peeking = true;
+        }} else if (e.clientY > headerH && peeking) {{
+            header.classList.remove('header-visible');
+            peeking = false;
+        }}
+    }});
+}})();
+</script>
 </body>
 </html>"""
 
