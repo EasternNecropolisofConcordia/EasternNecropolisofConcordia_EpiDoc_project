@@ -22,8 +22,8 @@
                 </h1>
 
                 <!-- METADATA SECTION -->
-                <div class="metadata">
-                    <h2>INSCRIPTION DETAILS</h2>
+                
+                <div class="location_databases">
                     <div class="metadata-grid">
                         <div class="repository">
                             <h3>Current Location</h3>
@@ -42,10 +42,10 @@
                                             <xsl:for-each
                                                 select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName/@ref, '#')]/tei:catDesc/tei:ref">
                                                 <xsl:element name="a">
-                                                  <xsl:attribute name="href"><xsl:value-of
-                                                  select="@target"/></xsl:attribute>
-                                                  <xsl:value-of select="upper-case(@type)"/> ID:
-                                                  <xsl:value-of select="tei:idno"/>
+                                                    <xsl:attribute name="href"><xsl:value-of
+                                                        select="@target"/></xsl:attribute>
+                                                    <xsl:value-of select="upper-case(@type)"/> ID:
+                                                    <xsl:value-of select="tei:idno"/>
                                                 </xsl:element>
                                             </xsl:for-each>
                                         </div>
@@ -61,10 +61,10 @@
                                             <xsl:for-each
                                                 select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName//tei:settlement/@ref, '#')]/tei:catDesc/tei:ref">
                                                 <xsl:element name="a">
-                                                  <xsl:attribute name="href"><xsl:value-of
-                                                  select="@target"/></xsl:attribute>
-                                                  <xsl:value-of select="upper-case(@type)"/> ID:
-                                                  <xsl:value-of select="tei:idno"/>
+                                                    <xsl:attribute name="href"><xsl:value-of
+                                                        select="@target"/></xsl:attribute>
+                                                    <xsl:value-of select="upper-case(@type)"/> ID:
+                                                    <xsl:value-of select="tei:idno"/>
                                                 </xsl:element>
                                             </xsl:for-each>
                                         </div>
@@ -90,11 +90,11 @@
                                         <dd>
                                             <xsl:element name="a">
                                                 <xsl:attribute name="href"
-                                                  >https://www.trismegistos.org/text/<xsl:value-of
-                                                  select="//tei:publicationStmt/tei:idno[@type = 'tm']"
-                                                  /></xsl:attribute>
+                                                    >https://www.trismegistos.org/text/<xsl:value-of
+                                                        select="//tei:publicationStmt/tei:idno[@type = 'tm']"
+                                                    /></xsl:attribute>
                                                 <xsl:value-of
-                                                  select="//tei:publicationStmt/tei:idno[@type = 'tm']"
+                                                    select="//tei:publicationStmt/tei:idno[@type = 'tm']"
                                                 />
                                             </xsl:element>
                                         </dd>
@@ -106,11 +106,11 @@
                                         <dd>
                                             <xsl:element name="a">
                                                 <xsl:attribute name="href"
-                                                  >http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=<xsl:value-of
-                                                  select="//tei:publicationStmt/tei:idno[@type = 'edr']"
-                                                  /></xsl:attribute>
+                                                    >http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=<xsl:value-of
+                                                        select="//tei:publicationStmt/tei:idno[@type = 'edr']"
+                                                    /></xsl:attribute>
                                                 <xsl:value-of
-                                                  select="//tei:publicationStmt/tei:idno[@type = 'edr']"
+                                                    select="//tei:publicationStmt/tei:idno[@type = 'edr']"
                                                 />
                                             </xsl:element>
                                         </dd>
@@ -122,11 +122,11 @@
                                         <dd>
                                             <xsl:element name="a">
                                                 <xsl:attribute name="href"
-                                                  >https://lupa.at/<xsl:value-of
-                                                  select="//tei:publicationStmt/tei:idno[@type = 'uel']"
-                                                  /></xsl:attribute>
+                                                    >https://lupa.at/<xsl:value-of
+                                                        select="//tei:publicationStmt/tei:idno[@type = 'uel']"
+                                                    /></xsl:attribute>
                                                 <xsl:value-of
-                                                  select="//tei:publicationStmt/tei:idno[@type = 'uel']"
+                                                    select="//tei:publicationStmt/tei:idno[@type = 'uel']"
                                                 />
                                             </xsl:element>
                                         </dd>
@@ -135,6 +135,9 @@
                             </xsl:if>
                         </div>
                     </div>
+                </div>
+                <details class="metadata">
+                    <summary><h2>INSCRIPTION DETAILS</h2></summary>
                     <div class="findspot">
                         <h3>Findspot and Place of Origin</h3>
                         <dl>
@@ -298,7 +301,7 @@
                             </dd>
                         </dl>
                     </div>
-                </div>
+                </details>
                 <details class="physical_description">
                     <summary><h2>PHYSICAL DESCRIPTION</h2></summary>
                     <dl>
@@ -708,7 +711,7 @@
     <!-- BIBLIOGRAPHY RENDERING                     -->
     <!-- ========================================== -->
     <xsl:template match="tei:bibl" mode="bibliography">
-        <xsl:element name="span">
+        <table><xsl:element name="tr">
             <xsl:attribute name="id">
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
@@ -735,7 +738,7 @@
                                 select="tei:note[@type = 'number']"/></xsl:if>. </xsl:otherwise>
                 </xsl:choose>
             </xsl:element>
-        </xsl:element>
+        </xsl:element></table>
     </xsl:template>
 
     <xsl:template match="tei:bibl[@type = 'database']" mode="bibliography_database">
