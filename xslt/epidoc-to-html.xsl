@@ -571,16 +571,6 @@
                 <div id="lightbox" class="lightbox-overlay" onclick="this.style.display='none'">
                     <img id="lightbox-img" src="" alt="enlarged view"/>
                 </div>
-                <script>
-                    document.querySelectorAll('figure img').forEach(function(img) {
-                    img.style.cursor = 'zoom-in';
-                    img.addEventListener('click', function() {
-                    var overlay = document.getElementById('lightbox');
-                    document.getElementById('lightbox-img').src = this.src;
-                    overlay.style.display = 'flex';
-                    });
-                    });
-                </script>
             </body>
         </html>
     </xsl:template>
