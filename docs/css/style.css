@@ -598,6 +598,13 @@ figcaption {
     padding-top: 5px;
 }
 
+.text-with-figure {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  align-items: start;
+}
+
 /* ===== LIGHTBOX ===== */
 .lightbox-overlay {
     display: none;
