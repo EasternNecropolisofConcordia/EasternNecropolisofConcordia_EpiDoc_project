@@ -184,13 +184,21 @@
     <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
   </footer>
   <script>
-(function() {
-    var header = document.querySelector('.site-header');
-    if (!header) return;
-    var headerH = header.offsetHeight;
-    var peeking = false;
+    document.querySelectorAll('figure img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function() {
+        var overlay = document.getElementById('lightbox');
+        document.getElementById('lightbox-img').src = this.src;
+        overlay.style.display = 'flex';
+    });
+});
+    (function() {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+      var headerH = header.offsetHeight;
+      var peeking = false;
 
-    window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function() {
         if (window.scrollY <= headerH) {
             header.classList.remove('header-fixed', 'header-animate', 'header-visible');
             peeking = false;
@@ -210,7 +218,7 @@
             peeking = false;
         }
     });
-})();
+    })();
   </script>
 </body>
 </html>
