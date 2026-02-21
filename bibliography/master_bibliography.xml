@@ -169,6 +169,81 @@
                   <biblScope unit="volume">17</biblScope>
                   <biblScope unit="pp">335-337</biblScope>
                </bibl>
+               
+               <!-- Bianchin Citton -->
+               <bibl xml:id="bianchincitton2001">
+                  <author>
+                     <persName>
+                        <forename>E.</forename>
+                        <surname>Bianchin Citton</surname>
+                     </persName>
+                  </author>
+                  <date when="2001">2001</date>
+                  <title level="a">Il villaggio della tarda età del bronzo e l'abitato protourbano</title>
+                  <editor>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Di Filippo Balestrazzi</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Concordia sagittaria. Tremila anni di storia</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Esedra editrice</publisher>
+                  <biblScope unit="pp">97-110</biblScope>
+                  <series>Il mito e la storia 4</series>
+               </bibl>
+               
+               <!-- Braccesi -->
+               <bibl xml:id="braccesi2004">
+                  <author>
+                     <persName>
+                        <forename>L.</forename>
+                        <surname>Braccesi</surname>
+                     </persName>
+                  </author>
+                  <date when="2004">2004</date>
+                  <title level="a">The Greeks on the venetian lagoon</title>
+                  <title level="m">Greek identity in the western Mediterranean: papers in honour of Brian Shefton</title>
+                  <series>Mnemosyne Supplements 246</series>
+               </bibl>
+               
+               <!-- Bressan & De Angeli -->
+               <bibl xml:id="bressandeangeli2018">
+                  <author>
+                     <persName>
+                        <forename>M.</forename>
+                        <surname>Bressan</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>De Angeli</surname>
+                     </persName>
+                  </author>
+                  <date when="2018">2018</date>
+                  <title level="a">L'agro di Concordia Sagittaria in età romana. Nuovi dati sulle strade per il Norico, la via Annia e la centurazione</title>
+                  <editor>
+                     <orgName>Fondazione Colluto</orgName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Percorsi nel passato. Miscellanea di studi per i 35 anni del GRaVO e i 25 anni della Fondazione Colluto</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Fondazione Antonio Colluto</publisher>
+                  <biblScope unit="pp">93-110</biblScope>
+                  <series>L'Album 22</series>
+               </bibl>
 
                <!-- Broilo -->
                <bibl xml:id="broilo1980">
@@ -277,6 +352,120 @@
                   <publisher>Grafiche Turato Edizioni</publisher>
                   <biblScope unit="pp">87-102</biblScope>
                   <series>L'Album 20</series>
+               </bibl>
+               
+               <!-- Cresci Marrone 2012 -->
+               <bibl xml:id="crescimarrone2012">
+                  <author>
+                     <persName>
+                        <forename>Giovannella</forename>
+                        <surname>Cresci Marrone</surname>
+                     </persName>
+                  </author>
+                  <date when="2012">2012</date>
+                  <title level="a">Magnis speciosisque rebus. Il contesto storico: quando e perché</title>
+                  <editor>
+                     <persName>
+                        <forename>C.</forename>
+                        <surname>Mengotti</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>S.</forename>
+                        <surname>Bortolami</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Antico e sempre nuovo. L'agro centuriato a nord-est di Padova dalle origini all'età contemporanea</title>
+                  <pubPlace>Verona</pubPlace>
+                  <publisher>Cierre edizioni</publisher>
+                  <biblScope unit="pp">80-91</biblScope>
+               </bibl>
+               
+               <!-- Cresci Marrone, Luciani & Pistellato 2012 -->
+               <bibl xml:id="crescimarroneluciani2012">
+                  <author>
+                     <persName>
+                        <forename>Giovannella</forename>
+                        <surname>Cresci Marrone</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>F.</forename>
+                        <surname>Luciani</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>A.</forename>
+                        <surname>Pistellato</surname>
+                     </persName>
+                  </author>
+                  <date when="2012">2012</date>
+                  <title level="a">Gestire una crisi a Iulia Concordia: aspetti finanziari, giuridici e politici</title>
+                  <editor>
+                     <persName>
+                        <forename>L.</forename>
+                        <surname>Lamoine</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>C.</forename>
+                        <surname>Berrendonner</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>M.</forename>
+                        <surname>Cebeillac Gervasoni</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Gérer les territoires, les patrimoines et les crises: le quotidien municipal 2</title>
+                  <pubPlace>Clermont-Ferrand</pubPlace>
+                  <publisher>Presses Universitaires Blaise Pascal</publisher>
+                  <biblScope unit="pp">471-485</biblScope>
+               </bibl>
+               
+               <!-- Cresci Marrone & Tirelli 2022 -->
+               <bibl xml:id="crescimarronetirelli2022">
+                  <author>
+                     <persName>
+                        <forename>Giovannella</forename>
+                        <surname>Cresci Marrone</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>M.</forename>
+                        <surname>Tirelli</surname>
+                     </persName>
+                  </author>
+                  <date when="2022">2022</date>
+                  <title level="a">Altinum, Iulia Concordia e Opitergium nel 169 d.C.: profili di città fra prima linea e retrovia</title>
+                  <editor>
+                     <persName>
+                        <forename>F.</forename>
+                        <surname>Chausson</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>Cresci Marrone</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>B.</forename>
+                        <surname>Rossignol</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Altino 169 d.C. Intorno alla morte dell'imperatore Lucio Vero</title>
+                  <pubPlace>Venezia</pubPlace>
+                  <publisher>Istituto Veneto di Scienze, Lettere ed Arti</publisher>
+                  <biblScope unit="pp">145-174</biblScope>
                </bibl>
 
                <!-- Croce Da Villa -->
@@ -464,6 +653,40 @@
                   <pubPlace>Trieste</pubPlace>
                   <publisher>Centro studi storico-religiosi Friuli-Venezia Giulia 26</publisher>
                </bibl>
+               
+               <!-- Marzin -->
+               <bibl xml:id="marzin2004">
+                  <author>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>Marzin</surname>
+                     </persName>
+                  </author>
+                  <date when="2004">2004</date>
+                  <title level="a">La famiglia</title>
+                  <editor>
+                     <persName>
+                        <forename>P.</forename>
+                        <surname>Manoni</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>Marzin</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>P.</forename>
+                        <surname>Piasentier</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">I Bertolini. I libri, gli uomini</title>
+                  <pubPlace>Concordia Sagittaria</pubPlace>
+                  <publisher>Tipografia Sagittaria</publisher>
+                  <biblScope unit="pp">23-36</biblScope>
+               </bibl>
 
                <!-- Pellegrini -->
                <bibl xml:id="pellegrini1975">
@@ -477,6 +700,90 @@
                   <title level="m">Saggi di linguistica italiana: storia, struttura, società</title>
                   <pubPlace>Torino</pubPlace>
                   <publisher>Boringhieri</publisher>
+               </bibl>
+               
+               <!-- Pettenò -->
+               <bibl xml:id="petteno2004">
+                  <author>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Pettenò</surname>
+                     </persName>
+                  </author>
+                  <date when="2004">2004</date>
+                  <title level="a">Dario Bertolini e l'attualità della sua ricerca</title>
+                  <editor>
+                     <persName>
+                        <forename>P.</forename>
+                        <surname>Manoni</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>Marzin</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>P.</forename>
+                        <surname>Piasentier</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">I Bertolini. I libri, gli uomini</title>
+                  <pubPlace>Concordia Sagittaria</pubPlace>
+                  <publisher>Tipografia Sagittaria</publisher>
+                  <biblScope unit="pp">137-148</biblScope>
+               </bibl>
+               
+               <bibl xml:id="petteno2016">
+                  <author>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Pettenò</surname>
+                     </persName>
+                  </author>
+                  <date when="2016">2016</date>
+                  <title level="a">Concordia Sagittaria. Un borgo lungo il Lemene, le sue genti e la memoria mai persa di un prestigioso passato</title>
+                  <editor>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Immaginare l'antico: disegni e fotografie di Iulia Concordia tra Ottocento e Novecento. Concordia Sagittaria, 17 dicembre 2016 – 28 maggio 2017</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Grafiche Turato</publisher>
+                  <biblScope unit="pp">59-68</biblScope>
+               </bibl>
+               
+               <!-- Plesničar Gec -->
+               <bibl xml:id="plesnicargec2001">
+                  <author>
+                     <persName>
+                        <forename>Ljudmila</forename>
+                        <surname>Plesničar Gec</surname>
+                     </persName>
+                  </author>
+                  <date when="2001">2001</date>
+                  <title level="a">Il territorio sloveno dalla preistoria alla tarda antichità</title>
+                  <editor>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Di Filippo Balestrazzi</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Concordia sagittaria. Tremila anni di storia</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Esedra editrice</publisher>
+                  <biblScope unit="pp">5-20</biblScope>
+                  <series>Il mito e la storia 4</series>
                </bibl>
                
                <!-- Rocco -->
@@ -505,6 +812,21 @@
                   <title level="m">The historians of late antiquity</title>
                   <pubPlace>London, New York</pubPlace>
                   <publisher>Routledge</publisher>
+               </bibl>
+               
+               <!-- Šašel -->
+               <bibl xml:id="sasel1974">
+                  <author>
+                     <persName>
+                        <forename>Jaroslav</forename>
+                        <surname>Šašel</surname>
+                     </persName>
+                  </author>
+                  <date when="1974">1974</date>
+                  <title level="a">Miniera aurifera nelle alpi orientali</title>
+                  <title level="j">Aquileia nostra</title>
+                  <biblScope unit="volume">45</biblScope>
+                  <biblScope unit="pp">147-152</biblScope>
                </bibl>
 
                <!-- Scarpa Bonazza Buora Veronese -->
@@ -555,6 +877,84 @@
                   <biblScope unit="volume">93</biblScope>
                   <biblScope unit="number">2</biblScope>
                   <biblScope unit="pp">253-278</biblScope>
+               </bibl>
+               
+               <!-- Vallicelli -->
+               <bibl xml:id="vallicelli2022">
+                  <author>
+                     <persName>
+                        <forename>M. C.</forename>
+                        <surname>Vallicelli</surname>
+                     </persName>
+                  </author>
+                  <date when="2022">2022</date>
+                  <title level="a">I monumenti funerari del Sepolcreto dei militi di Concordia Sagittaria</title>
+                  <title level="m">Nomi nella pietra. Le iscrizioni del monumento funerario romano di via San Pietro a Concordia Sagittaria</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Grafiche Turato Edizioni</publisher>
+                  <biblScope unit="pp">73-102</biblScope>
+                  <series>L'Album 23</series>
+               </bibl>
+               
+               <!-- Vigoni -->
+               <bibl xml:id="vigoni2016">
+                  <author>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </author>
+                  <date when="2016">2016</date>
+                  <title level="a">Concordia Sagittaria, Sepolcreto dei Militi, tavole della prima relazione della Commissione consultiva per la conservazione dei Monumenti della Provincia di Venezia</title>
+                  <editor>
+                     <orgName>Fondazione Colluto</orgName>
+                  </editor>
+                  <title level="m">Immaginare l'antico. Disegni e fotografie di Iulia Concordia tra Ottocento e Novecento</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Grafiche Turato Edizioni</publisher>
+                  <biblScope unit="pp">108-111</biblScope>
+                  <series>L'Album 21</series>
+               </bibl>
+               
+               <bibl xml:id="vigoni2016a">
+                  <author>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </author>
+                  <date when="2016">2016a</date>
+                  <title level="a">Il sepolcreto dei militi, ovvero la necropoli orientale di Iulia Concordia</title>
+                  <editor>
+                     <orgName>Fondazione Colluto</orgName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Percorsi nel passato. Miscellanea di studi per i 35 anni del GRaVO e i 25 anni della Fondazione Colluto</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Fondazione Antonio Colluto</publisher>
+                  <biblScope unit="pp">211-249</biblScope>
+                  <series>L'Album 22</series>
+               </bibl>
+               
+               <bibl xml:id="vigoni2022">
+                  <author>
+                     <persName>
+                        <forename>Alberto</forename>
+                        <surname>Vigoni</surname>
+                     </persName>
+                  </author>
+                  <date when="2022">2022</date>
+                  <title level="a">"A Concordia parlano i monumenti": scoperta e riscoperta del Sepolcreto dei militi di Concordia Sagittaria</title>
+                  <title level="m">Nomi nella pietra. Le iscrizioni del monumento funerario romano di via San Pietro a Concordia Sagittaria</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Grafiche Turato Edizioni</publisher>
+                  <biblScope unit="pp">51-72</biblScope>
+                  <series>L'Album 23</series>
                </bibl>
 
                <!-- Zovatto -->
