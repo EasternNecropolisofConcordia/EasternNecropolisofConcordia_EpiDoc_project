@@ -598,11 +598,20 @@ figcaption {
     padding-top: 5px;
 }
 
-.text-with-figure {
+.context_text-with-figure {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr minmax(200px, 350px);
   gap: 30px;
   align-items: start;
+}
+
+.context_text-with-figure figure {
+  width: 100%;  /* si adatta alla colonna */
+}
+
+.context_text-with-figure figure img {
+  width: 100%;
+  height: auto; /* mantiene le proporzioni */
 }
 
 /* ===== LIGHTBOX ===== */
