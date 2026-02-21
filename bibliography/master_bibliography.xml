@@ -354,7 +354,63 @@
                   <series>L'Album 20</series>
                </bibl>
                
-               <!-- Cresci Marrone 2012 -->
+               <!-- Cresci Marrone -->
+               <bibl xml:id="crescimarrone2001a">
+                  <author>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>Cresci Marrone</surname>
+                     </persName>
+                  </author>
+                  <date when="2001">2001a</date>
+                  <title level="a">Nascita e sviluppo di Concordia, colonia civium romanorum</title>
+                  <editor>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Di Filippo Balestrazzi</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Concordia sagittaria. Tremila anni di storia</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Esedra editrice</publisher>
+                  <biblScope unit="pp">119-124</biblScope>
+                  <series>Il mito e la storia 4</series>
+               </bibl>
+               
+               <bibl xml:id="crescimarrone2001b">
+                  <author>
+                     <persName>
+                        <forename>G.</forename>
+                        <surname>Cresci Marrone</surname>
+                     </persName>
+                  </author>
+                  <date when="2001">2001b</date>
+                  <title level="a">Lo stanziamento militare, la fabbrica di frecce e la comunità di commercianti orientali nella Concordia tardoantica</title>
+                  <editor>
+                     <persName>
+                        <forename>Pierangela</forename>
+                        <surname>Croce Da Villa</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Elena</forename>
+                        <surname>Di Filippo Balestrazzi</surname>
+                     </persName>
+                  </editor>
+                  <title level="m">Concordia sagittaria. Tremila anni di storia</title>
+                  <pubPlace>Rubano</pubPlace>
+                  <publisher>Esedra editrice</publisher>
+                  <biblScope unit="pp">245-249</biblScope>
+                  <series>Il mito e la storia 4</series>
+               </bibl>
+               
                <bibl xml:id="crescimarrone2012">
                   <author>
                      <persName>
