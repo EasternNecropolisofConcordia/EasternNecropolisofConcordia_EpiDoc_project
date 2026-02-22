@@ -66,6 +66,37 @@ body {
   margin: 0;
 }
 
+/* ===== CONTEXT PAGES DL ===== */
+main > dl {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px 24px;
+  text-align: left;
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+main > dl dt {
+  font-family: 'Cardo', serif;
+  font-weight: bold;
+  color: #8B3A3A;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  padding-top: 2px;
+  border-right: 2px solid rgba(139, 58, 58, 0.2);
+  padding-right: 16px;
+}
+
+main > dl dd {
+  margin: 0;
+  font-family: 'Cardo', serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 .navbar {
   width: 100%;
   background-color: #8B3A3A;
@@ -1300,5 +1331,16 @@ table.conventions td.empty {
     left: -25px;
     width: 20px;
     font-size: 0.7em;
+  }
+  main > dl {
+  grid-template-columns: 1fr;
+  }
+
+  main > dl dt {
+    border-right: none;
+    border-bottom: 1px solid rgba(139, 58, 58, 0.15);
+    padding-right: 0;
+    padding-bottom: 4px;
+    margin-top: 12px;
   }
 }
