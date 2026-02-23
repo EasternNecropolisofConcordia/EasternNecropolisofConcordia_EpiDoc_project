@@ -113,7 +113,7 @@
                             <handNote>
                                 <height  unit = "cm" min="4.5" max="6.5">4.5-6.5</height>
                                 <note type="palaeographic" xml:lang="en">
-                                    <p>Right-facing direction, horizontal orientation, vertical module, regular <term xml:lang="la">ductus</term>, triangle-shaped punctuation, left-aligned layout.</p>
+                                    <p>Dextrograde direction, horizontal orientation, vertical module, regular <term xml:lang="la">ductus</term>, triangle-shaped punctuation, left-aligned layout.</p>
                                     <p>The inscription features triangular <g type="pl">apices</g> (serifs) at the ends of the arms, in the shape of <g type="pl">wolf-teeth</g> (serrated motif).</p>
                                     <p>The letter <g type="pl">M</g> is composed of four oblique strokes, whereas the first and third strokes of the <g type="pl">N</g> are vertical.</p>
                                     <p>From a palaeographic perspective, this inscription is very similar to the nearby one belonging to <ref target="./maximiani.xml"><persName xml:lang="la">Flavius Maximianus</persName></ref>.</p>
