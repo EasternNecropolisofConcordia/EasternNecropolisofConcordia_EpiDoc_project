@@ -377,8 +377,8 @@
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                     <ab>
                         <lb n="1"/><persName corresp="#felix"><expan><abbr><unclear>F</unclear>l</abbr><ex>avius</ex></expan> Felix</persName> sibi et <persName corresp="#lucia"><choice><reg>Luciae</reg><orig>Lucie</orig></choice></persName> co<supplied reason="omitted">n</supplied>i
-                        <lb n="2" break="no"/>ugi de <choice><reg>proprio</reg><orig>propio</orig></choice> suo vivi fece
-                        <lb n="3" break="no"/>runt <w xml:id="w1">ut</w> nul<supplied reason="omitted">l</supplied>us <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig>ovitum</orig></choice>
+                        <lb n="2" break="no"/>ugi de <choice><reg>proprio</reg><orig>propio</orig></choice> suo vivi <w xml:id="w1" next="#w2">fece</w>
+                        <lb n="3" break="no"/><w xml:id="w2" prev="#w1">runt</w> <w xml:id="w3">ut</w> <w xml:id="w4">nul<supplied reason="omitted">l</supplied>us</w> <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig>ovitum</orig></choice>
                         <lb n="4"/>nostrum in hac sepultura
                         <lb n="5"/>ponatur <choice><reg>dabit</reg><orig>davit</orig></choice> <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">fisco auri po</measure>
                         <lb n="6" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2"><unclear>n</unclear>do <choice><reg>duo</reg><orig>dua</orig></choice></measure>
@@ -386,11 +386,13 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="3" from="#w1" to="#w1">
+                    <app loc="2-3" from="#w1" to="#w1">
                         <lem>
-                            ut 
+                            fece<lb n="3" break="no"/>runt ut nul<supplied reason="omitted">l</supplied>us
                         </lem>
-                        <rdg source="#bertolini1873a #bertolini1873b"></rdg>
+                        <rdg source="#bertolini1873a #bertolini1873b">
+                            fece<lb n="3" break="no"/>runt nul<supplied reason="omitted">l</supplied>us
+                        </rdg>
                     </app>
                 </listApp>
             </div>
