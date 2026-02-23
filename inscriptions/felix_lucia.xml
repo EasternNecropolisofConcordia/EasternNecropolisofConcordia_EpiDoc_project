@@ -386,7 +386,7 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="2-3" from="#w1" to="#w1">
+                    <app loc="2-3" from="#w1" to="#w4">
                         <lem>
                             fece<lb n="3" break="no"/>runt ut nul<supplied reason="omitted">l</supplied>us
                         </lem>
