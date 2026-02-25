@@ -671,6 +671,23 @@
                   <biblScope unit="volume">1 (1896); 2 (1904); 3 (1907)</biblScope>
                </bibl>
 
+               <!-- Jones -->
+               <bibl xml:id="jones">
+                  <author>
+                     <persName>
+                        <forename>Arnold</forename>
+                        <forename>Hugh</forename>
+                        <forename>Martin</forename>
+                        <surname>Jones</surname>
+                     </persName>
+                  </author>
+                  <title level="m">The Later Roman Empire 384-602. A Social Economic and Administrative Survey</title>
+                  <pubPlace>Oxford</pubPlace>
+                  <publisher>Basil Blackwell</publisher>
+                  <date when="1964">1964</date>
+                  <biblScope unit="volume">1 (1964); 2 (1964); 3 (1964)</biblScope>
+               </bibl>
+
                <!-- Kajanto -->
                <bibl xml:id="kajanto1982">
                   <author>
