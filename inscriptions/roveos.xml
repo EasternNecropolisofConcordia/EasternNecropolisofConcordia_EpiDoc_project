@@ -169,6 +169,17 @@
                     </category>
                 </taxonomy>
                 <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
                     <category xml:id="campidoctor">
                         <catDesc>
                             <term xml:lang="la">campidoctor</term>
