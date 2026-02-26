@@ -655,6 +655,17 @@
                   <pubPlace>Düsseldorf</pubPlace>
                   <date when="1969">1969</date>
                </bibl>
+               <bibl xml:id="hoffmann1970">
+                  <author>
+                     <persName>
+                        <forename>Dietrich</forename>
+                        <surname>Hoffmann</surname>
+                     </persName>
+                  </author>
+                  <title level="m" xml:lang="de">Das spätrömische Bewegungsheer und die Notitia Dignitatum (pars II)</title>
+                  <pubPlace>Düsseldorf</pubPlace>
+                  <date when="1969">1970</date>
+               </bibl>
 
                <!-- Holder -->
                <bibl xml:id="holder">
