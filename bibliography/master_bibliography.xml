@@ -932,6 +932,20 @@
                   <biblScope unit="pp">3–142</biblScope>
                </bibl>
 
+               <!-- Moritz Schönfeld -->
+               <bibl xml:id="schoenfeld">
+                  <author>
+                     <persName>
+                        <forename>Moritz</forename>
+                        <surname>Schönfeld</surname>
+                     </persName>
+                  </author>
+                  <date when="1911">1911</date>
+                  <title level="m">Wörterbuch der altgermanischen personen- und völkernamen. Nach Der Überlieferung des klassischen altertums Bearbeitet</title>
+                  <pubPlace>Heidelberg</pubPlace>
+                  <publisher>Carl Winter's Universitätsbuchhandlung</publisher>
+               </bibl>
+
                <!-- Speidel -->
                <bibl xml:id="speidel1966">
                   <author>
