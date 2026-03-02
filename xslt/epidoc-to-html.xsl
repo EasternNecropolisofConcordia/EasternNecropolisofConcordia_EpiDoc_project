@@ -912,6 +912,13 @@
         <xsl:text>⸣</xsl:text>
     </xsl:template>
 
+    <!-- Ancient addition text: {text} -->
+    <xsl:template match="tei:add" mode="interp">
+        <xsl:text>‵</xsl:text>
+        <xsl:apply-templates mode="interp"/>
+        <xsl:text>′</xsl:text>
+    </xsl:template>
+
     <!-- Symbols and glyphs -->
     <xsl:template match="tei:g" mode="interp">
         <xsl:choose>
@@ -1061,6 +1068,13 @@
             </xsl:analyze-string>
         </xsl:for-each>
         <xsl:apply-templates select="*" mode="apparatus"/>
+    </xsl:template>
+
+    <!-- Ancient addition in apparatus -->
+    <xsl:template match="tei:add" mode="apparatus">
+        <xsl:text>‵</xsl:text>
+        <xsl:apply-templates mode="apparatus"/>
+        <xsl:text>′</xsl:text>
     </xsl:template>
 
     <!-- Symbols and glyphs in apparatus -->
