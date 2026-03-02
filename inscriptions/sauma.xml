@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Inscription of Sauma</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">roveos.xml</idno>
+                <idno type="tm">125649</idno>
+                <idno type="edr">EDR097908</idno>
+                <idno type="uel">29385</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                        </repository>
+                        <idno type="inventory">251</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                                <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                                <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                                <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            </origPlace>
+                            <origDate ana="#late-roman-empire" notBefore-custom="0350" notAfter-custom="0400" evidence="lettering nomenclature" xml:lang="en">
+                                Second Half of the Fourth Century A.D.
+                            </origDate>
+                            <origDate ana="#late-roman-empire" notBefore-custom="0350" notAfter-custom="0400" evidence="lettering nomenclature" xml:lang="it">
+                                Seconda Metà del IV Secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                            <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                            <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                            <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            <placeName type="plot">Perulli</placeName>
+                            <date type="discovery">1874</date>
+                            <note type="plan_x">2220</note>
+                            <note type="plan_y">640</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                            <note type="observed" subtype="autopsied" xml:lang="en">Now <seg type="location" xml:lang="en">set into the wall of the right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese in Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva <seg type="location" xml:lang="it">murata nella navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">37</height>
+                                        <width unit="cm">198</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en"></p>
+                                    <p xml:lang="it"></p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">37</height>
+                                        <width unit="cm">198</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4.5" max="6.5" unit="cm">4.5-6.5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Dextrorse direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, left-aligned layout.</p>
+                                    <p>In this inscription, many letters with similar morphemes are confused and exchanged, such as <g type="pl">I</g> instead of <g type="pl">T</g>, <g type="pl">O</g> in place of <g type="pl">Q</g>, and <g type="pl">C</g> instead of <g type="pl">G</g>. These errors seem to indicate a partial or total state of illiteracy on the part of the stonecutter.</p>
+                                    <p>The <g type="pl">F</g> sometimes presents an anomalous third arm resting on the baseline, while the upper arm is diagonal, ascending towards the right.</p>
+                                    <p>The lower arm of the <g type="pl">L</g> is replaced by an arc that intersects the vertical stem at approximately mid-height, very similar to what can be observed in the inscription of Julianus (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8658</ref> + <ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8987</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097709">EDR097709</ref>).</p>
+                                    <p>The <g type="pl">T</g> in the second line, in the word <foreign xml:lang="la">frater</foreign>, shows an anomalous lower arm, which rests on the baseline and extends towards the right.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, impaginazione a sinistra.</p>
+                                    <p>In questa iscrizione, molte lettere dal morfema simile vengono confuse e scambiate, come la <g type="pl">I</g> al posto della <g type="pl">T</g>, la <g type="pl">O</g> in luogo della <g type="pl">Q</g> e la <g type="pl">C</g> al posto della <g type="pl">G</g>. Questi errori sembrerebbero indicare una condizione di analfabetismo parziale o totale da parte del lapicida.</p>
+                                    <p>La <g type="pl">F</g> talvolta presenta un terzo anomalo braccio che poggia sul rigo di base, mentre il braccio superiore è diagonale, ascendente verso destra.</p>
+                                    <p>Il braccio inferiore della <g type="pl">L</g> è sostituito da un arco, che si interseca con circa a metà altezza dell'asta verticale, molto simile a quanto si può riscontrare nell'iscrizione di Giuliano (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8658</ref> + <ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 8987</ref>; <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097709">EDR097709</ref>)</p>
+                                    <p>La <g type="pl">T</g> nella seconda riga, in <term xml:lang="la">frater</term>, presenta un anomalo braccio inferiore, che poggia sul rigo di base e si sviluppa verso destra.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">A slab without any border.</decoNote>
+                            <decoNote xml:lang="it">Fronte di sarcofago senza cornici o decorazioni.</decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="sauma">
+                   <persName>
+                       <name type="full">Flavius Sauma</name>
+                       <name type="nomen">Flavius</name>
+                       <name type="cognomen" nymRef="germanic">Sauma</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier</note>
+                   <note type="rank" ana="#biarchus">biarchus</note>
+                   <note type="numerus">Equites Bracchiati</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#viax">brother</note>
+                   <note type="relationship" corresp="#alacildus">colleague</note>
+                   <note type="relationship" corresp="#evingus">colleague</note>
+               </person>
+               <person xml:id="viax">
+                   <persName>
+                       <name type="full">Viax</name>
+                       <name type="cognomen" nymRef="germanic">Viax</name>
+                       <name type="gens">Flavia?</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier?</note>
+                   <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#sauma">brother</note>
+               </person>
+               <person xml:id="evingus">
+                   <persName>
+                       <name type="full">Evingus</name>
+                       <name type="cognomen" nymRef="germanic">Evingus</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier</note>
+                   <note type="rank" ana="#senator-military">senator</note>
+                   <note type="numerus">Equites Bracchiati</note>
+                   <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#sauma">colleague</note>
+                   <note type="relationship" corresp="#alacildus">colleague</note>
+               </person>
+               <person xml:id="alagildus">
+                   <persName>
+                       <name type="full">Alagildus</name>
+                       <name type="cognomen" nymRef="germanic">Alagildus</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">soldier</note>
+                   <note type="rank" ana="#biarchus">biarchus</note>
+                   <note type="numerus">Equites Bracchiati</note>
+                   <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#sauma">colleague</note>
+                   <note type="relationship" corresp="#evingus">colleague</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+     <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="decorations">
+                    <category xml:id="chi-rho">
+                        <catDesc>
+                            <term xml:lang="en">Chi-Rho (Christogram)</term>
+                            <term xml:lang="it">Crismon / Chi-Rho</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/591">
+                                <idno>591</idno>
+                            </ref>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300310602">
+                                <idno>300310602</idno>
+                            </ref>
+                            <idno type="unicode">U+2627</idno>
+                        </catDesc>
+                    </category>
+                    <category xml:id="hedera">
+                        <catDesc>
+                            <term xml:lang="la">Hedera Distinguens</term>
+                            <term xml:lang="en">Ivy leaf</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/155">
+                                <idno>155</idno>
+                            </ref>
+                            <idno type="unicode">U+2766</idno>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="campidoctor">
+                        <catDesc>
+                            <term xml:lang="la">campidoctor</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2008107">
+                                <idno>2008107</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="centenarius">
+                        <catDesc>
+                            <term xml:lang="la">centenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2009414">
+                                <idno>2009414</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="ducenarius">
+                        <catDesc>
+                            <term xml:lang="la">ducenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2018365">
+                                <idno>2018365</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="magister-primus">
+                        <catDesc>
+                            <term xml:lang="la">magister (primus)</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009655">
+                                <idno>1009655</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="miles">
+                        <catDesc>
+                            <term xml:lang="la">miles</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009936">
+                                <idno>1009936</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector">
+                        <catDesc>
+                            <term xml:lang="la">protector domesticus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2048603">
+                                <idno>2048603</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector-domesticus">
+                        <catDesc>
+                            <term xml:lang="la">(protector) domesticus</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q1237339">
+                                <idno>Q1237339</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="semissalis">
+                        <catDesc>
+                            <term xml:lang="la">semissalis</term>
+                            <gloss xml:lang="en">Late Roman military rank; received 1 capitum (fodder ration, indicating mounted service) and 1½ annonae (one and a half food rations). Function unclear; attested in African and Sardinian ducal officia</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 111</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="senator-military">
+                        <catDesc>
+                            <term xml:lang="la">senator</term>
+                            <gloss xml:lang="en">Late Roman military rank, superior to ducenarius; attested in scholae, fabricenses, and infantry units. Originally granted to ducenarii of agentes in rebus from 390 CE; the transfer of the senatorial title to military context remains unclear.</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 119-120</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="tribunus">
+                        <catDesc>
+                            <term xml:lang="la">tribunus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1016734">
+                                <idno>1016734</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="periods">
+                    <category xml:id="late-roman-empire">
+                        <catDesc>
+                            <term xml:lang="en">Late Roman Empire</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/30">
+                                <idno>30</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="principate">
+                        <catDesc>
+                            <term xml:lang="en">Principate (High Roman Empire)</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/22">
+                                <idno>22</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="places">
+                    <category xml:id="concordia">
+                        <catDesc>
+                            <term xml:lang="la">Iulia Concordia</term>
+                            <ref type="tm" target="https://www.trismegistos.org/place/12269">
+                                <idno>12269</idno>
+                            </ref>
+                            <ref type="dare" target="https://imperium.ahlfeldt.se/places/10645.html">
+                                <idno>10645</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="portogruaro">
+                        <catDesc>
+                            <term xml:lang="en">Portogruaro</term>
+                            <ref type="tgn" target="https://www.getty.edu/vow/TGNFullDisplay?find=Portogruaro&amp;place=&amp;nation=&amp;prev_page=1&amp;english=Y&amp;subjectid=7003045">
+                                <idno>7003045</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="museo-concordiese">
+                        <catDesc>
+                            <term xml:lang="en">National Concordiese Museum of Portogruaro</term>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/124364831">
+                                <idno>124364831</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="occupation">
+                    <category xml:id="soldier">
+                        <catDesc>
+                            <term xml:lang="en">Soldier</term>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300185678">
+                                <idno>300185678</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="fabricenses">
+                        <catDesc>
+                            <term xml:lang="la">Fabricensis</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2021497">
+                                <idno>2021497</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/sauma.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Roveos. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Leonardo Battistella.</desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la">
+                <ab>
+                    <lb n="1"/><persName ref="#sauma"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Saumae</reg><orig>Saume</orig></choice></persName> <choice><reg>biarcho</reg><orig>biarco</orig></choice> de numero <w xml:id="w1">e<choice><corr>q</corr><sic>o</sic></choice>ui<choice><corr>t</corr><sic>i</sic></choice>um</w> <w xml:id="w2">Bracchia<choice><corr>t</corr><sic>i</sic></choice>orum</w>.
+                    <lb n="2"/>Arcam illi <w xml:id="w3">emerun<choice><corr>i</corr><sic>t</sic></choice></w>: frater <persName ref="#viax">Viax</persName> et <persName ref="#evingus">Evingus</persName>, se<choice><corr>n</corr><sic>m</sic></choice><supplied reason="omitted">a</supplied>tor, <persName ref="#alagildus"><w xml:id="w4">Ala</w></persName>
+                    <lb n="3" break="no"/><persName ref="#alagildus"><w xml:id="w5"><choice><corr>g</corr><sic>c</sic></choice>ildus</w></persName>, <choice><reg>biarchus</reg><orig>biarcus</orig></choice>. Si <w xml:id="w6"><choice><corr>q</corr><sic>o</sic></choice>uis</w> illam aperire voluerit, dabit fisco auri
+                    <lb n="4"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="1">libram unam</measure>.
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1" to="w1">
+                        <lem>e<choice><corr>q</corr><sic>o</sic></choice>ui<choice><corr>t</corr><sic>i</sic></choice>um</lem>
+                        <rdg source="#bertolini1875a">eouium</rdg>
+                        <rdg source="#bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">equitum</rdg>
+                        <rdg source="#lettich1983">equi<choice><corr>t</corr><sic>i</sic></choice>um</rdg>
+                    </app>
+                    <app loc="1" from="#w2" to="w2">
+                        <lem>Bracchia<choice><corr>t</corr><sic>i</sic></choice>orum</lem>
+                        <rdg source="#bertolini1875a #bertolini1876b">Bracchiatorum</rdg>
+                        <rdg source="#cilv8760 #ils2804 #ilcv493 #edr097908"><expan><abbr>Bracchiatoru</abbr><ex>m</ex></expan></rdg>
+                    </app>
+                    <app loc="2" from="#w3" to="w3">
+                        <lem>emerun<choice><corr>i</corr><sic>t</sic></choice></lem>
+                        <rdg source="#bertolini1875a #bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">emerunt</rdg>
+                    </app>
+                    <app loc="2-3" from="#w4" to="w5">
+                        <lem>Ala<lb n="3" break="no"/><choice><corr>g</corr><sic>c</sic></choice>ildus</lem>
+                        <rdg source="#bertolini1875a #bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">Ala<lb n="3" break="no"/>gildus</rdg>
+                    </app>
+                    <app loc="3" from="#w6" to="w6">
+                        <lem><choice><corr>q</corr><sic>o</sic></choice>uis</lem>
+                        <rdg source="#bertolini1875a #bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">quis</rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    To <persName ref="#sauma" xml:lang="la">Flavius Sauma</persName>, <term xml:lang="la">biarchus</term> of the <term xml:lang="la">numerus</term> of the <term xml:lang="la">Equites Bracchiati</term>.
+                </p>
+                <p>
+                    They purchased the sarcophagus for him: his brother <persName ref="#viax" xml:lang="la">Viax</persName>, the <term xml:lang="la">senator</term> <persName ref="#evingus" xml:lang="la">Evingus</persName>, and the <term xml:lang="la">biarchus</term> <persName ref="#alagildus" xml:lang="la">Alagildus</persName>.
+                </p>
+                <p>
+                    If anyone should wish to open it, he shall pay one (Roman) pound of gold to the <term xml:lang="la">fiscus</term>.
+                </p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    A Flavio Sauma, <term xml:lang="la">biarchus</term> del <term xml:lang="la">numerus</term> degli <term xml:lang="la">Equites Bracchiati</term>.
+                </p>
+                <p>
+                    Comprarono l'arca per costui: il fratello Viax, il <term xml:lang="la">senator</term> Evingo e il <term xml:lang="la">biarchus</term> Alagildo.
+                </p>
+                <p>
+                    Se qualcuno vorrà aprirlo, verserà al <term xml:lang="la">fiscus</term> una libbra (romana) d'oro.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>
+                    Sauma was a <term ref="#biarchus" xml:lang="la">biarchus</term>, a cavalryman of the <term xml:lang="la">equites Bracchiati seniores</term>, a <term>vexilatio palatina</term> which, according to the <term xml:lang="la">Notitia Dignitatum</term>, was stationed in Italy (<term xml:lang="la">ND occ</term>. 6, 45; 7, 161). 
+                </p>
+                <p>
+                    The brother of <persName ref="#sauma" xml:lang="la">Sauma</persName>, <persName ref="#viax" xml:lang="la">Viax</persName>, and the deceased's colleagues, <persName ref="#evingus" xml:lang="la">Evingus</persName> and <persName ref="#alagildus" xml:lang="la">Alagildus</persName>, dedicated the burial to him.
+                </p>
+                <p>
+                    While the origin of the names <persName xml:lang="la">Evingus</persName> and <persName xml:lang="la">Alagildus</persName> is clearly Germanic (<ref target="../references/bibliography.xml#hoffmann1970">Hoffmann 1970, 32, nt. 274</ref>; <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 67</ref>), that of <persName xml:lang="la">Sauma</persName> and <persName xml:lang="la">Viax</persName> is more debated. According to Holder, Sauma is a name of Celtic origin (<ref target="../references/bibliography.xml#holder">Holder 1904, 1382</ref>); according to Hoffmann, it derives from the Greek σάγμα (cloak) (<ref target="../references/bibliography.xml#hoffmann1970">Hoffmann 1970, 32, nt. 275</ref>); according to Schönfeld, Sauma is a variant of Siuma, a Germanic name (<ref target="../references/bibliography.xml#schoenfeld">Schönfeld 1911, 282</ref>). Furthermore, according to Schönfeld, the cognomen <persName xml:lang="la">Viax</persName> is Germanic and derives from *Viha-ax (battle-axe) (<ref target="../references/bibliography.xml#schoenfeld">Schönfeld 1911, 262</ref>). In this critical edition, a Germanic origin for both names is considered more probable, as they are associated with other <term xml:lang="la">cognomina</term> of Germanic origin (<persName xml:lang="la">Evingus</persName> and <persName xml:lang="la">Alagildus</persName>).
+                </p>
+                <p>
+                    The identity of <persName ref="#viax" xml:lang="la">Viax</persName> remains unclear. His military rank is not specified, but it would be unlikely for a civilian to follow his brother during the movements of his <term xml:lang="la">numerus</term>. It cannot be excluded that Viax was not in Concordia, but had simply contributed financially to Sauma's sarcophagus, sending a contribution to his colleagues. However, it is considered more likely that he was a soldier, a colleague of his brother and a member of the same <term xml:lang="la">numerus</term>, and that his rank was omitted as he was a common soldier. Similarly, it is probable that the <term xml:lang="la">numerus</term> of <persName ref="#evingus" xml:lang="la">Evingus</persName> and <persName ref="#alagildus" xml:lang="la">Alagildus</persName> is not mentioned because it would be implied and corresponding to that of <persName ref="#sauma" xml:lang="la">Sauma</persName>.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p>
+                    Sauma era un <term ref="#biarchus" xml:lang="la">biarchus</term>, cavaliere degli <term xml:lang="la">equites Bracchiati seniores</term>, una <term>vexilatio palatina</term> che dalla <term xml:lang="la">Notitia Dignitatum</term> risulta stanziata in Italia (<term xml:lang="la">ND occ</term>. 6, 45; 7, 161). 
+                </p>
+                <p>
+                    Il fratello di <persName ref="#sauma" xml:lang="la">Sauma</persName>, <persName ref="#viax" xml:lang="la">Viax</persName>, e i colleghi del defunto, <persName ref="#evingus" xml:lang="la">Evingus</persName> e <persName ref="#alagildus" xml:lang="la">Alagildus</persName>, gli dedicano la sepoltura.
+                </p>
+                <p>
+                    Mentre l'origine dei nomi <persName xml:lang="la">Evingus</persName> e <persName xml:lang="la">Alagildus</persName> è chiaramente germanica (<ref target="../references/bibliography.xml#hoffmann1970">Hoffmann 1970, 32, nt. 274</ref>; <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 67</ref>), quella di <persName xml:lang="la">Sauma</persName> e <persName xml:lang="la">Viax</persName> è più dibattuta. Secondo Holder, Sauma è un nome di origine celtica (<ref target="../references/bibliography.xml#holder">Holder 1904, 1382</ref>); secondo Hoffmann, deriverebbe dal greco σάγμα (mantello) (<ref target="../references/bibliography.xml#hoffmann1970">Hoffmann 1970, 32, nt. 275</ref>); secondo Schönfeld, Sauma sarebbe una variante di Siuma, nome germanico (<ref target="../references/bibliography.xml#schoenfeld">Schönfeld 1911, 282</ref>). Sempre secondo Schönfeld, il cognomen <persName xml:lang="la">Viax</persName> sarebbe germanico e deriverebbe da *Viha-ax (ascia da battaglia) (<ref target="../references/bibliography.xml#schoenfeld">Schönfeld 1911, 262</ref>). In questa edizione critica, si ritiene più probabile l'origine germanica dei due nomi, dal momento che sono accostati ad altri <term xml:lang="la">cognomina</term> di origine germanica (<persName xml:lang="la">Evingus</persName> e <persName xml:lang="la">Alagildus</persName>).
+                </p>
+                <p>
+                    L'identità di <persName ref="#viax" xml:lang="la">Viax</persName> non risulta chiara. Non viene specificato il suo grado militare, ma risulterebbe poco probabile che un civile seguisse il fratello negli spostamenti del suo <term xml:lang="la">numerus</term>. Non si può escludere che Viax non fosse a Concordia, ma avesse semplicemente contribuito economicamente all'arca di Sauma, inviando un contributo ai suoi colleghi. Tuttavia, si ritiene più probabile che fosse un soldato, collega del fratello e membro dello stesso <term xml:lang="la">numerus</term>, e che il rango fosse stato omesso in quanto soldato semplice. Analogamente, si ritiene probabile che il <term xml:lang="la">numerus</term> di <persName ref="#evingus" xml:lang="la">Evingus</persName> e <persName ref="#alagildus" xml:lang="la">Alagildus</persName> non sia menzionato perché sarebbe sottinteso e corrispondente a quello di <persName ref="#sauma" xml:lang="la">Sauma</persName>.
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1875a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
+                        <title>Bertolini 1875a</title>
+                        <citedRange unit="page">113</citedRange>
+                        <note type="number">nr. 52</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1876b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1876b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1876b"/>
+                        <title>Bertolini 1876b</title>
+                        <citedRange unit="page">131</citedRange>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8760">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8760</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ils2804">
+                        <ptr target="../bibliography/master_bibliography.xml#ils"/>
+                        <ptr target="../references/corpora_databases.xml#ils"/>
+                        <title><term xml:lang="la">ILS</term> 2804</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv493">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 493</title>
+                    </bibl>
+                    <bibl xml:id="hoffmann1963">
+                        <ptr target="../bibliography/master_bibliography.xml#hoffmann1963"/>
+                        <ptr target="../references/bibliography.xml#hoffmann1963"/>
+                        <title>Hoffmann 1963</title>
+                        <citedRange unit="page">29</citedRange>
+                        <note type="number">n. 5</note>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">66-67</citedRange>
+                        <note type="number">nr. 25</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097908">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097908">EDR097908</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
