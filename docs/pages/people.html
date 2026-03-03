@@ -509,7 +509,7 @@
                 <dt>COGNOMEN</dt><dd>Hermias</dd><dt>ORIGIN (of the cognomen Hermias)</dt><dd>Greek</dd><dt>GENDER</dt><dd>Male</dd><dt>OCCUPATION</dt><dd>Civil</dd><dt>ROLE</dt><dd>Dedicator?</dd><dt>INSCRIPTION(S)</dt><dd><a href="inscriptions/einachios.html">The Inscription of Εἰνάχιος</a></dd>
             </dl>
         </div>
-        <div class="person" id="felicitas" data-gender="f" data-gens="" data-origin="latin,germanic" data-occupation="civil" data-role="dedicator" data-relationship="" data-name="ilateuta felicitas">
+        <div class="person" id="felicitas" data-gender="f" data-gens="" data-origin="germanic,latin" data-occupation="civil" data-role="dedicator" data-relationship="" data-name="ilateuta felicitas">
             <img src="../images/silhouette/silhouette_female.png" alt="silhouette">
             <h3>Ilateuta Felicitas</h3>
             <dl>
@@ -889,8 +889,15 @@
             }
         }
     </style>
+    <footer>
+        <p>Generated via Saxon-Che &amp; GitHub Actions</p>
+        <p>&copy; 2026 - Leonardo Battistella</p>
+        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
+        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
+        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
+    </footer>
     <script>
-        // Initialisation
+            // Initialisation
         document.addEventListener('DOMContentLoaded', function() {
             const peopleCards = document.querySelectorAll('.person');
             const totalCount = peopleCards.length;
@@ -1134,15 +1141,6 @@
                 document.getElementById('countTotal').textContent = totalCount;
             }
         });
-    </script>
-    <footer>
-        <p>Generated via Saxon-Che &amp; GitHub Actions</p>
-        <p>&copy; 2026 - Leonardo Battistella</p>
-        <p><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Julia Concordia</strong></p>
-        <p>MA Thesis project in <em>Digital and Public Humanities</em> – Ca' Foscari University of Venice.</p>
-        <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
-    </footer>
-    <script>
 (function() {
     var header = document.querySelector('.site-header');
     if (!header) return;
