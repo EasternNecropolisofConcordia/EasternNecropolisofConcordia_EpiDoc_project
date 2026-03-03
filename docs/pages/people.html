@@ -686,6 +686,21 @@
         </div>
             </div>
         </div>
+        
+        <div class="pagination-controls" id="paginationControls">
+            <button id="prevPage" class="page-btn" disabled>&laquo; Prev</button>
+            <span id="pageNumbers" class="page-numbers"></span>
+            <button id="nextPage" class="page-btn">Next &raquo;</button>
+            <div class="page-size-selector">
+                <label for="pageSize">Per page:</label>
+                <select id="pageSize">
+                    <option value="12">12</option>
+                    <option value="24" selected>24</option>
+                    <option value="48">48</option>
+                    <option value="0">All</option>
+                </select>
+            </div>
+        </div>
     </main>
     <style>
         /* Search and filter section */
@@ -887,6 +902,91 @@
             .people-list {
                 grid-template-columns: 1fr;
             }
+            .pagination-controls {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Pagination */
+        .pagination-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0 20px;
+            padding: 15px;
+            background: rgba(255, 255, 252, 0.6);
+            border-left: 5px solid #8B3A3A;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            font-family: 'Cardo', serif;
+        }
+        .page-btn {
+            padding: 8px 16px;
+            background: #8B3A3A;
+            color: #FDFaf0;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: 'Cardo', serif;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+        .page-btn:hover:not(:disabled) {
+            background: #6D2D2D;
+        }
+        .page-btn:disabled {
+            background: #bbb;
+            cursor: not-allowed;
+        }
+        .page-numbers {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+        .page-num {
+            padding: 6px 12px;
+            border: 1px solid rgba(139, 58, 58, 0.3);
+            background: white;
+            cursor: pointer;
+            font-family: 'Cardo', serif;
+            font-size: 14px;
+            border-radius: 2px;
+            color: #2c3e50;
+            transition: all 0.2s ease;
+        }
+        .page-num:hover {
+            border-color: #8B3A3A;
+            color: #8B3A3A;
+        }
+        .page-num.active {
+            background: #8B3A3A;
+            color: #FDFaf0;
+            border-color: #8B3A3A;
+            font-weight: bold;
+        }
+        .page-ellipsis {
+            padding: 6px 4px;
+            color: #888;
+            font-family: 'Cardo', serif;
+        }
+        .page-size-selector {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #2c3e50;
+        }
+        .page-size-selector select {
+            padding: 6px 8px;
+            border: 1px solid rgba(139, 58, 58, 0.3);
+            border-radius: 2px;
+            font-family: 'Cardo', serif;
+            font-size: 13px;
+            background: white;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+        .page-size-selector select:focus {
+            outline: none;
+            border-color: #8B3A3A;
         }
     </style>
     <footer>
@@ -897,277 +997,299 @@
         <p>This is a non-commercial, open-access research project for educational and scientific purposes only.</p>
     </footer>
     <script>
-            // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            const peopleCards = document.querySelectorAll('.person');
-            const totalCount = peopleCards.length;
-            
-            // Collect all filter values
-            const filterData = {
-                gender: {},
-                gens: {},
-                origin: {},
-                occupation: {},
-                role: {},
-                relationship: {}
-            };
-            
-            peopleCards.forEach(card => {
-                // Gender
-                const gender = card.getAttribute('data-gender');
-                if (gender) {
-                    const genderLabel = gender === 'm' ? 'Male' : (gender === 'f' ? 'Female' : 'Unknown');
-                    filterData.gender[gender] = (filterData.gender[gender] || 0) + 1;
-                }
-                
-                // Gens
-                const gens = card.getAttribute('data-gens');
-                if (gens) {
-                    gens.split(',').filter(g => g).forEach(g => {
-                        filterData.gens[g] = (filterData.gens[g] || 0) + 1;
-                    });
-                }
-                
-                // Origin
-                const origin = card.getAttribute('data-origin');
-                if (origin) {
-                    origin.split(',').filter(o => o).forEach(o => {
-                        filterData.origin[o] = (filterData.origin[o] || 0) + 1;
-                    });
-                }
-                
-                // Occupation
-                const occupation = card.getAttribute('data-occupation');
-                if (occupation) {
-                    filterData.occupation[occupation] = (filterData.occupation[occupation] || 0) + 1;
-                }
-                
-                // Role
-                const role = card.getAttribute('data-role');
-                if (role) {
-                    role.split(',').filter(r => r).forEach(r => {
-                        filterData.role[r] = (filterData.role[r] || 0) + 1;
-                    });
-                }
-                
-                // Relationship
-                const relationship = card.getAttribute('data-relationship');
-                if (relationship) {
-                    relationship.split(',').filter(r => r).forEach(r => {
-                        filterData.relationship[r] = (filterData.relationship[r] || 0) + 1;
-                    });
-                }
+    // =============================================
+    // 1. FILTERS + PAGINATION
+    // =============================================
+    document.addEventListener('DOMContentLoaded', function() {
+        const peopleCards = document.querySelectorAll('.person');
+        const totalCount = peopleCards.length;
+
+        // Pagination state
+        let currentPage = 1;
+        let itemsPerPage = parseInt(document.getElementById('pageSize').value) || 24;
+        let filteredCards = [];
+
+        // Collect filter values from cards
+        const filterData = {
+            gender: {}, gens: {}, origin: {},
+            occupation: {}, role: {}, relationship: {}
+        };
+
+        peopleCards.forEach(card => {
+            const gender = card.getAttribute('data-gender');
+            if (gender) filterData.gender[gender] = (filterData.gender[gender] || 0) + 1;
+
+            const gens = card.getAttribute('data-gens');
+            if (gens) gens.split(',').filter(g => g).forEach(g => {
+                filterData.gens[g] = (filterData.gens[g] || 0) + 1;
             });
-            
-            // Populate filters
-            populateFilter('filterGender', filterData.gender, 'gender');
-            populateFilter('filterGens', filterData.gens, 'gens', 5);
-            populateFilter('filterOrigin', filterData.origin, 'origin', 5);
-            populateFilter('filterOccupation', filterData.occupation, 'occupation');
-            populateFilter('filterRole', filterData.role, 'role', 5);
-            populateFilter('filterRelationship', filterData.relationship, 'relationship', 5);
-            
-            // Function to populate filters
-            function populateFilter(containerId, data, attribute, limit = null) {
-                const container = document.getElementById(containerId);
-                const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
-                
-                entries.forEach((([value, count], index) => {
-                    if (limit && index >= limit) {
-                        const option = createFilterOption(value, count, attribute);
-                        option.style.display = 'none';
-                        option.classList.add('extra-option');
-                        container.appendChild(option);
-                    } else {
-                        container.appendChild(createFilterOption(value, count, attribute));
-                    }
-                }));
-                
-                // Handle button "show more"
-                if (limit && entries.length > limit) {
-                    const showMoreBtn = document.getElementById('showMore' + containerId.replace('filter', ''));
-                    if (showMoreBtn) {
-                        showMoreBtn.style.display = 'block';
-                        showMoreBtn.addEventListener('click', function() {
-                            container.querySelectorAll('.extra-option').forEach(opt => {
-                                opt.style.display = 'flex';
-                            });
-                            showMoreBtn.style.display = 'none';
-                        });
-                    }
+
+            const origin = card.getAttribute('data-origin');
+            if (origin) origin.split(',').filter(o => o).forEach(o => {
+                filterData.origin[o] = (filterData.origin[o] || 0) + 1;
+            });
+
+            const occupation = card.getAttribute('data-occupation');
+            if (occupation) filterData.occupation[occupation] = (filterData.occupation[occupation] || 0) + 1;
+
+            const role = card.getAttribute('data-role');
+            if (role) role.split(',').filter(r => r).forEach(r => {
+                filterData.role[r] = (filterData.role[r] || 0) + 1;
+            });
+
+            const relationship = card.getAttribute('data-relationship');
+            if (relationship) relationship.split(',').filter(r => r).forEach(r => {
+                filterData.relationship[r] = (filterData.relationship[r] || 0) + 1;
+            });
+        });
+
+        // Populate sidebar filters
+        populateFilter('filterGender', filterData.gender, 'gender');
+        populateFilter('filterGens', filterData.gens, 'gens', 5);
+        populateFilter('filterOrigin', filterData.origin, 'origin', 5);
+        populateFilter('filterOccupation', filterData.occupation, 'occupation');
+        populateFilter('filterRole', filterData.role, 'role', 5);
+        populateFilter('filterRelationship', filterData.relationship, 'relationship', 5);
+
+        function populateFilter(containerId, data, attribute, limit) {
+            const container = document.getElementById(containerId);
+            const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
+
+            entries.forEach(([value, count], index) => {
+                const option = createFilterOption(value, count, attribute);
+                if (limit && index >= limit) {
+                    option.style.display = 'none';
+                    option.classList.add('extra-option');
+                }
+                container.appendChild(option);
+            });
+
+            if (limit && entries.length > limit) {
+                const showMoreBtn = document.getElementById('showMore' + containerId.replace('filter', ''));
+                if (showMoreBtn) {
+                    showMoreBtn.style.display = 'block';
+                    showMoreBtn.addEventListener('click', function() {
+                        container.querySelectorAll('.extra-option').forEach(opt => opt.style.display = 'flex');
+                        showMoreBtn.style.display = 'none';
+                    });
                 }
             }
-            
-            function createFilterOption(value, count, attribute) {
-                const div = document.createElement('div');
-                div.className = 'filter-option';
-                
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.id = `filter_${attribute}_${value}`;
-                checkbox.value = value;
-                checkbox.dataset.attribute = attribute;
-                
-                const label = document.createElement('label');
-                label.htmlFor = checkbox.id;
-                
-                // Format label for gender
-                let displayValue = value;
-                if (attribute === 'gender') {
-                    displayValue = value === 'm' ? 'Male' : (value === 'f' ? 'Female' : 'Unknown');
-                }
-                
-                label.textContent = displayValue.charAt(0).toUpperCase() + displayValue.slice(1);
-                
-                const countSpan = document.createElement('span');
-                countSpan.className = 'filter-count';
-                countSpan.textContent = `(${count})`;
-                
-                div.appendChild(checkbox);
-                div.appendChild(label);
-                div.appendChild(countSpan);
-                
-                checkbox.addEventListener('change', applyFilters);
-                
-                return div;
+        }
+
+        function createFilterOption(value, count, attribute) {
+            const div = document.createElement('div');
+            div.className = 'filter-option';
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = 'filter_' + attribute + '_' + value;
+            checkbox.value = value;
+            checkbox.dataset.attribute = attribute;
+
+            const label = document.createElement('label');
+            label.htmlFor = checkbox.id;
+            let displayValue = value;
+            if (attribute === 'gender') {
+                displayValue = value === 'm' ? 'Male' : (value === 'f' ? 'Female' : 'Unknown');
             }
-            
-            // Search by name
-            const searchInput = document.getElementById('searchInput');
-            const searchBtn = document.getElementById('searchBtn');
-            
-            searchInput.addEventListener('input', applyFilters);
-            searchBtn.addEventListener('click', applyFilters);
-            
-            // Clear filters
-            document.getElementById('clearFilters').addEventListener('click', function() {
-                document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(cb => {
-                    cb.checked = false;
-                });
-                searchInput.value = '';
+            label.textContent = displayValue.charAt(0).toUpperCase() + displayValue.slice(1);
+
+            const countSpan = document.createElement('span');
+            countSpan.className = 'filter-count';
+            countSpan.textContent = '(' + count + ')';
+
+            div.appendChild(checkbox);
+            div.appendChild(label);
+            div.appendChild(countSpan);
+
+            checkbox.addEventListener('change', function() {
+                currentPage = 1;
                 applyFilters();
             });
-            
-            // Main filtering function
-            function applyFilters() {
-                const searchTerm = searchInput.value.toLowerCase().trim();
-                const activeFilters = {
-                    gender: [],
-                    gens: [],
-                    origin: [],
-                    occupation: [],
-                    role: [],
-                    relationship: []
-                };
-                
-                // Collect active filters
-                document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
-                    const attr = cb.dataset.attribute;
-                    activeFilters[attr].push(cb.value);
-                });
-                
-                let visibleCount = 0;
-                
-                peopleCards.forEach(card => {
-                    let visible = true;
-                    
-                    // Name search filter
-                    if (searchTerm) {
-                        const name = card.getAttribute('data-name') || '';
-                        if (!name.includes(searchTerm)) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Gender filter
-                    if (visible && activeFilters.gender.length > 0) {
-                        const gender = card.getAttribute('data-gender');
-                        if (!activeFilters.gender.includes(gender)) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Gens filter
-                    if (visible && activeFilters.gens.length > 0) {
-                        const gens = (card.getAttribute('data-gens') || '').split(',').filter(g => g);
-                        if (!gens.some(g => activeFilters.gens.includes(g))) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Origin filter
-                    if (visible && activeFilters.origin.length > 0) {
-                        const origin = (card.getAttribute('data-origin') || '').split(',').filter(o => o);
-                        if (!origin.some(o => activeFilters.origin.includes(o))) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Occupation filter
-                    if (visible && activeFilters.occupation.length > 0) {
-                        const occupation = card.getAttribute('data-occupation');
-                        if (!activeFilters.occupation.includes(occupation)) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Role filter
-                    if (visible && activeFilters.role.length > 0) {
-                        const roles = (card.getAttribute('data-role') || '').split(',').filter(r => r);
-                        if (!roles.some(r => activeFilters.role.includes(r))) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Relationship filter
-                    if (visible && activeFilters.relationship.length > 0) {
-                        const relationships = (card.getAttribute('data-relationship') || '').split(',').filter(r => r);
-                        if (!relationships.some(r => activeFilters.relationship.includes(r))) {
-                            visible = false;
-                        }
-                    }
-                    
-                    // Show/hide card
-                    if (visible) {
-                        card.classList.remove('hidden');
-                        visibleCount++;
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                });
-                
-                // Update counter
-                document.getElementById('countCurrent').textContent = visibleCount;
-                document.getElementById('countTotal').textContent = totalCount;
+
+            return div;
+        }
+
+        // Search
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn   = document.getElementById('searchBtn');
+
+        searchInput.addEventListener('input', function() { currentPage = 1; applyFilters(); });
+        searchBtn.addEventListener('click',   function() { currentPage = 1; applyFilters(); });
+
+        // Clear all
+        document.getElementById('clearFilters').addEventListener('click', function() {
+            document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(cb => cb.checked = false);
+            searchInput.value = '';
+            currentPage = 1;
+            applyFilters();
+        });
+
+        // Pagination controls
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (currentPage > 1) { currentPage--; renderPage(); scrollToList(); }
+        });
+        document.getElementById('nextPage').addEventListener('click', function() {
+            if (currentPage < getTotalPages()) { currentPage++; renderPage(); scrollToList(); }
+        });
+        document.getElementById('pageSize').addEventListener('change', function() {
+            itemsPerPage = parseInt(this.value) || 0;
+            currentPage = 1;
+            renderPage();
+        });
+
+        function scrollToList() {
+            var el = document.getElementById('peopleList');
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function getTotalPages() {
+            if (itemsPerPage === 0) return 1;
+            return Math.max(1, Math.ceil(filteredCards.length / itemsPerPage));
+        }
+
+        // ---------- applyFilters ----------
+        function applyFilters() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const af = { gender: [], gens: [], origin: [], occupation: [], role: [], relationship: [] };
+
+            document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
+                af[cb.dataset.attribute].push(cb.value);
+            });
+
+            filteredCards = [];
+
+            peopleCards.forEach(card => {
+                let ok = true;
+
+                if (searchTerm) {
+                    if (!(card.getAttribute('data-name') || '').includes(searchTerm)) ok = false;
+                }
+                if (ok && af.gender.length > 0) {
+                    if (!af.gender.includes(card.getAttribute('data-gender'))) ok = false;
+                }
+                if (ok && af.gens.length > 0) {
+                    const v = (card.getAttribute('data-gens') || '').split(',').filter(Boolean);
+                    if (!v.some(g => af.gens.includes(g))) ok = false;
+                }
+                if (ok && af.origin.length > 0) {
+                    const v = (card.getAttribute('data-origin') || '').split(',').filter(Boolean);
+                    if (!v.some(o => af.origin.includes(o))) ok = false;
+                }
+                if (ok && af.occupation.length > 0) {
+                    if (!af.occupation.includes(card.getAttribute('data-occupation'))) ok = false;
+                }
+                if (ok && af.role.length > 0) {
+                    const v = (card.getAttribute('data-role') || '').split(',').filter(Boolean);
+                    if (!v.some(r => af.role.includes(r))) ok = false;
+                }
+                if (ok && af.relationship.length > 0) {
+                    const v = (card.getAttribute('data-relationship') || '').split(',').filter(Boolean);
+                    if (!v.some(r => af.relationship.includes(r))) ok = false;
+                }
+
+                if (ok) filteredCards.push(card);
+            });
+
+            document.getElementById('countCurrent').textContent = filteredCards.length;
+            document.getElementById('countTotal').textContent   = totalCount;
+
+            var tp = getTotalPages();
+            if (currentPage > tp) currentPage = tp;
+            renderPage();
+        }
+
+        // ---------- renderPage ----------
+        function renderPage() {
+            var tp    = getTotalPages();
+            var start = (itemsPerPage === 0) ? 0 : (currentPage - 1) * itemsPerPage;
+            var end   = (itemsPerPage === 0) ? filteredCards.length : start + itemsPerPage;
+
+            peopleCards.forEach(c => c.classList.add('hidden'));
+            filteredCards.forEach((c, i) => { if (i >= start && i < end) c.classList.remove('hidden'); });
+
+            updatePaginationUI(tp);
+        }
+
+        function updatePaginationUI(totalPages) {
+            var prevBtn     = document.getElementById('prevPage');
+            var nextBtn     = document.getElementById('nextPage');
+            var pageNumbers = document.getElementById('pageNumbers');
+            var controls    = document.getElementById('paginationControls');
+
+            prevBtn.disabled = (currentPage <= 1);
+            nextBtn.disabled = (currentPage >= totalPages);
+            controls.style.display = (totalPages <= 1 && itemsPerPage === 0) ? 'none' : 'flex';
+
+            pageNumbers.innerHTML = '';
+            var maxVis = 7, pages = [];
+
+            if (totalPages <= maxVis) {
+                for (var i = 1; i <= totalPages; i++) pages.push(i);
+            } else {
+                pages.push(1);
+                if (currentPage > 3) pages.push('...');
+                var rs = Math.max(2, currentPage - 1);
+                var re = Math.min(totalPages - 1, currentPage + 1);
+                if (currentPage <= 3)              re = Math.min(4, totalPages - 1);
+                if (currentPage >= totalPages - 2) rs = Math.max(totalPages - 3, 2);
+                for (var i = rs; i <= re; i++) pages.push(i);
+                if (currentPage < totalPages - 2) pages.push('...');
+                pages.push(totalPages);
+            }
+
+            pages.forEach(function(p) {
+                if (p === '...') {
+                    var span = document.createElement('span');
+                    span.className = 'page-ellipsis';
+                    span.textContent = '…';
+                    pageNumbers.appendChild(span);
+                } else {
+                    var btn = document.createElement('button');
+                    btn.className = 'page-num' + (p === currentPage ? ' active' : '');
+                    btn.textContent = p;
+                    btn.addEventListener('click', (function(page) {
+                        return function() { currentPage = page; renderPage(); scrollToList(); };
+                    })(p));
+                    pageNumbers.appendChild(btn);
+                }
+            });
+        }
+
+        // Initial render
+        applyFilters();
+    });
+
+    // =============================================
+    // 2. STICKY HEADER (peek on hover)
+    // =============================================
+    (function() {
+        var header = document.querySelector('.site-header');
+        if (!header) return;
+        var headerH = header.offsetHeight;
+        var peeking = false;
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY <= headerH) {
+                header.classList.remove('header-fixed', 'header-animate', 'header-visible');
+                peeking = false;
+            } else if (!peeking) {
+                header.classList.add('header-fixed');
+                header.classList.remove('header-animate', 'header-visible');
             }
         });
-(function() {
-    var header = document.querySelector('.site-header');
-    if (!header) return;
-    var headerH = header.offsetHeight;
-    var peeking = false;
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY <= headerH) {
-            header.classList.remove('header-fixed', 'header-animate', 'header-visible');
-            peeking = false;
-        } else if (!peeking) {
-            header.classList.add('header-fixed');
-            header.classList.remove('header-animate', 'header-visible');
-        }
-    });
-
-    document.addEventListener('mousemove', function(e) {
-        if (window.scrollY <= headerH) return;
-        if (e.clientY < 40 && !peeking) {
-            header.classList.add('header-fixed', 'header-animate', 'header-visible');
-            peeking = true;
-        } else if (e.clientY > headerH && peeking) {
-            header.classList.remove('header-visible');
-            peeking = false;
-        }
-    });
-})();
-</script>
+        document.addEventListener('mousemove', function(e) {
+            if (window.scrollY <= headerH) return;
+            if (e.clientY < 40 && !peeking) {
+                header.classList.add('header-fixed', 'header-animate', 'header-visible');
+                peeking = true;
+            } else if (e.clientY > headerH && peeking) {
+                header.classList.remove('header-visible');
+                peeking = false;
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
