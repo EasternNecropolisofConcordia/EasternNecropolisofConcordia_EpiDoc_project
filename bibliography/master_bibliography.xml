@@ -947,18 +947,33 @@
                </bibl>
 
                <!-- Speidel -->
-               <bibl xml:id="speidel1966">
+               <bibl xml:id="speidel1996">
                   <author>
                      <persName>
                         <forename>Michael Paul</forename>
                         <surname>Speidel</surname>
                      </persName>
                   </author>
-                  <date when="1966">1966</date>
+                  <date when="1996">1996</date>
                   <title level="a">Raising New Units for the Late Roman Army: "Auxilia Palatina"</title>
                   <title level="j">Dumbarton Oaks Papers</title>
                   <biblScope unit="volume">50</biblScope>
                   <biblScope unit="pp">163–170</biblScope>
+               </bibl>
+               
+               <bibl xml:id="speidel2005">
+                  <author>
+                     <persName>
+                        <forename>Michael Paul</forename>
+                        <surname>Speidel</surname>
+                     </persName>
+                  </author>
+                  <date when="2005">2005</date>
+                  <title level="a">The Origin of the Late Roman Army Ran</title>
+                  <title level="j">TYCHE - Beiträge zur Alten Geschichte, Papyrologie und Epigraphik </title>
+                  <biblScope unit="volume">20</biblScope>
+                  <pubPlace>Wien</pubPlace>
+                  <biblScope unit="pp">205-208</biblScope>
                </bibl>
 
                <!-- Tomlin -->
