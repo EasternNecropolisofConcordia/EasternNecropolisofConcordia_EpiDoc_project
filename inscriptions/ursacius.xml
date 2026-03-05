@@ -365,7 +365,7 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="5" from="#seg1" to="seg1">
+                    <app loc="5" from="#seg1" to="#seg1">
                         <lem>Si <surplus>si</surplus> quis</lem>
                         <rdg source="#lettich1983">Si quis</rdg>
                     </app>
