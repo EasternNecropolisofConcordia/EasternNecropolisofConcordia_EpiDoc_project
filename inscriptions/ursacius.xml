@@ -360,7 +360,7 @@
                     <lb n="5"/>annos XXX. <seg xml:id="seg1">Si <surplus>si</surplus> quis</seg> eam vo
                     <lb n="6"/>quis eam volu
                     <lb n="7" break="no"/>erit aperire, det in fisco au
-                    <lb n="8" break="no"/>ri libras d<choice><corr>u</corr><sic>o</sic></choice>as.
+                    <lb n="8" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2">ri libras d<choice><corr>u</corr><sic>o</sic></choice>as</measure>.
                 </ab>
             </div>
             <div type="apparatus">
