@@ -154,7 +154,7 @@
                      <name type="cognomen" nymRef="latin">Felicitas</name>
                  </persName>
                   <gender value="f">f</gender>
-                  <note type="occupation">civil</note>
+                  <note type="occupation">civilian</note>
                   <note type="role">dedicator</note>
               </person>
                <person xml:id="andia">
