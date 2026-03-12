@@ -159,7 +159,7 @@
                      <name type="cognomen" nymRef="celtic">Bitorta</name>
                  </persName>
                   <gender value="f">f</gender>
-                  <note type="occupation">civil</note>
+                  <note type="occupation">civilian</note>
                   <note type="role">deceased</note>
                   <note type="relationship" corresp="#alatancus">wife</note>
               </person>
