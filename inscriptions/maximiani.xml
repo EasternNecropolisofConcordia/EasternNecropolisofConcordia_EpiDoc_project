@@ -166,7 +166,7 @@
                        <name type="gens">Flavia</name>
                    </persName>
                    <gender>m</gender>
-                   <note type="occupation">civil</note>
+                   <note type="occupation">civilian</note>
                    <note type="role">deceased</note>
                    <note type = "relationship" corresp="#maximianusmaior">son</note>
                </person>
@@ -178,7 +178,7 @@
                      <name type="gens">Flavia</name>
                    </persName>
                    <gender>m</gender>
-                   <note type="occupation">civil</note>
+                   <note type="occupation">civilian</note>
                    <note type="role">dedicator/deceased</note>
                    <note type = "relationship" corresp="#maximianusiunior">father</note>
               </person>
