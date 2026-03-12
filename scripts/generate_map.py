@@ -22,7 +22,7 @@ def determine_category(occupations: set) -> tuple:
     if not occupations:
         return 'unknown', CATEGORY_COLOURS['unknown'][1]
 
-    if occupations == {'civil'}:
+    if occupations == {'civilian'}:
         return 'civilian', CATEGORY_COLOURS['civilian'][1]
     if occupations == {'soldier'}:
         return 'soldier', CATEGORY_COLOURS['soldier'][1]
@@ -34,9 +34,9 @@ def determine_category(occupations: set) -> tuple:
         return 'greek_merchant', CATEGORY_COLOURS['greek_merchant'][1]
 
     # Mixed burials
-    if occupations == {'fabricensis', 'civil'}:
+    if occupations == {'fabricensis', 'civilian'}:
         return 'fabricensis_civil', CATEGORY_COLOURS['fabricensis_civil'][1]
-    if occupations == {'soldier', 'civil'}:
+    if occupations == {'soldier', 'civilian'}:
         return 'soldier_civil', CATEGORY_COLOURS['soldier_civil'][1]
 
     return 'unknown', CATEGORY_COLOURS['unknown'][1]
