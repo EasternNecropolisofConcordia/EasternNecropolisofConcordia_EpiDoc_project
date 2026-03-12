@@ -188,12 +188,12 @@ def run():
                             # Group silhouettes
                             if occupation in ['soldier', 'soldier?']:
                                 img = "silhouette_group_soldiers.png"
-                            elif occupation in ['civil', 'civil?']:
+                            elif occupation in ['civilian', 'civilian?', 'civil', 'civil?']:
                                 img = "silhouette_group_civilians.png"
                         elif p_gender == 'f':
                             img = "silhouette_female.png"
                         elif p_gender == 'm':
-                            if occupation in ['civil', 'civil?']:
+                            if occupation in ['civilian', 'civilian?', 'civil', 'civil?']:
                                 img = "silhouette_civil.png"
                             elif occupation in ['soldier', 'soldier?']:
                                 img = "silhouette_soldier.png"
