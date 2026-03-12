@@ -397,7 +397,7 @@
     <text>
         <body>
             <div type="edition" xml:lang="la">
-                <div type="textpart" subtype="side_of_the_lid">
+                <div type="textpart" subtype="side_of_the_lid" n="a">
                     <ab>
                         <lb n="1"/><g ref="#chi-rho"/>
                     </ab>
