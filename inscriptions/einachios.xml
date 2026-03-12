@@ -150,7 +150,7 @@
                        <name type="cognomen" nymRef="greek">Εἰνάχιος</name>
                    </persName>
                    <gender>m</gender>
-                   <note type="occupation">civil</note>
+                   <note type="occupation">civilian</note>
                    <note type="role">deceased</note>
                </person>
                <person xml:id="hermias">
@@ -159,7 +159,7 @@
                      <name type="cognomen" nymRef="greek">Hermias</name>
                  </persName>
                   <gender>m</gender>
-                  <note type="occupation">civil</note>
+                  <note type="occupation">civilian</note>
                   <note type="role">dedicator?</note>
               </person>
                <person xml:id="cispia">
@@ -168,7 +168,7 @@
                      <name type="nomen">Cispia</name>
                  </persName>
                   <gender>f</gender>
-                  <note type="occupation">civil</note>
+                  <note type="occupation">civilian</note>
                   <note type="role">dedicator?</note>
               </person>
            </listPerson>
