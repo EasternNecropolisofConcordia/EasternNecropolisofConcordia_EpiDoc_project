@@ -93,8 +93,8 @@
                                     </dimensions>
                                 </support>
                                 <condition>
-                                    <p xml:lang="en">The inscription is mutilated at the lower right corner. The epigraph was legible in its entirety by Bertolini <term xml:lang="la">in situ</term>; consequently, damage was sustained during the extraction of the limestone slab and its transport to the museum.</p>
-                                    <p xml:lang="it">L'iscrizione è mutila nell'angolo inferiore destro. L'epigrafe era leggibile nella sua interezza da Bertolini <term xml:lang="la">in situ</term>, dunque ci furono dei danneggiamenti durante l'estrazione della lastra calcarea e il trasporto in museo.</p>
+                                    <p xml:lang="en">The inscription is mutilated at the bottom, specifically along the last line. The epigraph was recorded in its entirety by Bertolini <term xml:lang="la">in situ</term>; the damage therefore occurred during the extraction of the limestone slab or during its transport to the museum.</p>
+                                    <p xml:lang="it">L'iscrizione è mutila nella parte inferiore, in corrispondenza dell'ultima riga. L'epigrafe risultava leggibile nella sua interezza al tempo dei rilievi di Bertolini <term xml:lang="la">in situ</term>; i danneggiamenti sono occorsi, dunque, durante le operazioni di estrazione della lastra calcarea o durante il trasporto presso il museo.</p>
                                 </condition>
                             </supportDesc>
                             <layoutDesc>
@@ -125,8 +125,8 @@
                             </handNote>
                         </handDesc>
                         <decoDesc>
-                            <decoNote xml:lang="en">Front of a sarcophagus featuring an ansa to the left of the epigraphic field, containing a staurogram. The epigraphic field and the ansa are the only polished parts.</decoNote>
-                            <decoNote xml:lang="it">Fronte di sarcofago con un'ansa a sinistra dello specchio epigrafico, contenente uno staurogramma. Lo specchio epigrafico e l'ansa sono le uniche parti levigate.</decoNote>
+                            <decoNote xml:lang="en">Sarcophagus front without decorations or frames. The epigraphic field is the only polished part.</decoNote>
+                            <decoNote xml:lang="it">Fronte di sarcofago senza decorazioni né cornici. Lo specchio epigrafico è l'unica parte levigata.</decoNote>
                         </decoDesc>
                     </physDesc>
                 </msDesc>
