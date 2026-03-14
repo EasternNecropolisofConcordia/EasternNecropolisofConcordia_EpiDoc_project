@@ -121,8 +121,8 @@
                             </handNote>
                         </handDesc>
                         <decoDesc>
-                            <decoNote xml:lang="en">Sarcophagus front without decorations or frames. The epigraphic field is the only polished part.</decoNote>
-                            <decoNote xml:lang="it">Fronte di sarcofago senza decorazioni né cornici. Lo specchio epigrafico è l'unica parte levigata.</decoNote>
+                            <decoNote xml:lang="en">Sarcophagus lateral panel without decorations or frames. The epigraphic field is the only polished part.</decoNote>
+                            <decoNote xml:lang="it">Lato di sarcofago senza decorazioni né cornici. Lo specchio epigrafico è l'unica parte levigata.</decoNote>
                         </decoDesc>
                     </physDesc>
                 </msDesc>
@@ -361,12 +361,12 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><expan><abbr>Fl</abbr><ex>avius</ex></expan> Dassiolus, vet<supplied reason="omitted">e</supplied>r
+                    <lb n="1"/><persName ref="#dassiolus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Dassiolus</persName>, vet<supplied reason="omitted">e</supplied>r
                     <lb n="2" break="no"/>anus de numero M
                     <lb n="3" break="no"/>at<supplied reason="omitted">t</supplied>iacorum iuniorium,
                     <lb n="4"/>arcam <choice><reg>sibi</reg><orig>sivi</orig></choice> de proprio co
                     <lb n="5" break="no"/><choice><reg>mparavit</reg><orig>nparavit</orig></choice> <w xml:id="w1"><choice><reg>sibi</reg><orig>sive</orig></choice></w> <w xml:id="w2">et</w> <choice><reg>filio</reg><orig>filius</orig></choice> <choice><reg>suo</reg><orig>suus</orig></choice>
-                    <lb n="6"/><choice><reg>Varioso</reg><orig>Variosus</orig></choice>. Si q<supplied reason="omitted">u</supplied>is <w xml:id="w3">ea<supplied reason="omitted">m</supplied></w> <expan><abbr>p</abbr><ex>ost</ex></expan> <expan><abbr>o</abbr><ex>bitum</ex></expan> <expan><abbr>e</abbr><ex>orum</ex></expan> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8744 #bertolini1878"><expan><abbr>vol</abbr><ex>uerit</ex></expan></supplied>
+                    <lb n="6"/><persName ref="#variosus"><choice><reg>Varioso</reg><orig>Variosus</orig></choice></persName>. Si q<supplied reason="omitted">u</supplied>is <w xml:id="w3">ea<supplied reason="omitted">m</supplied></w> <expan><abbr>p</abbr><ex>ost</ex></expan> <expan><abbr>o</abbr><ex>bitum</ex></expan> <expan><abbr>e</abbr><ex>orum</ex></expan> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8744 #bertolini1878"><expan><abbr>vol</abbr><ex>uerit</ex></expan></supplied>
                     <lb n="7"/><expan><abbr>ap</abbr><ex>erire</ex></expan>, <choice><reg>dabit</reg><orig>d<unclear>a</unclear>vi<supplied reason="omitted">t</supplied></orig></choice> fisco <measure type="fine" unit="roman_pound" commodity="silver" quantity="5"><expan><abbr>ar</abbr><ex>genti</ex></expan> <expan><abbr>p</abbr><ex>ondo</ex></expan> <num value="5">V</num></measure>.
                 </ab>
             </div>
