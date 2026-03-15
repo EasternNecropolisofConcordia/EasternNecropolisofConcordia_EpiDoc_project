@@ -214,4 +214,4 @@ Solo tre gruppi di pagine sono redatti manualmente: la home page (`index.html`),
 Matricola / Student ID: 870645
 Università Ca' Foscari Venezia — Digital and Public Humanities (MA)
 
-📧 [leonardo.geodesi@gmail.com]
+📧 [easternnecropolisofconcordia@gmail.com]
