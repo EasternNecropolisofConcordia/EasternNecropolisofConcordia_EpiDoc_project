@@ -1017,7 +1017,7 @@ table.index_records {
 }
 
 table.index_records tr th {
-  font-size: 14px;
+  font-size: 20px;
   color: #8B3A3A;
 }
 
@@ -1025,6 +1025,8 @@ td.record_section {
   color: white;
   background-color: #8B3A3A;
 }
+
+table.index_records tr:hover {background-color: #8B3A3A;}
 
 /* ===== CONVENTIONS TABLE ===== */
 .conventions-table-wrapper {
