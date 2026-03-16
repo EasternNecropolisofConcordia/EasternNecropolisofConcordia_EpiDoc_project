@@ -1011,22 +1011,37 @@ a.note-ref:hover {
   border-bottom-color: #8B3A3A;
 }
 
-/* ===== INDEX RECORDS TABLE ===== */ 
+/* ===== INDEX RECORDS TABLE ===== */
 table.index_records {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Cardo', serif;
   border-bottom: 1px solid #ddd;
 }
 
 table.index_records tr th {
   font-size: 20px;
   color: #8B3A3A;
+  padding: 12px 16px;
+  text-align: left;
 }
 
 td.record_section {
   color: white;
   background-color: #8B3A3A;
+  padding: 14px 16px;
+  vertical-align: top;
 }
 
-table.index_records tr:hover {background-color: #8B3A3A;}
+table.index_records td {
+  padding: 14px 16px;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+table.index_records tr:hover td:not(.record_section) {
+  background-color: rgba(139, 58, 58, 0.06);
+}
 
 /* ===== CONVENTIONS TABLE ===== */
 .conventions-table-wrapper {
