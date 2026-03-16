@@ -1016,6 +1016,11 @@ table.index_records {
   border-bottom: 1px solid #ddd;
 }
 
+table.index_records th {
+  font-size: 14px;
+  color: #8B3A3A;
+}
+
 td.record_section {
   color: white;
   background-color: #8B3A3A;
