@@ -1021,14 +1021,14 @@ table.index_records {
 
 table.index_records tr th {
   font-size: 20px;
-  color: #8B3A3A;
+  color: white;
+  background-color: #8B3A3A;
   padding: 12px 16px;
   text-align: center;
 }
 
 td.record_section {
-  color: white;
-  background-color: #8B3A3A;
+  color: #8B3A3A;
   padding: 14px 16px;
   vertical-align: top;
 }
