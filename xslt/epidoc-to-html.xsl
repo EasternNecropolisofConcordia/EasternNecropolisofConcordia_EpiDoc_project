@@ -711,22 +711,24 @@
                 select="tei:ptr[contains(@target, 'references')]/@target"/>
             <xsl:variable name="html-target" select="replace($ref-target, '\.xml', '.html')"/>
 
-            <xsl:element name="a">
-                <xsl:attribute name="href">
-                    <xsl:value-of select="$html-target"/>
-                </xsl:attribute>
-
-                <xsl:choose>
-                    <xsl:when test="@type = 'corpus'">
-                        <xsl:apply-templates select="tei:title"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="tei:title"/>
-                        <xsl:if test="tei:citedRange">, <xsl:value-of select="tei:citedRange"
+            <xsl:element name="td">
+                <xsl:element name="a">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$html-target"/>
+                    </xsl:attribute>
+                    
+                    <xsl:choose>
+                        <xsl:when test="@type = 'corpus'">
+                            <xsl:apply-templates select="tei:title"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="tei:title"/>
+                            <xsl:if test="tei:citedRange">, <xsl:value-of select="tei:citedRange"
                             /></xsl:if>
-                        <xsl:if test="tei:note[@type = 'number']">, <xsl:value-of
+                            <xsl:if test="tei:note[@type = 'number']">, <xsl:value-of
                                 select="tei:note[@type = 'number']"/></xsl:if>. </xsl:otherwise>
-                </xsl:choose>
+                    </xsl:choose>
+                </xsl:element>
             </xsl:element>
         </xsl:element></table>
     </xsl:template>
