@@ -1016,7 +1016,7 @@ table.index_records {
   border-bottom: 1px solid #ddd;
 }
 
-table.index_records th {
+table.index_records tr th {
   font-size: 14px;
   color: #8B3A3A;
 }
