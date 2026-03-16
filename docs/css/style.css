@@ -1014,6 +1014,8 @@ a.note-ref:hover {
 /* ===== INDEX RECORDS TABLE ===== */
 table.index_records {
   width: 80%;
+  margin-left:10%; 
+  margin-right:10%;
   border-collapse: collapse;
   font-family: 'Cardo', serif;
   border-bottom: 1px solid #ddd;
