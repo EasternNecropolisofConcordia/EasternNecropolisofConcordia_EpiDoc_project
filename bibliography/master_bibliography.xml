@@ -1188,6 +1188,12 @@
                      <pubPlace>Berlin</pubPlace>
                      <date from="1892" to="1916">1892–1916</date>
                   </bibl>
+                  <bibl xml:id="supplit">
+                     <title><term xml:lang="la">Supplementa Italica, nuova serie</term></title>
+                     <abbr><term xml:lang="la">SupplIt</term></abbr>
+                     <pubPlace>Berlin</pubPlace>
+                     <date from="1981">1981-</date>
+                  </bibl>
                </listBibl>
 
                <listBibl type="prosopographical_corpora">
