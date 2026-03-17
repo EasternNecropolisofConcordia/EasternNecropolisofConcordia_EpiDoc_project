@@ -89,6 +89,26 @@ ul.index_ul li::marker {
   margin: 0;
 }
 
+/* ===== LINKS ===== */
+
+a {
+  color: #8B3A3A;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #CD5C5C;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #49085E;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* ===== CONTEXT PAGES DL ===== */
 main > dl {
   display: grid;
