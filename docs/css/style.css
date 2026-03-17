@@ -1039,6 +1039,7 @@ table.index_records tr {
 
 td.record_section {
   color: #8B3A3A;
+  background-color: rgba(139, 58, 58, 0.1);
   padding: 14px 16px;
   vertical-align: middle;
 }
