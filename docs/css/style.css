@@ -1049,7 +1049,7 @@ table.index_records td {
   line-height: 1.6;
 }
 
-table.index_records td td:not(.record_section) {
+table.index_records td:not(.record_section) {
   text-align: justify;
 }
 
