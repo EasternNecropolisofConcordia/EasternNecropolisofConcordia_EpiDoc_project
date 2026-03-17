@@ -194,7 +194,7 @@ def run():
                             img = "silhouette_female.png"
                         elif p_gender == 'm':
                             if occupation in ['civilian', 'civilian?', 'civil', 'civil?']:
-                                img = "silhouette_civil.png"
+                                img = "silhouette_civilian.png"
                             elif occupation in ['soldier', 'soldier?']:
                                 img = "silhouette_soldier.png"
                             elif occupation in ['fabricensis', 'fabricensis?']:
