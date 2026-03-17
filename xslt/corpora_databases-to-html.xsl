@@ -62,7 +62,7 @@
                     </xsl:for-each>
                     <xsl:text> (ed.), </xsl:text>
                 </xsl:if>
-                <xsl:value-of select="tei:title"/>
+                <xsl:apply-templates select="tei:title"/>
                 <xsl:text>, </xsl:text>
                 <xsl:value-of select="concat(tei:pubPlace, ' ', tei:date)"/>
             </td>
