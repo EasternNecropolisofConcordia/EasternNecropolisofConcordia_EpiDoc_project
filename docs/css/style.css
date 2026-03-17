@@ -33,6 +33,7 @@ ul.index_ul {
 
 ul.index_ul li {
   list-style-type: circle;
+  text-align: justify;
 }
 
 ul.index_ul li::marker {
