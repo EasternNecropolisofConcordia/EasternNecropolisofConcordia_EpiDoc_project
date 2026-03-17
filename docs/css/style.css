@@ -18,19 +18,25 @@ body {
 }
 
 hr {
-  size: 5px;
-  color: #8B3A3A;
+  height: 5px;
+  background-color: #8B3A3A;
+  border: none;
 }
+
 
 ul.index_ul {
   width: 80%;
-  margin-left:10%; 
-  margin-right:10%;
-  
+  margin: 20px auto;
+  padding: 0;
 }
 
-li.index_ul {
-  list-style-type: circle #8B3A3A;
+
+ul.index_ul li {
+  list-style-type: circle;
+}
+
+ul.index_ul li::marker {
+  color: #8B3A3A;
 }
 
 /* ===== PEEK HEADER ===== */
