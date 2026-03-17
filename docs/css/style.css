@@ -629,6 +629,10 @@ figcaption {
     padding-top: 5px;
 }
 
+.reference {
+  font-size: 0.8rem;
+}
+
 .context_text-with-figure {
   display: grid;
   grid-template-columns: 1fr minmax(200px, 350px);
