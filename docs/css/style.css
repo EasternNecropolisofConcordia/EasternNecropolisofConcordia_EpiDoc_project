@@ -22,6 +22,17 @@ hr {
   color: #8B3A3A;
 }
 
+ul.index_ul {
+  width: 80%;
+  margin-left:10%; 
+  margin-right:10%;
+  
+}
+
+li.index_ul {
+  list-style-type: circle #8B3A3A;
+}
+
 /* ===== PEEK HEADER ===== */
 .site-header {
   position: relative;
