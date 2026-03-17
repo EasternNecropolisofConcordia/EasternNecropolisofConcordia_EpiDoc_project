@@ -17,6 +17,11 @@ body {
   background-attachment: fixed;
 }
 
+hr {
+  size: 5px;
+  color: #8B3A3A;
+}
+
 /* ===== PEEK HEADER ===== */
 .site-header {
   position: relative;
