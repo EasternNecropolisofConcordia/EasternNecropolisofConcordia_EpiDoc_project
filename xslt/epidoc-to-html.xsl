@@ -281,6 +281,24 @@
                                             </xsl:element>
                                         </xsl:for-each>
                                     </div>
+                                    <xsl:text> </xsl:text>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <xsl:value-of
+                                                select="//tei:repository/tei:orgName/tei:name/tei:settlement"/>
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <xsl:for-each
+                                                select="//tei:encodingDesc//tei:category[@xml:id = substring-after(//tei:repository/tei:orgName//tei:settlement/@ref, '#')]/tei:catDesc/tei:ref">
+                                                <xsl:element name="a">
+                                                    <xsl:attribute name="href"><xsl:value-of
+                                                        select="@target"/></xsl:attribute>
+                                                    <xsl:value-of select="upper-case(@type)"/> ID:
+                                                    <xsl:value-of select="tei:idno"/>
+                                                </xsl:element>
+                                            </xsl:for-each>
+                                        </div>
+                                    </div>
                                 </div>
                             </dd>
                             <dt>
