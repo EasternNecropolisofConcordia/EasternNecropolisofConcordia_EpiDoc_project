@@ -26,7 +26,7 @@ Every EpiDoc file in `inscriptions/` captures a full epigraphic record:
 - **Dating** — chronological range with evidence criteria.
 - **Prosopography** — structured person records (`<listPerson>`) with gender, occupation (soldier, civilian, *fabricensis*, functionary), military rank, unit (*numerus*), family relationships, and onomastic components (*praenomen*, *nomen*, *cognomen*, *gens*).
 - **Controlled vocabularies** — taxonomies for military ranks, chronological periods, places, and occupations, with external links (EAGLE, AAT, Wikidata, Latin Lexicon, Trismegistos, DARE, VIAF, TGN).
-- **Critical edition** — Leiden-convention transcription with apparatus criticus.
+- **Critical edition** — Krummrey-Panciera-convention transcription with apparatus criticus.
 - **Translation** — bilingual English and Italian.
 - **Commentary** — bilingual scholarly discussion.
 - **Bibliography** — references to the `master_bibliography.xml`, corpora, and databases.
@@ -127,7 +127,7 @@ Ogni file EpiDoc in `inscriptions/` contiene una scheda epigrafica completa:
 - **Datazione** — intervallo cronologico con criteri di evidenza.
 - **Prosopografia** — schede strutturate per ogni individuo (`<listPerson>`) con genere, occupazione (soldato, civile, *fabricensis*, funzionario), grado militare, unità (*numerus*), relazioni familiari e componenti onomastiche (*praenomen*, *nomen*, *cognomen*, *gens*).
 - **Vocabolari controllati** — tassonomie per gradi militari, periodi cronologici, luoghi e occupazioni, con link esterni (EAGLE, AAT, Wikidata, Latin Lexicon, Trismegistos, DARE, VIAF, TGN).
-- **Edizione critica** — trascrizione secondo le convenzioni di Leida con apparato critico.
+- **Edizione critica** — trascrizione secondo le convenzioni Krummrey-Panciera con apparato critico.
 - **Traduzione** — bilingue inglese e italiano.
 - **Commento** — discussione filologica bilingue.
 - **Bibliografia** — riferimenti alla `master_bibliography.xml`, ai corpora e ai database.
