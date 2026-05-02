@@ -57,8 +57,8 @@
                             <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
                             <placeName type="plot">Perulli</placeName>
                             <date type="discovery">1873</date>
-                            <note type="plan_x">1680</note>
-                            <note type="plan_y">2610</note>
+                            <note type="plan_x">1710</note>
+                            <note type="plan_y">2670</note>
                         </provenance>
                         <provenance type="observed">
                             <orgName type="museum" ref="#museo-concordiese">
