@@ -17,8 +17,8 @@ authors:
     given-names: Leonardo
     affiliation: "Ca' Foscari University of Venice"
     # orcid: "https://orcid.org/0000-0000-0000-0000"
-repository-code: "https://github.com/USERNAME/REPOSITORY"
-url: "https://USERNAME.github.io/REPOSITORY/"
+repository-code: "https://github.com/EasternNecropolisofConcordia/EasternNecropolisofConcordia_EpiDoc_project"
+url: "https://easternnecropolisofconcordia.github.io/EasternNecropolisofConcordia_EpiDoc_project/"
 license:
   - CC-BY-4.0
   - MIT
