@@ -13,6 +13,12 @@
                 <idno type="filename">paulina.xml</idno>
                 <idno type="tm">125595</idno>
                 <idno type="edr">EDR097854</idno>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">
+                        This file is licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+                    </licence>
+                    <p>Images are not covered by this licence: they are reproduced from Ubi Erat Lupa and by kind permission of the Museo Nazionale Concordiese di Portogruaro.</p>
+                </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
