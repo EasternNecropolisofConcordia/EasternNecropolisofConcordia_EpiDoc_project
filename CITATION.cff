@@ -16,14 +16,12 @@ authors:
   - family-names: Battistella
     given-names: Leonardo
     affiliation: "Ca' Foscari University of Venice"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0009-0009-5691-5086"
 repository-code: "https://github.com/EasternNecropolisofConcordia/EasternNecropolisofConcordia_EpiDoc_project"
 url: "https://easternnecropolisofconcordia.github.io/EasternNecropolisofConcordia_EpiDoc_project/"
-license:
-  - CC-BY-4.0
-  - MIT
+license: CC-BY-4.0
 version: 1.0.0
-date-released: "2026-01-31"
+date-released: "2026-09-27"
 keywords:
   - Latin epigraphy
   - Greek epigraphy
