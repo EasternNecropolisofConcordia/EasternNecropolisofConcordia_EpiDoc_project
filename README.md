@@ -1,4 +1,5 @@
 # Eastern Necropolis of *Iulia Concordia* — EpiDoc Project
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22995898.svg)](https://doi.org/10.5281/zenodo.22995898)
 
 **[English](#english)** · **[Italiano](#italiano)**
 
