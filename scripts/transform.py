@@ -16,7 +16,7 @@ def transform_xml():
 
         header_html = """
         <header class="site-header">
-            <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
+            <h1 class="main_title">Record | Tituli Concordienses</h1>
             <h2 class="main_subtitle">From Autoptic Analysis to TEI-based Edition</h2>
             <nav class="navbar">
                 <ul class="menu">
