@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use these data, please cite them as below."
+type: dataset
+title: "A TEI/EpiDoc Corpus of the Eastern Necropolis of Iulia Concordia"
+abstract: >-
+  Born-digital TEI/EpiDoc critical editions of the inscriptions from the
+  Eastern Necropolis (Necropoli di Levante, or Sepolcreto dei Militi) of
+  Iulia Concordia (Concordia Sagittaria, Italy), datable between the second
+  or third and the early fifth century AD, now preserved in the Museo
+  Nazionale Concordiese di Portogruaro. Each file includes an interpretative
+  transcription, critical apparatus, translation, commentary, bibliography,
+  and detailed prosopographical data, with taxonomies linked to external
+  authority files. The repository also contains the XSLT stylesheets and
+  Python scripts that generate the project website.
+authors:
+  - family-names: Battistella
+    given-names: Leonardo
+    affiliation: "Ca' Foscari University of Venice"
+    orcid: "https://orcid.org/0009-0009-5691-5086"
+    email: info@tituliconcordienses.eu
+repository-code: "https://github.com/EasternNecropolisofConcordia/EasternNecropolisofConcordia_EpiDoc_project"
+url: "https://tituliconcordienses.eu/"
+license: CC-BY-4.0
+doi: 10.5281/zenodo.22995898
+version: 1.0.2
+date-released: "2026-10-01"
+keywords:
+  - Latin epigraphy
+  - Greek epigraphy
+  - TEI
+  - EpiDoc
+  - digital epigraphy
+  - Late Antiquity
+  - Late Roman army
+  - prosopography
+  - Iulia Concordia
+  - Concordia Sagittaria
