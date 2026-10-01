@@ -1,9 +1,9 @@
-# Eastern Necropolis of *Iulia Concordia* — EpiDoc Project
+# *Tituli Concordienses* — The Eastern Necropolis of *Iulia Concordia*
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22995898.svg)](https://doi.org/10.5281/zenodo.22995898)
 
 **[English](#english)** · **[Italiano](#italiano)**
 
-🔗 **Live site / Sito web**: [Eastern Necropolis of Concordia](https://easternnecropolisofconcordia.github.io/EasternNecropolisofConcordia_EpiDoc_project/index.html)
+🔗 **Live site / Sito web**: [tituliconcordienses.eu](https://tituliconcordienses.eu)
 
 ---
 
@@ -145,7 +145,7 @@ Ogni file EpiDoc in `inscriptions/` contiene una scheda epigrafica completa:
 ├── inscriptions/                   # File sorgente TEI/EpiDoc XML (uno per iscrizione)
 │   ├── vassio.xml
 │   ├── firmina.xml
-│   └── ...                         (56 file)
+│   └── ...                         (57 file)
 │
 ├── scripts/
 │   ├── transform.py                # XML → HTML schede epigrafiche (via XSLT)
@@ -209,10 +209,22 @@ Solo tre gruppi di pagine sono redatti manualmente: la home page (`index.html`),
 
 ---
 
+---
+
+## Licence / Licenza
+
+Data (TEI/EpiDoc files, bibliography, texts): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Code (scripts, XSLT, CSS): MIT.
+Images are not covered by these licences — see [`LICENSE-DATA.md`](LICENSE-DATA.md).
+
+## How to cite / Come citare
+
+Battistella, L., *A TEI/EpiDoc Corpus of the Eastern Necropolis of Iulia Concordia*, Zenodo, https://doi.org/10.5281/zenodo.22995898
+(see also [`CITATION.cff`](CITATION.cff) or the “Cite this repository” button on GitHub).
+
 ## Author / Autore
 
 **Leonardo Battistella**
-Matricola / Student ID: 870645
-Università Ca' Foscari Venezia — Digital and Public Humanities (MA)
+Originated as an MA thesis in Digital and Public Humanities, Università Ca' Foscari Venezia.
 
+📧 [info@tituliconcordienses.eu](mailto:info@tituliconcordienses.eu)
 📧 [easternnecropolisofconcordia@gmail.com]
