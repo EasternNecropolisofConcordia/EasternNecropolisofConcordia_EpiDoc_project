@@ -328,7 +328,7 @@ def run():
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>People - Iulia Concordia</title>
+    <title>People | Tituli Concordienses</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
