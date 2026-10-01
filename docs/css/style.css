@@ -950,7 +950,7 @@ footer p {
   margin-bottom: 15px;
 }
 
-.notes ol {
+.notes ol, .notes ul {
   padding-left: 30px;
   margin: 0;
 }
