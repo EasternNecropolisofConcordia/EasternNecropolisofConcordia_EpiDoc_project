@@ -155,7 +155,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map – Eastern Necropolis of Iulia Concordia</title>
+    <title>Map of the Eastern Necropolis | Tituli Concordienses</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
