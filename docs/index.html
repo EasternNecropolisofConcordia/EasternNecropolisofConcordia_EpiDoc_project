@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em>: from Autoptic Analysis to TEI-based Edition</title>
+    <title>Tituli Concordienses – The Eastern Necropolis of Iulia Concordia</title>
+    <meta name="description" content="Tituli Concordienses: an open, born-digital TEI/EpiDoc corpus of the inscriptions from the Eastern Necropolis of Iulia Concordia (Concordia Sagittaria, Italy).">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -13,8 +14,8 @@
 
     <!-- HEADER + NAVBAR -->
     <header class="site-header">
-      <h1 class="main_title">Digital Approaches to the Inscriptions of the Eastern Necropolis of <em>Iulia Concordia</em></h1>
-      <h2 class="main_subtitle">From Autoptic Analysis to TEI-based Edition</h2>
+      <h1 class="main_title"><strong><em>Tituli Concordienses</em></strong></h1>
+      <h2 class="main_subtitle"><strong><em>Sepulcretum orientale</em> – The Eastern Necropolis of <em>Iulia Concordia</em></strong></h2>
       <nav class="navbar">
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
@@ -22,12 +23,12 @@
           <li><a href="pages/people.html">People</a></li>
           <li><a href="pages/map.html">Map</a></li>
           <li class="dropdown">
-            <a href="#">Study & Context ▾</a>
+            <a href="#">Study &amp; Context ▾</a>
             <ul class="submenu">
               <li><a href="pages/context/history.html">History</a></li>
               <li><a href="pages/context/about_people.html">About People Buried</a></li>
-              <li><a href="pages/context/supports.html">Supports & Monuments</a></li>
-              <li><a href="pages/context/chronology.html">Dating & Chronology</a></li>
+              <li><a href="pages/context/supports.html">Supports &amp; Monuments</a></li>
+              <li><a href="pages/context/chronology.html">Dating &amp; Chronology</a></li>
             </ul>
           </li>
           <li><a href="pages/krummrey-panciera_epidoc.html">Krummrey-Panciera Conventions &amp; EpiDoc</a></li>
@@ -43,28 +44,26 @@
     </header>
 
     <main>
-      <h2><strong>Digital Approaches to the Inscriptions of the Eastern Necropolis of Iulia Concordia: from Autoptic Analysis to TEI-based Edition</strong></h2>
-      
       <h3>PROJECT OVERVIEW</h3>
       <p>
-        This website was developed as part of the MA Thesis in <em>Digital and Public Humanities</em> at <strong>Ca' Foscari University of Venice</strong> by <strong>Leonardo Battistella</strong>.
+        <em>Tituli Concordienses</em> is an open, ongoing corpus of born-digital critical editions of the inscriptions from the Eastern Necropolis (<em>Sepolcreto dei Militi</em>) of the ancient city of <em>Iulia Concordia</em> (modern-day Concordia Sagittaria, Italy), dating from the late second or third to the early fifth century AD.
       </p>
       <p>
-        Its purpose is to provide a digital visualization of the encoded inscriptions from the Eastern Necropolis of the ancient city of <em>Iulia Concordia</em> (modern-day Concordia Sagittaria).
+        The project originated as an MA thesis in <em>Digital and Public Humanities</em> at <strong>Ca' Foscari University of Venice</strong> by <strong>Leonardo Battistella</strong>, and is now being expanded and updated. The corpus currently includes 57 inscriptions.
       </p>
       <p>
-        The inscriptions are encoded in XML files according to <strong>TEI/EpiDoc standards</strong>, resulting in a born-digital critical edition enriched with structured metadata, interpretive transcriptions, and scholarly commentaries.
+        The inscriptions are encoded in XML files according to the <strong>TEI/EpiDoc</strong> standard, with structured metadata, interpretive transcriptions, critical apparatus, prosopographical data, and scholarly commentaries.
       </p>
       <p>
-        Each record is rendered as an HTML webpage, automatically generated from its corresponding XML source file using a <strong>Python</strong> script and the <strong>saxonche</strong> library to apply <strong>XSLT</strong> transformations.
-      </p>    
-      <p>
-        Each entry provides the archaeological and historical context of the inscription, an interpretive transcription featuring <strong>Krummrey-Panciera</strong> diacritical marks, an English/Italian translation, prosopographical data, and palaeographic or historical commentaries.
+        Each record is rendered as an HTML page, automatically generated from its XML source file through <strong>XSLT</strong> transformations applied with <strong>Python</strong> and the <strong>saxonche</strong> library.
       </p>
-      
+      <p>
+        Each entry provides the archaeological and historical context of the inscription, an interpretive transcription with <strong>Krummrey-Panciera</strong> diacritical marks, an English translation, prosopographical data, and palaeographic or historical commentaries.
+      </p>
+
       <hr>
-      <h3>ENTRIES  <a href="./pages/inscriptions.html"><img src="./images/icons/link_icon.png" style="width:12px;height:12px;"></a></h3>
-      <p>Epigraphic records are divided in 10 main sections, roughly in the order present in the <em>Supplementa Italica</em> serie nuova, as in the following table:</p>
+      <h3>ENTRIES <a href="./pages/inscriptions.html"><img src="./images/icons/link_icon.png" alt="Go to the inscriptions" style="width:12px;height:12px;"></a></h3>
+      <p>Epigraphic records are divided into ten main sections, broadly following the order of the <em>Supplementa Italica</em>, nuova serie, as shown in the following table:</p>
       <table class="index_records">
         <tr>
           <th>Section</th>
@@ -72,15 +71,15 @@
         </tr>
         <tr>
           <td class="record_section"><strong>Metadata Grid</strong></td>
-          <td>A grid containing the most relevant data, showing the current location and external resources, with links to other databases and projects.</td>
+          <td>A grid containing the most relevant data: the current location and external resources, with links to other databases and projects.</td>
         </tr>
         <tr>
           <td class="record_section"><strong>Inscription Details</strong></td>
-          <td>This section provides further details on the inscription, including findspot and place of origin (which are the same for all sarcophagi from the Eastern Necropolis), chronology with dating criteria, and autopsy information.</td>
+          <td>Further details on the inscription, including findspot and place of origin (which are the same for all sarcophagi from the Eastern Necropolis), chronology with dating criteria, and autopsy information.</td>
         </tr>
         <tr>
           <td class="record_section"><strong>Physical Description</strong></td>
-          <td>This section provides information on the monument type, material, dimensions, and a palaeographic commentary.</td>
+          <td>Monument type, material, dimensions, and a palaeographic commentary.</td>
         </tr>
         <tr>
           <td class="record_section"><strong>Image</strong></td>
@@ -88,19 +87,19 @@
         </tr>
         <tr>
           <td class="record_section"><strong>Transcription</strong></td>
-          <td>An interpretative transcription with Krummrey-Panciera diacritical marks is provided <span class="reference">[<a href="./pages/krummrey-panciera_epidoc.html">Krummrey-Panciera conventions</a>]</span>. The transcription is generated from XML files encoded according to TEI/EpiDoc standards <span class="reference">[<a href="https://epidoc.stoa.org/">EpiDoc</a>]</span>. EpiDoc elements are converted into their corresponding diacritical marks through an XSLT stylesheet <span class="reference">[<a href="./pages/references/corpora_databases.html#supplit"><em>SupplIt</em></a>]</span>.</td>
+          <td>An interpretive transcription with Krummrey-Panciera diacritical marks <span class="reference">[<a href="./pages/krummrey-panciera_epidoc.html">Krummrey-Panciera conventions</a>]</span>, generated from XML files encoded according to the TEI/EpiDoc standard <span class="reference">[<a href="https://epidoc.stoa.org/gl/latest/">EpiDoc Guidelines</a>]</span>. EpiDoc elements are converted into the corresponding diacritical marks by a custom XSLT stylesheet.</td>
         </tr>
         <tr>
           <td class="record_section"><strong><em>Apparatus Criticus</em></strong></td>
-          <td>The critical apparatus is based on the <strong><em>Supplementa Italica</em> serie nuova</strong> standard <span class="reference">[<a href="./pages/references/corpora_databases.html#supplit"><em>SupplIt</em></a>]</span>. Variant readings are provided line by line, ordered by the corresponding line number, in majuscule, similarly to a diplomatic edition.</td>
+          <td>The critical apparatus follows the standard of the <strong><em>Supplementa Italica</em>, nuova serie</strong> <span class="reference">[<a href="./pages/references/corpora_databases.html#supplit"><em>SupplIt</em></a>]</span>. Variant readings are listed by line number, in majuscule, similarly to a diplomatic edition.</td>
         </tr>
         <tr>
           <td class="record_section"><strong>Translation</strong></td>
-          <td>A translation into English as faithful as possible to the original text, with the inevitable limitations.</td>
+          <td>An English translation, as faithful as possible to the original text.</td>
         </tr>
         <tr>
           <td class="record_section"><strong>Commentary</strong></td>
-          <td>The commentary provides historical, linguistic, palaeographic, and prosopographic context. Relationships with other inscriptions are also discussed.</td>
+          <td>Historical, linguistic, palaeographic, and prosopographic context, including relationships with other inscriptions.</td>
         </tr>
         <tr>
           <td class="record_section"><strong>People</strong></td>
@@ -108,41 +107,58 @@
         </tr>
         <tr>
           <td class="record_section"><strong>Bibliography</strong></td>
-          <td>Previous editions of the inscription are listed in this section as short citations. Each short citation links to the Bibliography page, where the full reference is provided.</td>
+          <td>Previous editions of the inscription, listed as short citations. Each short citation links to the Bibliography page, where the full reference is provided.</td>
         </tr>
       </table>
-      
+
       <hr>
 
-      <h3>PROSOPOGRAPHIC RECORDS  <a href="./pages/people.html"><img src="./images/icons/link_icon.png" style="width:12px;height:12px;"></a></h3>
-      <p>The <strong><a href="./pages/people.html">People</a></strong> webpage hosts records of individuals mentioned in the inscriptions.</p>
-        <p>Information such as the onomastic series, origin of the name, gender, and occupation is provided. If the individual was a soldier, his rank and military contingent (<em>numerus</em>) are also reported, where attested.</p>
-        <p>The following formulae are used for the roles in the prosopographic records, according to what is written in the inscriptions:</p>
-        <ul class="index_ul">
-          <li><strong>deceased</strong>: the individual was buried in the sarcophagus.</li>
-          <li><strong>dedicator</strong>: the individual commissioned the sarcophagus for someone else.</li>
-          <li><strong>dedicator/deceased</strong>: the individual commissioned their own sarcophagus while still alive. There can be more than one dedicator, especially in the case of a double burial.</li>
-          <li><strong>dedicator &amp; deceased</strong>: the individual dedicated a sarcophagus for someone else, and was later buried in another one.</li>
-          <li><strong>dedicator (restoration)</strong>: the individual restored an already existing sarcophagus.</li>
-          <li><strong>mentioned</strong>: the individual is mentioned in the inscription but did not play any role in the burial.</li>
-        </ul>
-        <p>Particular attention was also given to the relationships between individuals. Each record clearly states any relationship, with a link to the corresponding prosopographic record.</p>
-    
+      <h3>PROSOPOGRAPHIC RECORDS <a href="./pages/people.html"><img src="./images/icons/link_icon.png" alt="Go to the prosopographic records" style="width:12px;height:12px;"></a></h3>
+      <p>The <strong><a href="./pages/people.html">People</a></strong> page hosts records of the individuals mentioned in the inscriptions.</p>
+      <p>Information such as the onomastic series, origin of the name, gender, and occupation is provided. If the individual was a soldier, his rank and military contingent (<em>numerus</em>) are also reported, where attested.</p>
+      <p>The following terms are used for the roles in the prosopographic records, according to what is written in the inscriptions:</p>
+      <ul class="index_ul">
+        <li><strong>deceased</strong>: the individual was buried in the sarcophagus.</li>
+        <li><strong>dedicator</strong>: the individual commissioned the sarcophagus for someone else.</li>
+        <li><strong>dedicator/deceased</strong>: the individual commissioned their own sarcophagus while still alive. There can be more than one dedicator, especially in the case of a double burial.</li>
+        <li><strong>dedicator &amp; deceased</strong>: the individual dedicated a sarcophagus to someone else, and was later buried in another one.</li>
+        <li><strong>dedicator (restoration)</strong>: the individual restored an already existing sarcophagus.</li>
+        <li><strong>mentioned</strong>: the individual is mentioned in the inscription but did not play any role in the burial.</li>
+      </ul>
+      <p>Particular attention was also given to the relationships between individuals. Each record states any relationship, with a link to the corresponding prosopographic record.</p>
+
+      <hr>
+
+      <h3>OPEN DATA, CITATION &amp; REUSE</h3>
+      <p>
+        The TEI/EpiDoc files, the bibliography, and the scripts that generate this website are openly available on <a href="https://github.com/EasternNecropolisofConcordia/EasternNecropolisofConcordia_EpiDoc_project">GitHub</a> and archived on <a href="https://doi.org/10.5281/zenodo.22995898">Zenodo</a>, where each release is preserved with its own persistent identifier.
+      </p>
+      <p>
+        Data are released under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence (CC BY 4.0)</a>, code under the MIT licence. Images are not covered by these licences.
+      </p>
+      <p>Please cite the corpus as:</p>
+      <p class="citation">
+        L. Battistella, <em>A TEI/EpiDoc Corpus of the Eastern Necropolis of Iulia Concordia</em>, Zenodo, <a href="https://doi.org/10.5281/zenodo.22995898">https://doi.org/10.5281/zenodo.22995898</a>.
+      </p>
+      <p>
+        For questions, corrections, or collaborations: <a href="mailto:info@tituliconcordienses.eu">info@tituliconcordienses.eu</a>.
+      </p>
+
     </main>
 
-        
+
   <!-- FOOTER -->
-        
+
     <footer>
       <p><strong><em>Tituli Concordienses</em></strong> – The Eastern Necropolis of <em>Iulia Concordia</em></p>
-      <p>&copy; 2026 - 2026 Leonardo Battistella · Contact: <a href="mailto:info@tituliconcordienses.eu">info@tituliconcordienses.eu</a></p>
+      <p>&copy; 2026 Leonardo Battistella · Contact: <a href="mailto:info@tituliconcordienses.eu">info@tituliconcordienses.eu</a></p>
       <p>Originated as an MA thesis in Digital and Public Humanities, Ca’ Foscari University of Venice. A non-commercial, open-access research project.</p>
-      <p>Data: CC BY 4.0 · Code: MIT · Cite as: <a href="https://doi.org/10.5281/zenodo.22995898">doi:10.5281/zenodo.22995898</a> · Source on GitHub</p>
+      <p>Data: CC BY 4.0 · Code: MIT · Cite as: <a href="https://doi.org/10.5281/zenodo.22995898">doi:10.5281/zenodo.22995898</a> · Source on <a href="https://github.com/EasternNecropolisofConcordia/EasternNecropolisofConcordia_EpiDoc_project">GitHub</a></p>
       <p>________________________________________________________________________________________________________________________________</p>
-      <p>Images are not covered by these licences. Images provided by the Ministry of Culture – Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only</p>
+      <p>Images are not covered by these licences. Images provided by the Ministry of Culture – Regional Directorate of National Museums of Veneto (Italy) are for non-commercial and non-profit use only.</p>
       <p>Any use of these images is strictly prohibited unless specifically authorized by the Regional Directorate of National Museums of Veneto.</p>
     </footer>
-        
+
 <script>
 (function() {
     var header = document.querySelector('.site-header');
