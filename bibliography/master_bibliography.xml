@@ -712,6 +712,28 @@
                   <date when="1982">1982</date>
                </bibl>
 
+               <!-- Krummrey, Panciera -->
+               <bibl xml:id="krummreypanciera1980">
+                  <author>
+                     <persName>
+                        <forename>Hans</forename>
+                        <surname>Krummrey</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Silvio</forename>
+                        <surname>Panciera</surname>
+                     </persName>
+                  </author>
+                  <date when="1980">1980</date>
+                  <title level="a">Criteri di edizione e segni diacritici</title>
+                  <title level="s"><term xml:lang="la">Tituli</term></title>
+                  <biblScope unit="volume">2</biblScope>
+                  <pubPlace>Roma</pubPlace>
+                  <biblScope unit="pp">205-215</biblScope>
+               </bibl>
+
                <!-- Lettich -->
                <bibl xml:id="lettich1983">
                   <author>
@@ -770,6 +792,22 @@
                   <pubPlace>Concordia Sagittaria</pubPlace>
                   <publisher>Tipografia Sagittaria</publisher>
                   <biblScope unit="pp">23-36</biblScope>
+               </bibl>
+
+               <!-- Panciera -->
+               <bibl xml:id="panciera1991">
+                  <author>
+                     <persName>
+                        <forename>Silvio</forename>
+                        <surname>Panciera</surname>
+                     </persName>
+                  </author>
+                  <date when="1991">1991</date>
+                  <title level="a">I segni diacritici: dieci anni dopo</title>
+                  <title level="s"><term xml:lang="la">Supplementa Italica</term></title>
+                  <biblScope unit="volume">n.s. 8</biblScope>
+                  <pubPlace>Roma</pubPlace>
+                  <biblScope unit="pp">10-21</biblScope>
                </bibl>
 
                <!-- Pellegrini -->
