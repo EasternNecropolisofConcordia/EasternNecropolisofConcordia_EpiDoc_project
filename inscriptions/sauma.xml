@@ -414,26 +414,26 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="1" from="#w1" to="w1">
+                    <app loc="1" from="#w1" to="#w1">
                         <lem>e<choice><corr>q</corr><sic>o</sic></choice>ui<choice><corr>t</corr><sic>i</sic></choice>um</lem>
                         <rdg source="#bertolini1875a">eouium</rdg>
                         <rdg source="#bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">equitum</rdg>
                         <rdg source="#lettich1983">equi<choice><corr>t</corr><sic>i</sic></choice>um</rdg>
                     </app>
-                    <app loc="1" from="#w2" to="w2">
+                    <app loc="1" from="#w2" to="#w2">
                         <lem>Bracchia<choice><corr>t</corr><sic>i</sic></choice>orum</lem>
                         <rdg source="#bertolini1875a #bertolini1876b">Bracchiatorum</rdg>
                         <rdg source="#cilv8760 #ils2804 #ilcv493 #edr097908"><expan><abbr>Bracchiatoru</abbr><ex>m</ex></expan></rdg>
                     </app>
-                    <app loc="2" from="#w3" to="w3">
+                    <app loc="2" from="#w3" to="#w3">
                         <lem>emerun<choice><corr>i</corr><sic>t</sic></choice></lem>
                         <rdg source="#bertolini1875a #bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">emerunt</rdg>
                     </app>
-                    <app loc="2-3" from="#w4" to="w5">
+                    <app loc="2-3" from="#w4" to="#w5">
                         <lem>Ala<lb n="3" break="no"/><choice><corr>g</corr><sic>c</sic></choice>ildus</lem>
                         <rdg source="#bertolini1875a #bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">Ala<lb n="3" break="no"/>gildus</rdg>
                     </app>
-                    <app loc="3" from="#w6" to="w6">
+                    <app loc="3" from="#w6" to="#w6">
                         <lem><choice><corr>q</corr><sic>o</sic></choice>uis</lem>
                         <rdg source="#bertolini1875a #bertolini1876b #cilv8760 #ils2804 #ilcv493 #edr097908">quis</rdg>
                     </app>
