@@ -371,9 +371,9 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/>Flavia Optata <expan><abbr>mili</abbr><ex>tis</ex></expan> de
-                    <lb n="2"/><expan><abbr>num</abbr><ex>ero</ex></expan> <expan><abbr>Regi</abbr><ex>orum</ex></expan>, <w xml:id="w1">em<choice><corr>i</corr><sic>e</sic></choice><supplied reason="omitted">t</supplied></w> <w xml:id="w2"><choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice></w> <w xml:id="w3">de</w>
+                    <lb n="2"/><expan><abbr>num</abbr><ex>ero</ex></expan> <expan><abbr>Regi</abbr><ex>orum</ex></expan>, <w xml:id="w1">emi<supplied reason="omitted">t</supplied></w> <w xml:id="w2"><choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice></w> <w xml:id="w3">de</w>
                     <lb n="3"/><w xml:id="w4"><expan><abbr>r</abbr><ex>e</ex></expan></w> <w xml:id="w5"><expan><abbr>v</abbr><ex>iri</ex></expan></w>. Si quis <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovit</abbr><ex>um</ex></expan></orig></choice>
-                    <lb n="4"/><expan><abbr>me</abbr><ex>um</ex></expan> <expan><abbr>arc</abbr><ex>am</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan> <expan><abbr>ap</abbr><ex>erire</ex></expan>, <w xml:id="w6"><choice><corr>i</corr><sic>e</sic></choice>nfe</w>
+                    <lb n="4"/><expan><abbr>me</abbr><ex>um</ex></expan> <expan><abbr>arc</abbr><ex>am</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan> <expan><abbr>ap</abbr><ex>erire</ex></expan>, <w xml:id="w6"><choice><reg>infe</reg><orig>enfe</orig></choice></w>
                     <lb n="5" break="no"/><expan><abbr>r</abbr><ex>et</ex></expan> <supplied reason="omitted" cert="medium">fisci</supplied> <expan><abbr>vi</abbr><ex>ribus</ex></expan> <expan><abbr>aur</abbr><ex>i</ex></expan> <expan><abbr>lib</abbr><ex>ram</ex></expan> una<supplied reason="omitted">m</supplied>. <g ref="#hedera"/>
                 </ab>
             </div>
@@ -381,7 +381,7 @@
                 <listApp>
                     <app loc="2-3" from="#w1" to="#w5">
                         <lem>
-                            em<choice><corr>i</corr><sic>e</sic></choice><supplied reason="omitted">t</supplied> <choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice> de
+                            emi<supplied reason="omitted">t</supplied> <choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice> de
                             <lb n="3"/><expan><abbr>r</abbr><ex>e</ex></expan> <expan><abbr>v</abbr><ex>iri</ex></expan>
                         </lem>
                         <rdg source="#cilv8764">
@@ -399,7 +399,7 @@
                     </app>
                     <app loc="4" from="#w6" to="#w6">
                         <lem>
-                            <choice><corr>i</corr><sic>e</sic></choice>nfe
+                            <choice><reg>infe</reg><orig>enfe</orig></choice>
                         </lem>
                         <rdg source="#cilv8764">
                             <supplied reason="omitted">i</supplied>nfe
