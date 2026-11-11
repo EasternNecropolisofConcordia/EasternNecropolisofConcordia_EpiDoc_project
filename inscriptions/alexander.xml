@@ -385,7 +385,7 @@
                 <ab>
                     <lb n="1"/><persName ref="#alexander">Alexandro</persName> filio <w xml:id="w1">piissimo</w>
                     <lb n="2"/>mirae verecundiae, <w xml:id="w2">singular<add>i</add><supplied reason="omitted">s</supplied></w>
-                    <lb n="3"/>innocentiae, castitat<supplied reason="omitted">a</supplied>e, integ
+                    <lb n="3"/>innocentiae, castitat<choice><corr>is</corr><sic>e</sic></choice>, integ
                     <lb n="4" break="no"/>ro notarum litteris erudito,
                     <lb n="5"/>qui vixit <expan><abbr><unclear>a</unclear>nn</abbr><ex>is</ex></expan> <num value="17">XVII</num>. <persName ref="#sabbatia">Sabbatia</persName>
                     <lb n="6"/>mater ad ultimum vitae
