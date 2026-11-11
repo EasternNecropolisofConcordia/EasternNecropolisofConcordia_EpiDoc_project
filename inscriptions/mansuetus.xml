@@ -364,7 +364,7 @@
                     <lb n="2" break="no"/><choice><reg>vit</reg><orig>bit</orig></choice> in numero leonum seniorum,
                     <lb n="3"/>de proprio suo arcam sibi posuit. Si
                     <lb n="4"/>quis eam aperire voluerit, dabit fisci
-                    <lb n="5"/>viribus <measure type="fine" unit="roman_pound" commodity="silver" quantity="10">argenti pondo d<supplied reason="omitted">e</supplied>cem</measure>; qu<choice><corr>a</corr><sic>e</sic></choice>m
+                    <lb n="5"/>viribus <measure type="fine" unit="roman_pound" commodity="silver" quantity="10">argenti pondo d<supplied reason="omitted">e</supplied>cem</measure>; <choice><reg>quam</reg><orig>quem</orig></choice>
                     <lb n="6"/>arcam <choice><reg>veteranis</reg><orig>vetranibus</orig></choice> <w xml:id="w2">c<choice><corr>o</corr><sic>u</sic></choice>mmendavi<supplied reason="omitted">t</supplied></w>.
                 </ab>
             </div>
