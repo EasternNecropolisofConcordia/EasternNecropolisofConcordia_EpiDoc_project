@@ -403,7 +403,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
                         <lb n="1"/>Arca <persName ref="#numerianus">Numeriani</persName> pr<choice><corr>i</corr><sic>e</sic></choice>ncipalis de ci
                         <lb n="2" break="no"/>vitate Murse<supplied reason="omitted">n</supplied>se, annorum <num value="30">XXX</num>, quod si
