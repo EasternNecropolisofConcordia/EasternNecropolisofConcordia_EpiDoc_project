@@ -384,24 +384,24 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="1" from="#w1" to="w1">
+                    <app loc="1" from="#w1" to="#w1">
                         <lem>Flavii</lem>
                         <rdg source="#cilv8740 #ilcv503 #edr097899"><supplied reason="lost">F</supplied>lavii</rdg>
                     </app>
-                    <app loc="1" from="#w2" to="w2">
+                    <app loc="1" from="#w2" to="#w2">
                         <lem>e<choice><corr>t</corr><sic>i</sic></choice></lem>
                         <rdg source="#ils2798 #ilcv503 #hoffmann1963 #forlatitamaro1978">e<supplied reason="lost">t</supplied></rdg>
                         <rdg source="#zovatto1946">et</rdg>
                     </app>
-                    <app loc="2" from="#w3" to="w3">
+                    <app loc="2" from="#w3" to="#w3">
                         <lem><unclear>F</unclear><unclear>l</unclear>avio</lem>
                         <rdg source="#ils2798"><supplied reason="lost">F</supplied>lavio</rdg>
                     </app>
-                    <app loc="2" from="#w4" to="w4">
+                    <app loc="2" from="#w4" to="#w4">
                         <lem>Bracchiatorum</lem>
                         <rdg source="#bertolini1875a #bertolini1875b #cilv8740 #ils2798 #ilcv503">Brac<supplied reason="omitted">c</supplied>hiatorum</rdg>
                     </app>
-                    <app loc="2-3" from="#w5" to="w6">
+                    <app loc="2-3" from="#w5" to="#w6">
                         <lem><supplied reason="lost">legae</supplied></lem>
                         <rdg source="#cilv8740 #ilcv503 #forlatitamaro1978"><supplied reason="lost">lege</supplied></rdg>
                     </app>
