@@ -377,7 +377,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#maflorentius"><expan><abbr>M</abbr><ex>arci</ex></expan> Ateri Florenti</persName> et <persName ref="#valeria">Iuli</persName>
                     <lb n="2" break="no"/><persName ref="#valeria">ae Valeriae</persName>, vivi feci
