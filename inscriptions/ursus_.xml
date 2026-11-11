@@ -378,7 +378,7 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#ursus"><w xml:id="w1">Coc<supplied reason="omitted" cert="low">c</supplied>eius</w> Ursus</persName> <choice><reg>com</reg><orig>con</orig></choice>
-                    <lb n="2" break="no"/>paravit arca<supplied reason="omitted">m</supplied> sibi et
+                    <lb n="2" break="no"/>paravit <choice><reg>arcam</reg><orig>arca</orig></choice> sibi et
                     <lb n="3"/><w xml:id="w2">incomparabili</w> <w xml:id="w3">co<supplied reason="omitted">n</supplied>iugi</w>
                     <lb n="4"/><w xml:id="w4"><gap reason="illegible" extent="unknown" unit="character"/></w>. Si qui<supplied reason="omitted">s</supplied>
                     <lb n="5"/><w xml:id="w5">eam</w> <w xml:id="w6">aperire</w>
@@ -405,7 +405,7 @@
                         <rdg source="#bertolini1876b #bertolini1877 #cilv8685 #bertolini1878"><gap reason="illegible" extent="unknown" unit="character"/> aperire</rdg>
                     </app>
                     <app loc="6-7" from="#w7" to="#w13">
-                        <lem>voluerit dabit disco ar<lb n="7" break="no"/>genti</lem>
+                        <lem>voluerit dabit fisco ar<lb n="7" break="no"/>genti</lem>
                         <rdg source="#bertolini1876b #cilv8685">voluerit <gap reason="illegible" extent="unknown" unit="character"/><lb n="7" break="no"/><gap reason="illegible" extent="unknown" unit="character"/></rdg>
                         <rdg source="#bertolini1877">voluerit <gap reason="illegible" extent="unknown" unit="character"/><lb n="7" break="no"/>genti pondo decem</rdg>
                         <rdg source="#bertolini1878">voluerit <gap reason="illegible" extent="unknown" unit="character"/>far<lb n="7" break="no"/>genti pondo decem</rdg>
