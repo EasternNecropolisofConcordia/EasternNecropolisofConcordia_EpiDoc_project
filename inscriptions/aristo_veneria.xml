@@ -383,10 +383,10 @@
                 <ab>
                     <lb n="1"/><persName ref="#aristo"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Aristo</persName> archiater fidelis e
                     <lb n="2" break="no"/>t <persName ref="#veneria"><expan><abbr>Aur</abbr><ex>elia</ex></expan> Veneria</persName> fidelis, coniuges
-                    <lb n="3"/>carissimi, arcam corporale
+                    <lb n="3"/>carissimi, arcam corporale<supplied reason="omitted">m</supplied>
                     <lb n="4"/>de proprio suo vivi sibi <w xml:id="w1" next="#w2"><choice><reg>com</reg><orig>coni</orig></choice></w>
                     <lb n="5" break="no"/><w xml:id="w2" prev="#w1">paraverunt</w>. Si quis post obi
-                    <lb n="6" break="no"/>tum <w xml:id="w3"><choice><reg>eorum</reg><orig>eorun</orig></choice></w> <w xml:id="w4"><choice><reg></reg><orig>ean</orig></choice></w> aperire vo
+                    <lb n="6" break="no"/>tum <w xml:id="w3"><choice><reg>eorum</reg><orig>eorun</orig></choice></w> <w xml:id="w4"><choice><reg>eam</reg><orig>ean</orig></choice></w> aperire vo
                     <lb n="7" break="no"/>luerit, dabit rei publicae
                     <lb n="8"/><measure type="fine" unit="solidus" quantity="80">solidos <num value="80">LXXX</num></measure> <expan><abbr>ite</abbr><ex>m</ex><abbr>q</abbr><ex>ue</ex></expan> <expan><abbr>s</abbr><ex>upra</ex></expan> nostris
                     <lb n="9"/>liceat
