@@ -384,7 +384,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#carpilio"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <w xml:id="w1">Carpilio</w></persName>, <expan><abbr>domesti</abbr><ex>cus</ex></expan>
                     <lb n="2"/>de <expan><abbr>num</abbr><ex>ero</ex></expan> <expan><abbr>Bat</abbr><ex>avorum</ex></expan> <expan><abbr>sen</abbr><ex>iorum</ex></expan>, qui vi
