@@ -386,7 +386,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName corresp="#saturninus">Sa<hi rend="ligature">tu</hi>rninus</persName> centen
                     <lb n="2" break="no"/><expan><abbr>ar</abbr><ex>ius</ex></expan> ex <expan><abbr><hi rend="small">o</hi>ff</abbr><ex>icio</ex></expan> <expan><abbr>p<supplied reason="lost">r</supplied>aef</abbr><ex>ecti</ex></expan> <choice><reg>Illyrici</reg><orig><expan><abbr>Illir</abbr><ex>ici</ex></expan></orig></choice>
