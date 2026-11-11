@@ -405,7 +405,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
-                        <lb n="1"/>Arca <persName ref="#numerianus">Numeriani</persName> pr<choice><corr>i</corr><sic>e</sic></choice>ncipalis de ci
+                        <lb n="1"/>Arca <persName ref="#numerianus">Numeriani</persName> <choice><reg>principalis</reg><orig>prencipalis</orig></choice> de ci
                         <lb n="2" break="no"/>vitate Murse<supplied reason="omitted">n</supplied>se, annorum <num value="30">XXX</num>, quod si
                         <lb n="3"/>aliquis eam <choice><reg>arcam</reg><orig>arca</orig></choice> aperire voluerit, da
                         <lb n="4" break="no"/><w xml:id="w1"><choice><reg>bit</reg><orig>vet</orig></choice></w> fisco <measure type="fine" unit="uncia" commodity="gold" quantity="6">auri uncias sex.</measure>
