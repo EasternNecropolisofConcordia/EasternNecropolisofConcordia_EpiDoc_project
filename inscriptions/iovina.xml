@@ -385,7 +385,7 @@
                     <lb n="1"/><persName ref="#honoratus">Turranius Hono<unclear>r</unclear>atus</persName>
                     <lb n="2"/><expan><abbr>Aur</abbr><ex>eliae</ex></expan> Iovinae, dulcissimae <choice><reg>compari</reg><orig>conpari</orig></choice>
                     <lb n="3"/>quae vixit mecum annos <num value="10">X</num>, menses <num value="2">II</num>.
-                    <lb n="4"/>Si quis <choice><reg>eam</reg><orig>ean</orig></choice> <supplied reason="omitted">arcam</supplied> voluerit aper<choice><corr>i</corr><sic>e</sic></choice>re
+                    <lb n="4"/>Si quis <choice><reg>eam</reg><orig>ean</orig></choice> <supplied reason="omitted">arcam</supplied> voluerit <choice><reg>aperire</reg><orig>aperere</orig></choice>
                     <lb n="5"/>dabit fisco <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">argenti pondo
                     <lb n="6"/>quinque</measure>
                 </ab>
