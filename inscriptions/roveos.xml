@@ -350,7 +350,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#roveos"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Roveos</persName>, centenarius de <supplied reason="omitted">numero</supplied> equitum <choice><reg>comitum</reg><orig>comitis</orig></choice>
                     <lb n="2"/><expan><abbr>seni</abbr><ex>orum</ex></expan> <expan><abbr>sagit</abbr><ex>tariorum</ex></expan>, de <w xml:id="w1"><choice><reg>proprio</reg><orig>propio</orig></choice></w> suo <choice><corr>arcam</corr><orig>arca</orig></choice> sibi posuit.
