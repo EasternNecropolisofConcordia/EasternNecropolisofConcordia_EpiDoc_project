@@ -384,7 +384,7 @@
                     <lb n="2"/>de numero armigerorum, vivo
                     <lb n="3"/><supplied reason="omitted">de</supplied> suo arcam sibi <w xml:id="w2"><choice><reg>comparavit</reg><orig>coparabit</orig></choice></w>. Si <w xml:id="w3">qu<supplied reason="omitted">i</supplied>s</w>
                     <lb n="4"/><w xml:id="w4">il<supplied reason="omitted">l</supplied>am</w> vol<supplied reason="omitted">u</supplied>er<choice><corr>i</corr><sic>e</sic></choice>t aperire, dabit
-                    <lb n="5"/>in fisco <measure type="fine" unit="uncia" commodity="gold" quantity="6">auri <expan><abbr>un</abbr><ex>cias</ex></expan> sex</measure> et <expan><abbr>ips</abbr><ex>am</ex></expan> <choice><sic>arcam</sic><orig>arca</orig></choice>
+                    <lb n="5"/>in fisco <measure type="fine" unit="uncia" commodity="gold" quantity="6">auri <expan><abbr>un</abbr><ex>cias</ex></expan> sex</measure> et <expan><abbr>ips</abbr><ex>am</ex></expan> <choice><reg>arcam</reg><orig>arca</orig></choice>
                     <lb n="6"/>in <choice><reg>ecclesiam</reg><orig>eclesie</orig></choice> <expan><abbr>com</abbr><ex>men</ex><abbr>dav</abbr><ex>it</ex></expan>.
                 </ab>
             </div>
@@ -404,7 +404,7 @@
                         <rdg source="#bertolini1874b">qiis</rdg>
                         <rdg source="#cilv8747 #hoffmann1963 #lettich1983 #edr097745">quis</rdg>
                     </app>
-                    <app loc="4" from="#w3" to="w3">
+                    <app loc="4" from="#w4" to="w4">
                         <lem>il<supplied reason="omitted">l</supplied>am</lem>
                         <rdg source="#bertolini1874a #bertolini1874b">illam</rdg>
                     </app>
