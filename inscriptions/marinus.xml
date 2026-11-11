@@ -409,7 +409,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
                         <lb n="1"/><persName ref="#exsuperantius"><w xml:id="w1"><expan><abbr>F<surplus>i</surplus></abbr><ex>lavius</ex></expan></w> <w xml:id="w2">Ex<unclear>s</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">uperanti</supplied>us</w></persName> et <persName corresp="#constantia">Constanti<unclear>a</unclear></persName>
                         <lb n="2"/>filio <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dulcissim</supplied>o <persName corresp="#marinus">Marino</persName>, qui vixit
