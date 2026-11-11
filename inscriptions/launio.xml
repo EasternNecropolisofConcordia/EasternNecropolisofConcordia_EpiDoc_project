@@ -360,7 +360,7 @@
                 <ab>
                     <lb n="1"/><persName ref="#launio"><w xml:id="w1">Flavio</w> <w xml:id="w2">Launi<hi rend="small">o</hi><add place="above">ni<surplus>s</surplus></add></w></persName>, <w xml:id="w3">senat<unclear>o</unclear><unclear>r</unclear><unclear>i</unclear><surplus><unclear>i</unclear></surplus></w>
                     <lb n="2"/>de numero <w xml:id="w4"><choice><reg>Batavorum</reg><orig>Bataorum</orig></choice></w> <w xml:id="w5" next="#w6">seni</w>
-                    <lb n="3" break="no"/><w xml:id="w6" prev="#w5">orum</w>, qui <choice><reg>vixit</reg><orig>vissit</orig></choice> <w xml:id="w7">an<supplied reason="omitted">n</supplied><choice><corr>i</corr><sic>u</sic></choice>s</w> <num value="40"><w xml:id="w8">XL</w></num>.
+                    <lb n="3" break="no"/><w xml:id="w6" prev="#w5">orum</w>, qui <choice><reg>vixit</reg><orig>vissit</orig></choice> <w xml:id="w7"><choice><reg>annos</reg><orig>an<supplied reason="omitted">n</supplied>nus</orig></choice></w> <num value="40"><w xml:id="w8">XL</w></num>.
                     <lb n="4"/>Si quis voluerit <w xml:id="w9"><choice><reg>hoc</reg><orig>oc</orig></choice></w> <w xml:id="w10"><choice><reg>exter</reg><orig>est<supplied reason="lost" cert="low">er</supplied></orig></choice></w> <w xml:id="w11" next="#w12"><supplied reason="lost">vo</supplied></w>
                     <lb n="5" break="no"/><w xml:id="w12" prev="#w11">luerit</w> arcam <w xml:id="w13">aperire</w> <w xml:id="w14"><expan><abbr>p</abbr><ex>ondo</ex></expan></w> <num value="2"><w xml:id="w15">II</w></num>
                     <lb n="6"/>auri fisco <w xml:id="w16"><choice><reg>reddet</reg><orig>reddebit</orig></choice></w>.
