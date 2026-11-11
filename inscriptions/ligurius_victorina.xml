@@ -408,7 +408,7 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="3" from="#w1" to="#w1">
+                    <app loc="2" from="#w1" to="#w1">
                         <lem>
                             s<choice><corr>i</corr><sic>l</sic></choice>bi
                         </lem>
