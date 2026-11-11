@@ -399,7 +399,7 @@
                     </app>
                     <app loc="4" from="#w6" to="#w6">
                         <lem>
-                            <choice><reg>i</reg><orig>e</orig></choice>nfe
+                            <choice><corr>i</corr><sic>e</sic></choice>nfe
                         </lem>
                         <rdg source="#cilv8764">
                             <supplied reason="omitted">i</supplied>nfe
