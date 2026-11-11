@@ -373,7 +373,7 @@
                     <lb n="3" break="no"/>at<supplied reason="omitted">t</supplied>iacorum iuniorium,
                     <lb n="4"/>arcam <choice><reg>sibi</reg><orig>sivi</orig></choice> de proprio co
                     <lb n="5" break="no"/><choice><reg>mparavit</reg><orig>nparavit</orig></choice> <w xml:id="w1"><choice><reg>sibi</reg><orig>sive</orig></choice></w> <w xml:id="w2">et</w> <choice><reg>filio</reg><orig>filius</orig></choice> <choice><reg>suo</reg><orig>suus</orig></choice>
-                    <lb n="6"/><persName ref="#variosus"><choice><reg>Varioso</reg><orig>Variosus</orig></choice></persName>. Si q<supplied reason="omitted">u</supplied>is <w xml:id="w3">ea<supplied reason="omitted">m</supplied></w> <expan><abbr>p</abbr><ex>ost</ex></expan> <expan><abbr>o</abbr><ex>bitum</ex></expan> <expan><abbr>e</abbr><ex>orum</ex></expan> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8744 #bertolini1878"><expan><abbr>vol</abbr><ex>uerit</ex></expan></supplied>
+                    <lb n="6"/><persName ref="#variosus"><choice><reg>Varioso</reg><orig>Variosus</orig></choice></persName>. Si q<supplied reason="omitted">u</supplied>is <w xml:id="w3"><choice><reg>eam</reg><orig>ea</orig></choice></w> <expan><abbr>p</abbr><ex>ost</ex></expan> <expan><abbr>o</abbr><ex>bitum</ex></expan> <expan><abbr>e</abbr><ex>orum</ex></expan> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8744 #bertolini1878"><expan><abbr>vol</abbr><ex>uerit</ex></expan></supplied>
                     <lb n="7"/><expan><abbr>ap</abbr><ex>erire</ex></expan>, <choice><reg>dabit</reg><orig>d<unclear>a</unclear>vi<supplied reason="omitted">t</supplied></orig></choice> fisco <measure type="fine" unit="roman_pound" commodity="silver" quantity="5"><expan><abbr>ar</abbr><ex>genti</ex></expan> <expan><abbr>p</abbr><ex>ondo</ex></expan> <num value="5">V</num></measure>.
                 </ab>
             </div>
@@ -384,8 +384,8 @@
                         <rdg source="#bertolini1875a #bertolini1875b">siv et</rdg>
                         <rdg source="#cilv8744">sive ei</rdg>
                     </app>
-                    <app loc="6" from="#w3">
-                        <lem>ea<supplied reason="omitted">m</supplied></lem>
+                    <app loc="6" from="#w3" to="#w3">
+                        <lem><choice><reg>eam</reg><orig>ea</orig></choice></lem>
                         <rdg source="#cilv8744">ia</rdg>
                     </app>
                 </listApp>
