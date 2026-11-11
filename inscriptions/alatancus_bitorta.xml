@@ -378,7 +378,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#alatancus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Alatancus</persName> <expan><abbr>domest</abbr><ex>icus</ex></expan> <unclear>c</unclear>um coniuge s<hi rend="ligature">ua</hi>
                     <lb n="2"/><w xml:id="w1">Bitorta</w> <w xml:id="w2">arc<supplied reason="omitted">a</supplied>m</w> de <choice><reg>proprio</reg><orig>propio</orig></choice> suo sibi <w xml:id="w3" next="#w4"><choice><reg>com</reg><orig>con<surplus>i</surplus></orig></choice></w>
