@@ -372,7 +372,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
                         <lb n="1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a ">Aur</supplied>elia Dionis<supplied reason="lost" evidence="parallel" cert="high">ia</supplied> <w xml:id="w1"><supplied reason="lost" cert="medium">quae vixi</supplied></w><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">t</supplied>
                         <lb n="2"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">anni</supplied>s <num value="9">VIIII</num> <choice><abbr>m</abbr><expan>m<ex>ensibus</ex></expan></choice> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <w xml:id="w2"><supplied reason="lost" evidence="parallel" cert="medium">Si</supplied></w> <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8735a">qui</supplied>
