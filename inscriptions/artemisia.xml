@@ -155,11 +155,11 @@
         <profileDesc>
         <particDesc>
            <listPerson>
-               <person xml:id="artemisia">
+               <person xml:id="artimisia">
                    <persName>
-                       <name type="full">Claudia Artemisia</name>
+                       <name type="full">Claudia Artimisia</name>
                        <name type="nomen">Claudia</name>
-                       <name type="cognomen" nymRef="latin">Artemisia</name>
+                       <name type="cognomen" nymRef="latin">Artimisia</name>
                        <name type="gens">Claudia</name>
                    </persName>
                    <gender>f</gender>
@@ -362,8 +362,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                 <ab>
-                    <lb n="1"/>Claudia Art<choice><corr>e</corr><sic>i</sic></choice>mi
-                    <lb n="2" break="no"/>sia, viva posu
+                    <lb n="1"/><persName ref="#artimisia">Claudia <choice><reg>Artemi</reg><orig>Artimi</orig></choice></persName>
+                    <lb n="2" break="no"/><persName ref="#artimisia">sia</persName>, viva posu
                     <lb n="3" break="no"/>it sibi.
                 </ab>
             </div>
