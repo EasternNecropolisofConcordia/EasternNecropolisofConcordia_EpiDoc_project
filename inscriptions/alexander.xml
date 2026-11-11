@@ -381,7 +381,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#alexander">Alexandro</persName> filio <w xml:id="w1">piissimo</w>
                     <lb n="2"/>mirae verecundiae, <w xml:id="w2">singular<add>i</add><supplied reason="omitted">s</supplied></w>
