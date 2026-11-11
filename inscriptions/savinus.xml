@@ -370,7 +370,7 @@
                     <lb n="4"/><choice><reg>quinquaginta</reg><orig>cinquaginta</orig></choice> arcam sibi
                     <lb n="5"/><w xml:id="w4"><choice><reg>comparavit</reg><orig>conparavit</orig></choice></w> de proprio suo. Si
                     <lb n="6"/>quis eam aperire volu
-                    <lb n="7" break="no"/>erit <choice><reg>extraneus</reg><orig>ester</orig></choice>, inferat fi<unclear>s</unclear>
+                    <lb n="7" break="no"/>erit <choice><reg>exter</reg><orig>ester</orig></choice>, inferat fi<unclear>s</unclear>
                     <lb n="8" break="no"/>co <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri pondo <choice><corr>duo</corr><orig>dua</orig></choice></measure>.
                 </ab>
             </div>
