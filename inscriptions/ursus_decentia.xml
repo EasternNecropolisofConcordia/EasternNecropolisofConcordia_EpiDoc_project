@@ -375,7 +375,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#ursus">Cocceius Ursus</persName> <choice><reg>comparavit</reg><orig>conparavit</orig></choice>
                     <lb n="2"/><choice><reg>arcam</reg><orig>arca</orig></choice> uxori s<unclear>u</unclear><unclear>a</unclear>e <choice><reg>incomparabili</reg><orig>inconparavili</orig></choice>
