@@ -390,7 +390,7 @@
                         <rdg source="#hoffmann1963">Bataorum <supplied reason="lost">s</supplied>eni<lb n="3" break="no"/>orum</rdg>
                     </app>
                     <app loc="3" from="#w7" to="w8">
-                        <lem>an<supplied reason="omitted">n</supplied><choice><corr>i</corr><sic>u</sic></choice>s XL</lem>
+                        <lem><choice><reg>annos</reg><orig>an<supplied reason="omitted">n</supplied>nus</orig></choice> XL</lem>
                         <rdg source="#bertolini1876a">a<gap reason="lost" unit="character" extent="unknown"/></rdg>
                         <rdg source="#bertolini1877 #cilv8752 #ils2802 #ilcv460">annos XL</rdg>
                     </app>
