@@ -365,9 +365,8 @@
                     <lb n="3" break="no"/>s de numero <choice><reg>Batavoru</reg><orig>Bataoru</orig></choice>
                     <lb n="4" break="no"/>m seniorum, qui vixit
                     <lb n="5"/>annos XXX. <seg xml:id="seg1">Si <surplus>si</surplus> quis</seg> eam vo
-                    <lb n="6"/>quis eam volu
-                    <lb n="7" break="no"/>erit aperire, det in fisco au
-                    <lb n="8" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2">ri libras d<choice><corr>u</corr><sic>o</sic></choice>as</measure>.
+                    <lb n="7" break="no"/>luerit aperire, det in fisco au
+                    <lb n="8" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2">ri libras <choice><reg>duas</reg><orig>doas</orig></choice></measure>.
                 </ab>
             </div>
             <div type="apparatus">
