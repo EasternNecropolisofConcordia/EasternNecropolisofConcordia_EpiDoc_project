@@ -150,8 +150,8 @@
            <listPerson>
                <person xml:id="gaudentius">
                    <persName>
-                       <name type="full">Aurelius Gaudentius</name>
-                       <name type="nomen" nymRef="latin">Aurelius</name>
+                       <name type="full">Aurilius Gaudentius</name>
+                       <name type="nomen" nymRef="latin">Aurilius</name>
                        <name type="cognomen" nymRef="latin">Gaudentius</name>
                        <name type="gens">Aurelia</name>
                    </persName>
@@ -366,9 +366,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                 <ab>
-                    <lb n="1"/><persName ref="#gaudentius">Aur<choice><corr>e</corr><sic>i</sic></choice>lius Gau</persName>
+                    <lb n="1"/><persName ref="#gaudentius"><choice><reg>Aurelius</reg><orig>Aurelius</orig></choice> Gau</persName>
                     <lb n="2" break="no"/><persName ref="#gaudentius">dentius</persName> et <persName corresp="#martina">Mar</persName>
-                    <lb n="3" break="no"/><persName corresp="#martina">tina</persName> vivos <choice><reg>sibi</reg><orig>se</orig></choice> <w xml:id="w1">com</w>
+                    <lb n="3" break="no"/><persName ref="#martina">tina</persName> vivos <choice><reg>sibi</reg><orig>se</orig></choice> <w xml:id="w1">com</w>
                     <lb n="4" break="no"/><choice><reg>paraverunt</reg><orig>paravet</orig></choice> Si q<unclear>u</unclear><unclear>i</unclear>s e
                     <lb n="5" break="no"/>is iniuriam det <w xml:id="w2"><supplied reason="omitted" cert="low">fisco</supplied></w>
                     <lb n="6"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="1">aur<choice><corr>i</corr><sic><unclear>o</unclear></sic></choice> <choice><reg>libram</reg><orig>libra</orig></choice> <choice><reg>unam</reg><orig>una</orig></choice></measure>
