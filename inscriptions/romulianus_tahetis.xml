@@ -386,7 +386,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><expan><abbr>Fl</abbr><ex>avius</ex></expan> Romulianus <expan><abbr>p</abbr><ex>rae</ex><abbr>p</abbr><ex>ositus</ex></expan> <expan><abbr>fab</abbr><ex>ricae</ex></expan> <expan><abbr>sagit<unclear>t</unclear></abbr><ex>ariae</ex></expan>
                     <lb n="2"/><unclear>f</unclear>ecit de suo <w xml:id="w1">pro<supplied reason="omitted">p</supplied>rio</w> memo<unclear>r</unclear><supplied reason="lost">ia</supplied>
@@ -429,7 +429,7 @@
                     </app>
                     <app loc="8" from="w4" to="w4">
                         <lem>
-                            pecun<supplied reason="lost">i</supplied>ae
+                            m<supplied reason="omitted">i</supplied>ll<surplus>i</surplus>e
                         </lem>
                         <rdg source="#bertolini1874a #bertolini1874b #cilv8697 #ilcv538a">
                             mille
