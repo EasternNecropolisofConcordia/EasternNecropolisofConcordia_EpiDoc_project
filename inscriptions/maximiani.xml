@@ -396,7 +396,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName corresp="#maximianusiunior"><expan><abbr>Fl</abbr><ex>avio</ex></expan> Maximi<supplied reason="lost" evidence="previouseditor" corresp="#bertolini1874a #bertolini1874b">a</supplied>no</persName> fideli,
+                    <lb n="1"/><persName corresp="#maximianusiunior"><expan><abbr>Fl</abbr><ex>avio</ex></expan> Maximi<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">a</supplied>no</persName> fideli,
                     <lb n="2"/>filio ca<unclear>r</unclear>issimo,
                     <lb n="3"/><persName corresp="#maximianusmaior"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Maximianus</persName> fidelis
                     <lb n="4"/>pater, arcam de pro
