@@ -382,12 +382,12 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName corresp="#mercurius"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Mercurius</persName> <choice><reg>biarchus</reg><orig>biarcus</orig></choice>
                     <lb n="2"/>fabricensis sibi et con
                     <lb n="3" break="no"/>iugi suae <persName corresp="#ursa"><expan><abbr>Fl</abbr><ex>aviae</ex></expan> <choice><reg>Ursae</reg><orig>Urse</orig></choice></persName> vivi
-                    <lb n="4"/>de <w xml:id="w1"><choice><reg>rem</reg><orig>re</orig></choice></w> <w xml:id="w2">sua</w> <w xml:id="w3"><choice><reg>comparaverunt</reg><orig>conparaveru<hi rend="ligature">nt</hi></orig></choice></w>. 
+                    <lb n="4"/>de <w xml:id="w1"><choice><reg>re</reg><orig>rem</orig></choice></w> <w xml:id="w2">sua</w> <w xml:id="w3"><choice><reg>comparaverunt</reg><orig>conparaveru<hi rend="ligature">nt</hi></orig></choice></w>. 
                     <lb n="5"/>Si quis post <choice><reg>obitum</reg><orig>hobitum</orig></choice> eorum
                     <lb n="6"/>voluerit aperire <w xml:id="w4">dabit</w> <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri <expan><abbr>p</abbr><ex>ondo</ex></expan> duo</measure>.
                 </ab>
