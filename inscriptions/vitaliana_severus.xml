@@ -385,8 +385,8 @@
                 <ab>
                     <lb n="1"/><seg xml:id="s1">arc<hi rend="ligature">am V</hi>et<supplied reason="omitted" cert="low">t</supplied>ia<supplied reason="omitted" cert="low">e</supplied> Vitali<surplus cert="low">ni</surplus>an<surplus cert="low">i</surplus><supplied reason="omitted" cert="low">ae</supplied> et <expan><abbr>Fl</abbr><ex>avi</ex></expan> Severi, <supplied reason="omitted" cert="low">qui</supplied></seg>
                     <lb n="2"/><w xml:id="w1">emerunt</w> <w xml:id="w2">de</w> <w xml:id="w3">proprio</w> <w xml:id="w4">suo</w>; <w xml:id="w5"><choice><reg>compara</reg><orig>conpara</orig></choice></w>
-                    <lb n="3" break="no"/>verunt sibi ea<supplied reason="omitted">m</supplied> memorialibus meis, <supplied reason="omitted" cert="medium">si</supplied>
-                    <lb n="4"/><w xml:id="w6"><expan><abbr>q</abbr><ex>u</ex><abbr>i</abbr><ex>s</ex></expan></w> <w xml:id="w7"><choice><corr>e</corr><sic>i</sic></choice>a<supplied reason="omitted">m</supplied></w> <w xml:id="w8">aperire</w> <w xml:id="w9">volue<supplied reason="omitted">r</supplied>i<supplied reason="omitted">t</supplied></w>, <w xml:id="w10"><choice><reg>dabit</reg><orig>davit</orig></choice></w> <w xml:id="w11"><expan><abbr>fisc</abbr><ex>i</ex></expan></w> <w xml:id="w12">viri</w>
+                    <lb n="3" break="no"/>verunt sibi <choice><reg>eam</reg><orig></orig></choice> memorialibus meis, <supplied reason="omitted" cert="medium">si</supplied>
+                    <lb n="4"/><w xml:id="w6"><expan><abbr>q</abbr><ex>u</ex><abbr>i</abbr><ex>s</ex></expan></w> <w xml:id="w7"><choice><reg>eam</reg><orig>ia</orig></choice></w> <w xml:id="w8">aperire</w> <w xml:id="w9">volue<supplied reason="omitted">r</supplied>i<supplied reason="omitted">t</supplied></w>, <w xml:id="w10"><choice><reg>dabit</reg><orig>davit</orig></choice></w> <w xml:id="w11"><expan><abbr>fisc</abbr><ex>i</ex></expan></w> <w xml:id="w12">viri</w>
                     <lb n="5" break="no"/>bus <measure type="fine" unit="roman_pound" commodity="silver" quantity="10"><w xml:id="w25">argenti</w> <w xml:id="w26"><expan><abbr>p</abbr><ex>ondo</ex></expan></w> <w xml:id="w27">dece<surplus>ce</surplus>m</w></measure>.
                     <lb n="6"/><g ref="#chi-rho"/>
                 </ab>
@@ -409,15 +409,15 @@
                     </app>
                     <app loc="2" from="#w1" to="#w5">
                         <lem>
-                            emerunt de proprio suo; <choice><reg>compara</reg><orig>conpara</orig></choice><lb n="3" break="no"/>verunt sibi ea<supplied reason="omitted">m</supplied> memorialibus memorialibus, <supplied reason="omitted" cert="medium">si</supplied>
+                            emerunt de proprio suo; <choice><reg>compara</reg><orig>conpara</orig></choice><lb n="3" break="no"/>verunt sibi ea<supplied reason="omitted">m</supplied> memorialibus meis, <supplied reason="omitted" cert="medium">si</supplied>
                         </lem>
                         <rdg source="#bertolini1874a #bertolini1874b">
                             <gap reason="lost" extent="unknown" unit="character"/> proprio suo conpa<lb n="3" break="no"/>raverunt sibi <gap reason="lost" extent="unknown" unit="character"/>
                         </rdg>
                     </app>
-                    <app loc="4" from="w6" to="#w12">
+                    <app loc="4" from="#w6" to="#w12">
                         <lem>
-                            <choice><abbr>qi</abbr><expan>q<ex>u</ex>i<ex>s</ex></expan></choice> <choice><corr>eam</corr><sic>ia</sic></choice> aperire <choice><abbr>voluei</abbr><expan>volue<ex>r</ex>i<ex>t</ex></expan></choice>, <choice><reg>dabit</reg><orig>davit</orig></choice> <choice><abbr>fisc</abbr><expan>fisc<ex>i</ex></expan></choice> viri<lb n="5" break="no"/>bus
+                            <expan><abbr>q</abbr><ex>u</ex><abbr>i</abbr><ex>s</ex></expan> <choice><reg>eam</reg><orig>ia</orig></choice aperire <choice><abbr>voluei</abbr><expan>volue<ex>r</ex>i<ex>t</ex></expan></choice>, <choice><reg>dabit</reg><orig>davit</orig></choice> <choice><abbr>fisc</abbr><expan>fisc<ex>i</ex></expan></choice> viri<lb n="5" break="no"/>bus
                         </lem>
                         <rdg source="#bertolini1874a #bertolini1874b">
                             qui aperire volu<gap reason="lost" extent="unknown" unit="character"/> viri<lb n="5" break="no"/>bus
