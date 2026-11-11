@@ -381,7 +381,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><seg xml:id="s1">arc<hi rend="ligature">am V</hi>et<supplied reason="omitted" cert="low">t</supplied>ia<supplied reason="omitted" cert="low">e</supplied> Vitali<surplus cert="low">ni</surplus>an<surplus cert="low">i</surplus><supplied reason="omitted" cert="low">ae</supplied> et <expan><abbr>Fl</abbr><ex>avi</ex></expan> Severi, <supplied reason="omitted" cert="low">qui</supplied></seg>
                     <lb n="2"/><w xml:id="w1">emerunt</w> <w xml:id="w2">de</w> <w xml:id="w3">proprio</w> <w xml:id="w4">suo</w>; <w xml:id="w5"><choice><reg>compara</reg><orig>conpara</orig></choice></w>
