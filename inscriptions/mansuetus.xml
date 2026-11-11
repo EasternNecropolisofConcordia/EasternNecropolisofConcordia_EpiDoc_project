@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>The Inscription of Mansuetus</title>
+                <title>The Inscription of Masuetus</title>
                 <author>Leonardo Battistella</author>
             </titleStmt>
             <publicationStmt>
@@ -142,9 +142,9 @@
            <listPerson>
                <person xml:id="mansuetus">
                    <persName>
-                       <name type="full">Flavius Mansuetus</name>
+                       <name type="full">Flavius Masuetus</name>
                        <name type="nomen">Flavius</name>
-                       <name type="cognomen" nymRef="latin">Mansuetus</name>
+                       <name type="cognomen" nymRef="latin">Masuetus</name>
                        <name type="gens">Flavia</name>
                    </persName>
                    <gender>m</gender>
@@ -360,7 +360,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#mansuetus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Ma<supplied reason="omitted">n</supplied>suetus</persName> <w xml:id="w1"><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></w>, qui milita
+                    <lb n="1"/><persName ref="#manuetus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Mansuetus</reg><orig>Masuetus</orig></choice></persName> <w xml:id="w1"><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></w>, qui milita
                     <lb n="2" break="no"/><choice><reg>vit</reg><orig>bit</orig></choice> in numero leonum seniorum,
                     <lb n="3"/>de proprio suo arcam sibi posuit. Si
                     <lb n="4"/>quis eam aperire voluerit, dabit fisci
