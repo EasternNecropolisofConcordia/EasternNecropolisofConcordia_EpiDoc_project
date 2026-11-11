@@ -427,7 +427,7 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="4b" from="#w1">
+                    <app loc="3b" from="#w1" to="#w1">
                         <lem>
                             is
                         </lem>
