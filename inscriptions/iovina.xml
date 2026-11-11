@@ -380,7 +380,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#honoratus">Turranius Hono<unclear>r</unclear>atus</persName>
                     <lb n="2"/><expan><abbr>Aur</abbr><ex>eliae</ex></expan> Iovinae, dulcissimae <choice><reg>compari</reg><orig>conpari</orig></choice>
