@@ -394,7 +394,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
                         <lb n="1"/><persName corresp="#oppius_marinus"><w xml:id="w1">Oppius</w> Marinus</persName> emit sibi de <w xml:id="w2"><choice><reg>proprio</reg><orig>bropid</orig></choice></w>
                         <lb n="2"/><w xml:id="w3">labore</w> arcam et ita <w xml:id="w4"><choice><reg>scribi</reg><orig>scribsit</orig></choice></w> ius
