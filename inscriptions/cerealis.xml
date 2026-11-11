@@ -402,7 +402,7 @@
                         <lb n="2"/>ex origine <persName ref="#cerealis">Enni Cerealis</persName> avi sui arcam
                         <lb n="3"/>suo nomine renovavit, quam post ex
                         <lb n="4" break="no"/>cessum suum si quis <choice><reg>irrumperit</reg><orig>inruperit</orig></choice> inferet fisci
-                        <lb n="5"/>rationibus <measure type="fine" unit="sestertius" quantity="200"><choice><reg>sestertium</reg><orig>HS</orig></choice> <num value="200">CC</num> <choice><abbr>N</abbr><expan>N<ex>ummum</ex></expan></choice></measure>. Fili sane veniam habebunt.
+                        <lb n="5"/>rationibus <measure type="fine" unit="sestertius" quantity="200"><choice><reg>sestertium</reg><orig>HS</orig></choice> <num value="200">CC</num> <choice><abbr>N</abbr><expan>N<ex>ummum</ex></expan></choice></measure>. Fili<supplied reason="omitted">i</supplied> sane veniam habebunt.
                     </ab>
                 </div>
             </div>
