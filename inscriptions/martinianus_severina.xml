@@ -382,7 +382,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="Latin">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <div type="textpart" subtype="lid" n="a">
                     <ab>
                         <lb n="1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8754 #ilcv520"><expan><abbr>M</abbr><ex>anibus</ex></expan> <expan><abbr>D</abbr><ex>is</ex></expan></supplied>
