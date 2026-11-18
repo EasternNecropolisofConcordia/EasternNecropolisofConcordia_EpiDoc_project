@@ -10,6 +10,7 @@
          </publicationStmt>
          <sourceDesc>
             <listBibl type="bibliography">
+               
                <!-- Ameling -->
                <bibl xml:id="ameling2019">
                   <author>
@@ -23,6 +24,20 @@
                   <title level="j">Zeitschrift für Papyrologie und Epigraphik</title>
                   <biblScope unit="volume">210</biblScope>
                   <biblScope unit="pp">185–193</biblScope>
+               </bibl>
+
+               <!-- Barbero-->
+               <bibl xml:id="barbero2006">
+                  <author>
+                     <persName>
+                        <forename>Alessandro</forename>
+                        <surname>Barbero</surname>
+                     </persName>
+                  </author>
+                  <date when="2006">2006</date>
+                  <title level="m">Barbari. Immigrati, profughi, deportati nell'impero romano</title>
+                  <pubPlace>Bari</pubPlace>
+                  <publisher>Laterza</publisher>
                </bibl>
 
                <!-- Bertolini -->
