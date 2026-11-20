@@ -118,6 +118,20 @@
                         <handDesc>
                             <handNote>
                                 <height min="4" max="6" unit="cm">4-6</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Dextrograde direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, left-aligned layout.</p>
+
+                                    <p><g type="pl">A</g> at times with broken crossbar;</p>
+                                    
+                                    <p><g type="pl">F</g> with crossbar shorter than the upper arm.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, impaginazione a sinistra.</p>
+
+                                    <p><g type="pl">A</g> talvolta con traversa spezzata;</p>
+                                    
+                                    <p><g type="pl">F</g> con cravatta più corta rispetto al braccio superiore.</p>
+                                </note>
                             </handNote>
                         </handDesc>
                         <decoDesc>
