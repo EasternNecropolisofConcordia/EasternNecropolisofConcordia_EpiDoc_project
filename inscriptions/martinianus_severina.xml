@@ -163,9 +163,9 @@
                    <note type="occupation">fabricensis</note>
                    <note type="rank">biarchus</note>
                    <note type="role">dedicator/deceased</note>
-                   <note type="relationship" corresp="#severina">husband</note>
+                   <note type="relationship" corresp="#aur_severina">husband</note>
                </person>
-               <person xml:id="severina">
+               <person xml:id="aur_severina">
                  <persName>
                      <name type="full">Aurelia Severina</name>
                      <name type="nomen">Aurelia</name>
@@ -392,8 +392,8 @@
                     <ab>
                         <lb n="1"/><persName ref="#martinianus"><w xml:id="w1">Flavius</w> Martinia</persName>
                         <lb n="2" break="no"/><persName ref="#martinianus">nus</persName> <choice><reg>biarchus</reg><orig>biarcus</orig></choice> fabri
-                        <lb n="3" break="no"/>ce<supplied reason="omitted">n</supplied>sis sibi et <persName ref="#severina"><expan><abbr>Aur</abbr><ex>eliae</ex></expan></persName>
-                        <lb n="4"/><persName corresp="#severina"><choice><reg>Severianae</reg><orig>Severiane</orig></choice></persName> coniugi
+                        <lb n="3" break="no"/>ce<supplied reason="omitted">n</supplied>sis sibi et <persName ref="#aur_severina"><expan><abbr>Aur</abbr><ex>eliae</ex></expan></persName>
+                        <lb n="4"/><persName ref="#aur_severina"><choice><reg>Severianae</reg><orig>Severiane</orig></choice></persName> coniugi
                         <lb n="5"/>vivus fecit.
                         <lb n="6"/><expan><abbr>Pos</abbr><ex>t</ex></expan> <expan><abbr>obitu</abbr><ex>m</ex></expan>, si <expan><abbr>q</abbr><ex>uis</ex></expan> <expan><abbr>vol</abbr><ex>uerit</ex></expan> <supplied reason="omitted">aperire</supplied>, <expan><abbr>dab</abbr><ex>it</ex></expan> <expan><abbr>fisc</abbr><ex>o</ex></expan> <measure type="fine" unit="uncia" commodity="gold" quantity="3"><expan><abbr>a</abbr><ex>uri</ex></expan> <expan><abbr>un</abbr><ex>cias</ex></expan> <num value="3">III</num></measure>.
                     </ab>
@@ -413,16 +413,16 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>To the <term xml:lang="la">Manes</term> gods.</p>
-                <p><persName corresp="#martinianus" xml:lang="la">Flavius Martinianus</persName>, <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>, made (this tomb) for himself and for his wife <persName corresp="#severina" xml:lang="la">Aurelia Severiana</persName> while still alive.</p>
+                <p><persName corresp="#martinianus" xml:lang="la">Flavius Martinianus</persName>, <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>, made (this tomb) for himself and for his wife <persName ref="#aur_severina" xml:lang="la">Aurelia Severiana</persName> while still alive.</p>
                 <p>After (their) death, if anyone wishes to open (it), he shall give to the <term xml:lang="la">fiscus</term> 3 (roman) ounces of gold</p>
             </div>
             <div type="translation" xml:lang="it">
                 <p>Agli dèi Mani.</p>
-                <p>Flavio Martiniano, <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>, fece (questa arca) per sé stesso e sua moglie <persName corresp="#severina" xml:lang="la">Aurelia Severiana</persName> da vivo.</p>
+                <p>Flavio Martiniano, <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>, fece (questa arca) per sé stesso e sua moglie <persName ref="#aur_severina" xml:lang="la">Aurelia Severiana</persName> da vivo.</p>
                 <p>Dopo la (loro) morte, se qualcuno desidererà aprire (l'arca), verserà al <term xml:lang="la">fiscus</term> 3 once (romane) d'oro</p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p><persName ref="#martinianus" xml:lang="la">Flavius Martinianus</persName> commissioned during his lifetime a sarcophagus for himself and for his wife <persName ref="#severina" xml:lang="la">Aurelia Severina</persName>. Anyone who violated the tomb would have to pay the treasury three ounces of gold.</p>
+                <p><persName ref="#martinianus" xml:lang="la">Flavius Martinianus</persName> commissioned during his lifetime a sarcophagus for himself and for his wife <persName ref="#aur_severina" xml:lang="la">Aurelia Severina</persName>. Anyone who violated the tomb would have to pay the treasury three ounces of gold.</p>
                 
                 <p><persName xml:lang="la">Martinianus</persName> was a <term xml:lang="la">fabricensis</term>, a worker in the arrow factory of Concordia, and held the role of <term xml:lang="la">biarchus</term>, a subordinate military rank (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
                 
