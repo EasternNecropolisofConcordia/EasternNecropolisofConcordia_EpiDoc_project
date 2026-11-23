@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Inscription of Domnula</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">domnula.xml</idno>
+                <idno type="DOI">10.5281/zenodo.22995898</idno>
+                <idno type="tm">125493</idno>
+                <idno type="edr">EDR097751</idno>
+                <idno type="uel">29300</idno>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">
+                        This file is licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+                    </licence>
+                    <p>Images are not covered by this licence: they are reproduced from Ubi Erat Lupa and by kind permission of the Museo Nazionale Concordiese di Portogruaro.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                        </repository>
+                        <idno type="inventory">324</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                                <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                                <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                                <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            </origPlace>
+                            <origDate ana="#late-roman-empire" notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century A.D.
+                            </origDate>
+                            <origDate ana="#late-roman-empire" notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                            <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                            <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                            <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            <placeName type="plot">Persico</placeName>
+                            <date type="discovery">1875</date>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                            <note type="observed" subtype="autopsied" xml:lang="en">Now <seg type="location" xml:lang="en">set into the wall of the right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva <seg type="location" xml:lang="it">murata nella navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Frontal panel of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Fronte di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone.
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">50</height>
+                                        <width unit="cm">104</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">
+                                        Front panel of a sarcophagus, chipped along the upper and lower edges.
+                                    </p>
+                                    <p xml:lang="it">
+                                        Fronte di sarcofago, scheggiata lungo i margini superiore e inferiore.
+                                    </p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">38</height>
+                                        <width unit="cm">92.5</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4" max="5" unit="cm">4-5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Dextrograde direction, horizontal alignment, slightly vertical module, irregular <term xml:lang="la">ductus</term>, triangular interpunction, left-aligned layout.</p>
+                                    
+                                    <p><g type="pl">M</g> composed of four oblique strokes.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo lievemente verticale, <term xml:lang="la">ductus</term> irregolare, interpunzione triangoliforme, impaginazione a sinistra.</p>
+                                    
+                                    <p><g type="pl">M</g> composta da quattro aste oblique.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>The inscribed field is framed by a molded border.</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Lo specchio epigrafico è delimitato da una cornice modanata.</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="romulianus">
+                   <persName>
+                       <name type="full">Flavius Romulianus</name>
+                       <name type="nomen">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Romulianus</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">fabricensis</note>
+                   <note type="rank">praepositus</note>
+                   <note type="role">dedicator</note>
+                   <note type="relationship" corresp="#domnula">husband</note>
+               </person>
+               <person xml:id="domnula">
+                   <persName>
+                       <name type="full">Aurelia Domnula</name>
+                       <name type="nomen">Aurelia</name>
+                       <name type="cognomen" nymRef="latin">Domnula</name>
+                   </persName>
+                   <gender>f</gender>
+                   <note type="occupation">civilian</note>
+                   <note type="role">deceased</note>
+                   <note type="relationship" corresp="#romulianus">wife</note>
+               </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+     <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="decorations">
+                    <category xml:id="chi-rho">
+                        <catDesc>
+                            <term xml:lang="en">Chi-Rho (Christogram)</term>
+                            <term xml:lang="it">Crismon / Chi-Rho</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/591">
+                                <idno>591</idno>
+                            </ref>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300310602">
+                                <idno>300310602</idno>
+                            </ref>
+                            <idno type="unicode">U+2627</idno>
+                        </catDesc>
+                    </category>
+                    <category xml:id="hedera">
+                        <catDesc>
+                            <term xml:lang="la">Hedera Distinguens</term>
+                            <term xml:lang="en">Ivy leaf</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/155">
+                                <idno>155</idno>
+                            </ref>
+                            <idno type="unicode">U+2766</idno>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="campidoctor">
+                        <catDesc>
+                            <term xml:lang="la">campidoctor</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2008107">
+                                <idno>2008107</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="centenarius">
+                        <catDesc>
+                            <term xml:lang="la">centenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2009414">
+                                <idno>2009414</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="ducenarius">
+                        <catDesc>
+                            <term xml:lang="la">ducenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2018365">
+                                <idno>2018365</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="magister-primus">
+                        <catDesc>
+                            <term xml:lang="la">magister (primus)</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009655">
+                                <idno>1009655</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="miles">
+                        <catDesc>
+                            <term xml:lang="la">miles</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009936">
+                                <idno>1009936</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector">
+                        <catDesc>
+                            <term xml:lang="la">protector domesticus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2048603">
+                                <idno>2048603</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector-domesticus">
+                        <catDesc>
+                            <term xml:lang="la">(protector) domesticus</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q1237339">
+                                <idno>Q1237339</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="semissalis">
+                        <catDesc>
+                            <term xml:lang="la">semissalis</term>
+                            <gloss xml:lang="en">Late Roman military rank; received 1 capitum (fodder ration, indicating mounted service) and 1½ annonae (one and a half food rations). Function unclear; attested in African and Sardinian ducal officia</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 111</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="senator-military">
+                        <catDesc>
+                            <term xml:lang="la">senator</term>
+                            <gloss xml:lang="en">Late Roman military rank, superior to ducenarius; attested in scholae, fabricenses, and infantry units. Originally granted to ducenarii of agentes in rebus from 390 CE; the transfer of the senatorial title to military context remains unclear.</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 119-120</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="tribunus">
+                        <catDesc>
+                            <term xml:lang="la">tribunus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1016734">
+                                <idno>1016734</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="periods">
+                    <category xml:id="late-roman-empire">
+                        <catDesc>
+                            <term xml:lang="en">Late Roman Empire</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/30">
+                                <idno>30</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="principate">
+                        <catDesc>
+                            <term xml:lang="en">Principate (High Roman Empire)</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/22">
+                                <idno>22</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="places">
+                    <category xml:id="concordia">
+                        <catDesc>
+                            <term xml:lang="la">Iulia Concordia</term>
+                            <ref type="tm" target="https://www.trismegistos.org/place/12269">
+                                <idno>12269</idno>
+                            </ref>
+                            <ref type="dare" target="https://imperium.ahlfeldt.se/places/10645.html">
+                                <idno>10645</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="portogruaro">
+                        <catDesc>
+                            <term xml:lang="en">Portogruaro</term>
+                            <ref type="tgn" target="https://www.getty.edu/vow/TGNFullDisplay?find=Portogruaro&amp;place=&amp;nation=&amp;prev_page=1&amp;english=Y&amp;subjectid=7003045">
+                                <idno>7003045</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="museo-concordiese">
+                        <catDesc>
+                            <term xml:lang="en">National Concordiese Museum of Portogruaro</term>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/124364831">
+                                <idno>124364831</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="occupation">
+                    <category xml:id="soldier">
+                        <catDesc>
+                            <term xml:lang="en">Soldier</term>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300185678">
+                                <idno>300185678</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="fabricensis">
+                        <catDesc>
+                            <term xml:lang="la">Fabricensis</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2021497">
+                                <idno>2021497</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/domnula.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The iscription of Romulianus and Tahetis. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la">
+                <ab>
+                    <lb n="1"/><persName ref="#domnula"><expan>Aur<ex>eliae</ex></expan> Domnulae</persName><pc type="editorial">,</pc> uxori
+                    <lb n="2"/>dulcissimae<pc type="editorial">.</pc> <persName ref="#romulianus"><expan>Fl<ex>avius</ex></expan> Romu</persName>
+                    <lb n="3" break="no"/><persName ref="#romulianus">lianus</persName><pc type="editorial">,</pc> ex <expan>p<ex>rae</ex>p<ex>ositus</ex></expan><pc type="editorial">,</pc> de <w xml:id="w1" next="#w2">pro</w>
+                    <lb n="4" break="no"/><w xml:id="w2" prev="#w1">p<choice><corr>r</corr><sic>p</sic></choice>io</w> suo arcam
+                    <lb n="5"/><w xml:id="w3"><choice><reg>comparavit</reg><orig>conparavit</orig></choice></w><pc type="editorial">.</pc>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="3-4" from="#w1" to="#w2">
+                        <lem>
+                            pro<lb n="4" break="no"/>p<choice><corr>r</corr><sic>p</sic></choice>io
+                        </lem>
+                        <rdg source="#bertolini1875a #cilv8662">
+                            pro<lb n="4" break="no"/>prio
+                        </rdg>
+                    </app>
+                    <app loc="5" from="#w3" to="#w3">
+                        <lem>
+                            <choice><reg>comparavit</reg><orig>conparavit</orig></choice>
+                        </lem>
+                        <rdg source="#bertolini1875a #cilv8662">
+                            comparavit
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>
+                    To <persName ref="#domnula" xml:lang="la">Aurelia Domnula</persName>, sweetest wife.
+                </p>
+                <p>
+                    <persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, ex <term xml:lang="la">praepositus</term>, commissioned the sarcophagus at his own expenses.
+                </p>
+
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>
+                    Ad <persName ref="#domnula">Aurelia Domnula</persName>, moglie dolcissima.
+                </p>
+                <p>
+                    <persName ref="#romulianus">Flavio Romuliano</persName>, ex <term xml:lang="la">praepositus</term>, commissionò l'arca a proprie spese.
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p><persName ref="#romulianus" xml:lang="la">Flavius Romulianus</persName>, formerly <term xml:lang="la">praepositus</term> of the arrow factory at Concordia, commissions the sarcophagus for his wife <persName ref="#domnula" xml:lang="la">Domnula</persName>.</p>
+                
+                <p><persName ref="#romulianus" xml:lang="la">Romulianus</persName>, as <term xml:lang="la">praepositus</term>, was head of the arms factory. The same individual is mentioned in another inscription found in the Perulli estate where, again as dedicant, he commissions the burial for <ref target="./romulianus_tahetis.xml"><persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName></ref> and for himself. It is not the only attestation within the necropolis of a man who becomes a widower and remarries: one may think of the two inscriptions of <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
+                
+                <p>Bertolini believes that <persName ref="#domnula" xml:lang="la">Domnula</persName> was the first wife of <persName ref="#romulianus" xml:lang="la">Romulianus</persName>, who would have remarried <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName> and would have decided to be buried together with his second wife (<ref target="../references/bibliography.xml#bertolini1875a">Bertolini 1875a, 117</ref>; <ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 41</ref>). Indeed, <persName ref="#romulianus" xml:lang="la">Romulianus</persName> made explicit only in the burial of <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName> his wish to be buried with his wife, a sign, according to Bertolini, that the <term xml:lang="la">fabricensis</term> would not have felt the need to be buried with <persName ref="#domnula" xml:lang="la">Domnula</persName>, because he was still fairly young. Bertolini writes "<quote xml:lang="it">Questa Aur. Domnula sarebbe quindi, a nostro credere, la sua prima moglie, mancata a' vivi, quand'egli ancora nel vigor dell'età sentiva meno il bisogno di preparare a sé la tomba con essa</quote>" (<ref target="../references/bibliography.xml#bertolini1875a">Bertolini 1875a, 117</ref>).</p>
+
+                <p>By contrast, according to Lettich, <persName ref="#domnula" xml:lang="la">Domnula</persName> would be the second wife of the <term xml:lang="la">fabricensis</term>, since the inscription reads "<quote xml:lang="la"><expan>ex <abbr>p</abbr><ex>rae</ex><abbr>p</abbr><ex>ositus</ex></expan></quote>", whereas in that of <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName> <persName ref="#romulianus" xml:lang="la">Romulianus</persName> is described as <term xml:lang="la">praepositus</term> without <term xml:lang="la">ex</term>, thus showing the retirement of <persName ref="#romulianus" xml:lang="la">Romulianus</persName> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>), a circumstance that hardly fits the "<quote xml:lang="it">vigor dell'età</quote>" described by Bertolini.</p>
+                
+                <p>The onomastics seem to suggest different social backgrounds for the two women: <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName> displays a single-element onomastic formula, consisting only of a <term xml:lang="la">cognomen</term> of clearly foreign origin. By contrast, the <term xml:lang="la">duo nomina</term> <persName ref="#domnula" xml:lang="la">Aurelia Domnula</persName>, of clearly Latin origin, indicate not only a probable local origin of the woman, but also her status as a free woman and perhaps <term xml:lang="la">ingenua</term>, that is, a woman free from birth.</p>
+
+                <p>One could therefore conclude that the comminatory formula in the inscription of <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName> not only indicates that this is the actual burial of <persName ref="#romulianus" xml:lang="la">Romulianus</persName>, who had an interest in protecting his own sarcophagus, but also represents a protection for <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName>, of foreign or servile origin and without a <term xml:lang="la">gens</term> of reference who could defend her. By contrast, <persName ref="#domnula" xml:lang="la">Domnula</persName> was probably integrated into the social fabric of Concordia and would therefore have had relatives able to watch over her burial. There is evidence within the necropolis of individuals who look after the burials of their relatives, as in the case of <persName xml:lang="la">Ennia Asteria</persName>, <ref target="./cerealis.xml">who restored her grandfather's sarcophagus</ref>. However, in this latter burial, the inscription recording the restoration also presents the typical comminatory formula, a sign that locals too feared tomb violators. Therefore, the absence of the pecuniary penalty in the burial of <persName ref="#domnula" xml:lang="la">Domnula</persName> nonetheless remains an unknown that further complicates the understanding not only of the relationship between her, <persName ref="#romulianus" xml:lang="la">Romulianus</persName> and <persName ref="./romulianus_tahetis.xml#tahetis" xml:lang="la">Tahetis</persName>, but also, more generally, of the widespread practice of the comminatory formula.</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p><persName ref="#romulianus">Flavio Romuliano</persName>, già <term xml:lang="la">praepositus</term> della fabbrica di frecce a Concordia, commissiona l'arca per la moglie <persName ref="#domnula">Domnula</persName>.</p>
+                
+                <p><persName ref="#romulianus">Romuliano</persName>, in quanto <term xml:lang="la">praepositus</term>, era a capo della fabbrica d'armi. Lo stesso individuo è citato in un'altra epigrafe trovata nel fondo Perulli dove, sempre come dedicante, commissiona la sepoltura per <ref target="./romulianus_tahetis.xml"><persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName></ref> e per sé stesso. Non è l'unica testimonianza all'interno della necropoli di un uomo che diventa vedovo e si risposa: si pensi alle due iscrizioni di <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius Ursus</persName></ref>.</p>
+                
+                <p>Bertolini ritiene che <persName ref="#domnula">Domnula</persName> fosse la prima moglie di <persName ref="#romulianus">Romuliano</persName>, il quale si sarebbe risposato con <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName> e avrebbe deciso di seppellirsi assieme alla seconda moglie (<ref target="../references/bibliography.xml#bertolini1875a">Bertolini 1875a, 117</ref>; <ref target="../references/bibliography.xml#bertolini1877">Bertolini 1877, 41</ref>). Infatti <persName ref="#romulianus">Romuliano</persName> rese esplicito solo nella sepoltura di <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName> la volontà di farsi seppellire con la moglie, segno secondo Bertolini che il <term xml:lang="la">fabricensis</term> non avrebbe sentito la necessità di farsi seppellire con <persName ref="#domnula">Domnula</persName>, perché ancora abbastanza giovane. Scrive Bertolini "<quote xml:lang="it">Questa Aur. Domnula sarebbe quindi, a nostro credere, la sua prima moglie, mancata a' vivi, quand'egli ancora nel vigor dell'età sentiva meno il bisogno di preparare a sé la tomba con essa</quote>" (<ref target="../references/bibliography.xml#bertolini1875a">Bertolini 1875a, 117</ref>).</p>
+
+                <p>Al contrario, secondo Lettich, <persName ref="#domnula">Domnula</persName> sarebbe la seconda moglie del <term xml:lang="la">fabricensis</term>, dal momento che nell'epigrafe è scritto "<quote xml:lang="la"><expan>ex <abbr>p</abbr><ex>rae</ex><abbr>p</abbr><ex>ositus</ex></expan></quote>", mentre in quella di <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName> <persName ref="#romulianus">Romuliano</persName> è qualificato come <term xml:lang="la">praepositus</term> senza <term xml:lang="la">ex</term>, mostrando dunque il pensionamento di <persName ref="#romulianus">Romuliano</persName> (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 46-47</ref>), circostanza che poco si addice al "vigor dell'età" descritto da Bertolini.</p>
+                
+                <p>L'onomastica sembra suggerire diverse estrazioni sociali delle due donne: <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName> mostra una formula onomastica monomembre, composta solo dal <term xml:lang="la">cognomen</term> di chiara origine straniera. Al contrario, i <term xml:lang="la">duo nomina</term> <persName ref="#domnula" xml:lang="la">Aurelia Domnula</persName>, di chiara origine latina, indicano non solo una probabile autoctonia della donna, ma anche il suo status di donna libera e forse <term xml:lang="la">ingenua</term>, ovvero donna libera dalla nascita.</p>
+
+                <p>Si potrebbe concludere pertanto che la formula comminatoria nell'iscrizione di <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName> non solo indichi che si tratti della sepoltura effettiva di <persName ref="#romulianus">Romuliano</persName>, che aveva interesse nel proteggere la propria arca, ma rappresenti anche una protezione per <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName>, di origini straniere o schiavili e senza una <term xml:lang="la">gens</term> di riferimento che potesse difenderla. Al contrario, <persName ref="#domnula">Domnula</persName> era probabilmente integrata nel tessuto sociale di Concordia e avrebbe avuto perciò dei familiari in grado di sorvegliare la sua sepoltura. Ci sono testimonianze all'interno della necropoli di individui che custodiscono le sepolture dei propri parenti, come nel caso di <persName>Ennia Asteria</persName>, <ref target="./cerealis.xml">che restaurò il sarcofago del nonno</ref>. Tuttavia, in quest'ultima sepoltura, l'epigrafe che sancisce il restauro presenta anche la tipica formula comminatoria, segno del fatto che anche i locali temessero i violatori di tombe. Pertanto, l'assenza della pena pecuniaria nella sepoltura di <persName ref="#domnula">Domnula</persName> rimane comunque un'incognita che complica ulteriormente la comprensione non solo del rapporto tra lei, <persName ref="#romulianus">Romuliano</persName> e <persName ref="./romulianus_tahetis.xml#tahetis">Tahetis</persName>, ma anche più in generale della pratica diffusa della formula comminatoria.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl> 
+                    <bibl xml:id="bertolini1875a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875a"/>
+                        <title>Bertolini 1875a</title>
+                        <citedRange unit="page">116</citedRange>
+                        <note type="number">n. 59</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1877">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1877"/>
+                        <ptr target="../references/bibliography.xml#bertolini1877"/>
+                        <title>Bertolini 1877</title>
+                        <citedRange unit="page">41</citedRange>
+                        <note type="number">n. 60</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8662">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8662</title>
+                    </bibl>
+                    <bibl xml:id="bertolini1892">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1892"/>
+                        <ptr target="../references/bibliography.xml#bertolini1892"/>
+                        <title>Bertolini 1982</title>
+                        <citedRange unit="page">5</citedRange>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv538b">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 538 B</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">47</citedRange>
+                        <note type="number">n. 2</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097751">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097751">EDR097751</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-21">21-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
