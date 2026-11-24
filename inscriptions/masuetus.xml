@@ -46,11 +46,11 @@
                                 <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
                                 <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
                             </origPlace>
-                            <origDate ana="#late-roman-empire" notBefore-custom="0394" notAfter-custom="0402" evidence="internal-date nomenclature" xml:lang="en">
-                                Late Fourth Century A.D. / Early Fifth Century A.D.
+                            <origDate ana="#late-roman-empire" notBefore-custom="0375" notAfter-custom="0400" evidence="lettering" xml:lang="en">
+                                Last Quarter of the Fourth Century AD
                             </origDate>
-                            <origDate ana="#late-roman-empire" notBefore-custom="0394" notAfter-custom="0402" evidence="internal-date nomenclature" xml:lang="it">
-                                Fine IV Secolo d.C. / Inizio V Secolo d.C.
+                            <origDate ana="#late-roman-empire" notBefore-custom="0375" notAfter-custom="0400" evidence="lettering" xml:lang="it">
+                                Ultimo Quarto del IV secolo d.C.
                             </origDate>
                         </origin>
                         <provenance type="found">
@@ -360,7 +360,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#manuetus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Mansuetus</reg><orig>Masuetus</orig></choice></persName> <w xml:id="w1"><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></w>, qui milita
+                    <lb n="1"/><persName ref="#masuetus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Mansuetus</reg><orig>Masuetus</orig></choice></persName> <w xml:id="w1"><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></w>, qui milita
                     <lb n="2" break="no"/><choice><reg>vit</reg><orig>bit</orig></choice> in numero leonum seniorum,
                     <lb n="3"/>de proprio suo arcam sibi posuit. Si
                     <lb n="4"/>quis eam aperire voluerit, dabit fisci
