@@ -367,7 +367,7 @@
                         <lb n="5"/><w xml:id="w2">q<choice><corr>u</corr><sic>n</sic></choice>i</w> v<unclear>i</unclear><unclear>x</unclear>it
                         <lb n="6"/><seg xml:id="seg1">annos <num value="45">XLV</num><pc type="editorial">.</pc> Si</seg>
                         <lb n="7"/>quis eam <supplied reason="omitted">arcam</supplied> <choice><reg>mole</reg><orig>moli</orig></choice>
-                        <lb n="8" break="no"/><choice><reg>staverit</reg><orig>stavirit</orig></choice><pc type="editorial">,</pc> <unclear>i</unclear><unclear>n</unclear> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">in fi<supplied reason="omitted">s</supplied>co</supplied> <w xml:id="w3"><unclear>d</unclear><unclear>e</unclear><unclear>t</unclear></w>
+                        <lb n="8" break="no"/><choice><reg>staverit</reg><orig>stavirit</orig></choice><pc type="editorial">,</pc> <unclear>i</unclear><unclear>n</unclear> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">fi<supplied reason="omitted">s</supplied>co</supplied> <w xml:id="w3"><unclear>d</unclear><unclear>e</unclear><unclear>t</unclear></w>
                         <lb n="9"/><measure xml:id="m1" next="#m2" type="fine" unit="roman_pound" commodity="gold" quantity="1">auri</measure>
                         <lb n="10"/><measure xml:id="m2" prev="#m1" type="fine" unit="roman_pound" commodity="gold" quantity="1"><choice><reg>libram</reg><orig>libr<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">a</supplied></orig></choice> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753"><num value="1">I</num></supplied></measure>
                     </ab>
@@ -375,19 +375,19 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="1a" from="#w1" to="w1">
+                    <app loc="1a" from="#w1" to="#w1">
                         <lem/>
                         <rdg source="#lettich1983"><expan>M<ex>anibus</ex></expan> <expan>D<ex>is</ex></expan></rdg>
                     </app>
-                    <app loc="5" from="#w2" to="w2">
+                    <app loc="5" from="#w2" to="#w2">
                         <lem>q<choice><corr>u</corr><sic>n</sic></choice>i</lem>
                         <rdg source="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8753 #ilcv441 #scarpabonazzabuoraveronese1978 #lettich1983">qui</rdg>
                     </app>
-                    <app loc="6" from="#seg1" to="seg1">
+                    <app loc="6" from="#seg1" to="#seg1">
                         <lem>annos <num value="45">XLV</num><pc type="editorial">.</pc> Si</lem>
                         <rdg source="#bertolini1874a #bertolini1874b"><gap reason="illegible" unit="line" quantity="1"/></rdg>
                     </app>
-                    <app>
+                    <app loc="8" from="#w3" to="#w3">
                         <lem><unclear>d</unclear><unclear>e</unclear><unclear>t</unclear></lem>
                         <rdg source="#bertolini1874a #bertolini1874b">dpf</rdg>
                     </app>
