@@ -566,7 +566,7 @@
                                         </strong>
                                     </dt>
                                     <dd>
-                                        <xsl:value-of select="."/>
+                                        <xsl:value-of select="."/><xsl:if test="@cert = 'low'">?</xsl:if>
                                         <xsl:if test="@type = 'relationship' and @corresp">
                                             <xsl:text> (→ </xsl:text>
                                             <xsl:element name="a">
