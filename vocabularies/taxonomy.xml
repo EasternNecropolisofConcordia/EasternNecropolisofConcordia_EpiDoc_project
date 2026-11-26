@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="taxonomy">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Taxonomies for the Eastern Necropolis of Iulia Concordia</title>
+                <author>Leonardo Battistella</author>
+                <respStmt>
+                    <resp>edidit</resp>
+                    <name xml:id="LB">Leonardo Battistella</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca' Foscari Venezia</authority>
+                <idno type="filename">taxonomy.xml</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">
+                        <p>Creative Commons Attribution 4.0 International</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital. Shared authority file: the classification categories referred to
+                    by the corpus files.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>This file holds the taxonomies shared by all the inscription files of the
+                    corpus. An inscription points to a category by its identifier, in the form
+                    <code>ana="../vocabularies/taxonomy.xml#centenarius"</code>. Category
+                    identifiers are in Latin wherever the scholarly tradition supplies a received
+                    term; translations and definitions are carried by the children of
+                    <gi>catDesc</gi> and may be in any number of languages.</p>
+                <p>Classes are declared here, individual entities are not. A particular
+                    organization, person or place is recorded in the relevant authority list and
+                    points from there to its class in this file.</p>
+                <p>Naming conventions. Identifiers are lowercase and use the hyphen, never the
+                    underscore. Where a category names an act, the identifier is the lemma of the
+                    verb in the first person singular present indicative, the citation form of
+                    Latin lexicography and of the Latin computational resources, so that these
+                    categories join the <att>lemma</att> of the verbs in the editions without an
+                    intervening mapping. Two categories are in English rather than Latin, each for
+                    a stated reason given in its own <gi>gloss</gi>: Latin would have required
+                    either coining a term, which this project does not do, or reusing one that is
+                    already taken by another vocabulary of this same corpus.</p>
+            </projectDesc>
+            <classDecl>
+                <taxonomy xml:id="decorations">
+                    <category xml:id="chi-rho">
+                        <catDesc>
+                            <term xml:lang="en">Chi-Rho (Christogram)</term>
+                            <term xml:lang="it">Crismon / Chi-Rho</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/591">
+                                <idno>591</idno>
+                            </ref>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300310602">
+                                <idno>300310602</idno>
+                            </ref>
+                            <idno type="unicode">U+2627</idno>
+                        </catDesc>
+                    </category>
+                    <category xml:id="hedera">
+                        <catDesc>
+                            <term xml:lang="la">Hedera Distinguens</term>
+                            <term xml:lang="en">Ivy leaf</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/155">
+                                <idno>155</idno>
+                            </ref>
+                            <idno type="unicode">U+2766</idno>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="campidoctor">
+                        <catDesc>
+                            <term xml:lang="la">campidoctor</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2008107">
+                                <idno>2008107</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="centenarius">
+                        <catDesc>
+                            <term xml:lang="la">centenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2009414">
+                                <idno>2009414</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="draconarius">
+                        <catDesc>
+                            <term xml:lang="la">draconarius</term>
+                            <gloss xml:lang="en">Standard-bearer carrying the draco.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="ducenarius">
+                        <catDesc>
+                            <term xml:lang="la">ducenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2018365">
+                                <idno>2018365</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="magister-primus">
+                        <catDesc>
+                            <term xml:lang="la">magister (primus)</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009655">
+                                <idno>1009655</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="miles">
+                        <catDesc>
+                            <term xml:lang="la">miles</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009936">
+                                <idno>1009936</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector">
+                        <catDesc>
+                            <term xml:lang="la">protector</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2048603">
+                                <idno>2048603</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector-domesticus">
+                        <catDesc>
+                            <term xml:lang="la">protector domesticus</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q1237339">
+                                <idno>Q1237339</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="semissalis">
+                        <catDesc>
+                            <term xml:lang="la">semissalis</term>
+                            <gloss xml:lang="en">Late Roman military rank; received 1 capitum (fodder ration, indicating mounted service) and 1½ annonae (one and a half food rations). Function unclear; attested in African and Sardinian ducal officia</gloss>
+                            <ref target="../bibliography/master_bibliography.xml#holder">Holder 1920, 111</ref>
+                            <ref target="../bibliography/master_bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="senator-military">
+                        <catDesc>
+                            <term xml:lang="la">senator</term>
+                            <gloss xml:lang="en">Late Roman military rank, superior to ducenarius; attested in scholae, fabricenses, and infantry units. Originally granted to ducenarii of agentes in rebus from 390 CE; the transfer of the senatorial title to military context remains unclear.</gloss>
+                            <ref target="../bibliography/master_bibliography.xml#holder">Holder 1920, 119-120</ref>
+                            <ref target="../bibliography/master_bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="tribunus">
+                        <catDesc>
+                            <term xml:lang="la">tribunus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1016734">
+                                <idno>1016734</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="organizations">
+                    <category xml:id="org-fiscus">
+                        <catDesc>
+                            <term xml:lang="la">fiscus</term>
+                            <gloss xml:lang="en">The imperial treasury, as recipient of a sepulchral fine.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="org-res-publica">
+                        <catDesc>
+                            <term xml:lang="la">res publica</term>
+                            <gloss xml:lang="en">The civic community of a city, as recipient of a sepulchral fine.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="org-ecclesia">
+                        <catDesc>
+                            <term xml:lang="la">ecclesia</term>
+                            <gloss xml:lang="en">A Christian church as an institution, named in an inscription as recipient, guardian or addressee.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="org-schola">
+                        <catDesc>
+                            <term xml:lang="la">schola</term>
+                            <gloss xml:lang="en">The corporate body of a military or professional group, holding funds of its own.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="org-collegium">
+                        <catDesc>
+                            <term xml:lang="la">collegium</term>
+                            <gloss xml:lang="en">An association of persons, professional or religious.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="org-numerus">
+                        <catDesc>
+                            <term xml:lang="la">numerus</term>
+                            <gloss xml:lang="en">A unit of the late Roman army, named as the unit of a person recorded in an inscription.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="org-fabrica">
+                        <catDesc>
+                            <term xml:lang="la">fabrica</term>
+                            <gloss xml:lang="en">A state arms factory.</gloss>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="periods">
+                    <category xml:id="late-roman-empire">
+                        <catDesc>
+                            <term xml:lang="en">Late Roman Empire</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/30">
+                                <idno>30</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="principate">
+                        <catDesc>
+                            <term xml:lang="en">Principate (High Roman Empire)</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/22">
+                                <idno>22</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="places">
+                    <category xml:id="concordia">
+                        <catDesc>
+                            <term xml:lang="la">Iulia Concordia</term>
+                            <ref type="pleiades" target="https://pleiades.stoa.org/places/393441">
+                                <idno>393441</idno>
+                            </ref>
+                            <ref type="tm" target="https://www.trismegistos.org/place/12269">
+                                <idno>12269</idno>
+                            </ref>
+                            <ref type="dare" target="https://imperium.ahlfeldt.se/places/10645.html">
+                                <idno>10645</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="portogruaro">
+                        <catDesc>
+                            <term xml:lang="en">Portogruaro</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q47143">
+                                <idno>Q47143</idno>
+                            </ref>
+                            <ref type="tgn" target="http://vocab.getty.edu/tgn/7003045">
+                                <idno>7003045</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="museo-concordiese">
+                        <catDesc>
+                            <term xml:lang="en">National Concordiese Museum of Portogruaro</term>
+                            <ref type="viaf" target="https://viaf.org/viaf/124364831">
+                                <idno>124364831</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="occupation">
+                    <category xml:id="soldier">
+                        <catDesc>
+                            <term xml:lang="en">Soldier</term>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300185678">
+                                <idno>300185678</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="fabricensis">
+                        <catDesc>
+                            <term xml:lang="la">fabricensis</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2021497">
+                                <idno>2021497</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="sanctions">
+                    <category xml:id="poena">
+                        <catDesc>
+                            <term xml:lang="la">poena</term>
+                            <term xml:lang="it">sanzione sepolcrale</term>
+                            <gloss xml:lang="en">A penalty threatened against violation of the tomb. An inscription declares the kinds of penalty it threatens with a catRef in profileDesc; the amount of a fine is marked in the edition with measure.</gloss>
+                        </catDesc>
+                        <category xml:id="poena-pecuniaria">
+                            <catDesc>
+                                <term xml:lang="la">poena pecuniaria</term>
+                                <gloss xml:lang="en">A fine, payable to a named recipient.</gloss>
+                            </catDesc>
+                        </category>
+                        <category xml:id="poena-corporalis">
+                            <catDesc>
+                                <term xml:lang="la">poena corporalis</term>
+                                <gloss xml:lang="en">A bodily penalty imposed by law, as distinct from a curse or a divine sanction: Fl. Victurinus, iure ei manus pricidentur. Should a divine or religious sanction be found in the corpus, it is a sibling of this category and not the same thing.</gloss>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="poenae-alternativae">
+                        <catDesc>
+                            <term xml:lang="la">poenae alternativae</term>
+                            <gloss xml:lang="en">Two or more penalties offered as alternatives, aut ... aut.</gloss>
+                        </catDesc>
+                    </category>
+                    <category xml:id="poenae-cumulativae">
+                        <catDesc>
+                            <term xml:lang="la">poenae cumulativae</term>
+                            <gloss xml:lang="en">Two or more penalties imposed together.</gloss>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="roles">
+                    <category xml:id="fine-recipient">
+                        <catDesc>
+                            <term xml:lang="en">recipient of a fine</term>
+                            <gloss xml:lang="en">The party to whom a sepulchral fine is payable. In English because the Latin beneficiarius is a military rank and would collide with the taxonomy of ranks used throughout this corpus.</gloss>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="acts">
+                    <category xml:id="actus">
+                        <catDesc>
+                            <term xml:lang="la">actus</term>
+                            <gloss xml:lang="en">An act that the text attributes to a named party. What is recorded is the act the text states, not the transaction the editor reconstructs behind it.</gloss>
+                        </catDesc>
+                        <category xml:id="actus-sepulcri">
+                            <catDesc>
+                                <term xml:lang="la">actus sepulcri</term>
+                                <gloss xml:lang="en">Providing, making, setting up or renewing the tomb.</gloss>
+                            </catDesc>
+                            <category xml:id="emo">
+                                <catDesc>
+                                    <term xml:lang="la">emo</term>
+                                    <gloss xml:lang="en">To buy. Active emit; also passive empta est, where the tomb is the subject and the buyer may be left unexpressed.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="comparo">
+                                <catDesc>
+                                    <term xml:lang="la">comparo</term>
+                                    <gloss xml:lang="en">To procure, obtain by purchase: comparavit.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="facio">
+                                <catDesc>
+                                    <term xml:lang="la">facio</term>
+                                    <gloss xml:lang="en">To make or have made: fecit.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="pono">
+                                <catDesc>
+                                    <term xml:lang="la">pono</term>
+                                    <gloss xml:lang="en">To set up: posuit. The passive positus est shares this lemma but states a different act, the laying of the deceased, with the deceased as subject; the two are told apart by the direction of the relation, not by the lemma.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="renovo">
+                                <catDesc>
+                                    <term xml:lang="la">renovo</term>
+                                    <gloss xml:lang="en">To renew or restore an existing monument: renovavit.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="confero">
+                                <catDesc>
+                                    <term xml:lang="la">confero</term>
+                                    <gloss xml:lang="en">To contribute: contulit, Fl. Maximinus.</gloss>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="actus-tutelae">
+                            <catDesc>
+                                <term xml:lang="la">actus tutelae</term>
+                                <gloss xml:lang="en">Placing the tomb under the protection of a third party. Distinct from providing it.</gloss>
+                            </catDesc>
+                            <category xml:id="commendo">
+                                <catDesc>
+                                    <term xml:lang="la">commendo</term>
+                                    <gloss xml:lang="en">To entrust: commendamus, the Flavii Servilii, who entrust the sarcophagus to the church of Concordia.</gloss>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="act-unexpressed">
+                            <catDesc>
+                                <term xml:lang="en">act not expressed</term>
+                                <gloss xml:lang="en">The text names the parties but no verb states what was done, most often a dedication with the deceased in the dative. Recorded explicitly rather than by leaving ana off, so that a text which says nothing can be told apart from one not yet encoded. In English because Latin supplies no received term for this and the project does not coin them.</gloss>
+                            </catDesc>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+            <unitDecl>
+                <!-- Units of weight. The metal is not part of the unit: it is carried by
+                     @commodity on the measure, whose values in this corpus are aurum and
+                     argentum. No conversion is declared between the two metals, because the
+                     late antique ratio is a scholarly argument and does not belong in a
+                     declaration. -->
+                <unitDef xml:id="libra" type="weight">
+                    <label>libra</label>
+                    <gloss xml:lang="en">The Roman pound.</gloss>
+                    <conversion fromUnit="#uncia" toUnit="#libra" formula="$fromUnit div 12"/>
+                </unitDef>
+                <unitDef xml:id="uncia" type="weight">
+                    <label>uncia</label>
+                    <gloss xml:lang="en">One twelfth of a libra.</gloss>
+                </unitDef>
+                <!-- Denominations. These name a coin, not a quantity of metal, so they take
+                     no @commodity. -->
+                <unitDef xml:id="solidus" type="currency">
+                    <label>solidus</label>
+                    <gloss xml:lang="en">The late Roman gold coin, struck at seventy-two to the libra of gold. The conversion below records that mint standard; it says nothing about the weight of any coin actually paid.</gloss>
+                    <conversion fromUnit="#solidus" toUnit="#libra" formula="$fromUnit div 72"/>
+                </unitDef>
+                <unitDef xml:id="follis" type="currency">
+                    <label>follis</label>
+                    <gloss xml:lang="en">No conversion is declared. The term covers a bronze coin, a sealed bag of coin and a unit of account, and its value against the gold coinage moved with the currency; any equivalence would be an argument, not a fact.</gloss>
+                </unitDef>
+                <unitDef xml:id="sestertius" type="currency">
+                    <label>sestertius</label>
+                    <gloss xml:lang="en">No conversion is declared. In late antique funerary sanctions the denomination is largely formulaic and bears no stable relation to the contemporary coinage.</gloss>
+                </unitDef>
+            </unitDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This file carries no edition. Its content is the set of declarations in the header,
+                to which the corpus files refer.</p>
+        </body>
+    </text>
+</TEI>
