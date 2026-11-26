@@ -1,0 +1,77 @@
+name: Auto-Transform EpiDoc and Bibliography
+on:
+  push:
+    branches:
+      - main  # Si attiva ogni volta che carichi qualcosa sul branch main
+permissions:
+  contents: write  # Fondamentale per permettere a GitHub di salvare i file generati
+jobs:
+
+  validate:
+    # Controlla gli XML prima che qualsiasi script li tocchi.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Well-formed XML
+        # Questo passaggio BLOCCA la pubblicazione: un file che non e'
+        # XML valido non puo' entrare nel sito. Nessuno schema, nessuna rete.
+        run: |
+          files=$(find inscriptions vocabularies bibliography -name '*.xml' 2>/dev/null)
+          test -n "$files" || { echo "nessun file XML trovato"; exit 1; }
+          xmllint --noout $files
+
+      - name: Fetch the EpiDoc schema
+        # Non blocca: se il sito dello schema e' irraggiungibile non e' colpa dei dati.
+        continue-on-error: true
+        run: curl -sL -o tei-epidoc.rng http://epidoc.stoa.org/schema/latest/tei-epidoc.rng
+
+      - name: Validate against EpiDoc
+        # Per ora segnala soltanto. Quando ti sarai convinto che non da'
+        # falsi allarmi, togli continue-on-error e bloccherA' anche questo.
+        continue-on-error: true
+        run: xmllint --noout --relaxng tei-epidoc.rng inscriptions/*.xml
+
+  build-and-deploy:
+    needs: validate  # Non parte se la validazione fallisce
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install saxonche
+      - name: Run Transformation Script
+        # Trasforma i file XML delle iscrizioni in HTML
+        run: python scripts/transform.py
+      - name: Run List Generator Script
+        # Genera gli indici e le liste delle iscrizioni
+        run: python scripts/generate_list.py
+      - name: Run People Generator Script
+        # Genera la pagina con tutte le persone
+        run: python scripts/people.py
+      - name: Run Bibliography Script
+        run: python scripts/transform_bibliography.py
+      - name: Run Corpora Script
+        run: python scripts/transform_corpora_databases.py
+      - name: Run Map Generator Script
+        run: python scripts/generate_map.py
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add docs/
+
+          git commit -m "Automatic Update of EpiDoc, Bibliography, Corpora and People via GitHub Actions" || exit 0
+
+          git push
