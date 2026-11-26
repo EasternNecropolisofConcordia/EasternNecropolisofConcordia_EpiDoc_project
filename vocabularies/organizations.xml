@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="organizations">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Organizations named in the inscriptions of the Eastern Necropolis of Iulia
+                    Concordia</title>
+                <author>Leonardo Battistella</author>
+                <respStmt>
+                    <resp>edidit</resp>
+                    <name xml:id="LB">Leonardo Battistella</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca' Foscari Venezia</authority>
+                <idno type="filename">organizations.xml</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">
+                        <p>Creative Commons Attribution 4.0 International</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital. Authority list of the institutions, corporate bodies and military
+                    units named in the corpus.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Each organization is an individual entity and carries its own identifier. Its
+                    class is not repeated here but declared once in
+                    <code>taxonomy.xml</code>, to which the <att>ana</att> attribute points. An
+                    inscription refers to an organization by its identifier, in the form
+                    <code>ref="../vocabularies/organizations.xml#fiscus"</code>.</p>
+                <p>PROVISIONAL. The list below records the organizations met so far; the units of
+                    the inscriptions not yet revised are still missing, and the designations marked
+                    with a note need checking against the stone.</p>
+            </projectDesc>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listOrg>
+
+                <!-- Institutions -->
+
+                <org xml:id="fiscus" ana="taxonomy.xml#org-fiscus">
+                    <orgName xml:lang="la">fiscus</orgName>
+                    <note xml:lang="en">The imperial treasury. The commonest recipient of the
+                        sepulchral fine in this corpus, named as <foreign xml:lang="la">fisco</foreign>,
+                        <foreign xml:lang="la">in fisco</foreign>, <foreign xml:lang="la">fisci
+                        viribus</foreign> and <foreign xml:lang="la">fisco viribus</foreign>.</note>
+                </org>
+
+                <org xml:id="res-publica-concordiensium" ana="taxonomy.xml#org-res-publica">
+                    <orgName xml:lang="la">res publica</orgName>
+                    <placeName ana="taxonomy.xml#concordia"/>
+                    <note xml:lang="en">The civic community of Concordia, recipient of the fine in
+                        the inscription of Fl. Victor (<foreign xml:lang="la">dabit in re
+                        publica</foreign>). That inscription is from Concordia but not from the
+                        Eastern Necropolis.</note>
+                </org>
+
+                <org xml:id="ecclesia-concordiensis" ana="taxonomy.xml#org-ecclesia">
+                    <orgName xml:lang="la">sancta ecclesia civitatis Concordiensium</orgName>
+                    <placeName ana="taxonomy.xml#concordia"/>
+                    <note xml:lang="en">The church of Concordia, to which the sarcophagus is
+                        entrusted in the inscription of the Flavii Servilii
+                        (<foreign xml:lang="la">commendamus sanctae ecclesiae civitatis
+                        Concordiensium</foreign>). Guardian, not owner, and not a recipient of a
+                        fine.</note>
+                </org>
+
+                <org xml:id="schola-fabricensium-concordiensium" ana="taxonomy.xml#org-schola">
+                    <orgName xml:lang="la">schola fabricensium</orgName>
+                    <placeName ana="taxonomy.xml#concordia"/>
+                    <note xml:lang="en">The corporate body of the workers of the arms factory at
+                        Concordia, recipient of the fine in the inscription of Fl. Messio
+                        (<foreign xml:lang="la">dabit in scola</foreign>). The identification with
+                        the schola of the <foreign xml:lang="la">fabrica sagittaria</foreign> rests
+                        on Messio's own designation as <foreign xml:lang="la">ex fabrica
+                        sagittarum</foreign> and is an inference.</note>
+                </org>
+
+                <org xml:id="fabrica-sagittaria-concordiensis" ana="taxonomy.xml#org-fabrica">
+                    <orgName xml:lang="la">fabrica sagittaria</orgName>
+                    <placeName ana="taxonomy.xml#concordia"/>
+                    <note xml:lang="en">The state arrow factory at Concordia. Fl. Romulianus is its
+                        <foreign xml:lang="la">praepositus</foreign>, later
+                        <foreign xml:lang="la">ex praeposito</foreign>; Fl. Messio is
+                        <foreign xml:lang="la">ex fabrica sagittarum</foreign>.</note>
+                </org>
+
+                <!-- Military units -->
+
+                <org xml:id="equites-bracchiati" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">numerus equitum Bracchiatorum</orgName>
+                    <note xml:lang="en">Named in full in the inscription of Fl. Sauma; the
+                        inscription of Fl. Andia has <foreign xml:lang="la">numeri
+                        Bracchiatorum</foreign> without <foreign xml:lang="la">equitum</foreign>.
+                        Whether the two designate one unit or two needs checking.</note>
+                </org>
+
+                <org xml:id="iovii-iuniores" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">Iovii Iuniores</orgName>
+                    <note xml:lang="en">Fl. Marcaridus is <foreign xml:lang="la">tribunus militum
+                        Ioviorum Iuniorum</foreign>.</note>
+                </org>
+
+                <org xml:id="numerus-armaturarum" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">numerus Armaturarum</orgName>
+                    <note xml:lang="en">Fl. Cascinivus is <foreign xml:lang="la">ducenarius ex
+                        numero Armaturarum</foreign>.</note>
+                </org>
+
+                <org xml:id="equites-batavi-seniores" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">equites Batavi seniores</orgName>
+                    <note xml:lang="en">Fl. Fasta is <foreign xml:lang="la">de Batavis equitibus
+                        senioribus</foreign>, Fl. Abruna <foreign xml:lang="la">de numero Bataorum
+                        seniorum</foreign>, with the intervocalic /v/ lost.</note>
+                </org>
+
+                <org xml:id="numerus-erulorum-seniorum" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">numerus Erulorum seniorum</orgName>
+                    <note xml:lang="en">Fl. Batemodus is <foreign xml:lang="la">de numero Erulorum
+                        seniorum</foreign>, Fl. Sindia <foreign xml:lang="la">de numero Herulurum
+                        seneorum</foreign>. The ethnic appears in the corpus with and without the
+                        aspirate and with both vowels.</note>
+                </org>
+
+                <org xml:id="equites-catafractarii" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">numerus equitum catafractariorum</orgName>
+                    <note xml:lang="en">Fl. Severianus is <foreign xml:lang="la">centenarius de
+                        numero equitum catafractariorum</foreign>, with F for the Greek
+                        aspirate.</note>
+                </org>
+
+                <org xml:id="numerus-dalmatarum-octavus" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">numerus octavus Dalmatarum</orgName>
+                    <note xml:lang="en">Fl. Iovinianus is <foreign xml:lang="la">draconarius ex
+                        numero octava Dalmata</foreign>. Neither the gender of
+                        <foreign xml:lang="la">octava</foreign> nor the case of
+                        <foreign xml:lang="la">Dalmata</foreign> agrees with
+                        <foreign xml:lang="la">numero</foreign>; the designation given here is the
+                        expected form and is not that of the stone.</note>
+                </org>
+
+                <org xml:id="numerus-regiorum" ana="taxonomy.xml#org-numerus">
+                    <orgName xml:lang="la">numerus Regiorum</orgName>
+                    <note xml:lang="en">Named in the inscription of Fl. Optata, as the unit of the
+                        soldier to whom she is related.</note>
+                </org>
+
+            </listOrg>
+        </body>
+    </text>
+</TEI>
