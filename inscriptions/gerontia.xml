@@ -141,8 +141,19 @@
                   <note type = "occupation">civilian</note>
                   <note type = "role">dedicator/deceased</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#gerontia"
+                             passive="#gerontia"
+                             corresp="#w1"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -330,16 +341,16 @@
     <facsimile>
         <graphic url="../../images/inscriptions/gerontia.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Gerontia. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Gerontia. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29362/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/>Ego <persName ref="#gerontia">Gerontia</persName> arcam de proprio
-                    <lb n="2"/><seg xml:id="seg1">com<supplied reason="lost">para</supplied>vi. Si qu<supplied reason="lost">is eam aperi</supplied><unclear>r</unclear>e</seg>
-                    <lb n="3"/>voluerit dabit fisco <measure type="fine" unit="roman_pound" commodity="silver" quantity="5"><expan><abbr>arg</abbr><ex>enti</ex></expan> pondo <num value="5">V</num></measure>.
+                    <lb n="1"/>Ego <persName ref="#gerontia">Gerontia</persName> <anchor xml:id="a-deproprio-1"/>arcam de proprio
+                    <lb n="2"/><seg xml:id="seg1"><w xml:id="w1" lemma="comparo">com<supplied reason="lost">para</supplied>vi</w><anchor xml:id="a-deproprio-2"/><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si qu<supplied reason="lost">is eam aperi</supplied><unclear>r</unclear>e</seg>
+                    <lb n="3"/>voluerit<pc type="editorial">,</pc> dabit <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" type="poena" unit="libra" commodity="argentum" quantity="5"><expan><abbr>arg</abbr><ex>enti</ex></expan> pondo <num value="5">V</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -410,6 +421,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

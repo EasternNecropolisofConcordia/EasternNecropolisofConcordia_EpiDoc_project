@@ -394,7 +394,7 @@
                     <lb n="3" break="no"/><w xml:id="w6" prev="#w5"><supplied reason="lost">legae</supplied></w> <supplied reason="lost">o</supplied>ptimo<pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/>arcam de labore suo <w xml:id="w7" lemma="comparo"><choice><reg>comparavimus</reg><orig>conparavimus</orig></choice></w><anchor xml:id="a-deproprio-2"/><pc type="editorial">,</pc> <anchor xml:id="a-commendatio-1"/><choice><reg>quam</reg><orig>quem</orig></choice>
                     <lb n="4"/><supplied reason="lost">arca</supplied>m <w xml:id="w8" lemma="commendo"><choice><reg>commendamus</reg><orig>conmendamus</orig></choice></w> <choice><reg>sanctae</reg><orig>sancte</orig></choice> <rs type="socecon" ref="../vocabularies/organizations.xml#ecclesia-concordiensis"><choice><reg>ecclesiae</reg><orig>aeclesiae</orig></choice></rs> <supplied reason="omitted">c</supplied>ivitatis conco<supplied reason="omitted">r</supplied>dien
                     <lb n="5" break="no"/>sium<anchor xml:id="a-commendatio-2"/><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si quis eam a<unclear>p</unclear><unclear>e</unclear><choice><corr>r</corr><sic>b</sic></choice>ire voluerit dabit <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="2">auri pondo duo</measure> sin
-                    <lb n="6" break="no"/>e mora<anchor xml:id="a-sanctio-2"/>
+                    <lb n="6" break="no"/>e mora<anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

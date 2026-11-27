@@ -163,8 +163,19 @@
                    <note type="occupation">civilian</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#emo"
+                             active="#optata"
+                             passive="#optata"
+                             corresp="#w1"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -363,18 +374,18 @@
     <facsimile>
         <graphic url="../../images/inscriptions/optata.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Optata. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Optata. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29350/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/>Flavia Optata <expan><abbr>mili</abbr><ex>tis</ex></expan> de
-                    <lb n="2"/><expan><abbr>num</abbr><ex>ero</ex></expan> <expan><abbr>Regi</abbr><ex>orum</ex></expan>, <w xml:id="w1">emi<supplied reason="omitted">t</supplied></w> <w xml:id="w2"><choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice></w> <w xml:id="w3">de</w>
-                    <lb n="3"/><w xml:id="w4"><expan><abbr>r</abbr><ex>e</ex></expan></w> <w xml:id="w5"><expan><abbr>v</abbr><ex>iri</ex></expan></w>. Si quis <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovit</abbr><ex>um</ex></expan></orig></choice>
-                    <lb n="4"/><expan><abbr>me</abbr><ex>um</ex></expan> <expan><abbr>arc</abbr><ex>am</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan> <expan><abbr>ap</abbr><ex>erire</ex></expan>, <w xml:id="w6"><choice><reg>infe</reg><orig>enfe</orig></choice></w>
-                    <lb n="5" break="no"/><expan><abbr>r</abbr><ex>et</ex></expan> <supplied reason="omitted" cert="medium">fisci</supplied> <expan><abbr>vi</abbr><ex>ribus</ex></expan> <expan><abbr>aur</abbr><ex>i</ex></expan> <expan><abbr>lib</abbr><ex>ram</ex></expan> una<supplied reason="omitted">m</supplied>. <g ref="#hedera"/>
+                    <lb n="1"/><persName ref="#optata">Flavia Optata</persName><pc type="editorial">,</pc> <expan><abbr>mili</abbr><ex>tis</ex></expan> de
+                    <lb n="2"/><expan><abbr>num</abbr><ex>ero</ex></expan> <rs type="military" ref="../vocabularies/organizations.xml#numerus-regiorum"><expan><abbr>Regi</abbr><ex>orum</ex></expan></rs><pc type="editorial">,</pc> <w xml:id="w1" lemma="emo">emi<supplied reason="omitted">t</supplied></w> <w xml:id="w2"><choice><reg>sibi</reg><orig>siv<supplied reason="omitted">i</supplied></orig></choice></w> <w xml:id="w3">de</w>
+                    <lb n="3"/><w xml:id="w4"><expan><abbr>r</abbr><ex>e</ex></expan></w> <w xml:id="w5"><expan><abbr>v</abbr><ex>iri</ex></expan></w><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si quis <expan><abbr>pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovit</abbr><ex>um</ex></expan></orig></choice>
+                    <lb n="4"/><expan><abbr>me</abbr><ex>um</ex></expan> <expan><abbr>arc</abbr><ex>am</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan> <expan><abbr>ap</abbr><ex>erire</ex></expan><pc type="editorial">,</pc> <w xml:id="w6"><choice><reg>infe</reg><orig>enfe</orig></choice></w>
+                    <lb n="5" break="no"/><expan><abbr>r</abbr><ex>et</ex></expan> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><supplied reason="omitted" cert="medium">fisci</supplied></rs> <expan><abbr>vi</abbr><ex>ribus</ex></expan> <measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="1"><expan><abbr>aur</abbr><ex>i</ex></expan> <expan><abbr>lib</abbr><ex>ram</ex></expan> una<supplied reason="omitted">m</supplied></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc> <g ref="#hedera"/>
                 </ab>
             </div>
             <div type="apparatus">
@@ -508,6 +519,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

@@ -159,8 +159,17 @@
                    <note type="numerus">Iovii Iuniores</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio" cert="low"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             active="#marcaridus" passive="#marcaridus"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -348,7 +357,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/marcaridus.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The iscription of Marcaridus. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Marcaridus. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29342/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
@@ -363,14 +372,14 @@
                     <ab>
                         <lb n="1"/><persName ref="#marcaridus"><expan>Fl<ex>avius</ex></expan> Ma<damage>r</damage>car<damage>i</damage><unclear>d</unclear><unclear>u</unclear><unclear>s</unclear></persName><pc type="editorial">,</pc>
                         <lb n="2"/>tribunus mil
-                        <lb n="3" break="no"/>itum Iovioru
-                        <lb n="4" break="no"/>m Iuniorum<pc type="editorial">,</pc>
+                        <lb n="3" break="no"/>itum <rs type="military" ref="../vocabularies/organizations.xml#iovii-iuniores">Iovioru</rs>
+                        <lb n="4" break="no"/><rs type="military" ref="../vocabularies/organizations.xml#iovii-iuniores">m Iuniorum</rs><pc type="editorial">,</pc>
                         <lb n="5"/><w xml:id="w2">q<choice><corr>u</corr><sic>n</sic></choice>i</w> v<unclear>i</unclear><unclear>x</unclear>it
-                        <lb n="6"/><seg xml:id="seg1">annos <num value="45">XLV</num><pc type="editorial">.</pc> Si</seg>
+                        <lb n="6"/><seg xml:id="seg1">annos <num value="45">XLV</num><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si</seg>
                         <lb n="7"/>quis eam <supplied reason="omitted">arcam</supplied> <choice><reg>mole</reg><orig>moli</orig></choice>
-                        <lb n="8" break="no"/><choice><reg>staverit</reg><orig>stavirit</orig></choice><pc type="editorial">,</pc> <unclear>i</unclear><unclear>n</unclear> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">fi<supplied reason="omitted">s</supplied>co</supplied> <w xml:id="w3"><unclear>d</unclear><unclear>e</unclear><unclear>t</unclear></w>
-                        <lb n="9"/><measure xml:id="m1" next="#m2" type="fine" unit="roman_pound" commodity="gold" quantity="1">auri</measure>
-                        <lb n="10"/><measure xml:id="m2" prev="#m1" type="fine" unit="roman_pound" commodity="gold" quantity="1"><choice><reg>libram</reg><orig>libr<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">a</supplied></orig></choice> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753"><num value="1">I</num></supplied></measure>
+                        <lb n="8" break="no"/><choice><reg>staverit</reg><orig>stavirit</orig></choice><pc type="editorial">,</pc> <unclear>i</unclear><unclear>n</unclear> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">fi<supplied reason="omitted">s</supplied>co</supplied></rs> <w xml:id="w3"><unclear>d</unclear><unclear>e</unclear><unclear>t</unclear></w>
+                        <lb n="9"/><measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="aurum" quantity="1">auri</measure>
+                        <lb n="10"/><measure xml:id="m2" prev="#m1"><choice><reg>libram</reg><orig>libr<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753">a</supplied></orig></choice> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8753"><num value="1">I</num></supplied></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                     </ab>
                 </div>
             </div>
@@ -500,6 +509,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

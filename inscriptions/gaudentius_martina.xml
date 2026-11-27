@@ -170,8 +170,19 @@
                   <note type="role">dedicator/deceased</note>
                   <note type = "relationship" corresp="#gaudentius">wife</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#gaudentius #martina"
+                             passive="#gaudentius #martina"
+                             corresp="#w1"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -359,19 +370,19 @@
     <facsimile>
         <graphic url="../../images/inscriptions/gaudentius_martina.jpg">
             <desc type="alt">Inscribed lateral panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Gaudentius and Martina. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Gaudentius and Martina. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29353/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#gaudentius"><choice><reg>Aurelius</reg><orig>Aurelius</orig></choice> Gau</persName>
+                    <lb n="1"/><persName ref="#gaudentius"><choice><reg>Aurelius</reg><orig>Aurilius</orig></choice> Gau</persName>
                     <lb n="2" break="no"/><persName ref="#gaudentius">dentius</persName> et <persName ref="#martina">Mar</persName>
-                    <lb n="3" break="no"/><persName ref="#martina">tina</persName> vivos <choice><reg>sibi</reg><orig>se</orig></choice> <w xml:id="w1">com</w>
-                    <lb n="4" break="no"/><choice><reg>paraverunt</reg><orig>paravet</orig></choice> Si q<unclear>u</unclear><unclear>i</unclear>s e
-                    <lb n="5" break="no"/>is iniuriam det <w xml:id="w2"><supplied reason="omitted" cert="low">fisco</supplied></w>
-                    <lb n="6"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="1">aur<choice><corr>i</corr><sic><unclear>o</unclear></sic></choice> <choice><reg>libram</reg><orig>libra</orig></choice> <choice><reg>unam</reg><orig>una</orig></choice></measure>
+                    <lb n="3" break="no"/><persName ref="#martina">tina</persName><pc type="editorial">,</pc> vivos <choice><reg>sibi</reg><orig>se</orig></choice> <w xml:id="w1" next="#w2" lemma="comparo">com</w>
+                    <lb n="4" break="no"/><w xml:id="w2" prev="#w1"><choice><reg>paraverunt</reg><orig>paravet</orig></choice></w><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si q<unclear>u</unclear><unclear>i</unclear>s e
+                    <lb n="5" break="no"/>is iniuriam<pc type="editorial">,</pc> det <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><w xml:id="w3"><supplied reason="omitted" cert="low">fisco</supplied></w></rs>
+                    <lb n="6"/><measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="1">aur<choice><corr>i</corr><sic><unclear>o</unclear></sic></choice> <choice><reg>libram</reg><orig>libra</orig></choice> <choice><reg>unam</reg><orig>una</orig></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -380,11 +391,11 @@
                         <lem>
                             com
                         </lem>
-                        <rdg source="#bertolini1874a #bertolini1874b #cilv8726 #ilcv836 #lettich1983 #edr097747">
+                        <rdg source="#bertolini1874a #bertolini1874b #cilv8726 #ilcv836 #lettich1983 #edr097885">
                             <choice><reg>com</reg><orig>con</orig></choice>
                         </rdg>
                     </app>
-                    <app loc="5" from="#w2">
+                    <app loc="5" from="#w3">
                         <lem>
                             <supplied reason="omitted" cert="low">fisco</supplied>
                         </lem>
@@ -454,6 +465,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

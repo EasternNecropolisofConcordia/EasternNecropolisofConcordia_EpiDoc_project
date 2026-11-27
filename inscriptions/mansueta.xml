@@ -173,6 +173,11 @@
                    <note type="role">deceased</note>
                    <note type="relationship" corresp="#eutyches">wife</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             active="#eutyches" passive="#mansueta"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -380,9 +385,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#mansueta">Cicriae Mansuetae</persName>,
-                    <lb n="2"/>coniugi incomparabili,
-                    <lb n="3"/><persName ref="#eutyches"><expan><abbr>P</abbr><ex>ublius</ex></expan> Atilius <w xml:id="w1">Cicrius</w> <w xml:id="w2">Eutyches</w></persName>.
+                    <lb n="1"/><persName ref="#mansueta">Cicriae Mansuetae</persName><pc type="editorial">,</pc>
+                    <lb n="2"/>coniugi incomparabili<pc type="editorial">,</pc>
+                    <lb n="3"/><persName ref="#eutyches"><expan><abbr>P</abbr><ex>ublius</ex></expan> Atilius <w xml:id="w1">Cicrius</w> <w xml:id="w2">Eutyches</w></persName><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

@@ -151,8 +151,18 @@
                    <note type="numerus">Mattiaci Iuniores</note>
                    <note type="role">deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#pono"
+                             passive="#ianuarinus"
+                             corresp="#w1"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -358,13 +368,13 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#ianuarinus"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Ianu</supplied>arinus</persName>, <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><expan><abbr>vet</abbr><ex>eranus</ex></expan></supplied>,
-                    <lb n="2"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">de nu</supplied>mero M<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">attia</supplied>
-                    <lb n="3" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><expan><abbr>cor</abbr><ex>um</ex></expan></supplied> <expan><abbr><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">i</supplied><unclear>u</unclear>nior</abbr><ex>um</ex></expan>, hi<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">c posi</supplied>
-                    <lb n="4" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">tus e</supplied>st. Si qu<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">is volue</supplied>
+                    <lb n="1"/><persName ref="#ianuarinus"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Ianu</supplied>arinus</persName><pc type="editorial">,</pc> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><expan><abbr>vet</abbr><ex>eranus</ex></expan></supplied><pc type="editorial">,</pc>
+                    <lb n="2"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">de nu</supplied>mero <rs type="military" ref="../vocabularies/organizations.xml#mattiaci-iuniores">M<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">attia</supplied></rs>
+                    <lb n="3" break="no"/><rs type="military" ref="../vocabularies/organizations.xml#mattiaci-iuniores"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><expan><abbr>cor</abbr><ex>um</ex></expan></supplied> <expan><abbr><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">i</supplied><unclear>u</unclear>nior</abbr><ex>um</ex></expan></rs><pc type="editorial">,</pc> hi<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">c</supplied> <w xml:id="w1" next="#w2" lemma="pono"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">posi</supplied></w>
+                    <lb n="4" break="no"/><w xml:id="w2" prev="#w1"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">tus</supplied></w> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">e</supplied>st<pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si qu<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">is volue</supplied>
                     <lb n="5" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">rit se</supplied><unclear>p</unclear>ulc<unclear>r</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">um eius ape</supplied>
-                    <lb n="6" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">re fisc</supplied>o <choice><reg>dabit</reg><orig>d<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">avit</supplied></orig></choice> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">argen</supplied>
-                    <lb n="7" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><measure type="fine" unit="roman_pound" commodity="silver" quantity="10">ti <expan><abbr>lib</abbr><ex>ras</ex></expan> <num value="10">X</num></measure></supplied>.
+                    <lb n="6" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">re</supplied> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">fisc</supplied>o</rs> <choice><reg>dabit</reg><orig>d<supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751">avit</supplied></orig></choice> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="argentum" quantity="10">argen</measure></supplied>
+                    <lb n="7" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8751"><measure xml:id="m2" prev="#m1">ti <expan><abbr>lib</abbr><ex>ras</ex></expan> <num value="10">X</num></measure></supplied><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -454,6 +464,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

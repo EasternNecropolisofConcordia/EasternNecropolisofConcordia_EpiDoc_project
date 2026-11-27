@@ -215,6 +215,13 @@
                    <note type = "relationship" corresp="#exsuperantius">son</note>
                    <note type = "relationship" corresp="#constantia">son</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#dedico"
+                             active="#exsuperantius #constantia"
+                             passive="#marinus"
+                             corresp="#w3"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -404,17 +411,17 @@
     <facsimile>
         <graphic url="../../images/inscriptions/marinus.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Marinus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Marinus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29482/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
-                        <lb n="1"/><persName ref="#exsuperantius"><w xml:id="w1"><expan><abbr>F<surplus>i</surplus></abbr><ex>lavius</ex></expan></w> <w xml:id="w2">Ex<unclear>s</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">uperanti</supplied>us</w></persName> et <persName ref="#constantia">Constanti<unclear>a</unclear></persName>
-                        <lb n="2"/>filio <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dulcissim</supplied>o <persName ref="#marinus">Marino</persName>, qui vixit
-                        <lb n="3"/>annos <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b"><num value="18" xml:id="w3">XVIII</num> mense</supplied>s <num value="10">X</num>, dies <num value="22">XXII</num>, memo
-                        <lb n="4" break="no"/>riam <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dedicaveru</supplied>nt.
+                        <lb n="1"/><persName ref="#exsuperantius"><w xml:id="w1"><expan><abbr>F<surplus>i</surplus></abbr><ex>lavius</ex></expan></w> <w xml:id="w2">Ex<unclear>s</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">uperanti</supplied>us</w></persName> et <persName ref="#constantia">Constanti<unclear>a</unclear></persName><pc type="editorial">,</pc>
+                        <lb n="2"/>filio <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dulcissim</supplied>o <persName ref="#marinus">Marino</persName><pc type="editorial">,</pc> qui vixit
+                        <lb n="3"/>annos <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b"><num value="18">XVIII</num><pc type="editorial">,</pc> mense</supplied>s <num value="10">X</num><pc type="editorial">,</pc> dies <num value="22">XXII</num><pc type="editorial">,</pc> memo
+                        <lb n="4" break="no"/>riam <w xml:id="w3" lemma="dedico"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dedicaveru</supplied>nt</w><pc type="editorial">.</pc>
                     </ab>
             </div>
             <div type="apparatus">

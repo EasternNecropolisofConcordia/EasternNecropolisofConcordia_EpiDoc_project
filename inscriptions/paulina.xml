@@ -131,6 +131,11 @@
                    <note type="occupation">civilian</note>
                    <note type="role">deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio" cert="low"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             passive="#paulina"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -338,7 +343,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#paulina">Fabiae Paulinae</persName>.
+                    <lb n="1"/><persName ref="#paulina">Fabiae Paulinae</persName><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

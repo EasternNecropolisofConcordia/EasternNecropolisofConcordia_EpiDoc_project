@@ -198,8 +198,17 @@
                    <note type="occupation">functionary</note>
                    <note type="role">dedicator/deceased</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio" cert="low"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             active="#numerianus" passive="#numerianus"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -398,7 +407,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/numerianus.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Numerianus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Numerianus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29307/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
@@ -406,9 +415,9 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
                         <lb n="1"/>Arca <persName ref="#numerianus">Numeriani</persName> <choice><reg>principalis</reg><orig>prencipalis</orig></choice> de ci
-                        <lb n="2" break="no"/>vitate Murse<supplied reason="omitted">n</supplied>se, annorum <num value="30">XXX</num>, quod si
-                        <lb n="3"/>aliquis eam <choice><reg>arcam</reg><orig>arca</orig></choice> aperire voluerit, da
-                        <lb n="4" break="no"/><w xml:id="w1"><choice><reg>bit</reg><orig>vet</orig></choice></w> fisco <measure type="fine" unit="uncia" commodity="gold" quantity="6">auri uncias sex.</measure>
+                        <lb n="2" break="no"/>vitate Murse<supplied reason="omitted">n</supplied>se<pc type="editorial">,</pc> annorum <num value="30">XXX</num><pc type="editorial">,</pc> <anchor xml:id="a-sanctio-1"/>quod si
+                        <lb n="3"/>aliquis eam <choice><reg>arcam</reg><orig>arca</orig></choice> aperire voluerit<pc type="editorial">,</pc> da
+                        <lb n="4" break="no"/><w xml:id="w1"><choice><reg>bit</reg><orig>vet</orig></choice></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" type="poena" unit="uncia" commodity="aurum" quantity="6">auri uncias sex</measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                     </ab>
             </div>
             <div type="apparatus">
@@ -417,7 +426,7 @@
                         <lem>
                             <choice><reg>bit</reg><orig>vet</orig></choice>
                         </lem>
-                        <rdg source="#bertolini1874a #bertolini1874b #cilv8746 #ilcv3607 #edr097744">
+                        <rdg source="#bertolini1874a #bertolini1874b #cilv8770 #ilcv370 #edr097918">
                             <choice><reg>bit</reg><orig>vit</orig></choice>
                         </rdg>
                     </app>
@@ -510,6 +519,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

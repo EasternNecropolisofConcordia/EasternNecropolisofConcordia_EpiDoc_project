@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Inscription of Martinianus and Severiana</title>
+                <author>Leonardo Battistella</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Università Ca’ Foscari Venezia</authority>
+                <idno type="filename">martinianus_severiana.xml</idno>
+                <idno type="DOI">10.5281/zenodo.22995898</idno>
+                <idno type="tm">125643</idno>
+                <idno type="edr">EDR097902</idno>
+                <idno type="uel">29387</idno>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">
+                        This file is licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+                    </licence>
+                    <p>Images are not covered by this licence: they are reproduced from Ubi Erat Lupa and by kind permission of the Museo Nazionale Concordiese di Portogruaro.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                        </repository>
+                        <idno type="inventory">329</idno>
+                    </msIdentifier>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                                <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                                <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                                <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                                <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                                <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                                <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            </origPlace>
+                            <origDate ana="#late-roman-empire" notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="en">
+                                Mid-Fourth Century A.D.
+                            </origDate>
+                            <origDate ana="#late-roman-empire" notBefore-custom="0325" notAfter-custom="0375" evidence="lettering nomenclature" xml:lang="it">
+                                Metà IV secolo d.C.
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <settlement ref="#concordia" type="city" subtype="ancient" xml:lang="la">Iulia Concordia</settlement>
+                            <settlement ref="#concordia" type="city" subtype="modern" xml:lang="it">Concordia Sagittaria</settlement>
+                            <placeName ref="#venetia" type="region" subtype="ancient" xml:lang="la">Regio X Venetia et Histria</placeName>
+                            <placeName ref="#venetia" type="region" subtype="modern" xml:lang="it">Veneto</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="en">Italy</placeName>
+                            <placeName type="country" subtype="modern" xml:lang="it">Italia</placeName>
+                            <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
+                            <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
+                            <placeName type="plot">Perulli</placeName>
+                            <date type="discovery">1873</date>
+                            <note type="plan_x">1750</note>
+                            <note type="plan_y">810</note>
+                        </provenance>
+                        <provenance type="observed">
+                            <orgName type="museum" ref="#museo-concordiese">
+                                <name>
+                                    Museo Nazionale Concordiese di <settlement ref="#portogruaro">Portogruaro</settlement>
+                                </name>
+                            </orgName>
+                            <note type="observed" subtype="autopsied" xml:lang="en">Now <seg type="location" xml:lang="en">set into the wall of the right nave</seg> of the <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <note type="observed" subtype="autopsied" xml:lang="it">Si conserva <seg type="location" xml:lang="it">murata nella navata destra</seg> del <orgName type="museum" ref="#museo-concordiese">Museo Nazionale Concordiese di Portogruaro</orgName>.</note>
+                            <date type="autopsy">2024</date>
+                        </provenance>
+                    </history>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="en">
+                                        Panel of the frontal slab of the sarcophagus.
+                                    </objectType>
+                                    <objectType xml:lang="it">
+                                        Tabella di sarcofago.
+                                    </objectType>
+                                    <material xml:lang="en">
+                                        Limestone
+                                    </material>
+                                    <material xml:lang="it">
+                                        Pietra calcarea.
+                                    </material>
+                                    <dimensions>
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">80.5</width>
+                                    </dimensions>
+                                </support>
+                                <condition>
+                                    <p xml:lang="en">Sarcophagus panel, broken into two pieces and missing the lower left corner.</p>
+                                    <p xml:lang="it">Tabella di sarcofago fratta in due pezzi e mancante dell’angolo inferiore sinistro.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="execution" key="scalpro">
+                                        Inscribed
+                                    </rs>
+                                    <dimensions>
+                                        <height unit="cm">42</height>
+                                        <width unit="cm">71</width>
+                                    </dimensions>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height min="4.5" max="7.5" unit="cm">4.5-7.5</height>
+                                <note type="palaeographic" xml:lang="en">
+                                    <p>Dextrograde direction, horizontal alignment, vertical module, irregular <term xml:lang="la">ductus</term>, deep incision.</p>
+                                    <p><g type="pl">F</g> with unusual lower arm beneath the crossbar and oblique upper arm ascending to the right.</p>
+                                    <p><g type="pl">M</g> composed of four oblique strokes.</p>
+                                    <p><g type="pl">N</g> with oblique lateral strokes.</p>
+                                </note>
+                                <note type="palaeographic" xml:lang="it">
+                                    <p>Verso destrorso, andamento orizzontale, modulo verticale, <term xml:lang="la">ductus</term> irregolare, solco profondo.</p>
+                                    <p><g type="pl">F</g> con anomalo braccio sottostante alla cravatta e con il braccio superiore obliquo, ascendente verso destra.</p>
+                                    <p><g type="pl">M</g> composta da quattro tratti obliqui.</p>
+                                    <p><g type="pl">N</g> con aste laterali oblique.</p>
+                                </note>
+                            </handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote xml:lang="en">
+                                <p>A <objectType>moulded border</objectType> runs around the perimeter of the panel.</p>
+                                
+                                <p>The figurative apparatus, now lost, is described as follows: on the right side of the viewer (the lid) a dove was carved in relief, while on the western pediment appeared the Constantinian monogram enclosed within a wreath of foliage, whose ribbons extended horizontally downward. The short side of the sarcophagus beneath this pediment bore a sculpted temple supported by two columns, with a patera on its tympanum. On either side of the inscription were two arches, likewise supported by very roughly executed columns, beneath one of which stood a vessel. (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>)</p>
+                            </decoNote>
+                            <decoNote xml:lang="it">
+                                <p>Lo specchio epigrafico è delimitato da una <objectType>cornice modanata</objectType>.</p>
+                                
+                                <p>L’apparato figurativo, oggi perduto, fu così descritto da Bertolini: “[…] sull’ala destra del riguardante (coperchio) ha in rilievo una colomba, e sul frontone occidentale il monogramma di Costantino in corona di fronde, le cui bende si stendono orizzontalmente al basso. Il lato minore dell’arca che è al disotto di questo frontone, porta scolpito un tempio sostenuto da due colonne e sul timpano d’esso una patera. Ai fianchi dell’epigrafe due archi sostenuti pure da rozzissime colonne e sotto uno di essi un vaso” (<ref target="../references/bibliography.xml#bertolini1874a">Bertolini 1874a, 24</ref>).</p>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        <particDesc>
+           <listPerson>
+               <person xml:id="martinianus">
+                   <persName>
+                       <name type="full">Flavius Martinianus</name>
+                       <name type="nomen" nymRef="latin">Flavius</name>
+                       <name type="cognomen" nymRef="latin">Martinianus</name>
+                       <name type="gens">Flavia</name>
+                   </persName>
+                   <gender>m</gender>
+                   <note type="occupation">fabricensis</note>
+                   <note type="rank">biarchus</note>
+                   <note type="role">dedicator/deceased</note>
+                   <note type="relationship" corresp="#aur_severiana">husband</note>
+               </person>
+               <person xml:id="aur_severiana">
+                 <persName>
+                     <name type="full">Aurelia Severiana</name>
+                     <name type="nomen">Aurelia</name>
+                     <name type="cognomen" nymRef="latin">Severiana</name>
+                     <name type="gens">Aurelia</name>
+                 </persName>
+                  <gender value="f">f</gender>
+                  <note type="occupation">civilian</note>
+                  <note type="role">deceased</note>
+                  <note type="relationship" corresp="#martinianus">wife</note>
+              </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#facio"
+                             active="#martinianus"
+                             passive="#martinianus #aur_severiana"
+                             corresp="#w2"/>
+               </listRelation>
+           </listPerson>
+        </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
+     </profileDesc>
+     <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="decorations">
+                    <category xml:id="chi-rho">
+                        <catDesc>
+                            <term xml:lang="en">Chi-Rho (Christogram)</term>
+                            <term xml:lang="it">Crismon / Chi-Rho</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/591">
+                                <idno>591</idno>
+                            </ref>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300310602">
+                                <idno>300310602</idno>
+                            </ref>
+                            <idno type="unicode">U+2627</idno>
+                        </catDesc>
+                    </category>
+                    <category xml:id="hedera">
+                        <catDesc>
+                            <term xml:lang="la">Hedera Distinguens</term>
+                            <term xml:lang="en">Ivy leaf</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/decor/lod/155">
+                                <idno>155</idno>
+                            </ref>
+                            <idno type="unicode">U+2766</idno>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="military-ranks">
+                    <category xml:id="biarchus">
+                        <catDesc>
+                            <term xml:lang="la">biarchus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2006560">
+                                <idno>2006560</idno>
+                            </ref>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q117788046">
+                                <idno>Q117788046</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="campidoctor">
+                        <catDesc>
+                            <term xml:lang="la">campidoctor</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2008107">
+                                <idno>2008107</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="centenarius">
+                        <catDesc>
+                            <term xml:lang="la">centenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2009414">
+                                <idno>2009414</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="ducenarius">
+                        <catDesc>
+                            <term xml:lang="la">ducenarius</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2018365">
+                                <idno>2018365</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="magister-primus">
+                        <catDesc>
+                            <term xml:lang="la">magister (primus)</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009655">
+                                <idno>1009655</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="miles">
+                        <catDesc>
+                            <term xml:lang="la">miles</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1009936">
+                                <idno>1009936</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector">
+                        <catDesc>
+                            <term xml:lang="la">protector domesticus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2048603">
+                                <idno>2048603</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="protector-domesticus">
+                        <catDesc>
+                            <term xml:lang="la">(protector) domesticus</term>
+                            <ref type="wikidata" target="https://www.wikidata.org/wiki/Q1237339">
+                                <idno>Q1237339</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="semissalis">
+                        <catDesc>
+                            <term xml:lang="la">semissalis</term>
+                            <gloss xml:lang="en">Late Roman military rank; received 1 capitum (fodder ration, indicating mounted service) and 1½ annonae (one and a half food rations). Function unclear; attested in African and Sardinian ducal officia</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 111</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="senator-military">
+                        <catDesc>
+                            <term xml:lang="la">senator</term>
+                            <gloss xml:lang="en">Late Roman military rank, superior to ducenarius; attested in scholae, fabricenses, and infantry units. Originally granted to ducenarii of agentes in rebus from 390 CE; the transfer of the senatorial title to military context remains unclear.</gloss>
+                            <ref target="../references/bibliography.xml#holder">Holder 1920, 119-120</ref>
+                            <ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="tribunus">
+                        <catDesc>
+                            <term xml:lang="la">tribunus</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=1016734">
+                                <idno>1016734</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="periods">
+                    <category xml:id="late-roman-empire">
+                        <catDesc>
+                            <term xml:lang="en">Late Roman Empire</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/30">
+                                <idno>30</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="principate">
+                        <catDesc>
+                            <term xml:lang="en">Principate (High Roman Empire)</term>
+                            <ref type="eagle" target="https://www.eagle-network.eu/voc/dates/lod/22">
+                                <idno>22</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="places">
+                    <category xml:id="concordia">
+                        <catDesc>
+                            <term xml:lang="la">Iulia Concordia</term>
+                            <ref type="tm" target="https://www.trismegistos.org/place/12269">
+                                <idno>12269</idno>
+                            </ref>
+                            <ref type="dare" target="https://imperium.ahlfeldt.se/places/10645.html">
+                                <idno>10645</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="portogruaro">
+                        <catDesc>
+                            <term xml:lang="en">Portogruaro</term>
+                            <ref type="tgn" target="https://www.getty.edu/vow/TGNFullDisplay?find=Portogruaro&amp;place=&amp;nation=&amp;prev_page=1&amp;english=Y&amp;subjectid=7003045">
+                                <idno>7003045</idno>
+                            </ref>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/148456131">
+                                <idno>148456131</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="museo-concordiese">
+                        <catDesc>
+                            <term xml:lang="en">National Concordiese Museum of Portogruaro</term>
+                            <ref type="viaf" target="https://viaf.org/en/viaf/124364831">
+                                <idno>124364831</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="occupation">
+                    <category xml:id="soldier">
+                        <catDesc>
+                            <term xml:lang="en">Soldier</term>
+                            <ref type="aat" target="http://vocab.getty.edu/page/aat/300185678">
+                                <idno>300185678</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                    <category xml:id="fabricenses">
+                        <catDesc>
+                            <term xml:lang="la">Fabricensis</term>
+                            <ref type="latin-lexicon" target="https://www.latinlexicon.org/definition.php?p1=2021497">
+                                <idno>2021497</idno>
+                            </ref>
+                        </catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="../../images/inscriptions/martinianus_severiana.jpg">
+            <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
+            <desc type="figDesc">The inscription of Martinianus and Severiana. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29387/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+        </graphic>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la">
+                <div type="textpart" subtype="lid" n="a">
+                    <ab>
+                        <lb n="1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8754 #ilcv520"><expan><abbr>M</abbr><ex>anibus</ex></expan> <expan><abbr>D</abbr><ex>is</ex></expan></supplied>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="chest" n="b">
+                    <ab>
+                        <lb n="1"/><persName ref="#martinianus"><w xml:id="w1">Flavius</w> Martinia</persName>
+                        <lb n="2" break="no"/><persName ref="#martinianus">nus</persName><pc type="editorial">,</pc> <choice><reg>biarchus</reg><orig>biarcus</orig></choice> fabri
+                        <lb n="3" break="no"/>ce<supplied reason="omitted">n</supplied>sis<pc type="editorial">,</pc> sibi et <persName ref="#aur_severiana"><expan><abbr>Aur</abbr><ex>eliae</ex></expan></persName>
+                        <lb n="4"/><persName ref="#aur_severiana"><choice><reg>Severianae</reg><orig>Severiane</orig></choice></persName> coniugi
+                        <lb n="5"/>vivus <w xml:id="w2" lemma="facio">fecit</w><pc type="editorial">.</pc>
+                        <lb n="6"/><anchor xml:id="a-sanctio-1"/><expan><abbr>Pos</abbr><ex>t</ex></expan> <expan><abbr>obitu</abbr><ex>m</ex></expan><pc type="editorial">,</pc> si <expan><abbr>q</abbr><ex>uis</ex></expan> <expan><abbr>vol</abbr><ex>uerit</ex></expan> <supplied reason="omitted">aperire</supplied><pc type="editorial">,</pc> <expan><abbr>dab</abbr><ex>it</ex></expan> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><expan><abbr>fisc</abbr><ex>o</ex></expan></rs> <measure xml:id="m1" type="poena" unit="uncia" commodity="aurum" quantity="3"><expan><abbr>a</abbr><ex>uri</ex></expan> <expan><abbr>un</abbr><ex>cias</ex></expan> <num value="3">III</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
+                    </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1" from="#w1">
+                        <lem>
+                            Flavius
+                        </lem>
+                        <rdg source="#bertolini1874a #bertolini1874b #bertolini1875b">
+                            <expan><abbr>Fl</abbr><ex>avius</ex></expan>
+                        </rdg>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>To the <term xml:lang="la">Manes</term> gods.</p>
+                <p><persName ref="#martinianus" xml:lang="la">Flavius Martinianus</persName>, <term xml:lang="la">biarchus</term> of the <term xml:lang="la">fabricenses</term>, made (this tomb) for himself and for his wife <persName ref="#aur_severiana" xml:lang="la">Aurelia Severiana</persName> while still alive.</p>
+                <p>After (their) death, if anyone wishes to open (it), he shall give to the <term xml:lang="la">fiscus</term> 3 (roman) ounces of gold</p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p>Agli dèi Mani.</p>
+                <p>Flavio Martiniano, <term xml:lang="la">biarchus</term> dei <term xml:lang="la">fabricenses</term>, fece (questa arca) per sé stesso e sua moglie <persName ref="#aur_severiana" xml:lang="la">Aurelia Severiana</persName> da vivo.</p>
+                <p>Dopo la (loro) morte, se qualcuno desidererà aprire (l'arca), verserà al <term xml:lang="la">fiscus</term> 3 once (romane) d'oro</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p><persName ref="#martinianus" xml:lang="la">Flavius Martinianus</persName> commissioned during his lifetime a sarcophagus for himself and for his wife <persName ref="#aur_severiana" xml:lang="la">Aurelia Severiana</persName>. Anyone who violated the tomb would have to pay the treasury three ounces of gold.</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> was a <term xml:lang="la">fabricensis</term>, a worker in the arrow factory of Concordia, and held the role of <term xml:lang="la">biarchus</term>, a subordinate military rank (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
+                
+                <p>The <term xml:lang="la">cognomen Martinianus</term> is attested from the time of Emperor Carus (<ref target="../references/corpora_databases.xml#pir2">PIR² V, 23-24</ref>). In late antiquity, <persName xml:lang="la">Sextus Marcius Martinianus</persName> was famous, <term xml:lang="la">magister officiorum</term> of Emperor Licinius and appointed Caesar by the latter shortly before being deposed by Constantine and then executed (<ref target="../references/corpora_databases.xml#plre">PLRE I, 563</ref>).</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> is also the name of a veteran born in Dacia in the second half of the 3rd century who, after serving for forty-five years, retired to Milan, where he established his tomb (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
+                
+                <p>The <term xml:lang="la">gentilicium Aurelius</term>, already widespread in Concordia from the early imperial period (<ref target="../references/corpora_databases.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./gaudentius_martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./alexandria_sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./dionisia_a.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./dionisia_b.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./aristo_veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
+            </div>
+            <div type="commentary" xml:lang="it">
+                <p><persName xml:lang="la">Flavius Martinianus</persName> commissionò da vivo un sarcofago per sé e per la moglie <persName xml:lang="la">Aurelia Severiana</persName>. Chiunque avesse violato la tomba, avrebbe dovuto versare al fisco tre once d'oro.</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> era un <term xml:lang="la">fabricensis</term>, un operaio della fabbrica di frecce di Concordia e occupava il ruolo di <term xml:lang="la">biarchus</term>, un grado militare subalterno (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 64</ref>).</p>
+                
+                <p>Il <term xml:lang="la">cognomen Martinianus</term> è attestato già dai tempi dell'imperatore Caro (<ref target="../references/corpora_databases.xml#pir2">PIR² V, 23-24</ref>). In antichità tarda è famoso <persName xml:lang="la">Sesto Marzio Martiniano</persName>, <term xml:lang="la">magister officiorum</term> dell'imperatore Licinio e nominato da quest'ultimo Cesare poco prima che venisse destituito da Costantino per poi essere giustiziato (<ref target="../references/corpora_databases.xml#plre">PLRE I, 563</ref>).</p>
+                
+                <p><persName xml:lang="la">Martinianus</persName> è anche il nome di un veterano nato in Dacia nella seconda metà del III secolo che, dopo aver militato per quarantacinque anni, si ritirò a Milano, dove stabilì la propria tomba (<ref target="../references/corpora_databases.xml#cil"><term xml:lang="la">CIL</term> V 6244</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR139631">EDR139631</ref>).</p>
+                
+                <p>Il gentilizio <term xml:lang="la">Aurelius</term>, già diffuso a Concordia a partire dall'alto impero (<ref target="../references/corpora_databases.xml#cil">CIL V 8656</ref> = <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097826">EDR097826</ref>), is found in numerous late antique inscriptions, including those discovered in the Eastern Necropolis (<ref target="./gaudentius_martina.xml"><term xml:lang="la">CIL</term> V 8726</ref> - <ref target="./alexandria_sopatrus.xml"><term xml:lang="la">CIL</term> V 8734</ref> - <ref target="./dionisia_a.xml"><term xml:lang="la">CIL</term> V 8735</ref> - <ref target="./dionisia_b.xml"><term xml:lang="la">CIL</term> V 8735a</ref> - <ref target="./aristo_veneria"><term xml:lang="la">CIL</term> V 8741</ref>).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl xml:id="bertolini1874a">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874a"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874a"/>
+                        <title>Bertolini 1874a</title>
+                        <citedRange unit="page">24</citedRange>
+                        <note type="number">nr. 9</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1874b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1874b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1874b"/>
+                        <title>Bertolini 1874b</title>
+                        <citedRange unit="page">284</citedRange>
+                        <note type="number">nr. 5</note>
+                    </bibl>
+                    <bibl xml:id="bertolini1875b">
+                        <ptr target="../bibliography/master_bibliography.xml#bertolini1875b"/>
+                        <ptr target="../references/bibliography.xml#bertolini1875b"/>
+                        <title>Bertolini 1875b</title>
+                        <citedRange unit="page">116</citedRange>
+                        <note type="number">nr. 8</note>
+                    </bibl>
+                    <bibl type="corpus" xml:id="cilv8754">
+                        <ptr target="../bibliography/master_bibliography.xml#cil"/>
+                        <ptr target="../references/corpora_databases.xml#cil"/>
+                        <title><term xml:lang="la">CIL</term> V 8754</title>
+                    </bibl>
+                    <bibl type="corpus" xml:id="ilcv520">
+                        <ptr target="../bibliography/master_bibliography.xml#ilcv"/>
+                        <ptr target="../references/corpora_databases.xml#ilcv"/>
+                        <title><term xml:lang="la">ILCV</term> 520</title>
+                    </bibl>
+                    <bibl xml:id="lettich1983">
+                        <ptr target="../bibliography/master_bibliography.xml#lettich1983"/>
+                        <ptr target="../references/bibliography.xml#lettich1983"/>
+                        <title>Lettich 1983</title>
+                        <citedRange unit="page">56-57</citedRange>
+                        <note type="number">nr. 13</note>
+                    </bibl>
+                    <bibl type="database" xml:id="edr097902">
+                        <ptr target="../bibliography/master_bibliography.xml#edr"/>
+                        <ptr target="../references/corpora_databases.xml#edr"/>
+                        <title><ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR097902">EDR097902</ref></title>
+                        <author>Damiana Baldassarra</author>
+                        <date when="2007-11-26">26-11-2007</date>
+                    </bibl>
+                </listBibl>
+            </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
+        </body>
+    </text>
+</TEI>

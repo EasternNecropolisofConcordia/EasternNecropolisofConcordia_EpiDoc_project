@@ -149,8 +149,17 @@
                    <note type="numerus">Bructeri</note>
                    <note type="role">deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio" cert="low"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             passive="#manio"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-corporalis ../vocabularies/taxonomy.xml#poena-pecuniaria ../vocabularies/taxonomy.xml#poenae-alternativae"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -356,12 +365,12 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/>Arca Manioni, <choice><reg>militi</reg><orig>milete</orig></choice>, <supplied reason="omitted">d</supplied>e nume
-                    <lb n="2" break="no"/>ro Bruc<choice><corr>t</corr><sic>h</sic></choice>er<supplied reason="omitted">or</supplied>um et si quis eam
-                    <lb n="3"/>aperuerit, ut <measure type="mutilatory_sanction"><choice><reg>manus</reg><orig>mani</orig></choice> <choice><reg>praecidantur</reg><orig>precidantur</orig></choice></measure>
-                    <lb n="4"/>aut in <choice><reg>fisco</reg><orig>fesco</orig></choice> det <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri pondo <choice><reg>duo</reg><orig>doa</orig></choice></measure>.
+                    <lb n="1"/>Arca Manioni<pc type="editorial">,</pc> <choice><reg>militi</reg><orig>milete</orig></choice><pc type="editorial">,</pc> <supplied reason="omitted">d</supplied>e nume
+                    <lb n="2" break="no"/>ro <rs type="military" ref="../vocabularies/organizations.xml#bructeri">Bruc<choice><corr>t</corr><sic>h</sic></choice>er<supplied reason="omitted">or</supplied>um</rs> et <anchor xml:id="a-sanctio-1"/>si quis eam
+                    <lb n="3"/>aperuerit<pc type="editorial">,</pc> ut <choice><reg>manus</reg><orig>mani</orig></choice> <choice><reg>praecidantur</reg><orig>precidantur</orig></choice>
+                    <lb n="4"/>aut in <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><choice><reg>fisco</reg><orig>fesco</orig></choice></rs> det <measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="2">auri pondo <choice><reg>duo</reg><orig>doa</orig></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                     <lb n="5"/><expan><abbr>cons</abbr><ex>ulibus</ex></expan> <expan><abbr>n</abbr><ex>ostris</ex></expan> Arcadio
-                    <lb n="6"/>et <supplied reason="omitted">H</supplied>onorio <expan><ex>Au</ex><abbr>g</abbr><ex>u</ex><abbr>st</abbr><ex>i</ex><abbr>s</abbr></expan>.
+                    <lb n="6"/>et <supplied reason="omitted">H</supplied>onorio <expan><ex>Au</ex><abbr>g</abbr><ex>u</ex><abbr>st</abbr><ex>i</ex><abbr>s</abbr></expan><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -451,6 +460,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>
