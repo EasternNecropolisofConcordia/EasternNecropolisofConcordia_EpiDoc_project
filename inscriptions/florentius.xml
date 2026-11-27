@@ -157,7 +157,7 @@
                    <note type="role">dedicator/deceased</note>
                </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#comparo"
                              active="#flflorentius" passive="#flflorentius"
                              corresp="#w3"/>

@@ -152,7 +152,7 @@
                     <note type="role">dedicator/deceased</note>
                 </person>
                 <listRelation>
-                    <relation name="commission"
+                    <relation name="dedicatio"
                               ref="../vocabularies/taxonomy.xml#emo"
                               active="#abruna" passive="#abruna"
                               corresp="#w4"/>

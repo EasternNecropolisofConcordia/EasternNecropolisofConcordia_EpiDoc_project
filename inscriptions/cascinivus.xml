@@ -167,7 +167,7 @@
                    <note type="relationship" corresp="#cascinivus">colleague</note>
                </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#comparo"
                              active="#collegaecascinivi" passive="#cascinivus"
                              corresp="#w2"/>

@@ -179,8 +179,19 @@
                    <note type="numerus">Batavi Seniores</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#carpilio"
+                             passive="#carpilio"
+                             corresp="#w2"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -386,12 +397,12 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#carpilio"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <w xml:id="w1">Carpilio</w></persName>, <expan><abbr>domesti</abbr><ex>cus</ex></expan>
-                    <lb n="2"/>de <expan><abbr>num</abbr><ex>ero</ex></expan> <expan><abbr>Bat</abbr><ex>avorum</ex></expan> <expan><abbr>sen</abbr><ex>iorum</ex></expan>, qui vi
-                    <lb n="3" break="no"/>xit <expan><abbr>an</abbr><ex>nis</ex></expan> <num value="30">XXX</num>, arcam sibi
-                    <lb n="4"/>de <choice><reg>proprio</reg><orig>propi</orig></choice> suo <choice><reg>comparavit</reg><orig><expan><abbr>co<hi rend="reversed">n</hi>par</abbr><ex>avit</ex></expan></orig></choice>.
-                    <lb n="5"/>Si quis <choice><reg>eam</reg><orig>ea</orig></choice> <expan><abbr>aperi</abbr><ex>re</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan>,
-                    <lb n="6"/><expan><abbr>dabi</abbr><ex>t</ex></expan> <expan><abbr>fi</abbr><ex>sci</ex></expan> <expan><abbr>viri</abbr><ex>bus</ex></expan> <measure type="fine" unit="roman_pound" commodity="gold" quantity="5">auri <expan><abbr>p</abbr><ex>ondo</ex></expan> <num value="5">V</num></measure>.
+                    <lb n="1"/><persName ref="#carpilio"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <w xml:id="w1">Carpilio</w></persName><pc type="editorial">,</pc> <expan><abbr>domesti</abbr><ex>cus</ex></expan>
+                    <lb n="2"/>de <expan><abbr>num</abbr><ex>ero</ex></expan> <rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores"><expan><abbr>Bat</abbr><ex>avorum</ex></expan> <expan><abbr>sen</abbr><ex>iorum</ex></expan></rs><pc type="editorial">,</pc> qui vi
+                    <lb n="3" break="no"/>xit <expan><abbr>an</abbr><ex>nis</ex></expan> <num value="30">XXX</num><pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/>arcam sibi
+                    <lb n="4"/>de <choice><reg>proprio</reg><orig>propi</orig></choice> suo <w xml:id="w2" lemma="comparo"><choice><reg>comparavit</reg><orig><expan><abbr>co<hi rend="reversed">n</hi>par</abbr><ex>avit</ex></expan></orig></choice></w><anchor xml:id="a-deproprio-2"/><pc type="editorial">.</pc>
+                    <lb n="5"/><anchor xml:id="a-sanctio-1"/>Si quis <choice><reg>eam</reg><orig>ea</orig></choice> <expan><abbr>aperi</abbr><ex>re</ex></expan> <expan><abbr>volu</abbr><ex>erit</ex></expan><pc type="editorial">,</pc>
+                    <lb n="6"/><expan><abbr>dabi</abbr><ex>t</ex></expan> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><expan><abbr>fi</abbr><ex>sci</ex></expan></rs> <expan><abbr>viri</abbr><ex>bus</ex></expan> <measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="5">auri <expan><abbr>p</abbr><ex>ondo</ex></expan> <num value="5">V</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -495,6 +506,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

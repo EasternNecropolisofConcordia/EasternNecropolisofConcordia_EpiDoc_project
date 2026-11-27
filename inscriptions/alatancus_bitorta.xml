@@ -185,7 +185,7 @@
                   <note type="relationship" corresp="#bitorta">husband</note>
               </person>
               <listRelation>
-                  <relation name="commission"
+                  <relation name="dedicatio"
                             ref="../vocabularies/taxonomy.xml#comparo"
                             active="#alatancus #bitorta" passive="#alatancus #bitorta"
                             corresp="#w3"/>
@@ -396,7 +396,7 @@
                     <lb n="3" break="no"/><w xml:id="w4" prev="#w3">paraverunt</w><anchor xml:id="a-deproprio-2"/> <anchor xml:id="a-commendatio-1"/><w xml:id="w5" lemma="peto">petimus</w> <w xml:id="w6">omn<choice><sic>i</sic><corr>e</corr></choice>m</w> <rs type="socecon" ref="../vocabularies/organizations.xml#ecclesia-concordiensis">cler<hi rend="ligature">um</hi></rs>
                     <lb n="4"/>et cuncta<supplied reason="omitted">m</supplied> <rs type="socecon" ref="../vocabularies/organizations.xml#ecclesia-concordiensis">fraternitatem</rs> ut nullus
                     <lb n="5"/>de genere nostro vel aliquis in hac
-                    <lb n="6"/>sepultura ponatur<anchor xml:id="a-commendatio-2"/>. Scriptum est:
+                    <lb n="6"/>sepultura ponatur<anchor xml:id="a-commendatio-2"/><pc type="editorial">.</pc> Scriptum est<pc type="editorial">:</pc>
                     <lb n="7"/>Quod tibi fieri non v<unclear>i</unclear>s alio ne fe
                     <lb n="8" break="no"/>ceris  
                 </ab>

@@ -46,7 +46,7 @@
                                 <placeName type="site" xml:lang="en">Eastern Necropolis</placeName>
                                 <placeName type="site" xml:lang="it">Necropoli di Levante / Sepolcreto dei Militi</placeName>
                             </origPlace>
-                            <origDate ana="#principatee" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="en">
+                            <origDate ana="#principate" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="en">
                                 First Half of the III Century AD.
                             </origDate>
                             <origDate ana="#principate" notBefore-custom="0200" notAfter-custom="0250" evidence="lettering nomenclature artistic-style" xml:lang="it">
@@ -171,6 +171,11 @@
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#fabianus">mother</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             active="#sestia" passive="#fabianus"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -378,8 +383,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><expan><abbr>Q</abbr><ex>uinto</ex></expan> Fabio <expan><abbr>Q</abbr><ex>uinti</ex></expan> <expan><abbr>f</abbr><ex>ilio</ex></expan> Fabiano.
-                    <lb n="2"/>Turrania Sestia,
+                    <lb n="1"/><persName ref="#fabianus"><expan><abbr>Q</abbr><ex>uinto</ex></expan> Fabio <expan><abbr>Q</abbr><ex>uinti</ex></expan> <expan><abbr>f</abbr><ex>ilio</ex></expan> Fabiano</persName><pc type="editorial">.</pc>
+                    <lb n="2"/><persName ref="#sestia">Turrania Sestia</persName><pc type="editorial">,</pc>
                     <lb n="3"/>filio pi<hi rend="tall">i</hi>ssimo
                 </ab>
             </div>

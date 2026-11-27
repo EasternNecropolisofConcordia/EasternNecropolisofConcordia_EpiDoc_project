@@ -158,8 +158,19 @@
                   <note type="role">dedicator/deceased</note>
                   <note type = "relationship" corresp="#gidnadius">wife</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#gidnadius #apra"
+                             passive="#gidnadius #apra"
+                             corresp="#w3"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -347,7 +358,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/apra_gidnadius.jpg">
             <desc type="alt">Inscribed panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Apra and Gidnadius. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Apra and Gidnadius. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29317/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
@@ -355,11 +366,11 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#gidnadius"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Gidnadius</persName> veteranus
-                    <lb n="2"/>bene meritus <w xml:id="w1"><choice><corr>e</corr><sic>f</sic></choice>t</w> <persName ref="#apra">Emilia Apra</persName>,
-                    <lb n="3"/>de proprio labore suo <w xml:id="w2">arca<supplied reason="omitted">m</supplied></w>
-                    <lb n="4"/>sibi <choice><reg>comparaverunt</reg><orig>conparaverunt</orig></choice> <supplied reason="omitted">in</supplied> solo Con
-                    <lb n="5" break="no"/>cordiensi. <expan><abbr>Pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovitu</abbr><ex>m</ex></expan></orig></choice> <expan><abbr>nos</abbr><ex>trum</ex></expan>, si quis vo
-                    <lb n="6" break="no"/>luerit aperire <w xml:id="w3">dabi<choice><corr>t</corr><sic>i</sic></choice></w> fisco <measure type="fine" unit="solidus" quantity="10"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="10">X</num></measure>.
+                    <lb n="2"/>bene meritus <w xml:id="w1"><choice><corr>e</corr><sic>f</sic></choice>t</w> <persName ref="#apra">Emilia Apra</persName><pc type="editorial">,</pc>
+                    <lb n="3"/><anchor xml:id="a-deproprio-1"/>de proprio labore suo <w xml:id="w2">arca<supplied reason="omitted">m</supplied></w>
+                    <lb n="4"/>sibi <w xml:id="w3" lemma="comparo"><choice><reg>comparaverunt</reg><orig>conparaverunt</orig></choice></w><anchor xml:id="a-deproprio-2"/> <supplied reason="omitted">in</supplied> solo Con
+                    <lb n="5" break="no"/>cordiensi<pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/><expan><abbr>Pos</abbr><ex>t</ex></expan> <choice><reg>obitum</reg><orig><expan><abbr>ovitu</abbr><ex>m</ex></expan></orig></choice> <expan><abbr>nos</abbr><ex>trum</ex></expan><pc type="editorial">,</pc> si quis vo
+                    <lb n="6" break="no"/>luerit aperire <w xml:id="w4">dabi<choice><corr>t</corr><sic>i</sic></choice></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" type="poena" unit="solidus" quantity="10"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="10">X</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -380,7 +391,7 @@
                             arcam
                         </rdg>
                     </app>
-                    <app loc="6" from="#w3" to="#w3">
+                    <app loc="6" from="#w4" to="#w4">
                         <lem>
                             dabi<choice><corr>t</corr><sic>i</sic></choice>
                         </lem>
@@ -476,6 +487,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

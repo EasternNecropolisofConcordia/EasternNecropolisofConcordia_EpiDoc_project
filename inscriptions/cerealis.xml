@@ -194,10 +194,21 @@
                   <gender>m</gender>
                   <note type="occupation">civilian</note>
                   <note type="role">mentioned</note>
-                  <note type="relationship" corresp="#asterius">father</note>
+                  <note type="relationship" corresp="#asteria">father</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#renovo"
+                             active="#asteria"
+                             passive="#asteria"
+                             corresp="#w2"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -385,7 +396,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/cerealis.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus.</desc>
-            <desc type="figDesc">The inscription of Cerealis. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Cerealis. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29244/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
@@ -398,11 +409,11 @@
                 </div>
                 <div type="textpart" n="b">
                     <ab>
-                        <lb n="1"/><persName ref="#asteria">Ennia Asteria</persName>, <persName ref="#asterius">Enni Asteri</persName> filia,
+                        <lb n="1"/><persName ref="#asteria">Ennia Asteria</persName><pc type="editorial">,</pc> <persName ref="#asterius">Enni Asteri</persName> filia<pc type="editorial">,</pc>
                         <lb n="2"/>ex origine <persName ref="#cerealis">Enni Cerealis</persName> avi sui arcam
-                        <lb n="3"/>suo nomine renovavit, quam post ex
-                        <lb n="4" break="no"/>cessum suum si quis <choice><reg>irrumperit</reg><orig>inruperit</orig></choice> inferet fisci
-                        <lb n="5"/>rationibus <measure type="fine" unit="sestertius" quantity="200"><choice><reg>sestertium</reg><orig>HS</orig></choice> <num value="200">CC</num> <choice><abbr>N</abbr><expan>N<ex>ummum</ex></expan></choice></measure>. Fili<supplied reason="omitted">i</supplied> sane veniam habebunt.
+                        <lb n="3"/>suo nomine <w xml:id="w2" lemma="renovo">renovavit</w><pc type="editorial">,</pc> <anchor xml:id="a-sanctio-1"/>quam post ex
+                        <lb n="4" break="no"/>cessum suum si quis <choice><reg>irrumperit</reg><orig>inruperit</orig></choice> inferet <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisci</rs>
+                        <lb n="5"/>rationibus <measure xml:id="m1" type="poena" unit="sestertius" quantity="200"><choice><reg>sestertium</reg><orig>HS</orig></choice> <num value="200">CC</num> <choice><abbr>N</abbr><expan>N<ex>ummum</ex></expan></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc> Fili<supplied reason="omitted">i</supplied> sane veniam habebunt<pc type="editorial">.</pc>
                     </ab>
                 </div>
             </div>
@@ -466,6 +477,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

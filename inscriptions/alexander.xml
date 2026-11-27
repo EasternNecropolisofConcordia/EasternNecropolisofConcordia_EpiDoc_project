@@ -188,7 +188,7 @@
                    <note type="relationship" corresp="#alexander">mother</note>
                </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#facio"
                              active="#sabbatia" passive="#alexander #sabbatia"
                              corresp="#w4"/>
@@ -390,13 +390,13 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#alexander">Alexandro</persName> filio <w xml:id="w1">piissimo</w>
-                    <lb n="2"/>mirae verecundiae, <w xml:id="w2">singular<add>i</add><supplied reason="omitted">s</supplied></w>
-                    <lb n="3"/>innocentiae, castitat<choice><corr>is</corr><sic>e</sic></choice>, integ
-                    <lb n="4" break="no"/>ro notarum litteris erudito,
-                    <lb n="5"/>qui vixit <expan><abbr><unclear>a</unclear>nn</abbr><ex>is</ex></expan> <num value="17">XVII</num>. <persName ref="#sabbatia">Sabbatia</persName>
+                    <lb n="2"/>mirae verecundiae<pc type="editorial">,</pc> <w xml:id="w2">singular<add>i</add><supplied reason="omitted">s</supplied></w>
+                    <lb n="3"/>innocentiae<pc type="editorial">,</pc> castitat<choice><corr>is</corr><sic>e</sic></choice><pc type="editorial">,</pc> integ
+                    <lb n="4" break="no"/>ro notarum litteris erudito<pc type="editorial">,</pc>
+                    <lb n="5"/>qui vixit <expan><abbr><unclear>a</unclear>nn</abbr><ex>is</ex></expan> <num value="17">XVII</num><pc type="editorial">.</pc> <persName ref="#sabbatia">Sabbatia</persName>
                     <lb n="6"/>mater ad ultimum vitae
                     <lb n="7"/>deflens exitum <w xml:id="w3">fili</w>
-                    <lb n="8"/>et sibi <w xml:id="w4" lemma="facio">fecit</w>.
+                    <lb n="8"/>et sibi <w xml:id="w4" lemma="facio">fecit</w><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

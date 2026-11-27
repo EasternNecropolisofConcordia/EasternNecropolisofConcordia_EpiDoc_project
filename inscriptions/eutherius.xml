@@ -184,6 +184,13 @@
                    <note type="role">deceased</note>
                    <note type="relationship" corresp="#costantius">son</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#pono"
+                             active="#costantius"
+                             passive="#eutherius"
+                             corresp="#w3"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -373,20 +380,20 @@
     <facsimile>
         <graphic url="../../images/inscriptions/eutherius.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Eutherius. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Eutherius. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29366/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                 <ab>
-                    <lb n="1"/><persName ref="#costantius"><expan><abbr>F<surplus>a</surplus>l</abbr><ex>avius</ex></expan> Costantius</persName>, pientiss
-                    <lb n="2" break="no"/>mo filio <persName ref="#eutherius">Eutherio</persName>, <w xml:id="w1" next="#w2">ami<add>s</add><supplied reason="omitted">s</supplied><add place="above">i</add>on</w>
-                    <lb n="3" break="no"/><w xml:id="w2" prev="#w1">e</w> et dolore orbatus, memo
-                    <lb n="4" break="no"/>riam corpori eius posui, cui
+                    <lb n="1"/><persName ref="#costantius"><expan><abbr>F<surplus>a</surplus>l</abbr><ex>avius</ex></expan> Costantius</persName><pc type="editorial">,</pc> pientiss
+                    <lb n="2" break="no"/>mo filio <persName ref="#eutherius">Eutherio</persName><pc type="editorial">,</pc> <w xml:id="w1" next="#w2">ami<add>s</add><supplied reason="omitted">s</supplied><add place="above">i</add>on</w>
+                    <lb n="3" break="no"/><w xml:id="w2" prev="#w1">e</w> et dolore orbatus<pc type="editorial">,</pc> memo
+                    <lb n="4" break="no"/>riam corpori eius <w xml:id="w3" lemma="pono">posui</w><pc type="editorial">,</pc> cui
                     <lb n="5" break="no"/>us asum aliquid sol
-                    <lb n="6" break="no"/>acii fore confido, vixit
-                    <lb n="7"/>annos <num value="28">XXVIII</num>.
+                    <lb n="6" break="no"/>acii fore confido<pc type="editorial">,</pc> vixit
+                    <lb n="7"/>annos <num value="28">XXVIII</num><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

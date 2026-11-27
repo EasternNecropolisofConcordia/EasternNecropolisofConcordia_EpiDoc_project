@@ -153,7 +153,7 @@
                     <note type="role">dedicator/deceased</note>
                 </person>
                 <listRelation>
-                    <relation name="commission"
+                    <relation name="dedicatio"
                               ref="../vocabularies/taxonomy.xml#comparo"
                               active="#batemodus" passive="#batemodus"
                               corresp="#w2"/>

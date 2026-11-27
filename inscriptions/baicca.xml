@@ -180,11 +180,22 @@
                        <name type="cognomen" nymRef="illyric">Baicca</name>
                    </persName>
                    <gender>m</gender>
-                   <note type="occupation">civilian?</note>
+                   <note type="occupation" cert="low">civilian</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#baicca"
+                             passive="#baicca"
+                             corresp="#w1"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -383,23 +394,23 @@
     <facsimile>
         <graphic url="../../images/inscriptions/baicca.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Baicca. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Baicca. Photograph courtesy of the <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29316/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                 <ab>
-                    <lb n="1"/>Ego magister <persName ref="#baicca">Baicca</persName>, de
+                    <lb n="1"/>Ego magister <persName ref="#baicca">Baicca</persName><pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/>de
                     <lb n="2"/>proprio meo arca<supplied reason="omitted">m</supplied> mihi
-                    <lb n="3"/><choice><reg>comparavi</reg><orig>conparavi</orig></choice>. Si qui eam
-                    <lb n="4"/>voluerit aperire, <choice><reg>dabit</reg><orig>davit</orig></choice>
-                    <lb n="5"/>fisci viribus <measure type="fine" unit="roman_pound" commodity="silver" quantity="5"><w xml:id="w1"><expan><abbr>ar<supplied reason="lost" cert="high">g</supplied></abbr><ex>enti</ex></expan></w> <expan><abbr><hi rend="supraline">p</hi></abbr><ex>ondo</ex></expan> <expan><abbr>n</abbr><ex>ummum</ex></expan> <num value="5">V</num></measure>.
+                    <lb n="3"/><w xml:id="w1" lemma="comparo"><choice><reg>comparavi</reg><orig>conparavi</orig></choice></w><anchor xml:id="a-deproprio-2"/><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si qui eam
+                    <lb n="4"/>voluerit aperire<pc type="editorial">,</pc> <choice><reg>dabit</reg><orig>davit</orig></choice>
+                    <lb n="5"/><rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisci</rs> viribus <measure xml:id="m1" type="poena" unit="libra" commodity="argentum" quantity="5"><w xml:id="w2"><expan><abbr>ar<supplied reason="lost" cert="high">g</supplied></abbr><ex>enti</ex></expan></w> <expan><abbr><hi rend="supraline">p</hi></abbr><ex>ondo</ex></expan> <expan><abbr>n</abbr><ex>ummum</ex></expan> <num value="5">V</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="3" from="#w1" to="#w1">
+                    <app loc="3" from="#w2" to="#w2">
                         <lem>
                             <expan><abbr>ar<supplied reason="lost" cert="high">g</supplied></abbr><ex>enti</ex></expan>
                         </lem>
@@ -476,6 +487,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

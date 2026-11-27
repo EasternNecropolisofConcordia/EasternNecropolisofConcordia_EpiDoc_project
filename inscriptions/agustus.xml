@@ -156,7 +156,7 @@
                    <note type="role">dedicator/deceased</note>
                </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#emo"
                              active="#agustus" passive="#agustus"
                              corresp="#w4"/>

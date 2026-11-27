@@ -157,7 +157,7 @@
                    <note type="role">dedicator/deceased</note>
                </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#comparo"
                              active="#fasta" passive="#fasta"
                              corresp="#w2"/>

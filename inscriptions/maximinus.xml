@@ -169,11 +169,11 @@
                    <note type="relationship" corresp="#maximinus" cert="low">brother</note>
                </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#emo"
                              active="#maximinus" passive="#maximinus"
                              corresp="#seg1"/>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#confero"
                              active="#maximus" passive="#maximinus"
                              corresp="#w2"/>

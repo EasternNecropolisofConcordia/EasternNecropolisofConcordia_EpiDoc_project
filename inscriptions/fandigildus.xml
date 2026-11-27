@@ -173,8 +173,24 @@
                    <note type="numerus">Armigeri Defensores Seniores</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#fandigildus"
+                             passive="#fandigildus"
+                             corresp="#w2"/>
+                   <relation name="commendatio"
+                             ref="../vocabularies/taxonomy.xml#commendo"
+                             active="#fandigildus"
+                             passive="../vocabularies/organizations.xml#ecclesia-concordiensis"
+                             corresp="#w5"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -380,12 +396,12 @@
         <body>
             <div type="edition" xml:space="preserve">
                 <ab>
-                    <lb n="1"/><persName ref="#fandigildus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <w xml:id="w1">Fandigil<supplied reason="omitted">du</supplied>s</w></persName>, protector
-                    <lb n="2"/>de numero armigerorum, vivo
-                    <lb n="3"/><supplied reason="omitted">de</supplied> suo arcam sibi <w xml:id="w2"><choice><reg>comparavit</reg><orig>coparabit</orig></choice></w>. Si <w xml:id="w3">qu<supplied reason="omitted">i</supplied>s</w>
-                    <lb n="4"/><w xml:id="w4">il<supplied reason="omitted">l</supplied>am</w> vol<supplied reason="omitted">u</supplied>er<choice><corr>i</corr><sic>e</sic></choice>t aperire, dabit
-                    <lb n="5"/>in fisco <measure type="fine" unit="uncia" commodity="gold" quantity="6">auri <expan><abbr>un</abbr><ex>cias</ex></expan> sex</measure> et <expan><abbr>ips</abbr><ex>am</ex></expan> <choice><reg>arcam</reg><orig>arca</orig></choice>
-                    <lb n="6"/>in <choice><reg>ecclesiam</reg><orig>eclesie</orig></choice> <expan><abbr>com</abbr><ex>men</ex><abbr>dav</abbr><ex>it</ex></expan>.
+                    <lb n="1"/><persName ref="#fandigildus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <w xml:id="w1">Fandigil<supplied reason="omitted">du</supplied>s</w></persName><pc type="editorial">,</pc> protector
+                    <lb n="2"/>de numero <rs type="military" ref="../vocabularies/organizations.xml#armigeri">armigerorum</rs><pc type="editorial">,</pc> vivo
+                    <lb n="3"/><anchor xml:id="a-deproprio-1"/><supplied reason="omitted">de</supplied> suo arcam sibi <w xml:id="w2" lemma="comparo"><choice><reg>comparavit</reg><orig>coparabit</orig></choice></w><anchor xml:id="a-deproprio-2"/><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si <w xml:id="w3">qu<supplied reason="omitted">i</supplied>s</w>
+                    <lb n="4"/><w xml:id="w4">il<supplied reason="omitted">l</supplied>am</w> vol<supplied reason="omitted">u</supplied>er<choice><corr>i</corr><sic>e</sic></choice>t aperire<pc type="editorial">,</pc> dabit
+                    <lb n="5"/>in <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" type="poena" unit="uncia" commodity="aurum" quantity="6">auri <expan><abbr>un</abbr><ex>cias</ex></expan> sex</measure><anchor xml:id="a-sanctio-2"/> et <anchor xml:id="a-commendatio-1"/><expan><abbr>ips</abbr><ex>am</ex></expan> <choice><reg>arcam</reg><orig>arca</orig></choice>
+                    <lb n="6"/>in <rs type="socecon" ref="../vocabularies/organizations.xml#ecclesia-concordiensis"><choice><reg>ecclesiam</reg><orig>eclesie</orig></choice></rs> <w xml:id="w5" lemma="commendo"><expan><abbr>com</abbr><ex>men</ex><abbr>dav</abbr><ex>it</ex></expan></w><anchor xml:id="a-commendatio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -515,6 +531,14 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+                <link target="#a-commendatio-1 #a-commendatio-2"
+                      ana="../vocabularies/taxonomy.xml#commendatio-ecclesiae"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

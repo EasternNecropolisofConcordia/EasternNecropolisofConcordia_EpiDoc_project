@@ -196,7 +196,7 @@
                    <note type="relationship" corresp="#alexandria">husband</note>
               </person>
                <listRelation>
-                   <relation name="commission"
+                   <relation name="dedicatio"
                              ref="../vocabularies/taxonomy.xml#comparo"
                              active="#alexandria" passive="#alexandria #sopatrus"
                              corresp="#w1"/>
@@ -407,12 +407,12 @@
                 </div>
                 <div type="textpart" source="chest" n="b">
                     <ab>
-                        <lb n="1"/><persName ref="#alexandria"><expan><abbr>Aur</abbr><ex>elia</ex></expan> Alexandria</persName> arcam <w xml:id="w1" next="#w2" lemma="comparo"><choice><reg>compa</reg><orig>conpa</orig></choice></w>
-                        <lb n="2" break="no"/><w xml:id="w2" prev="#w1">ravi</w> mihi et <persName ref="#sopatrus"><expan><abbr>Fl</abbr><ex>avio</ex></expan> Sopatro</persName> marito
-                        <lb n="3"/>meo dulcissimo <expan><abbr>q</abbr><ex>ui</ex></expan> <expan><abbr>v</abbr><ex>ixit</ex></expan> mecum <expan><abbr>an</abbr><ex>nis</ex></expan>
-                        <lb n="4"/>XVIIII <anchor xml:id="a-sanctio-1"/>ita ut post obitum <w xml:id="w3"><expan><abbr>nost</abbr><ex>rum</ex></expan></w> <hi rend="ligature">nu</hi>ll
-                        <lb n="5" break="no"/>us eandem putet se violare si qui<supplied reason="omitted">s</supplied>
-                        <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8734">crediderit</supplied> <w xml:id="w4"><expan><abbr>dab</abbr><ex>it</ex></expan></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisci</rs> <expan><abbr>virib</abbr><ex>us</ex></expan> <measure xml:id="m1" type="poena" unit="solidus" quantity="20"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="20">XX</num></measure> <expan><abbr>v</abbr><ex>el</ex></expan> <expan><abbr>i</abbr><ex>n</ex></expan> <measure xml:id="m2" type="poena" unit="uncia" commodity="argentum" quantity="50"><hi rend="ligature"><expan><abbr>a</abbr><ex>rgento</ex></expan> <expan><abbr>u</abbr><ex>ncias</ex></expan></hi> <num value="50">L</num></measure><anchor xml:id="a-sanctio-2"/>
+                        <lb n="1"/><persName ref="#alexandria"><expan><abbr>Aur</abbr><ex>elia</ex></expan> Alexandria</persName><pc type="editorial">,</pc> arcam <w xml:id="w1" next="#w2" lemma="comparo"><choice><reg>compa</reg><orig>conpa</orig></choice></w>
+                        <lb n="2" break="no"/><w xml:id="w2" prev="#w1">ravi</w> mihi et <persName ref="#sopatrus"><expan><abbr>Fl</abbr><ex>avio</ex></expan> Sopatro</persName><pc type="editorial">,</pc> marito
+                        <lb n="3"/>meo dulcissimo<pc type="editorial">,</pc> <expan><abbr>q</abbr><ex>ui</ex></expan> <expan><abbr>v</abbr><ex>ixit</ex></expan> mecum <expan><abbr>an</abbr><ex>nis</ex></expan>
+                        <lb n="4"/>XVIIII<pc type="editorial">,</pc> <anchor xml:id="a-sanctio-1"/>ita ut post obitum <w xml:id="w3"><expan><abbr>nost</abbr><ex>rum</ex></expan></w> <hi rend="ligature">nu</hi>ll
+                        <lb n="5" break="no"/>us eandem putet se violare<pc type="editorial">.</pc> si qui<supplied reason="omitted">s</supplied>
+                        <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8734">crediderit</supplied><pc type="editorial">,</pc> <w xml:id="w4"><expan><abbr>dab</abbr><ex>it</ex></expan></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisci</rs> <expan><abbr>virib</abbr><ex>us</ex></expan> <measure xml:id="m1" type="poena" unit="solidus" quantity="20"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="20">XX</num></measure> <expan><abbr>v</abbr><ex>el</ex></expan> <expan><abbr>i</abbr><ex>n</ex></expan> <measure xml:id="m2" type="poena" unit="uncia" commodity="argentum" quantity="50"><hi rend="ligature"><expan><abbr>a</abbr><ex>rgento</ex></expan> <expan><abbr>u</abbr><ex>ncias</ex></expan></hi> <num value="50">L</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                     </ab>
                 </div>
             </div>

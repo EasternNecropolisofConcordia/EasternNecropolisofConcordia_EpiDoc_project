@@ -184,8 +184,18 @@
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#dionisia">grandmother</note>
               </person>
+               <listRelation>
+                   <relation name="dedicatio" cert="low"
+                             ref="../vocabularies/taxonomy.xml#act-lost"
+                             active="#ap_"
+                             passive="#dionisia"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -373,7 +383,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/dionisia_1.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Dionisia. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Dionisia. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29369/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
@@ -381,10 +391,10 @@
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                 <ab>
                     <lb n="1"/><persName ref="#dionisia">Au<unclear>r</unclear>elia <w xml:id="w1">Di<supplied reason="lost" evidence="parallel">onisia</supplied></w></persName> <w xml:id="w2"><supplied reason="lost" cert="medium">quae vixit annis</supplied></w>
-                    <lb n="2"/><num value="9">VIIII</num> <expan><abbr><unclear>m</unclear></abbr><ex>ensibus</ex></expan> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">cum</supplied>
-                    <lb n="3"/>avia sua <persName ref="#ap_">Ap<gap reason="lost" extent="unknown" unit="character"/></persName> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">si quis</supplied>
-                    <lb n="4"/><unclear>e</unclear>am <w xml:id="w3">volu<supplied reason="lost">erit aper</supplied>ire</w> d<unclear>a</unclear>
-                    <lb n="5" break="no"/><choice><reg>bit</reg><orig>vit</orig></choice> fi<supplied reason="omitted">s</supplied>co <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">ar<supplied reason="lost">genti p</supplied>ondo <num value="5">V</num></measure>
+                    <lb n="2"/><num value="9">VIIII</num><pc type="editorial">,</pc> <expan><abbr><unclear>m</unclear></abbr><ex>ensibus</ex></expan> <num value="7">VII</num><pc type="editorial">,</pc> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/><pc type="editorial">,</pc> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">cum</supplied>
+                    <lb n="3"/>avia sua <persName ref="#ap_">Ap<gap reason="lost" extent="unknown" unit="character"/></persName><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">si quis</supplied>
+                    <lb n="4"/><unclear>e</unclear>am <w xml:id="w3">volu<supplied reason="lost">erit aper</supplied>ire</w><pc type="editorial">,</pc> d<unclear>a</unclear>
+                    <lb n="5" break="no"/><choice><reg>bit</reg><orig>vit</orig></choice> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fi<supplied reason="omitted">s</supplied>co</rs> <measure xml:id="m1" type="poena" unit="libra" commodity="argentum" quantity="5">ar<supplied reason="lost">genti p</supplied>ondo <num value="5">V</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -514,6 +524,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>
