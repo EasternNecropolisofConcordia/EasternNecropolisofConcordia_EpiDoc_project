@@ -153,8 +153,17 @@
                    <note type="numerus">Batavi Seniores</note>
                    <note type="role">deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio" cert="low"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             passive="#ursacius"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -361,12 +370,12 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/>In ha<surplus>n</surplus>c arca iac
-                    <lb n="2" break="no"/>et <persName ref="#ursacius">Ursacius</persName>, <choice><reg>biarchu</reg><orig>bearcu</orig></choice>
-                    <lb n="3" break="no"/>s de numero <choice><reg>Batavoru</reg><orig>Bataoru</orig></choice>
-                    <lb n="4" break="no"/>m seniorum, qui vixit
-                    <lb n="5"/>annos XXX. <seg xml:id="seg1">Si <surplus>si</surplus> quis</seg> eam vo
-                    <lb n="7" break="no"/>luerit aperire, det in fisco au
-                    <lb n="8" break="no"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="2">ri libras <choice><reg>duas</reg><orig>doas</orig></choice></measure>.
+                    <lb n="2" break="no"/>et <persName ref="#ursacius">Ursacius</persName><pc type="editorial">,</pc> <choice><reg>biarchu</reg><orig>bearcu</orig></choice>
+                    <lb n="3" break="no"/>s de numero <rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores"><choice><reg>Batavoru</reg><orig>Bataoru</orig></choice></rs>
+                    <lb n="4" break="no"/><rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores">m seniorum</rs><pc type="editorial">,</pc> qui vixit
+                    <lb n="5"/>annos XXX<pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/><seg xml:id="seg1">Si <surplus>si</surplus> quis</seg> eam vo
+                    <lb n="7" break="no"/>luerit aperire<pc type="editorial">,</pc> det in <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="aurum" quantity="2">au</measure>
+                    <lb n="8" break="no"/><measure xml:id="m2" prev="#m1">ri libras <choice><reg>duas</reg><orig>doas</orig></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -479,6 +488,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

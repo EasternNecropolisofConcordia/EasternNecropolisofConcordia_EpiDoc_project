@@ -155,8 +155,18 @@
                    <note type="numerus">Batavi Seniores</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#emo"
+                             passive="#victurinus"
+                             corresp="#w4"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-corporalis ../vocabularies/taxonomy.xml#poena-pecuniaria ../vocabularies/taxonomy.xml#poenae-alternativae"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -362,14 +372,14 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#victurinus"><w xml:id="w1"><expan><abbr>Fla</abbr><ex>vius</ex></expan></w> <choice><reg>Victorinus</reg><orig>Victurinus</orig></choice></persName>, <w xml:id="w2"><expan><abbr>d</abbr><ex>e</ex></expan></w> <expan><abbr>n</abbr><ex>umero</ex></expan>
-                    <lb n="2"/><choice><reg>Batavorum</reg><orig>Bataorum</orig></choice> seniorum,
-                    <lb n="3"/>qui <w xml:id="w3">vix<surplus>s</surplus>it</w> <expan><abbr>an</abbr><ex>nos</ex></expan> <expan><abbr>p</abbr><ex>lus</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan> <num value="35">XXXV</num>.
-                    <lb n="4"/><w><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">E</supplied>m<supplied reason="omitted">p</supplied>ta</w> est ei arca de proprio
-                    <lb n="5"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">la</supplied>bore<surplus>s</surplus> suo et qui eam a<unclear>r</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">ca<supplied reason="omitted">m</supplied></supplied>
-                    <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">ape</supplied>rire vuluerit, iure ei <unclear>m</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">a</supplied>
-                    <lb n="7" break="no"/><measure type="mutilatory_sanction"><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">nu</supplied><unclear>s</unclear> <choice><reg>praecidentur</reg><orig>pricidentur</orig></choice></measure> aut <supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">fisco</supplied>
-                    <lb n="8"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">infer</supplied>at <measure type="fine" unit="roman_pound" commodity="gold" quantity="1">auri <choice><reg>libram</reg><orig>libra</orig></choice> <choice><reg>unam</reg><orig>u<unclear>n</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">a</supplied></orig></choice></measure>.
+                    <lb n="1"/><persName ref="#victurinus"><w xml:id="w1"><expan><abbr>Fla</abbr><ex>vius</ex></expan></w> <choice><reg>Victorinus</reg><orig>Victurinus</orig></choice></persName><pc type="editorial">,</pc> <w xml:id="w2"><expan><abbr>d</abbr><ex>e</ex></expan></w> <expan><abbr>n</abbr><ex>umero</ex></expan>
+                    <lb n="2"/><rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores"><choice><reg>Batavorum</reg><orig>Bataorum</orig></choice> seniorum</rs><pc type="editorial">,</pc>
+                    <lb n="3"/>qui <w xml:id="w3">vix<surplus>s</surplus>it</w> <expan><abbr>an</abbr><ex>nos</ex></expan> <expan><abbr>p</abbr><ex>lus</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan> <num value="35">XXXV</num><pc type="editorial">.</pc>
+                    <lb n="4"/><anchor xml:id="a-deproprio-1"/><w xml:id="w4" lemma="emo"><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">E</supplied>m<supplied reason="omitted">p</supplied>ta</w> est ei arca de proprio
+                    <lb n="5"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">la</supplied>bore<surplus>s</surplus> suo<anchor xml:id="a-deproprio-2"/> et <anchor xml:id="a-sanctio-1"/>qui eam a<unclear>r</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">ca<supplied reason="omitted">m</supplied></supplied>
+                    <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8761">ape</supplied>rire vuluerit<pc type="editorial">,</pc> iure ei <unclear>m</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">a</supplied>
+                    <lb n="7" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">nu</supplied><unclear>s</unclear> <choice><reg>praecidentur</reg><orig>pricidentur</orig></choice> aut <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">fisco</supplied></rs>
+                    <lb n="8"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">infer</supplied>at <measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="1">auri <choice><reg>libram</reg><orig>libra</orig></choice> <choice><reg>unam</reg><orig>u<unclear>n</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1875a #bertolini1875b #cilv8761">a</supplied></orig></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -495,6 +505,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

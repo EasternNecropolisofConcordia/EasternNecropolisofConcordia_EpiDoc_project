@@ -145,8 +145,19 @@
                    <note type="numerus">Equites Sagittarii Seniores</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#pono"
+                             active="#roveos"
+                             passive="#roveos"
+                             corresp="#w2"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -352,10 +363,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#roveos"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Roveos</persName>, centenarius de <supplied reason="omitted">numero</supplied> equitum <choice><reg>comitum</reg><orig>comitis</orig></choice>
-                    <lb n="2"/><expan><abbr>seni</abbr><ex>orum</ex></expan> <expan><abbr>sagit</abbr><ex>tariorum</ex></expan>, de <w xml:id="w1"><choice><reg>proprio</reg><orig>propio</orig></choice></w> suo <choice><reg>arcam</reg><orig>arca</orig></choice> sibi posuit.
-                    <lb n="3"/>Si quis eam <w xml:id="w2"><choice><reg>aperire</reg><orig>apirire</orig></choice></w> <w xml:id="w3"><expan><abbr>v<choice><corr>o</corr><sic>q</sic></choice>lu</abbr><ex>erit</ex></expan></w>, dabit <expan><abbr>fis</abbr><ex>ci</ex></expan> viribus
-                    <lb n="4"/><measure type="fine" unit="roman_pound" commodity="silver" quantity="5">argenti pondo <choice><reg>quinque</reg><orig>cinque</orig></choice></measure>.
+                    <lb n="1"/><persName ref="#roveos"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Roveos</persName><pc type="editorial">,</pc> centenarius de <supplied reason="omitted">numero</supplied> <rs type="military" ref="../vocabularies/organizations.xml#equites-sagittarii-seniores">equitum <choice><reg>comitum</reg><orig>comitis</orig></choice></rs>
+                    <lb n="2"/><rs type="military" ref="../vocabularies/organizations.xml#equites-sagittarii-seniores"><expan><abbr>seni</abbr><ex>orum</ex></expan> <expan><abbr>sagit</abbr><ex>tariorum</ex></expan></rs><pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/>de <w xml:id="w1"><choice><reg>proprio</reg><orig>propio</orig></choice></w> suo <choice><reg>arcam</reg><orig>arca</orig></choice> sibi <w xml:id="w2" lemma="pono">posuit</w><anchor xml:id="a-deproprio-2"/><pc type="editorial">.</pc>
+                    <lb n="3"/><anchor xml:id="a-sanctio-1"/>Si quis eam <w xml:id="w3"><choice><reg>aperire</reg><orig>apirire</orig></choice></w> <w xml:id="w4"><expan><abbr>v<choice><corr>o</corr><sic>q</sic></choice>lu</abbr><ex>erit</ex></expan></w><pc type="editorial">,</pc> dabit <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><expan><abbr>fis</abbr><ex>ci</ex></expan></rs> viribus
+                    <lb n="4"/><measure xml:id="m1" type="poena" unit="libra" commodity="argentum" quantity="5">argenti pondo <choice><reg>quinque</reg><orig>cinque</orig></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -364,11 +375,11 @@
                         <lem><choice><reg>proprio</reg><orig>propio</orig></choice></lem>
                         <rdg source="#bertolini1875b #ilcv506">proprio</rdg>
                     </app>
-                    <app loc="3" from="#w2" to="w2">
+                    <app loc="3" from="#w3" to="w2">
                         <lem><choice><reg>aperire</reg><orig>apirire</orig></choice></lem>
                         <rdg source="#bertolini1875a #bertolini1875b">aperire</rdg>
                     </app>
-                    <app loc="3" from="#w3" to="w3">
+                    <app loc="3" from="#w4" to="w3">
                         <lem><expan><abbr>v<choice><corr>o</corr><sic>q</sic></choice>lu</abbr><ex>erit</ex></expan></lem>
                         <rdg source="#bertolini1875a #bertolini1875b #cilv8758 #ilcv506 #holder"><expan><abbr>volu</abbr><ex>erit</ex></expan></rdg>
                     </app>
@@ -453,6 +464,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

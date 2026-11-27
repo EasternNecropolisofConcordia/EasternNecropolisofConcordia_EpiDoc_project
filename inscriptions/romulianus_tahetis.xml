@@ -181,8 +181,19 @@
                    <note type="role">deceased</note>
                    <note type="relationship" corresp="#romulianus">wife</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#facio"
+                             active="#romulianus"
+                             passive="#tahetis #romulianus"
+                             corresp="#w1"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -381,26 +392,26 @@
     <facsimile>
         <graphic url="../../images/inscriptions/romulianus_tahetis.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Romulianus and Tahetis. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Romulianus and Tahetis. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29299/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><expan><abbr>Fl</abbr><ex>avius</ex></expan> Romulianus <expan><abbr>p</abbr><ex>rae</ex><abbr>p</abbr><ex>ositus</ex></expan> <expan><abbr>fab</abbr><ex>ricae</ex></expan> <expan><abbr>sagit<unclear>t</unclear></abbr><ex>ariae</ex></expan>
-                    <lb n="2"/><unclear>f</unclear>ecit de suo <w xml:id="w1">pro<supplied reason="omitted">p</supplied>rio</w> memo<unclear>r</unclear><supplied reason="lost">ia</supplied>
-                    <lb n="3" break="no"/>m coniugi <w xml:id="w2">su<unclear>a</unclear>e</w> Taheti
-                    <lb n="4"/><supplied reason="lost">e</supplied><unclear>t</unclear> sibi. Si <unclear>q</unclear><unclear>u</unclear><supplied reason="lost">i</supplied>s <supplied reason="lost">p</supplied>ostea
+                    <lb n="1"/><persName ref="#romulianus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> Romulianus</persName><pc type="editorial">,</pc> <expan><abbr>p</abbr><ex>rae</ex><abbr>p</abbr><ex>ositus</ex></expan> <rs type="socecon" ref="../vocabularies/organizations.xml#fabrica-sagittaria-concordiensis"><expan><abbr>fab</abbr><ex>ricae</ex></expan> <expan><abbr>sagit<unclear>t</unclear></abbr><ex>ariae</ex></expan></rs><pc type="editorial">,</pc>
+                    <lb n="2"/><anchor xml:id="a-deproprio-1"/><w xml:id="w1" lemma="facio"><unclear>f</unclear>ecit</w> de suo <w xml:id="w2">pro<supplied reason="omitted">p</supplied>rio</w><anchor xml:id="a-deproprio-2"/> memo<unclear>r</unclear><supplied reason="lost">ia</supplied>
+                    <lb n="3" break="no"/>m coniugi <w xml:id="w3">su<unclear>a</unclear>e</w> <persName ref="#tahetis">Taheti</persName>
+                    <lb n="4"/><supplied reason="lost">e</supplied><unclear>t</unclear> sibi<pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si <unclear>q</unclear><unclear>u</unclear><supplied reason="lost">i</supplied>s <supplied reason="lost">p</supplied>ostea
                     <lb n="5"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8697">in</supplied> eo loco corp<unclear>u</unclear>s alicuius
-                    <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8697">po</supplied><unclear>n</unclear>ere voluerit in<unclear>f</unclear><unclear>e</unclear>rt<unclear>u</unclear>rus
-                    <lb n="7"/>rei publicae <w xml:id="w3">pecun<supplied reason="lost">i</supplied>ae</w>
-                    <lb n="8"/><measure type="fine" unit="follis" quantity="1000">folles <w xml:id="w4">m<supplied reason="omitted">i</supplied>ll<surplus>i</surplus>e</w></measure>
+                    <lb n="6"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b #cilv8697">po</supplied><unclear>n</unclear>ere voluerit<pc type="editorial">,</pc> in<unclear>f</unclear><unclear>e</unclear>rt<unclear>u</unclear>rus
+                    <lb n="7"/><rs type="socecon" ref="../vocabularies/organizations.xml#res-publica-concordiensium" ana="../vocabularies/taxonomy.xml#fine-recipient">rei publicae</rs> <w xml:id="w4">pecun<supplied reason="lost">i</supplied>ae</w>
+                    <lb n="8"/><measure xml:id="m1" type="poena" unit="follis" quantity="1000">folles <w xml:id="w5">m<supplied reason="omitted">i</supplied>ll<surplus>i</surplus>e</w></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="2" from="#w1" to="#w1">
+                    <app loc="2" from="#w2" to="#w2">
                         <lem>
                             pro<supplied reason="omitted">p</supplied>rio
                         </lem>
@@ -408,7 +419,7 @@
                             <choice><reg>proprio</reg><orig>propio</orig></choice>
                         </rdg>
                     </app>
-                    <app loc="2" from="#w2" to="#w2">
+                    <app loc="2" from="#w3" to="#w3">
                         <lem>
                             su<unclear>a</unclear>e
                         </lem>
@@ -419,7 +430,7 @@
                             su<supplied reason="lost">a</supplied>e
                         </rdg>
                     </app>
-                    <app loc="7" from="#w3" to="#w3">
+                    <app loc="7" from="#w4" to="#w4">
                         <lem>
                             pecun<supplied reason="lost">i</supplied>ae
                         </lem>
@@ -521,6 +532,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

@@ -157,8 +157,19 @@
                    <note type="numerus">Batavi Seniores</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#savinus"
+                             passive="#savinus"
+                             corresp="#w4"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -364,14 +375,14 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#savinus"><w xml:id="w1">Flavius</w> Savinus</persName>, duce
-                    <lb n="2" break="no"/>narius de numero Batav
-                    <lb n="3" break="no"/>orum <w xml:id="w2"><expan><abbr>seni</abbr><ex>orum</ex></expan></w>, <w xml:id="w3">vixit</w> annos <expan><abbr>p</abbr><ex>lus</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan>
-                    <lb n="4"/><choice><reg>quinquaginta</reg><orig>cinquaginta</orig></choice> arcam sibi
-                    <lb n="5"/><w xml:id="w4"><choice><reg>comparavit</reg><orig>conparavit</orig></choice></w> de proprio suo. Si
+                    <lb n="1"/><persName ref="#savinus"><w xml:id="w1">Flavius</w> Savinus</persName><pc type="editorial">,</pc> duce
+                    <lb n="2" break="no"/>narius de numero <rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores">Batav</rs>
+                    <lb n="3" break="no"/><rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores">orum <w xml:id="w2"><expan><abbr>seni</abbr><ex>orum</ex></expan></w></rs><pc type="editorial">,</pc> <w xml:id="w3">vixit</w> annos <expan><abbr>p</abbr><ex>lus</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan>
+                    <lb n="4"/><choice><reg>quinquaginta</reg><orig>cinquaginta</orig></choice><pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/>arcam sibi
+                    <lb n="5"/><w xml:id="w4" lemma="comparo"><choice><reg>comparavit</reg><orig>conparavit</orig></choice></w> de proprio suo<anchor xml:id="a-deproprio-2"/><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si
                     <lb n="6"/>quis eam aperire volu
-                    <lb n="7" break="no"/>erit <choice><reg>exter</reg><orig>ester</orig></choice>, inferat fi<unclear>s</unclear>
-                    <lb n="8" break="no"/>co <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri pondo <choice><corr>duo</corr><orig>dua</orig></choice></measure>.
+                    <lb n="7" break="no"/>erit <choice><reg>exter</reg><orig>ester</orig></choice><pc type="editorial">,</pc> inferat <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fi<unclear>s</unclear></rs>
+                    <lb n="8" break="no"/><rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">co</rs> <measure xml:id="m1" type="poena" unit="libra" commodity="aurum" quantity="2">auri pondo <choice><corr>duo</corr><orig>dua</orig></choice></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -486,6 +497,12 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

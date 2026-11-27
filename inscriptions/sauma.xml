@@ -169,7 +169,7 @@
                        <name type="gens">Flavia?</name>
                    </persName>
                    <gender>m</gender>
-                   <note type="occupation">soldier?</note>
+                   <note type="occupation" cert="low">soldier</note>
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#sauma">brother</note>
                </person>
@@ -199,8 +199,19 @@
                    <note type="relationship" corresp="#sauma">colleague</note>
                    <note type="relationship" corresp="#evingus">colleague</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#emo"
+                             active="#viax #evingus #alagildus"
+                             passive="#sauma"
+                             corresp="#w3"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -406,10 +417,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#sauma"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Saumae</reg><orig>Saume</orig></choice></persName> <choice><reg>biarcho</reg><orig>biarco</orig></choice> de numero <w xml:id="w1">e<choice><corr>q</corr><sic>o</sic></choice>ui<choice><corr>t</corr><sic>i</sic></choice>um</w> <w xml:id="w2">Bracchia<choice><corr>t</corr><sic>i</sic></choice>orum</w>.
-                    <lb n="2"/>Arcam illi <w xml:id="w3">emerun<choice><corr>i</corr><sic>t</sic></choice></w>: frater <persName ref="#viax">Viax</persName> et <persName ref="#evingus">Evingus</persName>, se<choice><corr>n</corr><sic>m</sic></choice><supplied reason="omitted">a</supplied>tor, <persName ref="#alagildus"><w xml:id="w4">Ala</w></persName>
-                    <lb n="3" break="no"/><persName ref="#alagildus"><w xml:id="w5"><choice><corr>g</corr><sic>c</sic></choice>ildus</w></persName>, <choice><reg>biarchus</reg><orig>biarcus</orig></choice>. Si <w xml:id="w6"><choice><corr>q</corr><sic>o</sic></choice>uis</w> illam aperire voluerit, dabit fisco auri
-                    <lb n="4"/><measure type="fine" unit="roman_pound" commodity="gold" quantity="1">libram unam</measure>.
+                    <lb n="1"/><persName ref="#sauma"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Saumae</reg><orig>Saume</orig></choice></persName> <choice><reg>biarcho</reg><orig>biarco</orig></choice> de numero <rs type="military" ref="../vocabularies/organizations.xml#equites-bracchiati"><w xml:id="w1">e<choice><corr>q</corr><sic>o</sic></choice>ui<choice><corr>t</corr><sic>i</sic></choice>um</w> <w xml:id="w2">Bracchia<choice><corr>t</corr><sic>i</sic></choice>orum</w></rs><pc type="editorial">.</pc>
+                    <lb n="2"/>Arcam illi <w xml:id="w3" lemma="emo">emerun<choice><corr>i</corr><sic>t</sic></choice></w><pc type="editorial">:</pc> frater <persName ref="#viax">Viax</persName> et <persName ref="#evingus">Evingus</persName><pc type="editorial">,</pc> se<choice><corr>n</corr><sic>m</sic></choice><supplied reason="omitted">a</supplied>tor<pc type="editorial">,</pc> <persName ref="#alagildus"><w xml:id="w4">Ala</w></persName>
+                    <lb n="3" break="no"/><persName ref="#alagildus"><w xml:id="w5"><choice><corr>g</corr><sic>c</sic></choice>ildus</w></persName><pc type="editorial">,</pc> <choice><reg>biarchus</reg><orig>biarcus</orig></choice><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si <w xml:id="w6"><choice><corr>q</corr><sic>o</sic></choice>uis</w> illam aperire voluerit<pc type="editorial">,</pc> dabit <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="aurum" quantity="1">auri</measure>
+                    <lb n="4"/><measure xml:id="m2" prev="#m1">libram unam</measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -542,6 +553,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

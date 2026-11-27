@@ -181,6 +181,12 @@
                    <note type="occupation">functionary</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#sepelio"
+                             passive="#saturninus"
+                             corresp="#w3"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -381,17 +387,17 @@
     <facsimile>
         <graphic url="../../images/inscriptions/saturninus.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Saturninus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Saturninus. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29308/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#saturninus">Sa<hi rend="ligature">tu</hi>rninus</persName> centen
+                    <lb n="1"/><persName ref="#saturninus">Sa<hi rend="ligature">tu</hi>rninus</persName><pc type="editorial">,</pc> centen
                     <lb n="2" break="no"/><expan><abbr>ar</abbr><ex>ius</ex></expan> ex <expan><abbr><hi rend="small">o</hi>ff</abbr><ex>icio</ex></expan> <expan><abbr>p<supplied reason="lost">r</supplied>aef</abbr><ex>ecti</ex></expan> <choice><reg>Illyrici</reg><orig><expan><abbr>Illir</abbr><ex>ici</ex></expan></orig></choice>
-                    <lb n="3"/><expan><abbr>Dac</abbr><ex>iae</ex></expan> <expan><abbr>Rip</abbr><ex>ensis</ex></expan> <w xml:id="w1">amici</w> <w xml:id="w2"><choice><reg cert="low">honore</reg><orig>h<hi rend="small">o</hi>re</orig></choice></w> sep
-                    <lb n="4" break="no"/>ultus
+                    <lb n="3"/><expan><abbr>Dac</abbr><ex>iae</ex></expan> <expan><abbr>Rip</abbr><ex>ensis</ex></expan><pc type="editorial">,</pc> <w xml:id="w1">amici</w> <w xml:id="w2"><choice><reg cert="low">honore</reg><orig>h<hi rend="small">o</hi>re</orig></choice></w> <w xml:id="w3" next="#w4" lemma="sepelio">sep</w>
+                    <lb n="4" break="no"/><w xml:id="w4" prev="#w3">ultus</w><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

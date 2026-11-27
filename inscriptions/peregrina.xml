@@ -186,6 +186,13 @@
                    <note type="occupation">civilian</note>
                    <note type="role">dedicator/deceased</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#peregrina"
+                             passive="#peregrina"
+                             corresp="#w2"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -386,17 +393,17 @@
     <facsimile>
         <graphic url="../../images/inscriptions/peregrina.jpg">
             <desc type="alt">Inscribed front panel of a limestone sarcophagus</desc>
-            <desc type="figDesc">The inscription of Peregrina. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The inscription of Peregrina. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29365/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve">
                 <ab>
-                    <lb n="1"/><persName ref="#peregrina"><w xml:id="w1">Va<choice><corr>l</corr><sic>i</sic></choice>eria</w> Peregrina</persName>, arcam ex pro
-                    <lb n="2" break="no"/>prio suo <choice><reg>comparavit</reg><orig>conparavit</orig></choice>, in qua se
-                    <lb n="3"/>poni praecepit adque <w xml:id="w2"><supplied reason="omitted" cert="low">litteras</supplied></w> nominis
-                    <lb n="4"/>sui conscribi iussit.
+                    <lb n="1"/><persName ref="#peregrina"><w xml:id="w1">Va<choice><corr>l</corr><sic>i</sic></choice>eria</w> Peregrina</persName><pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/>arcam ex pro
+                    <lb n="2" break="no"/>prio suo <w xml:id="w2" lemma="comparo"><choice><reg>comparavit</reg><orig>conparavit</orig></choice></w><anchor xml:id="a-deproprio-2"/><pc type="editorial">,</pc> in qua se
+                    <lb n="3"/>poni praecepit adque <w xml:id="w3"><supplied reason="omitted" cert="low">litteras</supplied></w> nominis
+                    <lb n="4"/>sui conscribi iussit<pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
@@ -412,7 +419,7 @@
                             Valeria
                         </rdg>
                     </app>
-                    <app loc="3" from="#w2" to="#w2">
+                    <app loc="3" from="#w3" to="#w3">
                         <lem><supplied reason="omitted" cert="low">litteras</supplied></lem>
                         <rdg source="#bertolini1874a #bertolini1874b #cilv8774 #ilcv849"></rdg>
                     </app>
@@ -486,6 +493,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-deproprio-1 #a-deproprio-2"
+                      ana="../vocabularies/taxonomy.xml#de-proprio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

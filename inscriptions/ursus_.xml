@@ -170,8 +170,19 @@
                    <note type="role">deceased</note>
                    <note type="relationship" corresp="#ursus">wife</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#comparo"
+                             active="#ursus"
+                             passive="#ursus #anon1"
+                             corresp="#w2"/>
+               </listRelation>
            </listPerson>
         </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
      </profileDesc>
      <encodingDesc>
             <classDecl>
@@ -377,34 +388,34 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#ursus"><w xml:id="w1">Coc<supplied reason="omitted" cert="low">c</supplied>eius</w> Ursus</persName> <choice><reg>com</reg><orig>con</orig></choice>
-                    <lb n="2" break="no"/>paravit <choice><reg>arcam</reg><orig>arca</orig></choice> sibi et
-                    <lb n="3"/><w xml:id="w2">incomparabili</w> <w xml:id="w3">co<supplied reason="omitted">n</supplied>iugi</w>
-                    <lb n="4"/><w xml:id="w4"><gap reason="illegible" extent="unknown" unit="character"/></w>. Si qui<supplied reason="omitted">s</supplied>
-                    <lb n="5"/><w xml:id="w5">eam</w> <w xml:id="w6">aperire</w>
-                    <lb n="6"/><w xml:id="w7">voluerit</w>, <w xml:id="w8">dabit</w> <w xml:id="w9">fisco</w> <w xml:id="w10" next="#w11">ar</w>
-                    <lb n="7" break="no"/><measure type="fine" unit="roman_pound" commodity="silver" quantity="10"><w xml:id="w11" prev="#w10">genti</w> <w xml:id="w12">pondo</w> <w xml:id="w13">decem</w></measure>.
+                    <lb n="1"/><persName ref="#ursus"><w xml:id="w1">Coc<supplied reason="omitted" cert="low">c</supplied>eius</w> Ursus</persName> <w xml:id="w2" next="#w3" lemma="comparo"><choice><reg>com</reg><orig>con</orig></choice></w>
+                    <lb n="2" break="no"/><w xml:id="w3" prev="#w2">paravit</w> <choice><reg>arcam</reg><orig>arca</orig></choice> sibi et
+                    <lb n="3"/><w xml:id="w4">incomparabili</w> <w xml:id="w5">co<supplied reason="omitted">n</supplied>iugi</w>
+                    <lb n="4"/><w xml:id="w6"><gap reason="illegible" extent="unknown" unit="character"/></w><pc type="editorial">.</pc> <anchor xml:id="a-sanctio-1"/>Si qui<supplied reason="omitted">s</supplied>
+                    <lb n="5"/><w xml:id="w7">eam</w> <w xml:id="w8">aperire</w>
+                    <lb n="6"/><w xml:id="w9">voluerit</w><pc type="editorial">,</pc> <w xml:id="w10">dabit</w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><w xml:id="w11">fisco</w></rs> <measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="argentum" quantity="10"><w xml:id="w12" next="#w13">ar</w></measure>
+                    <lb n="7" break="no"/><measure xml:id="m2" prev="#m1"><w xml:id="w13" prev="#w12">genti</w> <w xml:id="w14">pondo</w> <w xml:id="w15">decem</w></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app loc="1" from="#w1" to="#w1">
                         <lem>Coc<supplied reason="omitted" cert="low">c</supplied>eius</lem>
-                        <rdg source="#bertolini1876b #cilv8741">Cicrius</rdg>
+                        <rdg source="#bertolini1876b #cilv8685">Cicrius</rdg>
                     </app>
-                    <app loc="3" from="#w2" to="#w3">
+                    <app loc="3" from="#w4" to="#w5">
                         <lem>incomparabili co<supplied reason="omitted">n</supplied>iugi</lem>
-                        <rdg source="#bertolini1876b #bertolini1877 #cilv8741"><gap reason="illegible" extent="unknown" unit="character"/> coniugi</rdg>
+                        <rdg source="#bertolini1876b #bertolini1877 #cilv8685"><gap reason="illegible" extent="unknown" unit="character"/> coniugi</rdg>
                     </app>
-                    <app loc="4" from="#w4" to="#w4">
+                    <app loc="4" from="#w6" to="#w6">
                         <lem><gap reason="illegible" extent="unknown" unit="character"/></lem>
                         <rdg source="#bertolini1876b #bertolini1877 #bertolini1878"><gap reason="illegible" extent="unknown" unit="character"/>o</rdg>
                     </app>
-                    <app loc="5" from="#w5" to="#w6">
+                    <app loc="5" from="#w7" to="#w8">
                         <lem>eam aperire</lem>
                         <rdg source="#bertolini1876b #bertolini1877 #cilv8685 #bertolini1878"><gap reason="illegible" extent="unknown" unit="character"/> aperire</rdg>
                     </app>
-                    <app loc="6-7" from="#w7" to="#w13">
+                    <app loc="6-7" from="#w9" to="#w15">
                         <lem>voluerit dabit fisco ar<lb n="7" break="no"/>genti</lem>
                         <rdg source="#bertolini1876b #cilv8685">voluerit <gap reason="illegible" extent="unknown" unit="character"/><lb n="7" break="no"/><gap reason="illegible" extent="unknown" unit="character"/></rdg>
                         <rdg source="#bertolini1877">voluerit <gap reason="illegible" extent="unknown" unit="character"/><lb n="7" break="no"/>genti pondo decem</rdg>
@@ -422,11 +433,11 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p><persName ref="#ursus" xml:lang="la">Cocceius Ursus</persName> commissioned the sarcophagus at his own expense for himself and his wife, whose name is illegible. Anyone who opened the sarcophagus would have to pay ten pounds of silver to the <term xml:lang="la">fiscus</term>.</p>
-                <p>According to Lettich, this is the same <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius</persName></ref> who buried his wife <ref target="./ursus_decentia.xml"><persName xml:lang="la">Decentia</persName></ref> south of the road (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>; <ref target="./ursus_decentia.xml">The Epigraphy of Ursus and Decentia</ref>). <persName ref="#cocceius_ursus">Cocceius</persName>, having outlived his first wife, would have remarried. This is not a unique case: Lettich cites the example of <ref target="./romulianus_tahetis.xml"><persName xml:lang="la">Romulianus</persName></ref>, who was also widowed and remarried (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
+                <p>According to Lettich, this is the same <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius</persName></ref> who buried his wife <ref target="./ursus_decentia.xml"><persName xml:lang="la">Decentia</persName></ref> south of the road (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>; <ref target="./ursus_decentia.xml">The Epigraphy of Ursus and Decentia</ref>). <persName ref="#ursus">Cocceius</persName>, having outlived his first wife, would have remarried. This is not a unique case: Lettich cites the example of <ref target="./romulianus_tahetis.xml"><persName xml:lang="la">Romulianus</persName></ref>, who was also widowed and remarried (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
             </div>
             <div type="commentary" xml:lang="it">
                 <p><persName ref="#ursus" xml:lang="la">Cocceius Ursus</persName> commissionò a proprie spese l’arca per sé stesso e per la moglie, il cui nome è illeggibile. Chiunque avesse aperto il sarcofago, avrebbe dovuto versare al <term xml:lang="la">fiscus</term> dieci libbre d’argento.</p>
-                <p>Secondo Lettich, si tratterebbe dello stesso <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius</persName></ref> che seppellì la moglie <ref target="./ursus_decentia.xml"><persName xml:lang="la">Decentia</persName></ref> a sud della strada (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>; <ref target="./ursus_decentia.xml">The Epigraphy of Ursus and Decentia</ref>). <persName ref="#cocceius_ursus">Cocceius</persName>, sopravvissuto alla prima moglie, si sarebbe risposato. Non si tratterebbe di un caso unico: Lettich porta l’esempio di <ref target="./romulianus_tahetis.xml"><persName xml:lang="la">Romulianus</persName></ref>, anche lui vedovo e risposato (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
+                <p>Secondo Lettich, si tratterebbe dello stesso <ref target="./ursus_decentia.xml"><persName xml:lang="la">Cocceius</persName></ref> che seppellì la moglie <ref target="./ursus_decentia.xml"><persName xml:lang="la">Decentia</persName></ref> a sud della strada (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>; <ref target="./ursus_decentia.xml">The Epigraphy of Ursus and Decentia</ref>). <persName ref="#ursus">Cocceius</persName>, sopravvissuto alla prima moglie, si sarebbe risposato. Non si tratterebbe di un caso unico: Lettich porta l’esempio di <ref target="./romulianus_tahetis.xml"><persName xml:lang="la">Romulianus</persName></ref>, anche lui vedovo e risposato (<ref target="../references/bibliography.xml#lettich1983">Lettich 1983, 100</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl> 
@@ -472,6 +483,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>

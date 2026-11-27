@@ -171,6 +171,11 @@
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#severina">son</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             active="#_anus" passive="#severina"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -378,9 +383,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#severina"><seg xml:id="seg1">Asco<supplied reason="lost">niae Seve</supplied>rinae</seg></persName>
-                    <lb n="2"/><persName ref="#_anus"><expan><abbr>L</abbr><ex>ucius</ex></expan> <seg xml:id="seg2">Pontiu<unclear>s</unclear> <gap reason="lost" extent="unknown" unit="character"/><unclear>a</unclear><unclear>n</unclear>us</seg></persName>,
-                    <lb n="3"/>matri <w xml:id="w1">pien<supplied reason="lost">ti</supplied>ssimae</w>
+                    <lb n="1"/><persName ref="#severina"><seg xml:id="seg1">Asco<supplied reason="lost">niae Seve</supplied>rinae</seg></persName><pc type="editorial">,</pc>
+                    <lb n="2"/><persName ref="#_anus"><expan><abbr>L</abbr><ex>ucius</ex></expan> <seg xml:id="seg2">Pontiu<unclear>s</unclear> <gap reason="lost" extent="unknown" unit="character"/><unclear>a</unclear><unclear>n</unclear>us</seg></persName><pc type="editorial">,</pc>
+                    <lb n="3"/>matri <w xml:id="w1">pien<supplied reason="lost">ti</supplied>ssimae</w><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

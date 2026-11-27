@@ -195,6 +195,11 @@
                    <note type="relationship" corresp="#zosimusiunior">mother</note>
                    <note type="relationship" corresp="#zosimusmaior">wife</note>
                </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#act-unexpressed"
+                             active="#zosimusmaior #charite" passive="#zosimusiunior"/>
+               </listRelation>
            </listPerson>
         </particDesc>
      </profileDesc>
@@ -402,10 +407,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#zosimusiunior"><expan><abbr>C</abbr><ex>aio</ex></expan> <expan><abbr>Aem</abbr><ex>ilio</ex></expan> Zosimo</persName>, <expan><abbr>fil</abbr><ex>io</ex></expan> <expan><abbr>p</abbr><ex cert="low">ientissimo</ex></expan>,
-                    <lb n="2"/>qui vixit <expan><abbr>a<hi rend="ligature">nn</hi></abbr><ex>is</ex></expan> <num value="6">VI</num>, <expan><abbr>m</abbr><ex>ensibus</ex></expan> <num value="11">XI</num>, <expan><abbr>d</abbr><ex>iebus</ex></expan>
-                    <lb n="3"/><num value="14">XIIII</num>, <persName ref="#zosimusmaior"><expan><abbr>C</abbr><ex>aius</ex></expan> <expan><abbr>Aem</abbr><ex>ilius</ex></expan> Zosimus</persName>
-                    <lb n="4"/>et <persName ref="#charite"><expan><abbr>Vett</abbr><ex>ia</ex></expan> <hi rend="ligature">Ch</hi>ari<hi rend="ligature">te</hi></persName> <expan><abbr>par</abbr><ex>entes</ex></expan>.
+                    <lb n="1"/><persName ref="#zosimusiunior"><expan><abbr>C</abbr><ex>aio</ex></expan> <expan><abbr>Aem</abbr><ex>ilio</ex></expan> Zosimo</persName><pc type="editorial">,</pc> <expan><abbr>fil</abbr><ex>io</ex></expan> <expan><abbr>p</abbr><ex cert="low">ientissimo</ex></expan><pc type="editorial">,</pc>
+                    <lb n="2"/>qui vixit <expan><abbr>a<hi rend="ligature">nn</hi></abbr><ex>is</ex></expan> <num value="6">VI</num><pc type="editorial">,</pc> <expan><abbr>m</abbr><ex>ensibus</ex></expan> <num value="11">XI</num><pc type="editorial">,</pc> <expan><abbr>d</abbr><ex>iebus</ex></expan>
+                    <lb n="3"/><num value="14">XIIII</num><pc type="editorial">,</pc> <persName ref="#zosimusmaior"><expan><abbr>C</abbr><ex>aius</ex></expan> <expan><abbr>Aem</abbr><ex>ilius</ex></expan> Zosimus</persName>
+                    <lb n="4"/>et <persName ref="#charite"><expan><abbr>Vett</abbr><ex>ia</ex></expan> <hi rend="ligature">Ch</hi>ari<hi rend="ligature">te</hi></persName> <expan><abbr>par</abbr><ex>entes</ex></expan><pc type="editorial">.</pc>
                 </ab>
             </div>
             <div type="apparatus">

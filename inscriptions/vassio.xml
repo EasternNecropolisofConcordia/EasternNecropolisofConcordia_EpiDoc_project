@@ -198,8 +198,19 @@
                         <note type="role">dedicator</note>
                         <note type="relationship" corresp="#vassio">wife</note>
                     </person>
+               <listRelation>
+                   <relation name="dedicatio"
+                             ref="../vocabularies/taxonomy.xml#sepelio"
+                             active="#suandacca"
+                             passive="#vassio"
+                             corresp="#w2"/>
+               </listRelation>
                 </listPerson>
             </particDesc>
+        <textClass>
+            <catRef scheme="../vocabularies/taxonomy.xml#sanctions"
+                    target="../vocabularies/taxonomy.xml#poena-pecuniaria"/>
+        </textClass>
         </profileDesc>
         <encodingDesc>
             <classDecl>
@@ -398,7 +409,7 @@
     <facsimile>
         <graphic url="../../images/inscriptions/vassio.jpg">
             <desc type="alt">Limestone sarcophagus with inscribed front.</desc>
-            <desc type="figDesc">The sarcophagus of Vassio. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
+            <desc type="figDesc">The sarcophagus of Vassio. <ref target="https://viaf.org/en/viaf/124364831">Museo Nazionale Concordiese</ref>, <ref target="https://viaf.org/en/viaf/148456131">Portogruaro</ref>; photo by Ortolf Harl (<ref target="https://lupa.at/29333/photos/1">Ubi Erat Lupa</ref>). Courtesy of the Ministry of Culture - Regional Directorate of National Museums of Veneto. <label type="disclaimer">Any commercial or for-profit use of these images is strictly prohibited and must be subject to a specific authorization request to the Regional Directorate of National Museums of Veneto.</label></desc>
         </graphic>
     </facsimile>
     <text>
@@ -412,11 +423,11 @@
                 <div type="textpart" subtype="chest" n="b">
                     <ab>
                         <lb n="1"/>Arca<surplus>m</surplus> <persName ref="#vassio">Vassioni</persName> <w xml:id="w1"><expan><abbr>camp<choice><sic>e</sic><corr>i</corr></choice>d</abbr><ex>octori</ex></expan></w>
-                        <lb n="2"/>numeri <choice><reg>Batavorum</reg><orig><expan><abbr>Bataor</abbr><ex>um</ex></expan></orig></choice> <expan><abbr>sen</abbr><ex>iorum</ex></expan> quem sepe
-                        <lb n="3" break="no"/>livit <w xml:id="w2">coniux</w> <persName ref="#suandacca"><w xml:id="w3">Suandacca</w></persName> <expan><abbr>q</abbr><ex>uae</ex></expan> vixit cum 
+                        <lb n="2"/>numeri <rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores"><choice><reg>Batavorum</reg><orig><expan><abbr>Bataor</abbr><ex>um</ex></expan></orig></choice> <expan><abbr>sen</abbr><ex>iorum</ex></expan></rs> quem <w xml:id="w2" next="#w3" lemma="sepelio">sepe</w>
+                        <lb n="3" break="no"/><w xml:id="w3" prev="#w2">livit</w> <w xml:id="w4">coniux</w> <persName ref="#suandacca"><w xml:id="w5">Suandacca</w></persName> <expan><abbr>q</abbr><ex>uae</ex></expan> vixit cum 
                         <lb n="4"/><supplied reason="omitted">e</supplied>o <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="22">XXII</num> <expan><abbr>milit</abbr><ex>avit</ex></expan> <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="35">XXXV</num> fer<surplus>e</surplus>t a
-                        <lb n="5" break="no"/>pud se <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="60">LX</num> Si quis eam arcam vo
-                        <lb n="6" break="no"/>luerit movere <expan><abbr>virib</abbr><ex>us</ex></expan> fisci dabit <measure type="fine" unit="solidus" quantity="25"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="25">XXV</num></measure>.
+                        <lb n="5" break="no"/>pud se <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="60">LX</num> <anchor xml:id="a-sanctio-1"/>Si quis eam arcam vo
+                        <lb n="6" break="no"/>luerit movere <expan><abbr>virib</abbr><ex>us</ex></expan> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisci</rs> dabit <measure xml:id="m1" type="poena" unit="solidus" quantity="25"><expan><abbr>sol</abbr><ex>idos</ex></expan> <num value="25">XXV</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                     </ab>
                 </div>
             </div>
@@ -430,7 +441,7 @@
                             <expan><abbr>camped</abbr><ex>octori</ex></expan>
                         </rdg>
                     </app>
-                    <app loc="3" from="#w2" to="#w3">
+                    <app loc="3" from="#w4" to="#w5">
                         <lem>
                             coniux Suandacca
                         </lem>
@@ -545,6 +556,10 @@
                     </bibl>
                 </listBibl>
             </div>
+            <linkGrp type="formulae">
+                <link target="#a-sanctio-1 #a-sanctio-2"
+                      ana="../vocabularies/taxonomy.xml#sanctio"/>
+            </linkGrp>
         </body>
     </text>
 </TEI>
