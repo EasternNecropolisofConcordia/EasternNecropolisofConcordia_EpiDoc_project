@@ -378,11 +378,11 @@
                 </listApp>
             </div>
             <div type="translation" xml:lang="en">
-                <p>In this <term xml:lang="la">arca</term> lies <persName ref="#ursacius" xml:lang="la">Ursacius</persName>, <term ref="#ursacius" xml:lang="la">biarchus</term> of the numero of the <term xml:lang="la">Batavi seniores</term>, who lived for thirty years.</p>
+                <p>In this <term xml:lang="la">arca</term> lies <persName ref="#ursacius" xml:lang="la">Ursacius</persName>, <term ref="#biarchus" xml:lang="la">biarchus</term> of the numero of the <term xml:lang="la">Batavi seniores</term>, who lived for thirty years.</p>
                 <p>If anyone should wish to open it, he shall pay two (Roman) pounds of gold to the <term xml:lang="la">fiscus</term>.</p>
             </div>
             <div type="translation" xml:lang="it">
-                <p>In questa arca giace <persName ref="#ursacius">Ursacio</persName>, <term ref="#ursacius" xml:lang="la">biarchus</term> del numero dei <term xml:lang="la">Batavi seniores</term>, che visse trent'anni.</p>
+                <p>In questa arca giace <persName ref="#ursacius">Ursacio</persName>, <term ref="#biarchus" xml:lang="la">biarchus</term> del numero dei <term xml:lang="la">Batavi seniores</term>, che visse trent'anni.</p>
                 <p>Se qualcuno vorrà aprirla, versi al <term xml:lang="la">fiscus</term> due libbre (romane) d'oro.</p>
             </div>
             <div type="commentary" xml:lang="en">
@@ -396,7 +396,7 @@
                     The burial of <persName ref="#ursacius" xml:lang="la">Ursacius</persName> is located in the immediate vicinity of the sarcophagi of two other members of the <term xml:lang="la">Batavi</term>: <ref target="./carpilio.xml"><persName xml:lang="la">Flavius Carpilio</persName></ref> and <ref target="./savinus.xml"><persName xml:lang="la">Flavius Savinus</persName></ref>. This spatial proximity, together with that of <ref target="./victurinus.xml"><persName xml:lang="la">Flavius Victurinus</persName></ref> and <ref target="./launio.xml"><persName xml:lang="la">Flavius Launio</persName></ref> slightly further east, seems to confirm the existence of a strong spirit of camaraderie within the contingent.
                 </p>
                 <p>
-                    The monetary fine of two Roman pounds of gold appears to be common among the <term xml:lang="la">Batavi</term> of subaltern rank, appearing identically in the epigraphs of <persName ref="#savinus" xml:lang="la">Savinus</persName> and <persName ref="#launio" xml:lang="la">Launio</persName>.
+                    The monetary fine of two Roman pounds of gold appears to be common among the <term xml:lang="la">Batavi</term> of subaltern rank, appearing identically in the epigraphs of <persName ref="./savinus.xml#savinus" xml:lang="la">Savinus</persName> and <persName ref="./launio.xml#launio" xml:lang="la">Launio</persName>.
                 </p>
                 <p>
                     The inscription of <persName ref="#ursacius" xml:lang="la">Ursacius</persName> is engraved on the side panel of the sarcophagus, bucking the trend of most epigraphs in the necropolis, which were typically carved on the front. Given the site plan of the area, with other chests placed against the long sides, it is likely that the choice of the northern short side was dictated by the need for visibility toward the path that divided the burial ground into two sections.
@@ -416,7 +416,7 @@
                     La sepoltura di <persName ref="#ursacius" xml:lang="la">Ursacius</persName> si trova nell'immediata prossimità dei sarcofagi di altri membri dei <term xml:lang="la">Batavi</term>: <ref target="./carpilio.xml"><persName xml:lang="la">Flavius Carpilio</persName></ref> e <ref target="./savinus.xml"><persName xml:lang="la">Flavius Savinus</persName></ref>. Questa vicinanza spaziale, insieme a quella di <ref target="./victurinus.xml"><persName xml:lang="la">Flavius Victurinus</persName></ref> e <ref target="./launio.xml"><persName xml:lang="la">Flavius Launio</persName></ref> poco più a est, sembra confermare l'esistenza di un forte spirito di cameratismo all'interno del contingente.
                 </p>
                 <p>
-                    La pena pecuniaria di due libbre romane d'oro risulta comune tra i <term xml:lang="la">Batavi</term> di grado subalterno, comparendo identica nelle epigrafi di <persName ref="#savinus" xml:lang="la">Savinus</persName> e <persName ref="#launio" xml:lang="la">Launio</persName>.
+                    La pena pecuniaria di due libbre romane d'oro risulta comune tra i <term xml:lang="la">Batavi</term> di grado subalterno, comparendo identica nelle epigrafi di <persName ref="./savinus.xml#savinus" xml:lang="la">Savinus</persName> e <persName ref="./launio.xml#launio" xml:lang="la">Launio</persName>.
                 </p>
                 <p>
                     L'iscrizione di <persName ref="#ursacius" xml:lang="la">Ursacius</persName> è incisa sul pannello laterale del sarcofago, in controtendenza rispetto alla maggior parte delle epigrafi della necropoli. Data la planimetria dell'area, con altre arche addossate ai lati lunghi, è probabile che la scelta del lato corto settentrionale fosse dettata dalla necessità di visibilità verso il sentiero che divideva il sepolcreto.

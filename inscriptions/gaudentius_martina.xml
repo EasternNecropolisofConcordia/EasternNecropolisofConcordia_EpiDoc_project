@@ -367,7 +367,7 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#gaudentius"><choice><reg>Aurelius</reg><orig>Aurelius</orig></choice> Gau</persName>
-                    <lb n="2" break="no"/><persName ref="#gaudentius">dentius</persName> et <persName corresp="#martina">Mar</persName>
+                    <lb n="2" break="no"/><persName ref="#gaudentius">dentius</persName> et <persName ref="#martina">Mar</persName>
                     <lb n="3" break="no"/><persName ref="#martina">tina</persName> vivos <choice><reg>sibi</reg><orig>se</orig></choice> <w xml:id="w1">com</w>
                     <lb n="4" break="no"/><choice><reg>paraverunt</reg><orig>paravet</orig></choice> Si q<unclear>u</unclear><unclear>i</unclear>s e
                     <lb n="5" break="no"/>is iniuriam det <w xml:id="w2"><supplied reason="omitted" cert="low">fisco</supplied></w>
@@ -396,14 +396,14 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>
-                    <persName corresp="#gaudentius" xml:lang="la">Aurelius Gaudentius</persName> and <persName corresp="#martina" xml:lang="la">Martina</persName> commissioned for themselves in their lifetime.
+                    <persName ref="#gaudentius" xml:lang="la">Aurelius Gaudentius</persName> and <persName ref="#martina" xml:lang="la">Martina</persName> commissioned for themselves in their lifetime.
                 </p>
                 <p>
                     If anyone should inflict injury on it, he will give to the <term xml:lang="la">fiscus</term> <measure type="fine" unit="roman_pound" commodity="gold" quantity="1"> one roman pound of gold.</measure>.
                 </p>
             </div>
             <div type="translation">
-                <p><persName corresp="#gaudentius" xml:lang="la">Aurelius Gaudentius</persName> e <persName corresp="#martina" xml:lang="la">Martina</persName>, da vivi comprarono [l'arca].</p>
+                <p><persName ref="#gaudentius" xml:lang="la">Aurelius Gaudentius</persName> e <persName ref="#martina" xml:lang="la">Martina</persName>, da vivi comprarono [l'arca].</p>
                 <p>Se qualcuno [arrecherà] loro offesa, versi una libbra d’oro.</p>
             </div>
             <div type="commentary" xml:lang="en">

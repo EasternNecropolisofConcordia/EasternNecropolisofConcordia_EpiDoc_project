@@ -366,7 +366,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName corresp="#firmina">Firmina</persName> viva
+                    <lb n="1"/><persName ref="#firmina">Firmina</persName> viva
                     <lb n="2"/>fecit sibi.
                 </ab>
             </div>

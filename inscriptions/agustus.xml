@@ -159,7 +159,7 @@
                    <relation name="commission"
                              ref="../vocabularies/taxonomy.xml#emo"
                              active="#agustus" passive="#agustus"
-                             corresp="#a-emptio-1"/>
+                             corresp="#w4"/>
                </listRelation>
            </listPerson>
         </particDesc>
@@ -374,9 +374,9 @@
                 <ab>
                     <lb n="1"/><persName ref="#agustus"><w xml:id="w1"><expan><abbr>Fl</abbr><ex>avius</ex></expan></w> <w xml:id="w2"><choice><reg>Augustus</reg><orig>Agustus</orig></choice></w></persName>, de <choice><reg>numero</reg><orig>numeru</orig></choice>
                     <lb n="2"/><rs type="military" ref="../vocabularies/organizations.xml#mattiaci-seniores">Mattiacoru<supplied reason="omitted">m</supplied> <w xml:id="w3">senioru<choice><corr>m</corr><sic>a</sic></choice></w></rs>,
-                    <lb n="3"/><anchor xml:id="a-emptio-1"/><w lemma="emo">emit</w> sibi de <choice><reg>proprio</reg><orig>propio</orig></choice> suo <expan><abbr>ar</abbr><ex>cam</ex></expan><anchor xml:id="a-emptio-2"/>.
+                    <lb n="3"/><anchor xml:id="a-deproprio-1"/><w xml:id="w4" lemma="emo">emit</w> sibi de <choice><reg>proprio</reg><orig>propio</orig></choice> suo <expan><abbr>ar</abbr><ex>cam</ex></expan><anchor xml:id="a-deproprio-2"/>.
                     <lb n="4"/><anchor xml:id="a-sanctio-1"/>Si quis eam <expan><abbr>ape</abbr><ex>rire</ex></expan> <expan><abbr>vo</abbr><ex>luerit</ex></expan>,
-                    <lb n="5"/><w xml:id="w4"><expan><abbr>da</abbr><ex cert="low">bi</ex><abbr>t</abbr></expan></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><w xml:id="w5"><expan><abbr>fi</abbr><ex>sci</ex></expan></w></rs> <expan><abbr>vi</abbr><ex>ribus</ex></expan> <measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="argentum" quantity="5"><expan><abbr>argen</abbr><ex>ti</ex></expan> pon</measure>
+                    <lb n="5"/><w xml:id="w5"><expan><abbr>da</abbr><ex cert="low">bi</ex><abbr>t</abbr></expan></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><w xml:id="w6"><expan><abbr>fi</abbr><ex>sci</ex></expan></w></rs> <expan><abbr>vi</abbr><ex>ribus</ex></expan> <measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="argentum" quantity="5"><expan><abbr>argen</abbr><ex>ti</ex></expan> pon</measure>
                     <lb n="6" break="no"/><supplied reason="lost" evidence="previouseditor" source="#bertolini1876a #bertolini1877 #cilv8737"><measure xml:id="m2" prev="#m1">do <choice><reg>quinque</reg><orig>cinque</orig></choice></measure></supplied><anchor xml:id="a-sanctio-2"/>.
                 </ab>
             </div>
@@ -394,11 +394,11 @@
                         <lem>senioru<choice><corr>m</corr><sic>a</sic></choice></lem>
                         <rdg source="#bertolini1876a #bertolini1877 #cilv8737 #ilcv553 #hoffmann1963">seniorum</rdg>
                     </app>
-                    <app loc="5" from="#w4">
+                    <app loc="5" from="#w5">
                         <lem><expan><abbr>da</abbr><ex cert="low">bi</ex><abbr>t</abbr></expan></lem>
                         <rdg source="#bertolini1876a #bertolini1877 #cilv8737 #ilcv553 #hoffmann1963">dat</rdg>
                     </app>
-                    <app loc="5" from="#w5">
+                    <app loc="5" from="#w6">
                         <lem><expan><abbr>fi</abbr><ex>sci</ex></expan></lem>
                         <rdg source="#hoffmann1963 #lettich1983"><expan><abbr><choice><corr>f</corr><sic>e</sic></choice>i</abbr><ex>sci</ex></expan></rdg>
                     </app>
@@ -490,7 +490,7 @@
                 </listBibl>
             </div>
             <linkGrp type="formulae">
-                <link target="#a-emptio-1 #a-emptio-2"
+                <link target="#a-deproprio-1 #a-deproprio-2"
                       ana="../vocabularies/taxonomy.xml#de-proprio"/>
                 <link target="#a-sanctio-1 #a-sanctio-2"
                       ana="../vocabularies/taxonomy.xml#sanctio"/>

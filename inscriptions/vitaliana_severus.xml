@@ -427,10 +427,10 @@
             </div>
             <div type="translation">
                 <div type="translation" xml:lang="en">
-                    <p>The <term xml:lang="la">arca</term> of <persName corresp="#vitaliana" xml:lang="la">Vettia Vitaliana</persName> and <persName corresp="#severus" xml:lang="la">Flavius Severus</persName>, they purchased with their own funds; they acquired it for my memorial. If anyone wishes to open it, they shall pay ten Roman pounds of silver to the <term xml:lang="la">fiscus</term>.</p>
+                    <p>The <term xml:lang="la">arca</term> of <persName ref="#vitaliana" xml:lang="la">Vettia Vitaliana</persName> and <persName ref="#severus" xml:lang="la">Flavius Severus</persName>, they purchased with their own funds; they acquired it for my memorial. If anyone wishes to open it, they shall pay ten Roman pounds of silver to the <term xml:lang="la">fiscus</term>.</p>
                 </div>
                 <div type="translation" xml:lang="it">
-                    <p>Arca di <persName corresp="#vitaliana" xml:lang="la">Vettia Vitaliana</persName> e <persName corresp="#severus" xml:lang="la">Flavio Severo</persName>, che acquistarono con i propri fondi; comprarono essa per la mia memoria. Se qualcuno vorrà aprirla, verserà al <term xml:lang="la">fiscus</term> dieci libbre romane di argento.</p>
+                    <p>Arca di <persName ref="#vitaliana" xml:lang="la">Vettia Vitaliana</persName> e <persName ref="#severus" xml:lang="la">Flavio Severo</persName>, che acquistarono con i propri fondi; comprarono essa per la mia memoria. Se qualcuno vorrà aprirla, verserà al <term xml:lang="la">fiscus</term> dieci libbre romane di argento.</p>
                 </div>
             </div>
             <div type="commentary" xml:lang="en">

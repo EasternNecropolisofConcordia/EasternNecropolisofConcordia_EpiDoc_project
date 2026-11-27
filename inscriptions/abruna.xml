@@ -155,7 +155,7 @@
                     <relation name="commission"
                               ref="../vocabularies/taxonomy.xml#emo"
                               active="#abruna" passive="#abruna"
-                              corresp="#a-emptio-1"/>
+                              corresp="#w4"/>
                 </listRelation>
            </listPerson>
         </particDesc>
@@ -374,9 +374,9 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#abruna"><expan>Fl<ex>avius</ex></expan> Abruna</persName><pc type="editorial">,</pc> de numero <rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores"><w xml:id="w1"><choice><reg>Batavorum</reg><orig>Bataorum</orig></choice></w></rs>
-                    <lb n="2"/><rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores">seniorum</rs><pc type="editorial">,</pc> qui <w xml:id="w2"><choice><reg>vixit</reg><orig>vixsit</orig></choice></w> annos <num value="25">XXV</num><pc type="editorial">,</pc> <anchor xml:id="a-emptio-1"/><w xml:id="w3"><choice><reg>arcam</reg><orig>arca</orig></choice></w>
-                    <lb n="3"/>sibi de proprio suo <w lemma="emo">emit</w><anchor xml:id="a-emptio-2"/><pc type="editorial">;</pc> <anchor xml:id="a-sanctio-1"/>si quis eam
-                    <lb n="4"/>voluerit aperire<pc type="editorial">,</pc> <w xml:id="w4"><choice><reg>dabit</reg><orig>davit</orig></choice></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" next="#m2" type="poena" unit="uncia" commodity="aurum" quantity="3">auri</measure>
+                    <lb n="2"/><rs type="military" ref="../vocabularies/organizations.xml#equites-batavi-seniores">seniorum</rs><pc type="editorial">,</pc> qui <w xml:id="w2"><choice><reg>vixit</reg><orig>vixsit</orig></choice></w> annos <num value="25">XXV</num><pc type="editorial">,</pc> <anchor xml:id="a-deproprio-1"/><w xml:id="w3"><choice><reg>arcam</reg><orig>arca</orig></choice></w>
+                    <lb n="3"/>sibi de proprio suo <w xml:id="w4" lemma="emo">emit</w><anchor xml:id="a-deproprio-2"/><pc type="editorial">;</pc> <anchor xml:id="a-sanctio-1"/>si quis eam
+                    <lb n="4"/>voluerit aperire<pc type="editorial">,</pc> <w xml:id="w5"><choice><reg>dabit</reg><orig>davit</orig></choice></w> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient">fisco</rs> <measure xml:id="m1" next="#m2" type="poena" unit="uncia" commodity="aurum" quantity="3">auri</measure>
                     <lb n="5"/><measure xml:id="m2" prev="#m1">uncias <num value="3">tres</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc>
                 </ab>
             </div>
@@ -421,7 +421,7 @@
                 </listBibl>
             </div>
             <linkGrp type="formulae">
-                <link target="#a-emptio-1 #a-emptio-2"
+                <link target="#a-deproprio-1 #a-deproprio-2"
                       ana="../vocabularies/taxonomy.xml#de-proprio"/>
                 <link target="#a-sanctio-1 #a-sanctio-2"
                       ana="../vocabularies/taxonomy.xml#sanctio"/>

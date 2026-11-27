@@ -374,8 +374,8 @@
         <body>
             <div type="edition" xml:space="preserve">
                 <ab>
-                    <lb n="1"/><persName corresp="#flaviiservilii"><w xml:id="w1">Flavii</w> Servili<supplied reason="omitted">i</supplied></persName> <persName corresp="#otraustaguta">Otraustaguta</persName> <w xml:id="w2">e<choice><corr>t</corr><sic>i</sic></choice></w> <persName corresp="#felicitas">Ilateuta Felicitas</persName>
-                    <lb n="2"/><persName corresp="#andia"><w xml:id="w3"><unclear>F</unclear><unclear>l</unclear>avio</w> Andiae</persName>, centenario numeri <w xml:id="w4">Bracchiatorum</w> <w xml:id="w5" next="#w6">col</w>
+                    <lb n="1"/><persName ref="#flaviiservilii"><w xml:id="w1">Flavii</w> Servili<supplied reason="omitted">i</supplied></persName> <persName ref="#otraustaguta">Otraustaguta</persName> <w xml:id="w2">e<choice><corr>t</corr><sic>i</sic></choice></w> <persName ref="#felicitas">Ilateuta Felicitas</persName>
+                    <lb n="2"/><persName ref="#andia"><w xml:id="w3"><unclear>F</unclear><unclear>l</unclear>avio</w> Andiae</persName>, centenario numeri <w xml:id="w4">Bracchiatorum</w> <w xml:id="w5" next="#w6">col</w>
                     <lb n="3" break="no"/><w xml:id="w6" prev="#w5"><supplied reason="lost">legae</supplied></w> <supplied reason="lost">o</supplied>ptimo, arcam de labore suo <choice><reg>comparavimus</reg><orig>conparavimus</orig></choice>, <choice><reg>quam</reg><orig>quem</orig></choice>
                     <lb n="4"/><supplied reason="lost">arca</supplied>m <choice><reg>commendamus</reg><orig>conmendamus</orig></choice> <choice><reg>sanctae</reg><orig>sancte</orig></choice> <choice><reg>ecclesiae</reg><orig>aeclesiae</orig></choice> <supplied reason="omitted">c</supplied>ivitatis conco<supplied reason="omitted">r</supplied>dien
                     <lb n="5" break="no"/>sium. Si quis eam a<unclear>p</unclear><unclear>e</unclear><choice><corr>r</corr><sic>b</sic></choice>ire voluerit dabit fisco <measure type="fine" unit="roman_pound" commodity="gold" quantity="2">auri pondo duo</measure> sin
@@ -409,7 +409,7 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>
-                    The <persName ref="#flaviiservilii" xml:lang="la">Flavii Servilii</persName>, <persName ref="#otraustaguta" xml:lang="la">Otraustaguta</persName>, and <persName corresp="#felicitas" xml:lang="la">Ilateuta Felicitas</persName> to <persName ref="#andia" xml:lang="la">Flavius Andia</persName>, <term xml:lang="la">centenarius</term> of the unit of the Bracchiati, their best colleague, have purchased this chest with their own labor, which they entrust to the holy Church of the city of Concordia.
+                    The <persName ref="#flaviiservilii" xml:lang="la">Flavii Servilii</persName>, <persName ref="#otraustaguta" xml:lang="la">Otraustaguta</persName>, and <persName ref="#felicitas" xml:lang="la">Ilateuta Felicitas</persName> to <persName ref="#andia" xml:lang="la">Flavius Andia</persName>, <term xml:lang="la">centenarius</term> of the unit of the Bracchiati, their best colleague, have purchased this chest with their own labor, which they entrust to the holy Church of the city of Concordia.
                 </p>
                 <p>
                     If anyone should wish to open it, he shall pay to the treasury two pounds of gold without delay.

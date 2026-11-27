@@ -380,9 +380,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="Latin">
                 <ab>
-                    <lb n="1"/><persName corresp="#dionisia">Au<unclear>r</unclear>elia <w xml:id="w1">Di<supplied reason="lost" evidence="parallel">onisia</supplied></w></persName> <w xml:id="w2"><supplied reason="lost" cert="medium">quae vixit annis</supplied></w>
+                    <lb n="1"/><persName ref="#dionisia">Au<unclear>r</unclear>elia <w xml:id="w1">Di<supplied reason="lost" evidence="parallel">onisia</supplied></w></persName> <w xml:id="w2"><supplied reason="lost" cert="medium">quae vixit annis</supplied></w>
                     <lb n="2"/><num value="9">VIIII</num> <expan><abbr><unclear>m</unclear></abbr><ex>ensibus</ex></expan> <num value="7">VII</num> <expan><abbr>d</abbr><ex>iebus</ex></expan> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">cum</supplied>
-                    <lb n="3"/>avia sua <persName corresp="#ap_">Ap<gap reason="lost" extent="unknown" unit="character"/></persName> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">si quis</supplied>
+                    <lb n="3"/>avia sua <persName ref="#ap_">Ap<gap reason="lost" extent="unknown" unit="character"/></persName> <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">si quis</supplied>
                     <lb n="4"/><unclear>e</unclear>am <w xml:id="w3">volu<supplied reason="lost">erit aper</supplied>ire</w> d<unclear>a</unclear>
                     <lb n="5" break="no"/><choice><reg>bit</reg><orig>vit</orig></choice> fi<supplied reason="omitted">s</supplied>co <measure type="fine" unit="roman_pound" commodity="silver" quantity="5">ar<supplied reason="lost">genti p</supplied>ondo <num value="5">V</num></measure>
                 </ab>
@@ -421,7 +421,7 @@
             <div type="translation">
                 <div type="translation" xml:lang="en">
                     <p>
-                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName>, who lived 9 years, 7 months, [---] days, with her grandmother <persName corresp="#ap_" xml:lang="la">Ap</persName>[- - -].
+                        <persName ref="#dionisia" xml:lang="la">Aurelia Dionisia</persName>, who lived 9 years, 7 months, [---] days, with her grandmother <persName ref="#ap_" xml:lang="la">Ap</persName>[- - -].
                     </p>
                     <p>
                         If anyone wishes to open it (the sarcophagus), they shall pay the <term xml:lang="la">fiscus</term> 5 pounds of silver.
@@ -429,7 +429,7 @@
                 </div>
                 <div type="translation" xml:lang="it">
                     <p>
-                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName>, che visse 9 anni, 7 mesi, giorni [---], con la sua nonna <persName corresp="#ap_" xml:lang="la">Ap</persName>[- - -].
+                        <persName ref="#dionisia" xml:lang="la">Aurelia Dionisia</persName>, che visse 9 anni, 7 mesi, giorni [---], con la sua nonna <persName ref="#ap_" xml:lang="la">Ap</persName>[- - -].
                     </p>
                     <p>
                         Se qualcuno vorrà aprirla (l'arca), dovrà dare al <term xml:lang="la">fiscus</term> 5 libbre di argento.
@@ -439,16 +439,16 @@
             <div type="commentary">
                 <div type="commentary" xml:lang="en">
                     <p>
-                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> is addressed <ref target="dionisia_b.xml">in another fragmentary inscription</ref> on a nearby sarcophagus, since both her age and the initials of her cognomen coincide.
+                        <persName ref="#dionisia" xml:lang="la">Aurelia Dionisia</persName> is addressed <ref target="dionisia_b.xml">in another fragmentary inscription</ref> on a nearby sarcophagus, since both her age and the initials of her cognomen coincide.
                     </p>
                     <p>
-                        It is not clear why two sarcophagi would have been dedicated to <persName corresp="#dionisia" xml:lang="la">Dionisia</persName>. Mommsen, attempting to resolve this issue, maintains that both inscriptions belonged to the same <term xml:lang="la">arca</term>: this inscription would have been on one of the sides of the sarcophagus, while the second on its front.
+                        It is not clear why two sarcophagi would have been dedicated to <persName ref="#dionisia" xml:lang="la">Dionisia</persName>. Mommsen, attempting to resolve this issue, maintains that both inscriptions belonged to the same <term xml:lang="la">arca</term>: this inscription would have been on one of the sides of the sarcophagus, while the second on its front.
                     </p>
                     <p>
                         However, Bertolini does not report this version and, according to the site plan, the inscriptions in question were located on two distinct <term xml:lang="la">arcae</term>, although close to one another.
                     </p>
                     <p>
-                        Perhaps <persName corresp="#dionisia" xml:lang="la">Dionisia</persName>’s first sarcophagus had been damaged or subsequently occupied by others, or her body had initially been placed in a temporary arca intended for other members of the family—reasons that would have made it necessary to move her remains to another <term xml:lang="la">arca</term>.
+                        Perhaps <persName ref="#dionisia" xml:lang="la">Dionisia</persName>’s first sarcophagus had been damaged or subsequently occupied by others, or her body had initially been placed in a temporary arca intended for other members of the family—reasons that would have made it necessary to move her remains to another <term xml:lang="la">arca</term>.
                     </p>
                     <p>
                         Indeed, the inscription of <ref target="./cerealis.xml" xml:lang="la">Ennius Cerealis</ref> shows that tombs were at times cared for and restructured by relatives.
@@ -456,16 +456,16 @@
                 </div>
                 <div type="commentary" xml:lang="it">
                     <p>
-                        <persName corresp="#dionisia" xml:lang="la">Aurelia Dionisia</persName> viene apostrofata <ref target="dionisia_b.xml">in un’altra iscrizione mutila</ref> di un sarcofago vicino, dal momento che coincidono sia l’età sia le iniziali del cognomen.
+                        <persName ref="#dionisia" xml:lang="la">Aurelia Dionisia</persName> viene apostrofata <ref target="dionisia_b.xml">in un’altra iscrizione mutila</ref> di un sarcofago vicino, dal momento che coincidono sia l’età sia le iniziali del cognomen.
                     </p>
                     <p>
-                        Non risulta chiaro perché a <persName corresp="#dionisia" xml:lang="la">Dionisia</persName> siano stati dedicati due sarcofagi. Mommsen, cercando di ovviare a questo dubbio, sostiene che entrambe le epigrafi si trovassero sulla stessa arca: questa iscrizione sarebbe stata su uno dei lati del sarcofago, mentre la seconda sulla fronte. 
+                        Non risulta chiaro perché a <persName ref="#dionisia" xml:lang="la">Dionisia</persName> siano stati dedicati due sarcofagi. Mommsen, cercando di ovviare a questo dubbio, sostiene che entrambe le epigrafi si trovassero sulla stessa arca: questa iscrizione sarebbe stata su uno dei lati del sarcofago, mentre la seconda sulla fronte. 
                     </p>
                     <p>
                         Tuttavia Bertolini non riporta questa versione e, secondo la planimetria, le epigrafi in questione si trovavano su due arche diverse, sebbene vicine.
                     </p>
                     <p>
-                        Forse il primo sarcofago di <persName corresp="#dionisia" xml:lang="la">Dionisia</persName> era stato rovinato o occupato da altre persone, oppure la sua salma era stata deposta in un’arca momentanea, dedicata ad altri membri della famiglia: motivi che avrebbero reso necessario lo spostamento in un’altra arca.
+                        Forse il primo sarcofago di <persName ref="#dionisia" xml:lang="la">Dionisia</persName> era stato rovinato o occupato da altre persone, oppure la sua salma era stata deposta in un’arca momentanea, dedicata ad altri membri della famiglia: motivi che avrebbero reso necessario lo spostamento in un’altra arca.
                     </p> 
                     <p>
                         In effetti l’iscrizione di <ref target="./cerealis.xml" xml:lang="la">Ennius Cerealis</ref> dimostra che talvolta le tombe venivano curate e ristrutturate dai parenti.

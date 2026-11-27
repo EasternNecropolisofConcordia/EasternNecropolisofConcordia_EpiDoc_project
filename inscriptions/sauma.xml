@@ -159,7 +159,7 @@
                    <note type="numerus">Equites Bracchiati</note>
                    <note type="role">deceased</note>
                    <note type="relationship" corresp="#viax">brother</note>
-                   <note type="relationship" corresp="#alacildus">colleague</note>
+                   <note type="relationship" corresp="#alagildus">colleague</note>
                    <note type="relationship" corresp="#evingus">colleague</note>
                </person>
                <person xml:id="viax">
@@ -184,7 +184,7 @@
                    <note type="numerus">Equites Bracchiati</note>
                    <note type="role">dedicator</note>
                    <note type="relationship" corresp="#sauma">colleague</note>
-                   <note type="relationship" corresp="#alacildus">colleague</note>
+                   <note type="relationship" corresp="#alagildus">colleague</note>
                </person>
                <person xml:id="alagildus">
                    <persName>

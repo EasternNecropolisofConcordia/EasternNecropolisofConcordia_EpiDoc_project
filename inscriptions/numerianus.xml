@@ -428,7 +428,7 @@
                     The sarcophagus of <persName xml:lang="la">Numerianus</persName>, <term xml:lang="la">principalis</term> of the city of <placeName xml:lang="la">Mursese</placeName>, aged thirty. If anyone should wish to open this sarcophagus, they shall pay <measure type="fine" unit="uncia" commodity="gold" quantity="6">six ounces of gold</measure> to the <term xml:lang="la">fiscus</term>.
                 </p>
                 <p xml:lang="it">
-                    Arca di <persName corresp="#numerianus" xml:lang="la">Numerianus</persName>, <term xml:lang="la">principalis</term> della città di <placeName xml:lang="la">Mursese</placeName>, di trent’anni. Se qualcuno vorrà aprire questa arca, dovrà versare al <term xml:lang="la">fiscus</term> <measure type="fine" unit="uncia" commodity="gold" quantity="6">sei once d’oro</measure>.
+                    Arca di <persName ref="#numerianus" xml:lang="la">Numerianus</persName>, <term xml:lang="la">principalis</term> della città di <placeName xml:lang="la">Mursese</placeName>, di trent’anni. Se qualcuno vorrà aprire questa arca, dovrà versare al <term xml:lang="la">fiscus</term> <measure type="fine" unit="uncia" commodity="gold" quantity="6">sei once d’oro</measure>.
                 </p>
             </div>
             <div type="commentary">

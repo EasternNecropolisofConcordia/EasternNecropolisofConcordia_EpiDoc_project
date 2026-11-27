@@ -420,12 +420,12 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>
-                    <persName corresp="#peregrina" xml:lang="la">Valeria Peregrina</persName> purchased the <term xml:lang="la">arca</term> with her own funds, in which she ordered to be placed and instructed that (the letters?) of her name be inscribed.
+                    <persName ref="#peregrina" xml:lang="la">Valeria Peregrina</persName> purchased the <term xml:lang="la">arca</term> with her own funds, in which she ordered to be placed and instructed that (the letters?) of her name be inscribed.
                 </p>
             </div>
             <div type="translation" xml:lang="it">
                 <p>
-                    <persName corresp="#peregrina" xml:lang="la">Valeria Peregrina</persName> comprò l’arca con i propri fondi, nella quale ordinò di essere posta e dispose che (le lettere?) del suo nome fossero iscritte.
+                    <persName ref="#peregrina" xml:lang="la">Valeria Peregrina</persName> comprò l’arca con i propri fondi, nella quale ordinò di essere posta e dispose che (le lettere?) del suo nome fossero iscritte.
                 </p>
             </div>
             <div type="commentary" xml:lang="en">

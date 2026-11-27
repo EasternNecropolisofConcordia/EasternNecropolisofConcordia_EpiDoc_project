@@ -191,11 +191,11 @@
                    <relation name="commission"
                              ref="../vocabularies/taxonomy.xml#pono"
                              active="#florus" passive="#iovinianus"
-                             corresp="#a-positio-1"/>
+                             corresp="#w1"/>
                    <relation name="commission"
                              ref="../vocabularies/taxonomy.xml#pono"
                              active="#iovinus" passive="#iovinianus"
-                             corresp="#a-positio-2"/>
+                             corresp="#w6"/>
                </listRelation>
            </listPerson>
         </particDesc>
@@ -414,13 +414,13 @@
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><persName ref="#florus"><supplied reason="lost"><expan>Fl<ex>avius</ex></expan></supplied> <supplied reason="lost">F</supplied>lorus</persName> patri pient<supplied reason="lost">iss</supplied>imo
-                    <lb n="2"/>memoriam <anchor xml:id="a-positio-1"/><w lemma="pono"><expan>pos<ex>uit</ex></expan></w><pc type="editorial">,</pc> <expan>inst<ex>antibus</ex></expan> <w xml:id="w1"><supplied reason="lost">c</supplied>oll<surplus>l</surplus>e<supplied reason="lost">gi</supplied>s</w><pc type="editorial">.</pc>
-                    <lb n="3"/><anchor xml:id="a-sanctio-1"/>Si quis <w xml:id="w2"><choice><reg>autem</reg><orig>aute</orig></choice></w> hanc sepulturam movere
+                    <lb n="2"/>memoriam <w xml:id="w1" lemma="pono"><expan>pos<ex>uit</ex></expan></w><pc type="editorial">,</pc> <expan>inst<ex>antibus</ex></expan> <w xml:id="w2"><supplied reason="lost">c</supplied>oll<surplus>l</surplus>e<supplied reason="lost">gi</supplied>s</w><pc type="editorial">.</pc>
+                    <lb n="3"/><anchor xml:id="a-sanctio-1"/>Si quis <w xml:id="w3"><choice><reg>autem</reg><orig>aute</orig></choice></w> hanc sepulturam movere
                     <lb n="4"/>temptaverit<pc type="editorial">,</pc> inferre debe<supplied reason="lost">bit</supplied> <rs type="socecon" ref="../vocabularies/organizations.xml#fiscus" ana="../vocabularies/taxonomy.xml#fine-recipient"><supplied reason="lost">f</supplied>isco</rs> <measure xml:id="m1" next="#m2" type="poena" unit="libra" commodity="aurum" quantity="6">a</measure>
-                    <lb n="5" break="no"/><measure xml:id="m2" prev="#m1">uri <expan>lib<ex>ras</ex></expan> <num value="6">VI</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc> <persName ref="#iovinianus"><expan>Fl<ex>avius</ex></expan> Iovinianus</persName><pc type="editorial">,</pc> <w xml:id="w3"><choice><reg>biarcus</reg><orig>bearcus</orig></choice></w>
+                    <lb n="5" break="no"/><measure xml:id="m2" prev="#m1">uri <expan>lib<ex>ras</ex></expan> <num value="6">VI</num></measure><anchor xml:id="a-sanctio-2"/><pc type="editorial">.</pc> <persName ref="#iovinianus"><expan>Fl<ex>avius</ex></expan> Iovinianus</persName><pc type="editorial">,</pc> <w xml:id="w4"><choice><reg>biarcus</reg><orig>bearcus</orig></choice></w>
                     <lb n="6"/>draconarius ex numero
                     <lb n="7"/><rs type="military" ref="../vocabularies/organizations.xml#numerus-dalmatarum-octavus">octava Dalmata<surplus>s</surplus></rs><pc type="editorial">.</pc> Militavit annos
-                    <lb n="8"/><num value="20">XX</num><pc type="editorial">,</pc> vixit <w xml:id="w4"><choice><reg>annos</reg><orig>anos</orig></choice></w> <num value="40">XL</num><pc type="editorial">.</pc> <anchor xml:id="a-positio-2"/><w lemma="pono">Posuit</w> <w xml:id="w5"><choice><reg>memoriam</reg><orig>memoria</orig></choice></w>
+                    <lb n="8"/><num value="20">XX</num><pc type="editorial">,</pc> vixit <w xml:id="w5"><choice><reg>annos</reg><orig>anos</orig></choice></w> <num value="40">XL</num><pc type="editorial">.</pc> <w xml:id="w6" lemma="pono">Posuit</w> <w xml:id="w7"><choice><reg>memoriam</reg><orig>memoria</orig></choice></w>
                     <lb n="9"/><persName ref="#iovinus">Iovinus</persName><pc type="editorial">,</pc> <expan>prot<ex>ector</ex></expan><pc type="editorial">,</pc> parens suus<pc type="editorial">.</pc>
                 </ab>
             </div>

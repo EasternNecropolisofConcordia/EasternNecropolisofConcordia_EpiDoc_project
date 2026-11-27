@@ -411,8 +411,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                     <ab>
-                        <lb n="1"/><persName ref="#exsuperantius"><w xml:id="w1"><expan><abbr>F<surplus>i</surplus></abbr><ex>lavius</ex></expan></w> <w xml:id="w2">Ex<unclear>s</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">uperanti</supplied>us</w></persName> et <persName corresp="#constantia">Constanti<unclear>a</unclear></persName>
-                        <lb n="2"/>filio <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dulcissim</supplied>o <persName corresp="#marinus">Marino</persName>, qui vixit
+                        <lb n="1"/><persName ref="#exsuperantius"><w xml:id="w1"><expan><abbr>F<surplus>i</surplus></abbr><ex>lavius</ex></expan></w> <w xml:id="w2">Ex<unclear>s</unclear><supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">uperanti</supplied>us</w></persName> et <persName ref="#constantia">Constanti<unclear>a</unclear></persName>
+                        <lb n="2"/>filio <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dulcissim</supplied>o <persName ref="#marinus">Marino</persName>, qui vixit
                         <lb n="3"/>annos <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b"><num value="18" xml:id="w3">XVIII</num> mense</supplied>s <num value="10">X</num>, dies <num value="22">XXII</num>, memo
                         <lb n="4" break="no"/>riam <supplied reason="lost" evidence="previouseditor" source="#bertolini1874a #bertolini1874b">dedicaveru</supplied>nt.
                     </ab>
@@ -453,10 +453,10 @@
             </div>
             <div type="translation">
                 <p xml:lang="en">
-                    <persName corresp="#exsuperantius" xml:lang="la">Flavius Exsuperantius</persName> and <persName corresp="#constantia" xml:lang="la">Constantia</persName> dedicated the memory of their beloved son <persName corresp="#marinus" xml:lang="la">Marinus</persName>, who lived 18 years, 10 months, and 22 days.
+                    <persName ref="#exsuperantius" xml:lang="la">Flavius Exsuperantius</persName> and <persName ref="#constantia" xml:lang="la">Constantia</persName> dedicated the memory of their beloved son <persName ref="#marinus" xml:lang="la">Marinus</persName>, who lived 18 years, 10 months, and 22 days.
                 </p>
                 <p xml:lang="it">
-                    <persName corresp="#exsuperantius" xml:lang="la">Flavius Exsuperantius</persName> e <persName corresp="#constantia" xml:lang="la">Constantia</persName> dedicarono la memoria al loro carissimo figlio <persName corresp="#marinus" xml:lang="la">Marinus</persName>, che visse 18 anni, 10 mesi e 22 giorni.
+                    <persName ref="#exsuperantius" xml:lang="la">Flavius Exsuperantius</persName> e <persName ref="#constantia" xml:lang="la">Constantia</persName> dedicarono la memoria al loro carissimo figlio <persName ref="#marinus" xml:lang="la">Marinus</persName>, che visse 18 anni, 10 mesi e 22 giorni.
                 </p>
             </div>
             <div type="commentary" xml:lang="en">

@@ -360,7 +360,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName ref="#masuetus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Mansuetus</reg><orig>Masuetus</orig></choice></persName> <w xml:id="w1"><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></w>, qui milita
+                    <lb n="1"/><persName ref="#mansuetus"><expan><abbr>Fl</abbr><ex>avius</ex></expan> <choice><reg>Mansuetus</reg><orig>Masuetus</orig></choice></persName> <w xml:id="w1"><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></w>, qui milita
                     <lb n="2" break="no"/><choice><reg>vit</reg><orig>bit</orig></choice> in numero leonum seniorum,
                     <lb n="3"/>de proprio suo arcam sibi posuit. Si
                     <lb n="4"/>quis eam aperire voluerit, dabit fisci
@@ -369,14 +369,16 @@
                 </ab>
             </div>
             <div type="apparatus">
-                <app loc="1" from="#w1" to="#w1">
-                    <lem><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></lem>
-                    <rdg source="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8755 #ilcv515">biarcus</rdg>
-                </app>
-                <app loc="6" from="#w2" to="#w2">
-                    <lem>c<choice><corr>o</corr><sic>u</sic></choice>mmendavi<supplied reason="omitted">t</supplied></lem>
-                    <rdg source="#lettich1983">commendavi</rdg>
-                </app>
+                <listApp>
+                    <app loc="1" from="#w1" to="#w1">
+                        <lem><choice><reg>biarchus</reg><orig>biar<choice><corr>c</corr><sic>l</sic></choice>us</orig></choice></lem>
+                        <rdg source="#bertolini1874a #bertolini1874b #bertolini1875b #cilv8755 #ilcv515">biarcus</rdg>
+                    </app>
+                    <app loc="6" from="#w2" to="#w2">
+                        <lem>c<choice><corr>o</corr><sic>u</sic></choice>mmendavi<supplied reason="omitted">t</supplied></lem>
+                        <rdg source="#lettich1983">commendavi</rdg>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p><persName ref="#mansuetus" xml:lang="la">Flavius Mansuetus</persName>, <term ref="#biarchus" xml:lang="la">biarchus</term> who served in the <term xml:lang="la">numerus</term> of the <term xml:lang="la">Leones seniores</term>, set up this <term xml:lang="la">arca</term> at his own expense.</p>

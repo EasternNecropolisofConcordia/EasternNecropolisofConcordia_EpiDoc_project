@@ -388,32 +388,34 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName corresp="#saturninus">Sa<hi rend="ligature">tu</hi>rninus</persName> centen
+                    <lb n="1"/><persName ref="#saturninus">Sa<hi rend="ligature">tu</hi>rninus</persName> centen
                     <lb n="2" break="no"/><expan><abbr>ar</abbr><ex>ius</ex></expan> ex <expan><abbr><hi rend="small">o</hi>ff</abbr><ex>icio</ex></expan> <expan><abbr>p<supplied reason="lost">r</supplied>aef</abbr><ex>ecti</ex></expan> <choice><reg>Illyrici</reg><orig><expan><abbr>Illir</abbr><ex>ici</ex></expan></orig></choice>
                     <lb n="3"/><expan><abbr>Dac</abbr><ex>iae</ex></expan> <expan><abbr>Rip</abbr><ex>ensis</ex></expan> <w xml:id="w1">amici</w> <w xml:id="w2"><choice><reg cert="low">honore</reg><orig>h<hi rend="small">o</hi>re</orig></choice></w> sep
                     <lb n="4" break="no"/>ultus
                 </ab>
             </div>
             <div type="apparatus">
-                <app loc="3" from="#w1">
-                    <lem>
-                        amici
-                    </lem>
-                    <rdg source="#bertolini1875b">
-                        amici<supplied reason="omitted">s</supplied>
-                    </rdg>
-                </app>
-                <app loc="3" from="#w2">
-                    <lem>
-                        <choice><reg cert="low">honore</reg><orig>hore</orig></choice>
-                    </lem>
-                    <rdg source="#cilv8771">
-                        <choice><reg cert="low">ex cura</reg><orig>hore</orig></choice>
-                    </rdg>
-                    <rdg source="#ils1962">
-                        <choice><reg cert="low">ex opera</reg><orig>hore</orig></choice>
-                    </rdg>
-                </app>
+                <listApp>
+                    <app loc="3" from="#w1">
+                        <lem>
+                            amici
+                        </lem>
+                        <rdg source="#bertolini1875b">
+                            amici<supplied reason="omitted">s</supplied>
+                        </rdg>
+                    </app>
+                    <app loc="3" from="#w2">
+                        <lem>
+                            <choice><reg cert="low">honore</reg><orig>hore</orig></choice>
+                        </lem>
+                        <rdg source="#cilv8771">
+                            <choice><reg cert="low">ex cura</reg><orig>hore</orig></choice>
+                        </rdg>
+                        <rdg source="#ils1962">
+                            <choice><reg cert="low">ex opera</reg><orig>hore</orig></choice>
+                        </rdg>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p>

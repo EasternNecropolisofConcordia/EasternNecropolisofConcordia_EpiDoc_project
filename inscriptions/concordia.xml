@@ -359,7 +359,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName corresp="#flconcordia"><expan><abbr>Fl</abbr><ex>avia</ex></expan> Concordia</persName> de pr
+                    <lb n="1"/><persName ref="#flconcordia"><expan><abbr>Fl</abbr><ex>avia</ex></expan> Concordia</persName> de pr
                     <lb n="2" break="no"/>oprio suo arcam sibi
                     <lb n="3"/>posuit Si quis eam aperi
                     <lb n="4" break="no"/>re voluerit dabit fis
@@ -382,7 +382,7 @@
             </div>
             <div type="commentary" xml:lang="en">
                 <p>
-                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Concordia</persName> is also attested in an <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098047">inscription from the third century A.D., discovered in the <placeName>Persico estate</placeName> in 1893</ref>. According to <ref target="../references/bibliography.xml#lettich1994">Lettich</ref>, the use of a toponym as a personal name is not unusual, citing the example of the burial of <persName xml:lang="la">Aurelia Alexandria</persName>, located only a few metres north of the sarcophagus of <persName corresp="#flconcordia" xml:lang="la">Flavia Concordia</persName>.
+                    The <term xml:lang="la">cognomen</term> <persName xml:lang="la">Concordia</persName> is also attested in an <ref target="http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&amp;id_nr=EDR098047">inscription from the third century A.D., discovered in the <placeName>Persico estate</placeName> in 1893</ref>. According to <ref target="../references/bibliography.xml#lettich1994">Lettich</ref>, the use of a toponym as a personal name is not unusual, citing the example of the burial of <persName xml:lang="la">Aurelia Alexandria</persName>, located only a few metres north of the sarcophagus of <persName ref="#flconcordia" xml:lang="la">Flavia Concordia</persName>.
                 </p>
             </div>
             <div type="bibliography">

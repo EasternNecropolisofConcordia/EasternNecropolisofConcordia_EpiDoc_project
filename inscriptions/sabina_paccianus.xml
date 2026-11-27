@@ -410,7 +410,7 @@
                     To the Manes gods.
                 </p>
                 <p>
-                    <persName corresp="#sabina" xml:id="la">Cusica Sabina</persName>, while still alive, arranged (the sarcophagus) for herself and for <persName corresp="#paccianus" xml:lang="la">Ennius Paccianus</persName>, her most affectionate husband.
+                    <persName ref="#sabina" xml:id="la">Cusica Sabina</persName>, while still alive, arranged (the sarcophagus) for herself and for <persName ref="#paccianus" xml:lang="la">Ennius Paccianus</persName>, her most affectionate husband.
                 </p>
             </div>
             <div type="translation" xml:lang="it">
@@ -418,7 +418,7 @@
                     Agli dèi Mani.
                 </p>
                 <p>
-                    <persName corresp="#sabina" xml:lang="la">Cusica Sabina</persName> dispose da viva (il sarcofago) per sé stessa e per <persName corresp="#paccianus" xml:lang="la">Ennius Paccianus</persName>, marito dolcissimo.
+                    <persName ref="#sabina" xml:lang="la">Cusica Sabina</persName> dispose da viva (il sarcofago) per sé stessa e per <persName ref="#paccianus" xml:lang="la">Ennius Paccianus</persName>, marito dolcissimo.
                 </p>
             </div>
             <div type="commentary" xml:lang="en">
