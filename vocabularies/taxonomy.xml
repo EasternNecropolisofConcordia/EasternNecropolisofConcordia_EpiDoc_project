@@ -401,6 +401,18 @@
                                     <gloss xml:lang="en">To order to be made: arcam fieri iussit, Fl. Messio. The periphrasis states the commission itself rather than the making, and is kept apart from facio for that reason.</gloss>
                                 </catDesc>
                             </category>
+                            <category xml:id="dedico">
+                                <catDesc>
+                                    <term xml:lang="la">dedico</term>
+                                    <gloss xml:lang="en">To dedicate: memoriam dedicaverunt, Fl. Exsuperantius and Constantia for their son Marinus.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="sepelio">
+                                <catDesc>
+                                    <term xml:lang="la">sepelio</term>
+                                    <gloss xml:lang="en">To bury: amici honore sepultus, Saturninus, buried by his friends. Passive, with the agents unnamed.</gloss>
+                                </catDesc>
+                            </category>
                         </category>
                         <category xml:id="actus-tutelae">
                             <catDesc>
