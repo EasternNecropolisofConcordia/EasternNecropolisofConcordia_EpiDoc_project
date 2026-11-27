@@ -213,6 +213,12 @@
                             <gloss xml:lang="en">A state arms factory.</gloss>
                         </catDesc>
                     </category>
+                    <category xml:id="org-veterani">
+                        <catDesc>
+                            <term xml:lang="la">veterani</term>
+                            <gloss xml:lang="en">Discharged soldiers acting as a body.</gloss>
+                        </catDesc>
+                    </category>
                 </taxonomy>
                 <taxonomy xml:id="periods">
                     <category xml:id="late-roman-empire">
@@ -324,7 +330,7 @@
                     <category xml:id="poenae-alternativae">
                         <catDesc>
                             <term xml:lang="la">poenae alternativae</term>
-                            <gloss xml:lang="en">Two or more penalties offered as alternatives, aut ... aut.</gloss>
+                            <gloss xml:lang="en">Two or more penalties offered as alternatives, introduced by aut ... aut or by vel; this includes one fine expressed in two alternative amounts.</gloss>
                         </catDesc>
                     </category>
                     <category xml:id="poenae-cumulativae">
@@ -404,7 +410,13 @@
                             <category xml:id="commendo">
                                 <catDesc>
                                     <term xml:lang="la">commendo</term>
-                                    <gloss xml:lang="en">To entrust: commendamus, the Flavii Servilii, who entrust the sarcophagus to the church of Concordia.</gloss>
+                                    <gloss xml:lang="en">To entrust: commendamus, the Flavii Servilii, who entrust the sarcophagus to the church of Concordia; commendavit, Fl. Mansuetus, who entrusts his arca to the veterans.</gloss>
+                                </catDesc>
+                            </category>
+                            <category xml:id="peto">
+                                <catDesc>
+                                    <term xml:lang="la">peto</term>
+                                    <gloss xml:lang="en">To ask: petimus, Fl. Alatancus and Bitorta, who ask the clergy and the whole brotherhood that no one be laid in their tomb.</gloss>
                                 </catDesc>
                             </category>
                         </category>
