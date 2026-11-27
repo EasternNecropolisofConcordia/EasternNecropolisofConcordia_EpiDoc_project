@@ -975,34 +975,51 @@
     <!-- Link words to apparatus and persons        -->
     <!-- ========================================== -->
 
+    <!-- A <w> links to the apparatus only if an <app> points to it with @from
+         or @to. An xml:id alone does not make a link: <w> may carry one for
+         @next/@prev or for a <relation>/@corresp. The HTML apparatus gives an
+         id only to the @from word, so a word reached by @to links to the
+         @from of the same entry. -->
+    <xsl:key name="app-from" match="tei:app" use="substring-after(@from, '#')"/>
+    <xsl:key name="app-to" match="tei:app" use="substring-after(@to, '#')"/>
+
     <!-- Word with both apparatus and person reference: create dropdown -->
-    <xsl:template match="tei:w[@xml:id][ancestor::tei:persName[@ref]]" mode="interp">
+    <xsl:template match="tei:w[@xml:id][key('app-from', @xml:id) or key('app-to', @xml:id)][ancestor::tei:persName[@ref]]" mode="interp">
+        <xsl:variable name="app-id" select="if (key('app-from', @xml:id)) then string(@xml:id) else substring-after(key('app-to', @xml:id)[1]/@from, '#')"/>
         <span class="dropdown dual-reference">
             <button class="dropbtn word-with-refs">
                 <xsl:apply-templates mode="interp"/>
             </button>
             <div class="dropdown-content">
-                <a href="#{@xml:id}">→ Apparatus</a>
+                <a href="#{$app-id}">→ Apparatus</a>
                 <a href="{ancestor::tei:persName[@ref][1]/@ref}">→ Person</a>
             </div>
         </span>
     </xsl:template>
 
     <!-- Person name without apparatus reference: simple link -->
-    <xsl:template match="tei:persName[@ref][not(.//tei:w[@xml:id])]" mode="interp">
+    <xsl:template match="tei:persName[@ref][not(.//tei:w[@xml:id][key('app-from', @xml:id) or key('app-to', @xml:id)])]" mode="interp">
         <a class="person_reference" href="{@ref}">
             <xsl:apply-templates mode="interp"/>
         </a>
     </xsl:template>
 
     <!-- Person name containing apparatus reference: pass through to child w -->
-    <xsl:template match="tei:persName[@ref][.//tei:w[@xml:id]]" mode="interp">
+    <xsl:template match="tei:persName[@ref][.//tei:w[@xml:id][key('app-from', @xml:id) or key('app-to', @xml:id)]]" mode="interp">
         <xsl:apply-templates mode="interp"/>
     </xsl:template>
 
+    <!-- Word without apparatus inside such a person name: person link only -->
+    <xsl:template match="tei:w[@xml:id][not(key('app-from', @xml:id) or key('app-to', @xml:id))][ancestor::tei:persName[@ref][1][.//tei:w[@xml:id][key('app-from', @xml:id) or key('app-to', @xml:id)]]]" mode="interp">
+        <a class="person_reference" href="{ancestor::tei:persName[@ref][1]/@ref}">
+            <xsl:apply-templates mode="interp"/>
+        </a>
+    </xsl:template>
+
     <!-- Word with apparatus reference only: simple link -->
-    <xsl:template match="tei:w[@xml:id][not(ancestor::tei:persName[@ref])]" mode="interp">
-        <a class="apparatus_reference" href="#{@xml:id}">
+    <xsl:template match="tei:w[@xml:id][key('app-from', @xml:id) or key('app-to', @xml:id)][not(ancestor::tei:persName[@ref])]" mode="interp">
+        <xsl:variable name="app-id" select="if (key('app-from', @xml:id)) then string(@xml:id) else substring-after(key('app-to', @xml:id)[1]/@from, '#')"/>
+        <a class="apparatus_reference" href="#{$app-id}">
             <xsl:apply-templates mode="interp"/>
         </a>
     </xsl:template>
