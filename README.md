@@ -32,7 +32,7 @@ Every EpiDoc file in `inscriptions/` captures a full epigraphic record:
 - **Commentary** — bilingual scholarly discussion.
 - **Bibliography** — references to the `master_bibliography.xml`, corpora, and databases.
 - **Editorial status** — files still being completed carry `<revisionDesc status="unfinished">` and are flagged with a badge on the published page. Twelve of the seventy-one are currently so marked.
-- **Commissioning, fines and formulae** — introduced in version 1.2.0 and so far applied to thirteen inscriptions: the act by which the tomb was procured and the parties to it (`<listRelation>`), the recipient of the sepulchral fine and its amount in Roman weights or coin denominations (`<measure>`), and the standoff identification of recurring formulae (`<linkGrp>`).
+- **Commissioning, fines and formulae** — introduced in version 1.2.0 and, since version 1.2.1, applied to all inscriptions: the act by which the tomb was procured and the parties to it (`<listRelation>`), the recipient of the sepulchral fine and its amount in Roman weights or coin denominations (`<measure>`), and the standoff identification of recurring formulae (`<linkGrp>`).
 
 ### Repository Structure
 
@@ -140,7 +140,7 @@ Ogni file EpiDoc in `inscriptions/` contiene una scheda epigrafica completa:
 - **Commento** — discussione filologica bilingue.
 - **Bibliografia** — riferimenti alla `master_bibliography.xml`, ai corpora e ai database.
 - **Stato editoriale** — i file ancora in lavorazione portano `<revisionDesc status="unfinished">` e sono segnalati da un badge nella pagina pubblicata. Dodici delle settantuno sono attualmente così marcate.
-- **Committenza, pene pecuniarie e formule** — introdotte nella versione 1.2.0 e finora applicate a tredici iscrizioni: l'atto con cui la sepoltura è stata procurata e le parti coinvolte (`<listRelation>`), il destinatario della pena sepolcrale e il suo importo in pesi o monete romane (`<measure>`), e l'identificazione in standoff delle formule ricorrenti (`<linkGrp>`).
+- **Committenza, pene pecuniarie e formule** — introdotte nella versione 1.2.0 e, dalla versione 1.2.1, applicate a tutte le iscrizioni: l'atto con cui la sepoltura è stata procurata e le parti coinvolte (`<listRelation>`), il destinatario della pena sepolcrale e il suo importo in pesi o monete romane (`<measure>`), e l'identificazione in standoff delle formule ricorrenti (`<linkGrp>`).
 
 ### Struttura della repository
 

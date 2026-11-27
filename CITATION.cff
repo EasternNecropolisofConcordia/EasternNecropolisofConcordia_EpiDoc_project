@@ -11,8 +11,9 @@ abstract: >-
   transcription, critical apparatus, translation, commentary, bibliography,
   and detailed prosopographical data, with taxonomies linked to external
   authority files. Sepulchral sanctions are encoded with the recipient and
-  the amount of the fine, and the act by which each tomb was procured is
-  recorded together with the parties to it. The repository also contains
+  the amount of the fine, the act by which each tomb was procured or
+  entrusted is recorded together with the parties to it, and recurring
+  formulae are identified in standoff. The repository also contains
   shared vocabulary files, the XSLT stylesheets and the Python scripts that
   generate the project website.
 authors:
@@ -25,8 +26,8 @@ repository-code: "https://github.com/EasternNecropolisofConcordia/EasternNecropo
 url: "https://tituliconcordienses.eu/"
 license: CC-BY-4.0
 doi: 10.5281/zenodo.22995898
-version: 1.2.0
-date-released: "2026-11-26"
+version: 1.2.1
+date-released: "2026-11-27"
 keywords:
   - Latin epigraphy
   - Greek epigraphy
